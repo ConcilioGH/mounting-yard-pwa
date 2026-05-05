@@ -1,0 +1,84 @@
+race_id,runner_no,horse,barrier,trainer,jockey,odds
+R1,1,Graffiti Tycoon,2,Tom Charlton,Zac Lloyd,1.65
+R1,2,Condone,6,Gai Waterhouse & Adrian Bott,Adam Hyeronimus,4.8
+R1,3,Farset,10,Gai Waterhouse & Adrian Bott,Zac Wadick,19
+R1,4,Time To Dance,1,Bryce Heys,Jamie Melham,13
+R1,5,Clanwilliam,9,David Payne,Kerrin McEvoy,14
+R1,6,Konsa,7,Chris Waller,James McDonald,11
+R1,7,Artgirl,8,Chris Waller,Jason Collett,31
+R1,8,Piroulette,5,Jarrod Austin,Deanne Panya,151
+R1,9,Sharbino,4,Gary Nickson,Adrian Layt,151
+R1,10,Yattazou,3,Chris Waller,Tommy Berry,19
+R2,1,Another Lahar,7,David Payne,Olivia Chambers,51
+R2,2,Artemex,6,Ciaron Maher,Tim Clark,4.6
+R2,3,Celtic Spy,1,Gai Waterhouse & Adrian Bott,Regan Bayliss,3.1
+R2,4,Don't Doubt Frank,10,Brad Widdup,Chad Schofield,13
+R2,5,First Act,4,Chris Waller,James McDonald,6
+R2,6,Iron Rebel,2,Gary Portelli,Zac Lloyd,27
+R2,7,Lord Horatio,8,Tom Charlton,Dylan Gibbons,6
+R2,8,Pieripper,9,Gregory Hickman,Andrew Adkins,101
+R2,9,Portico,3,Michael Freedman,Sam Clipperton,5
+R2,10,Remember The Time,5,Paul & Martha Cave,Andrew Calder,51
+R3,1,Coral,3,Chris Waller,Zac Lloyd,10
+R3,2,Cosmo Girl,14,Chris Waller,Sam Clipperton,35
+R3,3,Greasy Wheels,8,Gregory Hickman,Andrew Adkins,151
+R3,4,La Barrita,11,Tony & Calvin McEvoy,Jamie Melham,3.4
+R3,5,Semantics,13,Anthony & Sam Freedman,Dylan Gibbons,12
+R3,6,Single Ladies,9,Gai Waterhouse & Adrian Bott,Zac Wadick,51
+R3,7,Sumeria,4,Ciaron Maher,James McDonald,3
+R3,9,Too Delicious,2,Craig Carmody,Winona Costin,151
+R3,10,Uncertain Glory,6,Michael Freedman,Tommy Berry,7
+R3,11,Viondi,7,Gary Nickson,Adrian Layt,251
+R3,12e,Krasina,12,David Payne,Chad Schofield,13
+R3,13e,Palmanova,1,Gai Waterhouse & Adrian Bott,Tim Clark,7.5
+R3,14e,Influential Jewel,10,Chris Waller,Jason Collett,46
+R4,1,Rimbaud,5,Annabel & Rob Archibald,Anna Roper,3.3
+R4,2,Who But Roo,7,Garry Kirkup,Teaghan Martin,17
+R4,3,Before The War,8,John & Chris Ledger,Amy McLucas,23
+R4,4,Super Bright,2,Nathan Doyle,Kerrin McEvoy,5
+R4,5,Zale,1,Gary Nickson,Winona Costin,4.5
+R4,6,Against The Law,3,Bryce Heys,Zac Lloyd,5
+R4,7,Dear Jewel,6,Joseph Pride,Andrew Adkins,6
+R4,8,Major Time,4,Gratz Vella,Rachel King,61
+R5,1,The Creator,13,Mick Price & Michael Kent Jnr,Anna Roper,71
+R5,2,Southern Prince,6,Annabel & Rob Archibald,William Stanley,7.5
+R5,3,Cloisters,8,Chris Waller,Tommy Berry,18
+R5,4,Is It Spectacular,11,Nacim Dilmi,Chad Schofield,9
+R5,5,Mojave River,2,Chris Waller,James McDonald,7
+R5,6,Scalextrics,9,Matthew Smith,Jason Collett,23
+R5,7,Affermato,5,Amanda Turner,Winona Costin,67
+R5,8,Hovland,12,Tom Charlton,Zac Lloyd,19
+R5,9,Lontrice,1,Michael John & Wayne Hawkes,Tyler Schiller,6
+R5,10,Green Run,7,Dar Lunn,Zac Wadick,61
+R5,11,Zoufield,3,Gai Waterhouse & Adrian Bott,Tim Clark,8
+R5,12,How's It Kev,10,Alison Smith,Louise Day,126
+R5,13,Superfabulistic,4,Gai Waterhouse & Adrian Bott,Rachel King,2.9
+R6,1,Who Ever Thought,2,Jeremy Gask,Olivia Chambers,46
+R6,2,Battle Hymn,13,Bjorn Baker,Regan Bayliss,10
+R6,3,Iceman,15,Clarry Conners,Rachel King,15
+R6,4,Hopper,11,Peter Snowden,Chad Schofield,15
+R6,5,Supermassive,8,Gai Waterhouse & Adrian Bott,Tim Clark,2.6
+R6,6,Rush Attack,14,Nathan Doyle,William Stanley,101
+R6,7,Skycatcher,9,Mick Price & Michael Kent Jnr,Tyler Schiller,18
+R6,8,Unstopabull,5,Chris Waller,Sam Clipperton,12
+R6,9,Invader Zim,3,Chris Waller,James McDonald,9.5
+R6,10,Navy Buoy,12,Paul Snowden,Kerrin McEvoy,23
+R6,11,Sanctified,4,Gerald Ryan & Sterling Alexiou,Joshua Parr,10
+R6,12,Congressman,1,Richard Litt,Adam Hyeronimus,17
+R6,13,Botanist,6,Chris Waller,Tommy Berry,21
+R6,14,Jacob's Ladder,7,John Thompson,Zac Lloyd,15
+R7,1,Belle Detelle,17,Chris Waller,William Stanley,81
+R7,2,Just Glamourous,1,Joseph Pride,Adam Hyeronimus,7
+R7,3,Island Dream,11,Chris Waller,Tyler Schiller,51
+R7,4,Full Hao,8,Chris Waller,Anna Roper,71
+R7,5,West Of Dalby,10,Matthew Dale,Zac Wadick,31
+R7,6,Perfect Picture,13,John Thompson,Joshua Parr,12
+R7,7,Horizons,6,Richard & Will Freedman,Chad Schofield,19
+R7,9,Waku Waku,9,Annabel & Rob Archibald,Tom Sherry,19
+R7,10,Blitzgal,15,Chris Waller,Kerrin McEvoy,7.5
+R7,11,Outta Line,12,Gai Waterhouse & Adrian Bott,Regan Bayliss,12
+R7,12,Rajwa,5,Michael Freedman,Zac Lloyd,9
+R7,13,Loera,7,Gai Waterhouse & Adrian Bott,Tim Clark,3.3
+R7,15,Nandina,3,Chris Waller,James McDonald,9.5
+R7,16,Maquisa,14,Chris Waller,Jason Collett,27
+R7,17e,Lipstick,2,Chris Waller,Tommy Berry,31
