@@ -1,0 +1,4 @@
+race_id,race_title,runner_no,horse,barrier,trainer,jockey,odds
+DEMO1,Demo Race 1000m,1,Example Star,3,J. Smith,A. Bloggs,$5.00
+DEMO1,Demo Race 1000m,2,Another One,1,M. Lee,S. Coast,$12
+DEMO2,Demo Race 1200m,1,Field Trial,4,K. Jones,R. King,$2.40
