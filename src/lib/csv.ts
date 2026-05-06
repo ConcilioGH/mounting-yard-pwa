@@ -4,6 +4,7 @@ import { makeKey } from "./utils";
 
 export type RaceImportRow = {
   race_id: string;
+  race_title?: string;
   runner_no: string | number;
   horse: string;
   barrier: string | number;
@@ -11,6 +12,8 @@ export type RaceImportRow = {
   jockey: string;
   odds: string;
 };
+
+export type RaceImportRowExtended = RaceImportRow & { race?: string | number };
 
 const REQUIRED: (keyof RaceImportRow)[] = [
   "race_id",
@@ -62,10 +65,11 @@ export function parseRacesCsv(text: string): Race[] {
   const byRace = new Map<string, { title: string; runners: Runner[] }>();
 
   for (const raw of rows) {
-    const raceId = String((raw as any).race_id ?? (raw as any).race ?? "").trim();
-const titleRaw = String(raw.race_title ?? "").trim();
-const title = titleRaw || `R${raceId}`;
-if (!raceId) continue;
+    const rawWithRace = raw as RaceImportRowExtended;
+    const raceId = String(rawWithRace.race_id ?? rawWithRace.race ?? "").trim();
+    const titleRaw = String(rawWithRace.race_title ?? "").trim();
+    const title = titleRaw || `R${raceId}`;
+    if (!raceId) continue;
 
     const runner: Runner = {
       no: num(raw.runner_no, "runner_no"),
