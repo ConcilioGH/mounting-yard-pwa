@@ -13,10 +13,17 @@ export type Race = {
   runners: Runner[];
 };
 
+export type GearState = {
+  FT?: number;
+  B?: number;
+  CB?: number;
+  INJ?: number;
+};
+
 export type Assessment = {
   positive: Record<string, number>;
   negative: Record<string, number>;
-  gear: Record<string, boolean>;
+  gear: GearState;
   notes: string;
   updatedAt: string;
 };
