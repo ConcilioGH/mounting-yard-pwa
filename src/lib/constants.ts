@@ -28,46 +28,48 @@ export const DEFAULT_RACES: Race[] = [
   },
 ];
 
-export const positiveItems = [
-  "Bright coat",
-  "Good muscle tone",
-  "Athletic walk",
-  "Calm / professional",
-  "On toes positively",
-  "Fit / tightened",
-  "Strong hindquarter",
-  "Focused",
-  "Improved parade",
-  "Best parade type",
-] as const;
+export const SWEAT_POS_ROW = ["BH+", "K+", "N+", "BS+"] as const;
+export const SWEAT_NEG_ROW = ["BH-", "K-", "N-", "BS-"] as const;
 
-export const negativeItems: { label: string; severity: string }[] = [
-  { label: "Head up", severity: "minor" },
-  { label: "Too much white in eyes", severity: "minor" },
-  { label: "Double handlers", severity: "minor" },
-  { label: "Ears flicking / side to back", severity: "minor" },
-  { label: "Not healthy dumping", severity: "minor" },
-  { label: "Sweat — not kidney", severity: "minor" },
-  { label: "Pawing in stalls", severity: "minor" },
-  { label: "Two hands from strapper", severity: "minor" },
-  { label: "Negative relationship with strapper", severity: "medium" },
-  { label: "No strapper at stalls", severity: "medium" },
-  { label: "Neck twisted / arched / resenting bit", severity: "medium" },
-  { label: "Sexual displays / tail / urinating", severity: "medium" },
-  { label: "Sweat — kidney", severity: "medium" },
-  { label: "Canon bandages", severity: "medium" },
-  { label: "Stops walking / resists", severity: "medium" },
-  { label: "Won't go to gates cleanly", severity: "medium/major" },
-  { label: "Gaping", severity: "medium/major" },
-  { label: "Fast gait", severity: "medium/major" },
-  { label: "Major sweat / kidney", severity: "medium/major" },
-  { label: "Kicking in stalls", severity: "medium/major" },
-  { label: "Circling in yard", severity: "medium/major" },
-  { label: "Bucking", severity: "medium/major" },
-  { label: "Slow gait", severity: "major" },
-  { label: "Weaving in stalls", severity: "major" },
-  { label: "Late into yard", severity: "major" },
-  { label: "Other bandages", severity: "major" },
+export const SWEAT_LEGEND = "BH = Behind · K = Kidney · N = Neck · BS = Body/Saddlecloth";
+
+/** Compact raceday scan layout: short keys = JSON keys in positive/negative. */
+export type RacedayCompactGroup =
+  | { kind: "sweat"; title: "SWEAT" }
+  | { kind: "rows"; title: string; positives: readonly string[]; negatives: readonly string[] };
+
+export const racedayCompactGroups: RacedayCompactGroup[] = [
+  { kind: "sweat", title: "SWEAT" },
+  {
+    kind: "rows",
+    title: "COAT",
+    positives: ["Dapple+", "Healthy+"],
+    negatives: ["Dull-", "Dry-"],
+  },
+  {
+    kind: "rows",
+    title: "MUSCLE",
+    positives: ["Defined+", "Tight+"],
+    negatives: ["Light-", "Poor-"],
+  },
+  {
+    kind: "rows",
+    title: "BEHAVIOUR",
+    positives: ["Calm+", "Alert+"],
+    negatives: ["Aggressive-", "Flat-"],
+  },
+  {
+    kind: "rows",
+    title: "WALK",
+    positives: ["Fluent+"],
+    negatives: ["Short-", "Stiff-", "Injured-"],
+  },
+  {
+    kind: "rows",
+    title: "CONDITION",
+    positives: ["Forward+", "Peak+"],
+    negatives: ["Heavy/Fat-", "Tucked up-"],
+  },
 ];
 
 export const gearTiles: { code: "FT" | "B" | "CB" | "INJ"; label: string }[] = [

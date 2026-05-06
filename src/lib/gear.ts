@@ -3,24 +3,34 @@ import type { GearState } from "./types";
 export type GearTileCode = keyof GearState;
 
 export function applyGearTileSelection(current: GearState, tile: GearTileCode, location: number): GearState {
-  const cur = current[tile];
-  if (cur === location) {
-    const next = { ...current };
+  if (location < 1 || location > 5) return current;
+  const prev = current[tile] ?? [];
+  const set = new Set(prev);
+  if (set.has(location)) {
+    set.delete(location);
+  } else {
+    set.add(location);
+  }
+  const nextArr = [...set].sort((a, b) => a - b);
+  const next: GearState = { ...current };
+  if (nextArr.length === 0) {
     delete next[tile];
-    return next;
+  } else {
+    next[tile] = nextArr;
   }
-
-  if (tile === "INJ") {
-    return { ...current, INJ: location };
-  }
-
-  const next: GearState = {};
-  if (current.INJ !== undefined) next.INJ = current.INJ;
-  next[tile] = location;
   return next;
 }
 
-/** Migrate legacy stored shapes to `{ FT?, B?, CB?, INJ? }` with location 1–5. */
+function normalizeGearKeyArray(v: unknown): number[] | undefined {
+  if (!Array.isArray(v)) return undefined;
+  const nums = v
+    .map((x) => (typeof x === "number" && Number.isFinite(x) ? Math.floor(x) : NaN))
+    .filter((n) => n >= 1 && n <= 5);
+  const uniq = [...new Set(nums)].sort((a, b) => a - b);
+  return uniq.length ? uniq : undefined;
+}
+
+/** Migrate legacy single-number values and coerce stored JSON to `number[]` per key. */
 export function normalizeGearFromStorage(raw: unknown): GearState {
   if (!raw || typeof raw !== "object") return {};
   const o = raw as Record<string, unknown>;
@@ -29,8 +39,11 @@ export function normalizeGearFromStorage(raw: unknown): GearState {
     const v = o[key];
     if (typeof v === "number" && Number.isFinite(v)) {
       const n = Math.floor(v);
-      if (n >= 1 && n <= 5) out[key] = n;
+      if (n >= 1 && n <= 5) out[key] = [n];
+      continue;
     }
+    const arr = normalizeGearKeyArray(v);
+    if (arr?.length) out[key] = arr;
   }
   return out;
 }

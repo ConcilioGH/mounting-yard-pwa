@@ -14,10 +14,10 @@ export type Race = {
 };
 
 export type GearState = {
-  FT?: number;
-  B?: number;
-  CB?: number;
-  INJ?: number;
+  FT?: number[];
+  B?: number[];
+  CB?: number[];
+  INJ?: number[];
 };
 
 export type Assessment = {

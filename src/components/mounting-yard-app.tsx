@@ -4,7 +4,15 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { DEFAULT_RACES, gearLocations, gearTiles, negativeItems, positiveItems } from "@/lib/constants";
+import {
+  DEFAULT_RACES,
+  gearLocations,
+  gearTiles,
+  racedayCompactGroups,
+  SWEAT_LEGEND,
+  SWEAT_NEG_ROW,
+  SWEAT_POS_ROW,
+} from "@/lib/constants";
 import {
   clearAllAssessments,
   loadAllAssessments,
@@ -30,21 +38,37 @@ function totals(a: Assessment | undefined) {
   return { pos, neg, net: pos - neg };
 }
 
-function renderPhysicalValue(loc: number): React.ReactNode {
+function physicalDigitAtLocation(loc: number): React.ReactNode {
   if (loc < 1 || loc > 5) return null;
   const textCls = "text-3xl font-bold leading-none text-red-600 tabular-nums";
   switch (loc) {
     case 1:
-      return <span className={cn("pointer-events-none absolute bottom-1 left-1", textCls)}>{loc}</span>;
+      return (
+        <span key={loc} className={cn("pointer-events-none absolute bottom-1 left-1 z-10", textCls)}>
+          {loc}
+        </span>
+      );
     case 2:
-      return <span className={cn("pointer-events-none absolute top-1 left-1", textCls)}>{loc}</span>;
+      return (
+        <span key={loc} className={cn("pointer-events-none absolute top-1 left-1 z-10", textCls)}>
+          {loc}
+        </span>
+      );
     case 3:
-      return <span className={cn("pointer-events-none absolute top-1 right-1", textCls)}>{loc}</span>;
+      return (
+        <span key={loc} className={cn("pointer-events-none absolute top-1 right-1 z-10", textCls)}>
+          {loc}
+        </span>
+      );
     case 4:
-      return <span className={cn("pointer-events-none absolute bottom-1 right-1", textCls)}>{loc}</span>;
+      return (
+        <span key={loc} className={cn("pointer-events-none absolute bottom-1 right-1 z-10", textCls)}>
+          {loc}
+        </span>
+      );
     case 5:
       return (
-        <span className="pointer-events-none absolute inset-0 flex items-center justify-center">
+        <span key={loc} className="pointer-events-none absolute inset-0 z-[5] flex items-center justify-center">
           <span className={textCls}>{loc}</span>
         </span>
       );
@@ -52,6 +76,33 @@ function renderPhysicalValue(loc: number): React.ReactNode {
       return null;
   }
 }
+
+function renderPhysicalValue(locs: number[] | undefined): React.ReactNode {
+  if (!locs?.length) return null;
+  const uniq = [...new Set(locs.filter((n) => n >= 1 && n <= 5))].sort((a, b) => a - b);
+  if (uniq.length === 0) return null;
+  return <>{uniq.map((loc) => physicalDigitAtLocation(loc))}</>;
+}
+
+/** Net = total_positive − total_negative; soft tints for outdoor readability. */
+function runnerNetBackground(net: number): string {
+  if (net >= 3) return "bg-emerald-300/80";
+  if (net === 2) return "bg-emerald-200/85";
+  if (net === 1) return "bg-emerald-100/90";
+  if (net === 0) return "bg-slate-200/70";
+  if (net === -1) return "bg-orange-100/90";
+  if (net === -2) return "bg-orange-200/85";
+  return "bg-red-200/80";
+}
+
+function formatNet(n: number) {
+  return `${n > 0 ? "+" : ""}${n}`;
+}
+
+const compactFactorBtn =
+  "h-auto min-h-[3.25rem] flex-col gap-0.5 rounded-xl px-1.5 py-1.5 text-center text-[0.95rem] font-bold leading-tight sm:min-h-[3.5rem] sm:px-2 sm:text-base";
+const compactMarksPos = "text-xl font-bold leading-none text-green-700 sm:text-2xl";
+const compactMarksNeg = "text-xl font-bold leading-none text-red-700 sm:text-2xl";
 
 export default function MountingYardApp() {
   const [hydrated, setHydrated] = useState(false);
@@ -104,17 +155,6 @@ export default function MountingYardApp() {
   }, [flushPending]);
 
   useEffect(() => {
-    if (!gearPicker) return;
-    const onPointerDown = (e: PointerEvent) => {
-      const el = gearTilesRef.current;
-      if (el?.contains(e.target as Node)) return;
-      setGearPicker(null);
-    };
-    document.addEventListener("pointerdown", onPointerDown);
-    return () => document.removeEventListener("pointerdown", onPointerDown);
-  }, [gearPicker]);
-
-  useEffect(() => {
     void (async () => {
       try {
         await seedRacesIfEmpty();
@@ -144,15 +184,24 @@ export default function MountingYardApp() {
   const record = key ? data[key] ?? emptyAssessment() : emptyAssessment();
 
   useEffect(() => {
+    setGearPicker(null);
+  }, [raceId, selectedRunner]);
+
+  useEffect(() => {
     if (!key) return;
     const prev = prevKeyRef.current;
     prevKeyRef.current = key;
     keyRef.current = key;
     if (prev && prev !== key) {
-      setGearPicker(null);
       void persistSnapshot();
     }
   }, [key, persistSnapshot]);
+
+  const closePhysicalPickerIfOutside = (e: React.PointerEvent) => {
+    if (!gearPicker) return;
+    if (gearTilesRef.current?.contains(e.target as Node)) return;
+    setGearPicker(null);
+  };
 
   const updateRecord = useCallback(
     (patch: Partial<Assessment>) => {
@@ -181,23 +230,24 @@ export default function MountingYardApp() {
 
   const selectGearLocation = (tile: GearTileCode, location: number) => {
     updateRecord({ gear: applyGearTileSelection(record.gear, tile, location) });
-    setGearPicker(null);
   };
 
   const { pos: totalPositive, neg: totalNegative, net } = totals(record);
 
-  const orderedRunners = race?.runners ?? [];
+  const orderedRunners = useMemo(() => race?.runners ?? [], [race]);
   const runnerIndex = orderedRunners.findIndex((r) => r.no === selectedRunner);
   const canPrev = runnerIndex > 0;
   const canNext = runnerIndex >= 0 && runnerIndex < orderedRunners.length - 1;
 
   const goPrev = useCallback(() => {
     if (!canPrev) return;
+    setGearPicker(null);
     setSelectedRunner(orderedRunners[runnerIndex - 1]!.no);
   }, [canPrev, orderedRunners, runnerIndex]);
 
   const goNext = useCallback(() => {
     if (!canNext) return;
+    setGearPicker(null);
     setSelectedRunner(orderedRunners[runnerIndex + 1]!.no);
   }, [canNext, orderedRunners, runnerIndex]);
 
@@ -274,6 +324,7 @@ export default function MountingYardApp() {
           <Tabs
             value={raceId}
             onValueChange={(v) => {
+              setGearPicker(null);
               const nextRace = races.find((r) => r.id === v) ?? races[0];
               if (!nextRace) return;
               setRaceId(nextRace.id);
@@ -302,35 +353,40 @@ export default function MountingYardApp() {
                   runners.map((r) => {
                     const rkey = makeKey(race.id, r.no);
                     const rec = data[rkey];
-                    const { pos, neg } = totals(rec);
+                    const { pos, neg, net } = totals(rec);
                     const active = selectedRunner === r.no;
+                    const tint = runnerNetBackground(net);
                     return (
                       <button
                         key={r.no}
                         type="button"
-                        onClick={() => setSelectedRunner(r.no)}
-                        className={`w-full rounded-3xl border-2 p-4 text-left transition active:scale-[0.99] ${
-                          active ? "border-slate-900 bg-slate-900 text-white shadow-md" : "border-slate-200 bg-white"
-                        }`}
+                        onClick={() => {
+                          setGearPicker(null);
+                          setSelectedRunner(r.no);
+                        }}
+                        className={cn(
+                          "w-full rounded-3xl border-2 p-4 text-left text-slate-900 transition active:scale-[0.99]",
+                          tint,
+                          active ? "border-slate-900 shadow-lg ring-2 ring-slate-900 ring-offset-2 ring-offset-slate-100" : "border-slate-400/50",
+                        )}
                       >
                         <div className="flex items-center justify-between gap-2">
                           <div className="flex min-w-0 items-center gap-3">
-                            <div
-                              className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl text-xl font-bold ${
-                                active ? "bg-white text-slate-900" : "bg-slate-100 text-slate-900"
-                              }`}
-                            >
+                            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-white/90 text-xl font-bold text-slate-900 shadow-sm backdrop-blur-sm">
                               {r.no}
                             </div>
                             <div className="min-w-0">
-                              <div className="truncate text-xl font-bold leading-tight">{r.horse}</div>
-                              <div className={`truncate text-base ${active ? "text-slate-200" : "text-slate-600"}`}>
+                              <div className="truncate text-xl font-bold leading-tight drop-shadow-sm">{r.horse}</div>
+                              <div className="truncate text-base text-slate-800/90">
                                 {r.jockey} · {r.odds}
                               </div>
                             </div>
                           </div>
-                          <div className={`shrink-0 text-lg font-bold tabular-nums ${active ? "text-white" : "text-slate-700"}`}>
-                            +{pos} −{neg}
+                          <div className="flex shrink-0 flex-col items-end gap-0.5 tabular-nums">
+                            <span className="text-xl font-bold leading-none text-slate-900">net {formatNet(net)}</span>
+                            <span className="text-sm font-semibold text-slate-800/90">
+                              +{pos} −{neg}
+                            </span>
                           </div>
                         </div>
                       </button>
@@ -340,7 +396,7 @@ export default function MountingYardApp() {
             </CardContent>
           </Card>
 
-          <div className="space-y-4">
+          <div className="space-y-4" onPointerDown={closePhysicalPickerIfOutside}>
             <Card className="rounded-3xl shadow-sm">
               <CardContent className="space-y-4 p-5">
                 <div>
@@ -357,45 +413,101 @@ export default function MountingYardApp() {
               </CardContent>
             </Card>
 
-            <Card className="rounded-3xl shadow-sm">
-              <CardContent className="space-y-3 p-5">
-                <h3 className="text-xl font-bold">Positive</h3>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {positiveItems.map((item) => (
-                    <Button
-                      key={item}
-                      type="button"
-                      variant="outline"
-                      size="touch"
-                      onClick={() => tapPositive(item)}
-                      className="h-auto min-h-[4.5rem] justify-between rounded-3xl px-5 py-4 text-left text-lg whitespace-normal"
-                    >
-                      <span className="pr-2">{item}</span>
-                      <span className="text-3xl font-bold text-green-700">{marks(record.positive[item])}</span>
-                    </Button>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="rounded-3xl shadow-sm">
-              <CardContent className="space-y-3 p-5">
-                <h3 className="text-xl font-bold">Negative</h3>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {negativeItems.map((item) => (
-                    <Button
-                      key={item.label}
-                      type="button"
-                      variant="outline"
-                      size="touch"
-                      onClick={() => tapNegative(item)}
-                      className="h-auto min-h-[4.75rem] justify-between rounded-3xl px-5 py-4 text-left text-lg whitespace-normal"
-                    >
-                      <span className="pr-2">{item.label}</span>
-                      <span className="text-3xl font-bold text-red-700">{marks(record.negative[item.label])}</span>
-                    </Button>
-                  ))}
-                </div>
+            <Card className="rounded-2xl shadow-sm">
+              <CardContent className="space-y-2 p-3 sm:p-4">
+                <h3 className="text-lg font-bold text-slate-900">Assessment</h3>
+                {racedayCompactGroups.map((group) => (
+                  <div
+                    key={group.title}
+                    className="rounded-xl border border-slate-200 bg-slate-50/90 p-2 shadow-sm"
+                  >
+                    <h4 className="mb-1.5 text-[0.7rem] font-bold uppercase tracking-wide text-slate-600 sm:text-xs">
+                      {group.title}
+                    </h4>
+                    {group.kind === "sweat" ? (
+                      <div className="space-y-1.5">
+                        <div className="grid grid-cols-4 gap-1.5">
+                          {SWEAT_POS_ROW.map((key) => (
+                            <Button
+                              key={key}
+                              type="button"
+                              variant="outline"
+                              size="touch"
+                              onClick={() => tapPositive(key)}
+                              className={cn(compactFactorBtn)}
+                            >
+                              <span>{key}</span>
+                              <span className={compactMarksPos}>{marks(record.positive[key])}</span>
+                            </Button>
+                          ))}
+                        </div>
+                        <div className="grid grid-cols-4 gap-1.5">
+                          {SWEAT_NEG_ROW.map((key) => (
+                            <Button
+                              key={key}
+                              type="button"
+                              variant="outline"
+                              size="touch"
+                              onClick={() => tapNegative({ label: key })}
+                              className={cn(compactFactorBtn)}
+                            >
+                              <span>{key}</span>
+                              <span className={compactMarksNeg}>{marks(record.negative[key])}</span>
+                            </Button>
+                          ))}
+                        </div>
+                        <p className="text-[0.7rem] leading-snug text-slate-600 sm:text-xs">{SWEAT_LEGEND}</p>
+                      </div>
+                    ) : (
+                      <div className="space-y-1.5">
+                        {group.positives.length > 0 && (
+                          <div
+                            className={cn(
+                              "grid gap-1.5",
+                              group.positives.length === 1 ? "grid-cols-1" : "grid-cols-2",
+                            )}
+                          >
+                            {group.positives.map((key) => (
+                              <Button
+                                key={key}
+                                type="button"
+                                variant="outline"
+                                size="touch"
+                                onClick={() => tapPositive(key)}
+                                className={cn(compactFactorBtn)}
+                              >
+                                <span>{key}</span>
+                                <span className={compactMarksPos}>{marks(record.positive[key])}</span>
+                              </Button>
+                            ))}
+                          </div>
+                        )}
+                        {group.negatives.length > 0 && (
+                          <div
+                            className={cn(
+                              "grid gap-1.5",
+                              group.negatives.length >= 3 ? "grid-cols-3" : "grid-cols-2",
+                            )}
+                          >
+                            {group.negatives.map((key) => (
+                              <Button
+                                key={key}
+                                type="button"
+                                variant="outline"
+                                size="touch"
+                                onClick={() => tapNegative({ label: key })}
+                                className={cn(compactFactorBtn)}
+                              >
+                                <span className="break-words">{key}</span>
+                                <span className={compactMarksNeg}>{marks(record.negative[key])}</span>
+                              </Button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )}
+                  </div>
+                ))}
               </CardContent>
             </Card>
 
@@ -404,20 +516,21 @@ export default function MountingYardApp() {
                 <h3 className="text-xl font-bold">Physical</h3>
                 <div ref={gearTilesRef} className="grid grid-cols-2 gap-4">
                   {gearTiles.map((item) => {
-                    const loc = record.gear[item.code];
+                    const locs = record.gear[item.code];
+                    const hasLocs = (locs?.length ?? 0) > 0;
                     const open = gearPicker === item.code;
                     return (
                       <div key={item.code} className="relative">
                         <Button
                           type="button"
                           size="touch"
-                          variant={loc !== undefined ? "default" : "outline"}
+                          variant={hasLocs ? "default" : "outline"}
                           onClick={() => setGearPicker((p) => (p === item.code ? null : item.code))}
                           className="relative h-auto min-h-[6.25rem] w-full flex-col justify-center gap-2 rounded-3xl py-5 text-lg"
                         >
                           <span className="text-2xl font-bold tracking-tight">{item.code}</span>
                           <span className="text-center text-base leading-snug">{item.label}</span>
-                          {loc !== undefined && renderPhysicalValue(loc)}
+                          {renderPhysicalValue(locs)}
                         </Button>
                         {open && (
                           <div
@@ -430,9 +543,9 @@ export default function MountingYardApp() {
                                 key={num}
                                 type="button"
                                 role="option"
-                                aria-selected={loc === num}
+                                aria-selected={locs?.includes(num) ?? false}
                                 className={`flex w-full items-center gap-3 rounded-xl px-4 py-3 text-left text-lg font-semibold transition hover:bg-slate-100 active:bg-slate-200 ${
-                                  loc === num ? "bg-slate-100" : ""
+                                  locs?.includes(num) ? "bg-slate-100" : ""
                                 }`}
                                 onClick={(e) => {
                                   e.stopPropagation();
