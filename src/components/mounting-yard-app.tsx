@@ -4,7 +4,7 @@ import React, { useCallback, useEffect, useMemo, useRef, useState } from "react"
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { DEFAULT_RACES, gearItems, negativeItems, positiveItems } from "@/lib/constants";
+import { DEFAULT_RACES, gearLocations, gearTiles, negativeItems, positiveItems } from "@/lib/constants";
 import {
   clearAllAssessments,
   loadAllAssessments,
@@ -15,8 +15,9 @@ import {
   seedRacesIfEmpty,
 } from "@/lib/db";
 import { buildAssessmentsExportCsv, downloadTextFile, parseRacesCsv } from "@/lib/csv";
+import { applyGearTileSelection, type GearTileCode } from "@/lib/gear";
 import type { Assessment, Race, Runner } from "@/lib/types";
-import { emptyAssessment, makeKey, marks, nextNegative, nextPositive } from "@/lib/utils";
+import { cn, emptyAssessment, makeKey, marks, nextNegative, nextPositive } from "@/lib/utils";
 import { useDebouncedCallback } from "@/hooks/useDebouncedCallback";
 
 function totals(a: Assessment | undefined) {
@@ -27,6 +28,29 @@ function totals(a: Assessment | undefined) {
     ? Object.values(a.negative).reduce((sum, v) => sum + Math.abs(Math.min(0, v ?? 0)), 0)
     : 0;
   return { pos, neg, net: pos - neg };
+}
+
+function renderPhysicalValue(loc: number): React.ReactNode {
+  if (loc < 1 || loc > 5) return null;
+  const textCls = "text-3xl font-bold leading-none text-red-600 tabular-nums";
+  switch (loc) {
+    case 1:
+      return <span className={cn("pointer-events-none absolute bottom-1 left-1", textCls)}>{loc}</span>;
+    case 2:
+      return <span className={cn("pointer-events-none absolute top-1 left-1", textCls)}>{loc}</span>;
+    case 3:
+      return <span className={cn("pointer-events-none absolute top-1 right-1", textCls)}>{loc}</span>;
+    case 4:
+      return <span className={cn("pointer-events-none absolute bottom-1 right-1", textCls)}>{loc}</span>;
+    case 5:
+      return (
+        <span className="pointer-events-none absolute inset-0 flex items-center justify-center">
+          <span className={textCls}>{loc}</span>
+        </span>
+      );
+    default:
+      return null;
+  }
 }
 
 export default function MountingYardApp() {
@@ -41,6 +65,8 @@ export default function MountingYardApp() {
   const dataRef = useRef<Record<string, Assessment>>({});
   const keyRef = useRef<string>("");
   const prevKeyRef = useRef<string | null>(null);
+  const [gearPicker, setGearPicker] = useState<GearTileCode | null>(null);
+  const gearTilesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     dataRef.current = data;
@@ -78,6 +104,17 @@ export default function MountingYardApp() {
   }, [flushPending]);
 
   useEffect(() => {
+    if (!gearPicker) return;
+    const onPointerDown = (e: PointerEvent) => {
+      const el = gearTilesRef.current;
+      if (el?.contains(e.target as Node)) return;
+      setGearPicker(null);
+    };
+    document.addEventListener("pointerdown", onPointerDown);
+    return () => document.removeEventListener("pointerdown", onPointerDown);
+  }, [gearPicker]);
+
+  useEffect(() => {
     void (async () => {
       try {
         await seedRacesIfEmpty();
@@ -112,6 +149,7 @@ export default function MountingYardApp() {
     prevKeyRef.current = key;
     keyRef.current = key;
     if (prev && prev !== key) {
+      setGearPicker(null);
       void persistSnapshot();
     }
   }, [key, persistSnapshot]);
@@ -141,8 +179,9 @@ export default function MountingYardApp() {
     updateRecord({ negative: { ...record.negative, [item.label]: nextNegative(v) } });
   };
 
-  const toggleGear = (code: string) => {
-    updateRecord({ gear: { ...record.gear, [code]: !record.gear[code] } });
+  const selectGearLocation = (tile: GearTileCode, location: number) => {
+    updateRecord({ gear: applyGearTileSelection(record.gear, tile, location) });
+    setGearPicker(null);
   };
 
   const { pos: totalPositive, neg: totalNegative, net } = totals(record);
@@ -362,23 +401,55 @@ export default function MountingYardApp() {
 
             <Card className="rounded-3xl shadow-sm">
               <CardContent className="space-y-4 p-5">
-                <h3 className="text-xl font-bold">Gear</h3>
-                <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-5">
-                  {gearItems.map((item) => (
-                    <Button
-                      key={item.code}
-                      type="button"
-                      size="touch"
-                      variant={record.gear[item.code] ? "default" : "outline"}
-                      onClick={() => toggleGear(item.code)}
-                      className="h-auto min-h-[4.5rem] flex-col gap-1 rounded-3xl py-4 text-base"
-                    >
-                      <span className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-current text-lg font-bold">
-                        {item.code}
-                      </span>
-                      <span className="text-center leading-snug">{item.label}</span>
-                    </Button>
-                  ))}
+                <h3 className="text-xl font-bold">Physical</h3>
+                <div ref={gearTilesRef} className="grid grid-cols-2 gap-4">
+                  {gearTiles.map((item) => {
+                    const loc = record.gear[item.code];
+                    const open = gearPicker === item.code;
+                    return (
+                      <div key={item.code} className="relative">
+                        <Button
+                          type="button"
+                          size="touch"
+                          variant={loc !== undefined ? "default" : "outline"}
+                          onClick={() => setGearPicker((p) => (p === item.code ? null : item.code))}
+                          className="relative h-auto min-h-[6.25rem] w-full flex-col justify-center gap-2 rounded-3xl py-5 text-lg"
+                        >
+                          <span className="text-2xl font-bold tracking-tight">{item.code}</span>
+                          <span className="text-center text-base leading-snug">{item.label}</span>
+                          {loc !== undefined && renderPhysicalValue(loc)}
+                        </Button>
+                        {open && (
+                          <div
+                            className="absolute left-0 right-0 top-full z-[60] mt-2 space-y-1 rounded-2xl border-2 border-slate-200 bg-white p-2 shadow-lg"
+                            role="listbox"
+                            aria-label={`${item.code} location`}
+                          >
+                            {gearLocations.map(({ num, label }) => (
+                              <button
+                                key={num}
+                                type="button"
+                                role="option"
+                                aria-selected={loc === num}
+                                className={`flex w-full items-center gap-3 rounded-xl px-4 py-3 text-left text-lg font-semibold transition hover:bg-slate-100 active:bg-slate-200 ${
+                                  loc === num ? "bg-slate-100" : ""
+                                }`}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  selectGearLocation(item.code, num);
+                                }}
+                              >
+                                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-900 text-white">
+                                  {num}
+                                </span>
+                                <span>{label}</span>
+                              </button>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
                 <label className="block">
                   <span className="mb-2 block text-lg font-semibold text-slate-800">Notes</span>

@@ -1,6 +1,7 @@
 import { openDB, type IDBPDatabase } from "idb";
 import type { Assessment, AssessmentRow, Race } from "./types";
 import { DEFAULT_RACES } from "./constants";
+import { normalizeGearFromStorage } from "./gear";
 import { emptyAssessment } from "./utils";
 
 const DB_NAME = "mounting-yard-assessment";
@@ -65,7 +66,7 @@ export async function loadAllAssessments(): Promise<Record<string, Assessment>> 
     out[key] = {
       positive: raw.positive ?? {},
       negative: raw.negative ?? {},
-      gear: raw.gear ?? {},
+      gear: normalizeGearFromStorage(raw.gear),
       notes: raw.notes ?? "",
       updatedAt: raw.updatedAt ?? new Date().toISOString(),
     };

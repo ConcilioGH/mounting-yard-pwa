@@ -70,15 +70,17 @@ export const negativeItems: { label: string; severity: string }[] = [
   { label: "Other bandages", severity: "major" },
 ];
 
-export const gearItems: { code: string; label: string }[] = [
-  { code: "1", label: "Near front" },
-  { code: "2", label: "Off front" },
-  { code: "3", label: "Near hind" },
-  { code: "4", label: "Off hind" },
-  { code: "FT", label: "Fetlock tape" },
+export const gearTiles: { code: "FT" | "B" | "CB" | "INJ"; label: string }[] = [
+  { code: "FT", label: "Fetlock Tape" },
   { code: "B", label: "Bandage" },
-  { code: "CB", label: "Canon bandage" },
-  { code: "TT", label: "Tongue tie" },
-  { code: "EM", label: "Ear muffs" },
-  { code: "BL", label: "Blinkers" },
+  { code: "CB", label: "Canon Bandage" },
+  { code: "INJ", label: "Injury" },
+];
+
+export const gearLocations: { num: number; label: string }[] = [
+  { num: 1, label: "Near front" },
+  { num: 2, label: "Off front" },
+  { num: 3, label: "Off hind" },
+  { num: 4, label: "Near hind" },
+  { num: 5, label: "Body" },
 ];
