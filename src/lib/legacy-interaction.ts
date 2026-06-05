@@ -1,3 +1,4 @@
+import { ios12SafeClick, yardControlClick } from "@/lib/ios12-safe-interaction";
 import { isOldIOS } from "@/lib/legacy-safari";
 
 export type LegacyClickProps = {
@@ -7,20 +8,10 @@ export type LegacyClickProps = {
   onTouchEnd?: undefined;
 };
 
-/** Old iOS Safari: click-only — no touch/pointer handlers that double-fire. */
+/** @deprecated Use yardControlClick */
 export function legacyClickProps(onClick: () => void): LegacyClickProps {
-  if (isOldIOS()) {
-    return {
-      onClick,
-      onTouchStart: undefined,
-      onPointerDown: undefined,
-      onTouchEnd: undefined,
-    };
-  }
+  if (isOldIOS()) return ios12SafeClick(onClick);
   return { onClick };
 }
 
-export function useClickOnlyOnOldIOS(): boolean {
-  if (typeof navigator === "undefined") return false;
-  return isOldIOS();
-}
+export { yardControlClick, ios12SafeClick };

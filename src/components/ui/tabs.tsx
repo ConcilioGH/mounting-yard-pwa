@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-import { legacyClickProps } from "@/lib/legacy-interaction";
+import { yardControlClick } from "@/lib/ios12-safe-interaction";
 import { cn } from "@/lib/utils";
 
 type TabsCtx = { value: string; onValueChange: (v: string) => void };
@@ -64,7 +64,7 @@ export function TabsTrigger({
         selected ? "bg-slate-900 text-white shadow-sm" : "bg-white text-slate-800 ring-1 ring-slate-200 hover:bg-slate-50",
         className,
       )}
-      {...legacyClickProps(() => ctx.onValueChange(value))}
+      {...yardControlClick(() => ctx.onValueChange(value))}
     >
       {children}
     </button>

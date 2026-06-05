@@ -1,4 +1,5 @@
 import type { MouseEvent as ReactMouseEvent, TouchEvent as ReactTouchEvent } from "react";
+import { isOldIOS } from "@/lib/legacy-safari";
 
 export function describeTouchTarget(node: Element | null): Record<string, string | undefined> | null {
   if (!node) return null;
@@ -35,7 +36,6 @@ export function touchPointFromEvent(event: ReactTouchEvent): { x: number; y: num
   return { x: touch.clientX, y: touch.clientY };
 }
 
-/** Remove bootstrap failure panel if React mounted after the 3s watchdog. */
 export function removeLegacyStartupOverlays(): void {
   document.getElementById("ios12-startup-failure")?.remove();
 }
@@ -56,23 +56,24 @@ type LastTouchTimeRef = { current: number };
 
 export const ASSESSMENT_TOUCH_CLICK_GUARD_MS = 700;
 
+export type AssessmentPressProps = {
+  "data-assessment-control": string;
+  onClick: (event: ReactMouseEvent) => void;
+  onTouchStart?: (event: ReactTouchEvent) => void;
+  onTouchEnd?: (event: ReactTouchEvent) => void;
+  onPointerDown?: (event: React.PointerEvent) => void;
+};
+
 /**
- * iOS 12 Safari fires touch then a synthetic click — guard prevents double-toggle.
- * Touch: record time, preventDefault, run once.
- * Click: ignore if within guard window after touch.
+ * iOS 12: click-only (no touch handlers, no preventDefault).
+ * Modern Safari: touch guard to avoid double-toggle.
  */
 export function createAssessmentPressProps(
   label: string,
   onPress: () => void,
   lastTouchTimeRef: LastTouchTimeRef,
-  clickOnly = false,
-): {
-  "data-assessment-control": string;
-  onClick: (event: ReactMouseEvent) => void;
-  onTouchStart?: (event: ReactTouchEvent) => void;
-  onPointerDown?: undefined;
-} {
-  if (clickOnly) {
+): AssessmentPressProps {
+  if (isOldIOS()) {
     return {
       "data-assessment-control": label,
       onClick: () => {
@@ -80,6 +81,7 @@ export function createAssessmentPressProps(
         onPress();
       },
       onTouchStart: undefined,
+      onTouchEnd: undefined,
       onPointerDown: undefined,
     };
   }

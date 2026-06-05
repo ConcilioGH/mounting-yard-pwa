@@ -44,13 +44,13 @@ import { cn, emptyAssessment, makeKey, marks, nextNegative, nextPositive } from 
 import { useDebouncedCallback } from "@/hooks/useDebouncedCallback";
 import { InitErrorPanel } from "@/components/init-error-panel";
 import { enableIOS12CompatMode } from "@/lib/ios12-compat-mode";
-import { legacyClickProps } from "@/lib/legacy-interaction";
 import { isOldIOS, shouldSkipIndexedDB } from "@/lib/legacy-safari";
+import { yardControlClick } from "@/lib/ios12-safe-interaction";
 import {
   createAssessmentPressProps,
-  logAssessmentAreaTouch,
   logMountedBlockingOverlays,
   removeLegacyStartupOverlays,
+  type AssessmentPressProps,
 } from "@/lib/yard-touch-diagnostics";
 import {
   logLoadingState,
@@ -134,8 +134,43 @@ const compactFactorBtn =
   "h-auto min-h-[3.25rem] flex-col gap-0.5 rounded-xl px-1.5 py-1.5 text-center text-[0.95rem] font-bold leading-tight sm:min-h-[3.5rem] sm:px-2 sm:text-base";
 const compactMarksPos = "text-xl font-bold leading-none text-green-700 sm:text-2xl";
 const compactMarksNeg = "text-xl font-bold leading-none text-red-700 sm:text-2xl";
+const ios12FactorBtnClass =
+  "inline-flex w-full touch-manipulation cursor-pointer items-center justify-center gap-2 font-semibold rounded-2xl border border-slate-200 bg-white active:bg-slate-100 min-h-[56px]";
 
 type PhysicalPicker = GearTileCode | "WET" | null;
+
+function AssessmentControl({
+  pressProps,
+  className,
+  children,
+  variant = "outline",
+}: {
+  pressProps: AssessmentPressProps;
+  className?: string;
+  children: React.ReactNode;
+  variant?: "default" | "outline";
+}) {
+  if (isOldIOS()) {
+    return (
+      <button
+        type="button"
+        className={cn(
+          ios12FactorBtnClass,
+          variant === "default" && "border-slate-900 bg-slate-900 text-white active:bg-slate-800",
+          className,
+        )}
+        {...pressProps}
+      >
+        {children}
+      </button>
+    );
+  }
+  return (
+    <Button type="button" variant={variant} size="touch" className={className} {...pressProps}>
+      {children}
+    </Button>
+  );
+}
 
 export default function MountingYardApp() {
   const [initErrors, setInitErrors] = useState<string[]>([]);
@@ -155,34 +190,19 @@ export default function MountingYardApp() {
   const gearTilesRef = useRef<HTMLDivElement>(null);
   const assessmentAreaRef = useRef<HTMLDivElement>(null);
   const lastTouchTimeRef = useRef(0);
-  const [clickOnly, setClickOnly] = useState(false);
+  const userInteractedRef = useRef(false);
+  const [tapCount, setTapCount] = useState(0);
+  const [interactionDebug, setInteractionDebug] = useState("—");
 
   useEffect(() => {
     removeLegacyStartupOverlays();
     logMountedBlockingOverlays();
-    const old = isOldIOS();
-    setClickOnly(old);
-    if (old) void enableIOS12CompatMode();
+    if (isOldIOS()) void enableIOS12CompatMode();
   }, []);
 
   useEffect(() => {
     dataRef.current = data;
   }, [data]);
-
-  const handleAssessmentPress = useCallback((handler: () => void) => {
-    handler();
-  }, []);
-
-  const assessmentPress = useCallback(
-    (label: string, handler: () => void) =>
-      createAssessmentPressProps(
-        label,
-        () => handleAssessmentPress(handler),
-        lastTouchTimeRef,
-        clickOnly,
-      ),
-    [handleAssessmentPress, clickOnly],
-  );
 
   const persistSnapshot = useCallback(() => {
     setSaveState("saving");
@@ -252,14 +272,16 @@ export default function MountingYardApp() {
         loadAllAssessments(),
       ]);
       applyMeetingManifest();
-      if (loadedRaces.length) {
+      if (loadedRaces.length && !userInteractedRef.current) {
         setRaces(loadedRaces);
         const first = loadedRaces[0];
         setRaceId(first.id);
         setSelectedRunner(first.runners[0]?.no ?? 1);
       }
-      dataRef.current = loadedAssessments;
-      setData(loadedAssessments);
+      if (!userInteractedRef.current) {
+        dataRef.current = loadedAssessments;
+        setData(loadedAssessments);
+      }
     };
 
     const safetyTimer = window.setTimeout(() => {
@@ -325,11 +347,48 @@ export default function MountingYardApp() {
     setGearPicker(null);
   };
 
-  const handleAssessmentAreaTouchCapture = (event: React.TouchEvent) => {
-    const touch = event.touches[0];
-    if (!touch) return;
-    logAssessmentAreaTouch(touch.clientX, touch.clientY);
-  };
+  const refreshInteractionDebug = useCallback(
+    (label: string) => {
+      const k = keyRef.current;
+      const rec = dataRef.current[k] ?? emptyAssessment();
+      const t = totals(rec);
+      setInteractionDebug(
+        `${label} · R${raceId} #${selectedRunner} ${runner?.horse ?? "?"} · +${t.pos} −${t.neg} net ${formatNet(t.net)}`,
+      );
+    },
+    [raceId, selectedRunner, runner],
+  );
+
+  const handleAssessmentPress = useCallback(
+    (label: string, handler: () => void) => {
+      userInteractedRef.current = true;
+      setTapCount((count) => count + 1);
+      handler();
+      window.setTimeout(() => refreshInteractionDebug(label), 0);
+    },
+    [refreshInteractionDebug],
+  );
+
+  const assessmentPress = useCallback(
+    (label: string, handler: () => void): AssessmentPressProps =>
+      createAssessmentPressProps(
+        label,
+        () => handleAssessmentPress(label, handler),
+        lastTouchTimeRef,
+      ),
+    [handleAssessmentPress],
+  );
+
+  const yardClick = useCallback(
+    (label: string, handler: () => void) =>
+      yardControlClick(() => {
+        userInteractedRef.current = true;
+        setTapCount((count) => count + 1);
+        handler();
+        window.setTimeout(() => refreshInteractionDebug(label), 0);
+      }),
+    [refreshInteractionDebug],
+  );
 
   const updateRecord = useCallback(
     (patch: Partial<Assessment>) => {
@@ -373,22 +432,29 @@ export default function MountingYardApp() {
 
   const { pos: totalPositive, neg: totalNegative, net } = totals(record);
 
+  useEffect(() => {
+    if (!race) return;
+    if (race.runners.some((r) => r.no === selectedRunner)) return;
+    setSelectedRunner(race.runners[0]?.no ?? 1);
+  }, [race, selectedRunner]);
+
   const orderedRunners = useMemo(() => race?.runners ?? [], [race]);
   const runnerIndex = orderedRunners.findIndex((r) => r.no === selectedRunner);
-  const canPrev = runnerIndex > 0;
-  const canNext = runnerIndex >= 0 && runnerIndex < orderedRunners.length - 1;
+  const safeRunnerIndex = runnerIndex >= 0 ? runnerIndex : 0;
+  const canPrev = safeRunnerIndex > 0;
+  const canNext = safeRunnerIndex >= 0 && safeRunnerIndex < orderedRunners.length - 1;
 
   const goPrev = useCallback(() => {
     if (!canPrev) return;
     setGearPicker(null);
-    setSelectedRunner(orderedRunners[runnerIndex - 1]!.no);
-  }, [canPrev, orderedRunners, runnerIndex]);
+    setSelectedRunner(orderedRunners[safeRunnerIndex - 1]!.no);
+  }, [canPrev, orderedRunners, safeRunnerIndex]);
 
   const goNext = useCallback(() => {
     if (!canNext) return;
     setGearPicker(null);
-    setSelectedRunner(orderedRunners[runnerIndex + 1]!.no);
-  }, [canNext, orderedRunners, runnerIndex]);
+    setSelectedRunner(orderedRunners[safeRunnerIndex + 1]!.no);
+  }, [canNext, orderedRunners, safeRunnerIndex]);
 
   const handleExport = () => {
     void (async () => {
@@ -468,9 +534,16 @@ export default function MountingYardApp() {
     <div className="min-h-[100dvh] bg-slate-100 pb-[calc(5.5rem+env(safe-area-inset-bottom))] pt-[env(safe-area-inset-top)] text-slate-900">
       <InitErrorPanel errors={initErrors} />
       <div className="mx-auto max-w-7xl space-y-3 p-3">
-        <header className="flex flex-col gap-4 rounded-3xl bg-red-500 p-5 shadow-sm lg:flex-row lg:items-center lg:justify-between">
+        <header className="flex flex-col gap-4 rounded-3xl bg-white p-5 shadow-sm lg:flex-row lg:items-center lg:justify-between">
           <div className="min-w-0 flex-1">
-            <h1 className="text-2xl font-bold tracking-tight md:text-3xl">Mounting Yard TEST 123</h1>
+            <h1 className="text-2xl font-bold tracking-tight md:text-3xl">Mounting Yard</h1>
+            <p className="mt-2 text-sm font-bold tabular-nums text-slate-700">Tap count: {tapCount}</p>
+            <p className="text-sm font-mono text-slate-600">{interactionDebug}</p>
+            {isOldIOS() ? (
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                iOS 12 safe interaction mode (click only)
+              </p>
+            ) : null}
             <p className="mt-1 text-lg text-slate-600">
               Autosaves on this device. Import meeting CSV here once — Speed Map and Race Day Bias follow.
             </p>
@@ -493,7 +566,7 @@ export default function MountingYardApp() {
               variant="outline"
               size="touch"
               className="rounded-3xl text-lg"
-              {...legacyClickProps(() => void handleImportMeetingFolder())}
+              {...yardClick("import-meeting", () => void handleImportMeetingFolder())}
             >
               Import meeting folder
             </Button>
@@ -501,7 +574,7 @@ export default function MountingYardApp() {
               type="button"
               size="touch"
               className="rounded-3xl text-lg"
-              {...legacyClickProps(handleExport)}
+              {...yardClick("export-assessments", handleExport)}
             >
               Export all assessments
             </Button>
@@ -517,11 +590,14 @@ export default function MountingYardApp() {
           <Tabs
             value={raceId}
             onValueChange={(v) => {
+              userInteractedRef.current = true;
+              setTapCount((count) => count + 1);
               setGearPicker(null);
               const nextRace = races.find((r) => r.id === v) ?? races[0];
               if (!nextRace) return;
               setRaceId(nextRace.id);
               setSelectedRunner(nextRace.runners[0]?.no ?? 1);
+              window.setTimeout(() => refreshInteractionDebug(`race-tab-${v}`), 0);
             }}
           >
             <TabsList
@@ -553,7 +629,7 @@ export default function MountingYardApp() {
                       <button
                         key={r.no}
                         type="button"
-                        {...legacyClickProps(() => {
+                        {...yardClick(`horse-${r.no}`, () => {
                           setGearPicker(null);
                           setSelectedRunner(r.no);
                         })}
@@ -593,11 +669,9 @@ export default function MountingYardApp() {
             ref={assessmentAreaRef}
             className="relative z-10 space-y-4 touch-manipulation"
             data-yard-assessment="true"
-            {...(clickOnly
-              ? { onMouseDown: (e: React.MouseEvent) => closePhysicalPickerIfOutside(e.target) }
+            {...(isOldIOS()
+              ? { onClick: (e: React.MouseEvent) => closePhysicalPickerIfOutside(e.target) }
               : {
-                  onTouchStartCapture: handleAssessmentAreaTouchCapture,
-                  onTouchStart: (e: React.TouchEvent) => closePhysicalPickerIfOutside(e.target),
                   onMouseDown: (e: React.MouseEvent) => closePhysicalPickerIfOutside(e.target),
                 })}
           >
@@ -631,30 +705,24 @@ export default function MountingYardApp() {
                     {group.kind === "sweat" ? (
                       <div className="space-y-1.5">
                         <div className="grid grid-cols-1 gap-1.5">
-                          <Button
-                            type="button"
-                            variant="outline"
-                            size="touch"
+                          <AssessmentControl
                             className={cn(compactFactorBtn)}
-                            {...assessmentPress("positive-clean-plus", () => tapPositive(SWEAT_POS_KEY))}
+                            pressProps={assessmentPress("positive-clean-plus", () => tapPositive(SWEAT_POS_KEY))}
                           >
                             <span>Clean +</span>
                             <span className={compactMarksPos}>{marks(record.positive[SWEAT_POS_KEY])}</span>
-                          </Button>
+                          </AssessmentControl>
                         </div>
                         <div className="grid grid-cols-4 gap-1.5">
                           {SWEAT_NEG_ROW.map((key) => (
-                            <Button
+                            <AssessmentControl
                               key={key}
-                              type="button"
-                              variant="outline"
-                              size="touch"
                               className={cn(compactFactorBtn)}
-                              {...assessmentPress(`negative-sweat-${key}`, () => tapNegative({ label: key }))}
+                              pressProps={assessmentPress(`negative-sweat-${key}`, () => tapNegative({ label: key }))}
                             >
                               <span>{key}</span>
                               <span className={compactMarksNeg}>{marks(record.negative[key])}</span>
-                            </Button>
+                            </AssessmentControl>
                           ))}
                         </div>
                         <p className="text-[0.7rem] leading-snug text-slate-600 sm:text-xs">{SWEAT_LEGEND}</p>
@@ -669,17 +737,14 @@ export default function MountingYardApp() {
                             )}
                           >
                             {group.positives.map((key) => (
-                              <Button
+                              <AssessmentControl
                                 key={key}
-                                type="button"
-                                variant="outline"
-                                size="touch"
                                 className={cn(compactFactorBtn)}
-                                {...assessmentPress(`positive-${key}`, () => tapPositive(key))}
+                                pressProps={assessmentPress(`positive-${key}`, () => tapPositive(key))}
                               >
                                 <span>{key}</span>
                                 <span className={compactMarksPos}>{marks(record.positive[key])}</span>
-                              </Button>
+                              </AssessmentControl>
                             ))}
                           </div>
                         )}
@@ -691,17 +756,14 @@ export default function MountingYardApp() {
                             )}
                           >
                             {group.negatives.map((key) => (
-                              <Button
+                              <AssessmentControl
                                 key={key}
-                                type="button"
-                                variant="outline"
-                                size="touch"
                                 className={cn(compactFactorBtn)}
-                                {...assessmentPress(`negative-${key}`, () => tapNegative({ label: key }))}
+                                pressProps={assessmentPress(`negative-${key}`, () => tapNegative({ label: key }))}
                               >
                                 <span className="break-words">{key}</span>
                                 <span className={compactMarksNeg}>{marks(record.negative[key])}</span>
-                              </Button>
+                              </AssessmentControl>
                             ))}
                           </div>
                         )}
@@ -722,19 +784,17 @@ export default function MountingYardApp() {
                     const open = gearPicker === item.code;
                     return (
                       <div key={item.code} className="relative">
-                        <Button
-                          type="button"
-                          size="touch"
+                        <AssessmentControl
                           variant={hasLocs ? "default" : "outline"}
                           className="relative h-auto min-h-[6.25rem] w-full flex-col justify-center gap-2 rounded-3xl py-5 text-lg"
-                          {...assessmentPress(`gear-${item.code}`, () =>
+                          pressProps={assessmentPress(`gear-${item.code}`, () =>
                             setGearPicker((p) => (p === item.code ? null : item.code)),
                           )}
                         >
                           <span className="text-2xl font-bold tracking-tight">{item.code}</span>
                           <span className="text-center text-base leading-snug">{item.label}</span>
                           {renderPhysicalValue(locs)}
-                        </Button>
+                        </AssessmentControl>
                         {open && (
                           <div
                             className="absolute left-0 right-0 top-full z-[60] mt-2 space-y-1 rounded-2xl border-2 border-slate-200 bg-white p-2 shadow-lg"
@@ -772,12 +832,10 @@ export default function MountingYardApp() {
                     const open = gearPicker === "WET";
                     return (
                       <div key={wetTile.code} className="relative">
-                        <Button
-                          type="button"
-                          size="touch"
+                        <AssessmentControl
                           variant={hasWet ? "default" : "outline"}
                           className="relative h-auto min-h-[6.25rem] w-full flex-col justify-center gap-2 rounded-3xl py-5 text-lg"
-                          {...assessmentPress("gear-wet", () => setGearPicker((p) => (p === "WET" ? null : "WET")))}
+                          pressProps={assessmentPress("gear-wet", () => setGearPicker((p) => (p === "WET" ? null : "WET")))}
                         >
                           <span className="text-2xl font-bold tracking-tight">
                             {wetTile.code}
@@ -787,7 +845,7 @@ export default function MountingYardApp() {
                           {shorthand && (
                             <span className="text-sm font-semibold text-slate-700">{shorthand}</span>
                           )}
-                        </Button>
+                        </AssessmentControl>
                         {open && (
                           <div
                             className="absolute left-0 right-0 top-full z-[60] mt-2 max-h-[min(70vh,28rem)] space-y-3 overflow-y-auto rounded-2xl border-2 border-slate-200 bg-white p-3 shadow-lg"
@@ -870,7 +928,7 @@ export default function MountingYardApp() {
             variant="outline"
             className="min-h-[3.75rem] flex-1 rounded-3xl text-xl font-bold"
             disabled={!canPrev}
-            {...legacyClickProps(goPrev)}
+            {...yardClick("nav-prev", goPrev)}
           >
             ← Previous
           </Button>
@@ -879,7 +937,7 @@ export default function MountingYardApp() {
             size="touch"
             className="min-h-[3.75rem] flex-1 rounded-3xl text-xl font-bold"
             disabled={!canNext}
-            {...legacyClickProps(goNext)}
+            {...yardClick("nav-next", goNext)}
           >
             Next →
           </Button>
