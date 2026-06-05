@@ -57,7 +57,7 @@ export function SpeedMapProvider({ children }: { children: ReactNode }) {
       return emptySpeedMapSession();
     }
   });
-  const [hydrated, setHydrated] = useState(false);
+  const [hydrated, setHydrated] = useState(true);
   const sessionRef = useRef(session);
   sessionRef.current = session;
 

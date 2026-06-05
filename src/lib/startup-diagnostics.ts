@@ -1,14 +1,10 @@
-/** Max time any loading gate may block the UI before showing recovery UI. */
-export const STARTUP_GATE_TIMEOUT_MS = 5_000;
+/** Max time a non-blocking init safety timer may wait before giving up on background load. */
+export const STARTUP_GATE_TIMEOUT_MS = 3_000;
 
 /**
  * Startup diagnostics for iPad Safari / PWA init debugging.
  *
- * Loading gates audit (can leave UI stuck): * - mounting-yard-app.tsx: `hydrated === false` until IndexedDB init finishes (finally).
- *   Unresolved if: openDB(), seedRacesIfEmpty(), loadAllRaces(), loadAllAssessments() hang.
- * - speed-map-provider.tsx: `hydrated === false` until sync localStorage hydrate effect runs finally.
- * - speed-map-board.tsx: `mounted === false` until client useEffect runs (SSR shows loading if JS never hydrates).
- * - race-day-bias-app.tsx: `hydrated === false` until first useEffect body completes (sync; sets true immediately).
+ * Init is non-blocking: pages render immediately with defaults; background load may fail softly.
  */
 
 export type StartupFailure = {

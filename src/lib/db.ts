@@ -1,4 +1,5 @@
 import { openDB, type IDBPDatabase } from "idb";
+import { shouldSkipIndexedDB } from "@/lib/legacy-safari";
 import { withTimeout } from "@/lib/promise-timeout";
 import { reportStartupFailure, traceAsync } from "@/lib/startup-diagnostics";
 import type { Assessment, AssessmentRow, Race } from "./types";
@@ -18,7 +19,14 @@ type Schema = {
 
 let dbPromise: Promise<IDBPDatabase<Schema>> | null = null;
 
+function indexedDbSkippedError(): Error {
+  return new Error("IndexedDB skipped (compatibility fallback)");
+}
+
 function getDB(): Promise<IDBPDatabase<Schema>> {
+  if (shouldSkipIndexedDB()) {
+    return Promise.reject(indexedDbSkippedError());
+  }
   if (!dbPromise) {
     dbPromise = withTimeout(
       traceAsync("indexeddb-open", () =>
@@ -58,11 +66,13 @@ export async function loadAllRaces(): Promise<Race[]> {
 }
 
 export async function saveRace(race: Race): Promise<void> {
+  if (shouldSkipIndexedDB()) return;
   const db = await getDB();
   await db.put("races", race);
 }
 
 export async function saveRaces(races: Race[]): Promise<void> {
+  if (shouldSkipIndexedDB()) return;
   const db = await getDB();
   const tx = db.transaction("races", "readwrite");
   await tx.store.clear();
@@ -110,6 +120,7 @@ export async function loadAllAssessments(): Promise<Record<string, Assessment>> 
 }
 
 export async function saveAssessmentRow(key: string, assessment: Assessment): Promise<void> {
+  if (shouldSkipIndexedDB()) return;
   const db = await getDB();
   const row: AssessmentRow = { key, ...assessment };
   await db.put("assessments", row);
@@ -117,6 +128,7 @@ export async function saveAssessmentRow(key: string, assessment: Assessment): Pr
 
 /** Replaces the entire assessments store with the in-memory snapshot (reliable autosave). */
 export async function replaceAllAssessments(data: Record<string, Assessment>): Promise<void> {
+  if (shouldSkipIndexedDB()) return;
   const db = await getDB();
   const tx = db.transaction("assessments", "readwrite");
   await tx.store.clear();
@@ -127,11 +139,13 @@ export async function replaceAllAssessments(data: Record<string, Assessment>): P
 }
 
 export async function clearAllAssessments(): Promise<void> {
+  if (shouldSkipIndexedDB()) return;
   const db = await getDB();
   await db.clear("assessments");
 }
 
 export async function removeAssessment(key: string): Promise<void> {
+  if (shouldSkipIndexedDB()) return;
   const db = await getDB();
   await db.delete("assessments", key);
 }

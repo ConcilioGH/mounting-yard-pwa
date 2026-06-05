@@ -1,4 +1,5 @@
 import { openDB, type IDBPDatabase } from "idb";
+import { shouldSkipIndexedDB } from "@/lib/legacy-safari";
 import { withTimeout } from "@/lib/promise-timeout";
 
 const DB_NAME = "mounting-yard-meeting-dir";
@@ -13,6 +14,9 @@ type Schema = {
 let dbPromise: Promise<IDBPDatabase<Schema>> | null = null;
 
 function getDB(): Promise<IDBPDatabase<Schema>> {
+  if (shouldSkipIndexedDB()) {
+    return Promise.reject(new Error("IndexedDB skipped (compatibility fallback)"));
+  }
   if (!dbPromise) {
     dbPromise = withTimeout(
       openDB<Schema>(DB_NAME, DB_VERSION, {

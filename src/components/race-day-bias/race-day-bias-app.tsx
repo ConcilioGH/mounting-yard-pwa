@@ -30,13 +30,12 @@ import type { ApplyResultsSpReport } from "@/lib/race-day-bias/apply-results-sp"
 import type { FinisherSlot, PositionField, RaceDayBiasState } from "@/lib/race-day-bias/types";
 import { cn } from "@/lib/utils";
 import { useDebouncedCallback } from "@/hooks/useDebouncedCallback";
-import { useStartupGate } from "@/hooks/use-startup-gate";
-import { StartupGateScreen } from "@/components/startup-gate-screen";
+import { InitErrorPanel } from "@/components/init-error-panel";
 import {
   logLoadingState,
   logStartupStep,
   reportStartupFailure,
-  traceAsync,
+  STARTUP_GATE_TIMEOUT_MS,
 } from "@/lib/startup-diagnostics";
 import { ResultsSpImportPanel } from "@/components/race-day-bias/results-sp-import-panel";
 import {
@@ -82,11 +81,14 @@ const biasModalCancelButtonClass = cn(
 );
 
 export default function RaceDayBiasApp() {
-  const [hydrated, setHydrated] = useState(false);
-  const hydrateGate = useStartupGate("race-day-bias-hydrate", {
-    onTimeout: () => setHydrated(true),
+  const [initErrors, setInitErrors] = useState<string[]>([]);
+  const [state, setState] = useState<RaceDayBiasState>(() => {
+    try {
+      return loadRaceDayBiasState();
+    } catch (error) {
+      return { meetingLabel: "", races: [], updatedAt: new Date().toISOString() };
+    }
   });
-  const [state, setState] = useState<RaceDayBiasState>(() => loadRaceDayBiasState());
   const [saveState, setSaveState] = useState<"idle" | "saving" | "saved">("idle");
   const [editingCell, setEditingCell] = useState<CellKey | null>(null);
   const [draft, setDraft] = useState<FinisherSlot>({ positionCode: "", sp: "" });
@@ -110,13 +112,22 @@ export default function RaceDayBiasApp() {
   }, 350);
 
   useEffect(() => {
-    logLoadingState("RaceDayBiasApp", true, "hydrated=false");
+    logLoadingState("RaceDayBiasApp", true, "background-init");
+    let cancelled = false;
 
-    const refreshFieldSizes = () => {
-      void traceAsync("race-day-bias-field-sizes", async () => {
+    const pushInitError = (error: unknown) => {
+      const message = error instanceof Error ? error.message : String(error);
+      setInitErrors((prev) => (prev.includes(message) ? prev : [...prev, message]));
+    };
+
+    const refreshFieldSizes = async () => {
+      try {
         const races = await loadAllRaces();
-        setFieldSizeByRaceNo(buildRaceFieldSizeMap(races));
-      }).catch((error) => reportStartupFailure("race-day-bias-field-sizes", error));
+        if (!cancelled) setFieldSizeByRaceNo(buildRaceFieldSizeMap(races));
+      } catch (error) {
+        reportStartupFailure("race-day-bias-field-sizes", error);
+        pushInitError(error);
+      }
     };
 
     const refreshBiasState = () => {
@@ -132,30 +143,34 @@ export default function RaceDayBiasApp() {
           setState({ meetingLabel: "", races: [], updatedAt: new Date().toISOString() });
           return;
         }
-        const { state, biasKey, loadedExisting, meetingId } = loadRaceDayBiasStateForMeeting(
+        const { state: loaded, biasKey, loadedExisting, meetingId } = loadRaceDayBiasStateForMeeting(
           manifest.meetingId,
         );
-        logBiasStorageDebug(meetingId, biasKey, loadedExisting, state.races.length);
-        setState(state);
+        logBiasStorageDebug(meetingId, biasKey, loadedExisting, loaded.races.length);
+        setState(loaded);
       } catch (error) {
         reportStartupFailure("race-day-bias-state-load", error);
+        pushInitError(error);
       }
     };
 
     const refresh = () => {
       refreshBiasState();
-      refreshFieldSizes();
+      void refreshFieldSizes();
     };
+
+    const safetyTimer = window.setTimeout(() => {
+      logLoadingState("RaceDayBiasApp", false, "background-init-safety-timeout");
+    }, STARTUP_GATE_TIMEOUT_MS);
 
     try {
       refresh();
+      logLoadingState("RaceDayBiasApp", false, "background-init-done");
     } catch (error) {
       reportStartupFailure("race-day-bias-init", error);
-    } finally {
-      logLoadingState("RaceDayBiasApp", false, "hydrated=true");
-      setHydrated(true);
-      hydrateGate.markReleased();
+      pushInitError(error);
     }
+
     window.addEventListener(MEETING_IMPORTED_EVENT, refresh);
     const onStorage = (event: StorageEvent) => {
       if (isBiasStorageKey(event.key) || event.key === MEETING_MANIFEST_STORAGE_KEY) {
@@ -164,15 +179,16 @@ export default function RaceDayBiasApp() {
     };
     window.addEventListener("storage", onStorage);
     return () => {
+      cancelled = true;
+      window.clearTimeout(safetyTimer);
       window.removeEventListener(MEETING_IMPORTED_EVENT, refresh);
       window.removeEventListener("storage", onStorage);
     };
-  }, [hydrateGate.markReleased]);
+  }, []);
 
   useEffect(() => {
-    if (!hydrated) return;
     persist();
-  }, [state, hydrated, persist]);
+  }, [state, persist]);
 
   useEffect(() => {
     if (editorStep === "sp") {
@@ -253,19 +269,9 @@ export default function RaceDayBiasApp() {
     return `R${editingCell.raceNo} · ${pos}`;
   }, [editingCell]);
 
-  if (!hydrated) {
-    return (
-      <StartupGateScreen
-        label="Loading race day bias…"
-        isBlocking={hydrateGate.isBlocking}
-        timedOut={hydrateGate.timedOut}
-        errors={hydrateGate.errors}
-      />
-    );
-  }
-
   return (
     <div className="mx-auto max-w-6xl space-y-4 p-3 pb-[calc(1rem+env(safe-area-inset-bottom))] pt-2 md:p-4">
+      <InitErrorPanel errors={initErrors} />
       <header className="rounded-2xl border border-slate-800 bg-slate-950/90 p-4">
         <h1 className="text-2xl font-bold tracking-tight text-slate-50">Race Day Bias</h1>
         <p className="mt-1 text-sm text-slate-400">

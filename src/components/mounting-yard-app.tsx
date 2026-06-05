@@ -42,14 +42,13 @@ import type { Assessment, Race, Runner, WetBodyType, WetFeet } from "@/lib/types
 import { wetIsSet, wetShorthand } from "@/lib/wet";
 import { cn, emptyAssessment, makeKey, marks, nextNegative, nextPositive } from "@/lib/utils";
 import { useDebouncedCallback } from "@/hooks/useDebouncedCallback";
-import { useStartupGate } from "@/hooks/use-startup-gate";
-import { StartupGateScreen } from "@/components/startup-gate-screen";
+import { InitErrorPanel } from "@/components/init-error-panel";
+import { shouldSkipIndexedDB } from "@/lib/legacy-safari";
 import {
   logLoadingState,
   logStartupStep,
   reportStartupFailure,
-  startInitWatchdog,
-  traceAsync,
+  STARTUP_GATE_TIMEOUT_MS,
 } from "@/lib/startup-diagnostics";
 
 function totals(a: Assessment | undefined) {
@@ -131,10 +130,7 @@ const compactMarksNeg = "text-xl font-bold leading-none text-red-700 sm:text-2xl
 type PhysicalPicker = GearTileCode | "WET" | null;
 
 export default function MountingYardApp() {
-  const [hydrated, setHydrated] = useState(false);
-  const hydrateGate = useStartupGate("mounting-yard-hydrate", {
-    onTimeout: () => setHydrated(true),
-  });
+  const [initErrors, setInitErrors] = useState<string[]>([]);
   const [races, setRaces] = useState<Race[]>(DEFAULT_RACES);
   const [raceId, setRaceId] = useState(DEFAULT_RACES[0]?.id ?? "R1");
   const [selectedRunner, setSelectedRunner] = useState(DEFAULT_RACES[0]?.runners[0]?.no ?? 1);
@@ -186,50 +182,86 @@ export default function MountingYardApp() {
   }, [flushPending]);
 
   useEffect(() => {
-    logLoadingState("MountingYardApp", true, "hydrated=false");
-    const clearWatchdog = startInitWatchdog("mounting-yard-init", 5_000);
+    logLoadingState("MountingYardApp", true, "background-init");
+    let cancelled = false;
+
+    const pushInitError = (error: unknown) => {
+      const message = error instanceof Error ? error.message : String(error);
+      setInitErrors((prev) => (prev.includes(message) ? prev : [...prev, message]));
+    };
+
+    const applyMeetingManifest = () => {
+      logStartupStep("meeting-load:start");
+      let manifest = null;
+      try {
+        manifest = loadMeetingManifest();
+      } catch (manifestError) {
+        reportStartupFailure("meeting-manifest-load", manifestError);
+        pushInitError(manifestError);
+      }
+      logStartupStep("meeting-load:end", {
+        hasManifest: Boolean(manifest),
+        raceCount: manifest?.raceNos.length ?? 0,
+      });
+      setMeetingLabel(formatMeetingDisplayLabel(manifest));
+      setMeetingDate(manifest?.date ?? "");
+    };
+
+    const loadPersistedData = async () => {
+      if (shouldSkipIndexedDB()) {
+        applyMeetingManifest();
+        return;
+      }
+      await seedRacesIfEmpty();
+      const [loadedRaces, loadedAssessments] = await Promise.all([
+        loadAllRaces(),
+        loadAllAssessments(),
+      ]);
+      applyMeetingManifest();
+      if (loadedRaces.length) {
+        setRaces(loadedRaces);
+        const first = loadedRaces[0];
+        setRaceId(first.id);
+        setSelectedRunner(first.runners[0]?.no ?? 1);
+      }
+      dataRef.current = loadedAssessments;
+      setData(loadedAssessments);
+    };
+
+    const safetyTimer = window.setTimeout(() => {
+      logLoadingState("MountingYardApp", false, "background-init-safety-timeout");
+    }, STARTUP_GATE_TIMEOUT_MS);
 
     void (async () => {
       try {
-        await traceAsync("mounting-yard-init", async () => {
-          await seedRacesIfEmpty();
-          const [loadedRaces, loadedAssessments] = await Promise.all([
-            loadAllRaces(),
-            loadAllAssessments(),
-          ]);
-          logStartupStep("meeting-load:start");
-          let manifest = null;
-          try {
-            manifest = loadMeetingManifest();
-          } catch (manifestError) {
-            reportStartupFailure("meeting-manifest-load", manifestError);
-          }
-          logStartupStep("meeting-load:end", {
-            hasManifest: Boolean(manifest),
-            raceCount: manifest?.raceNos.length ?? 0,
-          });
-          if (loadedRaces.length) {
-            setRaces(loadedRaces);
-            const first = loadedRaces[0];
-            setRaceId(first.id);
-            setSelectedRunner(first.runners[0]?.no ?? 1);
-          }
-          dataRef.current = loadedAssessments;
-          setData(loadedAssessments);
-          setMeetingLabel(formatMeetingDisplayLabel(manifest));
-          setMeetingDate(manifest?.date ?? "");
-        });
-      } catch (e) {
-        reportStartupFailure("mounting-yard-init", e);
-        console.error(e);
+        await Promise.race([
+          loadPersistedData(),
+          new Promise<never>((_, reject) =>
+            window.setTimeout(
+              () => reject(new Error(`Yard init timed out after ${STARTUP_GATE_TIMEOUT_MS}ms`)),
+              STARTUP_GATE_TIMEOUT_MS,
+            ),
+          ),
+        ]);
+      } catch (error) {
+        if (!cancelled) {
+          reportStartupFailure("mounting-yard-init", error);
+          pushInitError(error);
+          applyMeetingManifest();
+        }
       } finally {
-        clearWatchdog();
-        logLoadingState("MountingYardApp", false, "hydrated=true");
-        setHydrated(true);
-        hydrateGate.markReleased();
+        if (!cancelled) {
+          window.clearTimeout(safetyTimer);
+          logLoadingState("MountingYardApp", false, "background-init-done");
+        }
       }
     })();
-  }, [hydrateGate.markReleased]);
+
+    return () => {
+      cancelled = true;
+      window.clearTimeout(safetyTimer);
+    };
+  }, []);
 
   const race = races.find((r) => r.id === raceId) ?? races[0];
   const runners = useMemo(() => race?.runners ?? [], [race]);
@@ -392,19 +424,9 @@ export default function MountingYardApp() {
 
   const raceTabCols = Math.min(Math.max(races.length, 2), 8);
 
-  if (!hydrated) {
-    return (
-      <StartupGateScreen
-        label="Loading…"
-        isBlocking={hydrateGate.isBlocking}
-        timedOut={hydrateGate.timedOut}
-        errors={hydrateGate.errors}
-      />
-    );
-  }
-
   return (
     <div className="min-h-[100dvh] bg-slate-100 pb-[calc(5.5rem+env(safe-area-inset-bottom))] pt-[env(safe-area-inset-top)] text-slate-900">
+      <InitErrorPanel errors={initErrors} />
       <div className="mx-auto max-w-7xl space-y-3 p-3">
         <header className="flex flex-col gap-4 rounded-3xl bg-white p-5 shadow-sm lg:flex-row lg:items-center lg:justify-between">
           <div className="min-w-0 flex-1">

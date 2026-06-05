@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var STARTUP_MS = 5000;
+  var STARTUP_MS = 3000;
 
   function polyfillStructuredClone() {
     if (typeof globalThis.structuredClone === "function") return;
@@ -49,10 +49,12 @@
       "padding:16px;border-radius:12px;border:2px solid #ef4444;background:#450a0a;color:#fecaca;" +
       "font:16px/1.4 -apple-system,BlinkMacSystemFont,sans-serif;overflow:auto;";
     panel.innerHTML =
-      "<p style='margin:0 0 12px;font-weight:700'>App failed to initialise on this device. Tap Reset Local Data.</p>" +
+      "<p style='margin:0 0 8px;font-weight:700'>Compatibility fallback active</p>" +
+      "<p style='margin:0 0 12px'>App failed to initialise on this device. Tap Reset Local Data or open Yard.</p>" +
       "<pre style='margin:0 0 12px;white-space:pre-wrap;word-break:break-word;font-size:13px'>" +
       String(message) +
       "</pre>" +
+      "<p style='margin:0 0 12px'><a href='/yard' style='color:#fde68a;font-weight:700'>Open Yard page</a></p>" +
       "<button type='button' id='ios12-reset-btn' style='padding:12px 20px;border:0;border-radius:10px;" +
       "background:#dc2626;color:#fff;font-weight:700;font-size:16px'>Reset Local Data</button>";
     document.body.appendChild(panel);
