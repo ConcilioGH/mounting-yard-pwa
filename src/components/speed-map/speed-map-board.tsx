@@ -648,7 +648,7 @@ function furthestLegalRailYForRunner(
 /** Steps 2–3 — default barrier ascending with 1.1 crossing overrides only. */
 function orderLineByBarrierWithCrossings(line: SpeedMapRunner[]): SpeedMapRunner[] {
   const active = line.filter((runner) => !runner.manuallyPlaced);
-  let ordered = [...active].sort(
+  const ordered = [...active].sort(
     (a, b) => barrierSortKey(a.barrier) - barrierSortKey(b.barrier) || a.no - b.no,
   );
 
