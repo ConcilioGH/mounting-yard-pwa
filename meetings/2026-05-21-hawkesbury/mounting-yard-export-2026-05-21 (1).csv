@@ -1,0 +1,64 @@
+assessment_key,race_id,race_title,runner_no,horse,barrier,trainer,jockey,odds,positive_json,negative_json,gear_json,notes,total_positive,total_negative,net,updated_at
+R1-1,R1,12:15 pm Turfmate International 3yo Maiden Handicap,1,Farset,8,Gai Waterhouse & Adrian Bott,Rachel King,$3.4,,,,,0,0,0,
+R1-2,R1,12:15 pm Turfmate International 3yo Maiden Handicap,2,Malietoa,1,Marc & Mitchell Conners,Tyler Schiller,$17,,,,,0,0,0,
+R1-3,R1,12:15 pm Turfmate International 3yo Maiden Handicap,3,Fitzclarence,2,Jason Attard,Rory Hutchings,$13,"{""Dapple+"":1}","{""BH-"":-1}",{},,1,1,0,2026-05-21T02:19:38.266Z
+R1-4,R1,12:15 pm Turfmate International 3yo Maiden Handicap,4,Monotone,5,Bjorn Baker,Tommy Berry,$2.7,,,,,0,0,0,
+R1-5,R1,12:15 pm Turfmate International 3yo Maiden Handicap,5,Incremental,6,Annabel & Rob Archibald,Braith Nock,$7,,,,,0,0,0,
+R1-6,R1,12:15 pm Turfmate International 3yo Maiden Handicap,6,Simply Unique,3,Gerald Ryan & Sterling Alexiou,Dylan Gibbons,$6.5,{},{},{},small,0,0,0,2026-05-21T02:19:50.508Z
+R1-7,R1,12:15 pm Turfmate International 3yo Maiden Handicap,7,Glamour Magic,4,Joseph Pride,Sam Clipperton,$15,,,,,0,0,0,
+R1-8,R1,12:15 pm Turfmate International 3yo Maiden Handicap,8,Wee Winn,7,Peter Snowden,Andrew Adkins,$12,{},{},{},small,0,0,0,2026-05-21T02:20:09.397Z
+R2-1,R2,12:50 pm Titan Ag F&m Maiden Plate,1,Alnair,4,Gerald Ryan & Sterling Alexiou,Tyler Schiller,$1.65,,,,,0,0,0,
+R2-2,R2,12:50 pm Titan Ag F&m Maiden Plate,2,Circus Girl,2,Karen Outtrim,Jay Ford,$31,,,,,0,0,0,
+R2-3,R2,12:50 pm Titan Ag F&m Maiden Plate,3,Obsidian Dream,8,Joseph Pride,Sam Clipperton,$3.3,"{""Healthy+"":1,""Dapple+"":1}",{},{},,2,0,2,2026-05-21T03:06:34.011Z
+R2-4,R2,12:50 pm Titan Ag F&m Maiden Plate,4,Olivia Mia,7,Fabio Martino,Chad Lever,$14,,,,,0,0,0,
+R2-6,R2,12:50 pm Titan Ag F&m Maiden Plate,6,Successful Impact,5,Ciaron Maher,Adam Farragher,$5.5,,,,,0,0,0,
+R2-7,R2,12:50 pm Titan Ag F&m Maiden Plate,7,Vondel,3,Brad Widdup,Alysha Collett,$31,,,,,0,0,0,
+R2-8,R2,12:50 pm Titan Ag F&m Maiden Plate,8,Coolazcanbe,6,Gary Portelli,Andrew Calder,$81,,,,,0,0,0,
+R3-1,R3,1:25 pm Advanced Seed Blackstone Super Maiden Plate,1,Reign Of Honor,5,Gai Waterhouse & Adrian Bott,Rachel King,$5,{},{},"{""B"":[3]}",,0,0,0,2026-05-21T04:02:42.829Z
+R3-2,R3,1:25 pm Advanced Seed Blackstone Super Maiden Plate,2,Rogue Nation,2,Danny Williams,Pierre Boudvillain,$5.5,{},{},{},BIG,0,0,0,2026-05-21T04:02:55.957Z
+R3-4,R3,1:25 pm Advanced Seed Blackstone Super Maiden Plate,4,Sand Dancer,3,"Michael, John & Wayne Hawkes",Tyler Schiller,$7,{},"{""Dull-"":-2}",{},,0,2,-2,2026-05-21T04:03:04.712Z
+R3-6,R3,1:25 pm Advanced Seed Blackstone Super Maiden Plate,6,Tszinsi,9,Lee & Cherie Curtis,Jeff Penza,$34,,,,,0,0,0,
+R3-7,R3,1:25 pm Advanced Seed Blackstone Super Maiden Plate,7,Weekend Market,4,Gary Portelli,Alysha Collett,$11,"{""Healthy+"":2}",{},{},,2,0,2,2026-05-21T04:03:13.303Z
+R3-9,R3,1:25 pm Advanced Seed Blackstone Super Maiden Plate,9,Pearl Of Dubai,1,Peter Snowden,Andrew Adkins,$2.3,{},"{""Light-"":-1}",{},,0,1,-1,2026-05-21T04:03:21.679Z
+R3-10,R3,1:25 pm Advanced Seed Blackstone Super Maiden Plate,10,Wild Courage,10,Ciaron Maher,Kerrin McEvoy,$7.5,,,,,0,0,0,
+R4-1,R4,2:05 pm Syngenta Trefinti Provincial Maiden Handicap,1,Classic Two,7,Rodney Bailey,Jessica Taylor,$7.5,,,,,0,0,0,
+R4-3,R4,2:05 pm Syngenta Trefinti Provincial Maiden Handicap,3,Aurora Effect,6,Edward Cummings,Jay Ford,$3.9,{},"{""Dull-"":-2}",{},,0,2,-2,2026-05-21T04:50:00.352Z
+R4-5,R4,2:05 pm Syngenta Trefinti Provincial Maiden Handicap,5,Hellfighter,12,Nathan Doyle,Tommy Berry,$2.1,{},{},"{""FT"":[3,4]}",,0,0,0,2026-05-21T04:50:30.571Z
+R4-6,R4,2:05 pm Syngenta Trefinti Provincial Maiden Handicap,6,Pawa,1,Edward O'Rourke,Rachel King,$16,,,,,0,0,0,
+R4-7,R4,2:05 pm Syngenta Trefinti Provincial Maiden Handicap,7,Satono Jasmine,10,Brad Widdup,Leeshelle Small (a-3),$8.5,"{""Healthy+"":0,""Dapple+"":1}",{},{},,1,0,1,2026-05-21T04:49:20.364Z
+R4-8,R4,2:05 pm Syngenta Trefinti Provincial Maiden Handicap,8,Belgrano,5,Darryll Kell,Chad Lever (a0.5),$41,"{""Dapple+"":1}",{},{},,1,0,1,2026-05-21T04:49:24.879Z
+R4-9,R4,2:05 pm Syngenta Trefinti Provincial Maiden Handicap,9,Heliconia,2,Kerry Parker Rebecca,Bronett Prag (a-3),$15,,,,,0,0,0,
+R4-10,R4,2:05 pm Syngenta Trefinti Provincial Maiden Handicap,10,Irulan,3,Jason Attard,Tom Sherry,$41,"{""Healthy+"":2}",{},{},,2,0,2,2026-05-21T04:49:34.738Z
+R4-11,R4,2:05 pm Syngenta Trefinti Provincial Maiden Handicap,11,Propane,4,Kim Waugh,Ashley Morgan,$26,{},"{""K-"":-2}",{},,0,2,-2,2026-05-21T04:49:51.590Z
+R4-12,R4,2:05 pm Syngenta Trefinti Provincial Maiden Handicap,12,Senza Rivali,9,Kristen Buchanan,Shannen Llewellyn (a-2),$34,{},"{""Dull-"":-1,""BH-"":-1,""K-"":-1,""N-"":-1,""BS-"":-1}",{},,0,5,-5,2026-05-21T04:49:42.843Z
+R5-1,R5,2:40 pm Adama Midway Class 1 Handicap,1,Above The Law,2,Mitchell Beer & George Carpenter,Dylan Gibbons,$1.65,{},{},{},small,0,0,0,2026-05-21T22:21:48.297Z
+R5-3,R5,2:40 pm Adama Midway Class 1 Handicap,3,Clear Blue Day,5,Richard & Will Freedman,Lee Magorrian,$8.5,,,,,0,0,0,
+R5-4,R5,2:40 pm Adama Midway Class 1 Handicap,4,Brannum,3,Theresa Bateup,Keagan Latham,$23,,,,,0,0,0,
+R5-5,R5,2:40 pm Adama Midway Class 1 Handicap,5,Flying Grey,7,Brad Widdup,Christian Reith,$12,,,,,0,0,0,
+R5-6,R5,2:40 pm Adama Midway Class 1 Handicap,6,Polo,8,Gary Portelli,Ashley Morgan,$8.5,{},"{""BH-"":-1}",{},,0,1,-1,2026-05-21T22:21:56.970Z
+R5-7,R5,2:40 pm Adama Midway Class 1 Handicap,7,Sox,9,Tommy Wong,Louis Beuzelin,$10,,,,,0,0,0,
+R5-9,R5,2:40 pm Adama Midway Class 1 Handicap,9,Percolate,1,Jason Deamer,Regan Bayliss,$18,,,,,0,0,0,
+R5-10,R5,2:40 pm Adama Midway Class 1 Handicap,10,Aranese,4,Amanda Turner,Mollie Fitzgerald (a-1.5),$10,"{""Healthy+"":1}",{},{},,1,0,1,2026-05-21T22:22:01.260Z
+R6-1,R6,3:20 pm Floratine Products Group Class 1 Handicap,1,Matima,6,Gary Portelli,Tyler Schiller,$4.5,"{""Healthy+"":1}","{""BH-"":-1}",{},,1,1,0,2026-05-21T22:22:30.730Z
+R6-3,R6,3:20 pm Floratine Products Group Class 1 Handicap,3,Diacon,3,Bjorn Baker,Tommy Berry,$2.8,,,,,0,0,0,
+R6-4,R6,3:20 pm Floratine Products Group Class 1 Handicap,4,Dubbo Boy,5,Danny Williams,Braith Nock,$11,,,,,0,0,0,
+R6-5,R6,3:20 pm Floratine Products Group Class 1 Handicap,5,Miss Farnan,8,Gai Waterhouse & Adrian Bott,Rachel King,$4.2,,,,,0,0,0,
+R6-6,R6,3:20 pm Floratine Products Group Class 1 Handicap,6,Seductra,4,Richard & Will Freedman,Lee Magorrian (a0.5),$5,,,,,0,0,0,
+R6-7,R6,3:20 pm Floratine Products Group Class 1 Handicap,7,Zou Royal,1,Jarrod Austin,Alysha Collett,$8.5,,,,,0,0,0,
+R6-8,R6,3:20 pm Floratine Products Group Class 1 Handicap,8,Exothrill,7,Peter Green,Olivia Chambers (a-2),$151,{},"{""BH-"":-1}",{},,0,1,-1,2026-05-21T22:22:38.420Z
+R7-2,R7,3:55 pm Turfcare Aus Benchmark 64 Handicap,2,Stay Tuned,1,Paul & Martha Cave Rebecca,Bronett Prag (a-3),$8.5,,,,,0,0,0,
+R7-3,R7,3:55 pm Turfcare Aus Benchmark 64 Handicap,3,Aussie Nation,3,Annabel & Rob Archibald,Mollie Fitzgerald (a-1.5),$3.5,{},"{""BH-"":-1}",{},,0,1,-1,2026-05-21T22:22:51.712Z
+R7-4,R7,3:55 pm Turfcare Aus Benchmark 64 Handicap,4,Alice Mae,10,Matthew Smith,Jay Ford,$13,,,,,0,0,0,
+R7-5,R7,3:55 pm Turfcare Aus Benchmark 64 Handicap,5,Scottish Pearl,7,Annabel & Rob Archibald,Ashley Morgan,$18,,,,,0,0,0,
+R7-6,R7,3:55 pm Turfcare Aus Benchmark 64 Handicap,6,Six Foot Song,6,Jake Hull,Siena Grima (a-2),$10,,,,,0,0,0,
+R7-9,R7,3:55 pm Turfcare Aus Benchmark 64 Handicap,9,Michelangelo,4,Dean Mirfin,Jacob Stiff (a-3),$4,"{""Healthy+"":2}",{},{},,2,0,2,2026-05-21T22:22:57.514Z
+R7-10,R7,3:55 pm Turfcare Aus Benchmark 64 Handicap,10,Owen County,5,Richard Litt,Tom Sherry,$6,,,,,0,0,0,
+R7-11,R7,3:55 pm Turfcare Aus Benchmark 64 Handicap,11,Grandini,9,Rodney Northam,Reece Jones,$6,,,,,0,0,0,
+R7-12,R7,3:55 pm Turfcare Aus Benchmark 64 Handicap,12,Devils Daughter,2,Paul & Martha Cave,Andrew Calder,$41,,,,,0,0,0,
+R8-6,R8,4:35 pm Elite Sand & Soil Class 1 Handicap,6,Button Up hl,7,Matthew Smith,Ashley Morgan,$7.5,"{""BH+"":1,""Healthy+"":2}",{},{},,3,0,3,2026-05-21T22:23:35.371Z
+R8-8,R8,4:35 pm Elite Sand & Soil Class 1 Handicap,8,Whoa Nellie,12,Brad Widdup,Tyler Schiller,$3.7,,,,,0,0,0,
+R8-9,R8,4:35 pm Elite Sand & Soil Class 1 Handicap,9,Take Flight,5,David Payne,Olivia Chambers (a-2),$4,,,,,0,0,0,
+R8-10,R8,4:35 pm Elite Sand & Soil Class 1 Handicap,10,The Cristal,1,Annabel & Rob Archibald,Mollie Fitzgerald (a-1.5),$3.7,"{""Healthy+"":1}","{""BH-"":-1}",{},,1,1,0,2026-05-21T22:23:44.865Z
+R8-11,R8,4:35 pm Elite Sand & Soil Class 1 Handicap,11,Missie Lee,13,Blake Ryan,Jay Ford,$10,,,,,0,0,0,
+R8-12,R8,4:35 pm Elite Sand & Soil Class 1 Handicap,12,Ocean Empress,4,Jarrod Austin,Alysha Collett,$8.5,,,,,0,0,0,
+R8-13,R8,4:35 pm Elite Sand & Soil Class 1 Handicap,13,Tango On,14,Claire Lever,Winona Costin,$18,,,,,0,0,0,

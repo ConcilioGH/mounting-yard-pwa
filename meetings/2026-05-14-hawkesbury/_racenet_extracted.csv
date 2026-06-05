@@ -1,0 +1,87 @@
+race_no,race_name,distance,no,horse,horse_name,name,barrier,trainer,jockey,weight,odds,scratched
+1,12:55 pm Arg Building Services 2yo Maiden Plate,1100m,1,Dashing Splendour,Dashing Splendour,Dashing Splendour,14,Tommy Wong,Louis Beuzelin,57kg,$11,false
+1,12:55 pm Arg Building Services 2yo Maiden Plate,1100m,2,Don't Doubt Frank,Don't Doubt Frank,Don't Doubt Frank,2,Brad Widdup,Tyler Schiller,57kg,$10,false
+1,12:55 pm Arg Building Services 2yo Maiden Plate,1100m,4,Slander,Slander,Slander,9,Nathan Doyle,Ashley Morgan,57kg,$2.5,false
+1,12:55 pm Arg Building Services 2yo Maiden Plate,1100m,5,Zobellan,Zobellan,Zobellan,4,Kim Waugh,Jay Ford,57kg,$17,false
+1,12:55 pm Arg Building Services 2yo Maiden Plate,1100m,6,Asagao,Asagao,Asagao,15,David Payne,Kerrin McEvoy,55kg,$23,false
+1,12:55 pm Arg Building Services 2yo Maiden Plate,1100m,10,Sondera,Sondera,Sondera,3,Chris Waller,Zac Lloyd,55kg,$10,false
+1,12:55 pm Arg Building Services 2yo Maiden Plate,1100m,11,Spalpeen,Spalpeen,Spalpeen,5,John Sargent,Alysha Collett,55kg,$51,false
+1,12:55 pm Arg Building Services 2yo Maiden Plate,1100m,12,Tumorrama,Tumorrama,Tumorrama,1,Ron Quinton,Louise Day,55kg,$4.6,false
+1,12:55 pm Arg Building Services 2yo Maiden Plate,1100m,13,Royal Wootton,Royal Wootton,Royal Wootton,11,Gai Waterhouse & Adrian Bott,Rachel King,57kg,$15,false
+1,12:55 pm Arg Building Services 2yo Maiden Plate,1100m,17,Behindcloseddoors,Behindcloseddoors,Behindcloseddoors,7,Ciaron Maher,Adam Farragher,55kg,$31,false
+1,12:55 pm Arg Building Services 2yo Maiden Plate,1100m,18,Gridlock,Gridlock,Gridlock,6,Michael Freedman,Andrew Adkins,57kg,$6.5,false
+1,12:55 pm Arg Building Services 2yo Maiden Plate,1100m,3,,,,18,John Thompson,Chad Schofield,57kg,SCR,true
+1,12:55 pm Arg Building Services 2yo Maiden Plate,1100m,7,Cosmo Girl,Cosmo Girl,Cosmo Girl,13,Chris Waller,Sam Clipperton,55kg,SCR,true
+1,12:55 pm Arg Building Services 2yo Maiden Plate,1100m,8,Chic,Chic,Chic,17,Chris Waller,Sam Clipperton,55kg,SCR,true
+1,12:55 pm Arg Building Services 2yo Maiden Plate,1100m,9,Sakurious,Sakurious,Sakurious,10,Kerry Parker,Regan Bayliss,55kg,SCR,true
+1,12:55 pm Arg Building Services 2yo Maiden Plate,1100m,14,Malua Bay,Malua Bay,Malua Bay,12,Bjorn Baker,Joshua Parr,57kg,SCR,true
+1,12:55 pm Arg Building Services 2yo Maiden Plate,1100m,15,Lord Elrond,Lord Elrond,Lord Elrond,16,Tom Charlton,Zac Lloyd,57kg,SCR,true
+1,12:55 pm Arg Building Services 2yo Maiden Plate,1100m,16,Wild Courage,Wild Courage,Wild Courage,8,Ciaron Maher,Kerrin McEvoy,55kg,SCR,true
+2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,1100m,1,Our Huntress,Our Huntress,Our Huntress,4,Michael Freedman,James McDonald,61kg,$1.75,false
+2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,1100m,2,Fernweh,Fernweh,Fernweh,10,Joseph Pride,Sam Clipperton,60.5kg,$7.5,false
+2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,1100m,5,Dirty Summer,Dirty Summer,Dirty Summer,7,Jim & Greg Lee,Reece Jones,58.5kg,$11,false
+2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,1100m,6,Miss Supernova,Miss Supernova,Miss Supernova,1,Gerald Ryan & Sterling Alexiou,Tom Sherry,58.5kg,$3.6,false
+2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,1100m,7,Monocru,Monocru,Monocru,6,Ciaron Maher,Adam Farragher,58kg,$9,false
+2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,1100m,8,Don't What Me,Don't What Me,Don't What Me,3,Jason Coyle,Regan Bayliss,56.5kg,$17,false
+2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,1100m,9,Cosmora,Cosmora,Cosmora,2,Peter Green,Grant Buckley,55kg,$151,false
+2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,1100m,10,Denise's Gal,Denise's Gal,Denise's Gal,9,Marc & Mitchell Conners,Tyler Schiller,55kg,$34,false
+2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,1100m,3,Crossways,Crossways,Crossways,8,Mick Price & Michael Kent Jnr,Zac Lloyd,59kg,SCR,true
+2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,1100m,4,Samaka,Samaka,Samaka,5,Peter Snowden,Tommy Berry,59kg,SCR,true
+3,2:10 pm Micway Midway Benchmark 64 Handicap,1400m,1,Rebel Rhapsody,Rebel Rhapsody,Rebel Rhapsody,1,Nacim Dilmi,Tommy Berry,60.5kg,$2.8,false
+3,2:10 pm Micway Midway Benchmark 64 Handicap,1400m,4,Up To Mischief,Up To Mischief,Up To Mischief,9,Jason Deamer,Zac Lloyd,58.5kg,$2.35,false
+3,2:10 pm Micway Midway Benchmark 64 Handicap,1400m,5,Murphilly,Murphilly,Murphilly,2,Kylie Gavenlock,Grant Buckley,56kg,$13,false
+3,2:10 pm Micway Midway Benchmark 64 Handicap,1400m,6,Tessy Tee,Tessy Tee,Tessy Tee,3,Richard Collett,Andrew Calder,55kg,$5,false
+3,2:10 pm Micway Midway Benchmark 64 Handicap,1400m,7,Queen Bess,Queen Bess,Queen Bess,4,Kylie Gavenlock,Mollie Fitzgerald (a-1.5),55kg,$26,false
+3,2:10 pm Micway Midway Benchmark 64 Handicap,1400m,8,Koning,Koning,Koning,6,Richard & Will Freedman,Chad Schofield (a0.5),55kg,$11,false
+3,2:10 pm Micway Midway Benchmark 64 Handicap,1400m,9,Starlight Nation,Starlight Nation,Starlight Nation,8,Amanda Turner,Winona Costin,55kg,$41,false
+3,2:10 pm Micway Midway Benchmark 64 Handicap,1400m,3,Broadway Street,Broadway Street,Broadway Street,7,Kerry Parker,Nash Rawiller,58.5kg,SCR,true
+3,2:10 pm Micway Midway Benchmark 64 Handicap,1400m,2,Lady Pankhurst,Lady Pankhurst,Lady Pankhurst,5,John Sargent,Rachel King,59kg,SCR,true
+4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,1100m,1,Smoke 'N' Darts,Smoke 'N' Darts,Smoke 'N' Darts,15,Blake Ryan,Jay Ford,60.5kg,$4.4,false
+4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,1100m,3,Charm Destination,Charm Destination,Charm Destination,8,Kristen Buchanan,Olivia Chambers (a-2),59kg,$10,false
+4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,1100m,5,Escargoes,Escargoes,Escargoes,2,Brad Widdup,Tommy Berry,58kg,$2.3,false
+4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,1100m,6,Artfull,Artfull,Artfull,6,Sara Ryan,Reece Jones,57.5kg,$41,false
+4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,1100m,7,Last Tour,Last Tour,Last Tour,11,Brad Widdup,Leeshelle Small (a-3),57.5kg,$16,false
+4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,1100m,8,Bangelz,Bangelz,Bangelz,4,Terry Croft,Siena Grima (a-2),57kg,$51,false
+4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,1100m,9,Conjola Girl,Conjola Girl,Conjola Girl,1,Edward O'Rourke,Rachel King,57kg,$19,false
+4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,1100m,11,Spearpoint,Spearpoint,Spearpoint,3,Kristen Buchanan,Mollie Fitzgerald (a-1.5),57kg,$16,false
+4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,1100m,12,Winning Lover,Winning Lover,Winning Lover,7,Sara Ryan,Lee Magorrian,57kg,$6,false
+4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,1100m,14,Galactic Force,Galactic Force,Galactic Force,5,Sara Ryan,Alysha Collett,56kg,$11,false
+4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,1100m,15,Bold Alliance,Bold Alliance,Bold Alliance,10,Blake Ryan,Emma Ly (a-3),55kg,$34,false
+4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,1100m,2,Mega Pixel,Mega Pixel,Mega Pixel,12,Kris Lees,Kerrin McEvoy,59.5kg,SCR,true
+4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,1100m,4,Zouboy,Zouboy,Zouboy,13,,Nathan Doyle,59kg,SCR,true
+4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,1100m,10,Legacy Prevailed,Legacy Prevailed,Legacy Prevailed,14,,Kristen Buchanan,57kg,SCR,true
+4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,1100m,13,Kitsune Vixen,Kitsune Vixen,Kitsune Vixen,9,,Kristen Buchanan,55kg,SCR,true
+5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,1100m,1,Raskol,Raskol,Raskol,8,Peter Snowden,Tommy Berry,61kg,$3.3,false
+5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,1100m,2,Into Brooklyn,Into Brooklyn,Into Brooklyn,4,Nathan Doyle,Liberty Smyth (a-3),60.5kg,$4.8,false
+5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,1100m,3,Nullarbor Jane,Nullarbor Jane,Nullarbor Jane,5,John Sargent,Siena Grima (a-2),60kg,$5.5,false
+5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,1100m,5,Tides Turning,Tides Turning,Tides Turning,1,Terry Croft,Mollie Fitzgerald (a-1.5),59kg,$19,false
+5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,1100m,6,Purple Rose,Purple Rose,Purple Rose,10,John Thompson,Sam Clipperton,58.5kg,$11,false
+5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,1100m,7,Singing Star,Singing Star,Singing Star,3,Damien Lane,Alysha Collett,58kg,$18,false
+5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,1100m,8,Tennessee Dolly,Tennessee Dolly,Tennessee Dolly,7,Richard Litt,Chad Schofield,58kg,$4.4,false
+5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,1100m,10,River Pat,River Pat,River Pat,2,Kim Waugh,Keagan Latham,57kg,$8,false
+5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,1100m,4,Voltage Lass,Voltage Lass,Voltage Lass,9,Danielle Seib,Rachel King,59.5kg,SCR,true
+5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,1100m,9,Farnciful,Farnciful,Farnciful,6,Jason Deamer,Dylan Gibbons,57kg,SCR,true
+6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,1100m,1,Desi Emperor,Desi Emperor,Desi Emperor,7,Tommy Wong,Jeff Penza,61.5kg,$8.5,false
+6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,1100m,3,Sociable,Sociable,Sociable,9,Ciaron Maher,Zac Lloyd,61kg,$2.1,false
+6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,1100m,4,Starros,Starros,Starros,3,Terry Croft,Mollie Fitzgerald (a-1.5),59.5kg,$19,false
+6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,1100m,5,Myriad,Myriad,Myriad,6,Nathan Doyle,Lee Magorrian,59kg,$3.8,false
+6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,1100m,6,Ima Capri,Ima Capri,Ima Capri,2,Sara Ryan,Andrew Adkins,56kg,$12,false
+6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,1100m,7,Last Druid,Last Druid,Last Druid,1,Tracey Bartley,Alysha Collett,55.5kg,$7.5,false
+6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,1100m,8,Clifton Springs,Clifton Springs,Clifton Springs,10,Marc & Mitchell Conners,Andrew Calder,55kg,$12,false
+6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,1100m,9,Midnight Dream,Midnight Dream,Midnight Dream,4,Paul Clisby,Siena Grima (a-2),55kg,$29,false
+6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,1100m,10,Surf Sonic,Surf Sonic,Surf Sonic,8,Karen Outtrim,Louis Beuzelin,55kg,$151,false
+6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,1100m,11,Johnny Smash ho,Johnny Smash ho,Johnny Smash ho,11,Mike Van Gestel,Reece Jones,55kg,$151,false
+6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,1100m,2,Leave No Doubt,Leave No Doubt,Leave No Doubt,5,Garry Frazer,Jay Ford,61kg,SCR,true
+7,4:40 pm 3finance Class 1 & Maiden Plate,1800m,1,Flats,Flats,Flats,11,Wendy Haynes,Robyn Freeman,59kg,$61,false
+7,4:40 pm 3finance Class 1 & Maiden Plate,1800m,3,My Greek God,My Greek God,My Greek God,1,Matthew Smith,Winona Costin,59kg,$23,false
+7,4:40 pm 3finance Class 1 & Maiden Plate,1800m,4,The Big Blue,The Big Blue,The Big Blue,8,Tom Charlton,Zac Lloyd,59kg,$2.6,false
+7,4:40 pm 3finance Class 1 & Maiden Plate,1800m,5,The Iron Star,The Iron Star,The Iron Star,9,Marc Chevalier,Tyler Schiller,59kg,$12,false
+7,4:40 pm 3finance Class 1 & Maiden Plate,1800m,6,Sox,Sox,Sox,3,Tommy Wong,Louis Beuzelin,57.5kg,$19,false
+7,4:40 pm 3finance Class 1 & Maiden Plate,1800m,7,Valentiago,Valentiago,Valentiago,6,Peter Snowden,Zac Wadick,57.5kg,$6.5,false
+7,4:40 pm 3finance Class 1 & Maiden Plate,1800m,8,Don't Tell Polly,Don't Tell Polly,Don't Tell Polly,7,Brad Widdup,Rachel King,55.5kg,$13,false
+7,4:40 pm 3finance Class 1 & Maiden Plate,1800m,11,Aleutian,Aleutian,Aleutian,4,Brad Widdup,Leeshelle Small (a-3),55kg,$101,false
+7,4:40 pm 3finance Class 1 & Maiden Plate,1800m,12,Jade Sunset,Jade Sunset,Jade Sunset,5,Tracey Bartley,Alysha Collett,55kg,$6.5,false
+7,4:40 pm 3finance Class 1 & Maiden Plate,1800m,13,Made In Italy,Made In Italy,Made In Italy,2,Matthew Smith,Kerrin McEvoy,55kg,$3.3,false
+7,4:40 pm 3finance Class 1 & Maiden Plate,1800m,2,Lots To Love,Lots To Love,Lots To Love,10,Annabel & Rob Archibald,Mollie Fitzgerald (a-1.5),59kg,SCR,true
+7,4:40 pm 3finance Class 1 & Maiden Plate,1800m,9,La Morra,La Morra,La Morra,12,John Thompson,Chad Schofield,55.5kg,SCR,true
+7,4:40 pm 3finance Class 1 & Maiden Plate,1800m,10,Lupa Capitolina,Lupa Capitolina,Lupa Capitolina,13,Joseph Pride,Sam Clipperton,55.5kg,SCR,true

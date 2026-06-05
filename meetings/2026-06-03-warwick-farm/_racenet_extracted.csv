@@ -1,0 +1,95 @@
+race_no,race_name,start_time,distance,track,grade,going,rail,no,horse,horse_name,name,barrier,trainer,jockey,weight,odds,scratched
+1,12:50 pm Schweppes Handicap,12:50 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,1,Demerzel,Demerzel,Demerzel,5,Gai Waterhouse & Adrian Bott,Rachel King,58kg,$9,false
+1,12:50 pm Schweppes Handicap,12:50 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,2,Express,Express,Express,8,Chris Waller,Nash Rawiller,58kg,$7.5,false
+1,12:50 pm Schweppes Handicap,12:50 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,3,Hatsumomo,Hatsumomo,Hatsumomo,1,Joseph Pride,Kerrin McEvoy,58kg,$18,false
+1,12:50 pm Schweppes Handicap,12:50 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,4,Infinite Sky,Infinite Sky,Infinite Sky,6,Chris Waller,Sam Clipperton,58kg,$23,false
+1,12:50 pm Schweppes Handicap,12:50 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,5,Kinetic Kiss,Kinetic Kiss,Kinetic Kiss,4,Gai Waterhouse & Adrian Bott,Tim Clark,58kg,$4.6,false
+1,12:50 pm Schweppes Handicap,12:50 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,6,Krasina,Krasina,Krasina,7,David Payne,Ashley Morgan,58kg,$3.9,false
+1,12:50 pm Schweppes Handicap,12:50 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,7,Perla Iberica,Perla Iberica,Perla Iberica,3,Edward Cummings,Jay Ford,58kg,$81,false
+1,12:50 pm Schweppes Handicap,12:50 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,8,Profit Calling,Profit Calling,Profit Calling,9,Geoff Allendorf,Andrew Calder,58kg,$23,false
+1,12:50 pm Schweppes Handicap,12:50 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,10,Coral,Coral,Coral,2,Chris Waller,Tommy Berry,57.5kg,$11,false
+1,12:50 pm Schweppes Handicap,12:50 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,11,Excelluna,Excelluna,Excelluna,11,Richard & Will Freedman,Jason Collett,57.5kg,$6.5,false
+1,12:50 pm Schweppes Handicap,12:50 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,12,Helldeeva,Helldeeva,Helldeeva,10,Peter Snowden,Tom Sherry,56.5kg,$10,false
+1,12:50 pm Schweppes Handicap,12:50 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,9,Satin Serenade,Satin Serenade,Satin Serenade,12,Chris Waller,Tyler Schiller,58kg,SCR,true
+2,1:25 pm Drinkwise Plate,1:25 pm,1300m,Warwick Farm,,Heavy 8,+3m Entire,1,Beneath The Rock,Beneath The Rock,Beneath The Rock,1,Kris Lees,Tyler Schiller,56kg,$12,false
+2,1:25 pm Drinkwise Plate,1:25 pm,1300m,Warwick Farm,,Heavy 8,+3m Entire,2,Claudel,Claudel,Claudel,3,Chris Waller,Kerrin McEvoy,56kg,$3.2,false
+2,1:25 pm Drinkwise Plate,1:25 pm,1300m,Warwick Farm,,Heavy 8,+3m Entire,3,Extra Special,Extra Special,Extra Special,2,Nacim Dilmi,Reece Jones,56kg,$15,false
+2,1:25 pm Drinkwise Plate,1:25 pm,1300m,Warwick Farm,,Heavy 8,+3m Entire,6,Merini,Merini,Merini,11,Kris Lees,Jason Collett,56kg,$5.5,false
+2,1:25 pm Drinkwise Plate,1:25 pm,1300m,Warwick Farm,,Heavy 8,+3m Entire,8,Our Huntress,Our Huntress,Our Huntress,5,Michael Freedman,Tommy Berry,56kg,$2.05,false
+2,1:25 pm Drinkwise Plate,1:25 pm,1300m,Warwick Farm,,Heavy 8,+3m Entire,9,Presumptuous Gal,Presumptuous Gal,Presumptuous Gal,8,David Pfieffer,Jay Ford,56kg,$34,false
+2,1:25 pm Drinkwise Plate,1:25 pm,1300m,Warwick Farm,,Heavy 8,+3m Entire,11,Solar Dance,Solar Dance,Solar Dance,10,John Sargent,Siena Grima (a-2),56kg,$27,false
+2,1:25 pm Drinkwise Plate,1:25 pm,1300m,Warwick Farm,,Heavy 8,+3m Entire,4,I Am Overs,I Am Overs,I Am Overs,6,Annabel & Rob Archibald,Braith Nock (a-1.5),56kg,SCR,true
+2,1:25 pm Drinkwise Plate,1:25 pm,1300m,Warwick Farm,,Heavy 8,+3m Entire,5,Lorrie Belle,Lorrie Belle,Lorrie Belle,7,David Payne,Ashley Morgan,56kg,SCR,true
+2,1:25 pm Drinkwise Plate,1:25 pm,1300m,Warwick Farm,,Heavy 8,+3m Entire,7,Miss Supernova,Miss Supernova,Miss Supernova,4,Gerald Ryan & Sterling Alexiou,Tom Sherry,56kg,SCR,true
+2,1:25 pm Drinkwise Plate,1:25 pm,1300m,Warwick Farm,,Heavy 8,+3m Entire,10,Royal Botanic,Royal Botanic,Royal Botanic,9,Kris Lees,Dylan Gibbons,56kg,SCR,true
+3,2:00 pm Precise Air Plate,2:00 pm,1100m,Warwick Farm,,Heavy 8,+3m Entire,2,Hard Liner,Hard Liner,Hard Liner,13,Joseph Pride,Sam Clipperton,58.5kg,$21,false
+3,2:00 pm Precise Air Plate,2:00 pm,1100m,Warwick Farm,,Heavy 8,+3m Entire,3,King For A Day,King For A Day,King For A Day,14,Matthew Smith,Ashley Morgan,58.5kg,$23,false
+3,2:00 pm Precise Air Plate,2:00 pm,1100m,Warwick Farm,,Heavy 8,+3m Entire,6,Samaka,Samaka,Samaka,6,Peter Snowden,Tim Clark,58.5kg,$3.2,false
+3,2:00 pm Precise Air Plate,2:00 pm,1100m,Warwick Farm,,Heavy 8,+3m Entire,8,Unleash Harry,Unleash Harry,Unleash Harry,7,Ron Quinton,Louise Day,58.5kg,$10,false
+3,2:00 pm Precise Air Plate,2:00 pm,1100m,Warwick Farm,,Heavy 8,+3m Entire,9,Appin Opal,Appin Opal,Appin Opal,8,David Pfieffer,Jason Collett,56.5kg,$11,false
+3,2:00 pm Precise Air Plate,2:00 pm,1100m,Warwick Farm,,Heavy 8,+3m Entire,10,Saloon Passage,Saloon Passage,Saloon Passage,9,Chris Waller,Siena Grima (a-2),56.5kg,$18,false
+3,2:00 pm Precise Air Plate,2:00 pm,1100m,Warwick Farm,,Heavy 8,+3m Entire,11,Yattazou,Yattazou,Yattazou,3,Chris Waller,Tommy Berry,56.5kg,$9.5,false
+3,2:00 pm Precise Air Plate,2:00 pm,1100m,Warwick Farm,,Heavy 8,+3m Entire,12,Crescent King,Crescent King,Crescent King,4,Peter Snowden,Tom Sherry,56kg,$4,false
+3,2:00 pm Precise Air Plate,2:00 pm,1100m,Warwick Farm,,Heavy 8,+3m Entire,15,Arizona Loner,Arizona Loner,Arizona Loner,1,John Thompson,Brock Ryan,58.5kg,$61,false
+3,2:00 pm Precise Air Plate,2:00 pm,1100m,Warwick Farm,,Heavy 8,+3m Entire,16,Lady Invictus,Lady Invictus,Lady Invictus,2,Gai Waterhouse & Adrian Bott,Regan Bayliss,56.5kg,$5.5,false
+3,2:00 pm Precise Air Plate,2:00 pm,1100m,Warwick Farm,,Heavy 8,+3m Entire,1,Demonstrator,Demonstrator,Demonstrator,15,Richard & Will Freedman,Jason Collett,58.5kg,SCR,true
+3,2:00 pm Precise Air Plate,2:00 pm,1100m,Warwick Farm,,Heavy 8,+3m Entire,4,Northy Lad,Northy Lad,Northy Lad,5,,Edward Cummings,58.5kg,SCR,true
+3,2:00 pm Precise Air Plate,2:00 pm,1100m,Warwick Farm,,Heavy 8,+3m Entire,5,Royal Air Force,Royal Air Force,Royal Air Force,12,Chris Waller,Nash Rawiller,58.5kg,SCR,true
+3,2:00 pm Precise Air Plate,2:00 pm,1100m,Warwick Farm,,Heavy 8,+3m Entire,7,Southport,Southport,Southport,11,Brad Widdup,Kerrin McEvoy,58.5kg,SCR,true
+3,2:00 pm Precise Air Plate,2:00 pm,1100m,Warwick Farm,,Heavy 8,+3m Entire,13,Klocke,Klocke,Klocke,17,Chris Waller,Tyler Schiller,56kg,SCR,true
+3,2:00 pm Precise Air Plate,2:00 pm,1100m,Warwick Farm,,Heavy 8,+3m Entire,14,Rebel Royal,Rebel Royal,Rebel Royal,18,Gai Waterhouse & Adrian Bott,Rachel King,56kg,SCR,true
+3,2:00 pm Precise Air Plate,2:00 pm,1100m,Warwick Farm,,Heavy 8,+3m Entire,17,Capone,Capone,Capone,10,John Thompson,Andrew Adkins,58.5kg,SCR,true
+3,2:00 pm Precise Air Plate,2:00 pm,1100m,Warwick Farm,,Heavy 8,+3m Entire,18,Claudel,Claudel,Claudel,16,,Chris Waller,56.5kg,SCR,true
+4,2:35 pm Asahi Super Dry Handicap,2:35 pm,1600m,Warwick Farm,Handicap,Heavy 8,+3m Entire,1,Portsmouth,Portsmouth,Portsmouth,7,Annabel & Rob Archibald,Tom Sherry,60.5kg,$41,false
+4,2:35 pm Asahi Super Dry Handicap,2:35 pm,1600m,Warwick Farm,Handicap,Heavy 8,+3m Entire,2,Hovland,Hovland,Hovland,8,Tom Charlton,Tommy Berry,59.5kg,$2.6,false
+4,2:35 pm Asahi Super Dry Handicap,2:35 pm,1600m,Warwick Farm,Handicap,Heavy 8,+3m Entire,3,Ornithology,Ornithology,Ornithology,5,Chris Waller,Tim Clark,58.5kg,$9,false
+4,2:35 pm Asahi Super Dry Handicap,2:35 pm,1600m,Warwick Farm,Handicap,Heavy 8,+3m Entire,4,Viewpoint,Viewpoint,Viewpoint,2,Nacim Dilmi,Andrew Adkins,58kg,$5.5,false
+4,2:35 pm Asahi Super Dry Handicap,2:35 pm,1600m,Warwick Farm,Handicap,Heavy 8,+3m Entire,5,Elle Hudson,Elle Hudson,Elle Hudson,4,Joseph Pride,Sam Clipperton,57.5kg,$3.4,false
+4,2:35 pm Asahi Super Dry Handicap,2:35 pm,1600m,Warwick Farm,Handicap,Heavy 8,+3m Entire,6,A Pound Of Salt,A Pound Of Salt,A Pound Of Salt,6,Todd Howlett,Braith Nock (a-1.5),55.5kg,$21,false
+4,2:35 pm Asahi Super Dry Handicap,2:35 pm,1600m,Warwick Farm,Handicap,Heavy 8,+3m Entire,7,Stellar Rhonda,Stellar Rhonda,Stellar Rhonda,9,Matthew Smith,Alysha Collett,54kg,$6.5,false
+4,2:35 pm Asahi Super Dry Handicap,2:35 pm,1600m,Warwick Farm,Handicap,Heavy 8,+3m Entire,9,Tillman,Tillman,Tillman,1,Greg Stephens,Jay Ford,54kg,$81,false
+4,2:35 pm Asahi Super Dry Handicap,2:35 pm,1600m,Warwick Farm,Handicap,Heavy 8,+3m Entire,8,Hammoon Heroine,Hammoon Heroine,Hammoon Heroine,3,Matthew Smith,Reece Jones,54kg,SCR,true
+5,3:10 pm Tab Handicap,3:10 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,1,President,President,President,3,Jason Coyle,Rachel King,62.5kg,$26,false
+5,3:10 pm Tab Handicap,3:10 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,2,Astronomix,Astronomix,Astronomix,6,Tom Charlton,Anna Roper (a-2),62kg,$10,false
+5,3:10 pm Tab Handicap,3:10 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,4,Sociable,Sociable,Sociable,2,Ciaron Maher,Adam Hyeronimus,61.5kg,$11,false
+5,3:10 pm Tab Handicap,3:10 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,6,Nandina,Nandina,Nandina,12,Chris Waller,Kerrin McEvoy,60kg,$4.8,false
+5,3:10 pm Tab Handicap,3:10 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,7,Nullarbor Jane,Nullarbor Jane,Nullarbor Jane,18,John Sargent,Shannen Llewellyn (a-3),60kg,$6,false
+5,3:10 pm Tab Handicap,3:10 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,9,Capture Me,Capture Me,Capture Me,1,Joseph Pride,Andrew Adkins,59.5kg,$6,false
+5,3:10 pm Tab Handicap,3:10 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,11,Graphic Sight,Graphic Sight,Graphic Sight,9,Gai Waterhouse & Adrian Bott,Tim Clark,59kg,$7.5,false
+5,3:10 pm Tab Handicap,3:10 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,12,Mrs Maree,Mrs Maree,Mrs Maree,8,Clarry Conners,Nash Rawiller,59kg,$6.5,false
+5,3:10 pm Tab Handicap,3:10 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,14,Gamp,Gamp,Gamp,5,"Michael, John & Wayne Hawkes",Jay Ford,57kg,$21,false
+5,3:10 pm Tab Handicap,3:10 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,15,Luskintyre,Luskintyre,Luskintyre,15,Ron Quinton,Louise Day,57kg,$35,false
+5,3:10 pm Tab Handicap,3:10 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,17,Last Druid,Last Druid,Last Druid,4,Tracey Bartley,Alysha Collett,57.5kg,$17,false
+5,3:10 pm Tab Handicap,3:10 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,18,Prorata,Prorata,Prorata,17,Gregory Hickman,Jason Collett,55kg,$91,false
+5,3:10 pm Tab Handicap,3:10 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,3,Hello Captain,Hello Captain,Hello Captain,10,Chris Waller,Tommy Berry,62kg,SCR,true
+5,3:10 pm Tab Handicap,3:10 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,5,Alphard,Alphard,Alphard,7,Chris Waller,Siena Grima (a-2),60.5kg,SCR,true
+5,3:10 pm Tab Handicap,3:10 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,8,Silencio Porfavor,Silencio Porfavor,Silencio Porfavor,16,Matthew Smith,Mollie Fitzgerald (a-3),60kg,SCR,true
+5,3:10 pm Tab Handicap,3:10 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,10,Roma Green,Roma Green,Roma Green,14,,Bjorn Baker,59.5kg,SCR,true
+5,3:10 pm Tab Handicap,3:10 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,13,Jarrito,Jarrito,Jarrito,11,Bjorn Baker,Jason Collett,58kg,SCR,true
+5,3:10 pm Tab Handicap,3:10 pm,1100m,Warwick Farm,Handicap,Heavy 8,+3m Entire,16,Ivy Diva,Ivy Diva,Ivy Diva,13,Tim McIntosh,Reece Jones,57kg,SCR,true
+6,3:45 pm Hyland Race Colours Handicap,3:45 pm,2200m,Warwick Farm,Handicap,Heavy 8,+3m Entire,1,Solar Army,Solar Army,Solar Army,11,Gai Waterhouse & Adrian Bott,Adam Hyeronimus,61.5kg,$10,false
+6,3:45 pm Hyland Race Colours Handicap,3:45 pm,2200m,Warwick Farm,Handicap,Heavy 8,+3m Entire,2,Cormac,Cormac,Cormac,7,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),61kg,$4.8,false
+6,3:45 pm Hyland Race Colours Handicap,3:45 pm,2200m,Warwick Farm,Handicap,Heavy 8,+3m Entire,3,Black Babylon,Black Babylon,Black Babylon,6,Annabel & Rob Archibald,Tom Sherry,60kg,$5.5,false
+6,3:45 pm Hyland Race Colours Handicap,3:45 pm,2200m,Warwick Farm,Handicap,Heavy 8,+3m Entire,4,Majorian,Majorian,Majorian,4,Annabel & Rob Archibald,Braith Nock (a-1.5),59.5kg,$20,false
+6,3:45 pm Hyland Race Colours Handicap,3:45 pm,2200m,Warwick Farm,Handicap,Heavy 8,+3m Entire,6,Blacklist,Blacklist,Blacklist,2,Mack Griffith,Tim Clark,58kg,$9.5,false
+6,3:45 pm Hyland Race Colours Handicap,3:45 pm,2200m,Warwick Farm,Handicap,Heavy 8,+3m Entire,7,Natoya,Natoya,Natoya,9,John Sargent,Jason Collett,57.5kg,$3.9,false
+6,3:45 pm Hyland Race Colours Handicap,3:45 pm,2200m,Warwick Farm,Handicap,Heavy 8,+3m Entire,8,Stay Tuned,Stay Tuned,Stay Tuned,8,Paul & Martha Cave,Andrew Calder,56kg,$71,false
+6,3:45 pm Hyland Race Colours Handicap,3:45 pm,2200m,Warwick Farm,Handicap,Heavy 8,+3m Entire,9,War Ribbon,War Ribbon,War Ribbon,1,David Payne,Ashley Morgan,55.5kg,$12,false
+6,3:45 pm Hyland Race Colours Handicap,3:45 pm,2200m,Warwick Farm,Handicap,Heavy 8,+3m Entire,10,Le Troisir,Le Troisir,Le Troisir,10,Chris Waller,Tommy Berry (a0.5),55kg,$6,false
+6,3:45 pm Hyland Race Colours Handicap,3:45 pm,2200m,Warwick Farm,Handicap,Heavy 8,+3m Entire,11,California Grass,California Grass,California Grass,3,John Thompson,Alysha Collett,54kg,$26,false
+6,3:45 pm Hyland Race Colours Handicap,3:45 pm,2200m,Warwick Farm,Handicap,Heavy 8,+3m Entire,5,Claim The Crown,Claim The Crown,Claim The Crown,5,John Sargent,Rachel King,59kg,SCR,true
+7,4:20 pm Irresistible Pools And Spas Handicap,4:20 pm,1300m,Warwick Farm,Handicap,Heavy 8,+3m Entire,1,Hot Bandit,Hot Bandit,Hot Bandit,14,Luke Pepper,Brodie Loy,61kg,$19,false
+7,4:20 pm Irresistible Pools And Spas Handicap,4:20 pm,1300m,Warwick Farm,Handicap,Heavy 8,+3m Entire,3,Metaphorically,Metaphorically,Metaphorically,2,Tom Charlton,Anna Roper (a-2),60.5kg,$10,false
+7,4:20 pm Irresistible Pools And Spas Handicap,4:20 pm,1300m,Warwick Farm,Handicap,Heavy 8,+3m Entire,4,Cape Byron,Cape Byron,Cape Byron,4,Marc & Mitchell Conners,Olivia Chambers (a-3),59.5kg,$21,false
+7,4:20 pm Irresistible Pools And Spas Handicap,4:20 pm,1300m,Warwick Farm,Handicap,Heavy 8,+3m Entire,6,Formal,Formal,Formal,9,Nathan Doyle,Shannen Llewellyn (a-3),59.5kg,$6.5,false
+7,4:20 pm Irresistible Pools And Spas Handicap,4:20 pm,1300m,Warwick Farm,Handicap,Heavy 8,+3m Entire,7,Mamushka,Mamushka,Mamushka,8,Tom Charlton,Dylan Gibbons,59kg,$5.5,false
+7,4:20 pm Irresistible Pools And Spas Handicap,4:20 pm,1300m,Warwick Farm,Handicap,Heavy 8,+3m Entire,10,Aye Aye Captain,Aye Aye Captain,Aye Aye Captain,10,Les Bridge,Kerrin McEvoy,58kg,$4,false
+7,4:20 pm Irresistible Pools And Spas Handicap,4:20 pm,1300m,Warwick Farm,Handicap,Heavy 8,+3m Entire,11,The Replicant,The Replicant,The Replicant,13,Joseph Pride,Nash Rawiller,58kg,$9.5,false
+7,4:20 pm Irresistible Pools And Spas Handicap,4:20 pm,1300m,Warwick Farm,Handicap,Heavy 8,+3m Entire,12,Twisted Queen,Twisted Queen,Twisted Queen,6,Joseph Pride,Regan Bayliss,57.5kg,$7,false
+7,4:20 pm Irresistible Pools And Spas Handicap,4:20 pm,1300m,Warwick Farm,Handicap,Heavy 8,+3m Entire,13,Abuse Of Power,Abuse Of Power,Abuse Of Power,3,John Sharah Rebecca,Bronett Prag (a-3),56kg,$41,false
+7,4:20 pm Irresistible Pools And Spas Handicap,4:20 pm,1300m,Warwick Farm,Handicap,Heavy 8,+3m Entire,14,Emballee,Emballee,Emballee,7,Chris Waller,Tommy Berry,56kg,$11,false
+7,4:20 pm Irresistible Pools And Spas Handicap,4:20 pm,1300m,Warwick Farm,Handicap,Heavy 8,+3m Entire,15,Miss Capitale,Miss Capitale,Miss Capitale,1,Matthew Smith,Ashley Morgan,54kg,$18,false
+7,4:20 pm Irresistible Pools And Spas Handicap,4:20 pm,1300m,Warwick Farm,Handicap,Heavy 8,+3m Entire,2,Winston Hills,Winston Hills,Winston Hills,12,Matthew Smith,Siena Grima (a-2),61kg,SCR,true
+7,4:20 pm Irresistible Pools And Spas Handicap,4:20 pm,1300m,Warwick Farm,Handicap,Heavy 8,+3m Entire,5,Crop Duster,Crop Duster,Crop Duster,15,Jeremy Gask,Braith Nock (a-1.5),59.5kg,SCR,true
+7,4:20 pm Irresistible Pools And Spas Handicap,4:20 pm,1300m,Warwick Farm,Handicap,Heavy 8,+3m Entire,8,Rimbaud,Rimbaud,Rimbaud,11,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),59kg,SCR,true
+7,4:20 pm Irresistible Pools And Spas Handicap,4:20 pm,1300m,Warwick Farm,Handicap,Heavy 8,+3m Entire,9,Lockdown Gamble,Lockdown Gamble,Lockdown Gamble,5,David J Smith,Reece Jones,58.5kg,SCR,true

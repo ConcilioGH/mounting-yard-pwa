@@ -1,0 +1,12 @@
+meeting,category,group,wins,places,avg_sp,actual_share,expected_share,bias_score
+Scone,lane,Rail,3,7,12.87,39.2,36.6,2.6
+Scone,lane,Running Line,2,10,11.32,37.5,26.8,10.8
+Scone,lane,3 Wide,2,4,8.76,23.3,36.7,-13.4
+Scone,lane,4 Wide+,0,0,,0,0,0
+Scone,position,Leader / Front Pair,3,3,14.10,27.6,16,11.6
+Scone,position,On Pace,0,2,17.00,6.3,2.3,4
+Scone,position,Midfield,1,7,14.56,22.3,12.9,9.4
+Scone,position,Backmarker,1,5,4.90,20.6,32.1,-11.5
+Scone,position,Wide Forward,1,2,6.53,10.3,24,-13.7
+Scone,position,Wide Midfield,1,2,11.00,13,12.6,0.3
+Scone,position,Wide Back,0,0,,0,0,0

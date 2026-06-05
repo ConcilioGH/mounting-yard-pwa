@@ -1,5 +1,5 @@
-import MountingYardApp from "@/components/mounting-yard-app";
+import { redirect } from "next/navigation";
 
 export default function HomePage() {
-  return <MountingYardApp />;
+  redirect("/speed-map");
 }

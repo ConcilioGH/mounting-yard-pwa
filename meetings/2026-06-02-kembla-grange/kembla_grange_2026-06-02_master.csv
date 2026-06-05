@@ -1,0 +1,70 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir
+R1,Kembla Grange,1,12:45 pm Pfd Food Services Maiden Plate,1000m,Maiden,Heavy 8,True,1,1,Banner Banner,Banner Banner,Banner Banner,10,Tommy Wong,Louis Beuzelin,$26,5.8
+R1,Kembla Grange,1,12:45 pm Pfd Food Services Maiden Plate,1000m,Maiden,Heavy 8,True,2,2,Bumbling Artie,Bumbling Artie,Bumbling Artie,1,Mitchell Beer & George Carpenter,Dylan Gibbons,$34,NA
+R1,Kembla Grange,1,12:45 pm Pfd Food Services Maiden Plate,1000m,Maiden,Heavy 8,True,3,3,Carafe,Carafe,Carafe,11,Dale Wagstaff,Donovan Dillon,$101,4.1
+R1,Kembla Grange,1,12:45 pm Pfd Food Services Maiden Plate,1000m,Maiden,Heavy 8,True,4,4,Copycat,Copycat,Copycat,14,Gary Portelli,Alysha Collett,$19,4.7
+R1,Kembla Grange,1,12:45 pm Pfd Food Services Maiden Plate,1000m,Maiden,Heavy 8,True,5,5,Life Young Ever,Life Young Ever,Life Young Ever,12,Gerald Ryan & Sterling Alexiou,Matt Kirk (a-4),$26,NA
+R1,Kembla Grange,1,12:45 pm Pfd Food Services Maiden Plate,1000m,Maiden,Heavy 8,True,7,7,Terra Lumina,Terra Lumina,Terra Lumina,8,Jason Coyle,Jessica Taylor,$23,4.3
+R1,Kembla Grange,1,12:45 pm Pfd Food Services Maiden Plate,1000m,Maiden,Heavy 8,True,8,8,Touching Hans,Touching Hans,Touching Hans,6,Matthew Smith,Ashley Morgan,$6.5,NA
+R1,Kembla Grange,1,12:45 pm Pfd Food Services Maiden Plate,1000m,Maiden,Heavy 8,True,10,10,Ask Di,Ask Di,Ask Di,13,Gerald Ryan & Sterling Alexiou,Tom Sherry,$2.8,3
+R1,Kembla Grange,1,12:45 pm Pfd Food Services Maiden Plate,1000m,Maiden,Heavy 8,True,11,11,Gunna Reign,Gunna Reign,Gunna Reign,4,Dale Wagstaff,Adam Farragher,$81,5.7
+R1,Kembla Grange,1,12:45 pm Pfd Food Services Maiden Plate,1000m,Maiden,Heavy 8,True,12,12,Kunis,Kunis,Kunis,9,Robert & Luke Price Jean,Van Overmeire,$3.9,NA
+R1,Kembla Grange,1,12:45 pm Pfd Food Services Maiden Plate,1000m,Maiden,Heavy 8,True,13,13,Our Lady Peace,Our Lady Peace,Our Lady Peace,7,Gary Portelli,Andrew Adkins,$4.2,4.3
+R1,Kembla Grange,1,12:45 pm Pfd Food Services Maiden Plate,1000m,Maiden,Heavy 8,True,15,15,Wonderstorm,Wonderstorm,Wonderstorm,15,Diane Poidevin Laine,Ellen Hennessy,$126,4.7
+R1,Kembla Grange,1,12:45 pm Pfd Food Services Maiden Plate,1000m,Maiden,Heavy 8,True,17,17,Heart Reset,Heart Reset,Heart Reset,18,Robert & Luke Price,Claire Ramsbotham (a-3),$21,7.3
+R2,Kembla Grange,2,1:20 pm Snap Print Solutions Wollongong Conditional Benchmark 68 Handicap,1000m,BM68,Heavy 8,True,1,1,Century Song,Century Song,Century Song,11,Robert & Luke Price,Brock Ryan,$2.9,4.6
+R2,Kembla Grange,2,1:20 pm Snap Print Solutions Wollongong Conditional Benchmark 68 Handicap,1000m,BM68,Heavy 8,True,2,2,Take The Rap,Take The Rap,Take The Rap,5,Norm Gardner Rebecca,Bronett Prag (a-3),$7,5
+R2,Kembla Grange,2,1:20 pm Snap Print Solutions Wollongong Conditional Benchmark 68 Handicap,1000m,BM68,Heavy 8,True,3,3,Desi Emperor,Desi Emperor,Desi Emperor,3,Tommy Wong,Jeff Penza,$10,2.5
+R2,Kembla Grange,2,1:20 pm Snap Print Solutions Wollongong Conditional Benchmark 68 Handicap,1000m,BM68,Heavy 8,True,5,5,Bode Akuna,Bode Akuna,Bode Akuna,8,Jason Coyle,Jessica Taylor,$7.5,7.5
+R2,Kembla Grange,2,1:20 pm Snap Print Solutions Wollongong Conditional Benchmark 68 Handicap,1000m,BM68,Heavy 8,True,7,7,Donwon,Donwon,Donwon,7,Ross McConville,Mollie Fitzgerald (a-1.5),$6.5,4.2
+R2,Kembla Grange,2,1:20 pm Snap Print Solutions Wollongong Conditional Benchmark 68 Handicap,1000m,BM68,Heavy 8,True,8,8,Sunday Tycoon,Sunday Tycoon,Sunday Tycoon,9,Clarry Conners,Keagan Latham,$3.4,4.8
+R2,Kembla Grange,2,1:20 pm Snap Print Solutions Wollongong Conditional Benchmark 68 Handicap,1000m,BM68,Heavy 8,True,11,11,La Mer Bleue,La Mer Bleue,La Mer Bleue,1,Allan McRae,Amy McLucas,$10,3.8
+R3,Kembla Grange,3,1:55 pm The Race Against Suicide Maiden Handicap,2000m,Maiden,Heavy 8,True,1,1,Negate,Negate,Negate,13,Chris Waller,Jason Collett,$41,10
+R3,Kembla Grange,3,1:55 pm The Race Against Suicide Maiden Handicap,2000m,Maiden,Heavy 8,True,3,3,Time For Snow,Time For Snow,Time For Snow,10,Anthony Warren,Keagan Latham,$8.5,4.1
+R3,Kembla Grange,3,1:55 pm The Race Against Suicide Maiden Handicap,2000m,Maiden,Heavy 8,True,4,4,Dance With Destiny,Dance With Destiny,Dance With Destiny,2,John Sargent,Dylan Gibbons,$2.1,7.6
+R3,Kembla Grange,3,1:55 pm The Race Against Suicide Maiden Handicap,2000m,Maiden,Heavy 8,True,5,5,Irish Pete,Irish Pete,Irish Pete,12,Robert & Luke Price Jean,Van Overmeire,$18,9.3
+R3,Kembla Grange,3,1:55 pm The Race Against Suicide Maiden Handicap,2000m,Maiden,Heavy 8,True,6,6,Isosceles,Isosceles,Isosceles,8,Tom Charlton,Tom Sherry,$23,8.7
+R3,Kembla Grange,3,1:55 pm The Race Against Suicide Maiden Handicap,2000m,Maiden,Heavy 8,True,7,7,Think I Will,Think I Will,Think I Will,6,Gai Waterhouse & Adrian Bott,Rachel King,$2.9,2.5
+R3,Kembla Grange,3,1:55 pm The Race Against Suicide Maiden Handicap,2000m,Maiden,Heavy 8,True,8,8,Aerostern Bro,Aerostern Bro,Aerostern Bro,5,Jarrod Austin,Louise Day,$15,3.3
+R3,Kembla Grange,3,1:55 pm The Race Against Suicide Maiden Handicap,2000m,Maiden,Heavy 8,True,10,10,Landmark Lady,Landmark Lady,Landmark Lady,7,Theresa Bateup,Jessica Taylor,$41,5.2
+R3,Kembla Grange,3,1:55 pm The Race Against Suicide Maiden Handicap,2000m,Maiden,Heavy 8,True,11,11,Mr Crowning Moment,Mr Crowning Moment,Mr Crowning Moment,3,Maree Hopkins,Dale Cole (a-3),$71,7.6
+R3,Kembla Grange,3,1:55 pm The Race Against Suicide Maiden Handicap,2000m,Maiden,Heavy 8,True,12,12,Senza Rivali,Senza Rivali,Senza Rivali,1,Kristen Buchanan,Lee Magorrian,$51,8.5
+R3,Kembla Grange,3,1:55 pm The Race Against Suicide Maiden Handicap,2000m,Maiden,Heavy 8,True,13,13,Tragedies,Tragedies,Tragedies,4,Gary Portelli,Tyler Schiller,$13,8.2
+R4,Kembla Grange,4,2:35 pm Craig Hamilton Provincial Maiden Handicap,1300m,Maiden,Heavy 8,True,1,1,Smoke 'N' Darts,Smoke 'N' Darts,Smoke 'N' Darts,4,Blake Ryan,Jay Ford,$2.6,1.5
+R4,Kembla Grange,4,2:35 pm Craig Hamilton Provincial Maiden Handicap,1300m,Maiden,Heavy 8,True,2,2,Captain Peacock,Captain Peacock,Captain Peacock,6,Kerry Parker,Brock Ryan,$10,NA
+R4,Kembla Grange,4,2:35 pm Craig Hamilton Provincial Maiden Handicap,1300m,Maiden,Heavy 8,True,4,4,Master Johnny,Master Johnny,Master Johnny,9,Theresa Bateup,Amy McLucas,$3.6,NA
+R4,Kembla Grange,4,2:35 pm Craig Hamilton Provincial Maiden Handicap,1300m,Maiden,Heavy 8,True,10,10,She Can Salsa,She Can Salsa,She Can Salsa,16,Edward O'Rourke,Rachel King,$5,9
+R4,Kembla Grange,4,2:35 pm Craig Hamilton Provincial Maiden Handicap,1300m,Maiden,Heavy 8,True,12,12,Lion Hunt,Lion Hunt,Lion Hunt,10,Brad Widdup,Tyler Schiller,$10,NA
+R4,Kembla Grange,4,2:35 pm Craig Hamilton Provincial Maiden Handicap,1300m,Maiden,Heavy 8,True,13,13,Another Mission,Another Mission,Another Mission,17,Peter Green,Grant Buckley,$16,4.5
+R4,Kembla Grange,4,2:35 pm Craig Hamilton Provincial Maiden Handicap,1300m,Maiden,Heavy 8,True,15,15,Honeyhill,Honeyhill,Honeyhill,5,,Kristen Buchanan,$26,2.3
+R4,Kembla Grange,4,2:35 pm Craig Hamilton Provincial Maiden Handicap,1300m,Maiden,Heavy 8,True,18,18,Galactic Force,Galactic Force,Galactic Force,1,Sara Ryan,Alysha Collett,$14,6
+R4,Kembla Grange,4,2:35 pm Craig Hamilton Provincial Maiden Handicap,1300m,Maiden,Heavy 8,True,20,20,Grey Belief,Grey Belief,Grey Belief,13,Terry Croft Siena,Grima A2 (a-2),$27,3.8
+R5,Kembla Grange,5,3:10 pm Wests Illawarra Maiden Handicap,1500m,Maiden,Heavy 8,True,1,1,Corpulent,Corpulent,Corpulent,11,Clarry Conners,Andrew Calder,$16,2.7
+R5,Kembla Grange,5,3:10 pm Wests Illawarra Maiden Handicap,1500m,Maiden,Heavy 8,True,2,2,Flying Party,Flying Party,Flying Party,1,Ciaron Maher,Adam Farragher,$5.5,5.7
+R5,Kembla Grange,5,3:10 pm Wests Illawarra Maiden Handicap,1500m,Maiden,Heavy 8,True,3,3,Angulon,Angulon,Angulon,5,Gai Waterhouse & Adrian Bott,Regan Bayliss,$17,NA
+R5,Kembla Grange,5,3:10 pm Wests Illawarra Maiden Handicap,1500m,Maiden,Heavy 8,True,4,4,Col Du Tourmalet,Col Du Tourmalet,Col Du Tourmalet,4,Robert Quinn,Shaun Guymer,$5.5,1.7
+R5,Kembla Grange,5,3:10 pm Wests Illawarra Maiden Handicap,1500m,Maiden,Heavy 8,True,7,7,Hold My Drink,Hold My Drink,Hold My Drink,8,Mitchell Beer & George Carpenter Jean,Van Overmeire,$12,3
+R5,Kembla Grange,5,3:10 pm Wests Illawarra Maiden Handicap,1500m,Maiden,Heavy 8,True,12,12,Five Of A Kind,Five Of A Kind,Five Of A Kind,2,"Michael, John & Wayne Hawkes",Jason Collett,$2.8,5.5
+R5,Kembla Grange,5,3:10 pm Wests Illawarra Maiden Handicap,1500m,Maiden,Heavy 8,True,13,13,Glamour Magic,Glamour Magic,Glamour Magic,3,Joseph Pride,Jay Ford,$9.5,3.5
+R5,Kembla Grange,5,3:10 pm Wests Illawarra Maiden Handicap,1500m,Maiden,Heavy 8,True,14,14,I Am Overs,I Am Overs,I Am Overs,15,Annabel & Rob Archibald,Braith Nock,$8,4.3
+R5,Kembla Grange,5,3:10 pm Wests Illawarra Maiden Handicap,1500m,Maiden,Heavy 8,True,18,18,Let's Be Honest,Let's Be Honest,Let's Be Honest,19,John Thompson,Alysha Collett,$11,6.4
+R5,Kembla Grange,5,3:10 pm Wests Illawarra Maiden Handicap,1500m,Maiden,Heavy 8,True,19,19,G'day Ausbred,G'day Ausbred,G'day Ausbred,20,Blake Ryan,Tyler Schiller,$34,4.9
+R6,Kembla Grange,6,3:45 pm Ascent Property Maintenance Midway Class 1 Handicap,1500m,Class 1,Heavy 8,True,1,1,Autumn Blonde,Autumn Blonde,Autumn Blonde,11,Mitchell Beer & George Carpenter,Dylan Gibbons,$3.1,4.6
+R6,Kembla Grange,6,3:45 pm Ascent Property Maintenance Midway Class 1 Handicap,1500m,Class 1,Heavy 8,True,3,3,Brannum,Brannum,Brannum,5,Theresa Bateup,Tyler Schiller,$7,3
+R6,Kembla Grange,6,3:45 pm Ascent Property Maintenance Midway Class 1 Handicap,1500m,Class 1,Heavy 8,True,4,4,Thunder Lights,Thunder Lights,Thunder Lights,15,,Kristen Buchanan,$8,5.9
+R6,Kembla Grange,6,3:45 pm Ascent Property Maintenance Midway Class 1 Handicap,1500m,Class 1,Heavy 8,True,5,5,Dunwithya,Dunwithya,Dunwithya,16,Mitchell Beer & George Carpenter,Adam Farragher,$10,3.1
+R6,Kembla Grange,6,3:45 pm Ascent Property Maintenance Midway Class 1 Handicap,1500m,Class 1,Heavy 8,True,6,6,Felis Chaus,Felis Chaus,Felis Chaus,9,Richard Litt,Tom Sherry,$3.6,5.8
+R6,Kembla Grange,6,3:45 pm Ascent Property Maintenance Midway Class 1 Handicap,1500m,Class 1,Heavy 8,True,8,8,Tod,Tod,Tod,10,Mitchell Beer & George Carpenter,Grant Buckley,$27,3.5
+R6,Kembla Grange,6,3:45 pm Ascent Property Maintenance Midway Class 1 Handicap,1500m,Class 1,Heavy 8,True,12,12,Aranese,Aranese,Aranese,6,Amanda Turner,Olivia Chambers (a-2),$12,3.9
+R6,Kembla Grange,6,3:45 pm Ascent Property Maintenance Midway Class 1 Handicap,1500m,Class 1,Heavy 8,True,13,13,Lantau Island,Lantau Island,Lantau Island,2,Theresa Bateup,Brock Ryan,$15,6.4
+R6,Kembla Grange,6,3:45 pm Ascent Property Maintenance Midway Class 1 Handicap,1500m,Class 1,Heavy 8,True,14,14,Starlight Nation,Starlight Nation,Starlight Nation,14,Amanda Turner,Winona Costin,$19,5.9
+R6,Kembla Grange,6,3:45 pm Ascent Property Maintenance Midway Class 1 Handicap,1500m,Class 1,Heavy 8,True,15,15,Via Varallo,Via Varallo,Via Varallo,12,Amanda Turner,Amy McLucas,$23,3.4
+R6,Kembla Grange,6,3:45 pm Ascent Property Maintenance Midway Class 1 Handicap,1500m,Class 1,Heavy 8,True,16,16,Billy Bowlegg,Billy Bowlegg,Billy Bowlegg,8,Paul Niceforo,Jeff Penza,$61,6.3
+R7,Kembla Grange,7,4:20 pm Tristan Triffitt Exclusive Estate Agents Benchmark 64 Handicap,1300m,BM64,Heavy 8,True,1,1,Presides,Presides,Presides,4,Mitchell Beer & George Carpenter,Coriah Keatings (a-3),$4,5.4
+R7,Kembla Grange,7,4:20 pm Tristan Triffitt Exclusive Estate Agents Benchmark 64 Handicap,1300m,BM64,Heavy 8,True,2,2,Matima,Matima,Matima,10,Gary Portelli,Tyler Schiller,$11,5.1
+R7,Kembla Grange,7,4:20 pm Tristan Triffitt Exclusive Estate Agents Benchmark 64 Handicap,1300m,BM64,Heavy 8,True,3,3,Heuristic,Heuristic,Heuristic,5,Bjorn Baker,Dylan Gibbons,$4.4,5.5
+R7,Kembla Grange,7,4:20 pm Tristan Triffitt Exclusive Estate Agents Benchmark 64 Handicap,1300m,BM64,Heavy 8,True,8,8,Easiest Choice,Easiest Choice,Easiest Choice,14,David Pfieffer,Jay Ford,$3.7,2.5
+R7,Kembla Grange,7,4:20 pm Tristan Triffitt Exclusive Estate Agents Benchmark 64 Handicap,1300m,BM64,Heavy 8,True,14,14,Otono,Otono,Otono,1,Matthew Dale,Louise Day,$16,6.7
+R7,Kembla Grange,7,4:20 pm Tristan Triffitt Exclusive Estate Agents Benchmark 64 Handicap,1300m,BM64,Heavy 8,True,18,18,Olington Lane,Olington Lane,Olington Lane,7,Lauren Davies,Keagan Latham,$6,8
+R7,Kembla Grange,7,4:20 pm Tristan Triffitt Exclusive Estate Agents Benchmark 64 Handicap,1300m,BM64,Heavy 8,True,19,19,Our Vinny,Our Vinny,Our Vinny,8,Diane Poidevin Laine,Pierre Boudvillain,$18,4
+R7,Kembla Grange,7,4:20 pm Tristan Triffitt Exclusive Estate Agents Benchmark 64 Handicap,1300m,BM64,Heavy 8,True,20,20,Purple Rose,Purple Rose,Purple Rose,2,John Thompson,Alysha Collett,$11,2

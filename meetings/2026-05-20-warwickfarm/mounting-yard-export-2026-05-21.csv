@@ -1,0 +1,70 @@
+assessment_key,race_id,race_title,runner_no,horse,barrier,trainer,jockey,odds,positive_json,negative_json,gear_json,notes,total_positive,total_negative,net,updated_at
+R1-1,R1,12:50 pm Ranvet Handicap,1,Azarax,1,Tom Charlton,Anna Roper (a-2),$9,{},"{""Aggressive-"":-1}",{},,0,1,-1,2026-05-20T03:33:18.259Z
+R1-2,R1,12:50 pm Ranvet Handicap,2,Olympian,10,Paul Messara & Leah Gavranich,James McDonald,$2.40,,,,,0,0,0,
+R1-3,R1,12:50 pm Ranvet Handicap,3,Coulter,5,Bjorn Baker,Rachel King,$6,"{""BH+"":1}",{},{},fast walk,1,0,1,2026-05-20T03:33:43.402Z
+R1-4,R1,12:50 pm Ranvet Handicap,4,Eleven X,4,Annabel & Rob Archibald,Braith Nock (a-1.5),$14,,,,,0,0,0,
+R1-5,R1,12:50 pm Ranvet Handicap,5,Tequisoda,3,Brad Widdup,Tyler Schiller,$7,,,,,0,0,0,
+R1-6,R1,12:50 pm Ranvet Handicap,6,Spice Prawn,8,Peter Snowden,Tom Sherry,$5.50,,,,,0,0,0,
+R1-8,R1,12:50 pm Ranvet Handicap,8,Inyun,6,Dean Mirfin,Kerrin McEvoy,$51,,,,,0,0,0,
+R1-9,R1,12:50 pm Ranvet Handicap,9,Mamma Mia,2,John Thompson,Zac Lloyd,$29,,,,,0,0,0,
+R1-10,R1,12:50 pm Ranvet Handicap,10,Sablonneuse,7,Theresa Bateup,Brock Ryan,$23,"{""BH+"":1}",{},{},,1,0,1,2026-05-20T03:34:04.647Z
+R2-2,R2,1:25 pm Tab Handicap,2,Celtic Spy,9,Gai Waterhouse & Adrian Bott,Regan Bayliss,$10,,,,,0,0,0,
+R2-3,R2,1:25 pm Tab Handicap,3,Crescent King,15,Peter Snowden,Chad Schofield,$2.60,"{""BH+"":1}",{},{},,1,0,1,2026-05-20T03:34:16.376Z
+R2-4,R2,1:25 pm Tab Handicap,4,Exhilaration,6,John Thompson,Andrew Adkins,$151,,,,,0,0,0,
+R2-5,R2,1:25 pm Tab Handicap,5,Clause,11,Jason Coyle,Rachel King,$41,,,,,0,0,0,
+R2-8,R2,1:25 pm Tab Handicap,8,Just To Say Hi,7,Geoff Allendorf,Tyler Schiller,$151,,,,,0,0,0,
+R2-10,R2,1:25 pm Tab Handicap,10,Like An Eagle,12,Gerald Ryan & Sterling Alexiou,Tom Sherry,$14,{},"{""Short-"":-1}",{},,0,1,-1,2026-05-20T03:34:32.409Z
+R2-11,R2,1:25 pm Tab Handicap,11,Our Emperor,1,Gai Waterhouse & Adrian Bott,Tim Clark,$4.80,"{""Tight+"":1,""BH+"":2}",{},{},,3,0,3,2026-05-20T03:35:46.323Z
+R2-12,R2,1:25 pm Tab Handicap,12,Shallow Bay,3,Chris Waller,Tommy Berry,$29,,,,,0,0,0,
+R2-13,R2,1:25 pm Tab Handicap,13,Billapaloola,17,Ron Quinton,Alysha Collett,$201,,,,,0,0,0,
+R2-14,R2,1:25 pm Tab Handicap,14,Jessenya,2,Chris Waller,Zac Lloyd,$16,,,,,0,0,0,
+R2-15,R2,1:25 pm Tab Handicap,15,Iommi,4,Chris Waller,James McDonald,$5,,,,,0,0,0,
+R2-18,R2,1:25 pm Tab Handicap,18,Honour Award,8,Geoff Allendorf,Andrew Calder,$51,,,,,0,0,0,
+R2-19,R2,1:25 pm Tab Handicap,19,Shuda Known,5,Kris Lees,Kerrin McEvoy,$10,"{""BH+"":1}",{},{},,1,0,1,2026-05-20T03:35:24.239Z
+R2-20,R2,1:25 pm Tab Handicap,20,The Autumn Choice,20,Geoff Allendorf,Dylan Gibbons,$151,,,,,0,0,0,
+R3-3,R3,2:00 pm All Too Hard @ Vinery Stud Handicap,3,Tartaglia,1,Paul Snowden,Tommy Berry,$21,{},"{""K-"":-1,""BS-"":-1,""BH-"":-1}",{},,0,3,-3,2026-05-20T04:51:37.431Z
+R3-5,R3,2:00 pm All Too Hard @ Vinery Stud Handicap,5,Bruce I Am,7,Joseph Pride,Nash Rawiller,$4.20,,,,,0,0,0,
+R3-6,R3,2:00 pm All Too Hard @ Vinery Stud Handicap,6,Fairway To Heaven,9,Michael Freedman,Tim Clark,$5,{},"{""BH-"":-1}",{},,0,1,-1,2026-05-20T04:51:42.122Z
+R3-7,R3,2:00 pm All Too Hard @ Vinery Stud Handicap,7,Hello Captain,4,Chris Waller,James McDonald,$2.50,,,,,0,0,0,
+R3-8,R3,2:00 pm All Too Hard @ Vinery Stud Handicap,8,Nandina,2,Chris Waller,Kerrin McEvoy,$8,,,,,0,0,0,
+R3-10,R3,2:00 pm All Too Hard @ Vinery Stud Handicap,10,Wootton Way,3,Chris Waller,Zac Lloyd,$7,,,,,0,0,0,
+R3-11,R3,2:00 pm All Too Hard @ Vinery Stud Handicap,11,Lune D'excellence,6,Kris Lees,Dylan Gibbons,$31,,,,,0,0,0,
+R4-1,R4,2:35 pm Precise Air Handicap,1,The Creator,10,Mick Price & Michael Kent Jnr,Anna Roper (a-2),$9,,,,,0,0,0,
+R4-3,R4,2:35 pm Precise Air Handicap,3,Hovland,11,Tom Charlton,Zac Lloyd,$6,,,,,0,0,0,
+R4-5,R4,2:35 pm Precise Air Handicap,5,Scalextrics,4,Matthew Smith,Kerrin McEvoy,$10,"{""Dapple+"":1}","{""Stiff-"":-2}",{},,1,2,-1,2026-05-20T04:52:06.168Z
+R4-6,R4,2:35 pm Precise Air Handicap,6,Mojave River,6,Chris Waller,James McDonald,$4.50,,,,,0,0,0,
+R4-7,R4,2:35 pm Precise Air Handicap,7,Sting In The Tail,3,Chris Waller,Tommy Berry,$13,,,,,0,0,0,
+R4-8,R4,2:35 pm Precise Air Handicap,8,Fioprospero,1,Matthew Smith,Ashley Morgan,$31,{},"{""K-"":-1}",{},,0,1,-1,2026-05-20T04:52:23.561Z
+R4-9,R4,2:35 pm Precise Air Handicap,9,Rush Attack,2,Nathan Doyle,Shannen Llewellyn (a-3),$23,{},"{""BH-"":-2,""K-"":-1,""N-"":-1}",{},,0,4,-4,2026-05-20T04:52:30.515Z
+R4-11,R4,2:35 pm Precise Air Handicap,11,Superfabulistic,7,Gai Waterhouse & Adrian Bott,Rachel King,$2.20,,,,,0,0,0,
+R5-1,R5,3:10 pm Schweppes Handicap,1,Centenario,16,Gai Waterhouse & Adrian Bott,Zac Wadick (a-2),$12,,,,,0,0,0,
+R5-2,R5,3:10 pm Schweppes Handicap,2,Just Flying,15,Robert Heathcote,Coriah Keatings (a-3),$19,"{""Healthy+"":1}",{},{},,1,0,1,2026-05-21T00:15:31.471Z
+R5-3,R5,3:10 pm Schweppes Handicap,3,Majorian,2,Annabel & Rob Archibald,Braith Nock (a-1.5),$29,{},{},"{""FT"":[3,4]}",,0,0,0,2026-05-21T00:16:03.600Z
+R5-4,R5,3:10 pm Schweppes Handicap,4,Subarctic,13,Matthew Smith,Tyler Schiller,$19,{},{},"{""FT"":[4]}",,0,0,0,2026-05-21T00:16:22.587Z
+R5-5,R5,3:10 pm Schweppes Handicap,5,Black Babylon,4,Annabel & Rob Archibald,Tom Sherry,$16,,,,,0,0,0,
+R5-6,R5,3:10 pm Schweppes Handicap,6,Blacklist,5,Mack Griffith,Tim Clark,$10,"{""Healthy+"":1}","{""BH-"":-1}",{},,1,1,0,2026-05-21T00:15:40.414Z
+R5-8,R5,3:10 pm Schweppes Handicap,8,So Suave,1,Chris Waller,James McDonald,$2.80,,,,,0,0,0,
+R5-9,R5,3:10 pm Schweppes Handicap,9,Natoya,10,John Sargent,Zac Lloyd,$9.50,,,,,0,0,0,
+R5-11,R5,3:10 pm Schweppes Handicap,11,Dolce Dior,7,Peter Snowden,Mitch Stapleford (a-3),$18,,,,,0,0,0,
+R5-12,R5,3:10 pm Schweppes Handicap,12,California Grass,12,John Thompson,Alysha Collett,$21,,,,,0,0,0,
+R5-13,R5,3:10 pm Schweppes Handicap,13,Michelangelo,3,Dean Mirfin,Rachel King,$12,"{""Healthy+"":1}",{},{},,1,0,1,2026-05-21T00:15:50.408Z
+R5-15,R5,3:10 pm Schweppes Handicap,15,Lupa Capitolina,8,Joseph Pride,Kerrin McEvoy,$5.50,"{""Dapple+"":1}",{},{},,1,0,1,2026-05-21T00:15:55.947Z
+R6-1,R6,3:45 pm Asahi Super Dry Handicap,1,Glorious Moments,14,Jim & Greg Lee,James McDonald,$2.25,{},{},{},Wet type,0,0,0,2026-05-21T00:16:57.242Z
+R6-5,R6,3:45 pm Asahi Super Dry Handicap,5,Madrina,12,Nick Olive,Coriah Keatings (a-3),$9,"{""BH+"":1}",{},{},,1,0,1,2026-05-21T00:17:02.356Z
+R6-6,R6,3:45 pm Asahi Super Dry Handicap,6,Formal,5,Nathan Doyle,Shannen Llewellyn (a-3),$18,{},"{""Dull-"":-1}",{},,0,1,-1,2026-05-21T00:17:06.569Z
+R6-10,R6,3:45 pm Asahi Super Dry Handicap,10,Heuristic,10,Bjorn Baker,Dylan Gibbons,$15,,,,,0,0,0,
+R6-13,R6,3:45 pm Asahi Super Dry Handicap,13,Confidentiality,9,Joseph Pride,Sam Clipperton,$2.70,,,,,0,0,0,
+R6-15,R6,3:45 pm Asahi Super Dry Handicap,15,Silencio Porfavor,2,Matthew Smith,Zac Lloyd,$8,,,,,0,0,0,
+R6-16,R6,3:45 pm Asahi Super Dry Handicap,16,Lady Shenanigans,17,Mitchell & Desiree Kearney,Jeff Penza,$91,{},{},"{""FT"":[1,2,3,4]}",,0,0,0,2026-05-21T00:17:15.231Z
+R7-2,R7,4:20 pm The Agency Real Estate Handicap,2,Island Dream,2,Chris Waller,James McDonald,$11,,,,,0,0,0,
+R7-3,R7,4:20 pm The Agency Real Estate Handicap,3,Pimlico,22,Tom Charlton,Zac Lloyd,$6,,,,,0,0,0,
+R7-4,R7,4:20 pm The Agency Real Estate Handicap,4,Supermassive,17,Gai Waterhouse & Adrian Bott,Tim Clark,$5,{},"{""BH-"":-1}",{},,0,1,-1,2026-05-21T00:17:21.924Z
+R7-5,R7,4:20 pm The Agency Real Estate Handicap,5,Deep Pleasure,14,Mick Price & Michael Kent Jnr,Braith Nock (a-1.5),$7,,,,,0,0,0,
+R7-6,R7,4:20 pm The Agency Real Estate Handicap,6,Rimbaud,5,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),$19,,,,,0,0,0,
+R7-7,R7,4:20 pm The Agency Real Estate Handicap,7,John Dory,3,Chris Waller,Siena Grima (a-3),$21,,,,,0,0,0,
+R7-8,R7,4:20 pm The Agency Real Estate Handicap,8,Ornithology,13,Chris Waller,Nash Rawiller,$23,,,,,0,0,0,
+R7-9,R7,4:20 pm The Agency Real Estate Handicap,9,Pasadena,1,"Michael, John & Wayne Hawkes",Tyler Schiller,$6,"{""BH+"":1,""Healthy+"":1}",{},{},,2,0,2,2026-05-21T00:17:28.845Z
+R7-10,R7,4:20 pm The Agency Real Estate Handicap,10,Sanctified,15,Gerald Ryan & Sterling Alexiou,Joshua Parr,$10,{},"{""BH-"":-1}",{},,0,1,-1,2026-05-21T00:17:34.203Z
+R7-13,R7,4:20 pm The Agency Real Estate Handicap,13,Condone,10,Gai Waterhouse & Adrian Bott,Adam Hyeronimus,$7.50,"{""Dapple+"":1}",{},{},,1,0,1,2026-05-21T00:17:38.846Z
+R7-14,R7,4:20 pm The Agency Real Estate Handicap,14,Elle Hudson,18,Joseph Pride,Sam Clipperton,$51,,,,,0,0,0,
+R7-19,R7,4:20 pm The Agency Real Estate Handicap,19,Bon Frankie,8,Aaron Clarke,Amy McLucas,$31,,,,,0,0,0,

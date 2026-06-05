@@ -9,10 +9,13 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "create-master-csv": "node scripts/create-master-csv.js",
+    "build-meeting-csv": "node scripts/create-master-csv.js"
   },
   "dependencies": {
     "clsx": "^2.1.1",
+    "html-to-image": "^1.11.13",
     "idb": "^8.0.3",
     "next": "^15.1.6",
     "papaparse": "^5.5.2",
@@ -21,8 +24,8 @@
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.2.0",
     "@ducanh2912/next-pwa": "^10.2.9",
+    "@eslint/eslintrc": "^3.2.0",
     "@types/node": "^22.10.0",
     "@types/papaparse": "^5.3.15",
     "@types/react": "^19.0.6",

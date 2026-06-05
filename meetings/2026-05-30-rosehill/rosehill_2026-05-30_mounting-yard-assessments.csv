@@ -1,0 +1,115 @@
+assessment_key,race_id,race_title,runner_no,horse,barrier,trainer,jockey,odds,positive_json,negative_json,gear_json,wet_body_type,wet_feet,notes,total_positive,total_negative,net,updated_at
+R1-1,R1,11:00 am Bookmakers Recognition Day Handicap,1,Tron Bolt,8,Chris Waller,Siena Grima (a-2),$2.6,,,,,,,0,0,0,
+R1-2,R1,11:00 am Bookmakers Recognition Day Handicap,2,Nations League,1,Chris Waller,Sam Clipperton,$4.5,,,,,,,0,0,0,
+R1-3,R1,11:00 am Bookmakers Recognition Day Handicap,3,Cormier,10,Paul Messara & Leah Gavranich,Aaron Bullock (a0.5),$2.9,{},"{""BH-"":-2}",{},,,,0,2,-2,2026-05-30T02:00:38.939Z
+R1-5,R1,11:00 am Bookmakers Recognition Day Handicap,5,Heatstroke,7,Richard & Will Freedman,Braith Nock (a-1.5),$51,,,,,,,0,0,0,
+R1-6,R1,11:00 am Bookmakers Recognition Day Handicap,6,Iommi,2,Chris Waller,Regan Bayliss,$8.5,{},"{""BH-"":-1}",{},,,,0,1,-1,2026-05-30T02:00:45.151Z
+R1-11,R1,11:00 am Bookmakers Recognition Day Handicap,11,Malua Bay,3,Bjorn Baker,Dylan Gibbons,$21,{},{},{},,Big / Splayed,,0,0,0,2026-05-30T02:00:53.311Z
+R1-12,R1,11:00 am Bookmakers Recognition Day Handicap,12,Not Inevitable,6,John Sargent,Anna Roper (a-2),$101,{},{},{},,Big / Splayed,,0,0,0,2026-05-30T02:01:43.649Z
+R1-13,R1,11:00 am Bookmakers Recognition Day Handicap,13,Parisest Magic,4,Alexandre Lemarie,Tyler Schiller,$21,,,,,,,0,0,0,
+R1-14,R1,11:00 am Bookmakers Recognition Day Handicap,14,Iminastate,14,Richard & Will Freedman,Ashley Morgan,$51,,,,,,,0,0,0,
+R2-2,R2,11:35 am Tab Highway Plate,2,Solitario,13,Paul Messara & Leah Gavranich,Aaron Bullock,$10,,,,,,,0,0,0,
+R2-4,R2,11:35 am Tab Highway Plate,4,Jasper's Way,16,Michael Mulholland,Chad Lever,$51,,,,,,,0,0,0,
+R2-5,R2,11:35 am Tab Highway Plate,5,Bombelleistic,5,"Barbara Joseph, Paul & Matt Jones",Alysha Collett,$61,,,,,,,0,0,0,
+R2-6,R2,11:35 am Tab Highway Plate,6,Hammoon Sensation,1,Rodney Northam,Reece Jones,$13,,,,,,,0,0,0,
+R2-7,R2,11:35 am Tab Highway Plate,7,Moon Sweeper,2,Matthew Dunn,Sam Clipperton,$2.8,,,,,,,0,0,0,
+R2-8,R2,11:35 am Tab Highway Plate,8,Brilliant Knight,11,Cassandra Schmidt,Luke Rolls,$27,,,,,,,0,0,0,
+R2-10,R2,11:35 am Tab Highway Plate,10,Oakfield Utah,7,Scott Singleton,Jay Ford,$19,,,,,,,0,0,0,
+R2-11,R2,11:35 am Tab Highway Plate,11,Delago Serg,10,Paul Facoory,Adam Farragher,$126,,,,,,,0,0,0,
+R2-12,R2,11:35 am Tab Highway Plate,12,Red Rags To Bulls,14,Jeremy Gask,Siena Grima (a-2),$5.5,,,,,,,0,0,0,
+R2-13,R2,11:35 am Tab Highway Plate,13,Buenos,6,Keith Dryden & Libby Snowden,Andrew Adkins,$23,,,,,,,0,0,0,
+R2-15,R2,11:35 am Tab Highway Plate,15,Brutal Belle,17,Luke Pepper,Mollie Fitzgerald (a-3),$10,,,,,,,0,0,0,
+R2-16,R2,11:35 am Tab Highway Plate,16,Airliner,9,Terry Robinson,Dylan Gibbons,$101,,,,,,,0,0,0,
+R2-17,R2,11:35 am Tab Highway Plate,17,Ocean Tsunami,19,Scott Singleton,Mikayla Weir,$6.5,,,,,,,0,0,0,
+R2-18,R2,11:35 am Tab Highway Plate,18,Shezain,4,Keith Dryden & Libby Snowden,Tyler Schiller,$26,,,,,,,0,0,0,
+R2-20,R2,11:35 am Tab Highway Plate,20,Ulysses Blue ho,12,Terry Robinson,Jeff Penza,$126,,,,,,,0,0,0,
+R3-1,R3,12:10 pm Midway Handicap,1,Cold Brew,2,Richard & Will Freedman,Siena Grima (a-2),$7.5,,,,,,,0,0,0,
+R3-3,R3,12:10 pm Midway Handicap,3,Shaggy,7,Allan Kehoe,Mollie Fitzgerald (a-3),$17,,,,,,,0,0,0,
+R3-4,R3,12:10 pm Midway Handicap,4,Norton Road,3,Rodney Bailey,Shannen Llewellyn (a-3),$34,,,,,,,0,0,0,
+R3-7,R3,12:10 pm Midway Handicap,7,Sir Les,9,Craig Carmody,Chad Lever,$2.8,,,,,,,0,0,0,
+R3-11,R3,12:10 pm Midway Handicap,11,Gorgeous,6,David Pfieffer,Braith Nock (a-1.5),$2.35,,,,,,,0,0,0,
+R3-13,R3,12:10 pm Midway Handicap,13,She Swings,4,David Pfieffer,Alysha Collett,$19,,,,,,,0,0,0,
+R3-14,R3,12:10 pm Midway Handicap,14,All The Way Mae,1,Kerry Parker,Andrew Adkins,$8,,,,,,,0,0,0,
+R4-1,R4,12:45 pm Greg Millett Handicap,1,Sir Dinadan,1,Chris Waller,Jay Ford,$5.5,"{""Clean+"":2}",{},{},,,,2,0,2,2026-05-30T03:00:40.861Z
+R4-2,R4,12:45 pm Greg Millett Handicap,2,Mister Rizz,2,Tom Charlton,Sam Clipperton,$7,{},"{""BH-"":-2}",{},,,,0,2,-2,2026-05-30T03:00:44.231Z
+R4-3,R4,12:45 pm Greg Millett Handicap,3,Stylebender,14,Kristen Buchanan,Shannen Llewellyn (a-3),$31,"{""Dapple+"":1}",{},{},,,,1,0,1,2026-05-30T03:00:47.678Z
+R4-5,R4,12:45 pm Greg Millett Handicap,5,Perfect Play,8,Annabel & Rob Archibald,Braith Nock (a-1.5),$19,"{""Clean+"":1}","{""BH-"":-1,""Dull-"":-1}",{},,,,1,2,-1,2026-05-30T03:01:05.823Z
+R4-7,R4,12:45 pm Greg Millett Handicap,7,Sounds Unusual,4,Chris Waller,Reece Jones,$7,,,,,,,0,0,0,
+R4-8,R4,12:45 pm Greg Millett Handicap,8,Oceanfront,6,Nacim Dilmi,Regan Bayliss,$14,,,,,,,0,0,0,
+R4-9,R4,12:45 pm Greg Millett Handicap,9,Sacrify,11,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),$11,,,,,,,0,0,0,
+R4-12,R4,12:45 pm Greg Millett Handicap,12,Belle Detelle,12,Chris Waller,Andrew Adkins,$10,{},"{""Dull-"":-1}",{},,,,0,1,-1,2026-05-30T03:01:10.903Z
+R4-14,R4,12:45 pm Greg Millett Handicap,14,Shangri La Impact,9,Tom Charlton,Dylan Gibbons,$3.1,"{""Clean+"":1}",{},{},,,,1,0,1,2026-05-30T03:01:14.803Z
+R4-16,R4,12:45 pm Greg Millett Handicap,16,Spenzalot,3,Scott Singleton,Mikayla Weir,$23,"{""Dapple+"":1}",{},"{""B"":[1,2]}",,,,1,0,1,2026-05-30T03:01:43.883Z
+R5-1,R5,1:20 pm Nsw Bookmakers Co-op Handicap,1,Duvana,11,Nathan Doyle,Shannen Llewellyn (a-3),$6.5,,,,,,,0,0,0,
+R5-4,R5,1:20 pm Nsw Bookmakers Co-op Handicap,4,Island Dream,5,Chris Waller,Sam Clipperton,$14,,,,,,,0,0,0,
+R5-6,R5,1:20 pm Nsw Bookmakers Co-op Handicap,6,Full Hao,16,Chris Waller,Siena Grima (a-2),$12,,,,,,,0,0,0,
+R5-7,R5,1:20 pm Nsw Bookmakers Co-op Handicap,7,Covert Thinking,3,Ciaron Maher,William Stanley (a-3),$11,,,,,,,0,0,0,
+R5-9,R5,1:20 pm Nsw Bookmakers Co-op Handicap,9,John Dory,14,Chris Waller,Regan Bayliss,$9.5,{},"{""BH-"":-1}",{},,,,0,1,-1,2026-05-31T05:22:07.232Z
+R5-13,R5,1:20 pm Nsw Bookmakers Co-op Handicap,13,Change My Address,9,John Sargent,Anna Roper (a-2),$8.5,"{""Dapple+"":1}","{""BH-"":-1}",{},,,,1,1,0,2026-05-31T05:21:34.302Z
+R5-14,R5,1:20 pm Nsw Bookmakers Co-op Handicap,14,Hush Hush,8,Ciaron Maher,Adam Farragher,$14,,,,,,,0,0,0,
+R5-15,R5,1:20 pm Nsw Bookmakers Co-op Handicap,15,Ertijaaj,4,Chris Waller,Tyler Schiller,$3.4,{},{},{},,Big / Splayed,,0,0,0,2026-05-31T05:21:50.138Z
+R5-17,R5,1:20 pm Nsw Bookmakers Co-op Handicap,17,Costabit,12,Gerald Ryan & Sterling Alexiou,Braith Nock (a-1.5),$11,,,,,,,0,0,0,
+R5-19,R5,1:20 pm Nsw Bookmakers Co-op Handicap,19,Blue Willow,20,Ciaron Maher,Reece Jones,$13,{},"{""BH-"":-1,""Dull-"":-1}",{},,,,0,2,-2,2026-05-31T05:21:58.317Z
+R5-20,R5,1:20 pm Nsw Bookmakers Co-op Handicap,20,Unreal Expectation,6,Tara & Philippe Vigouroux,Winona Costin,$41,,,,,,,0,0,0,
+R6-1,R6,1:55 pm Ranvet Handicap,1,Cellarmaster,10,Tom Charlton,Anna Roper (a-2),$6,,,,,,,0,0,0,
+R6-2,R6,1:55 pm Ranvet Handicap,2,Man Of Worth,6,Chris Waller,Siena Grima (a-2),$4,,,,,,,0,0,0,
+R6-3,R6,1:55 pm Ranvet Handicap,3,Fiddlers Green,4,Annabel & Rob Archibald,Braith Nock (a-1.5),$6.5,,,,,,,0,0,0,
+R6-4,R6,1:55 pm Ranvet Handicap,4,Mawjood,7,Bjorn Baker,Aaron Bullock,$3.2,"{""Clean+"":1}","{""BH-"":0}",{},,,,1,0,1,2026-05-31T05:22:18.408Z
+R6-5,R6,1:55 pm Ranvet Handicap,5,Anythink Goes,12,Matthew Smith,Ashley Morgan,$18,,,,,,,0,0,0,
+R6-6,R6,1:55 pm Ranvet Handicap,6,Amplify,1,Ciaron Maher,Regan Bayliss,$10,,,,,,,0,0,0,
+R6-7,R6,1:55 pm Ranvet Handicap,7,I've Bean Tryin',9,Matthew Kelley,Alysha Collett,$21,,,,,,,0,0,0,
+R6-10,R6,1:55 pm Ranvet Handicap,10,Let's Fly,2,Richard & Will Freedman,Tyler Schiller,$11,,,,,,,0,0,0,
+R6-14,R6,1:55 pm Ranvet Handicap,14,Marsabit,3,Danny Williams,Winona Costin,$71,,,,,,,0,0,0,
+R7-1,R7,2:30 pm Vale Peter Taylor Handicap,1,Shall Be,7,Mark Minervini,William Stanley (a-3),$31,,,,,,,0,0,0,
+R7-2,R7,2:30 pm Vale Peter Taylor Handicap,2,Madrina,6,Nick Olive,Anna Roper (a-2),$7,,,,,,,0,0,0,
+R7-3,R7,2:30 pm Vale Peter Taylor Handicap,3,Shropshire Lad,14,Rodney Northam,Reece Jones,$9.5,,,,,,,0,0,0,
+R7-7,R7,2:30 pm Vale Peter Taylor Handicap,7,Couples Retreat,2,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),$7.5,,,,,,,0,0,0,
+R7-8,R7,2:30 pm Vale Peter Taylor Handicap,8,Benevac,12,Ciaron Maher,Dylan Gibbons,$16,,,,,,,0,0,0,
+R7-9,R7,2:30 pm Vale Peter Taylor Handicap,9,Casserousse,8,Joseph Pride,Alysha Collett,$13,,,,,,,0,0,0,
+R7-11,R7,2:30 pm Vale Peter Taylor Handicap,11,Confidentiality,22,Joseph Pride,Sam Clipperton,$5.75,,,,,,,0,0,0,
+R7-12,R7,2:30 pm Vale Peter Taylor Handicap,12,Big Papa,11,Bjorn Baker,Regan Bayliss,$5,"{""Clean+"":1,""Healthy+"":1}",{},{},,,,2,0,2,2026-05-31T05:22:33.580Z
+R7-13,R7,2:30 pm Vale Peter Taylor Handicap,13,Agatha,20,Michael Freedman,Andrew Adkins,$6,,,,,,,0,0,0,
+R7-15,R7,2:30 pm Vale Peter Taylor Handicap,15,Raskol,4,Peter Snowden,Ashley Morgan,$12,,,,,,,0,0,0,
+R7-16,R7,2:30 pm Vale Peter Taylor Handicap,16,Silver Serenade,1,Danny Williams,Winona Costin,$34,,,,,,,0,0,0,
+R8-1,R8,3:05 pm Vale Sandro D'amore Handicap,1,Super Norwest,13,Matthew Dale,Braith Nock (a-1.5),$21,,,,,,,0,0,0,
+R8-2,R8,3:05 pm Vale Sandro D'amore Handicap,2,Crepe Myrtle,4,Joseph Pride,Tyler Schiller,$5.5,,,,,,,0,0,0,
+R8-3,R8,3:05 pm Vale Sandro D'amore Handicap,3,Ticklebelly,11,Scott Collings,Aaron Bullock,$19,,,,,,,0,0,0,
+R8-5,R8,3:05 pm Vale Sandro D'amore Handicap,5,Miss Kim Kar,8,Bjorn Baker,Regan Bayliss,$9.5,,,,,,,0,0,0,
+R8-6,R8,3:05 pm Vale Sandro D'amore Handicap,6,Super Nui,3,Ron Quinton,Louise Day,$6.5,,,,,,,0,0,0,
+R8-7,R8,3:05 pm Vale Sandro D'amore Handicap,7,Thames,15,Gary Portelli,Anna Roper (a-2),$10,{},"{""BH-"":-1}",{},,,,0,1,-1,2026-05-31T05:23:19.355Z
+R8-8,R8,3:05 pm Vale Sandro D'amore Handicap,8,Mother Goose,1,Gary Portelli,Alysha Collett,$11,{},"{""BH-"":-2}",{},,,,0,2,-2,2026-05-31T05:23:14.006Z
+R8-10,R8,3:05 pm Vale Sandro D'amore Handicap,10,Maybe Moet,5,Chris Waller,Sam Clipperton,$8.5,,,,,,,0,0,0,
+R8-11,R8,3:05 pm Vale Sandro D'amore Handicap,11,Super Bright,6,Nathan Doyle,Dylan Gibbons,$27,,,,,,,0,0,0,
+R8-13,R8,3:05 pm Vale Sandro D'amore Handicap,13,Ernaux,2,Chris Waller,Siena Grima (a-2),$7,,,,,,,0,0,0,
+R8-14,R8,3:05 pm Vale Sandro D'amore Handicap,14,Miss Jennifer,7,Danny Williams,Jay Ford,$41,,,,,,,0,0,0,
+R8-15,R8,3:05 pm Vale Sandro D'amore Handicap,15,Infusion,12,Peter Snowden,Andrew Adkins,$14,{},{},"{""FT"":[1,2]}",,,,0,0,0,2026-05-31T05:23:30.687Z
+R8-16,R8,3:05 pm Vale Sandro D'amore Handicap,16,Fleeting Spirit,10,Gerald Ryan & Sterling Alexiou,Ashley Morgan,$17,,,,,,,0,0,0,
+R9-3,R9,3:40 pm Lord Mayors Cup,3,Osipenko,21,Chris Waller,Aaron Bullock,$31,,,,,,,0,0,0,
+R9-4,R9,3:40 pm Lord Mayors Cup,4,Zambardo,2,Mick Price & Michael Kent Jnr,Dylan Gibbons,$3.4,{},{},{},,Big / Splayed,,0,0,0,2026-05-31T05:24:15.762Z
+R9-5,R9,3:40 pm Lord Mayors Cup,5,Doctor Askar,7,Chris Waller,Siena Grima,$81,,,,,,,0,0,0,
+R9-6,R9,3:40 pm Lord Mayors Cup,6,Maison Louis,19,Tom Charlton,Sam Clipperton,$21,{},"{""BH-"":-1,""K-"":-1}",{},,,,0,2,-2,2026-05-31T05:24:37.454Z
+R9-7,R9,3:40 pm Lord Mayors Cup,7,Sayedaty Sadaty,1,Ciaron Maher,Regan Bayliss,$19,{},"{""BH-"":-2,""Dull-"":-1}","{""FT"":[1,2]}",,,,0,3,-3,2026-05-31T05:24:52.418Z
+R9-8,R9,3:40 pm Lord Mayors Cup,8,Navajo Peak,15,Peter Bloomfield,Anna Roper,$151,{},"{""Dull-"":-1,""BH-"":-2}",{},,,,0,3,-3,2026-05-31T05:24:58.273Z
+R9-9,R9,3:40 pm Lord Mayors Cup,9,Lord Penman,4,Chris Waller,Jeff Penza,$21,,,,,,,0,0,0,
+R9-10,R9,3:40 pm Lord Mayors Cup,10,Belvedere Boys,14,Matthew Dunn,Jake Bayliss,$13,{},"{""BH-"":-1}",{},,,,0,1,-1,2026-05-31T05:25:05.447Z
+R9-11,R9,3:40 pm Lord Mayors Cup,11,Touristic,3,Peter Snowden,Andrew Adkins,$12,,,,,,,0,0,0,
+R9-12,R9,3:40 pm Lord Mayors Cup,12,Glory Daze,17,Ciaron Maher,Adam Farragher,$23,,,,,,,0,0,0,
+R9-13,R9,3:40 pm Lord Mayors Cup,13,Nellie Leylax,13,Annabel & Rob Archibald,Alysha Collett,$15,,,,,,,0,0,0,
+R9-14,R9,3:40 pm Lord Mayors Cup,14,You Wahng,5,Kris Lees,Jay Ford,$18,,,,,,,0,0,0,
+R9-15,R9,3:40 pm Lord Mayors Cup,15,Imperialist,16,Chris Waller,Ashley Morgan,$19,,,,,,,0,0,0,
+R9-16,R9,3:40 pm Lord Mayors Cup,16,Portland,12,Matthew Smith,Winona Costin,$11,"{""Clean+"":1}",{},{},,,,1,0,1,2026-05-31T05:25:09.098Z
+R9-17,R9,3:40 pm Lord Mayors Cup,17,Zaphod,11,Kris Lees,Andrew Gibbons,$19,"{""Clean+"":1}",{},{},,,,1,0,1,2026-05-31T05:25:11.792Z
+R9-18,R9,3:40 pm Lord Mayors Cup,18,Caboche,20,Chris Waller,Tyler Schiller,$101,,,,,,,0,0,0,
+R9-19,R9,3:40 pm Lord Mayors Cup,19,Black Run,9,Annabel & Rob Archibald,Braith Nock,$21,{},"{""BH-"":-1}",{},,,,0,1,-1,2026-05-31T05:25:16.586Z
+R9-20,R9,3:40 pm Lord Mayors Cup,20,Thebudgiesmugla,18,Bjorn Baker,Reece Jones,$8.5,"{""Dapple+"":1}",{},{},,,,1,0,1,2026-05-31T05:25:21.509Z
+R10-2,R10,4:20 pm Denham Carter Handicap,2,Midnight Opal,5,Nathan Doyle,Shannen Llewellyn (a-3),$7,{},"{""BH-"":-1}",{},,,,0,1,-1,2026-05-31T05:25:38.111Z
+R10-5,R10,4:20 pm Denham Carter Handicap,5,Our Last Cash,16,Donna Scott,Alysha Collett,$41,{},"{""K-"":-1,""N-"":-1}",{},,,,0,2,-2,2026-05-31T05:25:42.005Z
+R10-9,R10,4:20 pm Denham Carter Handicap,9,Hay Street,14,Annabel & Rob Archibald,Braith Nock (a-1.5),$2.6,,,,,,,0,0,0,
+R10-10,R10,4:20 pm Denham Carter Handicap,10,Sir Ravanelli,10,Terry Evans,Andrew Gibbons,$23,,,,,,,0,0,0,
+R10-11,R10,4:20 pm Denham Carter Handicap,11,Who Ever Thought,4,Jeremy Gask,William Stanley (a-3),$34,{},"{""BH-"":-2}",{},,,,0,2,-2,2026-05-31T05:25:48.132Z
+R10-12,R10,4:20 pm Denham Carter Handicap,12,Damien,1,Kris Lees,Tyler Schiller,$8,{},"{""BH-"":-1}",{},,,,0,1,-1,2026-05-31T05:25:50.148Z
+R10-13,R10,4:20 pm Denham Carter Handicap,13,Applaud,6,Peter Snowden,Mitch Stapleford (a-3),$10,{},"{""Dull-"":-1}",{},,,,0,1,-1,2026-05-31T05:25:54.285Z
+R10-14,R10,4:20 pm Denham Carter Handicap,14,Pokerjack,19,Tash Burleigh,Winona Costin,$34,,,,,,,0,0,0,
+R10-15,R10,4:20 pm Denham Carter Handicap,15,Stardeel,15,Bjorn Baker,Ashley Morgan,$14,,,,,,,0,0,0,
+R10-16,R10,4:20 pm Denham Carter Handicap,16,Silvanito,21,Nathan Doyle,Regan Bayliss,$15,,,,,,,0,0,0,
+R10-18,R10,4:20 pm Denham Carter Handicap,18,Just Response,13,Nathan Doyle,Andrew Adkins,$6,{},"{""BH-"":-2}",{},,,,0,2,-2,2026-05-31T05:26:00.966Z

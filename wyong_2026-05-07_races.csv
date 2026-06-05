@@ -1,0 +1,65 @@
+race_id,race_title,runner_no,horse,barrier,trainer,jockey,odds
+R1,Race 1 - Wyong 1600m,1,Siccius,7,Kris Lees,William Stanley,15
+R1,Race 1 - Wyong 1600m,2,Aurora Effect,5,Edward Cummings,Jason Collett,1.4
+R1,Race 1 - Wyong 1600m,3,Going By Train,3,Denim Wynen,Mollie Fitzgerald,61
+R1,Race 1 - Wyong 1600m,4,Pressiaire,2,Allan Kehoe,Jenny Duggan,41
+R1,Race 1 - Wyong 1600m,5,Senza Rivali,6,Kristen Buchanan,Siena Grima,23
+R1,Race 1 - Wyong 1600m,6,Belgrano,10,Darryll Kell,Chad Lever,26
+R1,Race 1 - Wyong 1600m,7,Burning Ambition,4,James Ponsonby,Mikayla Weir,29
+R1,Race 1 - Wyong 1600m,8,Highland Lad,1,James Ponsonby,Winona Costin,201
+R1,Race 1 - Wyong 1600m,9,Irulan,8,Jason Attard,Rachel King,41
+R1,Race 1 - Wyong 1600m,10,Powerful Annie,9,Kris Lees,Tim Clark,6.5
+R2,Race 2 - Wyong 1100m,2,Apparently,1,Nikki Pollock,Leeshelle Small,201
+R2,Race 2 - Wyong 1100m,3,Ask Di,8,Gerald Ryan & Sterling Alexiou,Chad Schofield,23
+R2,Race 2 - Wyong 1100m,4,Gamp,5,"Michael, John & Wayne Hawkes",Jay Ford,7.5
+R2,Race 2 - Wyong 1100m,5,Hidden Star,7,Mark Minervini,Mollie Fitzgerald,19
+R2,Race 2 - Wyong 1100m,6,Merini,6,Kris Lees,Jason Collett,5.5
+R2,Race 2 - Wyong 1100m,7,Nicolosi,4,Gai Waterhouse & Adrian Bott,Tim Clark,1.8
+R2,Race 2 - Wyong 1100m,8,Sorentina,10,Richard Litt,Tom Sherry,26
+R2,Race 2 - Wyong 1100m,9,Tidal Breeze,2,Nikki Pollock,Billy Cray,201
+R2,Race 2 - Wyong 1100m,10,Weekend Market,9,Gary Portelli,Rachel King,14
+R2,Race 2 - Wyong 1100m,11,Zsa Zsa,3,Sara Ryan,Ashley Morgan,19
+R3,Race 3 - Wyong 1350m,1,Farset,2,Gai Waterhouse & Adrian Bott,Regan Bayliss,2.1
+R3,Race 3 - Wyong 1350m,3,Nonno's Power,7,Joseph Pride,Rory Hutchings,8
+R3,Race 3 - Wyong 1350m,4,Gemtiki,4,Mark Minervini,Mollie Fitzgerald,51
+R3,Race 3 - Wyong 1350m,5,Satono Jasmine,5,Brad Widdup,Chad Schofield,16
+R3,Race 3 - Wyong 1350m,6,Apiarist,6,Ciaron Maher,Tim Clark,12
+R3,Race 3 - Wyong 1350m,9,Gong Girl,9,David Pfieffer,Rachel King,3.5
+R4,Race 4 - Wyong 1350m,1,Waku Waku,7,Annabel & Rob Archibald,Olivia Dalton,3.4
+R4,Race 4 - Wyong 1350m,2,Maquisa,3,Chris Waller,Siena Grima,2.75
+R4,Race 4 - Wyong 1350m,4,Rach,5,Chris Waller,Jason Collett,4.6
+R4,Race 4 - Wyong 1350m,5,Mane Character,1,Nacim Dilmi,Reece Jones,10
+R4,Race 4 - Wyong 1350m,6,Shoutaboutit,6,Kristen Buchanan,Jay Ford,11
+R4,Race 4 - Wyong 1350m,7,Grassburn,8,Matthew Robinson,Anna Roper,19
+R4,Race 4 - Wyong 1350m,8,Sunday Punch,10,Cheryl Grouse,Winona Costin,91
+R4,Race 4 - Wyong 1350m,9,Maggie Sparkles,2,Paul Kelly,Kacie Adams,26
+R4,Race 4 - Wyong 1350m,11,Steely Girl,4,Neil Godbolt,Jeff Penza,21
+R5,Race 5 - Wyong 1350m,1,Skycatcher,2,Mick Price & Michael Kent Jnr,William Stanley,2.6
+R5,Race 5 - Wyong 1350m,2,Botanist,6,Chris Waller,Siena Grima,5.5
+R5,Race 5 - Wyong 1350m,3,A Pound Of Salt,3,Todd Howlett,Rory Hutchings,23
+R5,Race 5 - Wyong 1350m,4,Written Gold,9,Gerald Ryan & Sterling Alexiou,Tom Sherry,5.5
+R5,Race 5 - Wyong 1350m,6,Fierceness,1,Matthew Smith,Ashley Morgan,10
+R5,Race 5 - Wyong 1350m,8,Toomuchinformation,4,Lyndall Olson,Anna Roper,6
+R5,Race 5 - Wyong 1350m,9,Bonus Tempus,5,Brett Lazzarini,Jessica Taylor,14
+R5,Race 5 - Wyong 1350m,10,He's Godspeed,8,Brett Lazzarini,Teighan Worsnop,17
+R5,Race 5 - Wyong 1350m,11,Dreymon,10,Alan D Smith,Leeshelle Small,46
+R6,Race 6 - Wyong 1000m,1,Desi Emperor,6,Tommy Wong,Jeff Penza,41
+R6,Race 6 - Wyong 1000m,2,Bode Akuna,1,Jason Coyle,Jessica Taylor,17
+R6,Race 6 - Wyong 1000m,3,Spartus,8,Fabio Martino,Siena Grima,10
+R6,Race 6 - Wyong 1000m,4,Welcome Gypsy,5,John Thompson,Chad Schofield,5.5
+R6,Race 6 - Wyong 1000m,5,Whil To Win,10,John Thompson,Rory Hutchings,17
+R6,Race 6 - Wyong 1000m,6,Smiling Prophet,4,Mark Minervini,Mollie Fitzgerald,17
+R6,Race 6 - Wyong 1000m,7,Sunday Tycoon,9,Clarry Conners,Deanne Panya,9
+R6,Race 6 - Wyong 1000m,8,Like A Surgeon,3,Brad Widdup,Rachel King,3.3
+R6,Race 6 - Wyong 1000m,9,Cool Blaze,2,Gary Portelli,Anna Roper,9.5
+R6,Race 6 - Wyong 1000m,10,Altercation,12,Jason Deamer,Tim Clark,9.5
+R6,Race 6 - Wyong 1000m,12,Triple Yes,7,Edward Cummings,Jay Ford,8
+R7,Race 7 - Wyong 2100m,1,Unavoidable,8,Matthew Smith,Siena Grima,8
+R7,Race 7 - Wyong 2100m,2,Scottish Pearl,7,Annabel & Rob Archibald,Ashley Morgan,13
+R7,Race 7 - Wyong 2100m,3,Grandini,3,Rodney Northam,Reece Jones,4.2
+R7,Race 7 - Wyong 2100m,4,Monty Be Quick,9,Wayne Seelin,William Stanley,17
+R7,Race 7 - Wyong 2100m,6,Sarapo,6,Chris Waller,Jason Collett,2.2
+R7,Race 7 - Wyong 2100m,8,Will To Excel,4,James Ponsonby,Winona Costin,20
+R7,Race 7 - Wyong 2100m,9,Mellencamp,5,Allan Boyle,Jenny Duggan,29
+R7,Race 7 - Wyong 2100m,10,Ring Ahoy,1,David Hatch,Zac Wadick,8
+R7,Race 7 - Wyong 2100m,11,Prince Is Game,2,Matthew Robinson,Anna Roper,29

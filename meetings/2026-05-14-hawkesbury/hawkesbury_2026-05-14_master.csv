@@ -1,0 +1,66 @@
+race_id,race_title,race_no,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir
+R1,12:55 pm Arg Building Services 2yo Maiden Plate,1,1,1,Dashing Splendour,Dashing Splendour,Dashing Splendour,14,Tommy Wong,Louis Beuzelin,$11,NA
+R1,12:55 pm Arg Building Services 2yo Maiden Plate,1,2,2,Don't Doubt Frank,Don't Doubt Frank,Don't Doubt Frank,2,Brad Widdup,Tyler Schiller,$10,NA
+R1,12:55 pm Arg Building Services 2yo Maiden Plate,1,4,4,Slander,Slander,Slander,9,Nathan Doyle,Ashley Morgan,$2.5,NA
+R1,12:55 pm Arg Building Services 2yo Maiden Plate,1,5,5,Zobellan,Zobellan,Zobellan,4,Kim Waugh,Jay Ford,$17,NA
+R1,12:55 pm Arg Building Services 2yo Maiden Plate,1,6,6,Asagao,Asagao,Asagao,15,David Payne,Kerrin McEvoy,$23,NA
+R1,12:55 pm Arg Building Services 2yo Maiden Plate,1,10,10,Sondera,Sondera,Sondera,3,Chris Waller,Zac Lloyd,$10,NA
+R1,12:55 pm Arg Building Services 2yo Maiden Plate,1,11,11,Spalpeen,Spalpeen,Spalpeen,5,John Sargent,Alysha Collett,$51,NA
+R1,12:55 pm Arg Building Services 2yo Maiden Plate,1,12,12,Tumorrama,Tumorrama,Tumorrama,1,Ron Quinton,Louise Day,$4.6,NA
+R1,12:55 pm Arg Building Services 2yo Maiden Plate,1,13,13,Royal Wootton,Royal Wootton,Royal Wootton,11,Gai Waterhouse & Adrian Bott,Rachel King,$15,NA
+R1,12:55 pm Arg Building Services 2yo Maiden Plate,1,17,17,Behindcloseddoors,Behindcloseddoors,Behindcloseddoors,7,Ciaron Maher,Adam Farragher,$31,3.3
+R1,12:55 pm Arg Building Services 2yo Maiden Plate,1,18,18,Gridlock,Gridlock,Gridlock,6,Michael Freedman,Andrew Adkins,$6.5,6
+R2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,2,1,1,Our Huntress,Our Huntress,Our Huntress,4,Michael Freedman,James McDonald,$1.75,3.4
+R2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,2,2,2,Fernweh,Fernweh,Fernweh,10,Joseph Pride,Sam Clipperton,$7.5,2
+R2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,2,5,5,Dirty Summer,Dirty Summer,Dirty Summer,7,Jim & Greg Lee,Reece Jones,$11,4.3
+R2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,2,6,6,Miss Supernova,Miss Supernova,Miss Supernova,1,Gerald Ryan & Sterling Alexiou,Tom Sherry,$3.6,2.7
+R2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,2,7,7,Monocru,Monocru,Monocru,6,Ciaron Maher,Adam Farragher,$9,5.8
+R2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,2,8,8,Don't What Me,Don't What Me,Don't What Me,3,Jason Coyle,Regan Bayliss,$17,3.7
+R2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,2,9,9,Cosmora,Cosmora,Cosmora,2,Peter Green,Grant Buckley,$151,5.9
+R2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,2,10,10,Denise's Gal,Denise's Gal,Denise's Gal,9,Marc & Mitchell Conners,Tyler Schiller,$34,2.9
+R3,2:10 pm Micway Midway Benchmark 64 Handicap,3,1,1,Rebel Rhapsody,Rebel Rhapsody,Rebel Rhapsody,1,Nacim Dilmi,Tommy Berry,$2.8,4.1
+R3,2:10 pm Micway Midway Benchmark 64 Handicap,3,4,4,Up To Mischief,Up To Mischief,Up To Mischief,9,Jason Deamer,Zac Lloyd,$2.35,5
+R3,2:10 pm Micway Midway Benchmark 64 Handicap,3,5,5,Murphilly,Murphilly,Murphilly,2,Kylie Gavenlock,Grant Buckley,$13,6.1
+R3,2:10 pm Micway Midway Benchmark 64 Handicap,3,6,6,Tessy Tee,Tessy Tee,Tessy Tee,3,Richard Collett,Andrew Calder,$5,4.4
+R3,2:10 pm Micway Midway Benchmark 64 Handicap,3,7,7,Queen Bess,Queen Bess,Queen Bess,4,Kylie Gavenlock,Mollie Fitzgerald (a-1.5),$26,6.7
+R3,2:10 pm Micway Midway Benchmark 64 Handicap,3,8,8,Koning,Koning,Koning,6,Richard & Will Freedman,Chad Schofield (a0.5),$11,3.2
+R3,2:10 pm Micway Midway Benchmark 64 Handicap,3,9,9,Starlight Nation,Starlight Nation,Starlight Nation,8,Amanda Turner,Winona Costin,$41,6.4
+R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,4,1,1,Smoke 'N' Darts,Smoke 'N' Darts,Smoke 'N' Darts,15,Blake Ryan,Jay Ford,$4.4,2
+R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,4,3,3,Charm Destination,Charm Destination,Charm Destination,8,Kristen Buchanan,Olivia Chambers (a-2),$10,NA
+R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,4,5,5,Escargoes,Escargoes,Escargoes,2,Brad Widdup,Tommy Berry,$2.3,5
+R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,4,6,6,Artfull,Artfull,Artfull,6,Sara Ryan,Reece Jones,$41,5
+R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,4,7,7,Last Tour,Last Tour,Last Tour,11,Brad Widdup,Leeshelle Small (a-3),$16,6
+R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,4,8,8,Bangelz,Bangelz,Bangelz,4,Terry Croft,Siena Grima (a-2),$51,NA
+R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,4,9,9,Conjola Girl,Conjola Girl,Conjola Girl,1,Edward O'Rourke,Rachel King,$19,NA
+R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,4,11,11,Spearpoint,Spearpoint,Spearpoint,3,Kristen Buchanan,Mollie Fitzgerald (a-1.5),$16,NA
+R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,4,12,12,Winning Lover,Winning Lover,Winning Lover,7,Sara Ryan,Lee Magorrian,$6,NA
+R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,4,14,14,Galactic Force,Galactic Force,Galactic Force,5,Sara Ryan,Alysha Collett,$11,4.8
+R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,4,15,15,Bold Alliance,Bold Alliance,Bold Alliance,10,Blake Ryan,Emma Ly (a-3),$34,3.1
+R5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,5,1,1,Raskol,Raskol,Raskol,8,Peter Snowden,Tommy Berry,$3.3,2.7
+R5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,5,2,2,Into Brooklyn,Into Brooklyn,Into Brooklyn,4,Nathan Doyle,Liberty Smyth (a-3),$4.8,2.9
+R5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,5,3,3,Nullarbor Jane,Nullarbor Jane,Nullarbor Jane,5,John Sargent,Siena Grima (a-2),$5.5,2.4
+R5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,5,5,5,Tides Turning,Tides Turning,Tides Turning,1,Terry Croft,Mollie Fitzgerald (a-1.5),$19,3
+R5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,5,6,6,Purple Rose,Purple Rose,Purple Rose,10,John Thompson,Sam Clipperton,$11,1.2
+R5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,5,7,7,Singing Star,Singing Star,Singing Star,3,Damien Lane,Alysha Collett,$18,3.7
+R5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,5,8,8,Tennessee Dolly,Tennessee Dolly,Tennessee Dolly,7,Richard Litt,Chad Schofield,$4.4,6.5
+R5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,5,10,10,River Pat,River Pat,River Pat,2,Kim Waugh,Keagan Latham,$8,5.2
+R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,6,1,1,Desi Emperor,Desi Emperor,Desi Emperor,7,Tommy Wong,Jeff Penza,$8.5,2.6
+R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,6,3,3,Sociable,Sociable,Sociable,9,Ciaron Maher,Zac Lloyd,$2.1,5.2
+R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,6,4,4,Starros,Starros,Starros,3,Terry Croft,Mollie Fitzgerald (a-1.5),$19,8.1
+R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,6,5,5,Myriad,Myriad,Myriad,6,Nathan Doyle,Lee Magorrian,$3.8,5.9
+R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,6,6,6,Ima Capri,Ima Capri,Ima Capri,2,Sara Ryan,Andrew Adkins,$12,4.2
+R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,6,7,7,Last Druid,Last Druid,Last Druid,1,Tracey Bartley,Alysha Collett,$7.5,5.6
+R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,6,8,8,Clifton Springs,Clifton Springs,Clifton Springs,10,Marc & Mitchell Conners,Andrew Calder,$12,3.8
+R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,6,9,9,Midnight Dream,Midnight Dream,Midnight Dream,4,Paul Clisby,Siena Grima (a-2),$29,7.4
+R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,6,10,10,Surf Sonic,Surf Sonic,Surf Sonic,8,Karen Outtrim,Louis Beuzelin,$151,5.3
+R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,6,11,11,Johnny Smash ho,Johnny Smash ho,Johnny Smash ho,11,Mike Van Gestel,Reece Jones,$151,5.4
+R7,4:40 pm 3finance Class 1 & Maiden Plate,7,1,1,Flats,Flats,Flats,11,Wendy Haynes,Robyn Freeman,$61,6.1
+R7,4:40 pm 3finance Class 1 & Maiden Plate,7,3,3,My Greek God,My Greek God,My Greek God,1,Matthew Smith,Winona Costin,$23,6.8
+R7,4:40 pm 3finance Class 1 & Maiden Plate,7,4,4,The Big Blue,The Big Blue,The Big Blue,8,Tom Charlton,Zac Lloyd,$2.6,5.2
+R7,4:40 pm 3finance Class 1 & Maiden Plate,7,5,5,The Iron Star,The Iron Star,The Iron Star,9,Marc Chevalier,Tyler Schiller,$12,4.9
+R7,4:40 pm 3finance Class 1 & Maiden Plate,7,6,6,Sox,Sox,Sox,3,Tommy Wong,Louis Beuzelin,$19,6.5
+R7,4:40 pm 3finance Class 1 & Maiden Plate,7,7,7,Valentiago,Valentiago,Valentiago,6,Peter Snowden,Zac Wadick,$6.5,3.6
+R7,4:40 pm 3finance Class 1 & Maiden Plate,7,8,8,Don't Tell Polly,Don't Tell Polly,Don't Tell Polly,7,Brad Widdup,Rachel King,$13,3.6
+R7,4:40 pm 3finance Class 1 & Maiden Plate,7,11,11,Aleutian,Aleutian,Aleutian,4,Brad Widdup,Leeshelle Small (a-3),$101,6.2
+R7,4:40 pm 3finance Class 1 & Maiden Plate,7,12,12,Jade Sunset,Jade Sunset,Jade Sunset,5,Tracey Bartley,Alysha Collett,$6.5,6.8
+R7,4:40 pm 3finance Class 1 & Maiden Plate,7,13,13,Made In Italy,Made In Italy,Made In Italy,2,Matthew Smith,Kerrin McEvoy,$3.3,5

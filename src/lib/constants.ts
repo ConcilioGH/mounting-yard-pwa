@@ -28,7 +28,7 @@ export const DEFAULT_RACES: Race[] = [
   },
 ];
 
-export const SWEAT_POS_ROW = ["BH+", "K+", "N+", "BS+"] as const;
+export const SWEAT_POS_KEY = "Clean+" as const;
 export const SWEAT_NEG_ROW = ["BH-", "K-", "N-", "BS-"] as const;
 
 export const SWEAT_LEGEND = "BH = Behind · K = Kidney · N = Neck · BS = Body/Saddlecloth";
@@ -72,12 +72,27 @@ export const racedayCompactGroups: RacedayCompactGroup[] = [
   },
 ];
 
-export const gearTiles: { code: "FT" | "B" | "CB" | "INJ"; label: string }[] = [
+export const gearTiles: { code: "FT" | "B" | "INJ"; label: string }[] = [
   { code: "FT", label: "Fetlock Tape" },
   { code: "B", label: "Bandage" },
-  { code: "CB", label: "Canon Bandage" },
   { code: "INJ", label: "Injury" },
 ];
+
+export const wetTile = { code: "WET" as const, label: "Wet Suitability" };
+
+export const WET_BODY_TYPES = [
+  { value: "light", label: "Light", shorthand: "L" },
+  { value: "medium", label: "Medium", shorthand: "M" },
+  { value: "strong", label: "Strong", shorthand: "S" },
+  { value: "heavy", label: "Heavy / Robust", shorthand: "H" },
+] as const;
+
+export const WET_FEET = [
+  { value: "small", label: "Small / Dainty", shorthand: "SD" },
+  { value: "average", label: "Average", shorthand: "A" },
+  { value: "big", label: "Big / Splayed", shorthand: "BS" },
+  { value: "soft_ground", label: "Soft Ground Action", shorthand: "SG" },
+] as const;
 
 export const gearLocations: { num: number; label: string }[] = [
   { num: 1, label: "Near front" },

@@ -1,0 +1,25 @@
+meeting,race_no,finisher_position,position_code,sp,lane_group
+Canterbury,R1,1,1,12,Rail
+Canterbury,R1,2,2,3.8,Running Line
+Canterbury,R1,3,5,12,Rail
+Canterbury,R1,4,8,12,Running Line
+Canterbury,R2,1,1,5.5,Rail
+Canterbury,R2,2,3,16,Rail
+Canterbury,R2,3,8,2.3,Running Line
+Canterbury,R2,4,5,8.5,Rail
+Canterbury,R3,1,3,7,Rail
+Canterbury,R3,2,8,5,Running Line
+Canterbury,R3,3,6,8.5,Running Line
+Canterbury,R3,4,4,3,Running Line
+Canterbury,R4,1,5,7.5,Rail
+Canterbury,R4,2,10,8,Running Line
+Canterbury,R4,3,3,6,Rail
+Canterbury,R4,4,9,11,Rail
+Canterbury,R5,1,4,1.9,Running Line
+Canterbury,R5,2,3,11,Rail
+Canterbury,R5,3,1,5,Rail
+Canterbury,R5,4,7,5,Rail
+Canterbury,R6,1,36,16,3 Wide
+Canterbury,R6,2,5,2.2,Rail
+Canterbury,R6,3,3,8.5,Rail
+Canterbury,R6,4,1,15,Rail

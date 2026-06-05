@@ -1,0 +1,27 @@
+meeting,category,group,wins,places,avg_sp,actual_share,expected_share,bias_score,finisher_count,heat_tier,trackside_tag,interpretation
+Hawkesbury,lane,Rail,4,9,8.19,43.3,39.8,3.5,13,,,
+Hawkesbury,lane,Running Line,4,13,5.84,53.5,54.9,-1.4,17,,,
+Hawkesbury,lane,3 Wide,0,2,9.10,3.2,5.2,-2,2,,,
+Hawkesbury,lane,4 Wide+,0,0,,0,0,0,0,,,
+Hawkesbury,position,Leader / Front Pair,3,7,6.63,35.2,28,7.2,10,,,
+Hawkesbury,position,On Pace,0,2,5.45,5.5,6.5,-1,2,,,
+Hawkesbury,position,Midfield,4,7,7.02,39.2,41.5,-2.3,11,,,
+Hawkesbury,position,Backmarker,1,6,7.33,16.9,18.8,-1.9,7,,,
+Hawkesbury,position,Wide Forward,0,2,9.10,3.2,5.2,-2,2,,,
+Hawkesbury,position,Wide Midfield,0,0,,0,0,0,0,,,
+Hawkesbury,position,Wide Back,0,0,,0,0,0,0,,,
+Hawkesbury,composite,Rail Front,,,,24.1,20.1,4,6,neutral,,
+Hawkesbury,composite,Rail Midfield,,,,11.3,16.4,-5,5,neutral,,
+Hawkesbury,composite,Rail Back,,,,7.8,3.4,4.5,2,insufficient,,
+Hawkesbury,composite,Running Line Front,,,,16.6,14.4,2.2,6,neutral,,
+Hawkesbury,composite,Running Line Midfield,,,,27.9,25.1,2.8,6,neutral,,
+Hawkesbury,composite,Running Line Back,,,,9,15.4,-6.4,5,neutral,,
+Hawkesbury,composite,3 Wide Front,,,,3.2,5.2,-2,2,insufficient,,
+Hawkesbury,composite,3 Wide Midfield,,,,0,0,0,0,insufficient,,
+Hawkesbury,composite,3 Wide Back,,,,0,0,0,0,insufficient,,
+Hawkesbury,composite,4 Wide+ Front,,,,0,0,0,0,insufficient,,
+Hawkesbury,composite,4 Wide+ Midfield,,,,0,0,0,0,insufficient,,
+Hawkesbury,composite,4 Wide+ Back,,,,0,0,0,0,insufficient,,
+Hawkesbury,conclusion,RAIL FRONT,,,,,,4,6,neutral,NEUTRAL,Leaders on the rail are outperforming market expectation.
+Hawkesbury,conclusion,RUNNING LINE MIDFIELD,,,,,,2.8,6,neutral,NEUTRAL,Horses settling one-off the fence in midfield positions are outperforming market expectation.
+Hawkesbury,conclusion,RUNNING LINE BACK,,,,,,-6.4,5,neutral,NEUTRAL,Horses on the running line from backmarker positions are underperforming market expectation.

@@ -2,6 +2,7 @@ import { openDB, type IDBPDatabase } from "idb";
 import type { Assessment, AssessmentRow, Race } from "./types";
 import { DEFAULT_RACES } from "./constants";
 import { normalizeGearFromStorage } from "./gear";
+import { normalizeWetFromStorage } from "./wet";
 import { emptyAssessment } from "./utils";
 
 const DB_NAME = "mounting-yard-assessment";
@@ -67,6 +68,7 @@ export async function loadAllAssessments(): Promise<Record<string, Assessment>> 
       positive: raw.positive ?? {},
       negative: raw.negative ?? {},
       gear: normalizeGearFromStorage(raw.gear),
+      wet: normalizeWetFromStorage(raw.wet),
       notes: raw.notes ?? "",
       updatedAt: raw.updatedAt ?? new Date().toISOString(),
     };
@@ -109,6 +111,7 @@ export function mergeAssessment(patch: Partial<Assessment>, base?: Assessment): 
     positive: patch.positive ?? b.positive,
     negative: patch.negative ?? b.negative,
     gear: patch.gear ?? b.gear,
+    wet: patch.wet ?? b.wet,
     notes: patch.notes ?? b.notes,
     updatedAt: new Date().toISOString(),
   };

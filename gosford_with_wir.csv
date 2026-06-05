@@ -1,0 +1,109 @@
+race_id,race_title,runner_no,horse,barrier,trainer,jockey,odds,w_ir
+R1,Race 1 - Gosford 1200m,2,Priory Park,1,Annabel & Rob Archibald,Dylan Gibbons,2.3,2.0
+R1,Race 1 - Gosford 1200m,3,Zynaro,3,Chris Waller,Adam Hyeronimus,5.25,3.0
+R1,Race 1 - Gosford 1200m,4,Quarterback,4,Chris Waller,Jason Collett,8.0,2.0
+R1,Race 1 - Gosford 1200m,5,Whitehall,8,Chris Waller,Kerrin McEvoy,12.0,10.0
+R1,Race 1 - Gosford 1200m,6,Air Of Solace,5,Chris Waller,Siena Grima,29.0,8.0
+R1,Race 1 - Gosford 1200m,7,I Am Dirty,7,Bjorn Baker,Rachel King,3.4,6.0
+R1,Race 1 - Gosford 1200m,8,Parisest Magic,6,Alexandre Lemarie,Tyler Schiller,81.0,
+R2,Race 2 - Gosford 1200m,3,Presides,4,Mitchell Beer & George Carpenter,Dylan Gibbons,8.5,5.1
+R2,Race 2 - Gosford 1200m,4,Smashing Time,10,Robert & Luke Price,Adam Hyeronimus,6.0,4.0
+R2,Race 2 - Gosford 1200m,5,Xpresso,11,Marc Chevalier,Tyler Schiller,18.0,4.9
+R2,Race 2 - Gosford 1200m,6,Duck Egg Blue,6,Richard & Will Freedman,William Stanley,16.0,6.6
+R2,Race 2 - Gosford 1200m,7,Horizons,1,Richard & Will Freedman,Regan Bayliss,12.0,5.2
+R2,Race 2 - Gosford 1200m,9,Harlex,8,Paul Perry,Rachel King,51.0,3.5
+R2,Race 2 - Gosford 1200m,10,Show County,3,Alexandre Lemarie,Siena Grima,31.0,3.1
+R2,Race 2 - Gosford 1200m,11,Jaegers,7,Gary Portelli,Anna Roper,11.0,3.5
+R2,Race 2 - Gosford 1200m,12,Spice Baby,5,Joseph Ible,Andrew Adkins,4.0,1.9
+R2,Race 2 - Gosford 1200m,13,Queen's Rhapsody,9,David Pfieffer,Jason Collett,4.6,4.6
+R2,Race 2 - Gosford 1200m,14,Sapling,2,Nacim Dilmi,Kerrin McEvoy,10.0,3.1
+R3,Race 3 - Gosford 1000m,1,Life Coach,4,Brett Lazzarini,Anna Roper,26.0,2.7
+R3,Race 3 - Gosford 1000m,2,Neil,6,Matthew Dunn,Nash Rawiller,2.2,2.2
+R3,Race 3 - Gosford 1000m,3,Exit Fee,12,Danny Williams,Adam Hyeronimus,4.4,8.0
+R3,Race 3 - Gosford 1000m,6,Danxia,10,Colt Prosser,Dylan Gibbons,17.0,6.0
+R3,Race 3 - Gosford 1000m,7,Ischyros,11,Scott Collings,Siena Grima,46.0,4.6
+R3,Race 3 - Gosford 1000m,9,Denman Force,5,Brett Thompson,Jake Pracey-Holmes,19.0,2.3
+R3,Race 3 - Gosford 1000m,11,Sunrise Ridge,9,Greg Backhouse,Amy McLucas,21.0,4.3
+R3,Race 3 - Gosford 1000m,12,Thrilling Venture,8,Brett & Georgie Cavanough,Jason Collett,14.0,2.4
+R3,Race 3 - Gosford 1000m,14,Silver Serenade,16,Danny Williams,Jay Ford,15.0,3.9
+R3,Race 3 - Gosford 1000m,15,Enniroc,3,David Hatch,Zac Wadick,41.0,7.2
+R3,Race 3 - Gosford 1000m,16,Ritzsun,13,Scott Singleton,Christian Reith,34.0,4.2
+R3,Race 3 - Gosford 1000m,17,Sneaky Pee Cee,1,Danny Williams,Tyler Schiller,14.0,2.5
+R4,Race 4 - Gosford 1000m,1,World Alliance,7,Matthew Smith,Siena Grima,11.0,9.1
+R4,Race 4 - Gosford 1000m,2,Sir Ravanelli,4,Terry Evans,Mollie Fitzgerald,51.0,4.8
+R4,Race 4 - Gosford 1000m,3,Pokerjack,2,Tash Burleigh,Anna Roper,31.0,4.6
+R4,Race 4 - Gosford 1000m,4,Crepe Myrtle,3,Joseph Pride,Adam Hyeronimus,3.4,3.3
+R4,Race 4 - Gosford 1000m,5,Petticoat,6,Brett Dodson,Zac Wadick,6.5,2.2
+R4,Race 4 - Gosford 1000m,6,Compensation,1,Bjorn Baker,Rachel King,2.0,1.5
+R4,Race 4 - Gosford 1000m,7,Island Dec,9,Robert & Luke Price,Regan Bayliss,18.0,8.5
+R4,Race 4 - Gosford 1000m,8,Stratafy,8,Neil Ward,Winona Costin,23.0,3.5
+R4,Race 4 - Gosford 1000m,9,Aegipan,10,Pat Murphy,Jay Ford,151.0,2.2
+R5,Race 5 - Gosford 1600m,1,Pleasure Artist,9,Richard & Will Freedman,William Stanley,19.0,5.7
+R5,Race 5 - Gosford 1600m,3,Nobler,4,Chris Waller,Tyler Schiller,3.1,8.8
+R5,Race 5 - Gosford 1600m,5,Cloisters,1,Chris Waller,Kerrin McEvoy,18.0,5.5
+R5,Race 5 - Gosford 1600m,6,Mr Miller,2,Chris Waller,Adam Hyeronimus,2.25,3.0
+R5,Race 5 - Gosford 1600m,9,Chilli Margs,3,Bjorn Baker,Ashley Morgan,4.2,9.0
+R5,Race 5 - Gosford 1600m,10,Voting Rights,5,Gai Waterhouse & Adrian Bott,Rachel King,26.0,4.6
+R6,Race 6 - Gosford 2100m,2,I Am The Empire,3,Annabel & Rob Archibald,Mollie Fitzgerald,61.0,2.5
+R6,Race 6 - Gosford 2100m,3,Thrice,4,Gai Waterhouse & Adrian Bott,Zac Wadick,4.6,1.0
+R6,Race 6 - Gosford 2100m,4,Akkadian Emperor,16,Annabel & Rob Archibald,Anna Roper,41.0,4.1
+R6,Race 6 - Gosford 2100m,5,Bella Montagna,6,Gai Waterhouse & Adrian Bott,Adam Hyeronimus,9.5,8.2
+R6,Race 6 - Gosford 2100m,6,Pinhole,8,Chris Waller,Siena Grima,81.0,12.0
+R6,Race 6 - Gosford 2100m,7,Cap Saint Martin,15,Annabel & Rob Archibald,Nash Rawiller,9.0,7.3
+R6,Race 6 - Gosford 2100m,8,Thebudgiesmugla,14,Bjorn Baker,Joshua Parr,21.0,7.4
+R6,Race 6 - Gosford 2100m,9,Placid Pearl,2,Matthew Smith,Winona Costin,26.0,6.0
+R6,Race 6 - Gosford 2100m,10,King Of The Sea,9,Ciaron Maher,Adam Farragher,4.0,12.0
+R6,Race 6 - Gosford 2100m,11,King Pedro,7,Tom Charlton,Dylan Gibbons,9.5,8.0
+R6,Race 6 - Gosford 2100m,13,Majorian,17,Annabel & Rob Archibald,Alysha Collett,151.0,5.0
+R6,Race 6 - Gosford 2100m,15,Saint Emilion,10,Ciaron Maher,Regan Bayliss,61.0,6.1
+R6,Race 6 - Gosford 2100m,16,Koolibah,5,Chris Waller,Tyler Schiller,8.5,6.5
+R6,Race 6 - Gosford 2100m,17,King Kikau,1,Wayne Wilkes,Christian Reith,101.0,7.1
+R6,Race 6 - Gosford 2100m,18,Monopolistic,13,Chris Waller,Andrew Adkins,13.0,8.9
+R6,Race 6 - Gosford 2100m,19,De Louviere,12,Matthew Smith,Kerrin McEvoy,23.0,7.2
+R7,Race 7 - Gosford 1200m,1,Iowna Merc,10,Bjorn Baker,Joshua Parr,21.0,7.1
+R7,Race 7 - Gosford 1200m,2,King Of Roseau,6,Peter Snowden,Kerrin McEvoy,6.5,8.2
+R7,Race 7 - Gosford 1200m,3,Sweynesday,11,Roger James & Robert Wellwood,Andrew Adkins,8.0,
+R7,Race 7 - Gosford 1200m,4,Willaidow,3,Marc & Mitchell Conners,Nash Rawiller,8.0,2.5
+R7,Race 7 - Gosford 1200m,5,Way To The Stars,9,Matthew Smith,Rachel King,20.0,3.1
+R7,Race 7 - Gosford 1200m,6,Oak Hill,5,"Ben, Will & JD Hayes",Tyler Schiller,16.0,8.3
+R7,Race 7 - Gosford 1200m,7,Ostraka,4,Annabel & Rob Archibald,Jason Collett,9.0,4.5
+R7,Race 7 - Gosford 1200m,9,Kerguelen,2,Joseph Pride,Sam Clipperton,3.8,7.7
+R7,Race 7 - Gosford 1200m,11,Harry's Yacht,7,Leon & Troy Corstens & Will Larkin,Ashley Morgan,5.0,4.1
+R7,Race 7 - Gosford 1200m,12,Romeo's Choice,1,Richard Litt,Jay Ford,21.0,4.4
+R7,Race 7 - Gosford 1200m,13,Felix Majestic,8,Gary Nickson,Adam Farragher,201.0,3.6
+R8,Race 8 - Gosford 1600m,1,Zambardo,10,Mick Price & Michael Kent Jnr,Dylan Gibbons,7.0,5.0
+R8,Race 8 - Gosford 1600m,3,Depth Of Character,6,Annabel & Rob Archibald,Jason Collett,6.5,8.4
+R8,Race 8 - Gosford 1600m,4,On Display,5,Mick Price & Michael Kent Jnr,Ashley Morgan,11.0,6.9
+R8,Race 8 - Gosford 1600m,5,Snitzanova,11,Ciaron Maher,Adam Farragher,41.0,8.1
+R8,Race 8 - Gosford 1600m,6,Lord Penman,2,Chris Waller,Adam Hyeronimus,7.0,7.9
+R8,Race 8 - Gosford 1600m,7,Athanatos,7,Phillip Stokes,Kerrin McEvoy,11.0,4.9
+R8,Race 8 - Gosford 1600m,8,Grand Omaha,9,Matt Laurie,Regan Bayliss,26.0,2.6
+R8,Race 8 - Gosford 1600m,9,Rotagilla,4,Chris Waller,Tyler Schiller,7.0,6.2
+R8,Race 8 - Gosford 1600m,10,Sarrismo,1,Tom Charlton,Andrew Adkins,4.6,2.3
+R8,Race 8 - Gosford 1600m,11,Sir Dinadan,3,Chris Waller,Rachel King,8.0,7.0
+R8,Race 8 - Gosford 1600m,12,Cosmeena,8,Michael Vella,Reece Jones,151.0,4.6
+R9,Race 9 - Gosford 2100m,1,Asterix,18,Chris Waller,Jason Collett,12.0,7.6
+R9,Race 9 - Gosford 2100m,2,Bois D'argent,1,Annabel & Rob Archibald,Nash Rawiller,10.0,3.8
+R9,Race 9 - Gosford 2100m,3,Doctor Askar,19,Chris Waller,Adam Hyeronimus,46.0,10.0
+R9,Race 9 - Gosford 2100m,5,Maison Louis,14,Tom Charlton,Dylan Gibbons,8.5,6.8
+R9,Race 9 - Gosford 2100m,6,Sayedaty Sadaty,4,Ciaron Maher,Tyler Schiller,14.0,3.9
+R9,Race 9 - Gosford 2100m,8,Unspoken,5,Peter Snowden,Ashley Morgan,46.0,6.9
+R9,Race 9 - Gosford 2100m,10,Star Of India,17,Chris Waller,Sam Clipperton,18.0,10.3
+R9,Race 9 - Gosford 2100m,11,You Wahng,2,Kris Lees,Regan Bayliss,6.5,8.4
+R9,Race 9 - Gosford 2100m,12,Portland,3,Matthew Smith,Kerrin McEvoy,5.0,8.0
+R9,Race 9 - Gosford 2100m,13,Touristic,11,Peter Snowden,Andrew Adkins,26.0,8.2
+R9,Race 9 - Gosford 2100m,15,Sunset Park,6,Brad Widdup,Rachel King,8.0,1.9
+R9,Race 9 - Gosford 2100m,16,Zaphod,8,Kris Lees,Andrew Gibbons,9.0,3.5
+R9,Race 9 - Gosford 2100m,19,Our Gold Hope,9,Robert & Luke Price,Jay Ford,12.0,7.3
+R10,Race 10 - Gosford 1200m,1,Mogul Monarch,12,Kim Waugh,William Stanley,12.0,3.8
+R10,Race 10 - Gosford 1200m,2,Stay Focused,17,Ciaron Maher,Zac Wadick,26.0,2.2
+R10,Race 10 - Gosford 1200m,3,Hillier,8,Annabel & Rob Archibald,Nash Rawiller,6.5,4.2
+R10,Race 10 - Gosford 1200m,4,Shirvington,2,Bjorn Baker,Rachel King,16.0,4.7
+R10,Race 10 - Gosford 1200m,5,Anythink Goes,16,Matthew Smith,Anna Roper,51.0,6.0
+R10,Race 10 - Gosford 1200m,6,Mawjood,3,Bjorn Baker,Joshua Parr,6.0,3.9
+R10,Race 10 - Gosford 1200m,7,Winston Hills,9,Matthew Smith,Ashley Morgan,15.0,5.6
+R10,Race 10 - Gosford 1200m,10,Damien,7,Kris Lees,Dylan Gibbons,9.0,6.0
+R10,Race 10 - Gosford 1200m,11,Who Ever Thought,5,Jeremy Gask,Reece Jones,67.0,2.6
+R10,Race 10 - Gosford 1200m,12,Scintilla,6,Les Bridge,Kerrin McEvoy,4.6,3.9
+R10,Race 10 - Gosford 1200m,13,La Roja,4,Peter Snowden,Tyler Schiller,4.0,5.3
+R10,Race 10 - Gosford 1200m,17,Common Goal,1,Joseph Ible,Mollie Fitzgerald,61.0,2.8

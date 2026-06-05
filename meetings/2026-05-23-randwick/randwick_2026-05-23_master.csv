@@ -1,0 +1,147 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir
+R1,Randwick,1,11:00 am Asahi Super Dry Handicap,1200m,Handicap,Soft 7,True,1,1,Keen To Exceed,Keen To Exceed,Keen To Exceed,2,"Michael, John & Wayne Hawkes",Tyler Schiller,$3.9,8
+R1,Randwick,1,11:00 am Asahi Super Dry Handicap,1200m,Handicap,Soft 7,True,2,2,Friendly Fire,Friendly Fire,Friendly Fire,1,Gary Portelli,Alysha Collett,$16,9
+R1,Randwick,1,11:00 am Asahi Super Dry Handicap,1200m,Handicap,Soft 7,True,3,3,Lady Catalina,Lady Catalina,Lady Catalina,6,Ciaron Maher,Adam Farragher,$7.5,1.8
+R1,Randwick,1,11:00 am Asahi Super Dry Handicap,1200m,Handicap,Soft 7,True,4,4,All Over Harry,All Over Harry,All Over Harry,8,Anthony & Sam Freedman,Joshua Parr,$15,NA
+R1,Randwick,1,11:00 am Asahi Super Dry Handicap,1200m,Handicap,Soft 7,True,5,5,Glenorchy,Glenorchy,Glenorchy,7,Chris Waller,Sam Clipperton,$9,NA
+R1,Randwick,1,11:00 am Asahi Super Dry Handicap,1200m,Handicap,Soft 7,True,6,6,Zousika,Zousika,Zousika,9,Annabel & Rob Archibald,Dylan Gibbons,$21,1.7
+R1,Randwick,1,11:00 am Asahi Super Dry Handicap,1200m,Handicap,Soft 7,True,7,7,Uncertain Glory,Uncertain Glory,Uncertain Glory,4,Michael Freedman,Andrew Adkins,$4.2,7
+R1,Randwick,1,11:00 am Asahi Super Dry Handicap,1200m,Handicap,Soft 7,True,8,8,First Act,First Act,First Act,5,Chris Waller,Adam Hyeronimus (a0.5),$46,6
+R1,Randwick,1,11:00 am Asahi Super Dry Handicap,1200m,Handicap,Soft 7,True,9,9,Thyme To Go,Thyme To Go,Thyme To Go,3,Annabel & Rob Archibald,Braith Nock (a-1.5),$4.2,4
+R1,Randwick,1,11:00 am Asahi Super Dry Handicap,1200m,Handicap,Soft 7,True,10,10,Influential Jewel,Influential Jewel,Influential Jewel,10,Chris Waller,Kerrin McEvoy,$35,8
+R2,Randwick,2,11:35 am Midway Handicap,1400m,Handicap,Soft 7,True,1,1,Flying Embers,Flying Embers,Flying Embers,7,John Thompson,Nash Rawiller,$4.2,5.8
+R2,Randwick,2,11:35 am Midway Handicap,1400m,Handicap,Soft 7,True,2,2,Audrey's Lane,Audrey's Lane,Audrey's Lane,3,Brad Widdup,Alysha Collett,$7.5,3
+R2,Randwick,2,11:35 am Midway Handicap,1400m,Handicap,Soft 7,True,3,3,Audenzia,Audenzia,Audenzia,14,Diane Poidevin Laine,Pierre Boudvillain,$46,5
+R2,Randwick,2,11:35 am Midway Handicap,1400m,Handicap,Soft 7,True,4,4,Magical Moments,Magical Moments,Magical Moments,9,Mitchell Beer & George Carpenter,Dylan Gibbons,$11,5.1
+R2,Randwick,2,11:35 am Midway Handicap,1400m,Handicap,Soft 7,True,5,5,Forecaster,Forecaster,Forecaster,1,Paul Perry,Anna Roper (a-2),$41,2.4
+R2,Randwick,2,11:35 am Midway Handicap,1400m,Handicap,Soft 7,True,6,6,Bella Khadijah,Bella Khadijah,Bella Khadijah,4,Brad Widdup,Braith Nock (a-1.5),$13,7.2
+R2,Randwick,2,11:35 am Midway Handicap,1400m,Handicap,Soft 7,True,7,7,Is It Spectacular,Is It Spectacular,Is It Spectacular,6,Nacim Dilmi,Andrew Adkins,$20,4.8
+R2,Randwick,2,11:35 am Midway Handicap,1400m,Handicap,Soft 7,True,8,8,Mogwai,Mogwai,Mogwai,5,Robert & Luke Price,Brock Ryan,$35,4.3
+R2,Randwick,2,11:35 am Midway Handicap,1400m,Handicap,Soft 7,True,9,9,My Phar Lady,My Phar Lady,My Phar Lady,2,Richard & Will Freedman,Zac Lloyd,$12,6.2
+R2,Randwick,2,11:35 am Midway Handicap,1400m,Handicap,Soft 7,True,11,11,Perfect Justice,Perfect Justice,Perfect Justice,19,John Sargent,Siena Grima (a-3),$19,4.5
+R2,Randwick,2,11:35 am Midway Handicap,1400m,Handicap,Soft 7,True,12,12,Phyxius,Phyxius,Phyxius,10,Jason Deamer,Regan Bayliss,$8.5,4.5
+R2,Randwick,2,11:35 am Midway Handicap,1400m,Handicap,Soft 7,True,13,13,Duck Egg Blue,Duck Egg Blue,Duck Egg Blue,15,Richard & Will Freedman,Ashley Morgan,$34,7.2
+R2,Randwick,2,11:35 am Midway Handicap,1400m,Handicap,Soft 7,True,14,14,Congressman,Congressman,Congressman,17,Richard Litt,Adam Hyeronimus (a1),$11,3.8
+R2,Randwick,2,11:35 am Midway Handicap,1400m,Handicap,Soft 7,True,15,15,Penpel,Penpel,Penpel,16,Marc & Mitchell Conners,Kerrin McEvoy,$13,6
+R2,Randwick,2,11:35 am Midway Handicap,1400m,Handicap,Soft 7,True,16,16,Callistemon,Callistemon,Callistemon,12,Kerry Parker,Winona Costin,$27,7.9
+R2,Randwick,2,11:35 am Midway Handicap,1400m,Handicap,Soft 7,True,17,17,Ascot Green,Ascot Green,Ascot Green,8,,John Thompson,$27,5.7
+R2,Randwick,2,11:35 am Midway Handicap,1400m,Handicap,Soft 7,True,18,18,Tom Cruising,Tom Cruising,Tom Cruising,18,,Kerry Parker,$151,6.5
+R2,Randwick,2,11:35 am Midway Handicap,1400m,Handicap,Soft 7,True,19,19,Highborn Harry,Highborn Harry,Highborn Harry,11,,David Payne,$46,8.3
+R3,Randwick,3,12:10 pm Tab Highway Handicap,1200m,Handicap,Soft 7,True,1,1,Exit Fee,Exit Fee,Exit Fee,4,Danny Williams,Adam Hyeronimus,$3.9,8
+R3,Randwick,3,12:10 pm Tab Highway Handicap,1200m,Handicap,Soft 7,True,2,2,Jenni The Jet,Jenni The Jet,Jenni The Jet,23,Matthew Dale,Braith Nock (a-1.5),$21,3.8
+R3,Randwick,3,12:10 pm Tab Highway Handicap,1200m,Handicap,Soft 7,True,4,4,Campari Twist,Campari Twist,Campari Twist,16,Patrick Cleave,Ashley Morgan,$35,4.6
+R3,Randwick,3,12:10 pm Tab Highway Handicap,1200m,Handicap,Soft 7,True,5,5,Cambar,Cambar,Cambar,15,Gary Colvin,Regan Bayliss,$14,6.4
+R3,Randwick,3,12:10 pm Tab Highway Handicap,1200m,Handicap,Soft 7,True,6,6,Jackpot Star,Jackpot Star,Jackpot Star,1,Matthew Dale,Dylan Gibbons,$71,2.7
+R3,Randwick,3,12:10 pm Tab Highway Handicap,1200m,Handicap,Soft 7,True,7,7,Neeson,Neeson,Neeson,11,Danielle Seib,Shaun Guymer,$11,2.3
+R3,Randwick,3,12:10 pm Tab Highway Handicap,1200m,Handicap,Soft 7,True,8,8,Speedy Henry,Speedy Henry,Speedy Henry,8,Rodney Northam,Adam Farragher,$13,8.1
+R3,Randwick,3,12:10 pm Tab Highway Handicap,1200m,Handicap,Soft 7,True,9,9,Wayburn,Wayburn,Wayburn,9,Matthew Dunn,Nash Rawiller (a1),$5,2.9
+R3,Randwick,3,12:10 pm Tab Highway Handicap,1200m,Handicap,Soft 7,True,10,10,Buenos,Buenos,Buenos,12,Keith Dryden & Libby Snowden,Andrew Adkins,$27,6.6
+R3,Randwick,3,12:10 pm Tab Highway Handicap,1200m,Handicap,Soft 7,True,11,11,Bullion Hunter,Bullion Hunter,Bullion Hunter,3,Rodney Northam,Reece Jones,$12,3.5
+R3,Randwick,3,12:10 pm Tab Highway Handicap,1200m,Handicap,Soft 7,True,12,12,Danxia,Danxia,Danxia,2,Colt Prosser,Luke Rolls,$41,6.8
+R3,Randwick,3,12:10 pm Tab Highway Handicap,1200m,Handicap,Soft 7,True,15,15,She Within,She Within,She Within,22,Danny Williams,Tyler Schiller,$14,6.8
+R3,Randwick,3,12:10 pm Tab Highway Handicap,1200m,Handicap,Soft 7,True,16,16,Girrawheen,Girrawheen,Girrawheen,14,Peter Bloomfield,Anna Roper (a-2),$91,4.4
+R3,Randwick,3,12:10 pm Tab Highway Handicap,1200m,Handicap,Soft 7,True,18,18,Judith's Revenge,Judith's Revenge,Judith's Revenge,10,Tim Donnelly,Mathew Cahill,$14,7.4
+R3,Randwick,3,12:10 pm Tab Highway Handicap,1200m,Handicap,Soft 7,True,19,19,Bring Me Saki,Bring Me Saki,Bring Me Saki,7,Stephen & Jordan Lee,Alysha Collett,$35,4
+R3,Randwick,3,12:10 pm Tab Highway Handicap,1200m,Handicap,Soft 7,True,21,21,Bolo Miss,Bolo Miss,Bolo Miss,21,Michael Lynch,Mollie Fitzgerald (a-3),$81,6.2
+R3,Randwick,3,12:10 pm Tab Highway Handicap,1200m,Handicap,Soft 7,True,22,22,Molteuno,Molteuno,Molteuno,13,Tash Burleigh,Adrian Layt,$71,2.7
+R3,Randwick,3,12:10 pm Tab Highway Handicap,1200m,Handicap,Soft 7,True,23,23,Cosmolicious,Cosmolicious,Cosmolicious,6,Cheryl Grouse,Siena Grima (a-3),$91,2.1
+R3,Randwick,3,12:10 pm Tab Highway Handicap,1200m,Handicap,Soft 7,True,24,24,Stormbringer,Stormbringer,Stormbringer,5,Matthew Dale,Dylan Gibbons,$13,3.7
+R4,Randwick,4,12:45 pm Sporting Chance Cancer Foundation Handicap,2400m,Handicap,Soft 7,True,1,1,Thrice,Thrice,Thrice,8,Gai Waterhouse & Adrian Bott,Zac Wadick (a-2),$4.8,2.3
+R4,Randwick,4,12:45 pm Sporting Chance Cancer Foundation Handicap,2400m,Handicap,Soft 7,True,2,2,Casual Connection,Casual Connection,Casual Connection,9,John Sargent,Siena Grima (a-3),$13,4.7
+R4,Randwick,4,12:45 pm Sporting Chance Cancer Foundation Handicap,2400m,Handicap,Soft 7,True,3,3,Cap Saint Martin,Cap Saint Martin,Cap Saint Martin,2,Annabel & Rob Archibald,Nash Rawiller,$3.5,10.8
+R4,Randwick,4,12:45 pm Sporting Chance Cancer Foundation Handicap,2400m,Handicap,Soft 7,True,5,5,Thebudgiesmugla,Thebudgiesmugla,Thebudgiesmugla,7,Bjorn Baker,Joshua Parr,$3.1,5.6
+R4,Randwick,4,12:45 pm Sporting Chance Cancer Foundation Handicap,2400m,Handicap,Soft 7,True,7,7,Hutchence,Hutchence,Hutchence,1,Chris Waller,Sam Clipperton,$27,9.4
+R4,Randwick,4,12:45 pm Sporting Chance Cancer Foundation Handicap,2400m,Handicap,Soft 7,True,8,8,Unavoidable,Unavoidable,Unavoidable,3,Matthew Smith,Alysha Collett,$18,7.5
+R4,Randwick,4,12:45 pm Sporting Chance Cancer Foundation Handicap,2400m,Handicap,Soft 7,True,9,9,Saint Emilion,Saint Emilion,Saint Emilion,6,Ciaron Maher,Dylan Gibbons,$16,7.1
+R4,Randwick,4,12:45 pm Sporting Chance Cancer Foundation Handicap,2400m,Handicap,Soft 7,True,10,10,De Louviere,De Louviere,De Louviere,4,Matthew Smith,Kerrin McEvoy,$7.5,7.5
+R5,Randwick,5,1:20 pm Pf Civil Handicap,1800m,Handicap,Soft 7,True,1,1,Cosmic Avenger,Cosmic Avenger,Cosmic Avenger,14,John Sargent,Dylan Gibbons,$12,5
+R5,Randwick,5,1:20 pm Pf Civil Handicap,1800m,Handicap,Soft 7,True,3,3,Boomeroo,Boomeroo,Boomeroo,10,Anthony & Sam Freedman,Sam Clipperton,$11,5.8
+R5,Randwick,5,1:20 pm Pf Civil Handicap,1800m,Handicap,Soft 7,True,4,4,Agent Zero,Agent Zero,Agent Zero,1,Ciaron Maher,Nash Rawiller,$6.5,3.1
+R5,Randwick,5,1:20 pm Pf Civil Handicap,1800m,Handicap,Soft 7,True,7,7,Salt Spray,Salt Spray,Salt Spray,13,Chris Waller,Kerrin McEvoy,$9,8
+R5,Randwick,5,1:20 pm Pf Civil Handicap,1800m,Handicap,Soft 7,True,8,8,Sheeza Diva,Sheeza Diva,Sheeza Diva,8,Mitchell &,Desiree Kearney,$35,6.8
+R5,Randwick,5,1:20 pm Pf Civil Handicap,1800m,Handicap,Soft 7,True,9,9,Eynesbury,Eynesbury,Eynesbury,2,Chris Waller,Zac Lloyd,$8,6.6
+R5,Randwick,5,1:20 pm Pf Civil Handicap,1800m,Handicap,Soft 7,True,10,10,Donatello,Donatello,Donatello,11,Chris Waller,Tyler Schiller,$4.2,6
+R5,Randwick,5,1:20 pm Pf Civil Handicap,1800m,Handicap,Soft 7,True,11,11,Angel City,Angel City,Angel City,6,Matthew Smith,Pierre Boudvillain,$16,5.6
+R5,Randwick,5,1:20 pm Pf Civil Handicap,1800m,Handicap,Soft 7,True,12,12,Kindamagic,Kindamagic,Kindamagic,7,Mitchell Maloney-stone,Reece Jones,$51,3.7
+R5,Randwick,5,1:20 pm Pf Civil Handicap,1800m,Handicap,Soft 7,True,13,13,Sunsprite,Sunsprite,Sunsprite,12,Annabel & Rob Archibald,Braith Nock (a-1.5),$4.6,6.5
+R5,Randwick,5,1:20 pm Pf Civil Handicap,1800m,Handicap,Soft 7,True,14,14,Blue Eyed Brigid,Blue Eyed Brigid,Blue Eyed Brigid,15,Brad Widdup,Alysha Collett,$21,7.6
+R6,Randwick,6,1:55 pm Taylor Construction Handicap,1400m,Handicap,Soft 7,True,1,1,Declichy Boulevard,Declichy Boulevard,Declichy Boulevard,10,Chris Waller,Siena Grima (a-3),$21,6.8
+R6,Randwick,6,1:55 pm Taylor Construction Handicap,1400m,Handicap,Soft 7,True,2,2,Pier Pressure,Pier Pressure,Pier Pressure,1,Kris Lees,Anna Roper (a-2),$41,3.6
+R6,Randwick,6,1:55 pm Taylor Construction Handicap,1400m,Handicap,Soft 7,True,3,3,Husk,Husk,Husk,15,"Michael, John & Wayne Hawkes",Zac Wadick (a-2),$15,4.3
+R6,Randwick,6,1:55 pm Taylor Construction Handicap,1400m,Handicap,Soft 7,True,4,4,Jellicious,Jellicious,Jellicious,9,Chris Waller,Nash Rawiller,$9,3.9
+R6,Randwick,6,1:55 pm Taylor Construction Handicap,1400m,Handicap,Soft 7,True,6,6,Bravissima,Bravissima,Bravissima,13,Matthew Dale,Dylan Gibbons,$23,4.4
+R6,Randwick,6,1:55 pm Taylor Construction Handicap,1400m,Handicap,Soft 7,True,7,7,Miss Busslinger,Miss Busslinger,Miss Busslinger,14,Kris Lees,Sam Clipperton,$20,6
+R6,Randwick,6,1:55 pm Taylor Construction Handicap,1400m,Handicap,Soft 7,True,8,8,La Roja,La Roja,La Roja,16,Peter Snowden,Ashley Morgan,$5.5,5.4
+R6,Randwick,6,1:55 pm Taylor Construction Handicap,1400m,Handicap,Soft 7,True,9,9,Just Glamourous,Just Glamourous,Just Glamourous,6,Joseph Pride,Adam Hyeronimus,$11,3.1
+R6,Randwick,6,1:55 pm Taylor Construction Handicap,1400m,Handicap,Soft 7,True,10,10,Scintilla,Scintilla,Scintilla,12,Les Bridge,Kerrin McEvoy,$16,4.1
+R6,Randwick,6,1:55 pm Taylor Construction Handicap,1400m,Handicap,Soft 7,True,11,11,Girijaala,Girijaala,Girijaala,11,"Michael, John & Wayne Hawkes",Tyler Schiller,$20,3.1
+R6,Randwick,6,1:55 pm Taylor Construction Handicap,1400m,Handicap,Soft 7,True,12,12,Surf's Up,Surf's Up,Surf's Up,17,Chris Waller,Zac Lloyd,$7,7.5
+R6,Randwick,6,1:55 pm Taylor Construction Handicap,1400m,Handicap,Soft 7,True,13,13,Sister Shay,Sister Shay,Sister Shay,3,Craig Widdison,Reece Jones,$14,1.5
+R6,Randwick,6,1:55 pm Taylor Construction Handicap,1400m,Handicap,Soft 7,True,14,14,Waku Waku,Waku Waku,Waku Waku,8,Annabel & Rob Archibald,Braith Nock (a-1.5),$11,6.1
+R6,Randwick,6,1:55 pm Taylor Construction Handicap,1400m,Handicap,Soft 7,True,15,15,Cavity Bay,Cavity Bay,Cavity Bay,7,Clarry Conners,Winona Costin,$126,7.4
+R6,Randwick,6,1:55 pm Taylor Construction Handicap,1400m,Handicap,Soft 7,True,16,16,Ocean Chill,Ocean Chill,Ocean Chill,5,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),$12,2.8
+R6,Randwick,6,1:55 pm Taylor Construction Handicap,1400m,Handicap,Soft 7,True,17,17,Audrey's Lane,Audrey's Lane,Audrey's Lane,4,,Brad Widdup,$19,3
+R6,Randwick,6,1:55 pm Taylor Construction Handicap,1400m,Handicap,Soft 7,True,18,18,Bella Khadijah,Bella Khadijah,Bella Khadijah,2,,Brad Widdup,$23,7.2
+R7,Randwick,7,2:30 pm General Australia Handicap,2000m,Handicap,Soft 7,True,1,1,Les Vampires,Les Vampires,Les Vampires,3,Lucy Longmire,Adam Hyeronimus,$51,3.8
+R7,Randwick,7,2:30 pm General Australia Handicap,2000m,Handicap,Soft 7,True,2,2,Black Run,Black Run,Black Run,11,Annabel & Rob Archibald,Braith Nock (a-1.5),$27,2.9
+R7,Randwick,7,2:30 pm General Australia Handicap,2000m,Handicap,Soft 7,True,3,3,Rotagilla,Rotagilla,Rotagilla,1,Chris Waller,Nash Rawiller,$7,6.2
+R7,Randwick,7,2:30 pm General Australia Handicap,2000m,Handicap,Soft 7,True,4,4,Redstone Well,Redstone Well,Redstone Well,7,Annabel & Rob Archibald,Dylan Gibbons,$81,4
+R7,Randwick,7,2:30 pm General Australia Handicap,2000m,Handicap,Soft 7,True,6,6,Sir Dinadan,Sir Dinadan,Sir Dinadan,15,Chris Waller,Sam Clipperton,$13,7
+R7,Randwick,7,2:30 pm General Australia Handicap,2000m,Handicap,Soft 7,True,7,7,Starzintheireyes,Starzintheireyes,Starzintheireyes,5,Tom Charlton,Zac Lloyd,$4.6,6
+R7,Randwick,7,2:30 pm General Australia Handicap,2000m,Handicap,Soft 7,True,8,8,I Am The Empire,I Am The Empire,I Am The Empire,2,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),$81,2.5
+R7,Randwick,7,2:30 pm General Australia Handicap,2000m,Handicap,Soft 7,True,9,9,Brave Call,Brave Call,Brave Call,14,Kris Lees,Kerrin McEvoy,$21,8.3
+R7,Randwick,7,2:30 pm General Australia Handicap,2000m,Handicap,Soft 7,True,10,10,Tazima,Tazima,Tazima,13,Chris Waller,Siena Grima (a-3),$10,6.1
+R7,Randwick,7,2:30 pm General Australia Handicap,2000m,Handicap,Soft 7,True,11,11,King Of The Sea,King Of The Sea,King Of The Sea,9,Ciaron Maher,Adam Farragher,$2.9,12.7
+R7,Randwick,7,2:30 pm General Australia Handicap,2000m,Handicap,Soft 7,True,12,12,Pinhole,Pinhole,Pinhole,10,Chris Waller,Tyler Schiller,$35,9.3
+R7,Randwick,7,2:30 pm General Australia Handicap,2000m,Handicap,Soft 7,True,13,13,Placid Pearl,Placid Pearl,Placid Pearl,8,Matthew Smith,Winona Costin,$34,6.1
+R7,Randwick,7,2:30 pm General Australia Handicap,2000m,Handicap,Soft 7,True,14,14,Bestower,Bestower,Bestower,4,Kris Lees,Alysha Collett,$15,8.9
+R7,Randwick,7,2:30 pm General Australia Handicap,2000m,Handicap,Soft 7,True,15,15,Haaracaine,Haaracaine,Haaracaine,6,Nick Ryan,Andrew Adkins,$20,7.7
+R8,Randwick,8,3:05 pm Academy Brand Handicap,1600m,Handicap,Soft 7,True,1,1,Mighty Ulysses,Mighty Ulysses,Mighty Ulysses,10,Annabel & Rob Archibald,Braith Nock (a-1.5),$26,6.3
+R8,Randwick,8,3:05 pm Academy Brand Handicap,1600m,Handicap,Soft 7,True,2,2,Konasana,Konasana,Konasana,12,Chris Waller,Regan Bayliss,$34,7.4
+R8,Randwick,8,3:05 pm Academy Brand Handicap,1600m,Handicap,Soft 7,True,3,3,Shadizi,Shadizi,Shadizi,7,Chris Waller,Nash Rawiller,$9.5,7.1
+R8,Randwick,8,3:05 pm Academy Brand Handicap,1600m,Handicap,Soft 7,True,4,4,God's Window,God's Window,God's Window,17,Chris Waller,Siena Grima (a-3),$12,6.8
+R8,Randwick,8,3:05 pm Academy Brand Handicap,1600m,Handicap,Soft 7,True,5,5,Sky Lab,Sky Lab,Sky Lab,4,Paul Perry,Luke Rolls,$126,9.9
+R8,Randwick,8,3:05 pm Academy Brand Handicap,1600m,Handicap,Soft 7,True,6,6,Yet He Moves,Yet He Moves,Yet He Moves,3,Chris Waller,Kerrin McEvoy,$21,6.9
+R8,Randwick,8,3:05 pm Academy Brand Handicap,1600m,Handicap,Soft 7,True,7,7,Ruby Flyer,Ruby Flyer,Ruby Flyer,14,,Brad Widdup,$41,9.3
+R8,Randwick,8,3:05 pm Academy Brand Handicap,1600m,Handicap,Soft 7,True,8,8,The Three Hundred,The Three Hundred,The Three Hundred,5,Gai Waterhouse & Adrian Bott,Adam Hyeronimus,$10,4.9
+R8,Randwick,8,3:05 pm Academy Brand Handicap,1600m,Handicap,Soft 7,True,9,9,Diablo Bolt,Diablo Bolt,Diablo Bolt,2,Annabel & Rob Archibald,Anna Roper (a-2),$101,6.1
+R8,Randwick,8,3:05 pm Academy Brand Handicap,1600m,Handicap,Soft 7,True,10,10,Firm Agreement,Firm Agreement,Firm Agreement,11,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),$91,8.8
+R8,Randwick,8,3:05 pm Academy Brand Handicap,1600m,Handicap,Soft 7,True,11,11,Lincoln Rocks,Lincoln Rocks,Lincoln Rocks,8,Annabel & Rob Archibald,Sam Clipperton,$46,6.7
+R8,Randwick,8,3:05 pm Academy Brand Handicap,1600m,Handicap,Soft 7,True,12,12,Asgarda,Asgarda,Asgarda,18,John Sargent,Alysha Collett,$13,4.5
+R8,Randwick,8,3:05 pm Academy Brand Handicap,1600m,Handicap,Soft 7,True,13,13,Glad You Think,Glad You Think,Glad You Think,9,John Sargent,Ashley Morgan,$6.5,4.6
+R8,Randwick,8,3:05 pm Academy Brand Handicap,1600m,Handicap,Soft 7,True,14,14,Time Quest,Time Quest,Time Quest,13,Matthew Smith,Reece Jones,$46,9.9
+R8,Randwick,8,3:05 pm Academy Brand Handicap,1600m,Handicap,Soft 7,True,15,15,Jamberoo,Jamberoo,Jamberoo,6,Tom Charlton,Dylan Gibbons,$15,2.5
+R8,Randwick,8,3:05 pm Academy Brand Handicap,1600m,Handicap,Soft 7,True,16,16,Walking Painting,Walking Painting,Walking Painting,15,Richard & Will Freedman,Andrew Adkins,$15,3.1
+R8,Randwick,8,3:05 pm Academy Brand Handicap,1600m,Handicap,Soft 7,True,17,17,Until Valhalla,Until Valhalla,Until Valhalla,1,Ciaron Maher,Adam Farragher,$26,5.6
+R8,Randwick,8,3:05 pm Academy Brand Handicap,1600m,Handicap,Soft 7,True,18,18,Spione,Spione,Spione,16,"Michael, John & Wayne Hawkes",Tyler Schiller,$3.5,7.8
+R9,Randwick,9,3:45 pm Uphire Handicap,1000m,Handicap,Soft 7,True,1,1,Lyles,Lyles,Lyles,3,Matthew Smith,Zac Lloyd,$3.25,1.8
+R9,Randwick,9,3:45 pm Uphire Handicap,1000m,Handicap,Soft 7,True,2,2,Amazing Eagle,Amazing Eagle,Amazing Eagle,5,Bjorn Baker,Nash Rawiller,$5.5,4.8
+R9,Randwick,9,3:45 pm Uphire Handicap,1000m,Handicap,Soft 7,True,3,3,Snack Bar,Snack Bar,Snack Bar,6,Bjorn Baker,Joshua Parr,$4.8,4.3
+R9,Randwick,9,3:45 pm Uphire Handicap,1000m,Handicap,Soft 7,True,4,4,Winning Proposal,Winning Proposal,Winning Proposal,11,John Thompson,Anna Roper (a-2),$26,5.4
+R9,Randwick,9,3:45 pm Uphire Handicap,1000m,Handicap,Soft 7,True,6,6,Silver Wedding,Silver Wedding,Silver Wedding,1,Ciaron Maher,Kerrin McEvoy,$11,7.6
+R9,Randwick,9,3:45 pm Uphire Handicap,1000m,Handicap,Soft 7,True,7,7,Negotiations,Negotiations,Negotiations,9,Ciaron Maher,Adam Farragher,$46,6
+R9,Randwick,9,3:45 pm Uphire Handicap,1000m,Handicap,Soft 7,True,8,8,Shall Be,Shall Be,Shall Be,14,Mark Minervini,Dylan Gibbons,$27,2.2
+R9,Randwick,9,3:45 pm Uphire Handicap,1000m,Handicap,Soft 7,True,9,9,Prima Bella,Prima Bella,Prima Bella,8,Matthew Smith,Ashley Morgan,$16,3.2
+R9,Randwick,9,3:45 pm Uphire Handicap,1000m,Handicap,Soft 7,True,10,10,Century Song,Century Song,Century Song,13,Robert & Luke Price,Brock Ryan,$23,4.6
+R9,Randwick,9,3:45 pm Uphire Handicap,1000m,Handicap,Soft 7,True,13,13,Kreon,Kreon,Kreon,7,Danny Williams,Tyler Schiller,$26,6.1
+R9,Randwick,9,3:45 pm Uphire Handicap,1000m,Handicap,Soft 7,True,14,14,Massira,Massira,Massira,2,Matthew Dale,Alysha Collett,$13,5.7
+R9,Randwick,9,3:45 pm Uphire Handicap,1000m,Handicap,Soft 7,True,15,15,Against The Law,Against The Law,Against The Law,12,Bryce Heys,Mollie Fitzgerald (a-3),$31,6.1
+R9,Randwick,9,3:45 pm Uphire Handicap,1000m,Handicap,Soft 7,True,16,16,Dear Jewel,Dear Jewel,Dear Jewel,16,Joseph Pride,Andrew Adkins,$23,5.2
+R10,Randwick,10,4:25 pm Wilson Asset Management Handicap,1400m,Handicap,Soft 7,True,1,1,Green Shadows,Green Shadows,Green Shadows,16,Gerald Ryan & Sterling Alexiou,Siena Grima (a-3),$27,6.9
+R10,Randwick,10,4:25 pm Wilson Asset Management Handicap,1400m,Handicap,Soft 7,True,2,2,Stay Focused,Stay Focused,Stay Focused,9,Ciaron Maher,Regan Bayliss,$20,2.3
+R10,Randwick,10,4:25 pm Wilson Asset Management Handicap,1400m,Handicap,Soft 7,True,3,3,Sergeant Major,Sergeant Major,Sergeant Major,5,Ciaron Maher,Mollie Fitzgerald (a-3),$14,4.4
+R10,Randwick,10,4:25 pm Wilson Asset Management Handicap,1400m,Handicap,Soft 7,True,4,4,Fiddlers Green,Fiddlers Green,Fiddlers Green,18,Annabel & Rob Archibald,Nash Rawiller,$7,5.7
+R10,Randwick,10,4:25 pm Wilson Asset Management Handicap,1400m,Handicap,Soft 7,True,5,5,Mafia,Mafia,Mafia,3,Mitchell Beer & George Carpenter,Dylan Gibbons,$17,2
+R10,Randwick,10,4:25 pm Wilson Asset Management Handicap,1400m,Handicap,Soft 7,True,6,6,Mawjood,Mawjood,Mawjood,10,Bjorn Baker,Joshua Parr,$6,3.7
+R10,Randwick,10,4:25 pm Wilson Asset Management Handicap,1400m,Handicap,Soft 7,True,7,7,Mr Chaplin,Mr Chaplin,Mr Chaplin,17,Tom Charlton,Zac Lloyd,$17,4.2
+R10,Randwick,10,4:25 pm Wilson Asset Management Handicap,1400m,Handicap,Soft 7,True,8,8,Anythink Goes,Anythink Goes,Anythink Goes,15,,Matthew Smith,$61,6.2
+R10,Randwick,10,4:25 pm Wilson Asset Management Handicap,1400m,Handicap,Soft 7,True,9,9,Forbidden Riff,Forbidden Riff,Forbidden Riff,2,Richard & Will Freedman,Braith Nock (a-1.5),$67,5
+R10,Randwick,10,4:25 pm Wilson Asset Management Handicap,1400m,Handicap,Soft 7,True,10,10,Iceman,Iceman,Iceman,13,Clarry Conners,Andrew Adkins,$19,7.2
+R10,Randwick,10,4:25 pm Wilson Asset Management Handicap,1400m,Handicap,Soft 7,True,11,11,Interjection,Interjection,Interjection,14,Tom Charlton,Anna Roper (a-2),$23,6.8
+R10,Randwick,10,4:25 pm Wilson Asset Management Handicap,1400m,Handicap,Soft 7,True,12,12,King Tut,King Tut,King Tut,1,Ciaron Maher,Adam Hyeronimus,$4.6,7.2
+R10,Randwick,10,4:25 pm Wilson Asset Management Handicap,1400m,Handicap,Soft 7,True,13,13,Who Ever Thought,Who Ever Thought,Who Ever Thought,8,Jeremy Gask,Zac Wadick (a-2),$91,3
+R10,Randwick,10,4:25 pm Wilson Asset Management Handicap,1400m,Handicap,Soft 7,True,14,14,Winston Hills,Winston Hills,Winston Hills,4,Matthew Smith,Ashley Morgan,$17,6.3
+R10,Randwick,10,4:25 pm Wilson Asset Management Handicap,1400m,Handicap,Soft 7,True,15,15,Comedy,Comedy,Comedy,12,Joseph Pride,Sam Clipperton,$31,8.6
+R10,Randwick,10,4:25 pm Wilson Asset Management Handicap,1400m,Handicap,Soft 7,True,16,16,Frontex,Frontex,Frontex,6,"Michael, John & Wayne Hawkes",Tyler Schiller,$11,3.2
+R10,Randwick,10,4:25 pm Wilson Asset Management Handicap,1400m,Handicap,Soft 7,True,17,17,Invader Zim,Invader Zim,Invader Zim,11,Chris Waller,Kerrin McEvoy,$11,6.5
+R10,Randwick,10,4:25 pm Wilson Asset Management Handicap,1400m,Handicap,Soft 7,True,18,18,Atmospheric Rock,Atmospheric Rock,Atmospheric Rock,7,Danny Williams,Winona Costin,$41,10.8

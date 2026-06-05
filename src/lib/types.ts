@@ -16,14 +16,24 @@ export type Race = {
 export type GearState = {
   FT?: number[];
   B?: number[];
+  /** Legacy canon bandage locations; migrated from older assessments. */
   CB?: number[];
   INJ?: number[];
+};
+
+export type WetBodyType = "light" | "medium" | "strong" | "heavy";
+export type WetFeet = "small" | "average" | "big" | "soft_ground";
+
+export type WetState = {
+  bodyType?: WetBodyType;
+  feet?: WetFeet;
 };
 
 export type Assessment = {
   positive: Record<string, number>;
   negative: Record<string, number>;
   gear: GearState;
+  wet?: WetState;
   notes: string;
   updatedAt: string;
 };

@@ -1,0 +1,66 @@
+assessment_key,race_id,race_title,runner_no,horse,barrier,trainer,jockey,odds,positive_json,negative_json,gear_json,notes,total_positive,total_negative,net,updated_at
+R1-1,R1,12:55 pm Arg Building Services 2yo Maiden Plate,1,Dashing Splendour (HT),14,Tommy Wong,Louis Beuzelin,$11,"{""Healthy+"":1}",{},{},,1,0,1,2026-05-14T03:12:15.481Z
+R1-2,R1,12:55 pm Arg Building Services 2yo Maiden Plate,2,Don't Doubt Frank (HT),2,Brad Widdup,Tyler Schiller,$10,,,,,0,0,0,
+R1-4,R1,12:55 pm Arg Building Services 2yo Maiden Plate,4,Slander,9,Nathan Doyle,Ashley Morgan,$2.5,{},"{""Short-"":-1}",{},,0,1,-1,2026-05-14T03:12:24.822Z
+R1-5,R1,12:55 pm Arg Building Services 2yo Maiden Plate,5,Zobellan,4,Kim Waugh,Jay Ford,$17,{},"{""K-"":-1,""BH-"":0}",{},,0,1,-1,2026-05-14T03:13:03.445Z
+R1-6,R1,12:55 pm Arg Building Services 2yo Maiden Plate,6,Asagao,15,David Payne,Kerrin McEvoy,$23,{},"{""K-"":0,""BH-"":-2}",{},,0,2,-2,2026-05-14T03:13:11.276Z
+R1-10,R1,12:55 pm Arg Building Services 2yo Maiden Plate,10,Sondera,3,Chris Waller,Zac Lloyd,$10,{},"{""BH-"":-2}",{},,0,2,-2,2026-05-14T03:13:15.888Z
+R1-11,R1,12:55 pm Arg Building Services 2yo Maiden Plate,11,Spalpeen,5,John Sargent,Alysha Collett,$51,,,,,0,0,0,
+R1-12,R1,12:55 pm Arg Building Services 2yo Maiden Plate,12,Tumorrama,1,Ron Quinton,Louise Day,$4.6,{},{},"{""FT"":[4]}",,0,0,0,2026-05-14T03:13:29.622Z
+R1-13,R1,12:55 pm Arg Building Services 2yo Maiden Plate,13,Royal Wootton,11,Gai Waterhouse & Adrian Bott,Rachel King,$15,"{""Healthy+"":1}",{},{},,1,0,1,2026-05-14T03:13:35.250Z
+R1-17,R1,12:55 pm Arg Building Services 2yo Maiden Plate,17,Behindcloseddoors,7,Ciaron Maher,Adam Farragher,$31,,,,,0,0,0,
+R1-18,R1,12:55 pm Arg Building Services 2yo Maiden Plate,18,Gridlock,6,Michael Freedman,Andrew Adkins,$6.5,"{""BH+"":1}",{},{},,1,0,1,2026-05-14T03:13:43.571Z
+R2-1,R2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,1,Our Huntress,4,Michael Freedman,James McDonald,$1.75,{},"{""BH-"":-1,""Dull-"":-1}",{},,0,2,-2,2026-05-14T03:31:59.920Z
+R2-2,R2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,2,Fernweh b,10,Joseph Pride,Sam Clipperton,$7.5,"{""Dapple+"":1}",{},{},,1,0,1,2026-05-14T03:32:04.178Z
+R2-5,R2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,5,Dirty Summer,7,Jim & Greg Lee,Reece Jones,$11,"{""Healthy+"":1}",{},{},,1,0,1,2026-05-14T03:43:12.207Z
+R2-6,R2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,6,Miss Supernova,1,Gerald Ryan & Sterling Alexiou,Tom Sherry,$3.6,{},"{""BH-"":0,""Short-"":-1}",{},,0,1,-1,2026-05-14T03:44:26.912Z
+R2-7,R2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,7,Monocru,6,Ciaron Maher,Adam Farragher,$9,,,,,0,0,0,
+R2-8,R2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,8,Don't What Me (D/A),3,Jason Coyle,Regan Bayliss,$17,,,,,0,0,0,
+R2-9,R2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,9,Cosmora o(HT),2,Peter Green,Grant Buckley,$151,,,,,0,0,0,
+R2-10,R2,1:35 pm Gremmo Homes/imsglobal Super Maiden Handicap,10,Denise's Gal o,9,Marc & Mitchell Conners,Tyler Schiller,$34,,,,,0,0,0,
+R3-1,R3,2:10 pm Micway Midway Benchmark 64 Handicap,1,Rebel Rhapsody dsh,1,Nacim Dilmi,Tommy Berry,$2.8,{},"{""K-"":-1}",{},,0,1,-1,2026-05-14T05:36:11.147Z
+R3-4,R3,2:10 pm Micway Midway Benchmark 64 Handicap,4,Up To Mischief,9,Jason Deamer,Zac Lloyd,$2.35,"{""Healthy+"":1}","{""BH-"":-1}",{},,1,1,0,2026-05-14T05:36:27.055Z
+R3-5,R3,2:10 pm Micway Midway Benchmark 64 Handicap,5,Murphilly,2,Kylie Gavenlock,Grant Buckley,$13,"{""Dapple+"":1,""BH+"":1}",{},{},,2,0,2,2026-05-14T05:36:32.607Z
+R3-6,R3,2:10 pm Micway Midway Benchmark 64 Handicap,6,Tessy Tee ts,3,Richard Collett,Andrew Calder,$5,,,,,0,0,0,
+R3-7,R3,2:10 pm Micway Midway Benchmark 64 Handicap,7,Queen Bess s,4,Kylie Gavenlock,Mollie Fitzgerald (a-1.5),$26,{},"{""BH-"":-1}",{},,0,1,-1,2026-05-14T05:36:49.005Z
+R3-8,R3,2:10 pm Micway Midway Benchmark 64 Handicap,8,Koning so,6,Richard & Will Freedman,Chad Schofield (a0.5),$11,,,,,0,0,0,
+R3-9,R3,2:10 pm Micway Midway Benchmark 64 Handicap,9,Starlight Nation do,8,Amanda Turner,Winona Costin,$41,,,,,0,0,0,
+R4-1,R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,1,Smoke 'N' Darts (HT),15,Blake Ryan,Jay Ford,$4.4,"{""Dapple+"":1}","{""BH-"":-2,""K-"":-1}",{},,1,3,-2,2026-05-14T05:37:29.749Z
+R4-3,R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,3,Charm Destination,8,Kristen Buchanan,Olivia Chambers (a-2),$10,,,,,0,0,0,
+R4-5,R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,5,Escargoes b(HT),2,Brad Widdup,Tommy Berry,$2.3,"{""BH+"":2}",{},{},,2,0,2,2026-05-14T05:37:34.602Z
+R4-6,R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,6,Artfull,6,Sara Ryan,Reece Jones,$41,,,,,0,0,0,
+R4-7,R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,7,Last Tour (HT)(D/A),11,Brad Widdup,Leeshelle Small (a-3),$16,,,,,0,0,0,
+R4-8,R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,8,Bangelz (HT),4,Terry Croft,Siena Grima (a-2),$51,,,,,0,0,0,
+R4-9,R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,9,Conjola Girl (HT),1,Edward O'Rourke,Rachel King,$19,,,,,0,0,0,
+R4-11,R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,11,Spearpoint,3,Kristen Buchanan,Mollie Fitzgerald (a-1.5),$16,"{""BH+"":1}",{},{},,1,0,1,2026-05-14T05:37:50.955Z
+R4-12,R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,12,Winning Lover,7,Sara Ryan,Lee Magorrian,$6,"{""BH+"":1}","{""Aggressive-"":-1}",{},,1,1,0,2026-05-14T05:37:58.267Z
+R4-14,R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,14,Galactic Force,5,Sara Ryan,Alysha Collett,$11,,,,,0,0,0,
+R4-15,R4,2:50 pm Palin Management Provincial 3yo Maiden Handicap,15,Bold Alliance o(HT),10,Blake Ryan,Emma Ly (a-3),$34,{},"{""BH-"":-1,""Light-"":0,""Heavy/Fat-"":-2}",{},,0,3,-3,2026-05-14T05:38:18.590Z
+R5-1,R5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,1,Raskol s,8,Peter Snowden,Tommy Berry,$3.3,{},{},"{""FT"":[3,4]}",,0,0,0,2026-05-14T05:39:03.624Z
+R5-2,R5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,2,Into Brooklyn ds,4,Nathan Doyle,Liberty Smyth (a-3),$4.8,,,,,0,0,0,
+R5-3,R5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,3,Nullarbor Jane t,5,John Sargent,Siena Grima (a-2),$5.5,"{""BH+"":1,""Dapple+"":1}",{},{},,2,0,2,2026-05-14T05:39:17.650Z
+R5-5,R5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,5,Tides Turning th(HT),1,Terry Croft,Mollie Fitzgerald (a-1.5),$19,"{""BH+"":1}",{},{},,1,0,1,2026-05-14T05:39:21.416Z
+R5-6,R5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,6,Purple Rose sb,10,John Thompson,Sam Clipperton,$11,,,,,0,0,0,
+R5-7,R5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,7,Singing Star s,3,Damien Lane,Alysha Collett,$18,{},"{""BH-"":-1,""Dry-"":0,""Dull-"":-1}",{},,0,2,-2,2026-05-14T05:39:36.733Z
+R5-8,R5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,8,Tennessee Dolly d,7,Richard Litt,Chad Schofield,$4.4,{},"{""BH-"":-1}",{},,0,1,-1,2026-05-14T05:39:41.287Z
+R5-10,R5,3:25 pm Griffo Cup F&m Benchmark 64 Handicap,10,River Pat ds,2,Kim Waugh,Keagan Latham,$8,"{""BH+"":2}","{""Aggressive-"":-1}",{},,2,1,1,2026-05-14T05:39:57.190Z
+R6-1,R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,1,Desi Emperor tcdsh(HT),7,Tommy Wong,Jeff Penza,$8.5,{},"{""BH-"":-2}",{},,0,2,-2,2026-05-14T06:55:28.520Z
+R6-3,R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,3,Sociable d,9,Ciaron Maher,Zac Lloyd,$2.1,,,,,0,0,0,
+R6-4,R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,4,Starros tcds(HT),3,Terry Croft,Mollie Fitzgerald (a-1.5),$19,,,,,0,0,0,
+R6-5,R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,5,Myriad,6,Nathan Doyle,Lee Magorrian,$3.8,"{""BH+"":1}",{},{},,1,0,1,2026-05-14T06:55:33.018Z
+R6-6,R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,6,Ima Capri tcd,2,Sara Ryan,Andrew Adkins,$12,,,,,0,0,0,
+R6-7,R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,7,Last Druid s,1,Tracey Bartley,Alysha Collett,$7.5,,,,,0,0,0,
+R6-8,R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,8,Clifton Springs tdsh,10,Marc & Mitchell Conners,Andrew Calder,$12,{},"{""BH-"":-1,""Dull-"":-1}",{},,0,2,-2,2026-05-14T06:55:41.822Z
+R6-9,R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,9,Midnight Dream ds,4,Paul Clisby,Siena Grima (a-2),$29,{},"{""BH-"":-1}",{},,0,1,-1,2026-05-14T06:55:46.544Z
+R6-10,R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,10,Surf Sonic h(HT),8,Karen Outtrim,Louis Beuzelin,$151,{},"{""Stiff-"":-2}",{},,0,2,-2,2026-05-14T06:55:55.151Z
+R6-11,R6,4:05 pm Hudson Trade Centre Mitre 10 Cg&e Benchmark 64 Handicap,11,Johnny Smash ho(HT),11,Mike Van Gestel,Reece Jones,$151,{},"{""BH-"":-2}",{},,0,2,-2,2026-05-14T06:56:00.447Z
+R7-1,R7,4:40 pm 3finance Class 1 & Maiden Plate,1,Flats (HT),11,Wendy Haynes,Robyn Freeman,$61,,,,,0,0,0,
+R7-3,R7,4:40 pm 3finance Class 1 & Maiden Plate,3,My Greek God do,1,Matthew Smith,Winona Costin,$23,,,,,0,0,0,
+R7-4,R7,4:40 pm 3finance Class 1 & Maiden Plate,4,The Big Blue ts,8,Tom Charlton,Zac Lloyd,$2.6,,,,,0,0,0,
+R7-5,R7,4:40 pm 3finance Class 1 & Maiden Plate,5,The Iron Star t(HT),9,Marc Chevalier,Tyler Schiller,$12,"{""BH+"":1,""Calm+"":0,""Alert+"":1}",{},{},,2,0,2,2026-05-14T06:54:20.259Z
+R7-6,R7,4:40 pm 3finance Class 1 & Maiden Plate,6,Sox s(HT),3,Tommy Wong,Louis Beuzelin,$19,,,,,0,0,0,
+R7-7,R7,4:40 pm 3finance Class 1 & Maiden Plate,7,Valentiago s,6,Peter Snowden,Zac Wadick,$6.5,{},"{""BH-"":-1}",{},,0,1,-1,2026-05-14T06:54:34.354Z
+R7-8,R7,4:40 pm 3finance Class 1 & Maiden Plate,8,Don't Tell Polly s(HT),7,Brad Widdup,Rachel King,$13,"{""BH+"":2}",{},{},,2,0,2,2026-05-14T06:54:39.773Z
+R7-11,R7,4:40 pm 3finance Class 1 & Maiden Plate,11,Aleutian (HT),4,Brad Widdup,Leeshelle Small (a-3),$101,,,,,0,0,0,
+R7-12,R7,4:40 pm 3finance Class 1 & Maiden Plate,12,Jade Sunset,5,Tracey Bartley,Alysha Collett,$6.5,,,,,0,0,0,
+R7-13,R7,4:40 pm 3finance Class 1 & Maiden Plate,13,Made In Italy b,2,Matthew Smith,Kerrin McEvoy,$3.3,{},"{""BH-"":-3}",{},,0,3,-3,2026-05-14T06:54:47.513Z

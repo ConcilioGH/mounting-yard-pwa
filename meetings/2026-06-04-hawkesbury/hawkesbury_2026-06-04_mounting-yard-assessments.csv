@@ -1,0 +1,68 @@
+assessment_key,race_id,race_title,runner_no,horse,barrier,trainer,jockey,odds,positive_json,negative_json,gear_json,wet_body_type,wet_feet,notes,total_positive,total_negative,net,updated_at
+R1-1,R1,12:00 pm Hrc Motel Maiden Plate,1,Master Of War,5,Matthew Smith,Ashley Morgan,$15,,,,,,,0,0,0,
+R1-2,R1,12:00 pm Hrc Motel Maiden Plate,2,Donatello,6,Chris Waller,Tommy Berry,$1.55,,,,,,,0,0,0,
+R1-3,R1,12:00 pm Hrc Motel Maiden Plate,3,Scoop The Pool,2,Tom Charlton,Andrew Adkins,$3.8,,,,,,,0,0,0,
+R1-5,R1,12:00 pm Hrc Motel Maiden Plate,5,Circus Girl,8,Karen Outtrim,Jay Ford,$81,,,,,,,0,0,0,
+R1-6,R1,12:00 pm Hrc Motel Maiden Plate,6,Aurora Effect,7,Edward Cummings,Sam Clipperton,$8.5,,,,,,,0,0,0,
+R1-7,R1,12:00 pm Hrc Motel Maiden Plate,7,Chaithnia,1,Matthew Smith,Kerrin McEvoy,$16,,,,,,,0,0,0,
+R1-8,R1,12:00 pm Hrc Motel Maiden Plate,8,Sharbino,3,Gary Nickson,Mitchell Bell,$13,,,,,,,0,0,0,
+R2-2,R2,12:35 pm Family Funday 19 July F&m Maiden Plate,2,Bold Alliance,4,Blake Ryan,Emma Ly (a-3),$20,,,,,,,0,0,0,
+R2-3,R2,12:35 pm Family Funday 19 July F&m Maiden Plate,3,Ho Aloha,9,David Pfieffer,Alysha Collett,$9,,,,,,,0,0,0,
+R2-4,R2,12:35 pm Family Funday 19 July F&m Maiden Plate,4,Mind Ya Bizz,7,Brad Widdup,Tommy Berry,$3,{},"{""BH-"":-2}",{},,,,0,2,-2,2026-06-04T02:41:43.781Z
+R2-6,R2,12:35 pm Family Funday 19 July F&m Maiden Plate,6,Rising Revolution,2,Gerald Ryan & Sterling Alexiou,Tyler Schiller,$3.4,{},"{""BH-"":0}",{},,,,0,0,0,2026-06-04T02:42:02.486Z
+R2-7,R2,12:35 pm Family Funday 19 July F&m Maiden Plate,7,Stardust Memories,6,Gai Waterhouse & Adrian Bott,Regan Bayliss,$3.4,{},"{""BH-"":-1}",{},,,,0,1,-1,2026-06-04T02:42:05.534Z
+R2-8,R2,12:35 pm Family Funday 19 July F&m Maiden Plate,8,Tszinsi,3,Lee & Cherie Curtis,Jeff Penza,$31,,,,,,,0,0,0,
+R2-9,R2,12:35 pm Family Funday 19 July F&m Maiden Plate,9,Scuro Star,8,Peter Snowden,Rachel King,$8,{},"{""BH-"":-2}",{},,,,0,2,-2,2026-06-04T02:41:47.350Z
+R3-1,R3,1:10 pm De Bortoli Wines Midway Maiden Handicap,1,Jonson,10,Marc & Mitchell Conners,Deanne Panya,$3.5,{},"{""BH-"":0,""Aggressive-"":-1}",{},,,,0,1,-1,2026-06-04T08:55:56.142Z
+R3-2,R3,1:10 pm De Bortoli Wines Midway Maiden Handicap,2,Cellito Sands,8,Peter Green,Grant Buckley,$26,{},{},"{""FT"":[3,4]}",,,,0,0,0,2026-06-04T08:56:05.980Z
+R3-3,R3,1:10 pm De Bortoli Wines Midway Maiden Handicap,3,Yeszem,2,Brad Widdup,Tyler Schiller,$3.2,{},"{""BH-"":-1}",{},,,,0,1,-1,2026-06-04T08:56:17.620Z
+R3-5,R3,1:10 pm De Bortoli Wines Midway Maiden Handicap,5,Heard Of Him,5,Richard & Will Freedman,Ashley Morgan,$3.6,"{""Clean+"":1}",{},{},,,,1,0,1,2026-06-04T08:56:21.933Z
+R3-6,R3,1:10 pm De Bortoli Wines Midway Maiden Handicap,6,Acquaro,6,Fabio Martino,Siena Grima (a-2),$19,{},"{""Heavy/Fat-"":-1}",{},,,,0,1,-1,2026-06-04T08:56:32.113Z
+R3-7,R3,1:10 pm De Bortoli Wines Midway Maiden Handicap,7,Heeza Steve,7,Mitchell & Desiree Kearney,Emma Ly (a-3),$101,,,,,,,0,0,0,
+R3-8,R3,1:10 pm De Bortoli Wines Midway Maiden Handicap,8,Kuwait,3,Daniel Robinson,Jay Ford,$11,,,,,,,0,0,0,
+R3-9,R3,1:10 pm De Bortoli Wines Midway Maiden Handicap,9,Lady Winston,9,Marc & Mitchell Conners,Rachel King,$23,"{""Dapple+"":1}","{""BH-"":-3}",{},,,,1,3,-2,2026-06-04T08:56:43.197Z
+R3-10,R3,1:10 pm De Bortoli Wines Midway Maiden Handicap,10,Yes Arnie,1,Theresa Bateup,Brock Ryan,$8.5,,,,,,,0,0,0,
+R4-1,R4,1:50 pm Xxxx Gold Class 1 Handicap,1,Abandonment,3,Bjorn Baker,Tommy Berry,$3.9,{},"{""BH-"":-2}",{},,,,0,2,-2,2026-06-04T08:57:26.636Z
+R4-2,R4,1:50 pm Xxxx Gold Class 1 Handicap,2,Call Me Mojo,5,David Pfieffer,Kerrin McEvoy,$6,,,,,,,0,0,0,
+R4-3,R4,1:50 pm Xxxx Gold Class 1 Handicap,3,Clear Blue Day,1,Richard & Will Freedman,Lee Magorrian,$13,,,,,,,0,0,0,
+R4-5,R4,1:50 pm Xxxx Gold Class 1 Handicap,5,Hammoon Heroine,4,Matthew Smith,Reece Jones,$6,"{""Clean+"":1}",{},{},,,,1,0,1,2026-06-04T08:57:30.787Z
+R4-6,R4,1:50 pm Xxxx Gold Class 1 Handicap,6,Obsidian Dream,6,Joseph Pride,Sam Clipperton,$2.8,"{""Clean+"":1}",{},{},,,,1,0,1,2026-06-04T08:57:32.402Z
+R4-7,R4,1:50 pm Xxxx Gold Class 1 Handicap,7,Rose Water,2,Jason Deamer,Siena Grima (a-2),$5,,,,,,,0,0,0,
+R4-8,R4,1:50 pm Xxxx Gold Class 1 Handicap,8,Johnny Smash,7,Mike Van Gestel,Louis Beuzelin,$126,{},"{""BH-"":-1}",{},,,,0,1,-1,2026-06-04T08:58:01.146Z
+R5-1,R5,2:25 pm Davo's Dash 3yo Fillies Maiden Plate,1,Cosmic Order,1,Matthew Smith,Ashley Morgan,$6,"{""Defined+"":1,""Dapple+"":1}","{""BH-"":-1}",{},,,,2,1,1,2026-06-04T08:58:25.332Z
+R5-3,R5,2:25 pm Davo's Dash 3yo Fillies Maiden Plate,3,Majestic Legend,6,Les Bridge,Jason Collett,$4.2,"{""Healthy+"":1}","{""BH-"":-1}",{},,,,1,1,0,2026-06-04T08:58:31.044Z
+R5-4,R5,2:25 pm Davo's Dash 3yo Fillies Maiden Plate,4,Monocru,5,Ciaron Maher,Adam Farragher,$6.5,{},"{""BH-"":-1}",{},,,,0,1,-1,2026-06-04T08:58:34.644Z
+R5-5,R5,2:25 pm Davo's Dash 3yo Fillies Maiden Plate,5,Radicals,7,Joseph Pride,Kerrin McEvoy,$4.2,{},"{""Dull-"":-1}",{},,,,0,1,-1,2026-06-04T08:58:39.354Z
+R5-6,R5,2:25 pm Davo's Dash 3yo Fillies Maiden Plate,6,Reign 'Em In,2,Annabel & Rob Archibald,Tom Sherry,$3.25,,,,,,,0,0,0,
+R5-8,R5,2:25 pm Davo's Dash 3yo Fillies Maiden Plate,8,Shangri La Rose,4,Gai Waterhouse & Adrian Bott,Rachel King,$8.5,"{""Clean+"":1}",{},{},,,,1,0,1,2026-06-04T08:58:43.979Z
+R5-9,R5,2:25 pm Davo's Dash 3yo Fillies Maiden Plate,9,Shinko Star,3,Marc Chevalier,Tyler Schiller,$23,"{""Clean+"":1}",{},{},,Big / Splayed,,1,0,1,2026-06-04T08:58:52.911Z
+R6-1,R6,3:05 pm Pioneer Services Provincial Class 1 Handicap,1,Rustemo,2,Kris Lees,Jason Collett,$4,,,,,,,0,0,0,
+R6-2,R6,3:05 pm Pioneer Services Provincial Class 1 Handicap,2,Sapling,6,Nacim Dilmi,Kerrin McEvoy,$2,,,,,,,0,0,0,
+R6-3,R6,3:05 pm Pioneer Services Provincial Class 1 Handicap,3,Ima Capri,1,Sara Ryan,Lee Magorrian,$19,"{""Clean+"":2}",{},{},,,,2,0,2,2026-06-04T08:59:12.496Z
+R6-4,R6,3:05 pm Pioneer Services Provincial Class 1 Handicap,4,Hunter One,9,Theresa Bateup,Brock Ryan,$6.5,{},{},{},,Big / Splayed,,0,0,0,2026-06-04T08:59:19.121Z
+R6-5,R6,3:05 pm Pioneer Services Provincial Class 1 Handicap,5,Bikini Babe,4,Theresa Bateup,Jessica Taylor,$41,{},"{""Dull-"":-2}",{},,,,0,2,-2,2026-06-04T08:59:30.098Z
+R6-6,R6,3:05 pm Pioneer Services Provincial Class 1 Handicap,6,Koritsi,8,Kylie Gavenlock,Chad Lever (a1),$26,,,,,,,0,0,0,
+R6-8,R6,3:05 pm Pioneer Services Provincial Class 1 Handicap,8,Turning Circle,5,Nathan Doyle,Shannen Llewellyn (a-2),$6.5,,,,,,,0,0,0,
+R6-9,R6,3:05 pm Pioneer Services Provincial Class 1 Handicap,9,Exothrill,3,Peter Green,Olivia Chambers (a-2),$151,,,,,,,0,0,0,
+R6-10,R6,3:05 pm Pioneer Services Provincial Class 1 Handicap,10,Girly Pop,7,Jason Attard,Rachel King,$14,{},"{""BH-"":-1,""K-"":-1,""N-"":-1}",{},,,,0,3,-3,2026-06-04T08:59:39.580Z
+R7-1,R7,3:40 pm Elite Sand & Soil 5yo&up Benchmark 64 Handicap,1,Divine Vicky,3,Matthew Smith,Siena Grima (a-2),$5,"{""Clean+"":1,""Dapple+"":1}",{},{},,Big / Splayed,,2,0,2,2026-06-04T09:00:06.424Z
+R7-2,R7,3:40 pm Elite Sand & Soil 5yo&up Benchmark 64 Handicap,2,Prinzerro,1,Ciaron Maher,Kerrin McEvoy,$6,{},"{""Dull-"":-1}",{},,,,0,1,-1,2026-06-04T09:00:12.694Z
+R7-3,R7,3:40 pm Elite Sand & Soil 5yo&up Benchmark 64 Handicap,3,Still Alice,5,Lee & Cherie Curtis,Jeff Penza,$6.5,{},{},{},,,dump,0,0,0,2026-06-04T09:00:19.984Z
+R7-4,R7,3:40 pm Elite Sand & Soil 5yo&up Benchmark 64 Handicap,4,Light Infantry,6,Gayna Williams,Jason Collett,$4.6,{},"{""Heavy/Fat-"":-1}",{},,,,0,1,-1,2026-06-04T09:00:48.014Z
+R7-5,R7,3:40 pm Elite Sand & Soil 5yo&up Benchmark 64 Handicap,5,Gogmagog,7,Kylie Gavenlock,Mollie Fitzgerald,$14,,,,,,,0,0,0,
+R7-6,R7,3:40 pm Elite Sand & Soil 5yo&up Benchmark 64 Handicap,6,Gandalf,8,Brad Widdup,Tyler Schiller,$5,"{""Clean+"":2}",{},{},,,,2,0,2,2026-06-04T09:00:54.993Z
+R7-7,R7,3:40 pm Elite Sand & Soil 5yo&up Benchmark 64 Handicap,7,Lady Shenanigans,2,Mitchell & Desiree Kearney,Olivia Chambers (a-2),$26,{},{},"{""FT"":[3,4]}",,,,0,0,0,2026-06-04T09:01:02.022Z
+R7-8,R7,3:40 pm Elite Sand & Soil 5yo&up Benchmark 64 Handicap,8,Magnolia Jewel,9,Tracey Bartley,Shannen Llewellyn (a-2),$16,,,,,,,0,0,0,
+R7-9,R7,3:40 pm Elite Sand & Soil 5yo&up Benchmark 64 Handicap,9,Midnight Dream,10,Paul Clisby,Jacob Stiff (a-3),$17,,,,,,,0,0,0,
+R7-10,R7,3:40 pm Elite Sand & Soil 5yo&up Benchmark 64 Handicap,10,Clifton Springs,4,Marc & Mitchell Conners,Deanne Panya,$10,,,,,,,0,0,0,
+R8-1,R8,4:20 pm Clarendon Tavern 5yo&up Benchmark 64 Handicap,1,Coto De Caza,6,Todd Howlett,Siena Grima (a-2),$12,"{""Clean+"":1}",{},{},,,,1,0,1,2026-06-04T09:01:16.662Z
+R8-2,R8,4:20 pm Clarendon Tavern 5yo&up Benchmark 64 Handicap,2,Classic Deel,3,Kris Lees,Jason Collett,$4.8,,,,,,,0,0,0,
+R8-3,R8,4:20 pm Clarendon Tavern 5yo&up Benchmark 64 Handicap,3,Just Shane,10,Tara & Philippe Vigouroux,Mollie Fitzgerald,$7,"{""Clean+"":1,""Healthy+"":1}",{},{},,,,2,0,2,2026-06-04T09:01:23.234Z
+R8-4,R8,4:20 pm Clarendon Tavern 5yo&up Benchmark 64 Handicap,4,Egyptologist,12,Brett Thompson,Jake Pracey-holmes,$13,,,,,,,0,0,0,
+R8-5,R8,4:20 pm Clarendon Tavern 5yo&up Benchmark 64 Handicap,5,Lucky Star,8,Claire Lever,Winona Costin,$10,{},"{""BH-"":-1}",{},,,,0,1,-1,2026-06-04T09:01:29.329Z
+R8-6,R8,4:20 pm Clarendon Tavern 5yo&up Benchmark 64 Handicap,6,Binkou,2,Garry Frazer,Zac Wadick,$11,,,,,,,0,0,0,
+R8-8,R8,4:20 pm Clarendon Tavern 5yo&up Benchmark 64 Handicap,8,Marsabit,7,Danny Williams,Reece Jones,$3.3,,,,,,,0,0,0,
+R8-9,R8,4:20 pm Clarendon Tavern 5yo&up Benchmark 64 Handicap,9,Koning,11,Richard & Will Freedman,Ashley Morgan,$8,,,,,,,0,0,0,
+R8-10,R8,4:20 pm Clarendon Tavern 5yo&up Benchmark 64 Handicap,10,Devils Daughter,9,Paul & Martha Cave,Andrew Calder,$15,,,,,,,0,0,0,
+R8-11,R8,4:20 pm Clarendon Tavern 5yo&up Benchmark 64 Handicap,11,Flats,1,Wendy Haynes,Olivia Chambers (a-2),$51,,,,,,,0,0,0,
+R8-12,R8,4:20 pm Clarendon Tavern 5yo&up Benchmark 64 Handicap,12,Farraige,5,Dale Wagstaff,Adam Farragher,$26,,,,,,,0,0,0,

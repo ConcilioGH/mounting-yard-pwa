@@ -1,0 +1,68 @@
+race_no,race_name,start_time,distance,track,grade,going,rail,no,horse,horse_name,name,barrier,trainer,jockey,weight,odds,scratched
+1,1:25 pm Exceedance @ Vinery Stud Handicap,1:25 pm,1100m,Canterbury,Handicap,Heavy 9,+4m Entire,1,Celestial Charm,Celestial Charm,Celestial Charm,7,Michael Freedman,Tommy Berry,58kg,$5,false
+1,1:25 pm Exceedance @ Vinery Stud Handicap,1:25 pm,1100m,Canterbury,Handicap,Heavy 9,+4m Entire,3,Chic,Chic,Chic,2,Chris Waller,Nash Rawiller,58kg,$10,false
+1,1:25 pm Exceedance @ Vinery Stud Handicap,1:25 pm,1100m,Canterbury,Handicap,Heavy 9,+4m Entire,4,Grey Star,Grey Star,Grey Star,6,Tom Charlton,Andrew Adkins,58kg,$61,false
+1,1:25 pm Exceedance @ Vinery Stud Handicap,1:25 pm,1100m,Canterbury,Handicap,Heavy 9,+4m Entire,6,Miss Scandal,Miss Scandal,Miss Scandal,1,Chris Waller,James McDonald,58kg,$2.05,false
+1,1:25 pm Exceedance @ Vinery Stud Handicap,1:25 pm,1100m,Canterbury,Handicap,Heavy 9,+4m Entire,7,Pin Up Sheila,Pin Up Sheila,Pin Up Sheila,3,Tom Charlton,Dylan Gibbons,58kg,$11,false
+1,1:25 pm Exceedance @ Vinery Stud Handicap,1:25 pm,1100m,Canterbury,Handicap,Heavy 9,+4m Entire,8,Bollente Bella,Bollente Bella,Bollente Bella,5,Kris Lees,Kerrin McEvoy,57.5kg,$20,false
+1,1:25 pm Exceedance @ Vinery Stud Handicap,1:25 pm,1100m,Canterbury,Handicap,Heavy 9,+4m Entire,9,Girl About Town,Girl About Town,Girl About Town,4,Tom Charlton,Jason Collett,57.5kg,$6,false
+1,1:25 pm Exceedance @ Vinery Stud Handicap,1:25 pm,1100m,Canterbury,Handicap,Heavy 9,+4m Entire,10,Single Ladies,Single Ladies,Single Ladies,8,Gai Waterhouse & Adrian Bott,Adam Hyeronimus,57.5kg,$11,false
+1,1:25 pm Exceedance @ Vinery Stud Handicap,1:25 pm,1100m,Canterbury,Handicap,Heavy 9,+4m Entire,11,Piratess,Piratess,Piratess,10,Allan McRae,Robyn Freeman,56.5kg,$151,false
+1,1:25 pm Exceedance @ Vinery Stud Handicap,1:25 pm,1100m,Canterbury,Handicap,Heavy 9,+4m Entire,2,Express,Express,Express,9,Chris Waller,Sam Clipperton,58kg,SCR,true
+1,1:25 pm Exceedance @ Vinery Stud Handicap,1:25 pm,1100m,Canterbury,Handicap,Heavy 9,+4m Entire,5,Infinite Sky,Infinite Sky,Infinite Sky,11,Chris Waller,Tim Clark,58kg,SCR,true
+2,2:00 pm Toyota Forklifts Handicap,2:00 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,1,Snitzel Miss,Snitzel Miss,Snitzel Miss,8,Chris Waller,Nash Rawiller,60kg,$3.8,false
+2,2:00 pm Toyota Forklifts Handicap,2:00 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,2,Front Rank,Front Rank,Front Rank,11,Gai Waterhouse & Adrian Bott,Tim Clark,59kg,$4.6,false
+2,2:00 pm Toyota Forklifts Handicap,2:00 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,3,Incremental,Incremental,Incremental,6,Annabel & Rob Archibald,Braith Nock (a-1.5),58kg,$15,false
+2,2:00 pm Toyota Forklifts Handicap,2:00 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,5,Artgirl,Artgirl,Artgirl,3,Chris Waller,James McDonald,57.5kg,$2.3,false
+2,2:00 pm Toyota Forklifts Handicap,2:00 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,6,Escalera Al Cielo,Escalera Al Cielo,Escalera Al Cielo,1,Paul & Martha Cave,Andrew Calder,57kg,$46,false
+2,2:00 pm Toyota Forklifts Handicap,2:00 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,7,Imperial Code,Imperial Code,Imperial Code,10,Gai Waterhouse & Adrian Bott,Rachel King,56.5kg,$10,false
+2,2:00 pm Toyota Forklifts Handicap,2:00 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,8,Royal Chic,Royal Chic,Royal Chic,4,Annabel & Rob Archibald Mollie,Fitzgerald A3 (a-3),56kg,$20,false
+2,2:00 pm Toyota Forklifts Handicap,2:00 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,9,Sorentina,Sorentina,Sorentina,5,Richard Litt,Tom Sherry,55.5kg,$13,false
+2,2:00 pm Toyota Forklifts Handicap,2:00 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,4,Royal Air Force,Royal Air Force,Royal Air Force,2,Chris Waller,Tommy Berry,58kg,SCR,true
+2,2:00 pm Toyota Forklifts Handicap,2:00 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,10,Saloon Passage,Saloon Passage,Saloon Passage,9,Chris Waller,Sam Clipperton,55kg,SCR,true
+2,2:00 pm Toyota Forklifts Handicap,2:00 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,11,Cherry Jubilee,Cherry Jubilee,Cherry Jubilee,7,,Darren Treacy,54kg,SCR,true
+3,2:35 pm Asahi Super Dry Handicap,2:35 pm,1900m,Canterbury,Handicap,Heavy 9,+4m Entire,1,Allegro Miss,Allegro Miss,Allegro Miss,5,Con Karakatsanis,William Stanley (a-3),60.5kg,$5.5,false
+3,2:35 pm Asahi Super Dry Handicap,2:35 pm,1900m,Canterbury,Handicap,Heavy 9,+4m Entire,2,Midnight Luna,Midnight Luna,Midnight Luna,7,Rob Potter,Siena Grima (a-2),60kg,$11,false
+3,2:35 pm Asahi Super Dry Handicap,2:35 pm,1900m,Canterbury,Handicap,Heavy 9,+4m Entire,3,Velaris,Velaris,Velaris,2,Chris Waller,Nash Rawiller,58.5kg,$11,false
+3,2:35 pm Asahi Super Dry Handicap,2:35 pm,1900m,Canterbury,Handicap,Heavy 9,+4m Entire,4,The Iron Star,The Iron Star,The Iron Star,8,Marc Chevalier,Tyler Schiller,57.5kg,$8,false
+3,2:35 pm Asahi Super Dry Handicap,2:35 pm,1900m,Canterbury,Handicap,Heavy 9,+4m Entire,6,Ziggy Rose,Ziggy Rose,Ziggy Rose,10,Danielle Seib,Shaun Guymer,56.5kg,$18,false
+3,2:35 pm Asahi Super Dry Handicap,2:35 pm,1900m,Canterbury,Handicap,Heavy 9,+4m Entire,7,Ivy Legend,Ivy Legend,Ivy Legend,6,Chris Waller,James McDonald (a0.5),56kg,$4,false
+3,2:35 pm Asahi Super Dry Handicap,2:35 pm,1900m,Canterbury,Handicap,Heavy 9,+4m Entire,8,Wounder,Wounder,Wounder,3,Chris Waller,Tommy Berry,56kg,$4,false
+3,2:35 pm Asahi Super Dry Handicap,2:35 pm,1900m,Canterbury,Handicap,Heavy 9,+4m Entire,9,So D'oro,So D'oro,So D'oro,9,Tom Charlton,Andrew Adkins,55kg,$8,false
+3,2:35 pm Asahi Super Dry Handicap,2:35 pm,1900m,Canterbury,Handicap,Heavy 9,+4m Entire,10,Farraige,Farraige,Farraige,1,Dale Wagstaff,Adam Farragher,54kg,$81,false
+3,2:35 pm Asahi Super Dry Handicap,2:35 pm,1900m,Canterbury,Handicap,Heavy 9,+4m Entire,5,Noises,Noises,Noises,4,Scott Singleton,Reece Jones,56.5kg,SCR,true
+4,3:10 pm Tab Handicap,3:10 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,1,Airworthy,Airworthy,Airworthy,4,Gai Waterhouse & Adrian Bott,Tim Clark,61kg,$4.6,false
+4,3:10 pm Tab Handicap,3:10 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,2,Cheeky Smirk,Cheeky Smirk,Cheeky Smirk,3,Gerald Ryan & Sterling Alexiou,Nash Rawiller,61kg,$11,false
+4,3:10 pm Tab Handicap,3:10 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,3,Chix,Chix,Chix,7,Tom Charlton,Anna Roper (a-2),61kg,$17,false
+4,3:10 pm Tab Handicap,3:10 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,4,Sapphire Rose,Sapphire Rose,Sapphire Rose,11,Bjorn Baker,Siena Grima (a-2),60.5kg,$12,false
+4,3:10 pm Tab Handicap,3:10 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,5,Jaegers,Jaegers,Jaegers,5,Gary Portelli Mollie,Fitzgerald A3 (a-3),60kg,$8.5,false
+4,3:10 pm Tab Handicap,3:10 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,7,Chatterley,Chatterley,Chatterley,8,Chris Waller,James McDonald,59.5kg,$10,false
+4,3:10 pm Tab Handicap,3:10 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,8,Real Baker,Real Baker,Real Baker,2,Bjorn Baker,Rachel King,59kg,$2.8,false
+4,3:10 pm Tab Handicap,3:10 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,11,Wootton Way,Wootton Way,Wootton Way,12,Chris Waller,Tommy Berry,58.5kg,$7,false
+4,3:10 pm Tab Handicap,3:10 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,13,Tennessee Dolly,Tennessee Dolly,Tennessee Dolly,6,Richard Litt,Keagan Latham,55.5kg,$41,false
+4,3:10 pm Tab Handicap,3:10 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,6,Willingham,Willingham,Willingham,9,Danielle Seib,Pierre Boudvillain,60kg,SCR,true
+4,3:10 pm Tab Handicap,3:10 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,9,Snitzel Miss,Snitzel Miss,Snitzel Miss,13,Chris Waller,Sam Clipperton,59kg,SCR,true
+4,3:10 pm Tab Handicap,3:10 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,10,Myriad,Myriad,Myriad,10,Nathan Doyle,Lee Magorrian,58.5kg,SCR,true
+4,3:10 pm Tab Handicap,3:10 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,12,Artgirl,Artgirl,Artgirl,1,Chris Waller,Kerrin McEvoy,56.5kg,SCR,true
+5,3:45 pm Ranvet Handicap,3:45 pm,1550m,Canterbury,Handicap,Heavy 9,+4m Entire,2,Hereward,Hereward,Hereward,7,Denim Wynen,Anna Roper (a-2),60kg,$3.9,false
+5,3:45 pm Ranvet Handicap,3:45 pm,1550m,Canterbury,Handicap,Heavy 9,+4m Entire,3,Skycatcher,Skycatcher,Skycatcher,2,Mick Price & Michael Kent Jnr,Tyler Schiller,58.5kg,$2.35,false
+5,3:45 pm Ranvet Handicap,3:45 pm,1550m,Canterbury,Handicap,Heavy 9,+4m Entire,5,Format,Format,Format,9,Gai Waterhouse & Adrian Bott,Adam Hyeronimus,57.5kg,$8.5,false
+5,3:45 pm Ranvet Handicap,3:45 pm,1550m,Canterbury,Handicap,Heavy 9,+4m Entire,6,Louie's Legacy,Louie's Legacy,Louie's Legacy,1,"Barbara Joseph, Paul & Matt Jones",Quayde Krogh,57kg,$6.75,false
+5,3:45 pm Ranvet Handicap,3:45 pm,1550m,Canterbury,Handicap,Heavy 9,+4m Entire,7,Highborn Harry,Highborn Harry,Highborn Harry,5,David Payne,Tom Sherry,55kg,$6.5,false
+5,3:45 pm Ranvet Handicap,3:45 pm,1550m,Canterbury,Handicap,Heavy 9,+4m Entire,8,Hammett,Hammett,Hammett,6,Matthew Dale,Rachel King,54kg,$15,false
+5,3:45 pm Ranvet Handicap,3:45 pm,1550m,Canterbury,Handicap,Heavy 9,+4m Entire,1,Sosino,Sosino,Sosino,8,Annabel & Rob Archibald,Braith Nock (a-1.5),60.5kg,SCR,true
+5,3:45 pm Ranvet Handicap,3:45 pm,1550m,Canterbury,Handicap,Heavy 9,+4m Entire,4,Peace Officer,Peace Officer,Peace Officer,3,Clarry Conners,Nash Rawiller,58kg,SCR,true
+5,3:45 pm Ranvet Handicap,3:45 pm,1550m,Canterbury,Handicap,Heavy 9,+4m Entire,9,Marsabit,Marsabit,Marsabit,4,Danny Williams,Pierre Boudvillain (a1),54kg,SCR,true
+6,4:20 pm The Agency Real Estate Handicap,4:20 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,2,The Extreme Cat,The Extreme Cat,The Extreme Cat,8,Nathan Doyle,William Stanley (a-3),60kg,$8.5,false
+6,4:20 pm The Agency Real Estate Handicap,4:20 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,3,Roussillon,Roussillon,Roussillon,7,Clare Collett,Jason Collett,58.5kg,$7,false
+6,4:20 pm The Agency Real Estate Handicap,4:20 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,4,Tenderize,Tenderize,Tenderize,5,Gary Portelli,Alysha Collett,58.5kg,$9,false
+6,4:20 pm The Agency Real Estate Handicap,4:20 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,5,Xpresso,Xpresso,Xpresso,1,Marc Chevalier,Adam Hyeronimus,57.5kg,$7,false
+6,4:20 pm The Agency Real Estate Handicap,4:20 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,6,Barbray,Barbray,Barbray,6,Chris Waller,Siena Grima (a-2),57kg,$8,false
+6,4:20 pm The Agency Real Estate Handicap,4:20 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,7,Concordia Wind,Concordia Wind,Concordia Wind,3,Chris Waller,James McDonald,57kg,$2.8,false
+6,4:20 pm The Agency Real Estate Handicap,4:20 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,9,San Marino,San Marino,San Marino,11,Garry Kirkup,Quayde Krogh,57kg,$41,false
+6,4:20 pm The Agency Real Estate Handicap,4:20 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,10,Laurel Hill,Laurel Hill,Laurel Hill,13,Rob Potter Mollie,Fitzgerald A3 (a-3),56.5kg,$14,false
+6,4:20 pm The Agency Real Estate Handicap,4:20 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,11,Show County,Show County,Show County,4,Alexandre Lemarie,Keagan Latham,56kg,$9.5,false
+6,4:20 pm The Agency Real Estate Handicap,4:20 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,1,Metaphorically,Metaphorically,Metaphorically,10,Tom Charlton,Anna Roper (a-2),60.5kg,SCR,true
+6,4:20 pm The Agency Real Estate Handicap,4:20 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,8,Perfect Picture,Perfect Picture,Perfect Picture,9,John Thompson,Kerrin McEvoy,57kg,SCR,true
+6,4:20 pm The Agency Real Estate Handicap,4:20 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,12,Eton,Eton,Eton,2,Gai Waterhouse & Adrian Bott,Rachel King,55.5kg,SCR,true
+6,4:20 pm The Agency Real Estate Handicap,4:20 pm,1250m,Canterbury,Handicap,Heavy 9,+4m Entire,13,Queen's Rhapsody,Queen's Rhapsody,Queen's Rhapsody,12,David Pfieffer,Tommy Berry (a0.5),54.5kg,SCR,true

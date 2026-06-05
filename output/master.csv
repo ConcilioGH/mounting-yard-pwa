@@ -1,0 +1,65 @@
+race_id,race_title,race_no,runner_no,no,horse,barrier,trainer,jockey,odds,w_ir
+R1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1,1,1,Siccius,7,Kris Lees,William Stanley (a-2),$15,6
+R1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1,2,2,Aurora Effect,5,Edward Cummings,Jason Collett,$1.4,5.2
+R1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1,3,3,Going By Train o(HT),3,Denim Wynen,Mollie Fitzgerald (a-1.5),$61,
+R1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1,4,4,Pressiaire (HT),2,Allan Kehoe,Jenny Duggan,$41,2.5
+R1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1,5,5,Senza Rivali (HT),6,Kristen Buchanan,Siena Grima (a-2),$23,9
+R1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1,6,6,Belgrano o,10,Darryll Kell,Chad Lever (a0.5),$26,
+R1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1,7,7,Burning Ambition o,4,James Ponsonby,Mikayla Weir,$29,
+R1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1,8,8,Highland Lad,1,James Ponsonby,Winona Costin,$201,5.5
+R1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1,9,9,Irulan o,8,Jason Attard,Rachel King,$41,
+R1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1,10,10,Powerful Annie,9,Kris Lees,Tim Clark,$6.5,8.2
+R2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,2,2,2,Apparently o,1,Nikki Pollock,Leeshelle Small (a-3),$201,
+R2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,2,3,3,Ask Di,8,Gerald Ryan & Sterling Alexiou,Chad Schofield,$23,3
+R2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,2,4,4,Gamp,5,"Michael, John & Wayne Hawkes",Jay Ford,$7.5,1.5
+R2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,2,5,5,Hidden Star,7,Mark Minervini,Mollie Fitzgerald (a-1.5),$19,7
+R2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,2,6,6,Merini,6,Kris Lees,Jason Collett,$5.5,NA
+R2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,2,7,7,Nicolosi,4,Gai Waterhouse & Adrian Bott,Tim Clark,$1.8,NA
+R2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,2,8,8,Sorentina,10,Richard Litt,Tom Sherry,$26,7
+R2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,2,9,9,Tidal Breeze,2,Nikki Pollock,Billy Cray,$201,NA
+R2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,2,10,10,Weekend Market,9,Gary Portelli,Rachel King,$14,3.9
+R2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,2,11,11,Zsa Zsa (HT),3,Sara Ryan,Ashley Morgan,$19,3.1
+R3,2:00 pm The Frenchsforest Probus Club Inc. Maiden Handicap,3,1,1,Farset,2,Gai Waterhouse & Adrian Bott,Regan Bayliss,$2.1,1.9
+R3,2:00 pm The Frenchsforest Probus Club Inc. Maiden Handicap,3,3,3,Nonno's Power,7,Joseph Pride,Rory Hutchings,$8,7.8
+R3,2:00 pm The Frenchsforest Probus Club Inc. Maiden Handicap,3,4,4,Gemtiki o,4,Mark Minervini,Mollie Fitzgerald (a-1.5),$51,
+R3,2:00 pm The Frenchsforest Probus Club Inc. Maiden Handicap,3,5,5,Satono Jasmine,5,Brad Widdup,Chad Schofield,$16,6
+R3,2:00 pm The Frenchsforest Probus Club Inc. Maiden Handicap,3,6,6,Apiarist,6,Ciaron Maher,Tim Clark,$12,6
+R3,2:00 pm The Frenchsforest Probus Club Inc. Maiden Handicap,3,9,9,Gong Girl,9,David Pfieffer,Rachel King,$3.5,4.1
+R4,2:40 pm Mercure Kooindah Waters F&m Benchmark 64 Handicap,4,1,1,Waku Waku dso,7,Annabel & Rob Archibald,Olivia Dalton (a-3),$3.4,
+R4,2:40 pm Mercure Kooindah Waters F&m Benchmark 64 Handicap,4,2,2,Maquisa s,3,Chris Waller,Siena Grima (a-2),$2.75,
+R4,2:40 pm Mercure Kooindah Waters F&m Benchmark 64 Handicap,4,4,4,Rach dso,5,Chris Waller,Jason Collett,$4.6,
+R4,2:40 pm Mercure Kooindah Waters F&m Benchmark 64 Handicap,4,5,5,Mane Character (HT),1,Nacim Dilmi,Reece Jones,$10,6.7
+R4,2:40 pm Mercure Kooindah Waters F&m Benchmark 64 Handicap,4,6,6,Shoutaboutit s(HT),6,Kristen Buchanan,Jay Ford,$11,
+R4,2:40 pm Mercure Kooindah Waters F&m Benchmark 64 Handicap,4,7,7,Grassburn,8,Matthew Robinson,Anna Roper,$19,5.3
+R4,2:40 pm Mercure Kooindah Waters F&m Benchmark 64 Handicap,4,8,8,Sunday Punch ds,10,Cheryl Grouse,Winona Costin,$91,
+R4,2:40 pm Mercure Kooindah Waters F&m Benchmark 64 Handicap,4,9,9,Maggie Sparkles dsh,2,Paul Kelly,Kacie Adams,$26,
+R4,2:40 pm Mercure Kooindah Waters F&m Benchmark 64 Handicap,4,11,11,Steely Girl ds,4,Neil Godbolt,Jeff Penza,$21,
+R5,3:25 pm Spelling At Domeland Cg&e Benchmark 64 Handicap,5,1,1,Skycatcher dshb,2,Mick Price & Michael Kent Jnr,William Stanley (a-2),$2.6,
+R5,3:25 pm Spelling At Domeland Cg&e Benchmark 64 Handicap,5,2,2,Botanist d,6,Chris Waller,Siena Grima (a-2),$5.5,
+R5,3:25 pm Spelling At Domeland Cg&e Benchmark 64 Handicap,5,3,3,A Pound Of Salt dsh,3,Todd Howlett,Rory Hutchings,$23,
+R5,3:25 pm Spelling At Domeland Cg&e Benchmark 64 Handicap,5,4,4,Written Gold tcdbo,9,Gerald Ryan & Sterling Alexiou,Tom Sherry,$5.5,
+R5,3:25 pm Spelling At Domeland Cg&e Benchmark 64 Handicap,5,6,6,Fierceness s,1,Matthew Smith,Ashley Morgan,$10,
+R5,3:25 pm Spelling At Domeland Cg&e Benchmark 64 Handicap,5,8,8,Toomuchinformation sh,4,Lyndall Olson,Anna Roper,$6,
+R5,3:25 pm Spelling At Domeland Cg&e Benchmark 64 Handicap,5,9,9,Bonus Tempus tcds,5,Brett Lazzarini,Jessica Taylor,$14,
+R5,3:25 pm Spelling At Domeland Cg&e Benchmark 64 Handicap,5,10,10,He's Godspeed ds,8,Brett Lazzarini,Teighan Worsnop,$17,
+R5,3:25 pm Spelling At Domeland Cg&e Benchmark 64 Handicap,5,11,11,Dreymon d,10,Alan D Smith,Leeshelle Small (a-3),$46,
+R6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,6,1,1,Desi Emperor sh,6,Tommy Wong,Jeff Penza,$41,
+R6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,6,2,2,Bode Akuna ds(D/A),1,Jason Coyle,Jessica Taylor,$17,
+R6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,6,3,3,Spartus s,8,Fabio Martino,Siena Grima (a-2),$10,
+R6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,6,4,4,Welcome Gypsy tcdh,5,John Thompson,Chad Schofield,$5.5,
+R6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,6,5,5,Whil To Win,10,John Thompson,Rory Hutchings,$17,2.1
+R6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,6,6,6,Smiling Prophet tdsh,4,Mark Minervini,Mollie Fitzgerald (a-1.5),$17,
+R6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,6,7,7,Sunday Tycoon tds,9,Clarry Conners,Deanne Panya,$9,
+R6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,6,8,8,Like A Surgeon,3,Brad Widdup,Rachel King,$3.3,10
+R6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,6,9,9,Cool Blaze ds,2,Gary Portelli,Anna Roper,$9.5,
+R6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,6,10,10,Altercation dhb,12,Jason Deamer,Tim Clark,$9.5,
+R6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,6,12,12,Triple Yes d,7,Edward Cummings,Jay Ford,$8,
+R7,4:40 pm Limitless Lodge Benchmark 64 Handicap,7,1,1,Unavoidable s,8,Matthew Smith,Siena Grima (a-2),$8,
+R7,4:40 pm Limitless Lodge Benchmark 64 Handicap,7,2,2,Scottish Pearl do,7,Annabel & Rob Archibald,Ashley Morgan,$13,
+R7,4:40 pm Limitless Lodge Benchmark 64 Handicap,7,3,3,Grandini tcds,3,Rodney Northam,Reece Jones,$4.2,
+R7,4:40 pm Limitless Lodge Benchmark 64 Handicap,7,4,4,Monty Be Quick ts(HT),9,Wayne Seelin,William Stanley (a-2),$17,
+R7,4:40 pm Limitless Lodge Benchmark 64 Handicap,7,6,6,Sarapo,6,Chris Waller,Jason Collett,$2.2,6.7
+R7,4:40 pm Limitless Lodge Benchmark 64 Handicap,7,8,8,Will To Excel dsb,4,James Ponsonby,Winona Costin,$20,
+R7,4:40 pm Limitless Lodge Benchmark 64 Handicap,7,9,9,Mellencamp s,5,Allan Boyle,Jenny Duggan,$29,
+R7,4:40 pm Limitless Lodge Benchmark 64 Handicap,7,10,10,Ring Ahoy s,1,David Hatch,Zac Wadick,$8,
+R7,4:40 pm Limitless Lodge Benchmark 64 Handicap,7,11,11,Prince Is Game dsh,2,Matthew Robinson,Anna Roper,$29,

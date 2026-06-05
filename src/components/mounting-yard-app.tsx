@@ -11,7 +11,10 @@ import {
   racedayCompactGroups,
   SWEAT_LEGEND,
   SWEAT_NEG_ROW,
-  SWEAT_POS_ROW,
+  SWEAT_POS_KEY,
+  WET_BODY_TYPES,
+  WET_FEET,
+  wetTile,
 } from "@/lib/constants";
 import {
   clearAllAssessments,
@@ -19,12 +22,24 @@ import {
   loadAllRaces,
   mergeAssessment,
   replaceAllAssessments,
-  saveRaces,
   seedRacesIfEmpty,
 } from "@/lib/db";
-import { buildAssessmentsExportCsv, downloadTextFile, parseRacesCsv } from "@/lib/csv";
+import { buildAssessmentsExportCsv } from "@/lib/csv";
+import { deliverMeetingExport } from "@/lib/meeting-export-delivery";
+import {
+  pickMeetingDirectory,
+  readMeetingCsvFromDirectory,
+  supportsDirectoryPicker,
+} from "@/lib/meeting-folder-handle";
+import {
+  formatMeetingDisplayLabel,
+  importMeetingFromCsv,
+  loadMeetingManifest,
+} from "@/lib/meeting-coordination";
+import { YardNextRaceCountdown } from "@/components/yard-next-race-countdown";
 import { applyGearTileSelection, type GearTileCode } from "@/lib/gear";
-import type { Assessment, Race, Runner } from "@/lib/types";
+import type { Assessment, Race, Runner, WetBodyType, WetFeet } from "@/lib/types";
+import { wetIsSet, wetShorthand } from "@/lib/wet";
 import { cn, emptyAssessment, makeKey, marks, nextNegative, nextPositive } from "@/lib/utils";
 import { useDebouncedCallback } from "@/hooks/useDebouncedCallback";
 
@@ -104,6 +119,8 @@ const compactFactorBtn =
 const compactMarksPos = "text-xl font-bold leading-none text-green-700 sm:text-2xl";
 const compactMarksNeg = "text-xl font-bold leading-none text-red-700 sm:text-2xl";
 
+type PhysicalPicker = GearTileCode | "WET" | null;
+
 export default function MountingYardApp() {
   const [hydrated, setHydrated] = useState(false);
   const [races, setRaces] = useState<Race[]>(DEFAULT_RACES);
@@ -112,11 +129,13 @@ export default function MountingYardApp() {
   const [data, setData] = useState<Record<string, Assessment>>({});
   const [saveState, setSaveState] = useState<"idle" | "saving" | "saved" | "error">("idle");
   const [importError, setImportError] = useState<string | null>(null);
+  const [meetingLabel, setMeetingLabel] = useState("");
+  const [meetingDate, setMeetingDate] = useState("");
   const importRef = useRef<HTMLInputElement>(null);
   const dataRef = useRef<Record<string, Assessment>>({});
   const keyRef = useRef<string>("");
   const prevKeyRef = useRef<string | null>(null);
-  const [gearPicker, setGearPicker] = useState<GearTileCode | null>(null);
+  const [gearPicker, setGearPicker] = useState<PhysicalPicker>(null);
   const gearTilesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -167,6 +186,8 @@ export default function MountingYardApp() {
         }
         dataRef.current = loadedAssessments;
         setData(loadedAssessments);
+        setMeetingLabel(formatMeetingDisplayLabel(loadMeetingManifest()));
+        setMeetingDate(loadMeetingManifest()?.date ?? "");
       } catch (e) {
         console.error(e);
       } finally {
@@ -232,6 +253,17 @@ export default function MountingYardApp() {
     updateRecord({ gear: applyGearTileSelection(record.gear, tile, location) });
   };
 
+  const selectWetOption = (field: "bodyType" | "feet", value: WetBodyType | WetFeet) => {
+    const current = record.wet ?? {};
+    const nextValue = current[field] === value ? undefined : value;
+    const next = { ...current, [field]: nextValue };
+    if (!next.bodyType && !next.feet) {
+      updateRecord({ wet: undefined });
+    } else {
+      updateRecord({ wet: next });
+    }
+  };
+
   const { pos: totalPositive, neg: totalNegative, net } = totals(record);
 
   const orderedRunners = useMemo(() => race?.runners ?? [], [race]);
@@ -252,11 +284,59 @@ export default function MountingYardApp() {
   }, [canNext, orderedRunners, runnerIndex]);
 
   const handleExport = () => {
+    void (async () => {
+      try {
+        const csv = buildAssessmentsExportCsv(races, data);
+        await deliverMeetingExport("mounting-yard-assessments", csv);
+      } catch (e) {
+        console.error(e);
+      }
+    })();
+  };
+
+  const runMeetingImport = async (
+    text: string,
+    options: {
+      fileName: string;
+      importPath?: string;
+      meetingFolderPath?: string;
+      directoryHandle?: FileSystemDirectoryHandle;
+    },
+  ) => {
+    const result = await importMeetingFromCsv(text, options);
+    if (!result.sameMeeting) {
+      await clearAllAssessments();
+      dataRef.current = {};
+      setData({});
+    }
+    setRaces(result.races);
+    setRaceId(result.races[0]!.id);
+    setSelectedRunner(result.races[0]!.runners[0]?.no ?? 1);
+    const manifest = loadMeetingManifest();
+    setMeetingLabel(formatMeetingDisplayLabel(manifest));
+    setMeetingDate(manifest?.date ?? "");
+  };
+
+  const handleImportMeetingFolder = async () => {
+    if (!supportsDirectoryPicker()) {
+      importRef.current?.click();
+      return;
+    }
+    setImportError(null);
     try {
-      const csv = buildAssessmentsExportCsv(races, data);
-      downloadTextFile(`mounting-yard-export-${new Date().toISOString().slice(0, 10)}.csv`, csv);
+      const dir = await pickMeetingDirectory();
+      const { file, name } = await readMeetingCsvFromDirectory(dir);
+      const text = await file.text();
+      const folderMeta = `meetings/${dir.name}`;
+      await runMeetingImport(text, {
+        fileName: name,
+        meetingFolderPath: folderMeta,
+        directoryHandle: dir,
+      });
     } catch (e) {
+      if (e instanceof DOMException && e.name === "AbortError") return;
       console.error(e);
+      setImportError(e instanceof Error ? e.message : "Import failed.");
     }
   };
 
@@ -265,14 +345,8 @@ export default function MountingYardApp() {
     setImportError(null);
     try {
       const text = await f.text();
-      const parsed = parseRacesCsv(text);
-      await saveRaces(parsed);
-      await clearAllAssessments();
-      setRaces(parsed);
-      setRaceId(parsed[0]!.id);
-      setSelectedRunner(parsed[0]!.runners[0]?.no ?? 1);
-      dataRef.current = {};
-      setData({});
+      const webkitPath = (f as File & { webkitRelativePath?: string }).webkitRelativePath;
+      await runMeetingImport(text, { fileName: f.name, importPath: webkitPath });
     } catch (e) {
       console.error(e);
       setImportError(e instanceof Error ? e.message : "Import failed.");
@@ -293,13 +367,18 @@ export default function MountingYardApp() {
     <div className="min-h-[100dvh] bg-slate-100 pb-[calc(5.5rem+env(safe-area-inset-bottom))] pt-[env(safe-area-inset-top)] text-slate-900">
       <div className="mx-auto max-w-7xl space-y-3 p-3">
         <header className="flex flex-col gap-4 rounded-3xl bg-white p-5 shadow-sm lg:flex-row lg:items-center lg:justify-between">
-          <div>
+          <div className="min-w-0 flex-1">
             <h1 className="text-2xl font-bold tracking-tight md:text-3xl">Mounting Yard</h1>
-            <p className="mt-1 text-lg text-slate-600">Autosaves on this device. Export CSV after the meeting.</p>
+            <p className="mt-1 text-lg text-slate-600">
+              Autosaves on this device. Import meeting CSV here once — Speed Map and Race Day Bias follow.
+            </p>
+            {meetingLabel && <p className="mt-1 text-base font-medium text-slate-700">{meetingLabel}</p>}
             {saveState === "saving" && <p className="mt-1 text-base text-slate-500">Saving…</p>}
             {saveState === "error" && <p className="mt-1 text-base text-red-600">Could not save. Try again.</p>}
           </div>
-          <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-end lg:shrink-0">
+            <YardNextRaceCountdown races={races} meetingDate={meetingDate || undefined} />
+            <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <input
               ref={importRef}
               type="file"
@@ -307,12 +386,19 @@ export default function MountingYardApp() {
               className="hidden"
               onChange={(e) => void handleImportFile(e.target.files?.[0] ?? null)}
             />
-            <Button type="button" variant="outline" size="touch" className="rounded-3xl text-lg" onClick={() => importRef.current?.click()}>
-              Import races (CSV)
+            <Button
+              type="button"
+              variant="outline"
+              size="touch"
+              className="rounded-3xl text-lg"
+              onClick={() => void handleImportMeetingFolder()}
+            >
+              Import meeting folder
             </Button>
             <Button type="button" size="touch" className="rounded-3xl text-lg" onClick={handleExport}>
               Export all assessments
             </Button>
+            </div>
           </div>
         </header>
 
@@ -426,20 +512,17 @@ export default function MountingYardApp() {
                     </h4>
                     {group.kind === "sweat" ? (
                       <div className="space-y-1.5">
-                        <div className="grid grid-cols-4 gap-1.5">
-                          {SWEAT_POS_ROW.map((key) => (
-                            <Button
-                              key={key}
-                              type="button"
-                              variant="outline"
-                              size="touch"
-                              onClick={() => tapPositive(key)}
-                              className={cn(compactFactorBtn)}
-                            >
-                              <span>{key}</span>
-                              <span className={compactMarksPos}>{marks(record.positive[key])}</span>
-                            </Button>
-                          ))}
+                        <div className="grid grid-cols-1 gap-1.5">
+                          <Button
+                            type="button"
+                            variant="outline"
+                            size="touch"
+                            onClick={() => tapPositive(SWEAT_POS_KEY)}
+                            className={cn(compactFactorBtn)}
+                          >
+                            <span>Clean +</span>
+                            <span className={compactMarksPos}>{marks(record.positive[SWEAT_POS_KEY])}</span>
+                          </Button>
                         </div>
                         <div className="grid grid-cols-4 gap-1.5">
                           {SWEAT_NEG_ROW.map((key) => (
@@ -563,6 +646,84 @@ export default function MountingYardApp() {
                       </div>
                     );
                   })}
+                  {(() => {
+                    const wet = record.wet;
+                    const hasWet = wetIsSet(wet);
+                    const shorthand = wetShorthand(wet);
+                    const open = gearPicker === "WET";
+                    return (
+                      <div key={wetTile.code} className="relative">
+                        <Button
+                          type="button"
+                          size="touch"
+                          variant={hasWet ? "default" : "outline"}
+                          onClick={() => setGearPicker((p) => (p === "WET" ? null : "WET"))}
+                          className="relative h-auto min-h-[6.25rem] w-full flex-col justify-center gap-2 rounded-3xl py-5 text-lg"
+                        >
+                          <span className="text-2xl font-bold tracking-tight">
+                            {wetTile.code}
+                            {hasWet ? " ✓" : ""}
+                          </span>
+                          <span className="text-center text-base leading-snug">{wetTile.label}</span>
+                          {shorthand && (
+                            <span className="text-sm font-semibold text-slate-700">{shorthand}</span>
+                          )}
+                        </Button>
+                        {open && (
+                          <div
+                            className="absolute left-0 right-0 top-full z-[60] mt-2 max-h-[min(70vh,28rem)] space-y-3 overflow-y-auto rounded-2xl border-2 border-slate-200 bg-white p-3 shadow-lg"
+                            role="dialog"
+                            aria-label="Wet suitability"
+                          >
+                            <div>
+                              <p className="mb-1.5 text-xs font-bold uppercase tracking-wide text-slate-500">
+                                Body type
+                              </p>
+                              <div className="space-y-1">
+                                {WET_BODY_TYPES.map((opt) => (
+                                  <button
+                                    key={opt.value}
+                                    type="button"
+                                    className={cn(
+                                      "flex w-full rounded-xl px-3 py-2.5 text-left text-base font-semibold transition hover:bg-slate-100 active:bg-slate-200",
+                                      wet?.bodyType === opt.value && "bg-slate-100 ring-2 ring-slate-900",
+                                    )}
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      selectWetOption("bodyType", opt.value);
+                                    }}
+                                  >
+                                    {opt.label}
+                                  </button>
+                                ))}
+                              </div>
+                            </div>
+                            <div>
+                              <p className="mb-1.5 text-xs font-bold uppercase tracking-wide text-slate-500">Feet</p>
+                              <div className="space-y-1">
+                                {WET_FEET.map((opt) => (
+                                  <button
+                                    key={opt.value}
+                                    type="button"
+                                    className={cn(
+                                      "flex w-full rounded-xl px-3 py-2.5 text-left text-base font-semibold transition hover:bg-slate-100 active:bg-slate-200",
+                                      wet?.feet === opt.value && "bg-slate-100 ring-2 ring-slate-900",
+                                    )}
+                                    onClick={(e) => {
+                                      e.stopPropagation();
+                                      selectWetOption("feet", opt.value);
+                                    }}
+                                  >
+                                    {opt.label}
+                                  </button>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })()}
                 </div>
                 <label className="block">
                   <span className="mb-2 block text-lg font-semibold text-slate-800">Notes</span>

@@ -1,0 +1,41 @@
+meeting,race_no,finisher_position,position_code,sp,lane_group
+Randwick,R1,1,3,6,Rail
+Randwick,R1,2,4,2.9,Running Line
+Randwick,R1,3,2,7.5,Running Line
+Randwick,R1,4,1,3.9,Rail
+Randwick,R2,1,9,10,Rail
+Randwick,R2,2,37,6.5,3 Wide
+Randwick,R2,3,8,4.8,Running Line
+Randwick,R2,4,11,13,Rail
+Randwick,R3,1,4,3.3,Running Line
+Randwick,R3,2,6,4.6,Running Line
+Randwick,R3,3,5,17,Rail
+Randwick,R3,4,42,15,4 Wide+
+Randwick,R4,1,2,2.9,Running Line
+Randwick,R4,2,6,10,Running Line
+Randwick,R4,3,3,41,Rail
+Randwick,R4,4,9,7,Rail
+Randwick,R5,1,3,8.5,Rail
+Randwick,R5,2,8,17,Running Line
+Randwick,R5,3,11,4.8,Rail
+Randwick,R5,4,9,26,Rail
+Randwick,R6,1,12,9,Running Line
+Randwick,R6,2,37,9,3 Wide
+Randwick,R6,3,39,5,3 Wide
+Randwick,R6,4,3,8.5,Rail
+Randwick,R7,1,10,5,Running Line
+Randwick,R7,2,6,2.7,Running Line
+Randwick,R7,3,4,5.5,Running Line
+Randwick,R7,4,8,26,Running Line
+Randwick,R8,1,11,5.5,Rail
+Randwick,R8,2,37,15.5,3 Wide
+Randwick,R8,3,5,41,Rail
+Randwick,R8,4,3,23,Rail
+Randwick,R9,1,1,6,Rail
+Randwick,R9,2,4,4.4,Running Line
+Randwick,R9,3,35,13,3 Wide
+Randwick,R9,4,2,12,Running Line
+Randwick,R10,1,4,4.4,Running Line
+Randwick,R10,2,1,19,Rail
+Randwick,R10,3,2,4.8,Running Line
+Randwick,R10,4,39,12,3 Wide

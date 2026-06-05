@@ -1,0 +1,27 @@
+meeting,category,group,wins,places,avg_sp,actual_share,expected_share,bias_score,finisher_count,heat_tier,trackside_tag,interpretation
+Warwick Farm,lane,Rail,4,9,8.65,45.2,35,10.2,13,,,
+Warwick Farm,lane,Running Line,3,11,7.29,50.8,60.1,-9.2,14,,,
+Warwick Farm,lane,3 Wide,0,1,3.90,4,4.9,-1,1,,,
+Warwick Farm,lane,4 Wide+,0,0,,0,0,0,0,,,
+Warwick Farm,position,Leader / Front Pair,3,4,5.14,31.6,28.8,2.8,7,,,
+Warwick Farm,position,On Pace,0,2,7.15,3.7,6,-2.4,2,,,
+Warwick Farm,position,Midfield,2,7,6.34,33.6,35.7,-2.1,9,,,
+Warwick Farm,position,Backmarker,2,7,11.90,27.2,24.5,2.7,9,,,
+Warwick Farm,position,Wide Forward,0,0,,0,0,0,0,,,
+Warwick Farm,position,Wide Midfield,0,1,3.90,4,4.9,-1,1,,,
+Warwick Farm,position,Wide Back,0,0,,0,0,0,0,,,
+Warwick Farm,composite,Rail Front,,,,19.3,16.8,2.4,5,neutral,,
+Warwick Farm,composite,Rail Midfield,,,,14.3,10.1,4.2,4,neutral,,
+Warwick Farm,composite,Rail Back,,,,11.6,8.1,3.5,4,neutral,,
+Warwick Farm,composite,Running Line Front,,,,15.9,18,-2.1,4,neutral,,
+Warwick Farm,composite,Running Line Midfield,,,,19.3,25.6,-6.3,5,neutral,,
+Warwick Farm,composite,Running Line Back,,,,15.6,16.4,-0.8,5,neutral,,
+Warwick Farm,composite,3 Wide Front,,,,0,0,0,0,insufficient,,
+Warwick Farm,composite,3 Wide Midfield,,,,4,4.9,-1,1,insufficient,,
+Warwick Farm,composite,3 Wide Back,,,,0,0,0,0,insufficient,,
+Warwick Farm,composite,4 Wide+ Front,,,,0,0,0,0,insufficient,,
+Warwick Farm,composite,4 Wide+ Midfield,,,,0,0,0,0,insufficient,,
+Warwick Farm,composite,4 Wide+ Back,,,,0,0,0,0,insufficient,,
+Warwick Farm,conclusion,RAIL MIDFIELD,,,,,,4.2,4,neutral,NEUTRAL,On the rail in midfield positions are outperforming market expectation.
+Warwick Farm,conclusion,RAIL BACK,,,,,,3.5,4,neutral,NEUTRAL,On the rail from backmarker positions are performing slightly above market expectation.
+Warwick Farm,conclusion,RUNNING LINE MIDFIELD,,,,,,-6.3,5,neutral,NEUTRAL,Horses settling one-off the fence in midfield are underperforming expectation.
