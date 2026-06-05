@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { resetLocalDataAndReload } from "@/lib/reset-local-data";
+import { resetAppData } from "@/lib/reset-local-data";
 
 type InitErrorPanelProps = {
   errors: string[];
@@ -14,7 +14,7 @@ export function InitErrorPanel({ errors }: InitErrorPanelProps) {
 
   const handleReset = () => {
     setResetting(true);
-    void resetLocalDataAndReload().catch((error) => {
+    void resetAppData().catch((error) => {
       console.error(error);
       setResetting(false);
     });
@@ -39,7 +39,7 @@ export function InitErrorPanel({ errors }: InitErrorPanelProps) {
         disabled={resetting}
         className="mt-3 rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white disabled:opacity-60"
       >
-        {resetting ? "Resetting…" : "Reset Local Data"}
+        {resetting ? "Resetting…" : "Reset App Data"}
       </button>
     </div>
   );

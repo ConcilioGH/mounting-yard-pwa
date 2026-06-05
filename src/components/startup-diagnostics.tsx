@@ -3,8 +3,9 @@
 import "@/lib/ios12-polyfills";
 import { useEffect, useState, type ReactNode } from "react";
 import { CompatibilityFallbackBanner } from "@/components/compatibility-fallback-banner";
+import { enableIOS12CompatMode } from "@/lib/ios12-compat-mode";
+import { isOldIOS, shouldSkipServiceWorker } from "@/lib/legacy-safari";
 import { resetLocalDataAndReload } from "@/lib/reset-local-data";
-import { shouldSkipServiceWorker } from "@/lib/legacy-safari";
 import { logMountedBlockingOverlays, removeLegacyStartupOverlays } from "@/lib/yard-touch-diagnostics";
 import {
   getStartupFailures,
@@ -68,6 +69,10 @@ export function StartupDiagnosticsRoot({ children }: { children: ReactNode }) {
     document.body.setAttribute("data-app-ready", "true");
     logStartupStep("app-mounted");
     logMountedBlockingOverlays();
+
+    if (isOldIOS()) {
+      void enableIOS12CompatMode();
+    }
 
     if (shouldSkipServiceWorker()) {
       logStartupStep("service-worker-registration:skipped", { reason: "legacy-safari" });

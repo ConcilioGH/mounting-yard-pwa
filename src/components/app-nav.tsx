@@ -2,6 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { APP_BUILD_VERSION } from "@/lib/build-version";
+import { isOldIOS } from "@/lib/legacy-safari";
+import { resetAppData } from "@/lib/reset-local-data";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
@@ -12,14 +16,28 @@ const NAV_ITEMS = [
 
 export function AppNav() {
   const pathname = usePathname();
+  const [oldIOS, setOldIOS] = useState(false);
+  const [resetting, setResetting] = useState(false);
+
+  useEffect(() => {
+    setOldIOS(isOldIOS());
+  }, []);
+
+  const handleResetAppData = () => {
+    setResetting(true);
+    void resetAppData().catch((error) => {
+      console.error(error);
+      setResetting(false);
+    });
+  };
 
   return (
     <nav
       className="sticky top-0 z-[200] border-b border-slate-800 bg-slate-950/95 px-3 py-2 backdrop-blur-md pt-[calc(0.5rem+env(safe-area-inset-top))]"
       aria-label="Main"
     >
-      <div className="mx-auto flex max-w-[1600px] items-center gap-2">
-        <span className="mr-2 hidden text-sm font-semibold text-slate-400 sm:inline">Mounting Yard</span>
+      <div className="mx-auto flex max-w-[1600px] flex-wrap items-center gap-2">
+        <span className="mr-1 hidden text-sm font-semibold text-slate-400 sm:inline">Mounting Yard</span>
         <div className="flex flex-1 flex-wrap gap-2">
           {NAV_ITEMS.map((item) => {
             const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
@@ -38,6 +56,19 @@ export function AppNav() {
               </Link>
             );
           })}
+        </div>
+        <div className="flex w-full flex-wrap items-center justify-end gap-2 sm:w-auto">
+          <span className="text-[11px] font-medium tabular-nums text-slate-500">Build: {APP_BUILD_VERSION}</span>
+          {oldIOS ? (
+            <button
+              type="button"
+              onClick={handleResetAppData}
+              disabled={resetting}
+              className="inline-flex min-h-[36px] items-center rounded-lg bg-red-700 px-3 text-xs font-semibold text-white disabled:opacity-60"
+            >
+              {resetting ? "Resetting…" : "Reset App Data"}
+            </button>
+          ) : null}
         </div>
       </div>
     </nav>

@@ -43,7 +43,9 @@ import { wetIsSet, wetShorthand } from "@/lib/wet";
 import { cn, emptyAssessment, makeKey, marks, nextNegative, nextPositive } from "@/lib/utils";
 import { useDebouncedCallback } from "@/hooks/useDebouncedCallback";
 import { InitErrorPanel } from "@/components/init-error-panel";
-import { shouldSkipIndexedDB } from "@/lib/legacy-safari";
+import { enableIOS12CompatMode } from "@/lib/ios12-compat-mode";
+import { legacyClickProps } from "@/lib/legacy-interaction";
+import { isOldIOS, shouldSkipIndexedDB } from "@/lib/legacy-safari";
 import {
   createAssessmentPressProps,
   logAssessmentAreaTouch,
@@ -153,10 +155,14 @@ export default function MountingYardApp() {
   const gearTilesRef = useRef<HTMLDivElement>(null);
   const assessmentAreaRef = useRef<HTMLDivElement>(null);
   const lastTouchTimeRef = useRef(0);
+  const [clickOnly, setClickOnly] = useState(false);
 
   useEffect(() => {
     removeLegacyStartupOverlays();
     logMountedBlockingOverlays();
+    const old = isOldIOS();
+    setClickOnly(old);
+    if (old) void enableIOS12CompatMode();
   }, []);
 
   useEffect(() => {
@@ -169,8 +175,13 @@ export default function MountingYardApp() {
 
   const assessmentPress = useCallback(
     (label: string, handler: () => void) =>
-      createAssessmentPressProps(label, () => handleAssessmentPress(handler), lastTouchTimeRef),
-    [handleAssessmentPress],
+      createAssessmentPressProps(
+        label,
+        () => handleAssessmentPress(handler),
+        lastTouchTimeRef,
+        clickOnly,
+      ),
+    [handleAssessmentPress, clickOnly],
   );
 
   const persistSnapshot = useCallback(() => {
@@ -482,11 +493,16 @@ export default function MountingYardApp() {
               variant="outline"
               size="touch"
               className="rounded-3xl text-lg"
-              onClick={() => void handleImportMeetingFolder()}
+              {...legacyClickProps(() => void handleImportMeetingFolder())}
             >
               Import meeting folder
             </Button>
-            <Button type="button" size="touch" className="rounded-3xl text-lg" onClick={handleExport}>
+            <Button
+              type="button"
+              size="touch"
+              className="rounded-3xl text-lg"
+              {...legacyClickProps(handleExport)}
+            >
               Export all assessments
             </Button>
             </div>
@@ -537,10 +553,10 @@ export default function MountingYardApp() {
                       <button
                         key={r.no}
                         type="button"
-                        onClick={() => {
+                        {...legacyClickProps(() => {
                           setGearPicker(null);
                           setSelectedRunner(r.no);
-                        }}
+                        })}
                         className={cn(
                           "w-full rounded-3xl border-2 p-4 text-left text-slate-900 transition active:scale-[0.99]",
                           tint,
@@ -577,9 +593,13 @@ export default function MountingYardApp() {
             ref={assessmentAreaRef}
             className="relative z-10 space-y-4 touch-manipulation"
             data-yard-assessment="true"
-            onTouchStartCapture={handleAssessmentAreaTouchCapture}
-            onTouchStart={(e) => closePhysicalPickerIfOutside(e.target)}
-            onMouseDown={(e) => closePhysicalPickerIfOutside(e.target)}
+            {...(clickOnly
+              ? { onMouseDown: (e: React.MouseEvent) => closePhysicalPickerIfOutside(e.target) }
+              : {
+                  onTouchStartCapture: handleAssessmentAreaTouchCapture,
+                  onTouchStart: (e: React.TouchEvent) => closePhysicalPickerIfOutside(e.target),
+                  onMouseDown: (e: React.MouseEvent) => closePhysicalPickerIfOutside(e.target),
+                })}
           >
             <Card className="rounded-3xl shadow-sm">
               <CardContent className="space-y-4 p-5">
@@ -850,11 +870,17 @@ export default function MountingYardApp() {
             variant="outline"
             className="min-h-[3.75rem] flex-1 rounded-3xl text-xl font-bold"
             disabled={!canPrev}
-            onClick={goPrev}
+            {...legacyClickProps(goPrev)}
           >
             ← Previous
           </Button>
-          <Button type="button" size="touch" className="min-h-[3.75rem] flex-1 rounded-3xl text-xl font-bold" disabled={!canNext} onClick={goNext}>
+          <Button
+            type="button"
+            size="touch"
+            className="min-h-[3.75rem] flex-1 rounded-3xl text-xl font-bold"
+            disabled={!canNext}
+            {...legacyClickProps(goNext)}
+          >
             Next →
           </Button>
         </div>

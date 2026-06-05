@@ -65,11 +65,25 @@ export function createAssessmentPressProps(
   label: string,
   onPress: () => void,
   lastTouchTimeRef: LastTouchTimeRef,
+  clickOnly = false,
 ): {
   "data-assessment-control": string;
-  onTouchStart: (event: ReactTouchEvent) => void;
-  onClick: (event: React.MouseEvent) => void;
+  onClick: (event: ReactMouseEvent) => void;
+  onTouchStart?: (event: ReactTouchEvent) => void;
+  onPointerDown?: undefined;
 } {
+  if (clickOnly) {
+    return {
+      "data-assessment-control": label,
+      onClick: () => {
+        logAssessmentControlTap(label);
+        onPress();
+      },
+      onTouchStart: undefined,
+      onPointerDown: undefined,
+    };
+  }
+
   return {
     "data-assessment-control": label,
     onTouchStart: (event) => {

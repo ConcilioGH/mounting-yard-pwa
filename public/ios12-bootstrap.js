@@ -3,6 +3,52 @@
 
   var STARTUP_MS = 3000;
 
+  function isOldIOS() {
+    return typeof navigator !== "undefined" && /OS 12_/.test(navigator.userAgent);
+  }
+
+  function unregisterServiceWorkers() {
+    if (!("serviceWorker" in navigator)) return Promise.resolve();
+    var sw = navigator.serviceWorker;
+    if (sw.getRegistrations) {
+      return sw.getRegistrations().then(function (regs) {
+        return Promise.all(regs.map(function (r) { return r.unregister(); }));
+      });
+    }
+    if (sw.getRegistration) {
+      return sw.getRegistration().then(function (reg) {
+        if (reg) return reg.unregister();
+      });
+    }
+    return Promise.resolve();
+  }
+
+  function clearPWACaches() {
+    if (typeof caches === "undefined") return Promise.resolve();
+    return caches.keys().then(function (keys) {
+      return Promise.all(keys.map(function (key) { return caches.delete(key); }));
+    });
+  }
+
+  function enableIOS12CompatModeEarly() {
+    if (!isOldIOS()) return;
+    if (document.documentElement) {
+      document.documentElement.setAttribute("data-ios12-compat", "true");
+    }
+    if (document.head && !document.querySelector('meta[data-ios12-no-cache="true"]')) {
+      var meta = document.createElement("meta");
+      meta.setAttribute("data-ios12-no-cache", "true");
+      meta.httpEquiv = "Cache-Control";
+      meta.content = "no-cache, no-store, must-revalidate";
+      document.head.appendChild(meta);
+    }
+    Promise.all([unregisterServiceWorkers(), clearPWACaches()]).catch(function (err) {
+      console.warn("[ios12-bootstrap] compat mode failed", err);
+    });
+  }
+
+  enableIOS12CompatModeEarly();
+
   function polyfillStructuredClone() {
     if (typeof globalThis.structuredClone === "function") return;
     globalThis.structuredClone = function (value) {
@@ -39,6 +85,22 @@
     console.warn("[ios12-bootstrap] polyfill install failed", e);
   }
 
+  function resetAppDataAndReload() {
+    try {
+      if (window.sessionStorage) window.sessionStorage.clear();
+    } catch (err) {
+      console.warn(err);
+    }
+    try {
+      if (window.localStorage) window.localStorage.clear();
+    } catch (err) {
+      console.warn(err);
+    }
+    unregisterServiceWorkers().then(clearPWACaches).finally(function () {
+      window.location.reload();
+    });
+  }
+
   function showFailure(message) {
     if (document.getElementById("ios12-startup-failure")) return;
     var panel = document.createElement("div");
@@ -49,38 +111,18 @@
       "padding:16px;border-radius:12px;border:2px solid #ef4444;background:#450a0a;color:#fecaca;" +
       "font:16px/1.4 -apple-system,BlinkMacSystemFont,sans-serif;overflow:auto;";
     panel.innerHTML =
-      "<p style='margin:0 0 8px;font-weight:700'>Compatibility fallback active</p>" +
-      "<p style='margin:0 0 12px'>App failed to initialise on this device. Tap Reset Local Data or open Yard.</p>" +
+      "<p style='margin:0 0 8px;font-weight:700'>iOS 12 compatibility mode</p>" +
+      "<p style='margin:0 0 12px'>App failed to initialise on this device. Tap Reset App Data or open Yard.</p>" +
       "<pre style='margin:0 0 12px;white-space:pre-wrap;word-break:break-word;font-size:13px'>" +
       String(message) +
       "</pre>" +
       "<p style='margin:0 0 12px'><a href='/yard' style='color:#fde68a;font-weight:700'>Open Yard page</a></p>" +
       "<button type='button' id='ios12-reset-btn' style='padding:12px 20px;border:0;border-radius:10px;" +
-      "background:#dc2626;color:#fff;font-weight:700;font-size:16px'>Reset Local Data</button>";
+      "background:#dc2626;color:#fff;font-weight:700;font-size:16px'>Reset App Data</button>";
     document.body.appendChild(panel);
     var btn = document.getElementById("ios12-reset-btn");
     if (btn) {
-      btn.addEventListener("click", function () {
-        try {
-          if (window.localStorage) window.localStorage.clear();
-        } catch (err) {
-          console.warn(err);
-        }
-        if ("serviceWorker" in navigator) {
-          var sw = navigator.serviceWorker;
-          if (sw.getRegistrations) {
-            sw.getRegistrations().then(function (regs) {
-              return Promise.all(regs.map(function (r) { return r.unregister(); }));
-            }).finally(function () { window.location.reload(); });
-            return;
-          }
-          sw.getRegistration().then(function (reg) {
-            if (reg) return reg.unregister();
-          }).finally(function () { window.location.reload(); });
-          return;
-        }
-        window.location.reload();
-      });
+      btn.addEventListener("click", resetAppDataAndReload);
     }
   }
 
