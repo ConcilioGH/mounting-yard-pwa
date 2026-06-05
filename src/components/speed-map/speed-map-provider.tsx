@@ -20,6 +20,11 @@ import { MEETING_IMPORTED_EVENT } from "@/lib/meeting-coordination";
 import { reconcileSpeedMapActivePlacement } from "@/lib/meeting-speed-map-sync";
 import { clearSpeedMapLocalStorage } from "@/lib/speed-map-storage";
 import type { RaceMapStateEntry } from "@/lib/speed-map";
+import {
+  logLoadingState,
+  reportStartupFailure,
+  traceSync,
+} from "@/lib/startup-diagnostics";
 
 type SpeedMapContextValue = SpeedMapSessionState & {
   hydrated: boolean;
@@ -44,8 +49,11 @@ export function SpeedMapProvider({ children }: { children: ReactNode }) {
   const [session, setSession] = useState<SpeedMapSessionState>(() => {
     try {
       const loaded = loadSpeedMapFromStorage();
-      return loaded ? reconcileSpeedMapActivePlacement(loaded) : emptySpeedMapSession();
-    } catch {
+      return loaded
+        ? traceSync("speed-map-session-reconcile", () => reconcileSpeedMapActivePlacement(loaded))
+        : emptySpeedMapSession();
+    } catch (error) {
+      reportStartupFailure("speed-map-provider-init-state", error);
       return emptySpeedMapSession();
     }
   });
@@ -54,12 +62,17 @@ export function SpeedMapProvider({ children }: { children: ReactNode }) {
   sessionRef.current = session;
 
   useEffect(() => {
+    logLoadingState("SpeedMapProvider", true, "hydrated=false");
     try {
       const loaded = loadSpeedMapFromStorage();
-      if (loaded) setSession(reconcileSpeedMapActivePlacement(loaded));
+      if (loaded) {
+        setSession(traceSync("speed-map-session-reconcile", () => reconcileSpeedMapActivePlacement(loaded)));
+      }
     } catch (error) {
+      reportStartupFailure("speed-map-provider-hydrate", error);
       console.error("Failed to hydrate speed map session", error);
     } finally {
+      logLoadingState("SpeedMapProvider", false, "hydrated=true");
       setHydrated(true);
     }
   }, []);

@@ -42,6 +42,15 @@ import type { Assessment, Race, Runner, WetBodyType, WetFeet } from "@/lib/types
 import { wetIsSet, wetShorthand } from "@/lib/wet";
 import { cn, emptyAssessment, makeKey, marks, nextNegative, nextPositive } from "@/lib/utils";
 import { useDebouncedCallback } from "@/hooks/useDebouncedCallback";
+import { useStartupGate } from "@/hooks/use-startup-gate";
+import { StartupGateScreen } from "@/components/startup-gate-screen";
+import {
+  logLoadingState,
+  logStartupStep,
+  reportStartupFailure,
+  startInitWatchdog,
+  traceAsync,
+} from "@/lib/startup-diagnostics";
 
 function totals(a: Assessment | undefined) {
   const pos = a
@@ -123,6 +132,9 @@ type PhysicalPicker = GearTileCode | "WET" | null;
 
 export default function MountingYardApp() {
   const [hydrated, setHydrated] = useState(false);
+  const hydrateGate = useStartupGate("mounting-yard-hydrate", {
+    onTimeout: () => setHydrated(true),
+  });
   const [races, setRaces] = useState<Race[]>(DEFAULT_RACES);
   const [raceId, setRaceId] = useState(DEFAULT_RACES[0]?.id ?? "R1");
   const [selectedRunner, setSelectedRunner] = useState(DEFAULT_RACES[0]?.runners[0]?.no ?? 1);
@@ -174,27 +186,50 @@ export default function MountingYardApp() {
   }, [flushPending]);
 
   useEffect(() => {
+    logLoadingState("MountingYardApp", true, "hydrated=false");
+    const clearWatchdog = startInitWatchdog("mounting-yard-init", 5_000);
+
     void (async () => {
       try {
-        await seedRacesIfEmpty();
-        const [loadedRaces, loadedAssessments] = await Promise.all([loadAllRaces(), loadAllAssessments()]);
-        if (loadedRaces.length) {
-          setRaces(loadedRaces);
-          const first = loadedRaces[0];
-          setRaceId(first.id);
-          setSelectedRunner(first.runners[0]?.no ?? 1);
-        }
-        dataRef.current = loadedAssessments;
-        setData(loadedAssessments);
-        setMeetingLabel(formatMeetingDisplayLabel(loadMeetingManifest()));
-        setMeetingDate(loadMeetingManifest()?.date ?? "");
+        await traceAsync("mounting-yard-init", async () => {
+          await seedRacesIfEmpty();
+          const [loadedRaces, loadedAssessments] = await Promise.all([
+            loadAllRaces(),
+            loadAllAssessments(),
+          ]);
+          logStartupStep("meeting-load:start");
+          let manifest = null;
+          try {
+            manifest = loadMeetingManifest();
+          } catch (manifestError) {
+            reportStartupFailure("meeting-manifest-load", manifestError);
+          }
+          logStartupStep("meeting-load:end", {
+            hasManifest: Boolean(manifest),
+            raceCount: manifest?.raceNos.length ?? 0,
+          });
+          if (loadedRaces.length) {
+            setRaces(loadedRaces);
+            const first = loadedRaces[0];
+            setRaceId(first.id);
+            setSelectedRunner(first.runners[0]?.no ?? 1);
+          }
+          dataRef.current = loadedAssessments;
+          setData(loadedAssessments);
+          setMeetingLabel(formatMeetingDisplayLabel(manifest));
+          setMeetingDate(manifest?.date ?? "");
+        });
       } catch (e) {
+        reportStartupFailure("mounting-yard-init", e);
         console.error(e);
       } finally {
+        clearWatchdog();
+        logLoadingState("MountingYardApp", false, "hydrated=true");
         setHydrated(true);
+        hydrateGate.markReleased();
       }
     })();
-  }, []);
+  }, [hydrateGate.markReleased]);
 
   const race = races.find((r) => r.id === raceId) ?? races[0];
   const runners = useMemo(() => race?.runners ?? [], [race]);
@@ -359,7 +394,12 @@ export default function MountingYardApp() {
 
   if (!hydrated) {
     return (
-      <div className="flex min-h-[50vh] items-center justify-center text-xl text-slate-600">Loading…</div>
+      <StartupGateScreen
+        label="Loading…"
+        isBlocking={hydrateGate.isBlocking}
+        timedOut={hydrateGate.timedOut}
+        errors={hydrateGate.errors}
+      />
     );
   }
 

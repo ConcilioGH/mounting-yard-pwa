@@ -7,6 +7,7 @@ const KNOWN_INDEXED_DB_NAMES = [
   "mounting-yard-pwa",
   "speed-map",
   "mounting-yard-assessment",
+  "mounting-yard-meeting-dir",
 ] as const;
 
 function deleteIndexedDbDatabase(name: string): Promise<void> {

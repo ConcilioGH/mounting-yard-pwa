@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
+import Script from "next/script";
 import { AppNav } from "@/components/app-nav";
 import { AppProviders } from "@/app/app-providers";
 import "./globals.css";
@@ -33,6 +34,9 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <Script src="/ios12-bootstrap.js" strategy="beforeInteractive" />
+      </head>
       <body className="min-h-[100dvh] bg-slate-950 text-slate-100">
         <AppProviders>
           <AppNav />

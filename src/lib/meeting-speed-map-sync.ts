@@ -13,6 +13,7 @@ import {
   saveSpeedMapToStorage,
   type SpeedMapSessionState,
 } from "@/lib/speed-map-persistence";
+import { safeStructuredClone } from "@/lib/safe-clone";
 
 const PLACEMENT_ENGINE = "active-board-v32";
 
@@ -61,7 +62,7 @@ function speedRunnerFromRow(
 function cloneRunnersForPlacement(runners: SpeedMapRunner[]): SpeedMapRunner[] {
   return runners.map((r) =>
     hydrateRunnerSpeedFields(
-      structuredClone({
+      safeStructuredClone({
         ...r,
         flags: { ...r.flags },
       }),
@@ -79,7 +80,7 @@ function mergePreservedRunners(
     const kept = prevById.get(runner.id);
     if (!kept?.manuallyPlaced) return runner;
     return hydrateRunnerSpeedFields(
-      structuredClone({
+      safeStructuredClone({
         ...runner,
         x: kept.x,
         y: kept.y,

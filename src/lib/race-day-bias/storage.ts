@@ -8,6 +8,7 @@ import {
   type RaceBiasEntry,
   type RaceDayBiasState,
 } from "@/lib/race-day-bias/types";
+import { reportStartupFailure, traceSync } from "@/lib/startup-diagnostics";
 
 /** Active meeting pointer — bias payloads live at `bias:{meetingId}`. */
 export const BIAS_ACTIVE_MEETING_KEY = "bias:active-meeting-id";
@@ -189,12 +190,19 @@ export function loadRaceDayBiasStateForMeeting(meetingId: string): BiasLoadResul
  * Returns empty state when no active meeting is set.
  */
 export function loadRaceDayBiasState(): RaceDayBiasState {
-  removeLegacyBiasStorageKeys();
-  const meetingId = getActiveBiasMeetingId();
-  if (!meetingId) {
-    return createDefaultBiasState();
-  }
-  return loadRaceDayBiasStateForMeeting(meetingId).state;
+  return traceSync("localStorage-bias-load", () => {
+    try {
+      removeLegacyBiasStorageKeys();
+      const meetingId = getActiveBiasMeetingId();
+      if (!meetingId) {
+        return createDefaultBiasState();
+      }
+      return loadRaceDayBiasStateForMeeting(meetingId).state;
+    } catch (error) {
+      reportStartupFailure("localStorage-bias-load", error);
+      return createDefaultBiasState();
+    }
+  });
 }
 
 export function logBiasStorageDebug(

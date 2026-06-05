@@ -41,6 +41,14 @@ import {
 } from "@/lib/speed-map-storage";
 import { getTileLeftNorm, VISUAL_COLUMNS } from "@/lib/wirTrackScale";
 import { cn } from "@/lib/utils";
+import { useStartupGate } from "@/hooks/use-startup-gate";
+import { StartupGateScreen } from "@/components/startup-gate-screen";
+import { safeStructuredClone } from "@/lib/safe-clone";
+import {
+  logLoadingState,
+  reportStartupFailure,
+  startInitWatchdog,
+} from "@/lib/startup-diagnostics";
 
 type RaceMapEntry = RaceMapStateEntry;
 const WIR_TRACK_TEMPLATE = `repeat(${VISUAL_COLUMNS}, minmax(0, 1fr))`;
@@ -2899,14 +2907,30 @@ export default function SpeedMapBoard() {
     hydrated,
   } = useSpeedMapSession();
   const [mounted, setMounted] = useState(false);
+  const [mountError, setMountError] = useState<string | null>(null);
+  const mountGate = useStartupGate("speed-map-board-mount", {
+    onTimeout: () => setMounted(true),
+  });
   const [recordingMode, setRecordingMode] = useState(false);
   const [importError, setImportError] = useState<string | null>(null);
   const [saveStatus, setSaveStatus] = useState<string | null>(null);
   const [tileLayoutVersion, setTileLayoutVersion] = useState(0);
 
   useEffect(() => {
-    setMounted(true);
-  }, []);
+    logLoadingState("SpeedMapBoard", true, "mounted=false");
+    const clearWatchdog = startInitWatchdog("speed-map-board-mount", 5_000);
+    try {
+      setMounted(true);
+      logLoadingState("SpeedMapBoard", false, "mounted=true");
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      setMountError(message);
+      reportStartupFailure("speed-map-board-mount", error);
+    } finally {
+      clearWatchdog();
+      mountGate.markReleased();
+    }
+  }, [mountGate.markReleased]);
 
   const dragStateRef = useRef<{ id: string; offsetX: number; offsetY: number } | null>(null);
   const tileProbeRef = useRef<HTMLButtonElement>(null);
@@ -3076,7 +3100,7 @@ export default function SpeedMapBoard() {
           [activeRaceNo]: {
             ...current,
             runners: applyActiveBoardRacePlacement(
-              structuredClone(current.runners).map((r) =>
+              safeStructuredClone(current.runners).map((r) =>
                 hydrateRunnerSpeedFields({ ...r, manuallyPlaced: false }),
               ),
               activeRaceNo,
@@ -3255,8 +3279,13 @@ export default function SpeedMapBoard() {
 
   if (!mounted) {
     return (
-      <div className="rounded-2xl border border-slate-800/70 bg-slate-950/80 p-4 text-slate-400">
-        Loading speed map...
+      <div className="space-y-2 rounded-2xl border border-slate-800/70 bg-slate-950/80 p-4 text-slate-400">
+        <StartupGateScreen
+          label="Loading speed map..."
+          isBlocking={mountGate.isBlocking}
+          timedOut={mountGate.timedOut}
+          errors={mountError ? [mountError, ...mountGate.errors] : mountGate.errors}
+        />
       </div>
     );
   }
@@ -3463,7 +3492,7 @@ export default function SpeedMapBoard() {
                       const race = prev[activeRaceNo];
                       if (!race) return prev;
                       const nextRunners = applyActiveBoardRacePlacement(
-                        structuredClone(race.runners).map((runner) =>
+                        safeStructuredClone(race.runners).map((runner) =>
                           hydrateRunnerSpeedFields({ ...runner, manuallyPlaced: false }),
                         ),
                         activeRaceNo,

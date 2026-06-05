@@ -23,6 +23,10 @@
     "react-dom": "^19.0.0",
     "tailwind-merge": "^2.6.0"
   },
+  "browserslist": [
+    "iOS >= 12",
+    "Safari >= 12"
+  ],
   "devDependencies": {
     "@ducanh2912/next-pwa": "^10.2.9",
     "@eslint/eslintrc": "^3.2.0",

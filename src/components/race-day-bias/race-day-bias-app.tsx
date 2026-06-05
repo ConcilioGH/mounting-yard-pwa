@@ -30,6 +30,14 @@ import type { ApplyResultsSpReport } from "@/lib/race-day-bias/apply-results-sp"
 import type { FinisherSlot, PositionField, RaceDayBiasState } from "@/lib/race-day-bias/types";
 import { cn } from "@/lib/utils";
 import { useDebouncedCallback } from "@/hooks/useDebouncedCallback";
+import { useStartupGate } from "@/hooks/use-startup-gate";
+import { StartupGateScreen } from "@/components/startup-gate-screen";
+import {
+  logLoadingState,
+  logStartupStep,
+  reportStartupFailure,
+  traceAsync,
+} from "@/lib/startup-diagnostics";
 import { ResultsSpImportPanel } from "@/components/race-day-bias/results-sp-import-panel";
 import {
   BiasConclusionPanel,
@@ -75,6 +83,9 @@ const biasModalCancelButtonClass = cn(
 
 export default function RaceDayBiasApp() {
   const [hydrated, setHydrated] = useState(false);
+  const hydrateGate = useStartupGate("race-day-bias-hydrate", {
+    onTimeout: () => setHydrated(true),
+  });
   const [state, setState] = useState<RaceDayBiasState>(() => loadRaceDayBiasState());
   const [saveState, setSaveState] = useState<"idle" | "saving" | "saved">("idle");
   const [editingCell, setEditingCell] = useState<CellKey | null>(null);
@@ -99,22 +110,36 @@ export default function RaceDayBiasApp() {
   }, 350);
 
   useEffect(() => {
+    logLoadingState("RaceDayBiasApp", true, "hydrated=false");
+
     const refreshFieldSizes = () => {
-      void loadAllRaces().then((races) => setFieldSizeByRaceNo(buildRaceFieldSizeMap(races)));
+      void traceAsync("race-day-bias-field-sizes", async () => {
+        const races = await loadAllRaces();
+        setFieldSizeByRaceNo(buildRaceFieldSizeMap(races));
+      }).catch((error) => reportStartupFailure("race-day-bias-field-sizes", error));
     };
 
     const refreshBiasState = () => {
-      removeLegacyBiasStorageKeys();
-      const manifest = loadMeetingManifest();
-      if (!manifest?.meetingId) {
-        setState({ meetingLabel: "", races: [], updatedAt: new Date().toISOString() });
-        return;
+      try {
+        removeLegacyBiasStorageKeys();
+        logStartupStep("meeting-load:start");
+        const manifest = loadMeetingManifest();
+        logStartupStep("meeting-load:end", {
+          hasManifest: Boolean(manifest),
+          meetingId: manifest?.meetingId ?? null,
+        });
+        if (!manifest?.meetingId) {
+          setState({ meetingLabel: "", races: [], updatedAt: new Date().toISOString() });
+          return;
+        }
+        const { state, biasKey, loadedExisting, meetingId } = loadRaceDayBiasStateForMeeting(
+          manifest.meetingId,
+        );
+        logBiasStorageDebug(meetingId, biasKey, loadedExisting, state.races.length);
+        setState(state);
+      } catch (error) {
+        reportStartupFailure("race-day-bias-state-load", error);
       }
-      const { state, biasKey, loadedExisting, meetingId } = loadRaceDayBiasStateForMeeting(
-        manifest.meetingId,
-      );
-      logBiasStorageDebug(meetingId, biasKey, loadedExisting, state.races.length);
-      setState(state);
     };
 
     const refresh = () => {
@@ -122,8 +147,15 @@ export default function RaceDayBiasApp() {
       refreshFieldSizes();
     };
 
-    refresh();
-    setHydrated(true);
+    try {
+      refresh();
+    } catch (error) {
+      reportStartupFailure("race-day-bias-init", error);
+    } finally {
+      logLoadingState("RaceDayBiasApp", false, "hydrated=true");
+      setHydrated(true);
+      hydrateGate.markReleased();
+    }
     window.addEventListener(MEETING_IMPORTED_EVENT, refresh);
     const onStorage = (event: StorageEvent) => {
       if (isBiasStorageKey(event.key) || event.key === MEETING_MANIFEST_STORAGE_KEY) {
@@ -135,7 +167,7 @@ export default function RaceDayBiasApp() {
       window.removeEventListener(MEETING_IMPORTED_EVENT, refresh);
       window.removeEventListener("storage", onStorage);
     };
-  }, []);
+  }, [hydrateGate.markReleased]);
 
   useEffect(() => {
     if (!hydrated) return;
@@ -223,9 +255,12 @@ export default function RaceDayBiasApp() {
 
   if (!hydrated) {
     return (
-      <div className="flex min-h-[40vh] items-center justify-center text-lg text-slate-400">
-        Loading race day bias…
-      </div>
+      <StartupGateScreen
+        label="Loading race day bias…"
+        isBlocking={hydrateGate.isBlocking}
+        timedOut={hydrateGate.timedOut}
+        errors={hydrateGate.errors}
+      />
     );
   }
 

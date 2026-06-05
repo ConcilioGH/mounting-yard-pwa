@@ -4,6 +4,7 @@ import {
   type SavedMapState,
 } from "@/lib/speed-map";
 import { SPEED_MAP_STORAGE_KEY } from "@/lib/speed-map-storage";
+import { reportStartupFailure, traceSync } from "@/lib/startup-diagnostics";
 
 export type SpeedMapSessionState = {
   /** Links session to shared meeting manifest (`meetingKey`). */
@@ -52,10 +53,17 @@ function hydrateRaceEntry(race: RaceMapStateEntry): RaceMapStateEntry {
 
 export function loadSpeedMapFromStorage(): SpeedMapSessionState | null {
   if (typeof localStorage === "undefined") return null;
-  const raw = localStorage.getItem(SPEED_MAP_STORAGE_KEY);
-  if (!raw) return null;
-  try {
-    const parsed = JSON.parse(raw) as SavedMapState & {
+  return traceSync("localStorage-speed-map-load", () => {
+    let raw: string | null = null;
+    try {
+      raw = localStorage.getItem(SPEED_MAP_STORAGE_KEY);
+    } catch (error) {
+      reportStartupFailure("localStorage-speed-map-read", error);
+      return null;
+    }
+    if (!raw) return null;
+    try {
+      const parsed = JSON.parse(raw) as SavedMapState & {
       raceOrder?: string[];
       selectedRunnerIds?: string[];
       focusMode?: boolean;
@@ -82,9 +90,11 @@ export function loadSpeedMapFromStorage(): SpeedMapSessionState | null {
       focusMode: parsed.focusMode ?? false,
       pressureOverlay: parsed.pressureOverlay ?? true,
     };
-  } catch {
-    return null;
-  }
+    } catch (error) {
+      reportStartupFailure("localStorage-speed-map-load", error);
+      return null;
+    }
+  });
 }
 
 export function saveSpeedMapToStorage(session: SpeedMapSessionState): void {

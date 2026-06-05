@@ -1,7 +1,9 @@
 import { openDB, type IDBPDatabase } from "idb";
+import { withTimeout } from "@/lib/promise-timeout";
 
 const DB_NAME = "mounting-yard-meeting-dir";
 const DB_VERSION = 1;
+const DB_OPEN_TIMEOUT_MS = 4_000;
 const STORE = "handles";
 
 type Schema = {
@@ -12,12 +14,19 @@ let dbPromise: Promise<IDBPDatabase<Schema>> | null = null;
 
 function getDB(): Promise<IDBPDatabase<Schema>> {
   if (!dbPromise) {
-    dbPromise = openDB<Schema>(DB_NAME, DB_VERSION, {
-      upgrade(db) {
-        if (!db.objectStoreNames.contains(STORE)) {
-          db.createObjectStore(STORE);
-        }
-      },
+    dbPromise = withTimeout(
+      openDB<Schema>(DB_NAME, DB_VERSION, {
+        upgrade(db) {
+          if (!db.objectStoreNames.contains(STORE)) {
+            db.createObjectStore(STORE);
+          }
+        },
+      }),
+      DB_OPEN_TIMEOUT_MS,
+      "meeting-dir-indexeddb-open",
+    ).catch((error) => {
+      dbPromise = null;
+      throw error;
     });
   }
   return dbPromise;
@@ -71,7 +80,13 @@ export async function readMeetingCsvFromDirectory(
   return { file: master.file, name: master.name };
 }
 
+function isIOSDevice(): boolean {
+  if (typeof navigator === "undefined") return false;
+  return /iPad|iPhone|iPod/.test(navigator.userAgent);
+}
+
 export function supportsDirectoryPicker(): boolean {
+  if (isIOSDevice()) return false;
   return typeof window !== "undefined" && "showDirectoryPicker" in window;
 }
 

@@ -1,3 +1,4 @@
+import { reportStartupFailure, traceSync } from "@/lib/startup-diagnostics";
 import type { Race } from "@/lib/types";
 import { parseMeetingCsv, type MeetingCsvParseResult } from "@/lib/csv";
 import { saveRaces } from "@/lib/db";
@@ -76,10 +77,17 @@ export function raceNosFromSpeedMapOrder(raceNos: string[]): string[] {
 
 export function loadMeetingManifest(): MeetingManifest | null {
   if (typeof localStorage === "undefined") return null;
-  try {
-    const raw = localStorage.getItem(MEETING_MANIFEST_STORAGE_KEY);
-    if (!raw) return null;
-    const parsed = JSON.parse(raw) as Partial<MeetingManifest>;
+  return traceSync("localStorage-meeting-manifest-load", () => {
+    try {
+      let raw: string | null = null;
+      try {
+        raw = localStorage.getItem(MEETING_MANIFEST_STORAGE_KEY);
+      } catch (readError) {
+        reportStartupFailure("localStorage-meeting-manifest-read", readError);
+        return null;
+      }
+      if (!raw) return null;
+      const parsed = JSON.parse(raw) as Partial<MeetingManifest>;
     const raceNos = Array.isArray(parsed.raceNos)
       ? parsed.raceNos.map((n) => normalizeRaceNo(String(n))).filter(Boolean)
       : [];
@@ -107,9 +115,11 @@ export function loadMeetingManifest(): MeetingManifest | null {
       raceNos,
       importedAt: String(parsed.importedAt ?? ""),
     };
-  } catch {
-    return null;
-  }
+    } catch (error) {
+      reportStartupFailure("localStorage-meeting-manifest-load", error);
+      return null;
+    }
+  });
 }
 
 export function saveMeetingManifest(manifest: MeetingManifest): void {
