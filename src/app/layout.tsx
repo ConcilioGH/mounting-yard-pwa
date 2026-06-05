@@ -8,7 +8,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   applicationName: "Mounting Yard",
-  title: { default: "Mounting Yard", template: "%s · Mounting Yard" },
+  title: { default: "Mounting Yard TEST 123", template: "%s · Mounting Yard" },
   description: "iPad mounting yard assessments with offline storage and CSV tools.",
   icons: {
     icon: [{ url: "/icon", type: "image/png", sizes: "512x512" }],

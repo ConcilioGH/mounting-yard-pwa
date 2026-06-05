@@ -468,9 +468,9 @@ export default function MountingYardApp() {
     <div className="min-h-[100dvh] bg-slate-100 pb-[calc(5.5rem+env(safe-area-inset-bottom))] pt-[env(safe-area-inset-top)] text-slate-900">
       <InitErrorPanel errors={initErrors} />
       <div className="mx-auto max-w-7xl space-y-3 p-3">
-        <header className="flex flex-col gap-4 rounded-3xl bg-white p-5 shadow-sm lg:flex-row lg:items-center lg:justify-between">
+        <header className="flex flex-col gap-4 rounded-3xl bg-red-500 p-5 shadow-sm lg:flex-row lg:items-center lg:justify-between">
           <div className="min-w-0 flex-1">
-            <h1 className="text-2xl font-bold tracking-tight md:text-3xl">Mounting Yard</h1>
+            <h1 className="text-2xl font-bold tracking-tight md:text-3xl">Mounting Yard TEST 123</h1>
             <p className="mt-1 text-lg text-slate-600">
               Autosaves on this device. Import meeting CSV here once — Speed Map and Race Day Bias follow.
             </p>
