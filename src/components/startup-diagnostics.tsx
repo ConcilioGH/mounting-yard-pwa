@@ -5,6 +5,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { CompatibilityFallbackBanner } from "@/components/compatibility-fallback-banner";
 import { resetLocalDataAndReload } from "@/lib/reset-local-data";
 import { shouldSkipServiceWorker } from "@/lib/legacy-safari";
+import { logMountedBlockingOverlays, removeLegacyStartupOverlays } from "@/lib/yard-touch-diagnostics";
 import {
   getStartupFailures,
   logStartupStep,
@@ -32,7 +33,8 @@ function StartupErrorBanner() {
   return (
     <div
       role="alert"
-      className="fixed inset-x-3 top-[calc(3.5rem+env(safe-area-inset-top))] z-[500] max-h-[40vh] overflow-y-auto rounded-xl border-2 border-red-500 bg-red-950 p-3 text-red-100 shadow-lg"
+      data-startup-overlay="true"
+      className="pointer-events-none fixed inset-x-3 top-[calc(3.5rem+env(safe-area-inset-top))] z-[500] max-h-[40vh] overflow-y-auto rounded-xl border-2 border-red-500 bg-red-950 p-3 text-red-100 shadow-lg"
     >
       <p className="text-sm font-bold uppercase tracking-wide text-red-300">Startup failed</p>
       <ul className="mt-2 space-y-2 text-sm">
@@ -52,7 +54,7 @@ function StartupErrorBanner() {
         type="button"
         onClick={handleReset}
         disabled={resetting}
-        className="mt-3 w-full rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white disabled:opacity-60"
+        className="pointer-events-auto mt-3 w-full rounded-lg bg-red-600 px-4 py-2 text-sm font-semibold text-white disabled:opacity-60"
       >
         {resetting ? "Resetting…" : "Reset Local Data"}
       </button>
@@ -62,8 +64,10 @@ function StartupErrorBanner() {
 
 export function StartupDiagnosticsRoot({ children }: { children: ReactNode }) {
   useEffect(() => {
+    removeLegacyStartupOverlays();
     document.body.setAttribute("data-app-ready", "true");
     logStartupStep("app-mounted");
+    logMountedBlockingOverlays();
 
     if (shouldSkipServiceWorker()) {
       logStartupStep("service-worker-registration:skipped", { reason: "legacy-safari" });

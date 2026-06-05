@@ -45,6 +45,12 @@ import { useDebouncedCallback } from "@/hooks/useDebouncedCallback";
 import { InitErrorPanel } from "@/components/init-error-panel";
 import { shouldSkipIndexedDB } from "@/lib/legacy-safari";
 import {
+  createAssessmentPressProps,
+  logAssessmentAreaTouch,
+  logMountedBlockingOverlays,
+  removeLegacyStartupOverlays,
+} from "@/lib/yard-touch-diagnostics";
+import {
   logLoadingState,
   logStartupStep,
   reportStartupFailure,
@@ -145,10 +151,27 @@ export default function MountingYardApp() {
   const prevKeyRef = useRef<string | null>(null);
   const [gearPicker, setGearPicker] = useState<PhysicalPicker>(null);
   const gearTilesRef = useRef<HTMLDivElement>(null);
+  const assessmentAreaRef = useRef<HTMLDivElement>(null);
+  const lastTouchTimeRef = useRef(0);
+
+  useEffect(() => {
+    removeLegacyStartupOverlays();
+    logMountedBlockingOverlays();
+  }, []);
 
   useEffect(() => {
     dataRef.current = data;
   }, [data]);
+
+  const handleAssessmentPress = useCallback((handler: () => void) => {
+    handler();
+  }, []);
+
+  const assessmentPress = useCallback(
+    (label: string, handler: () => void) =>
+      createAssessmentPressProps(label, () => handleAssessmentPress(handler), lastTouchTimeRef),
+    [handleAssessmentPress],
+  );
 
   const persistSnapshot = useCallback(() => {
     setSaveState("saving");
@@ -285,10 +308,16 @@ export default function MountingYardApp() {
     }
   }, [key, persistSnapshot]);
 
-  const closePhysicalPickerIfOutside = (e: React.PointerEvent) => {
+  const closePhysicalPickerIfOutside = (target: EventTarget | null) => {
     if (!gearPicker) return;
-    if (gearTilesRef.current?.contains(e.target as Node)) return;
+    if (gearTilesRef.current?.contains(target as Node)) return;
     setGearPicker(null);
+  };
+
+  const handleAssessmentAreaTouchCapture = (event: React.TouchEvent) => {
+    const touch = event.touches[0];
+    if (!touch) return;
+    logAssessmentAreaTouch(touch.clientX, touch.clientY);
   };
 
   const updateRecord = useCallback(
@@ -493,7 +522,7 @@ export default function MountingYardApp() {
         )}
 
         <div className="grid gap-4 lg:grid-cols-[minmax(280px,360px)_1fr] lg:items-start">
-          <Card className="rounded-3xl shadow-sm lg:sticky lg:top-3 lg:max-h-[calc(100dvh-12rem)] lg:overflow-y-auto">
+          <Card className="rounded-3xl shadow-sm lg:sticky lg:top-3 lg:z-0 lg:max-h-[calc(100dvh-12rem)] lg:overflow-y-auto">
             <CardContent className="space-y-3 p-4">
               <h2 className="text-lg font-bold leading-tight text-slate-800">{race?.title}</h2>
               <div className="space-y-2">
@@ -544,7 +573,14 @@ export default function MountingYardApp() {
             </CardContent>
           </Card>
 
-          <div className="space-y-4" onPointerDown={closePhysicalPickerIfOutside}>
+          <div
+            ref={assessmentAreaRef}
+            className="relative z-10 space-y-4 touch-manipulation"
+            data-yard-assessment="true"
+            onTouchStartCapture={handleAssessmentAreaTouchCapture}
+            onTouchStart={(e) => closePhysicalPickerIfOutside(e.target)}
+            onMouseDown={(e) => closePhysicalPickerIfOutside(e.target)}
+          >
             <Card className="rounded-3xl shadow-sm">
               <CardContent className="space-y-4 p-5">
                 <div>
@@ -579,8 +615,8 @@ export default function MountingYardApp() {
                             type="button"
                             variant="outline"
                             size="touch"
-                            onClick={() => tapPositive(SWEAT_POS_KEY)}
                             className={cn(compactFactorBtn)}
+                            {...assessmentPress("positive-clean-plus", () => tapPositive(SWEAT_POS_KEY))}
                           >
                             <span>Clean +</span>
                             <span className={compactMarksPos}>{marks(record.positive[SWEAT_POS_KEY])}</span>
@@ -593,8 +629,8 @@ export default function MountingYardApp() {
                               type="button"
                               variant="outline"
                               size="touch"
-                              onClick={() => tapNegative({ label: key })}
                               className={cn(compactFactorBtn)}
+                              {...assessmentPress(`negative-sweat-${key}`, () => tapNegative({ label: key }))}
                             >
                               <span>{key}</span>
                               <span className={compactMarksNeg}>{marks(record.negative[key])}</span>
@@ -618,8 +654,8 @@ export default function MountingYardApp() {
                                 type="button"
                                 variant="outline"
                                 size="touch"
-                                onClick={() => tapPositive(key)}
                                 className={cn(compactFactorBtn)}
+                                {...assessmentPress(`positive-${key}`, () => tapPositive(key))}
                               >
                                 <span>{key}</span>
                                 <span className={compactMarksPos}>{marks(record.positive[key])}</span>
@@ -640,8 +676,8 @@ export default function MountingYardApp() {
                                 type="button"
                                 variant="outline"
                                 size="touch"
-                                onClick={() => tapNegative({ label: key })}
                                 className={cn(compactFactorBtn)}
+                                {...assessmentPress(`negative-${key}`, () => tapNegative({ label: key }))}
                               >
                                 <span className="break-words">{key}</span>
                                 <span className={compactMarksNeg}>{marks(record.negative[key])}</span>
@@ -670,8 +706,10 @@ export default function MountingYardApp() {
                           type="button"
                           size="touch"
                           variant={hasLocs ? "default" : "outline"}
-                          onClick={() => setGearPicker((p) => (p === item.code ? null : item.code))}
                           className="relative h-auto min-h-[6.25rem] w-full flex-col justify-center gap-2 rounded-3xl py-5 text-lg"
+                          {...assessmentPress(`gear-${item.code}`, () =>
+                            setGearPicker((p) => (p === item.code ? null : item.code)),
+                          )}
                         >
                           <span className="text-2xl font-bold tracking-tight">{item.code}</span>
                           <span className="text-center text-base leading-snug">{item.label}</span>
@@ -689,13 +727,12 @@ export default function MountingYardApp() {
                                 type="button"
                                 role="option"
                                 aria-selected={locs?.includes(num) ?? false}
-                                className={`flex w-full items-center gap-3 rounded-xl px-4 py-3 text-left text-lg font-semibold transition hover:bg-slate-100 active:bg-slate-200 ${
+                                className={`flex w-full touch-manipulation items-center gap-3 rounded-xl px-4 py-3 text-left text-lg font-semibold transition hover:bg-slate-100 active:bg-slate-200 ${
                                   locs?.includes(num) ? "bg-slate-100" : ""
                                 }`}
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  selectGearLocation(item.code, num);
-                                }}
+                                {...assessmentPress(`gear-${item.code}-loc-${num}`, () =>
+                                  selectGearLocation(item.code, num),
+                                )}
                               >
                                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-900 text-white">
                                   {num}
@@ -719,8 +756,8 @@ export default function MountingYardApp() {
                           type="button"
                           size="touch"
                           variant={hasWet ? "default" : "outline"}
-                          onClick={() => setGearPicker((p) => (p === "WET" ? null : "WET"))}
                           className="relative h-auto min-h-[6.25rem] w-full flex-col justify-center gap-2 rounded-3xl py-5 text-lg"
+                          {...assessmentPress("gear-wet", () => setGearPicker((p) => (p === "WET" ? null : "WET")))}
                         >
                           <span className="text-2xl font-bold tracking-tight">
                             {wetTile.code}
@@ -747,13 +784,12 @@ export default function MountingYardApp() {
                                     key={opt.value}
                                     type="button"
                                     className={cn(
-                                      "flex w-full rounded-xl px-3 py-2.5 text-left text-base font-semibold transition hover:bg-slate-100 active:bg-slate-200",
+                                      "flex w-full touch-manipulation rounded-xl px-3 py-2.5 text-left text-base font-semibold transition hover:bg-slate-100 active:bg-slate-200",
                                       wet?.bodyType === opt.value && "bg-slate-100 ring-2 ring-slate-900",
                                     )}
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      selectWetOption("bodyType", opt.value);
-                                    }}
+                                    {...assessmentPress(`wet-body-${opt.value}`, () =>
+                                      selectWetOption("bodyType", opt.value),
+                                    )}
                                   >
                                     {opt.label}
                                   </button>
@@ -768,13 +804,12 @@ export default function MountingYardApp() {
                                     key={opt.value}
                                     type="button"
                                     className={cn(
-                                      "flex w-full rounded-xl px-3 py-2.5 text-left text-base font-semibold transition hover:bg-slate-100 active:bg-slate-200",
+                                      "flex w-full touch-manipulation rounded-xl px-3 py-2.5 text-left text-base font-semibold transition hover:bg-slate-100 active:bg-slate-200",
                                       wet?.feet === opt.value && "bg-slate-100 ring-2 ring-slate-900",
                                     )}
-                                    onClick={(e) => {
-                                      e.stopPropagation();
-                                      selectWetOption("feet", opt.value);
-                                    }}
+                                    {...assessmentPress(`wet-feet-${opt.value}`, () =>
+                                      selectWetOption("feet", opt.value),
+                                    )}
                                   >
                                     {opt.label}
                                   </button>

@@ -88,4 +88,14 @@
     if (document.body && document.body.getAttribute("data-app-ready") === "true") return;
     showFailure("JavaScript did not finish loading within " + STARTUP_MS + "ms.");
   }, STARTUP_MS);
+
+  function clearFailureIfAppReady() {
+    if (document.body && document.body.getAttribute("data-app-ready") === "true") {
+      var panel = document.getElementById("ios12-startup-failure");
+      if (panel && panel.parentNode) panel.parentNode.removeChild(panel);
+      return;
+    }
+    window.setTimeout(clearFailureIfAppReady, 250);
+  }
+  clearFailureIfAppReady();
 })();
