@@ -44,7 +44,8 @@ import { cn, emptyAssessment, makeKey, marks, nextNegative, nextPositive } from 
 import { useDebouncedCallback } from "@/hooks/useDebouncedCallback";
 import { InitErrorPanel } from "@/components/init-error-panel";
 import { enableIOS12CompatMode } from "@/lib/ios12-compat-mode";
-import { isOldIOS, shouldSkipIndexedDB } from "@/lib/legacy-safari";
+import { shouldSkipYardPersistence, shouldSkipYardStartupLoad } from "@/lib/ios12-yard-fallback";
+import { isIOS12, shouldSkipIndexedDB } from "@/lib/legacy-safari";
 import { yardControlClick } from "@/lib/ios12-safe-interaction";
 import {
   createAssessmentPressProps,
@@ -139,6 +140,52 @@ const ios12FactorBtnClass =
 
 type PhysicalPicker = GearTileCode | "WET" | null;
 
+const ios12BtnClass =
+  "inline-flex touch-manipulation cursor-pointer items-center justify-center gap-2 font-semibold transition active:scale-[0.98] min-h-[56px] rounded-2xl px-5 text-lg";
+
+function YardButton({
+  onClick,
+  className,
+  children,
+  variant = "default",
+  disabled,
+  tapDebugAlways,
+}: {
+  onClick: () => void;
+  className?: string;
+  children: React.ReactNode;
+  variant?: "default" | "outline";
+  disabled?: boolean;
+  /** iOS 12: remain clickable so tap-count debug still fires */
+  tapDebugAlways?: boolean;
+}) {
+  if (isIOS12()) {
+    const faded = Boolean(disabled);
+    return (
+      <button
+        type="button"
+        disabled={faded && !tapDebugAlways}
+        className={cn(
+          ios12BtnClass,
+          variant === "default"
+            ? "bg-slate-900 text-white active:bg-slate-800"
+            : "border border-slate-200 bg-white active:bg-slate-100",
+          faded && "opacity-50",
+          className,
+        )}
+        onClick={onClick}
+      >
+        {children}
+      </button>
+    );
+  }
+  return (
+    <Button type="button" variant={variant} size="touch" className={className} disabled={disabled} onClick={onClick}>
+      {children}
+    </Button>
+  );
+}
+
 function AssessmentControl({
   pressProps,
   className,
@@ -150,7 +197,7 @@ function AssessmentControl({
   children: React.ReactNode;
   variant?: "default" | "outline";
 }) {
-  if (isOldIOS()) {
+  if (isIOS12()) {
     return (
       <button
         type="button"
@@ -192,12 +239,16 @@ export default function MountingYardApp() {
   const lastTouchTimeRef = useRef(0);
   const userInteractedRef = useRef(false);
   const [tapCount, setTapCount] = useState(0);
-  const [interactionDebug, setInteractionDebug] = useState("—");
+
+  const incrementTap = useCallback(() => {
+    userInteractedRef.current = true;
+    setTapCount((count) => count + 1);
+  }, []);
 
   useEffect(() => {
     removeLegacyStartupOverlays();
     logMountedBlockingOverlays();
-    if (isOldIOS()) void enableIOS12CompatMode();
+    if (isIOS12()) void enableIOS12CompatMode();
   }, []);
 
   useEffect(() => {
@@ -205,6 +256,7 @@ export default function MountingYardApp() {
   }, [data]);
 
   const persistSnapshot = useCallback(() => {
+    if (shouldSkipYardPersistence()) return Promise.resolve();
     setSaveState("saving");
     return replaceAllAssessments(dataRef.current)
       .then(() => {
@@ -236,6 +288,11 @@ export default function MountingYardApp() {
   }, [flushPending]);
 
   useEffect(() => {
+    if (shouldSkipYardStartupLoad()) {
+      logLoadingState("MountingYardApp", false, "ios12-fallback-blank-start");
+      return;
+    }
+
     logLoadingState("MountingYardApp", true, "background-init");
     let cancelled = false;
 
@@ -336,7 +393,7 @@ export default function MountingYardApp() {
     const prev = prevKeyRef.current;
     prevKeyRef.current = key;
     keyRef.current = key;
-    if (prev && prev !== key) {
+    if (prev && prev !== key && !shouldSkipYardPersistence()) {
       void persistSnapshot();
     }
   }, [key, persistSnapshot]);
@@ -347,26 +404,12 @@ export default function MountingYardApp() {
     setGearPicker(null);
   };
 
-  const refreshInteractionDebug = useCallback(
-    (label: string) => {
-      const k = keyRef.current;
-      const rec = dataRef.current[k] ?? emptyAssessment();
-      const t = totals(rec);
-      setInteractionDebug(
-        `${label} · R${raceId} #${selectedRunner} ${runner?.horse ?? "?"} · +${t.pos} −${t.neg} net ${formatNet(t.net)}`,
-      );
-    },
-    [raceId, selectedRunner, runner],
-  );
-
   const handleAssessmentPress = useCallback(
-    (label: string, handler: () => void) => {
-      userInteractedRef.current = true;
-      setTapCount((count) => count + 1);
+    (_label: string, handler: () => void) => {
+      incrementTap();
       handler();
-      window.setTimeout(() => refreshInteractionDebug(label), 0);
     },
-    [refreshInteractionDebug],
+    [incrementTap],
   );
 
   const assessmentPress = useCallback(
@@ -380,14 +423,20 @@ export default function MountingYardApp() {
   );
 
   const yardClick = useCallback(
-    (label: string, handler: () => void) =>
+    (_label: string, handler: () => void) =>
       yardControlClick(() => {
-        userInteractedRef.current = true;
-        setTapCount((count) => count + 1);
+        incrementTap();
         handler();
-        window.setTimeout(() => refreshInteractionDebug(label), 0);
       }),
-    [refreshInteractionDebug],
+    [incrementTap],
+  );
+
+  const yardTap = useCallback(
+    (handler: () => void) => {
+      incrementTap();
+      handler();
+    },
+    [incrementTap],
   );
 
   const updateRecord = useCallback(
@@ -398,7 +447,7 @@ export default function MountingYardApp() {
         const merged = mergeAssessment(patch, base);
         const next = { ...prev, [key]: merged };
         dataRef.current = next;
-        debouncedSnapshotSave();
+        if (!shouldSkipYardPersistence()) debouncedSnapshotSave();
         return next;
       });
     },
@@ -537,12 +586,17 @@ export default function MountingYardApp() {
         <header className="flex flex-col gap-4 rounded-3xl bg-white p-5 shadow-sm lg:flex-row lg:items-center lg:justify-between">
           <div className="min-w-0 flex-1">
             <h1 className="text-2xl font-bold tracking-tight md:text-3xl">Mounting Yard</h1>
-            <p className="mt-2 text-sm font-bold tabular-nums text-slate-700">Tap count: {tapCount}</p>
-            <p className="text-sm font-mono text-slate-600">{interactionDebug}</p>
-            {isOldIOS() ? (
-              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                iOS 12 safe interaction mode (click only)
-              </p>
+            {isIOS12() ? (
+              <div className="mt-3 space-y-1 rounded-2xl border-2 border-amber-500 bg-amber-100 px-4 py-3">
+                <p className="text-center text-sm font-bold text-amber-950">iOS 12 fallback mode active</p>
+                <p className="text-sm font-bold tabular-nums text-slate-900">Tap count: {tapCount}</p>
+                <p className="text-sm font-semibold text-slate-900">
+                  Selected runner: {runner?.horse ?? "—"}
+                </p>
+                <p className="text-sm font-semibold tabular-nums text-slate-900">
+                  Current score: {formatNet(net)}
+                </p>
+              </div>
             ) : null}
             <p className="mt-1 text-lg text-slate-600">
               Autosaves on this device. Import meeting CSV here once — Speed Map and Race Day Bias follow.
@@ -561,23 +615,16 @@ export default function MountingYardApp() {
               className="hidden"
               onChange={(e) => void handleImportFile(e.target.files?.[0] ?? null)}
             />
-            <Button
-              type="button"
+            <YardButton
               variant="outline"
-              size="touch"
               className="rounded-3xl text-lg"
-              {...yardClick("import-meeting", () => void handleImportMeetingFolder())}
+              onClick={() => yardTap(() => void handleImportMeetingFolder())}
             >
               Import meeting folder
-            </Button>
-            <Button
-              type="button"
-              size="touch"
-              className="rounded-3xl text-lg"
-              {...yardClick("export-assessments", handleExport)}
-            >
+            </YardButton>
+            <YardButton className="rounded-3xl text-lg" onClick={() => yardTap(handleExport)}>
               Export all assessments
-            </Button>
+            </YardButton>
             </div>
           </div>
         </header>
@@ -590,14 +637,12 @@ export default function MountingYardApp() {
           <Tabs
             value={raceId}
             onValueChange={(v) => {
-              userInteractedRef.current = true;
-              setTapCount((count) => count + 1);
+              incrementTap();
               setGearPicker(null);
               const nextRace = races.find((r) => r.id === v) ?? races[0];
               if (!nextRace) return;
               setRaceId(nextRace.id);
               setSelectedRunner(nextRace.runners[0]?.no ?? 1);
-              window.setTimeout(() => refreshInteractionDebug(`race-tab-${v}`), 0);
             }}
           >
             <TabsList
@@ -669,11 +714,9 @@ export default function MountingYardApp() {
             ref={assessmentAreaRef}
             className="relative z-10 space-y-4 touch-manipulation"
             data-yard-assessment="true"
-            {...(isOldIOS()
+            {...(isIOS12()
               ? { onClick: (e: React.MouseEvent) => closePhysicalPickerIfOutside(e.target) }
-              : {
-                  onMouseDown: (e: React.MouseEvent) => closePhysicalPickerIfOutside(e.target),
-                })}
+              : { onMouseDown: (e: React.MouseEvent) => closePhysicalPickerIfOutside(e.target) })}
           >
             <Card className="rounded-3xl shadow-sm">
               <CardContent className="space-y-4 p-5">
@@ -922,25 +965,23 @@ export default function MountingYardApp() {
         aria-label="Runner navigation"
       >
         <div className="mx-auto flex max-w-7xl items-stretch gap-3 px-3 py-3">
-          <Button
-            type="button"
-            size="touch"
+          <YardButton
             variant="outline"
             className="min-h-[3.75rem] flex-1 rounded-3xl text-xl font-bold"
             disabled={!canPrev}
-            {...yardClick("nav-prev", goPrev)}
+            tapDebugAlways
+            onClick={() => yardTap(goPrev)}
           >
             ← Previous
-          </Button>
-          <Button
-            type="button"
-            size="touch"
+          </YardButton>
+          <YardButton
             className="min-h-[3.75rem] flex-1 rounded-3xl text-xl font-bold"
             disabled={!canNext}
-            {...yardClick("nav-next", goNext)}
+            tapDebugAlways
+            onClick={() => yardTap(goNext)}
           >
             Next →
-          </Button>
+          </YardButton>
         </div>
       </nav>
     </div>

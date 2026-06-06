@@ -1,7 +1,11 @@
-/** iPad/iPhone iOS 12.x — emergency compatibility mode. */
+/** iPad/iPhone iOS 12.x — hard Yard fallback detection. */
+export function isIOS12(): boolean {
+  return typeof navigator !== "undefined" && /OS 12_/.test(navigator.userAgent);
+}
+
+/** @deprecated Use isIOS12 */
 export function isOldIOS(): boolean {
-  if (typeof navigator === "undefined") return false;
-  return /OS 12_/.test(navigator.userAgent);
+  return isIOS12();
 }
 
 /** @deprecated Use isOldIOS */

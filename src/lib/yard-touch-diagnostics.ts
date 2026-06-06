@@ -1,5 +1,5 @@
 import type { MouseEvent as ReactMouseEvent, TouchEvent as ReactTouchEvent } from "react";
-import { isOldIOS } from "@/lib/legacy-safari";
+import { isIOS12 } from "@/lib/legacy-safari";
 
 export function describeTouchTarget(node: Element | null): Record<string, string | undefined> | null {
   if (!node) return null;
@@ -73,7 +73,7 @@ export function createAssessmentPressProps(
   onPress: () => void,
   lastTouchTimeRef: LastTouchTimeRef,
 ): AssessmentPressProps {
-  if (isOldIOS()) {
+  if (isIOS12()) {
     return {
       "data-assessment-control": label,
       onClick: () => {
