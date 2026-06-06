@@ -43,6 +43,7 @@ import { wetIsSet, wetShorthand } from "@/lib/wet";
 import { cn, emptyAssessment, makeKey, marks, nextNegative, nextPositive } from "@/lib/utils";
 import { useDebouncedCallback } from "@/hooks/useDebouncedCallback";
 import { InitErrorPanel } from "@/components/init-error-panel";
+import { APP_BUILD_VERSION } from "@/lib/build-version";
 import { enableIOS12CompatMode } from "@/lib/ios12-compat-mode";
 import { shouldSkipYardPersistence, shouldSkipYardStartupLoad } from "@/lib/ios12-yard-fallback";
 import { isIOS12, shouldSkipIndexedDB } from "@/lib/legacy-safari";
@@ -939,15 +940,13 @@ export default function MountingYardApp() {
         </div>
       </div>
 
-      {isIOS12() ? (
-        <div
-          aria-live="polite"
-          className="pointer-events-none fixed bottom-[calc(4.75rem+env(safe-area-inset-bottom))] left-0 right-0 z-40 px-3 text-center font-mono text-[10px] leading-tight tabular-nums text-slate-400"
-        >
-          <div>Build v: iOS12-test</div>
-          <div>Tap: {tapCount}</div>
-        </div>
-      ) : null}
+      <div
+        aria-live="polite"
+        className="pointer-events-none fixed bottom-[calc(4.75rem+env(safe-area-inset-bottom))] left-0 right-0 z-40 px-3 text-center font-mono text-[10px] leading-tight tabular-nums text-slate-400"
+      >
+        <div>Build: {APP_BUILD_VERSION}</div>
+        <div>Tap: {tapCount}</div>
+      </div>
 
       <nav
         className="fixed bottom-0 left-0 right-0 z-50 border-t-2 border-slate-200 bg-white"
