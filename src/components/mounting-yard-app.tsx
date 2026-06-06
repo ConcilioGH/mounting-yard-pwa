@@ -45,7 +45,12 @@ import { useDebouncedCallback } from "@/hooks/useDebouncedCallback";
 import { InitErrorPanel } from "@/components/init-error-panel";
 import { enableIOS12CompatMode } from "@/lib/ios12-compat-mode";
 import { shouldSkipYardPersistence, shouldSkipYardStartupLoad } from "@/lib/ios12-yard-fallback";
-import { IOS12_TAP_BUTTON_STYLE, installIOS12DocTapListener } from "@/lib/ios12-yard-tap";
+import {
+  IOS12_TAP_BUTTON_STYLE,
+  installYardDocumentTouchDiagnostics,
+  installYardIOS12InteractiveCss,
+  type YardDocumentTouchDiagnostics,
+} from "@/lib/ios12-yard-tap";
 import { isIOS12, shouldSkipIndexedDB } from "@/lib/legacy-safari";
 import { yardControlClick } from "@/lib/ios12-safe-interaction";
 import {
@@ -244,7 +249,14 @@ export default function MountingYardApp() {
   const lastTouchTimeRef = useRef(0);
   const userInteractedRef = useRef(false);
   const [tapCount, setTapCount] = useState(0);
-  const [docTapCount, setDocTapCount] = useState(0);
+  const [docTouch, setDocTouch] = useState<YardDocumentTouchDiagnostics>({
+    touchStart: 0,
+    touchEnd: 0,
+    click: 0,
+    lastTargetTag: "—",
+    lastTargetClassName: "—",
+    lastTargetText: "—",
+  });
 
   const incrementTap = useCallback(() => {
     userInteractedRef.current = true;
@@ -258,8 +270,12 @@ export default function MountingYardApp() {
   }, []);
 
   useEffect(() => {
+    return installYardDocumentTouchDiagnostics(setDocTouch);
+  }, []);
+
+  useEffect(() => {
     if (!isIOS12()) return;
-    return installIOS12DocTapListener(setDocTapCount);
+    return installYardIOS12InteractiveCss();
   }, []);
 
   useEffect(() => {
@@ -595,7 +611,10 @@ export default function MountingYardApp() {
   const raceTabCols = Math.min(Math.max(races.length, 2), 8);
 
   return (
-    <div className="min-h-[100dvh] bg-slate-100 pb-[calc(5.5rem+env(safe-area-inset-bottom))] pt-[env(safe-area-inset-top)] text-slate-900">
+    <div
+      data-yard-root
+      className="min-h-[100dvh] bg-slate-100 pb-[calc(5.5rem+env(safe-area-inset-bottom))] pt-[env(safe-area-inset-top)] text-slate-900"
+    >
       <div
         aria-live="polite"
         style={{
@@ -605,15 +624,21 @@ export default function MountingYardApp() {
           zIndex: 999999,
           background: "red",
           color: "white",
-          fontSize: 20,
+          fontSize: isIOS12() ? 14 : 20,
           padding: 8,
+          maxWidth: "min(92vw, 320px)",
+          lineHeight: 1.35,
         }}
       >
-        Tap: {tapCount}
+        <div>Tap: {tapCount}</div>
         {isIOS12() ? (
           <>
-            <br />
-            DocTap: {docTapCount}
+            <div>TouchStart: {docTouch.touchStart}</div>
+            <div>TouchEnd: {docTouch.touchEnd}</div>
+            <div>Click: {docTouch.click}</div>
+            <div>Tag: {docTouch.lastTargetTag}</div>
+            <div>Class: {docTouch.lastTargetClassName}</div>
+            <div>Text: {docTouch.lastTargetText}</div>
           </>
         ) : null}
       </div>
