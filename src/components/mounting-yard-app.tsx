@@ -431,14 +431,6 @@ export default function MountingYardApp() {
     [incrementTap],
   );
 
-  const yardTap = useCallback(
-    (handler: () => void) => {
-      incrementTap();
-      handler();
-    },
-    [incrementTap],
-  );
-
   const updateRecord = useCallback(
     (patch: Partial<Assessment>) => {
       if (!key || !race || !runner) return;
@@ -586,18 +578,6 @@ export default function MountingYardApp() {
         <header className="flex flex-col gap-4 rounded-3xl bg-white p-5 shadow-sm lg:flex-row lg:items-center lg:justify-between">
           <div className="min-w-0 flex-1">
             <h1 className="text-2xl font-bold tracking-tight md:text-3xl">Mounting Yard</h1>
-            {isIOS12() ? (
-              <div className="mt-3 space-y-1 rounded-2xl border-2 border-amber-500 bg-amber-100 px-4 py-3">
-                <p className="text-center text-sm font-bold text-amber-950">iOS 12 fallback mode active</p>
-                <p className="text-sm font-bold tabular-nums text-slate-900">Tap count: {tapCount}</p>
-                <p className="text-sm font-semibold text-slate-900">
-                  Selected runner: {runner?.horse ?? "—"}
-                </p>
-                <p className="text-sm font-semibold tabular-nums text-slate-900">
-                  Current score: {formatNet(net)}
-                </p>
-              </div>
-            ) : null}
             <p className="mt-1 text-lg text-slate-600">
               Autosaves on this device. Import meeting CSV here once — Speed Map and Race Day Bias follow.
             </p>
@@ -618,11 +598,11 @@ export default function MountingYardApp() {
             <YardButton
               variant="outline"
               className="rounded-3xl text-lg"
-              onClick={() => yardTap(() => void handleImportMeetingFolder())}
+              onClick={() => void handleImportMeetingFolder()}
             >
               Import meeting folder
             </YardButton>
-            <YardButton className="rounded-3xl text-lg" onClick={() => yardTap(handleExport)}>
+            <YardButton className="rounded-3xl text-lg" onClick={handleExport}>
               Export all assessments
             </YardButton>
             </div>
@@ -959,6 +939,16 @@ export default function MountingYardApp() {
         </div>
       </div>
 
+      {isIOS12() ? (
+        <div
+          aria-live="polite"
+          className="pointer-events-none fixed bottom-[calc(4.75rem+env(safe-area-inset-bottom))] left-0 right-0 z-40 px-3 text-center font-mono text-[10px] leading-tight tabular-nums text-slate-400"
+        >
+          <div>Build v: iOS12-test</div>
+          <div>Tap: {tapCount}</div>
+        </div>
+      ) : null}
+
       <nav
         className="fixed bottom-0 left-0 right-0 z-50 border-t-2 border-slate-200 bg-white"
         style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
@@ -970,7 +960,7 @@ export default function MountingYardApp() {
             className="min-h-[3.75rem] flex-1 rounded-3xl text-xl font-bold"
             disabled={!canPrev}
             tapDebugAlways
-            onClick={() => yardTap(goPrev)}
+            onClick={goPrev}
           >
             ← Previous
           </YardButton>
@@ -978,7 +968,7 @@ export default function MountingYardApp() {
             className="min-h-[3.75rem] flex-1 rounded-3xl text-xl font-bold"
             disabled={!canNext}
             tapDebugAlways
-            onClick={() => yardTap(goNext)}
+            onClick={goNext}
           >
             Next →
           </YardButton>

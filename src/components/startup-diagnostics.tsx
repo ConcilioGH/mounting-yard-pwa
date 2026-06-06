@@ -2,7 +2,6 @@
 
 import "@/lib/ios12-polyfills";
 import { useEffect, useState, type ReactNode } from "react";
-import { CompatibilityFallbackBanner } from "@/components/compatibility-fallback-banner";
 import { enableIOS12CompatMode } from "@/lib/ios12-compat-mode";
 import { isOldIOS, shouldSkipServiceWorker } from "@/lib/legacy-safari";
 import { resetLocalDataAndReload } from "@/lib/reset-local-data";
@@ -101,7 +100,6 @@ export function StartupDiagnosticsRoot({ children }: { children: ReactNode }) {
 
   return (
     <>
-      <CompatibilityFallbackBanner />
       <StartupErrorBanner />
       {children}
     </>
