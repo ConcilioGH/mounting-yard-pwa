@@ -1,8 +1,4 @@
-import dynamic from "next/dynamic";
-
-const MountingYardApp = dynamic(() => import("@/components/mounting-yard-app"), {
-  ssr: false,
-});
+import MountingYardApp from "@/components/mounting-yard-app";
 
 export default function YardPage() {
   return <MountingYardApp />;
