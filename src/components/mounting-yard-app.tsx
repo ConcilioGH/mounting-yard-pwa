@@ -43,7 +43,6 @@ import { wetIsSet, wetShorthand } from "@/lib/wet";
 import { cn, emptyAssessment, makeKey, marks, nextNegative, nextPositive } from "@/lib/utils";
 import { useDebouncedCallback } from "@/hooks/useDebouncedCallback";
 import { InitErrorPanel } from "@/components/init-error-panel";
-import { APP_BUILD_VERSION } from "@/lib/build-version";
 import { enableIOS12CompatMode } from "@/lib/ios12-compat-mode";
 import { shouldSkipYardPersistence, shouldSkipYardStartupLoad } from "@/lib/ios12-yard-fallback";
 import { isIOS12, shouldSkipIndexedDB } from "@/lib/legacy-safari";
@@ -574,6 +573,21 @@ export default function MountingYardApp() {
 
   return (
     <div className="min-h-[100dvh] bg-slate-100 pb-[calc(5.5rem+env(safe-area-inset-bottom))] pt-[env(safe-area-inset-top)] text-slate-900">
+      <div
+        aria-live="polite"
+        style={{
+          position: "fixed",
+          top: 45,
+          right: 10,
+          zIndex: 999999,
+          background: "red",
+          color: "white",
+          fontSize: 20,
+          padding: 8,
+        }}
+      >
+        Tap: {tapCount}
+      </div>
       <InitErrorPanel errors={initErrors} />
       <div className="mx-auto max-w-7xl space-y-3 p-3">
         <header className="flex flex-col gap-4 rounded-3xl bg-white p-5 shadow-sm lg:flex-row lg:items-center lg:justify-between">
@@ -940,14 +954,6 @@ export default function MountingYardApp() {
         </div>
       </div>
 
-      <div
-        aria-live="polite"
-        className="pointer-events-none fixed bottom-[calc(4.75rem+env(safe-area-inset-bottom))] left-0 right-0 z-40 px-3 text-center font-mono text-[10px] leading-tight tabular-nums text-slate-400"
-      >
-        <div>Build: {APP_BUILD_VERSION}</div>
-        <div>Tap: {tapCount}</div>
-      </div>
-
       <nav
         className="fixed bottom-0 left-0 right-0 z-50 border-t-2 border-slate-200 bg-white"
         style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
@@ -959,7 +965,10 @@ export default function MountingYardApp() {
             className="min-h-[3.75rem] flex-1 rounded-3xl text-xl font-bold"
             disabled={!canPrev}
             tapDebugAlways
-            onClick={goPrev}
+            onClick={() => {
+              incrementTap();
+              goPrev();
+            }}
           >
             ← Previous
           </YardButton>
@@ -967,7 +976,10 @@ export default function MountingYardApp() {
             className="min-h-[3.75rem] flex-1 rounded-3xl text-xl font-bold"
             disabled={!canNext}
             tapDebugAlways
-            onClick={goNext}
+            onClick={() => {
+              incrementTap();
+              goNext();
+            }}
           >
             Next →
           </YardButton>
