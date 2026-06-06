@@ -45,6 +45,7 @@ import { useDebouncedCallback } from "@/hooks/useDebouncedCallback";
 import { InitErrorPanel } from "@/components/init-error-panel";
 import { enableIOS12CompatMode } from "@/lib/ios12-compat-mode";
 import { shouldSkipYardPersistence, shouldSkipYardStartupLoad } from "@/lib/ios12-yard-fallback";
+import { IOS12_TAP_BUTTON_STYLE, installIOS12DocTapListener } from "@/lib/ios12-yard-tap";
 import { isIOS12, shouldSkipIndexedDB } from "@/lib/legacy-safari";
 import { yardControlClick } from "@/lib/ios12-safe-interaction";
 import {
@@ -136,12 +137,12 @@ const compactFactorBtn =
 const compactMarksPos = "text-xl font-bold leading-none text-green-700 sm:text-2xl";
 const compactMarksNeg = "text-xl font-bold leading-none text-red-700 sm:text-2xl";
 const ios12FactorBtnClass =
-  "inline-flex w-full touch-manipulation cursor-pointer items-center justify-center gap-2 font-semibold rounded-2xl border border-slate-200 bg-white active:bg-slate-100 min-h-[56px]";
+  "inline-flex w-full cursor-pointer items-center justify-center gap-2 font-semibold rounded-2xl border border-slate-200 bg-white min-h-[56px]";
 
 type PhysicalPicker = GearTileCode | "WET" | null;
 
 const ios12BtnClass =
-  "inline-flex touch-manipulation cursor-pointer items-center justify-center gap-2 font-semibold transition active:scale-[0.98] min-h-[56px] rounded-2xl px-5 text-lg";
+  "inline-flex cursor-pointer items-center justify-center gap-2 font-semibold min-h-[56px] rounded-2xl px-5 text-lg";
 
 function YardButton({
   onClick,
@@ -165,11 +166,12 @@ function YardButton({
       <button
         type="button"
         disabled={faded && !tapDebugAlways}
+        style={IOS12_TAP_BUTTON_STYLE}
         className={cn(
           ios12BtnClass,
           variant === "default"
-            ? "bg-slate-900 text-white active:bg-slate-800"
-            : "border border-slate-200 bg-white active:bg-slate-100",
+            ? "bg-slate-900 text-white"
+            : "border border-slate-200 bg-white",
           faded && "opacity-50",
           className,
         )}
@@ -187,11 +189,13 @@ function YardButton({
 }
 
 function AssessmentControl({
+  onPress,
   pressProps,
   className,
   children,
   variant = "outline",
 }: {
+  onPress: () => void;
   pressProps: AssessmentPressProps;
   className?: string;
   children: React.ReactNode;
@@ -201,12 +205,13 @@ function AssessmentControl({
     return (
       <button
         type="button"
+        style={IOS12_TAP_BUTTON_STYLE}
         className={cn(
           ios12FactorBtnClass,
-          variant === "default" && "border-slate-900 bg-slate-900 text-white active:bg-slate-800",
+          variant === "default" && "border-slate-900 bg-slate-900 text-white",
           className,
         )}
-        {...pressProps}
+        onClick={onPress}
       >
         {children}
       </button>
@@ -239,6 +244,7 @@ export default function MountingYardApp() {
   const lastTouchTimeRef = useRef(0);
   const userInteractedRef = useRef(false);
   const [tapCount, setTapCount] = useState(0);
+  const [docTapCount, setDocTapCount] = useState(0);
 
   const incrementTap = useCallback(() => {
     userInteractedRef.current = true;
@@ -249,6 +255,11 @@ export default function MountingYardApp() {
     removeLegacyStartupOverlays();
     logMountedBlockingOverlays();
     if (isIOS12()) void enableIOS12CompatMode();
+  }, []);
+
+  useEffect(() => {
+    if (!isIOS12()) return;
+    return installIOS12DocTapListener(setDocTapCount);
   }, []);
 
   useEffect(() => {
@@ -497,6 +508,18 @@ export default function MountingYardApp() {
     setSelectedRunner(orderedRunners[safeRunnerIndex + 1]!.no);
   }, [canNext, orderedRunners, safeRunnerIndex]);
 
+  const selectRace = useCallback(
+    (nextRaceId: string) => {
+      userInteractedRef.current = true;
+      setGearPicker(null);
+      const nextRace = races.find((r) => r.id === nextRaceId) ?? races[0];
+      if (!nextRace) return;
+      setRaceId(nextRace.id);
+      setSelectedRunner(nextRace.runners[0]?.no ?? 1);
+    },
+    [races],
+  );
+
   const handleExport = () => {
     void (async () => {
       try {
@@ -587,6 +610,12 @@ export default function MountingYardApp() {
         }}
       >
         Tap: {tapCount}
+        {isIOS12() ? (
+          <>
+            <br />
+            DocTap: {docTapCount}
+          </>
+        ) : null}
       </div>
       <InitErrorPanel errors={initErrors} />
       <div className="mx-auto max-w-7xl space-y-3 p-3">
@@ -628,30 +657,61 @@ export default function MountingYardApp() {
           <div className="rounded-3xl border border-red-200 bg-red-50 px-4 py-3 text-base text-red-900">{importError}</div>
         )}
 
-        {races.length > 1 && (
-          <Tabs
-            value={raceId}
-            onValueChange={(v) => {
-              incrementTap();
-              setGearPicker(null);
-              const nextRace = races.find((r) => r.id === v) ?? races[0];
-              if (!nextRace) return;
-              setRaceId(nextRace.id);
-              setSelectedRunner(nextRace.runners[0]?.no ?? 1);
-            }}
-          >
-            <TabsList
+        {races.length > 1 &&
+          (isIOS12() ? (
+            <div
               className="rounded-3xl bg-white p-2 shadow-sm"
-              style={{ display: "grid", gridTemplateColumns: `repeat(${raceTabCols}, minmax(0, 1fr))`, gap: "0.5rem" }}
+              style={{
+                display: "grid",
+                gridTemplateColumns: `repeat(${raceTabCols}, minmax(0, 1fr))`,
+                gap: "0.5rem",
+              }}
             >
-              {races.map((r) => (
-                <TabsTrigger key={r.id} value={r.id} className="w-full rounded-2xl text-lg">
-                  {r.id}
-                </TabsTrigger>
-              ))}
-            </TabsList>
-          </Tabs>
-        )}
+              {races.map((r) => {
+                const selected = raceId === r.id;
+                return (
+                  <button
+                    key={r.id}
+                    type="button"
+                    style={IOS12_TAP_BUTTON_STYLE}
+                    className={cn(
+                      "min-h-[52px] w-full rounded-2xl px-4 text-lg font-semibold",
+                      selected ? "bg-slate-900 text-white" : "bg-white text-slate-800 ring-1 ring-slate-200",
+                    )}
+                    onClick={() => {
+                      incrementTap();
+                      selectRace(r.id);
+                    }}
+                  >
+                    {r.id}
+                  </button>
+                );
+              })}
+            </div>
+          ) : (
+            <Tabs
+              value={raceId}
+              onValueChange={(v) => {
+                incrementTap();
+                selectRace(v);
+              }}
+            >
+              <TabsList
+                className="rounded-3xl bg-white p-2 shadow-sm"
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: `repeat(${raceTabCols}, minmax(0, 1fr))`,
+                  gap: "0.5rem",
+                }}
+              >
+                {races.map((r) => (
+                  <TabsTrigger key={r.id} value={r.id} className="w-full rounded-2xl text-lg">
+                    {r.id}
+                  </TabsTrigger>
+                ))}
+              </TabsList>
+            </Tabs>
+          ))}
 
         <div className="grid gap-4 lg:grid-cols-[minmax(280px,360px)_1fr] lg:items-start">
           <Card className="rounded-3xl shadow-sm lg:sticky lg:top-3 lg:z-0 lg:max-h-[calc(100dvh-12rem)] lg:overflow-y-auto">
@@ -669,12 +729,22 @@ export default function MountingYardApp() {
                       <button
                         key={r.no}
                         type="button"
-                        {...yardClick(`horse-${r.no}`, () => {
-                          setGearPicker(null);
-                          setSelectedRunner(r.no);
-                        })}
+                        {...(isIOS12()
+                          ? {
+                              style: IOS12_TAP_BUTTON_STYLE,
+                              onClick: () => {
+                                incrementTap();
+                                setGearPicker(null);
+                                setSelectedRunner(r.no);
+                              },
+                            }
+                          : yardClick(`horse-${r.no}`, () => {
+                              setGearPicker(null);
+                              setSelectedRunner(r.no);
+                            }))}
                         className={cn(
-                          "w-full rounded-3xl border-2 p-4 text-left text-slate-900 transition active:scale-[0.99]",
+                          "w-full rounded-3xl border-2 p-4 text-left text-slate-900",
+                          !isIOS12() && "transition active:scale-[0.99]",
                           tint,
                           active ? "border-slate-900 shadow-lg ring-2 ring-slate-900 ring-offset-2 ring-offset-slate-100" : "border-slate-400/50",
                         )}
@@ -707,11 +777,11 @@ export default function MountingYardApp() {
 
           <div
             ref={assessmentAreaRef}
-            className="relative z-10 space-y-4 touch-manipulation"
+            className={cn("relative space-y-4", !isIOS12() && "z-10 touch-manipulation")}
             data-yard-assessment="true"
-            {...(isIOS12()
-              ? { onClick: (e: React.MouseEvent) => closePhysicalPickerIfOutside(e.target) }
-              : { onMouseDown: (e: React.MouseEvent) => closePhysicalPickerIfOutside(e.target) })}
+            {...(!isIOS12()
+              ? { onMouseDown: (e: React.MouseEvent) => closePhysicalPickerIfOutside(e.target) }
+              : {})}
           >
             <Card className="rounded-3xl shadow-sm">
               <CardContent className="space-y-4 p-5">
@@ -745,6 +815,7 @@ export default function MountingYardApp() {
                         <div className="grid grid-cols-1 gap-1.5">
                           <AssessmentControl
                             className={cn(compactFactorBtn)}
+                            onPress={() => handleAssessmentPress("positive-clean-plus", () => tapPositive(SWEAT_POS_KEY))}
                             pressProps={assessmentPress("positive-clean-plus", () => tapPositive(SWEAT_POS_KEY))}
                           >
                             <span>Clean +</span>
@@ -756,6 +827,7 @@ export default function MountingYardApp() {
                             <AssessmentControl
                               key={key}
                               className={cn(compactFactorBtn)}
+                              onPress={() => handleAssessmentPress(`negative-sweat-${key}`, () => tapNegative({ label: key }))}
                               pressProps={assessmentPress(`negative-sweat-${key}`, () => tapNegative({ label: key }))}
                             >
                               <span>{key}</span>
@@ -778,6 +850,7 @@ export default function MountingYardApp() {
                               <AssessmentControl
                                 key={key}
                                 className={cn(compactFactorBtn)}
+                                onPress={() => handleAssessmentPress(`positive-${key}`, () => tapPositive(key))}
                                 pressProps={assessmentPress(`positive-${key}`, () => tapPositive(key))}
                               >
                                 <span>{key}</span>
@@ -797,6 +870,7 @@ export default function MountingYardApp() {
                               <AssessmentControl
                                 key={key}
                                 className={cn(compactFactorBtn)}
+                                onPress={() => handleAssessmentPress(`negative-${key}`, () => tapNegative({ label: key }))}
                                 pressProps={assessmentPress(`negative-${key}`, () => tapNegative({ label: key }))}
                               >
                                 <span className="break-words">{key}</span>
@@ -825,6 +899,11 @@ export default function MountingYardApp() {
                         <AssessmentControl
                           variant={hasLocs ? "default" : "outline"}
                           className="relative h-auto min-h-[6.25rem] w-full flex-col justify-center gap-2 rounded-3xl py-5 text-lg"
+                          onPress={() =>
+                            handleAssessmentPress(`gear-${item.code}`, () =>
+                              setGearPicker((p) => (p === item.code ? null : item.code)),
+                            )
+                          }
                           pressProps={assessmentPress(`gear-${item.code}`, () =>
                             setGearPicker((p) => (p === item.code ? null : item.code)),
                           )}
@@ -843,14 +922,24 @@ export default function MountingYardApp() {
                               <button
                                 key={num}
                                 type="button"
-                                role="option"
-                                aria-selected={locs?.includes(num) ?? false}
-                                className={`flex w-full touch-manipulation items-center gap-3 rounded-xl px-4 py-3 text-left text-lg font-semibold transition hover:bg-slate-100 active:bg-slate-200 ${
+                                style={isIOS12() ? IOS12_TAP_BUTTON_STYLE : undefined}
+                                className={`flex w-full items-center gap-3 rounded-xl px-4 py-3 text-left text-lg font-semibold hover:bg-slate-100 active:bg-slate-200 ${
                                   locs?.includes(num) ? "bg-slate-100" : ""
-                                }`}
-                                {...assessmentPress(`gear-${item.code}-loc-${num}`, () =>
-                                  selectGearLocation(item.code, num),
-                                )}
+                                } ${isIOS12() ? "" : "touch-manipulation transition"}`}
+                                {...(isIOS12()
+                                  ? {
+                                      onClick: () =>
+                                        handleAssessmentPress(`gear-${item.code}-loc-${num}`, () =>
+                                          selectGearLocation(item.code, num),
+                                        ),
+                                    }
+                                  : {
+                                      role: "option",
+                                      "aria-selected": locs?.includes(num) ?? false,
+                                      ...assessmentPress(`gear-${item.code}-loc-${num}`, () =>
+                                        selectGearLocation(item.code, num),
+                                      ),
+                                    })}
                               >
                                 <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-slate-900 text-white">
                                   {num}
@@ -873,6 +962,9 @@ export default function MountingYardApp() {
                         <AssessmentControl
                           variant={hasWet ? "default" : "outline"}
                           className="relative h-auto min-h-[6.25rem] w-full flex-col justify-center gap-2 rounded-3xl py-5 text-lg"
+                          onPress={() =>
+                            handleAssessmentPress("gear-wet", () => setGearPicker((p) => (p === "WET" ? null : "WET")))
+                          }
                           pressProps={assessmentPress("gear-wet", () => setGearPicker((p) => (p === "WET" ? null : "WET")))}
                         >
                           <span className="text-2xl font-bold tracking-tight">
@@ -899,13 +991,22 @@ export default function MountingYardApp() {
                                   <button
                                     key={opt.value}
                                     type="button"
+                                    style={isIOS12() ? IOS12_TAP_BUTTON_STYLE : undefined}
                                     className={cn(
-                                      "flex w-full touch-manipulation rounded-xl px-3 py-2.5 text-left text-base font-semibold transition hover:bg-slate-100 active:bg-slate-200",
+                                      "flex w-full rounded-xl px-3 py-2.5 text-left text-base font-semibold hover:bg-slate-100 active:bg-slate-200",
+                                      !isIOS12() && "touch-manipulation transition",
                                       wet?.bodyType === opt.value && "bg-slate-100 ring-2 ring-slate-900",
                                     )}
-                                    {...assessmentPress(`wet-body-${opt.value}`, () =>
-                                      selectWetOption("bodyType", opt.value),
-                                    )}
+                                    {...(isIOS12()
+                                      ? {
+                                          onClick: () =>
+                                            handleAssessmentPress(`wet-body-${opt.value}`, () =>
+                                              selectWetOption("bodyType", opt.value),
+                                            ),
+                                        }
+                                      : assessmentPress(`wet-body-${opt.value}`, () =>
+                                          selectWetOption("bodyType", opt.value),
+                                        ))}
                                   >
                                     {opt.label}
                                   </button>
@@ -919,13 +1020,22 @@ export default function MountingYardApp() {
                                   <button
                                     key={opt.value}
                                     type="button"
+                                    style={isIOS12() ? IOS12_TAP_BUTTON_STYLE : undefined}
                                     className={cn(
-                                      "flex w-full touch-manipulation rounded-xl px-3 py-2.5 text-left text-base font-semibold transition hover:bg-slate-100 active:bg-slate-200",
+                                      "flex w-full rounded-xl px-3 py-2.5 text-left text-base font-semibold hover:bg-slate-100 active:bg-slate-200",
+                                      !isIOS12() && "touch-manipulation transition",
                                       wet?.feet === opt.value && "bg-slate-100 ring-2 ring-slate-900",
                                     )}
-                                    {...assessmentPress(`wet-feet-${opt.value}`, () =>
-                                      selectWetOption("feet", opt.value),
-                                    )}
+                                    {...(isIOS12()
+                                      ? {
+                                          onClick: () =>
+                                            handleAssessmentPress(`wet-feet-${opt.value}`, () =>
+                                              selectWetOption("feet", opt.value),
+                                            ),
+                                        }
+                                      : assessmentPress(`wet-feet-${opt.value}`, () =>
+                                          selectWetOption("feet", opt.value),
+                                        ))}
                                   >
                                     {opt.label}
                                   </button>
