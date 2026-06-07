@@ -1,11 +1,9 @@
 import type { CSSProperties } from "react";
 
-/** iOS 12 Yard interactive elements — pointer hit-test + tap CSS. */
+/** iOS 12 Yard buttons — minimal positioning only (no touch-action / pointer-events overrides). */
 export const IOS12_TAP_BUTTON_STYLE: CSSProperties = {
   position: "relative",
   zIndex: 20,
-  pointerEvents: "auto",
-  touchAction: "manipulation",
   cursor: "pointer",
   WebkitTapHighlightColor: "rgba(0,0,0,0)",
 };
@@ -60,7 +58,7 @@ function describeEventTarget(event: Event, stats: YardDocumentTouchDiagnostics):
   stats.lastTargetText = (el.textContent ?? "").trim().slice(0, 30) || "—";
 }
 
-/** Document/window capture listeners — counters bypass React handlers. */
+/** Document capture listeners — counters bypass React handlers. */
 export function installYardDocumentTouchDiagnostics(
   onUpdate: (stats: YardDocumentTouchDiagnostics) => void,
 ): () => void {

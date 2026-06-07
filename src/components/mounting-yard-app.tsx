@@ -146,6 +146,9 @@ const ios12FactorBtnClass =
 
 type PhysicalPicker = GearTileCode | "WET" | null;
 
+/** Literal HTML — inline onclick/ontouchstart for old iOS compatibility test (not React events). */
+const RAW_IPAD_INLINE_TEST_HTML = `<button id="raw-ipad-test-button" onclick="this.innerHTML='RAW CLICKED'" ontouchstart="this.innerHTML='RAW TOUCHED'" style="position:fixed;top:80px;left:10px;z-index:99999999;background:red;color:white;font-size:24px;padding:12px;pointer-events:auto;border:none;cursor:pointer;">RAW INLINE TEST</button>`;
+
 const ios12BtnClass =
   "yard-interactive inline-flex cursor-pointer items-center justify-center gap-2 font-semibold min-h-[56px] rounded-2xl px-5 text-lg";
 
@@ -278,27 +281,6 @@ export default function MountingYardApp() {
     if (!isIOS12()) return;
     removeBlockingOverlays();
     return installIOS12OverlayFix();
-  }, []);
-
-  useEffect(() => {
-    const btn = document.getElementById("raw-ipad-test-button");
-    if (!btn) return;
-    let rawCount = 0;
-
-    btn.onclick = function () {
-      rawCount += 1;
-      btn.textContent = "RAW TEST " + rawCount;
-    };
-
-    btn.ontouchstart = function () {
-      rawCount += 1;
-      btn.textContent = "RAW TEST " + rawCount;
-    };
-
-    return () => {
-      btn.onclick = null;
-      btn.ontouchstart = null;
-    };
   }, []);
 
   useEffect(() => {
@@ -638,25 +620,7 @@ export default function MountingYardApp() {
       data-yard-root
       className="min-h-[100dvh] bg-slate-100 pb-[calc(5.5rem+env(safe-area-inset-bottom))] pt-[env(safe-area-inset-top)] text-slate-900"
     >
-      <button
-        id="raw-ipad-test-button"
-        type="button"
-        style={{
-          position: "fixed",
-          top: 80,
-          left: 10,
-          zIndex: 9999999,
-          background: "red",
-          color: "white",
-          fontSize: 24,
-          padding: 12,
-          pointerEvents: "auto",
-          border: "none",
-          cursor: "pointer",
-        }}
-      >
-        RAW TEST 0
-      </button>
+      <div dangerouslySetInnerHTML={{ __html: RAW_IPAD_INLINE_TEST_HTML }} />
       <div
         aria-live="polite"
         className="fixed-debug-layer"
