@@ -1,9 +1,5 @@
 import type { Metadata, Viewport } from "next";
 import type { ReactNode } from "react";
-import Script from "next/script";
-import { AppNav } from "@/components/app-nav";
-import { AppProviders } from "@/app/app-providers";
-import { APP_BUILD_VERSION } from "@/lib/build-version";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -35,15 +31,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <head>
-        <Script src={`/ios12-bootstrap.js?v=${APP_BUILD_VERSION}`} strategy="beforeInteractive" />
-      </head>
-      <body className="min-h-[100dvh] bg-slate-950 text-slate-100">
-        <AppProviders>
-          <AppNav />
-          {children}
-        </AppProviders>
-      </body>
+      <body className="min-h-[100dvh] bg-slate-50 text-slate-900 antialiased">{children}</body>
     </html>
   );
 }
