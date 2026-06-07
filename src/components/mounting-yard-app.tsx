@@ -281,6 +281,27 @@ export default function MountingYardApp() {
   }, []);
 
   useEffect(() => {
+    const btn = document.getElementById("raw-ipad-test-button");
+    if (!btn) return;
+    let rawCount = 0;
+
+    btn.onclick = function () {
+      rawCount += 1;
+      btn.textContent = "RAW TEST " + rawCount;
+    };
+
+    btn.ontouchstart = function () {
+      rawCount += 1;
+      btn.textContent = "RAW TEST " + rawCount;
+    };
+
+    return () => {
+      btn.onclick = null;
+      btn.ontouchstart = null;
+    };
+  }, []);
+
+  useEffect(() => {
     dataRef.current = data;
   }, [data]);
 
@@ -617,6 +638,25 @@ export default function MountingYardApp() {
       data-yard-root
       className="min-h-[100dvh] bg-slate-100 pb-[calc(5.5rem+env(safe-area-inset-bottom))] pt-[env(safe-area-inset-top)] text-slate-900"
     >
+      <button
+        id="raw-ipad-test-button"
+        type="button"
+        style={{
+          position: "fixed",
+          top: 80,
+          left: 10,
+          zIndex: 9999999,
+          background: "red",
+          color: "white",
+          fontSize: 24,
+          padding: 12,
+          pointerEvents: "auto",
+          border: "none",
+          cursor: "pointer",
+        }}
+      >
+        RAW TEST 0
+      </button>
       <div
         aria-live="polite"
         className="fixed-debug-layer"

@@ -46,6 +46,7 @@ function neutralizeNonEssentialOverlays(): void {
   document.querySelectorAll("[data-ios12-overlay-candidate]").forEach((node) => {
     if (!(node instanceof HTMLElement)) return;
     if (node.hasAttribute("data-yard-root")) return;
+    if (node.id === "raw-ipad-test-button") return;
     if (node.id === "ios12-startup-failure") {
       node.remove();
       return;
