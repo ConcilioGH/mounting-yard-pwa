@@ -3,6 +3,7 @@
 import "@/lib/ios12-polyfills";
 import { useEffect, useState, type ReactNode } from "react";
 import { enableIOS12CompatMode } from "@/lib/ios12-compat-mode";
+import { removeBlockingOverlays } from "@/lib/ios12-overlay-fix";
 import { isOldIOS, shouldSkipServiceWorker } from "@/lib/legacy-safari";
 import { resetLocalDataAndReload } from "@/lib/reset-local-data";
 import { logMountedBlockingOverlays, removeLegacyStartupOverlays } from "@/lib/yard-touch-diagnostics";
@@ -34,7 +35,8 @@ function StartupErrorBanner() {
     <div
       role="alert"
       data-startup-overlay="true"
-      className="pointer-events-none fixed inset-x-3 top-[calc(3.5rem+env(safe-area-inset-top))] z-[500] max-h-[40vh] overflow-y-auto rounded-xl border-2 border-red-500 bg-red-950 p-3 text-red-100 shadow-lg"
+      data-overlay
+      className="startup-overlay pointer-events-none fixed inset-x-3 top-[calc(3.5rem+env(safe-area-inset-top))] z-[500] max-h-[40vh] overflow-y-auto rounded-xl border-2 border-red-500 bg-red-950 p-3 text-red-100 shadow-lg"
     >
       <p className="text-sm font-bold uppercase tracking-wide text-red-300">Startup failed</p>
       <ul className="mt-2 space-y-2 text-sm">
@@ -65,6 +67,7 @@ function StartupErrorBanner() {
 export function StartupDiagnosticsRoot({ children }: { children: ReactNode }) {
   useEffect(() => {
     removeLegacyStartupOverlays();
+    removeBlockingOverlays();
     document.body.setAttribute("data-app-ready", "true");
     logStartupStep("app-mounted");
     logMountedBlockingOverlays();

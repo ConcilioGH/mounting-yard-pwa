@@ -109,16 +109,17 @@
     panel.style.cssText =
       "position:fixed;inset:16px;top:calc(3.5rem + env(safe-area-inset-top));z-index:9999;" +
       "padding:16px;border-radius:12px;border:2px solid #ef4444;background:#450a0a;color:#fecaca;" +
-      "font:16px/1.4 -apple-system,BlinkMacSystemFont,sans-serif;overflow:auto;";
+      "font:16px/1.4 -apple-system,BlinkMacSystemFont,sans-serif;overflow:auto;" +
+      "pointer-events:none;";
     panel.innerHTML =
       "<p style='margin:0 0 8px;font-weight:700'>iOS 12 compatibility mode</p>" +
       "<p style='margin:0 0 12px'>App failed to initialise on this device. Tap Reset App Data or open Yard.</p>" +
       "<pre style='margin:0 0 12px;white-space:pre-wrap;word-break:break-word;font-size:13px'>" +
       String(message) +
       "</pre>" +
-      "<p style='margin:0 0 12px'><a href='/yard' style='color:#fde68a;font-weight:700'>Open Yard page</a></p>" +
+      "<p style='margin:0 0 12px'><a href='/yard' style='color:#fde68a;font-weight:700;pointer-events:auto;'>Open Yard page</a></p>" +
       "<button type='button' id='ios12-reset-btn' style='padding:12px 20px;border:0;border-radius:10px;" +
-      "background:#dc2626;color:#fff;font-weight:700;font-size:16px'>Reset App Data</button>";
+      "background:#dc2626;color:#fff;font-weight:700;font-size:16px;pointer-events:auto;'>Reset App Data</button>";
     document.body.appendChild(panel);
     var btn = document.getElementById("ios12-reset-btn");
     if (btn) {

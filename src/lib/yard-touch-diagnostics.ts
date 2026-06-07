@@ -38,6 +38,7 @@ export function touchPointFromEvent(event: ReactTouchEvent): { x: number; y: num
 
 export function removeLegacyStartupOverlays(): void {
   document.getElementById("ios12-startup-failure")?.remove();
+  document.querySelectorAll("[data-blocking-overlay]").forEach((node) => node.remove());
 }
 
 export function logMountedBlockingOverlays(): void {

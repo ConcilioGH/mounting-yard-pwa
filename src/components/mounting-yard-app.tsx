@@ -45,10 +45,10 @@ import { useDebouncedCallback } from "@/hooks/useDebouncedCallback";
 import { InitErrorPanel } from "@/components/init-error-panel";
 import { enableIOS12CompatMode } from "@/lib/ios12-compat-mode";
 import { shouldSkipYardPersistence, shouldSkipYardStartupLoad } from "@/lib/ios12-yard-fallback";
+import { installIOS12OverlayFix, removeBlockingOverlays } from "@/lib/ios12-overlay-fix";
 import {
   IOS12_TAP_BUTTON_STYLE,
   installYardDocumentTouchDiagnostics,
-  installYardIOS12InteractiveCss,
   type YardDocumentTouchDiagnostics,
 } from "@/lib/ios12-yard-tap";
 import { isIOS12, shouldSkipIndexedDB } from "@/lib/legacy-safari";
@@ -142,12 +142,12 @@ const compactFactorBtn =
 const compactMarksPos = "text-xl font-bold leading-none text-green-700 sm:text-2xl";
 const compactMarksNeg = "text-xl font-bold leading-none text-red-700 sm:text-2xl";
 const ios12FactorBtnClass =
-  "inline-flex w-full cursor-pointer items-center justify-center gap-2 font-semibold rounded-2xl border border-slate-200 bg-white min-h-[56px]";
+  "yard-interactive inline-flex w-full cursor-pointer items-center justify-center gap-2 font-semibold rounded-2xl border border-slate-200 bg-white min-h-[56px]";
 
 type PhysicalPicker = GearTileCode | "WET" | null;
 
 const ios12BtnClass =
-  "inline-flex cursor-pointer items-center justify-center gap-2 font-semibold min-h-[56px] rounded-2xl px-5 text-lg";
+  "yard-interactive inline-flex cursor-pointer items-center justify-center gap-2 font-semibold min-h-[56px] rounded-2xl px-5 text-lg";
 
 function YardButton({
   onClick,
@@ -265,6 +265,7 @@ export default function MountingYardApp() {
 
   useEffect(() => {
     removeLegacyStartupOverlays();
+    removeBlockingOverlays();
     logMountedBlockingOverlays();
     if (isIOS12()) void enableIOS12CompatMode();
   }, []);
@@ -275,7 +276,8 @@ export default function MountingYardApp() {
 
   useEffect(() => {
     if (!isIOS12()) return;
-    return installYardIOS12InteractiveCss();
+    removeBlockingOverlays();
+    return installIOS12OverlayFix();
   }, []);
 
   useEffect(() => {
@@ -617,6 +619,7 @@ export default function MountingYardApp() {
     >
       <div
         aria-live="polite"
+        className="fixed-debug-layer"
         style={{
           position: "fixed",
           top: 45,
@@ -628,17 +631,18 @@ export default function MountingYardApp() {
           padding: 8,
           maxWidth: "min(92vw, 320px)",
           lineHeight: 1.35,
+          pointerEvents: "none",
         }}
       >
         <div>Tap: {tapCount}</div>
         {isIOS12() ? (
           <>
-            <div>TouchStart: {docTouch.touchStart}</div>
-            <div>TouchEnd: {docTouch.touchEnd}</div>
-            <div>Click: {docTouch.click}</div>
-            <div>Tag: {docTouch.lastTargetTag}</div>
-            <div>Class: {docTouch.lastTargetClassName}</div>
-            <div>Text: {docTouch.lastTargetText}</div>
+            <div id="yard-debug-touchstart">TouchStart: {docTouch.touchStart}</div>
+            <div id="yard-debug-touchend">TouchEnd: {docTouch.touchEnd}</div>
+            <div id="yard-debug-click">Click: {docTouch.click}</div>
+            <div id="yard-debug-tag">Tag: {docTouch.lastTargetTag}</div>
+            <div id="yard-debug-class">Class: {docTouch.lastTargetClassName}</div>
+            <div id="yard-debug-text">Text: {docTouch.lastTargetText}</div>
           </>
         ) : null}
       </div>
@@ -655,13 +659,15 @@ export default function MountingYardApp() {
             {saveState === "error" && <p className="mt-1 text-base text-red-600">Could not save. Try again.</p>}
           </div>
           <div className="flex flex-col items-stretch gap-3 sm:flex-row sm:items-center sm:justify-end lg:shrink-0">
-            <YardNextRaceCountdown races={races} meetingDate={meetingDate || undefined} />
+            <div data-yard-countdown>
+              <YardNextRaceCountdown races={races} meetingDate={meetingDate || undefined} />
+            </div>
             <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
             <input
               ref={importRef}
               type="file"
               accept=".csv,text/csv"
-              className="hidden"
+              className="yard-hidden-file-input hidden"
               onChange={(e) => void handleImportFile(e.target.files?.[0] ?? null)}
             />
             <YardButton
@@ -700,7 +706,7 @@ export default function MountingYardApp() {
                     type="button"
                     style={IOS12_TAP_BUTTON_STYLE}
                     className={cn(
-                      "min-h-[52px] w-full rounded-2xl px-4 text-lg font-semibold",
+                      "yard-interactive min-h-[52px] w-full rounded-2xl px-4 text-lg font-semibold",
                       selected ? "bg-slate-900 text-white" : "bg-white text-slate-800 ring-1 ring-slate-200",
                     )}
                     onClick={() => {
@@ -768,7 +774,7 @@ export default function MountingYardApp() {
                               setSelectedRunner(r.no);
                             }))}
                         className={cn(
-                          "w-full rounded-3xl border-2 p-4 text-left text-slate-900",
+                          "yard-interactive w-full rounded-3xl border-2 p-4 text-left text-slate-900",
                           !isIOS12() && "transition active:scale-[0.99]",
                           tint,
                           active ? "border-slate-900 shadow-lg ring-2 ring-slate-900 ring-offset-2 ring-offset-slate-100" : "border-slate-400/50",
@@ -1090,6 +1096,7 @@ export default function MountingYardApp() {
       </div>
 
       <nav
+        data-yard-bottom-nav
         className="fixed bottom-0 left-0 right-0 z-50 border-t-2 border-slate-200 bg-white"
         style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
         aria-label="Runner navigation"

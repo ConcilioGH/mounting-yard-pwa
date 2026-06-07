@@ -3,7 +3,7 @@ import type { CSSProperties } from "react";
 /** iOS 12 Yard interactive elements — pointer hit-test + tap CSS. */
 export const IOS12_TAP_BUTTON_STYLE: CSSProperties = {
   position: "relative",
-  zIndex: 10,
+  zIndex: 20,
   pointerEvents: "auto",
   touchAction: "manipulation",
   cursor: "pointer",
@@ -28,6 +28,28 @@ const EMPTY_DIAGNOSTICS: YardDocumentTouchDiagnostics = {
   lastTargetText: "—",
 };
 
+const DEBUG_IDS = {
+  touchStart: "yard-debug-touchstart",
+  touchEnd: "yard-debug-touchend",
+  click: "yard-debug-click",
+  tag: "yard-debug-tag",
+  className: "yard-debug-class",
+  text: "yard-debug-text",
+} as const;
+
+function syncDiagnosticsDom(stats: YardDocumentTouchDiagnostics): void {
+  const set = (id: string, value: string) => {
+    const el = document.getElementById(id);
+    if (el) el.textContent = value;
+  };
+  set(DEBUG_IDS.touchStart, String(stats.touchStart));
+  set(DEBUG_IDS.touchEnd, String(stats.touchEnd));
+  set(DEBUG_IDS.click, String(stats.click));
+  set(DEBUG_IDS.tag, stats.lastTargetTag);
+  set(DEBUG_IDS.className, stats.lastTargetClassName);
+  set(DEBUG_IDS.text, stats.lastTargetText);
+}
+
 function describeEventTarget(event: Event, stats: YardDocumentTouchDiagnostics): void {
   const target = event.target;
   if (!(target instanceof Element)) return;
@@ -38,13 +60,16 @@ function describeEventTarget(event: Event, stats: YardDocumentTouchDiagnostics):
   stats.lastTargetText = (el.textContent ?? "").trim().slice(0, 30) || "—";
 }
 
-/** Document capture listeners — counters do not use React event handlers. */
+/** Document/window capture listeners — counters bypass React handlers. */
 export function installYardDocumentTouchDiagnostics(
   onUpdate: (stats: YardDocumentTouchDiagnostics) => void,
 ): () => void {
   const stats: YardDocumentTouchDiagnostics = { ...EMPTY_DIAGNOSTICS };
 
-  const emit = () => onUpdate({ ...stats });
+  const emit = () => {
+    syncDiagnosticsDom(stats);
+    onUpdate({ ...stats });
+  };
 
   const onTouchStart = (event: Event) => {
     stats.touchStart += 1;
@@ -64,34 +89,17 @@ export function installYardDocumentTouchDiagnostics(
     emit();
   };
 
-  document.addEventListener("touchstart", onTouchStart, true);
-  document.addEventListener("touchend", onTouchEnd, true);
-  document.addEventListener("click", onClick, true);
+  const options: AddEventListenerOptions = { capture: true, passive: true };
+
+  document.addEventListener("touchstart", onTouchStart, options);
+  document.addEventListener("touchend", onTouchEnd, options);
+  document.addEventListener("click", onClick, options);
 
   return () => {
-    document.removeEventListener("touchstart", onTouchStart, true);
-    document.removeEventListener("touchend", onTouchEnd, true);
-    document.removeEventListener("click", onClick, true);
+    document.removeEventListener("touchstart", onTouchStart, options);
+    document.removeEventListener("touchend", onTouchEnd, options);
+    document.removeEventListener("click", onClick, options);
   };
 }
 
-export const YARD_IOS12_INTERACTIVE_STYLE_ID = "yard-ios12-interactive-fix";
-
-export function installYardIOS12InteractiveCss(): () => void {
-  if (document.getElementById(YARD_IOS12_INTERACTIVE_STYLE_ID)) {
-    return () => undefined;
-  }
-  const style = document.createElement("style");
-  style.id = YARD_IOS12_INTERACTIVE_STYLE_ID;
-  style.textContent = `
-    [data-yard-root] button,
-    [data-yard-root] [role="tab"] {
-      position: relative !important;
-      z-index: 10 !important;
-      pointer-events: auto !important;
-      touch-action: manipulation !important;
-    }
-  `;
-  document.head.appendChild(style);
-  return () => style.remove();
-}
+export { DEBUG_IDS as YARD_DEBUG_IDS };
