@@ -24,7 +24,9 @@ import {
   logLoadingState,
   reportStartupFailure,
   traceSync,
+  type StartupFailure,
 } from "@/lib/startup-diagnostics";
+import { useHydrationStageOptional } from "@/components/hydration-stage-tracker";
 
 type SpeedMapContextValue = SpeedMapSessionState & {
   hydrated: boolean;
@@ -46,28 +48,26 @@ type SpeedMapContextValue = SpeedMapSessionState & {
 const SpeedMapContext = createContext<SpeedMapContextValue | null>(null);
 
 export function SpeedMapProvider({ children }: { children: ReactNode }) {
-  const [session, setSession] = useState<SpeedMapSessionState>(() => {
-    try {
-      const loaded = loadSpeedMapFromStorage();
-      return loaded
-        ? traceSync("speed-map-session-reconcile", () => reconcileSpeedMapActivePlacement(loaded))
-        : emptySpeedMapSession();
-    } catch (error) {
-      reportStartupFailure("speed-map-provider-init-state", error);
-      return emptySpeedMapSession();
-    }
-  });
-  const [hydrated, setHydrated] = useState(true);
+  const [session, setSession] = useState<SpeedMapSessionState>(emptySpeedMapSession);
+  const [hydrated, setHydrated] = useState(false);
   const sessionRef = useRef(session);
   sessionRef.current = session;
+  const hydrationStage = useHydrationStageOptional();
+  const markStageRef = useRef(hydrationStage?.markStage);
+  markStageRef.current = hydrationStage?.markStage;
 
   useEffect(() => {
     logLoadingState("SpeedMapProvider", true, "hydrated=false");
+    markStageRef.current?.("B", "SpeedMapProvider mounted");
+
     try {
       const loaded = loadSpeedMapFromStorage();
       if (loaded) {
-        setSession(traceSync("speed-map-session-reconcile", () => reconcileSpeedMapActivePlacement(loaded)));
+        setSession(
+          traceSync("speed-map-session-reconcile", () => reconcileSpeedMapActivePlacement(loaded)),
+        );
       }
+      markStageRef.current?.("C", "localStorage read complete");
     } catch (error) {
       reportStartupFailure("speed-map-provider-hydrate", error);
       console.error("Failed to hydrate speed map session", error);

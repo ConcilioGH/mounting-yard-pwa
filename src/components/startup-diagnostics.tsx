@@ -13,13 +13,17 @@ import {
   reportStartupFailure,
   subscribeStartupFailures,
   traceAsync,
+  type StartupFailure,
 } from "@/lib/startup-diagnostics";
 
 function StartupErrorBanner() {
-  const [failures, setFailures] = useState(getStartupFailures);
+  const [failures, setFailures] = useState<readonly StartupFailure[]>([]);
   const [resetting, setResetting] = useState(false);
 
-  useEffect(() => subscribeStartupFailures(() => setFailures([...getStartupFailures()])), []);
+  useEffect(() => {
+    setFailures([...getStartupFailures()]);
+    return subscribeStartupFailures(() => setFailures([...getStartupFailures()]));
+  }, []);
 
   if (failures.length === 0) return null;
 

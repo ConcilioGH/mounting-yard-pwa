@@ -65,6 +65,16 @@ import {
   reportStartupFailure,
   STARTUP_GATE_TIMEOUT_MS,
 } from "@/lib/startup-diagnostics";
+import {
+  installIOS12YardDomBridge,
+  type YardDomBridgeHandlers,
+} from "@/lib/ios12-yard-dom-bridge";
+import YardLegacyIOS12 from "@/components/yard-legacy-ios12";
+import { APP_BUILD_VERSION } from "@/lib/build-version";
+
+function isPositiveAssessmentFactor(factor: string): boolean {
+  return factor === SWEAT_POS_KEY || factor.endsWith("+");
+}
 
 function totals(a: Assessment | undefined) {
   const pos = a
@@ -159,6 +169,7 @@ function YardButton({
   variant = "default",
   disabled,
   tapDebugAlways,
+  yardAction,
 }: {
   onClick: () => void;
   className?: string;
@@ -167,6 +178,7 @@ function YardButton({
   disabled?: boolean;
   /** iOS 12: remain clickable so tap-count debug still fires */
   tapDebugAlways?: boolean;
+  yardAction?: string;
 }) {
   if (isIOS12()) {
     const faded = Boolean(disabled);
@@ -174,6 +186,7 @@ function YardButton({
       <button
         type="button"
         disabled={faded && !tapDebugAlways}
+        data-yard-action={yardAction}
         style={IOS12_TAP_BUTTON_STYLE}
         className={cn(
           ios12BtnClass,
@@ -202,17 +215,21 @@ function AssessmentControl({
   className,
   children,
   variant = "outline",
+  yardFactor,
 }: {
   onPress: () => void;
   pressProps: AssessmentPressProps;
   className?: string;
   children: React.ReactNode;
   variant?: "default" | "outline";
+  yardFactor?: string;
 }) {
   if (isIOS12()) {
     return (
       <button
         type="button"
+        data-yard-action={yardFactor ? "assessment" : undefined}
+        data-factor={yardFactor}
         style={IOS12_TAP_BUTTON_STYLE}
         className={cn(
           ios12FactorBtnClass,
@@ -233,6 +250,36 @@ function AssessmentControl({
 }
 
 export default function MountingYardApp() {
+  const [clientReady, setClientReady] = useState(false);
+  const [useLegacyYard, setUseLegacyYard] = useState(false);
+
+  useEffect(() => {
+    setUseLegacyYard(isIOS12());
+    setClientReady(true);
+  }, []);
+
+  if (!clientReady) {
+    return (
+      <div
+        style={{
+          padding: 24,
+          fontFamily: "-apple-system, BlinkMacSystemFont, sans-serif",
+        }}
+      >
+        <div style={{ fontSize: 18, fontWeight: 600 }}>Loading Yard...</div>
+        <div style={{ marginTop: 8, fontSize: 14, color: "#64748b" }}>Build {APP_BUILD_VERSION}</div>
+      </div>
+    );
+  }
+
+  if (useLegacyYard) {
+    return <YardLegacyIOS12 />;
+  }
+
+  return <MountingYardModernApp />;
+}
+
+function MountingYardModernApp() {
   const [initErrors, setInitErrors] = useState<string[]>([]);
   const [races, setRaces] = useState<Race[]>(DEFAULT_RACES);
   const [raceId, setRaceId] = useState(DEFAULT_RACES[0]?.id ?? "R1");
@@ -249,9 +296,12 @@ export default function MountingYardApp() {
   const [gearPicker, setGearPicker] = useState<PhysicalPicker>(null);
   const gearTilesRef = useRef<HTMLDivElement>(null);
   const assessmentAreaRef = useRef<HTMLDivElement>(null);
+  const yardRootRef = useRef<HTMLDivElement>(null);
+  const bridgeHandlersRef = useRef<YardDomBridgeHandlers | null>(null);
   const lastTouchTimeRef = useRef(0);
   const userInteractedRef = useRef(false);
   const [tapCount, setTapCount] = useState(0);
+  const [bridgeTapCount, setBridgeTapCount] = useState(0);
   const [docTouch, setDocTouch] = useState<YardDocumentTouchDiagnostics>({
     touchStart: 0,
     touchEnd: 0,
@@ -541,6 +591,41 @@ export default function MountingYardApp() {
     [races],
   );
 
+  bridgeHandlersRef.current = {
+    onBridgeTap: () => setBridgeTapCount((count) => count + 1),
+    selectRace: (raceId) => {
+      incrementTap();
+      selectRace(raceId);
+    },
+    selectRunner: (runnerNo) => {
+      incrementTap();
+      setGearPicker(null);
+      setSelectedRunner(runnerNo);
+    },
+    goPrev: () => {
+      incrementTap();
+      goPrev();
+    },
+    goNext: () => {
+      incrementTap();
+      goNext();
+    },
+    tapAssessment: (factor) => {
+      if (isPositiveAssessmentFactor(factor)) {
+        handleAssessmentPress(`bridge-positive-${factor}`, () => tapPositive(factor));
+      } else {
+        handleAssessmentPress(`bridge-negative-${factor}`, () => tapNegative({ label: factor }));
+      }
+    },
+  };
+
+  useEffect(() => {
+    if (!isIOS12()) return;
+    const root = yardRootRef.current;
+    if (!root) return;
+    return installIOS12YardDomBridge(() => bridgeHandlersRef.current!, root);
+  }, []);
+
   const handleExport = () => {
     void (async () => {
       try {
@@ -617,6 +702,7 @@ export default function MountingYardApp() {
 
   return (
     <div
+      ref={yardRootRef}
       data-yard-root
       className="min-h-[100dvh] bg-slate-100 pb-[calc(5.5rem+env(safe-area-inset-bottom))] pt-[env(safe-area-inset-top)] text-slate-900"
     >
@@ -641,6 +727,7 @@ export default function MountingYardApp() {
         <div>Tap: {tapCount}</div>
         {isIOS12() ? (
           <>
+            <div id="yard-bridge-tap">BridgeTap: {bridgeTapCount}</div>
             <div id="yard-debug-touchstart">TouchStart: {docTouch.touchStart}</div>
             <div id="yard-debug-touchend">TouchEnd: {docTouch.touchEnd}</div>
             <div id="yard-debug-click">Click: {docTouch.click}</div>
@@ -708,6 +795,9 @@ export default function MountingYardApp() {
                   <button
                     key={r.id}
                     type="button"
+                    data-yard-action="select-race"
+                    data-race-id={r.id}
+                    data-race-no={r.id.replace(/^R/, "")}
                     style={IOS12_TAP_BUTTON_STYLE}
                     className={cn(
                       "yard-interactive min-h-[52px] w-full rounded-2xl px-4 text-lg font-semibold",
@@ -764,6 +854,8 @@ export default function MountingYardApp() {
                       <button
                         key={r.no}
                         type="button"
+                        data-yard-action="select-runner"
+                        data-runner-id={String(r.no)}
                         {...(isIOS12()
                           ? {
                               style: IOS12_TAP_BUTTON_STYLE,
@@ -850,6 +942,7 @@ export default function MountingYardApp() {
                         <div className="grid grid-cols-1 gap-1.5">
                           <AssessmentControl
                             className={cn(compactFactorBtn)}
+                            yardFactor={SWEAT_POS_KEY}
                             onPress={() => handleAssessmentPress("positive-clean-plus", () => tapPositive(SWEAT_POS_KEY))}
                             pressProps={assessmentPress("positive-clean-plus", () => tapPositive(SWEAT_POS_KEY))}
                           >
@@ -862,6 +955,7 @@ export default function MountingYardApp() {
                             <AssessmentControl
                               key={key}
                               className={cn(compactFactorBtn)}
+                              yardFactor={key}
                               onPress={() => handleAssessmentPress(`negative-sweat-${key}`, () => tapNegative({ label: key }))}
                               pressProps={assessmentPress(`negative-sweat-${key}`, () => tapNegative({ label: key }))}
                             >
@@ -885,6 +979,7 @@ export default function MountingYardApp() {
                               <AssessmentControl
                                 key={key}
                                 className={cn(compactFactorBtn)}
+                                yardFactor={key}
                                 onPress={() => handleAssessmentPress(`positive-${key}`, () => tapPositive(key))}
                                 pressProps={assessmentPress(`positive-${key}`, () => tapPositive(key))}
                               >
@@ -905,6 +1000,7 @@ export default function MountingYardApp() {
                               <AssessmentControl
                                 key={key}
                                 className={cn(compactFactorBtn)}
+                                yardFactor={key}
                                 onPress={() => handleAssessmentPress(`negative-${key}`, () => tapNegative({ label: key }))}
                                 pressProps={assessmentPress(`negative-${key}`, () => tapNegative({ label: key }))}
                               >
@@ -1111,6 +1207,7 @@ export default function MountingYardApp() {
             className="min-h-[3.75rem] flex-1 rounded-3xl text-xl font-bold"
             disabled={!canPrev}
             tapDebugAlways
+            yardAction="prev-runner"
             onClick={() => {
               incrementTap();
               goPrev();
@@ -1122,6 +1219,7 @@ export default function MountingYardApp() {
             className="min-h-[3.75rem] flex-1 rounded-3xl text-xl font-bold"
             disabled={!canNext}
             tapDebugAlways
+            yardAction="next-runner"
             onClick={() => {
               incrementTap();
               goNext();

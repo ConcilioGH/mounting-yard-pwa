@@ -1,0 +1,71 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir
+R1,Canterbury,1,12:15 pm E Security Group Plate,1250m,Maiden,Soft 5,True,2,2,Circus Queen,Circus Queen,Circus Queen,6,Peter Snowden,Tom Sherry,$12,NA
+R1,Canterbury,1,12:15 pm E Security Group Plate,1250m,Maiden,Soft 5,True,3,3,Excelluna,Excelluna,Excelluna,2,Richard & Will Freedman,Chad Schofield,$4.2,3.6
+R1,Canterbury,1,12:15 pm E Security Group Plate,1250m,Maiden,Soft 5,True,4,4,Extremely Chic,Extremely Chic,Extremely Chic,8,Chris Waller,Sam Clipperton,$4.6,7
+R1,Canterbury,1,12:15 pm E Security Group Plate,1250m,Maiden,Soft 5,True,5,5,Idmiston,Idmiston,Idmiston,5,Anthony & Sam Freedman,Rachel King,$10,NA
+R1,Canterbury,1,12:15 pm E Security Group Plate,1250m,Maiden,Soft 5,True,6,6,Miss Scandal,Miss Scandal,Miss Scandal,3,Chris Waller,Tyler Schiller,$5,2.7
+R1,Canterbury,1,12:15 pm E Security Group Plate,1250m,Maiden,Soft 5,True,7,7,Ole Olive,Ole Olive,Ole Olive,4,Kris Lees,William Stanley (a-3),$41,12
+R1,Canterbury,1,12:15 pm E Security Group Plate,1250m,Maiden,Soft 5,True,8,8,Satin Serenade,Satin Serenade,Satin Serenade,1,Chris Waller,Tim Clark,$2.75,NA
+R2,Canterbury,2,12:50 pm Drinkwise Plate,1250m,Maiden,Soft 5,True,1,1,Divine Offering,Divine Offering,Divine Offering,11,Peter Snowden,Tom Sherry,$9.5,NA
+R2,Canterbury,2,12:50 pm Drinkwise Plate,1250m,Maiden,Soft 5,True,2,2,Dominator,Dominator,Dominator,10,Michael Freedman,Tommy Berry,$7.5,4
+R2,Canterbury,2,12:50 pm Drinkwise Plate,1250m,Maiden,Soft 5,True,6,6,Klocke,Klocke,Klocke,5,Chris Waller,Adam Hyeronimus,$2.8,NA
+R2,Canterbury,2,12:50 pm Drinkwise Plate,1250m,Maiden,Soft 5,True,10,10,Snitzel A'la Rouge,Snitzel A'la Rouge,Snitzel A'la Rouge,7,Chris Waller,Sam Clipperton,$13,NA
+R2,Canterbury,2,12:50 pm Drinkwise Plate,1250m,Maiden,Soft 5,True,12,12,The Machine Gun,The Machine Gun,The Machine Gun,3,Peter Snowden,Tim Clark,$3.9,NA
+R2,Canterbury,2,12:50 pm Drinkwise Plate,1250m,Maiden,Soft 5,True,13,13,Ultimate Warrior,Ultimate Warrior,Ultimate Warrior,2,Anthony & Sam Freedman,Chad Schofield,$11,NA
+R2,Canterbury,2,12:50 pm Drinkwise Plate,1250m,Maiden,Soft 5,True,14,14,Zeitgeist,Zeitgeist,Zeitgeist,15,Chris Waller,Andrew Adkins,$10,NA
+R2,Canterbury,2,12:50 pm Drinkwise Plate,1250m,Maiden,Soft 5,True,15,15,Marwooba,Marwooba,Marwooba,12,"Michael, John & Wayne Hawkes",Tyler Schiller,$15,4.7
+R2,Canterbury,2,12:50 pm Drinkwise Plate,1250m,Maiden,Soft 5,True,17,17,Another Lahar,Another Lahar,Another Lahar,6,David Payne,Ashley Morgan,$41,9
+R3,Canterbury,3,1:25 pm Schweppes Handicap,1250m,Handicap,Soft 5,True,1,1,Hello Captain,Hello Captain,Hello Captain,4,Chris Waller,Nash Rawiller,$2.25,6.2
+R3,Canterbury,3,1:25 pm Schweppes Handicap,1250m,Handicap,Soft 5,True,2,2,Airworthy,Airworthy,Airworthy,11,Gai Waterhouse & Adrian Bott,Zac Wadick (a-2),$8,2.7
+R3,Canterbury,3,1:25 pm Schweppes Handicap,1250m,Handicap,Soft 5,True,3,3,Three Arrows,Three Arrows,Three Arrows,1,Tom Charlton,Anna Roper (a-2),$14,3.5
+R3,Canterbury,3,1:25 pm Schweppes Handicap,1250m,Handicap,Soft 5,True,5,5,Willingham,Willingham,Willingham,5,Danielle Seib,Brodie Loy,$26,2.2
+R3,Canterbury,3,1:25 pm Schweppes Handicap,1250m,Handicap,Soft 5,True,6,6,Zoufield,Zoufield,Zoufield,9,Andrew Bourke,Pierre Boudvillain,$31,3.7
+R3,Canterbury,3,1:25 pm Schweppes Handicap,1250m,Handicap,Soft 5,True,7,7,Roma Green,Roma Green,Roma Green,3,Bjorn Baker,Kerrin McEvoy,$7,2
+R3,Canterbury,3,1:25 pm Schweppes Handicap,1250m,Handicap,Soft 5,True,8,8,Wootton Way,Wootton Way,Wootton Way,7,Chris Waller,Tommy Berry,$7.5,4.4
+R3,Canterbury,3,1:25 pm Schweppes Handicap,1250m,Handicap,Soft 5,True,9,9,Events,Events,Events,6,Ciaron Maher,Chad Schofield,$7.5,3.2
+R3,Canterbury,3,1:25 pm Schweppes Handicap,1250m,Handicap,Soft 5,True,10,10,Extrio,Extrio,Extrio,2,Luke Pepper Jean,Van Overmeire,$15,6.2
+R3,Canterbury,3,1:25 pm Schweppes Handicap,1250m,Handicap,Soft 5,True,12,12,Demi God,Demi God,Demi God,8,Michael Travers,Braith Nock (a-1.5),$81,6.7
+R4,Canterbury,4,2:00 pm The Agency Real Estate Handicap,1550m,Handicap,Soft 5,True,1,1,Deepwater Artist,Deepwater Artist,Deepwater Artist,2,Matthew Kelley,Coriah Keatings (a-3),$4.8,3.3
+R4,Canterbury,4,2:00 pm The Agency Real Estate Handicap,1550m,Handicap,Soft 5,True,2,2,Helen's Way,Helen's Way,Helen's Way,6,Bjorn Baker,Nash Rawiller,$4.2,1.3
+R4,Canterbury,4,2:00 pm The Agency Real Estate Handicap,1550m,Handicap,Soft 5,True,3,3,Ballpark,Ballpark,Ballpark,4,Chris Waller,Tim Clark,$8,2.8
+R4,Canterbury,4,2:00 pm The Agency Real Estate Handicap,1550m,Handicap,Soft 5,True,4,4,Rach,Rach,Rach,8,Chris Waller,Tyler Schiller,$8,3.1
+R4,Canterbury,4,2:00 pm The Agency Real Estate Handicap,1550m,Handicap,Soft 5,True,5,5,Pawa,Pawa,Pawa,1,Edward O'Rourke,Rachel King,$20,2.5
+R4,Canterbury,4,2:00 pm The Agency Real Estate Handicap,1550m,Handicap,Soft 5,True,6,6,Polo,Polo,Polo,5,Gary Portelli,Ashley Morgan,$15,7.4
+R4,Canterbury,4,2:00 pm The Agency Real Estate Handicap,1550m,Handicap,Soft 5,True,7,7,Lipstick,Lipstick,Lipstick,3,Chris Waller,Adam Hyeronimus,$6.5,6.4
+R4,Canterbury,4,2:00 pm The Agency Real Estate Handicap,1550m,Handicap,Soft 5,True,9,9,Wounder,Wounder,Wounder,7,Chris Waller,Tommy Berry,$4.2,5.1
+R5,Canterbury,5,2:35 pm All Too Hard @ Vinery Stud Handicap,1900m,Handicap,Soft 5,True,2,2,Claim The Crown,Claim The Crown,Claim The Crown,8,John Sargent,Siena Grima (a-2),$12,6
+R5,Canterbury,5,2:35 pm All Too Hard @ Vinery Stud Handicap,1900m,Handicap,Soft 5,True,3,3,Sting In The Tail,Sting In The Tail,Sting In The Tail,6,Chris Waller,Tommy Berry,$7,7.2
+R5,Canterbury,5,2:35 pm All Too Hard @ Vinery Stud Handicap,1900m,Handicap,Soft 5,True,4,4,Allegro Miss,Allegro Miss,Allegro Miss,7,Con Karakatsanis,Jay Ford,$4.2,8.3
+R5,Canterbury,5,2:35 pm All Too Hard @ Vinery Stud Handicap,1900m,Handicap,Soft 5,True,5,5,Format,Format,Format,5,Gai Waterhouse & Adrian Bott,Adam Hyeronimus,$3.9,2.2
+R5,Canterbury,5,2:35 pm All Too Hard @ Vinery Stud Handicap,1900m,Handicap,Soft 5,True,6,6,Fioprospero,Fioprospero,Fioprospero,2,Matthew Smith,Ashley Morgan,$7.5,7.4
+R5,Canterbury,5,2:35 pm All Too Hard @ Vinery Stud Handicap,1900m,Handicap,Soft 5,True,7,7,Jack Duggan,Jack Duggan,Jack Duggan,4,Jason Deamer,Chad Schofield,$7.5,5.5
+R5,Canterbury,5,2:35 pm All Too Hard @ Vinery Stud Handicap,1900m,Handicap,Soft 5,True,8,8,Lots To Love,Lots To Love,Lots To Love,1,Annabel & Rob Archibald,Braith Nock (a-1.5),$5,4.5
+R6,Canterbury,6,3:10 pm Toyota Forklifts Handicap,1550m,Handicap,Soft 5,True,1,1,The Creator,The Creator,The Creator,11,Mick Price & Michael Kent Jnr,Anna Roper (a-2),$5,4
+R6,Canterbury,6,3:10 pm Toyota Forklifts Handicap,1550m,Handicap,Soft 5,True,2,2,Forbidden Riff,Forbidden Riff,Forbidden Riff,9,Richard & Will Freedman,Siena Grima (a-2),$15,5.6
+R6,Canterbury,6,3:10 pm Toyota Forklifts Handicap,1550m,Handicap,Soft 5,True,3,3,Audrey's Lane,Audrey's Lane,Audrey's Lane,6,Brad Widdup,Mollie Fitzgerald (a-3),$3.9,3.5
+R6,Canterbury,6,3:10 pm Toyota Forklifts Handicap,1550m,Handicap,Soft 5,True,4,4,Lennox,Lennox,Lennox,2,Annabel & Rob Archibald,Braith Nock (a-1.5),$4.6,3.3
+R6,Canterbury,6,3:10 pm Toyota Forklifts Handicap,1550m,Handicap,Soft 5,True,5,5,Tenderize,Tenderize,Tenderize,10,Gary Portelli,Alysha Collett,$7.5,3.8
+R6,Canterbury,6,3:10 pm Toyota Forklifts Handicap,1550m,Handicap,Soft 5,True,7,7,Peace Officer,Peace Officer,Peace Officer,7,Clarry Conners,Ashley Morgan,$17,7
+R6,Canterbury,6,3:10 pm Toyota Forklifts Handicap,1550m,Handicap,Soft 5,True,8,8,Louie's Legacy,Louie's Legacy,Louie's Legacy,3,"Barbara Joseph, Paul & Matt Jones",Quayde Krogh,$7,6.4
+R6,Canterbury,6,3:10 pm Toyota Forklifts Handicap,1550m,Handicap,Soft 5,True,10,10,Up To Mischief,Up To Mischief,Up To Mischief,8,Jason Deamer,Rachel King,$7.5,5
+R7,Canterbury,7,3:45 pm Tab Handicap,1100m,Handicap,Soft 5,True,1,1,Storm The Ramparts,Storm The Ramparts,Storm The Ramparts,16,Joseph Pride,Sam Clipperton,$21,2.4
+R7,Canterbury,7,3:45 pm Tab Handicap,1100m,Handicap,Soft 5,True,2,2,Celui,Celui,Celui,2,Richard & Will Freedman,Siena Grima (a-2),$17,3.9
+R7,Canterbury,7,3:45 pm Tab Handicap,1100m,Handicap,Soft 5,True,3,3,Felix Majestic,Felix Majestic,Felix Majestic,11,Gary Nickson,Winona Costin,$29,3.5
+R7,Canterbury,7,3:45 pm Tab Handicap,1100m,Handicap,Soft 5,True,4,4,Chinqui,Chinqui,Chinqui,10,Anthony & Sam Freedman,Adam Hyeronimus,$16,2.8
+R7,Canterbury,7,3:45 pm Tab Handicap,1100m,Handicap,Soft 5,True,5,5,World Alliance,World Alliance,World Alliance,19,Matthew Smith,Kerrin McEvoy,$7.5,9.1
+R7,Canterbury,7,3:45 pm Tab Handicap,1100m,Handicap,Soft 5,True,8,8,Flying Trapeze,Flying Trapeze,Flying Trapeze,9,Gary Portelli,Andrew Adkins,$71,4.5
+R7,Canterbury,7,3:45 pm Tab Handicap,1100m,Handicap,Soft 5,True,9,9,Dollar Magic,Dollar Magic,Dollar Magic,3,Sara Ryan,Reece Jones,$7.5,3.5
+R7,Canterbury,7,3:45 pm Tab Handicap,1100m,Handicap,Soft 5,True,10,10,Mogo Magic,Mogo Magic,Mogo Magic,7,Scott Collings,Alysha Collett,$26,2.1
+R7,Canterbury,7,3:45 pm Tab Handicap,1100m,Handicap,Soft 5,True,11,11,Memoria,Memoria,Memoria,5,Kris Lees,Tim Clark,$6.5,2.2
+R7,Canterbury,7,3:45 pm Tab Handicap,1100m,Handicap,Soft 5,True,12,12,Istolea Merc,Istolea Merc,Istolea Merc,6,Bjorn Baker,Ashley Morgan,$6.5,4
+R7,Canterbury,7,3:45 pm Tab Handicap,1100m,Handicap,Soft 5,True,13,13,Winning Proposal,Winning Proposal,Winning Proposal,1,John Thompson,Anna Roper (a-2),$26,5.8
+R7,Canterbury,7,3:45 pm Tab Handicap,1100m,Handicap,Soft 5,True,14,14,Crepe Myrtle,Crepe Myrtle,Crepe Myrtle,15,Joseph Pride,Tyler Schiller,$6.75,2.8
+R7,Canterbury,7,3:45 pm Tab Handicap,1100m,Handicap,Soft 5,True,17,17,Pokerjack,Pokerjack,Pokerjack,14,Tash Burleigh,Amy McLucas,$34,4.6
+R7,Canterbury,7,3:45 pm Tab Handicap,1100m,Handicap,Soft 5,True,18,18,Ready To Shine,Ready To Shine,Ready To Shine,8,Matthew Smith,Rachel King,$6,4.9
+R8,Canterbury,8,4:20 pm Ranvet Handicap,1250m,Handicap,Soft 5,True,1,1,Mafia,Mafia,Mafia,2,Mitchell Beer & George Carpenter,Coriah Keatings (a-3),$4.5,2
+R8,Canterbury,8,4:20 pm Ranvet Handicap,1250m,Handicap,Soft 5,True,2,2,Balkans,Balkans,Balkans,5,Richard Litt,Siena Grima (a-2),$13,6.9
+R8,Canterbury,8,4:20 pm Ranvet Handicap,1250m,Handicap,Soft 5,True,3,3,Love Shuck,Love Shuck,Love Shuck,4,Todd Smart,Billy Owen,$12,5.7
+R8,Canterbury,8,4:20 pm Ranvet Handicap,1250m,Handicap,Soft 5,True,6,6,Laurel Hill,Laurel Hill,Laurel Hill,1,Rob Potter,Damon Budler,$16,7.1
+R8,Canterbury,8,4:20 pm Ranvet Handicap,1250m,Handicap,Soft 5,True,8,8,Tuscany,Tuscany,Tuscany,7,Tom Charlton,Tommy Berry,$2.4,2.2
+R8,Canterbury,8,4:20 pm Ranvet Handicap,1250m,Handicap,Soft 5,True,10,10,Perfect Picture,Perfect Picture,Perfect Picture,8,John Thompson,Kerrin McEvoy,$6.5,7.7
+R8,Canterbury,8,4:20 pm Ranvet Handicap,1250m,Handicap,Soft 5,True,11,11,Alphard,Alphard,Alphard,6,Chris Waller,Tyler Schiller,$5.5,2.2
