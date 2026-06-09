@@ -8,7 +8,6 @@
   var ASSESSMENTS_KEY = cfg.assessmentsKey || "ipad-yard-assessments";
   var RACES_KEY = cfg.racesKey || "ipad-yard-races-v1";
   var DOWNLOADED_MEETING_KEY = cfg.downloadedMeetingKey || "ipad-yard-downloaded-meeting-v1";
-  var LAPTOP_SAVE_URL_KEY = "ipad-yard-laptop-save-url";
   var LIBRARY_CACHE_KEY = "ipad-yard-library-cache-v1";
   var MANIFEST_KEY = cfg.manifestKey || "mounting-yard-meeting-manifest-v1";
   var GEAR_TILES = cfg.gearTiles || [];
@@ -39,7 +38,6 @@
     libraryMeetings: [],
     libraryLoading: false,
     meetingLoadingPath: null,
-    saveInProgress: false,
     downloadedMeetingActive: false,
     state: {
       tapCount: 0,
@@ -288,17 +286,56 @@
     },
 
     loadManifestLabel: function () {
-      try {
-        var raw = localStorage.getItem(MANIFEST_KEY);
-        if (!raw) return;
-        var manifest = JSON.parse(raw);
-        var parts = [];
-        if (manifest.date) parts.push(manifest.date);
-        if (manifest.trackName) parts.push(manifest.trackName);
-        this.state.meetingLabel = parts.join(" · ");
-      } catch (e) {
-        /* ignore */
+      var delivery = window.MeetingExportDelivery;
+      if (!delivery) return;
+      var manifest = delivery.loadMeetingManifest();
+      if (!manifest) return;
+      var track = manifest.trackName || manifest.trackSlug || "";
+      var date = manifest.date || "";
+      if (track && date) this.state.meetingLabel = track + " · " + date;
+      else this.state.meetingLabel = track || date || this.state.meetingLabel;
+    },
+
+    meetingFolderFromPath: function (path) {
+      if (!path) return "";
+      var normalized = String(path).replace(/\\/g, "/").replace(/\/+$/, "");
+      if (/\/[^/]+\.csv$/i.test(normalized)) {
+        var parts = normalized.split("/");
+        parts.pop();
+        return parts.join("/");
       }
+      return normalized;
+    },
+
+    syncMeetingManifest: function (options) {
+      options = options || {};
+      var delivery = window.MeetingExportDelivery;
+      if (!delivery || !this.races || !this.races.length) return null;
+      var rawPath = options.meetingPath || this.state.loadedMeetingPath || "";
+      var folderPath = this.meetingFolderFromPath(rawPath);
+      var meta = this.parseMeetingPathMeta(folderPath || rawPath);
+      return delivery.syncManifestFromRaces(this.races, {
+        meetingFolderPath: folderPath || rawPath,
+        meetingLabel: options.meetingLabel || this.state.meetingLabel || "",
+        trackName: options.trackName || meta.track || "",
+        date: options.date || meta.date || "",
+        fileName: options.fileName || rawPath,
+        directoryName: options.directoryName || "",
+      });
+    },
+
+    wetBodyLabel: function (value) {
+      for (var i = 0; i < WET_BODY_TYPES.length; i++) {
+        if (WET_BODY_TYPES[i].value === value) return WET_BODY_TYPES[i].label;
+      }
+      return "";
+    },
+
+    wetFeetLabel: function (value) {
+      for (var i = 0; i < WET_FEET.length; i++) {
+        if (WET_FEET[i].value === value) return WET_FEET[i].label;
+      }
+      return "";
     },
 
     setImportMsg: function (msg) {
@@ -356,166 +393,19 @@
 
     updateMeetingToolbar: function () {
       var downloadBtn = document.getElementById("iy-btn-download-meeting");
-      var saveBtn = document.getElementById("iy-btn-assess-tools");
-      var receiverBtn = document.getElementById("iy-btn-save-receiver");
-      var settingsBtn = document.getElementById("iy-btn-laptop-save-settings");
-      var settingsPanel = document.getElementById("iy-laptop-save-panel");
+      var importFolderBtn = document.getElementById("iy-btn-import-folder");
       var hasRaces = this.races && this.races.length > 0;
       var onLaptop = this.isLaptopDevServer();
+      var delivery = window.MeetingExportDelivery;
+      var supportsFolder = delivery && delivery.supportsDirectoryPicker();
       if (downloadBtn) {
         if (hasRaces && onLaptop) downloadBtn.classList.remove("iy-hidden");
         else downloadBtn.classList.add("iy-hidden");
       }
-      if (saveBtn) {
-        if (onLaptop) saveBtn.classList.remove("iy-hidden");
-        else saveBtn.classList.add("iy-hidden");
+      if (importFolderBtn) {
+        if (supportsFolder) importFolderBtn.classList.remove("iy-hidden");
+        else importFolderBtn.classList.add("iy-hidden");
       }
-      if (receiverBtn) {
-        if (!onLaptop && hasRaces) receiverBtn.classList.remove("iy-hidden");
-        else receiverBtn.classList.add("iy-hidden");
-      }
-      if (settingsBtn) {
-        if (!onLaptop) settingsBtn.classList.remove("iy-hidden");
-        else settingsBtn.classList.add("iy-hidden");
-      }
-      if (settingsPanel && onLaptop) {
-        settingsPanel.classList.add("iy-hidden");
-      }
-    },
-
-    loadLaptopSaveUrl: function () {
-      try {
-        return localStorage.getItem(LAPTOP_SAVE_URL_KEY) || "";
-      } catch (e) {
-        return "";
-      }
-    },
-
-    syncLaptopSaveUrlInput: function () {
-      var input = document.getElementById("iy-laptop-save-url");
-      if (input) input.value = this.loadLaptopSaveUrl();
-    },
-
-    setLaptopSaveUrlDraft: function (value) {
-      this.laptopSaveUrlDraft = value == null ? "" : String(value);
-    },
-
-    saveLaptopSaveUrlSetting: function () {
-      this.bump();
-      var input = document.getElementById("iy-laptop-save-url");
-      var value = (input && input.value ? input.value : this.laptopSaveUrlDraft || "").trim();
-      try {
-        if (value) localStorage.setItem(LAPTOP_SAVE_URL_KEY, value);
-        else localStorage.removeItem(LAPTOP_SAVE_URL_KEY);
-        this.setImportMsg(value ? "Laptop Save URL saved." : "Laptop Save URL cleared.");
-      } catch (e) {
-        this.setImportMsg("Could not save URL: " + e.message);
-      }
-    },
-
-    toggleLaptopSaveSettings: function () {
-      this.bump();
-      var panel = document.getElementById("iy-laptop-save-panel");
-      if (!panel) return;
-      if (panel.classList.contains("iy-hidden")) {
-        this.syncLaptopSaveUrlInput();
-        panel.classList.remove("iy-hidden");
-      } else {
-        panel.classList.add("iy-hidden");
-      }
-    },
-
-    getEffectiveMeetingPath: function () {
-      if (this.state.loadedMeetingPath) return this.state.loadedMeetingPath;
-      var pkg = this.readDownloadedMeetingPackage();
-      return pkg && pkg.meetingPath ? pkg.meetingPath : "";
-    },
-
-    getEffectiveMeetingName: function () {
-      if (this.state.meetingLabel) return this.state.meetingLabel;
-      var pkg = this.readDownloadedMeetingPackage();
-      return pkg && pkg.meetingName ? pkg.meetingName : "";
-    },
-
-    buildLaptopSavePayload: function () {
-      return {
-        meetingPath: this.getEffectiveMeetingPath(),
-        meetingName: this.getEffectiveMeetingName(),
-        assessments: this.buildSaveAssessmentsPayload(),
-      };
-    },
-
-    postAssessmentsToUrl: function (url, onSuccess, onError) {
-      var self = this;
-      if (self.saveInProgress) return;
-      var payload = self.buildLaptopSavePayload();
-      if (!payload.meetingPath) {
-        onError("Meeting path missing — load or import a meeting first.");
-        return;
-      }
-      self.saveInProgress = true;
-      self.setImportMsg("Saving to laptop…");
-      var xhr = new XMLHttpRequest();
-      xhr.open("POST", url);
-      xhr.setRequestHeader("Content-Type", "application/json");
-      xhr.onload = function () {
-        self.saveInProgress = false;
-        try {
-          if (xhr.status < 200 || xhr.status >= 300) {
-            var errBody = {};
-            try {
-              errBody = JSON.parse(xhr.responseText || "{}");
-            } catch (parseErr) {
-              errBody = {};
-            }
-            throw new Error(errBody.error || "Server returned " + xhr.status);
-          }
-          var data = JSON.parse(xhr.responseText || "{}");
-          if (!data.ok) {
-            throw new Error(data.error || "Save failed");
-          }
-          onSuccess(data);
-        } catch (e) {
-          onError(e.message);
-        }
-      };
-      xhr.onerror = function () {
-        self.saveInProgress = false;
-        onError("Could not reach laptop receiver. Check laptop server/tunnel.");
-      };
-      xhr.send(JSON.stringify(payload));
-    },
-
-    saveToLaptopReceiver: function () {
-      this.bump();
-      if (this.isLaptopDevServer()) {
-        this.saveToLaptop();
-        return;
-      }
-      if (!this.isOnline()) {
-        this.setImportMsg("Offline — assessments saved on iPad only.");
-        this.persist();
-        return;
-      }
-      var url = this.loadLaptopSaveUrl().trim();
-      if (!url) {
-        this.setImportMsg("Set Laptop Save URL first.");
-        this.toggleLaptopSaveSettings();
-        return;
-      }
-      var self = this;
-      this.postAssessmentsToUrl(
-        url,
-        function (data) {
-          var path = data.savedTo ? " → " + data.savedTo : "";
-          self.setImportMsg("Saved to laptop successfully" + path);
-          self.persist();
-        },
-        function (message) {
-          self.setImportMsg(message);
-          self.persist();
-        },
-      );
     },
 
     buildDownloadedMeetingPackage: function () {
@@ -598,6 +488,11 @@
       }
       this.gearPickerOpen = null;
       this.downloadedMeetingActive = true;
+      this.syncMeetingManifest({
+        meetingPath: this.state.loadedMeetingPath,
+        trackName: pkg.track || this.state.meetingLabel,
+        date: pkg.date || "",
+      });
       this.saveDownloadedMeetingPackage(pkg);
       if (!options.silent) this.showAssess();
       else this.render();
@@ -723,11 +618,7 @@
       self.updateNetworkStatus();
       window.addEventListener("online", function () {
         self.updateNetworkStatus();
-        if (self.isLaptopDevServer()) {
-          self.setImportMsg("Back online — Save to Laptop is available.");
-        } else {
-          self.setImportMsg("Online — assessments saved on this iPad.");
-        }
+        self.setImportMsg("Back online.");
         if (self.view === "library" && !self.libraryMeetings.length) {
           self.fetchLibrary();
         }
@@ -800,9 +691,6 @@
       var assess = document.getElementById("iy-assess-view");
       var raceTabs = document.getElementById("iy-race-tabs");
       var fixedNav = document.getElementById("iy-fixed-nav");
-      var assessTools = document.getElementById("iy-btn-assess-tools");
-      var receiverBtn = document.getElementById("iy-btn-save-receiver");
-      var settingsBtn = document.getElementById("iy-btn-laptop-save-settings");
       var isLibrary = this.view === "library";
       if (library) {
         if (isLibrary) library.classList.remove("iy-hidden");
@@ -819,18 +707,6 @@
       if (fixedNav) {
         if (isLibrary) fixedNav.classList.add("iy-hidden");
         else fixedNav.classList.remove("iy-hidden");
-      }
-      if (assessTools) {
-        if (isLibrary) assessTools.classList.add("iy-hidden");
-        else assessTools.classList.remove("iy-hidden");
-      }
-      if (receiverBtn) {
-        if (isLibrary || this.isLaptopDevServer()) receiverBtn.classList.add("iy-hidden");
-        else if (this.races && this.races.length) receiverBtn.classList.remove("iy-hidden");
-      }
-      if (settingsBtn) {
-        if (isLibrary || this.isLaptopDevServer()) settingsBtn.classList.add("iy-hidden");
-        else settingsBtn.classList.remove("iy-hidden");
       }
     },
 
@@ -935,6 +811,13 @@
         self.setLibraryMsg("Offline — connect to laptop to load a meeting.");
         return;
       }
+      var meetingMeta = null;
+      for (var m = 0; m < self.libraryMeetings.length; m++) {
+        if (self.libraryMeetings[m].relativePath === relativePath) {
+          meetingMeta = self.libraryMeetings[m];
+          break;
+        }
+      }
       self.meetingLoadingPath = relativePath;
       self.setLibraryMsg("Loading " + (label || "meeting") + "…");
       self.renderLibrary();
@@ -948,6 +831,10 @@
           }
           self.applyMeetingCsv(xhr.responseText, label || "Meeting", {
             meetingPath: relativePath,
+            meetingLabel: label || (meetingMeta && meetingMeta.label) || "",
+            trackName: meetingMeta && meetingMeta.trackLabel ? meetingMeta.trackLabel : "",
+            date: meetingMeta && meetingMeta.date ? meetingMeta.date : "",
+            fileName: meetingMeta && meetingMeta.fileName ? meetingMeta.fileName : relativePath,
             switchToAssess: true,
           });
           self.setLibraryMsg("");
@@ -1482,16 +1369,6 @@
       }
     },
 
-    buildExportFilename: function () {
-      var label = (this.state.meetingLabel || "").trim();
-      if (!label) return "ipad-yard-assessments.csv";
-      var safe = label
-        .replace(/\.csv$/i, "")
-        .replace(/[^\w\-]+/g, "-")
-        .replace(/^-+|-+$/g, "");
-      return (safe || "ipad-yard-assessments") + "-assessments.csv";
-    },
-
     buildExportCsvText: function () {
       var headers = [
         "assessment_key",
@@ -1506,7 +1383,8 @@
         "positive_json",
         "negative_json",
         "gear_json",
-        "wet_json",
+        "wet_body_type",
+        "wet_feet",
         "notes",
         "total_positive",
         "total_negative",
@@ -1537,7 +1415,8 @@
               a ? JSON.stringify(a.positive || {}) : "",
               a ? JSON.stringify(a.negative || {}) : "",
               a ? JSON.stringify(a.gear || {}) : "",
-              a && a.wet ? JSON.stringify(a.wet) : "",
+              a && a.wet && a.wet.bodyType ? self.wetBodyLabel(a.wet.bodyType) : "",
+              a && a.wet && a.wet.feet ? self.wetFeetLabel(a.wet.feet) : "",
               a ? a.notes || "" : "",
               totals.pos,
               totals.neg,
@@ -1611,69 +1490,109 @@
       }
     },
 
-    buildSaveAssessmentsPayload: function () {
-      var rows = [];
-      for (var r = 0; r < this.races.length; r++) {
-        var race = this.races[r];
-        for (var u = 0; u < race.runners.length; u++) {
-          var runner = race.runners[u];
-          var key = this.makeKey(race.id, runner.no);
-          var a = this.state.assessments[key];
-          var totals = this.totals(a);
-          rows.push({
-            race: race.id,
-            runnerNo: runner.no,
-            horse: runner.horse,
-            score: totals.net,
-            factors: {
-              positive: a && a.positive ? a.positive : {},
-              negative: a && a.negative ? a.negative : {},
-            },
-            physical: {
-              gear: a && a.gear ? a.gear : {},
-              wet: a && a.wet ? a.wet : {},
-            },
-            notes: a && a.notes ? a.notes : "",
-          });
-        }
-      }
-      return rows;
-    },
-
-    saveToLaptop: function () {
+    exportAllAssessments: function () {
       this.bump();
-      if (!this.isLaptopDevServer()) {
-        this.saveToLaptopReceiver();
-        return;
-      }
-      if (!this.getEffectiveMeetingPath()) {
-        this.setImportMsg("Load a meeting from Library first.");
-        return;
-      }
-      if (!this.isOnline()) {
-        this.setImportMsg("Offline — assessments saved on iPad only. Reconnect to save to laptop.");
-        this.persist();
-        return;
-      }
       var self = this;
-      this.postAssessmentsToUrl(
-        "/api/save-assessments",
-        function (data) {
-          var path = data.savedTo ? " → " + data.savedTo : "";
-          self.setImportMsg("Saved successfully" + path);
-          self.persist();
-        },
-        function (message) {
-          self.setImportMsg("Save failed: " + message);
-        },
-      );
+      var delivery = window.MeetingExportDelivery;
+      if (!delivery) {
+        self.setImportMsg("Export module not loaded.");
+        return;
+      }
+      if (!self.races || !self.races.length) {
+        self.setImportMsg("Load a meeting first.");
+        return;
+      }
+      var manifest = self.syncMeetingManifest();
+      if (!manifest) {
+        manifest = delivery.loadMeetingManifest();
+      }
+      if (!manifest) {
+        self.setImportMsg("Meeting manifest missing — reload the meeting and try again.");
+        return;
+      }
+      var csvText = self.buildExportCsvText();
+      self.setImportMsg("Exporting…");
+      delivery
+        .prepareFolderForExport(manifest)
+        .then(function (prepared) {
+          return delivery.deliverMeetingExport("mounting-yard-assessments", csvText, {
+            manifest: prepared.manifest,
+            directoryHandle: prepared.handle,
+          });
+        })
+        .then(function (result) {
+          if (result.method === "directory" || result.method === "api") {
+            self.setImportMsg("Exported to meeting folder:\n" + result.filename);
+            return;
+          }
+          if (delivery.isIOSExportDevice()) {
+            self.showExportPanel(csvText, result.filename);
+            self.setImportMsg("Copy CSV below — folder export is not available on this device.");
+            return;
+          }
+          self.setImportMsg(
+            "Could not write to meeting folder. Use Import meeting folder, grant access, then export again.",
+          );
+        })
+        .catch(function (e) {
+          if (e && e.name === "AbortError") {
+            self.setImportMsg("Export cancelled.");
+            return;
+          }
+          self.setImportMsg("Export failed: " + (e && e.message ? e.message : String(e)));
+        });
     },
 
-    exportCsv: function () {
+    importMeetingFolder: function () {
       this.bump();
-      var csvText = this.buildExportCsvText();
-      var filename = this.buildExportFilename();
-      this.showExportPanel(csvText, filename);
+      var self = this;
+      var delivery = window.MeetingExportDelivery;
+      if (!delivery || !delivery.supportsDirectoryPicker()) {
+        self.setImportMsg("Folder picker not supported — use Import CSV.");
+        return;
+      }
+      delivery
+        .pickMeetingDirectory()
+        .then(function (dir) {
+          return delivery.readMeetingCsvFromDirectory(dir).then(function (result) {
+            return { dir: dir, file: result.file, name: result.name };
+          });
+        })
+        .then(function (payload) {
+          return new Promise(function (resolve, reject) {
+            var reader = new FileReader();
+            reader.onload = function () {
+              resolve({
+                dir: payload.dir,
+                name: payload.name,
+                text: String(reader.result || ""),
+              });
+            };
+            reader.onerror = function () {
+              reject(new Error("Could not read meeting CSV."));
+            };
+            reader.readAsText(payload.file);
+          });
+        })
+        .then(function (payload) {
+          var folderMeta = "meetings/" + payload.dir.name;
+          self.applyMeetingCsv(payload.text, payload.name, {
+            meetingPath: folderMeta,
+            directoryHandle: payload.dir,
+            directoryName: payload.dir.name,
+            switchToAssess: true,
+          });
+          if (payload.dir && delivery.saveMeetingDirectoryHandle) {
+            var manifest = delivery.loadMeetingManifest();
+            if (manifest && manifest.meetingKey) {
+              return delivery.saveMeetingDirectoryHandle(manifest.meetingKey, payload.dir);
+            }
+          }
+        })
+        .catch(function (e) {
+          if (e && e.name === "AbortError") return;
+          self.setImportMsg("Import failed: " + (e && e.message ? e.message : String(e)));
+        });
     },
 
     parseCsvLine: function (line) {
@@ -1795,6 +1714,26 @@
       this.state.selectedRunnerNo = races[0].runners[0].no;
       this.state.meetingLabel = fileName || "Imported meeting";
       if (options.meetingPath) this.state.loadedMeetingPath = options.meetingPath;
+      var syncedManifest = this.syncMeetingManifest({
+        meetingPath: options.meetingPath || "",
+        meetingLabel: options.meetingLabel || this.state.meetingLabel || fileName || "",
+        trackName: options.trackName || "",
+        date: options.date || "",
+        fileName: options.fileName || fileName || "",
+        directoryName: options.directoryName || "",
+      });
+      if (syncedManifest && syncedManifest.meetingLabel) {
+        this.state.meetingLabel = syncedManifest.meetingLabel;
+      }
+      if (options.directoryHandle && window.MeetingExportDelivery) {
+        var manifest = window.MeetingExportDelivery.loadMeetingManifest();
+        if (manifest && manifest.meetingKey) {
+          window.MeetingExportDelivery.saveMeetingDirectoryHandle(
+            manifest.meetingKey,
+            options.directoryHandle,
+          );
+        }
+      }
       this.persistRaces();
       this.persist();
       if (options.switchToAssess) this.showAssess();
@@ -1847,7 +1786,6 @@
       }
       this.updateDownloadedBadge();
       this.updateMeetingToolbar();
-      this.syncLaptopSaveUrlInput();
     },
   };
 
