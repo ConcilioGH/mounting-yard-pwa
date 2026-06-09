@@ -410,6 +410,27 @@ export function buildIpadYardDomHtml(): string {
     }
     .iy-export-actions { display: flex; flex-wrap: wrap; gap: 6px; }
     .iy-export-actions .iy-toolbar-btn { flex: 1; min-width: 100px; }
+    .iy-laptop-save-panel {
+      margin: 6px 0 8px;
+      padding: 8px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      background: #f8fafc;
+    }
+    .iy-laptop-save-panel.iy-hidden { display: none !important; }
+    .iy-laptop-save-label { display: block; font-size: 11px; font-weight: 700; color: #64748b; margin: 0 0 4px; }
+    .iy-laptop-save-hint { font-size: 11px; color: #64748b; margin: 0 0 6px; line-height: 1.35; }
+    .iy-laptop-save-input {
+      width: 100%;
+      margin: 0 0 6px;
+      padding: 8px;
+      font-size: 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 8px;
+      box-sizing: border-box;
+    }
+    .iy-laptop-save-actions { display: flex; flex-wrap: wrap; gap: 4px; }
+    .iy-laptop-save-actions .iy-toolbar-btn { flex: 1; min-width: 88px; margin: 0; }
   </style>
 </head>
 <body>
@@ -422,10 +443,21 @@ export function buildIpadYardDomHtml(): string {
       <button type="button" id="iy-btn-use-downloaded" class="iy-toolbar-btn" onclick="window.ipadYard.useDownloadedMeeting()">Use Downloaded Meeting</button>
       <button type="button" id="iy-btn-clear-downloaded" class="iy-toolbar-btn" onclick="window.ipadYard.clearDownloadedMeeting()">Clear Downloaded Meeting</button>
       <button type="button" id="iy-btn-assess-tools" class="iy-toolbar-btn" onclick="window.ipadYard.saveToLaptop()">Save to Laptop</button>
+      <button type="button" id="iy-btn-save-receiver" class="iy-toolbar-btn iy-hidden" onclick="window.ipadYard.saveToLaptopReceiver()">Save to Laptop Receiver</button>
       <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.exportCsv()">Export</button>
       <button type="button" class="iy-toolbar-btn" onclick="document.getElementById('iy-csv-input').click()">Import</button>
       <input id="iy-csv-input" type="file" accept=".csv,text/csv" style="display:none" onchange="window.ipadYard.importCsv(this)">
     </div>
+    <div id="iy-laptop-save-panel" class="iy-laptop-save-panel iy-hidden">
+      <div class="iy-laptop-save-label">Laptop Save URL</div>
+      <p class="iy-laptop-save-hint">To save from Vercel to laptop, start the laptop dev server with a public tunnel (e.g. Cloudflare) and enter its <strong>/api/save-assessments</strong> URL here.</p>
+      <input id="iy-laptop-save-url" class="iy-laptop-save-input" type="url" placeholder="https://xxxx.trycloudflare.com/api/save-assessments" oninput="window.ipadYard.setLaptopSaveUrlDraft(this.value)">
+      <div class="iy-laptop-save-actions">
+        <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.saveLaptopSaveUrlSetting()">Save URL</button>
+        <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.toggleLaptopSaveSettings()">Hide</button>
+      </div>
+    </div>
+    <button type="button" id="iy-btn-laptop-save-settings" class="iy-toolbar-btn iy-hidden" style="margin-bottom:6px;" onclick="window.ipadYard.toggleLaptopSaveSettings()">Laptop Save URL</button>
     <p id="iy-import-msg" class="iy-msg"></p>
     <div id="iy-race-tabs" class="iy-race-bar"></div>
   </div>
