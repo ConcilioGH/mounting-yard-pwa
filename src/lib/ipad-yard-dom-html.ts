@@ -496,6 +496,7 @@ export function buildIpadYardDomHtml(): string {
       <button type="button" id="iy-btn-download-meeting" class="iy-toolbar-btn" onclick="window.ipadYard.downloadMeetingToIpad()">Download Meeting to iPad</button>
       <button type="button" id="iy-btn-use-downloaded" class="iy-toolbar-btn" onclick="window.ipadYard.useDownloadedMeeting()">Use Downloaded Meeting</button>
       <button type="button" id="iy-btn-clear-downloaded" class="iy-toolbar-btn" onclick="window.ipadYard.clearDownloadedMeeting()">Clear Downloaded Meeting</button>
+      <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.clearCurrentMeeting()">Clear Current Meeting</button>
       <button type="button" id="iy-btn-import-folder" class="iy-toolbar-btn iy-hidden" onclick="window.ipadYard.importMeetingFolder()">Import meeting folder</button>
       <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.exportAllAssessments()">Export all assessments</button>
       <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.exportAssessmentPackage()">Export Assessment Package</button>

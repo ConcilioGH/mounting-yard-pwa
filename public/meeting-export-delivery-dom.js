@@ -553,9 +553,13 @@
       })
       .then(function (result) {
         if (result) return result;
-        if (needsInPageExportFallback() || options.skipBlobDownload) {
-          console.log("EXPORT PATH:", "(in-page panel — iOS / no blob download)");
+        if (needsInPageExportFallback()) {
+          console.log("EXPORT PATH:", "(in-page panel — iOS)");
           return finish("panel", filename);
+        }
+        if (options.folderExportOnly) {
+          console.log("EXPORT PATH:", "(folder export failed)");
+          return finish("failed", filename);
         }
         console.log("EXPORT PATH:", "(fallback — browser download)");
         downloadTextFile(filename, content, mime);
@@ -591,11 +595,7 @@
       manifest: manifest,
       directoryHandle: options.directoryHandle,
       mime: "text/csv;charset=utf-8",
-    }).then(function (result) {
-      if (result.method === "fallback") {
-        return { method: "fallback", filename: result.filename, displayPath: result.displayPath };
-      }
-      return result;
+      folderExportOnly: options.folderExportOnly !== false,
     });
   }
 

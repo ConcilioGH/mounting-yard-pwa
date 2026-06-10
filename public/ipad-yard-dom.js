@@ -605,6 +605,36 @@
       this.setImportMsg("Downloaded meeting cleared. Current session data kept on iPad.");
     },
 
+    clearCurrentMeeting: function () {
+      this.bump();
+      if (!window.confirm("Clear meeting?\nThis cannot be undone.")) {
+        return;
+      }
+      try {
+        localStorage.removeItem(DOWNLOADED_MEETING_KEY);
+        localStorage.removeItem(RACES_KEY);
+      } catch (e) {
+        /* ignore */
+      }
+      this.races = [];
+      this.gearPickerOpen = null;
+      this.notesRunnerKey = null;
+      this.meetingLoadingPath = null;
+      this.downloadedMeetingActive = false;
+      this.state.assessments = {};
+      this.state.meetingLabel = "";
+      this.state.loadedMeetingPath = "";
+      this.state.selectedRaceId = null;
+      this.state.selectedRunnerNo = null;
+      this.persist();
+      this.updateDownloadedBadge();
+      this.updateMeetingToolbar();
+      this.setText("iy-meeting-label", "");
+      this.setImportMsg("");
+      this.setLibraryMsg("Choose a meeting to start.");
+      this.showLibrary();
+    },
+
     updateNetworkStatus: function () {
       var online = this.isOnline();
       var el = document.getElementById("iy-network-status");
@@ -1565,33 +1595,56 @@
       }
       var csvText = self.buildExportCsvText();
       var filename = delivery.buildMeetingExportFilename("mounting-yard-assessments", manifest);
+
       if (delivery.needsInPageExportFallback()) {
         self.showExportPanel(csvText, filename);
         self.setImportMsg("Copy CSV below — folder export is not available on this device.");
         return;
       }
+
+      function exportSucceeded(result) {
+        return result && (result.method === "directory" || result.method === "api");
+      }
+
+      function showFolderExportSuccess() {
+        self.setImportMsg("Exported successfully to meeting folder");
+      }
+
+      function showCsvFallbackPanel() {
+        self.showExportPanel(csvText, filename);
+        self.setImportMsg("Copy CSV below — could not write directly to meeting folder.");
+      }
+
+      function runFolderExport(activeManifest, handle) {
+        return delivery.deliverMeetingExport("mounting-yard-assessments", csvText, {
+          manifest: activeManifest,
+          directoryHandle: handle || null,
+          folderExportOnly: true,
+        });
+      }
+
       self.setImportMsg("Exporting…");
-      delivery
-        .prepareFolderForExport(manifest)
-        .then(function (prepared) {
-          return delivery.deliverMeetingExport("mounting-yard-assessments", csvText, {
-            manifest: prepared.manifest,
-            directoryHandle: prepared.handle,
+      runFolderExport(manifest, null)
+        .then(function (result) {
+          if (exportSucceeded(result)) {
+            showFolderExportSuccess();
+            return null;
+          }
+          if (!delivery.supportsDirectoryPicker()) {
+            showCsvFallbackPanel();
+            return null;
+          }
+          return delivery.prepareFolderForExport(manifest).then(function (prepared) {
+            return runFolderExport(prepared.manifest, prepared.handle);
           });
         })
-        .then(function (result) {
-          if (result.method === "directory" || result.method === "api") {
-            self.setImportMsg("Exported to meeting folder:\n" + result.filename);
+        .then(function (retryResult) {
+          if (!retryResult) return;
+          if (exportSucceeded(retryResult)) {
+            showFolderExportSuccess();
             return;
           }
-          if (result.method === "panel") {
-            self.showExportPanel(csvText, result.filename);
-            self.setImportMsg("Copy CSV below — folder export is not available on this device.");
-            return;
-          }
-          self.setImportMsg(
-            "Could not write to meeting folder. Use Import meeting folder, grant access, then export again.",
-          );
+          showCsvFallbackPanel();
         })
         .catch(function (e) {
           if (e && e.name === "AbortError") {
