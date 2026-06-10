@@ -39,6 +39,7 @@
     libraryLoading: false,
     meetingLoadingPath: null,
     downloadedMeetingActive: false,
+    countdownTimerId: null,
     state: {
       tapCount: 0,
       selectedRaceId: null,
@@ -296,6 +297,73 @@
       else this.state.meetingLabel = track || date || this.state.meetingLabel;
     },
 
+    getMeetingDate: function () {
+      var delivery = window.MeetingExportDelivery;
+      if (delivery) {
+        var manifest = delivery.loadMeetingManifest();
+        if (manifest && manifest.date) return manifest.date;
+      }
+      var meta = this.parseMeetingPathMeta(this.state.loadedMeetingPath);
+      if (meta.date) return meta.date;
+      return undefined;
+    },
+
+    updateCountdownDisplay: function () {
+      var yrc = window.YardRaceCountdown;
+      var wrap = document.getElementById("iy-next-race-countdown");
+      if (!wrap || !yrc) return;
+
+      var countdown = yrc.getNextRaceCountdown(this.races, new Date(), this.getMeetingDate());
+      if (!countdown) {
+        wrap.className = "iy-next-race-countdown iy-hidden";
+        return;
+      }
+
+      wrap.className = "iy-next-race-countdown";
+      var raceEl = document.getElementById("iy-countdown-race");
+      var timeEl = document.getElementById("iy-countdown-time");
+
+      if (countdown.status === "complete") {
+        if (raceEl) raceEl.textContent = "";
+        if (timeEl) {
+          timeEl.textContent = "Meeting complete";
+          timeEl.className = "iy-countdown-complete";
+        }
+        return;
+      }
+
+      if (raceEl) {
+        raceEl.textContent = countdown.raceLabel + " \u00b7 " + countdown.displayStartTime;
+      }
+
+      var showCountdown = countdown.status === "counting_down";
+      var mainSeconds = showCountdown
+        ? countdown.secondsRemaining
+        : countdown.secondsUntilCountdownStarts;
+      var formatted = yrc.formatCountdownSeconds(mainSeconds);
+
+      if (timeEl) {
+        timeEl.textContent = showCountdown ? formatted : "Starts in " + formatted;
+        var tone = "iy-countdown-normal";
+        if (showCountdown) {
+          if (countdown.secondsRemaining < 60) tone = "iy-countdown-red";
+          else if (countdown.secondsRemaining < 300) tone = "iy-countdown-amber";
+        }
+        timeEl.className = "iy-countdown-time " + tone;
+      }
+    },
+
+    startCountdownTimer: function () {
+      var self = this;
+      if (this.countdownTimerId != null) {
+        window.clearInterval(this.countdownTimerId);
+      }
+      this.updateCountdownDisplay();
+      this.countdownTimerId = window.setInterval(function () {
+        self.updateCountdownDisplay();
+      }, 1000);
+    },
+
     meetingFolderFromPath: function (path) {
       if (!path) return "";
       var normalized = String(path).replace(/\\/g, "/").replace(/\/+$/, "");
@@ -406,6 +474,7 @@
         if (supportsFolder) importFolderBtn.classList.remove("iy-hidden");
         else importFolderBtn.classList.add("iy-hidden");
       }
+      this.updateCountdownDisplay();
     },
 
     buildDownloadedMeetingPackage: function () {
@@ -2144,6 +2213,7 @@
       }
       this.updateDownloadedBadge();
       this.updateMeetingToolbar();
+      this.startCountdownTimer();
     },
   };
 

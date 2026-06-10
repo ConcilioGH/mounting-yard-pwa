@@ -124,6 +124,61 @@ export function buildIpadYardDomHtml(): string {
     }
     .iy-page { padding: 8px; }
     .iy-header { margin-bottom: 6px; }
+    .iy-header-top {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: start;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .iy-header-title { -webkit-box-flex: 1; flex: 1; min-width: 0; }
+    .iy-next-race-countdown {
+      flex-shrink: 0;
+      min-width: 9rem;
+      padding: 8px 12px;
+      border-radius: 12px;
+      border: 1px solid #334155;
+      background: #0f172a;
+      color: #e2e8f0;
+      text-align: center;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+    .iy-next-race-countdown.iy-hidden { display: none !important; }
+    .iy-countdown-label {
+      margin: 0;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #94a3b8;
+    }
+    .iy-countdown-race {
+      margin: 4px 0 0;
+      font-size: 13px;
+      font-weight: 600;
+      color: #e2e8f0;
+      line-height: 1.2;
+    }
+    .iy-countdown-time {
+      margin: 2px 0 0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 28px;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+    .iy-countdown-normal { color: #f8fafc; }
+    .iy-countdown-amber { color: #fbbf24; }
+    .iy-countdown-red { color: #f87171; }
+    .iy-countdown-complete {
+      margin: 4px 0 0;
+      font-size: 18px;
+      font-weight: 700;
+      color: #f8fafc;
+      line-height: 1.2;
+    }
     h1 { font-size: 18px; font-weight: 700; margin: 0 0 2px; }
     .iy-meta { margin: 0; font-size: 11px; color: #64748b; line-height: 1.3; }
     .iy-network-status {
@@ -489,8 +544,17 @@ export function buildIpadYardDomHtml(): string {
   </nav>
   <div class="iy-page">
   <div class="iy-header">
-    <h1>Mounting Yard</h1>
-    <p class="iy-meta">iPad · Build ${escapeHtml(APP_BUILD_VERSION)} · <span id="iy-meeting-label"></span> · <span id="iy-network-status" class="iy-network-status iy-network-online">Online</span> · <span id="iy-downloaded-badge" class="iy-downloaded-badge iy-hidden">Downloaded meeting active</span></p>
+    <div class="iy-header-top">
+      <div class="iy-header-title">
+        <h1>Mounting Yard</h1>
+        <p class="iy-meta">iPad · Build ${escapeHtml(APP_BUILD_VERSION)} · <span id="iy-meeting-label"></span> · <span id="iy-network-status" class="iy-network-status iy-network-online">Online</span> · <span id="iy-downloaded-badge" class="iy-downloaded-badge iy-hidden">Downloaded meeting active</span></p>
+      </div>
+      <div id="iy-next-race-countdown" class="iy-next-race-countdown iy-hidden" aria-live="polite">
+        <p class="iy-countdown-label">Next race</p>
+        <p id="iy-countdown-race" class="iy-countdown-race"></p>
+        <p id="iy-countdown-time" class="iy-countdown-time iy-countdown-normal"></p>
+      </div>
+    </div>
     <div class="iy-toolbar">
       <button type="button" id="iy-btn-meetings" class="iy-toolbar-btn iy-toolbar-btn-primary" onclick="window.ipadYard.showLibrary()">Meetings</button>
       <button type="button" id="iy-btn-download-meeting" class="iy-toolbar-btn" onclick="window.ipadYard.downloadMeetingToIpad()">Download Meeting to iPad</button>
@@ -618,6 +682,7 @@ export function buildIpadYardDomHtml(): string {
     window.IPAD_YARD_FACTOR_GROUPS = ${factorGroupsJson};
     window.IPAD_YARD_CONFIG = ${configJson};
   </script>
+  <script src="/yard-race-countdown-dom.js?v=${escapeHtml(APP_BUILD_VERSION)}"></script>
   <script src="/meeting-export-delivery-dom.js?v=${escapeHtml(APP_BUILD_VERSION)}"></script>
   <script src="/ipad-yard-dom.js?v=${escapeHtml(APP_BUILD_VERSION)}"></script>
 </body>
