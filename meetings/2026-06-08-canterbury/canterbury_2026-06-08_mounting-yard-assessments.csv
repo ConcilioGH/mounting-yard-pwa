@@ -1,12 +1,12 @@
 assessment_key,race_id,race_title,runner_no,horse,barrier,trainer,jockey,odds,positive_json,negative_json,gear_json,wet_body_type,wet_feet,notes,total_positive,total_negative,net,updated_at
-R1-2,R1,12:15 pm E Security Group Plate,2,Circus Queen,6,Peter Snowden,Tom Sherry,$12,,,,,,,0,0,0,
+R1-2,R1,12:15 pm E Security Group Plate,2,Circus Queen,6,Peter Snowden,Tom Sherry,$12,"{""Clean+"":1}",{},{},,,,1,0,1,2026-06-09T11:55:32.481Z
 R1-3,R1,12:15 pm E Security Group Plate,3,Excelluna,2,Richard & Will Freedman,Chad Schofield,$4.2,,,,,,,0,0,0,
 R1-4,R1,12:15 pm E Security Group Plate,4,Extremely Chic,8,Chris Waller,Sam Clipperton,$4.6,,,,,,,0,0,0,
 R1-5,R1,12:15 pm E Security Group Plate,5,Idmiston,5,Anthony & Sam Freedman,Rachel King,$10,,,,,,,0,0,0,
 R1-6,R1,12:15 pm E Security Group Plate,6,Miss Scandal,3,Chris Waller,Tyler Schiller,$5,,,,,,,0,0,0,
 R1-7,R1,12:15 pm E Security Group Plate,7,Ole Olive,4,Kris Lees,William Stanley (a-3),$41,,,,,,,0,0,0,
 R1-8,R1,12:15 pm E Security Group Plate,8,Satin Serenade,1,Chris Waller,Tim Clark,$2.75,,,,,,,0,0,0,
-R2-1,R2,12:50 pm Drinkwise Plate,1,Divine Offering,11,Peter Snowden,Tom Sherry,$9.5,,,,,,,0,0,0,
+R2-1,R2,12:50 pm Drinkwise Plate,1,Divine Offering,11,Peter Snowden,Tom Sherry,$9.5,{},{},{},,,,0,0,0,
 R2-2,R2,12:50 pm Drinkwise Plate,2,Dominator,10,Michael Freedman,Tommy Berry,$7.5,,,,,,,0,0,0,
 R2-6,R2,12:50 pm Drinkwise Plate,6,Klocke,5,Chris Waller,Adam Hyeronimus,$2.8,,,,,,,0,0,0,
 R2-10,R2,12:50 pm Drinkwise Plate,10,Snitzel A'la Rouge,7,Chris Waller,Sam Clipperton,$13,,,,,,,0,0,0,
@@ -27,7 +27,7 @@ R3-10,R3,1:25 pm Schweppes Handicap,10,Extrio,2,Luke Pepper Jean,Van Overmeire,$
 R3-12,R3,1:25 pm Schweppes Handicap,12,Demi God,8,Michael Travers,Braith Nock (a-1.5),$81,,,,,,,0,0,0,
 R4-1,R4,2:00 pm The Agency Real Estate Handicap,1,Deepwater Artist,2,Matthew Kelley,Coriah Keatings (a-3),$4.8,,,,,,,0,0,0,
 R4-2,R4,2:00 pm The Agency Real Estate Handicap,2,Helen's Way,6,Bjorn Baker,Nash Rawiller,$4.2,,,,,,,0,0,0,
-R4-3,R4,2:00 pm The Agency Real Estate Handicap,3,Ballpark,4,Chris Waller,Tim Clark,$8,"{""Clean+"":1}",{},{},,,,1,0,1,2026-06-09T11:35:56.715Z
+R4-3,R4,2:00 pm The Agency Real Estate Handicap,3,Ballpark,4,Chris Waller,Tim Clark,$8,,,,,,,0,0,0,
 R4-4,R4,2:00 pm The Agency Real Estate Handicap,4,Rach,8,Chris Waller,Tyler Schiller,$8,,,,,,,0,0,0,
 R4-5,R4,2:00 pm The Agency Real Estate Handicap,5,Pawa,1,Edward O'Rourke,Rachel King,$20,,,,,,,0,0,0,
 R4-6,R4,2:00 pm The Agency Real Estate Handicap,6,Polo,5,Gary Portelli,Ashley Morgan,$15,,,,,,,0,0,0,
@@ -69,4 +69,3 @@ R8-6,R8,4:20 pm Ranvet Handicap,6,Laurel Hill,1,Rob Potter,Damon Budler,$16,,,,,
 R8-8,R8,4:20 pm Ranvet Handicap,8,Tuscany,7,Tom Charlton,Tommy Berry,$2.4,,,,,,,0,0,0,
 R8-10,R8,4:20 pm Ranvet Handicap,10,Perfect Picture,8,John Thompson,Kerrin McEvoy,$6.5,,,,,,,0,0,0,
 R8-11,R8,4:20 pm Ranvet Handicap,11,Alphard,6,Chris Waller,Tyler Schiller,$5.5,,,,,,,0,0,0,
-R1-1,,,,,,,,,{},"{""BH-"":0}",{},,,,0,0,0,2026-06-07T01:43:50.169Z

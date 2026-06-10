@@ -1470,8 +1470,61 @@
       }
     },
 
+    copyExportCsv: function () {
+      this.bump();
+      var self = this;
+      var textarea = document.getElementById("iy-export-text");
+      if (!textarea) return;
+      var text = textarea.value || this.exportCsvText || "";
+      if (!text) {
+        self.setImportMsg("Nothing to copy.");
+        return;
+      }
+      var wasReadonly = textarea.hasAttribute("readonly");
+      if (wasReadonly) textarea.removeAttribute("readonly");
+      textarea.focus();
+      textarea.select();
+      try {
+        textarea.setSelectionRange(0, text.length);
+      } catch (e) {
+        /* ignore */
+      }
+      function restoreReadonly() {
+        if (wasReadonly) textarea.setAttribute("readonly", "readonly");
+      }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard
+          .writeText(text)
+          .then(function () {
+            restoreReadonly();
+            self.setImportMsg("CSV copied to clipboard.");
+          })
+          .catch(function () {
+            self.copyExportCsvExecCommand(textarea, restoreReadonly);
+          });
+        return;
+      }
+      self.copyExportCsvExecCommand(textarea, restoreReadonly);
+    },
+
+    copyExportCsvExecCommand: function (textarea, restoreReadonly) {
+      var self = this;
+      try {
+        var ok = document.execCommand("copy");
+        restoreReadonly();
+        self.setImportMsg(ok ? "CSV copied." : "Select All, then tap Copy in the menu.");
+      } catch (e) {
+        restoreReadonly();
+        self.setImportMsg("Select All, then tap Copy in the menu.");
+      }
+    },
+
     downloadExportCsv: function () {
       if (!this.supportsFileDownload() || !this.exportCsvText) return;
+      if (window.MeetingExportDelivery && window.MeetingExportDelivery.needsInPageExportFallback()) {
+        this.setImportMsg("Use Select All or Copy on this device.");
+        return;
+      }
       this.bump();
       try {
         var blob = new Blob([this.exportCsvText], { type: "text/csv;charset=utf-8" });
@@ -1511,6 +1564,12 @@
         return;
       }
       var csvText = self.buildExportCsvText();
+      var filename = delivery.buildMeetingExportFilename("mounting-yard-assessments", manifest);
+      if (delivery.needsInPageExportFallback()) {
+        self.showExportPanel(csvText, filename);
+        self.setImportMsg("Copy CSV below — folder export is not available on this device.");
+        return;
+      }
       self.setImportMsg("Exporting…");
       delivery
         .prepareFolderForExport(manifest)
@@ -1525,7 +1584,7 @@
             self.setImportMsg("Exported to meeting folder:\n" + result.filename);
             return;
           }
-          if (delivery.isIOSExportDevice()) {
+          if (result.method === "panel") {
             self.showExportPanel(csvText, result.filename);
             self.setImportMsg("Copy CSV below — folder export is not available on this device.");
             return;

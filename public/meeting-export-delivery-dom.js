@@ -204,7 +204,10 @@
 
   function isIOSDevice() {
     if (typeof navigator === "undefined") return false;
-    return /iPad|iPhone|iPod/.test(navigator.userAgent);
+    var ua = navigator.userAgent || "";
+    if (/iPad|iPhone|iPod/.test(ua)) return true;
+    if (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1) return true;
+    return false;
   }
 
   function supportsDirectoryPicker() {
@@ -214,6 +217,10 @@
 
   function isIOSExportDevice() {
     return isIOSDevice();
+  }
+
+  function needsInPageExportFallback() {
+    return isIOSExportDevice();
   }
 
   function pickMeetingDirectory() {
@@ -246,6 +253,7 @@
   }
 
   function downloadTextFile(filename, content, mime) {
+    if (needsInPageExportFallback()) return;
     var blob = new Blob([content], { type: mime || "text/csv;charset=utf-8" });
     var url = URL.createObjectURL(blob);
     var a = document.createElement("a");
@@ -545,7 +553,11 @@
       })
       .then(function (result) {
         if (result) return result;
-        console.log("EXPORT PATH:", "(fallback — download/copy)");
+        if (needsInPageExportFallback() || options.skipBlobDownload) {
+          console.log("EXPORT PATH:", "(in-page panel — iOS / no blob download)");
+          return finish("panel", filename);
+        }
+        console.log("EXPORT PATH:", "(fallback — browser download)");
         downloadTextFile(filename, content, mime);
         return finish("fallback", filename);
       });
@@ -599,6 +611,7 @@
     saveMeetingDirectoryHandle: saveMeetingDirectoryHandle,
     supportsDirectoryPicker: supportsDirectoryPicker,
     isIOSExportDevice: isIOSExportDevice,
+    needsInPageExportFallback: needsInPageExportFallback,
     pickMeetingDirectory: pickMeetingDirectory,
     prepareFolderForExport: prepareFolderForExport,
     buildMeetingExportFilename: buildMeetingExportFilename,

@@ -485,6 +485,7 @@ export function buildIpadYardDomHtml(): string {
       <textarea id="iy-export-text" class="iy-export-text" readonly></textarea>
       <div class="iy-export-actions">
         <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.selectAllExport()">Select All</button>
+        <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.copyExportCsv()">Copy</button>
         <button type="button" id="iy-export-download-btn" class="iy-toolbar-btn iy-hidden" onclick="window.ipadYard.downloadExportCsv()">Download</button>
         <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.closeExportPanel()">Close</button>
       </div>
