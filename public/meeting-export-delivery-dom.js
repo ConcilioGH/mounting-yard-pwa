@@ -490,14 +490,12 @@
     });
   }
 
-  function deliverMeetingExport(kind, content, options) {
+  function deliverFileExport(filename, content, options) {
     options = options || {};
     var manifest = options.manifest || loadMeetingManifest();
-    var filename = buildMeetingExportFilename(kind, manifest, {
-      fallbackTrack: options.fallbackTrack,
-    });
     var folderPath =
       manifest && manifest.meetingFolderPath ? String(manifest.meetingFolderPath).trim() : "";
+    var mime = options.mime || "text/plain;charset=utf-8";
 
     console.log("EXPORT MANIFEST:", manifest);
     console.log("EXPORT PATH:", folderPath || "(none — fallback)");
@@ -535,19 +533,58 @@
         if (result) return result;
         var currentFolderPath =
           manifest && manifest.meetingFolderPath ? String(manifest.meetingFolderPath).trim() : folderPath;
-        if (!currentFolderPath) return false;
-        return writeViaApi(currentFolderPath, filename, content).then(function (wrote) {
-          if (!wrote) return false;
-          var apiPath = currentFolderPath.replace(/\/+$/, "") + "/" + filename;
-          console.log("EXPORT PATH:", apiPath);
-          return finish("api", apiPath);
-        });
+        if (currentFolderPath && /\.csv$/i.test(filename)) {
+          return writeViaApi(currentFolderPath, filename, content).then(function (wrote) {
+            if (!wrote) return false;
+            var apiPath = currentFolderPath.replace(/\/+$/, "") + "/" + filename;
+            console.log("EXPORT PATH:", apiPath);
+            return finish("api", apiPath);
+          });
+        }
+        return false;
       })
       .then(function (result) {
         if (result) return result;
-        console.log("EXPORT PATH:", "(fallback — no folder write)");
+        console.log("EXPORT PATH:", "(fallback — download/copy)");
+        downloadTextFile(filename, content, mime);
         return finish("fallback", filename);
       });
+  }
+
+  function buildYardPackageFilename(manifest, options) {
+    options = options || {};
+    var track = resolveExportTrack(manifest, options.fallbackTrack);
+    var date = resolveExportDate(manifest);
+    return track + "_" + date + "_yard-package.json";
+  }
+
+  function deliverYardPackageExport(content, options) {
+    options = options || {};
+    var manifest = options.manifest || loadMeetingManifest();
+    var filename = buildYardPackageFilename(manifest, { fallbackTrack: options.fallbackTrack });
+    return deliverFileExport(filename, content, {
+      manifest: manifest,
+      directoryHandle: options.directoryHandle,
+      mime: "application/json;charset=utf-8",
+    });
+  }
+
+  function deliverMeetingExport(kind, content, options) {
+    options = options || {};
+    var manifest = options.manifest || loadMeetingManifest();
+    var filename = buildMeetingExportFilename(kind, manifest, {
+      fallbackTrack: options.fallbackTrack,
+    });
+    return deliverFileExport(filename, content, {
+      manifest: manifest,
+      directoryHandle: options.directoryHandle,
+      mime: "text/csv;charset=utf-8",
+    }).then(function (result) {
+      if (result.method === "fallback") {
+        return { method: "fallback", filename: result.filename, displayPath: result.displayPath };
+      }
+      return result;
+    });
   }
 
   window.MeetingExportDelivery = {
@@ -565,9 +602,11 @@
     pickMeetingDirectory: pickMeetingDirectory,
     prepareFolderForExport: prepareFolderForExport,
     buildMeetingExportFilename: buildMeetingExportFilename,
+    buildYardPackageFilename: buildYardPackageFilename,
     syncManifestFromRaces: syncManifestFromRaces,
     readMeetingCsvFromDirectory: readMeetingCsvFromDirectory,
     deliverMeetingExport: deliverMeetingExport,
+    deliverYardPackageExport: deliverYardPackageExport,
     downloadTextFile: downloadTextFile,
   };
 })();

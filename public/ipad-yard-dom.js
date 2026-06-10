@@ -1543,6 +1543,252 @@
         });
     },
 
+    isValidAssessmentSyncPackage: function (pkg) {
+      if (!pkg || typeof pkg !== "object") return false;
+      if (pkg.kind !== "mounting-yard-yard-package") return false;
+      if (!Array.isArray(pkg.races) || !pkg.races.length) return false;
+      if (!pkg.assessments || typeof pkg.assessments !== "object") return false;
+      return true;
+    },
+
+    buildAssessmentSyncPackage: function () {
+      var delivery = window.MeetingExportDelivery;
+      var manifest = this.syncMeetingManifest();
+      if (!manifest && delivery) manifest = delivery.loadMeetingManifest();
+      return {
+        kind: "mounting-yard-yard-package",
+        version: 1,
+        exportedAt: new Date().toISOString(),
+        manifest: manifest,
+        meetingLabel: this.state.meetingLabel,
+        loadedMeetingPath: this.state.loadedMeetingPath,
+        races: this.races,
+        assessments: this.state.assessments,
+        state: {
+          selectedRaceId: this.state.selectedRaceId,
+          selectedRunnerNo: this.state.selectedRunnerNo,
+        },
+      };
+    },
+
+    applyAssessmentSyncPackage: function (pkg) {
+      var delivery = window.MeetingExportDelivery;
+      if (!this.isValidAssessmentSyncPackage(pkg)) {
+        throw new Error("Invalid assessment package — export from Export Assessment Package");
+      }
+      var merged = {};
+      var key;
+      for (key in this.state.assessments) {
+        if (Object.prototype.hasOwnProperty.call(this.state.assessments, key)) {
+          merged[key] = this.state.assessments[key];
+        }
+      }
+      var incoming = pkg.assessments || {};
+      for (key in incoming) {
+        if (Object.prototype.hasOwnProperty.call(incoming, key)) {
+          merged[key] = incoming[key];
+        }
+      }
+      this.races = pkg.races;
+      this.state.assessments = merged;
+      this.state.meetingLabel =
+        pkg.meetingLabel ||
+        (pkg.manifest && pkg.manifest.meetingLabel) ||
+        this.state.meetingLabel;
+      this.state.loadedMeetingPath =
+        pkg.loadedMeetingPath ||
+        (pkg.manifest && pkg.manifest.meetingFolderPath) ||
+        this.state.loadedMeetingPath;
+      if (pkg.manifest && delivery) {
+        delivery.saveMeetingManifest(pkg.manifest);
+        var track = pkg.manifest.trackName || pkg.manifest.trackSlug || "";
+        var date = pkg.manifest.date || "";
+        if (track && date) this.state.meetingLabel = track + " · " + date;
+      } else {
+        this.syncMeetingManifest({
+          meetingPath: this.state.loadedMeetingPath,
+          meetingLabel: this.state.meetingLabel,
+        });
+      }
+      if (pkg.state && pkg.state.selectedRaceId) {
+        this.state.selectedRaceId = pkg.state.selectedRaceId;
+      } else if (this.races[0]) {
+        this.state.selectedRaceId = this.races[0].id;
+      }
+      if (pkg.state && pkg.state.selectedRunnerNo != null) {
+        this.state.selectedRunnerNo = pkg.state.selectedRunnerNo;
+      } else if (this.races[0] && this.races[0].runners && this.races[0].runners[0]) {
+        this.state.selectedRunnerNo = this.races[0].runners[0].no;
+      }
+      this.gearPickerOpen = null;
+      this.persistRaces();
+      this.persist();
+      this.showAssess();
+      this.render();
+    },
+
+    showAssessmentPackageExportPanel: function (jsonText, filename) {
+      this.assessmentPackageExportText = jsonText;
+      this.assessmentPackageExportFilename = filename;
+      var overlay = document.getElementById("iy-assessment-package-export-overlay");
+      var textarea = document.getElementById("iy-assessment-package-export-text");
+      var filenameEl = document.getElementById("iy-assessment-package-export-filename");
+      var downloadBtn = document.getElementById("iy-assessment-package-download-btn");
+      if (filenameEl) filenameEl.textContent = filename;
+      if (textarea) textarea.value = jsonText;
+      if (overlay) overlay.classList.remove("iy-hidden");
+      if (downloadBtn) {
+        if (this.supportsFileDownload()) downloadBtn.classList.remove("iy-hidden");
+        else downloadBtn.classList.add("iy-hidden");
+      }
+    },
+
+    closeAssessmentPackageExportPanel: function () {
+      var overlay = document.getElementById("iy-assessment-package-export-overlay");
+      if (overlay) overlay.classList.add("iy-hidden");
+    },
+
+    selectAllAssessmentPackageExport: function () {
+      this.bump();
+      var textarea = document.getElementById("iy-assessment-package-export-text");
+      if (!textarea) return;
+      textarea.focus();
+      textarea.select();
+      try {
+        textarea.setSelectionRange(0, textarea.value.length);
+      } catch (e) {
+        /* ignore */
+      }
+    },
+
+    downloadAssessmentPackageExport: function () {
+      if (!this.supportsFileDownload() || !this.assessmentPackageExportText) return;
+      this.bump();
+      try {
+        var blob = new Blob([this.assessmentPackageExportText], {
+          type: "application/json;charset=utf-8",
+        });
+        var url = URL.createObjectURL(blob);
+        var link = document.createElement("a");
+        link.href = url;
+        link.download = this.assessmentPackageExportFilename || "yard-package.json";
+        link.rel = "noopener";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+        this.setImportMsg("Package download started.");
+      } catch (e) {
+        this.setImportMsg("Download failed — use Select All and copy.");
+      }
+    },
+
+    exportAssessmentPackage: function () {
+      this.bump();
+      var self = this;
+      var delivery = window.MeetingExportDelivery;
+      if (!delivery) {
+        self.setImportMsg("Export module not loaded.");
+        return;
+      }
+      if (!self.races || !self.races.length) {
+        self.setImportMsg("Load a meeting first.");
+        return;
+      }
+      var manifest = self.syncMeetingManifest();
+      if (!manifest) manifest = delivery.loadMeetingManifest();
+      if (!manifest) {
+        self.setImportMsg("Meeting manifest missing — reload the meeting and try again.");
+        return;
+      }
+      var pkg = self.buildAssessmentSyncPackage();
+      var jsonText = JSON.stringify(pkg, null, 2);
+      var filename = delivery.buildYardPackageFilename(manifest);
+      if (delivery.isIOSExportDevice()) {
+        self.showAssessmentPackageExportPanel(jsonText, filename);
+        self.setImportMsg("Copy package JSON below — paste on laptop with Import Assessment Package.");
+        return;
+      }
+      self.setImportMsg("Exporting assessment package…");
+      delivery
+        .prepareFolderForExport(manifest)
+        .then(function (prepared) {
+          return delivery.deliverYardPackageExport(jsonText, {
+            manifest: prepared.manifest,
+            directoryHandle: prepared.handle,
+          });
+        })
+        .then(function (result) {
+          if (result.method === "directory" || result.method === "api") {
+            self.setImportMsg("Assessment package saved:\n" + result.filename);
+            return;
+          }
+          self.showAssessmentPackageExportPanel(jsonText, filename);
+          self.setImportMsg("Package ready — copy JSON for another device or use Download.");
+        })
+        .catch(function (e) {
+          if (e && e.name === "AbortError") {
+            self.setImportMsg("Export cancelled.");
+            return;
+          }
+          self.setImportMsg("Export failed: " + (e && e.message ? e.message : String(e)));
+        });
+    },
+
+    showAssessmentPackageImportPanel: function () {
+      this.bump();
+      var overlay = document.getElementById("iy-assessment-package-import-overlay");
+      var textarea = document.getElementById("iy-assessment-package-import-text");
+      if (textarea) textarea.value = "";
+      if (overlay) overlay.classList.remove("iy-hidden");
+    },
+
+    closeAssessmentPackageImportPanel: function () {
+      var overlay = document.getElementById("iy-assessment-package-import-overlay");
+      if (overlay) overlay.classList.add("iy-hidden");
+    },
+
+    importAssessmentPackageFromPanel: function () {
+      this.bump();
+      var textarea = document.getElementById("iy-assessment-package-import-text");
+      if (!textarea || !textarea.value.trim()) {
+        this.setImportMsg("Paste an assessment package first.");
+        return;
+      }
+      try {
+        var pkg = JSON.parse(textarea.value.replace(/^\uFEFF/, "").trim());
+        this.applyAssessmentSyncPackage(pkg);
+        this.closeAssessmentPackageImportPanel();
+        this.setImportMsg("Assessment package imported — ready to export CSV.");
+      } catch (e) {
+        this.setImportMsg("Import failed: " + e.message);
+      }
+    },
+
+    importAssessmentPackageFile: function (input) {
+      var file = input && input.files && input.files[0];
+      if (!file) return;
+      var self = this;
+      var reader = new FileReader();
+      reader.onload = function () {
+        try {
+          var pkg = JSON.parse(String(reader.result || "").replace(/^\uFEFF/, "").trim());
+          self.applyAssessmentSyncPackage(pkg);
+          self.closeAssessmentPackageImportPanel();
+          self.setImportMsg("Assessment package imported from " + file.name);
+          input.value = "";
+        } catch (e) {
+          self.setImportMsg("Import failed: " + e.message);
+          input.value = "";
+        }
+      };
+      reader.onerror = function () {
+        self.setImportMsg("Could not read package file.");
+        input.value = "";
+      };
+      reader.readAsText(file);
+    },
+
     importMeetingFolder: function () {
       this.bump();
       var self = this;

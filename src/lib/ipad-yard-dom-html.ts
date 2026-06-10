@@ -432,8 +432,11 @@ export function buildIpadYardDomHtml(): string {
       <button type="button" id="iy-btn-clear-downloaded" class="iy-toolbar-btn" onclick="window.ipadYard.clearDownloadedMeeting()">Clear Downloaded Meeting</button>
       <button type="button" id="iy-btn-import-folder" class="iy-toolbar-btn iy-hidden" onclick="window.ipadYard.importMeetingFolder()">Import meeting folder</button>
       <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.exportAllAssessments()">Export all assessments</button>
+      <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.exportAssessmentPackage()">Export Assessment Package</button>
+      <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.showAssessmentPackageImportPanel()">Import Assessment Package</button>
       <button type="button" class="iy-toolbar-btn" onclick="document.getElementById('iy-csv-input').click()">Import CSV</button>
       <input id="iy-csv-input" type="file" accept=".csv,text/csv" style="display:none" onchange="window.ipadYard.importCsv(this)">
+      <input id="iy-assessment-package-file" type="file" accept=".json,application/json" style="display:none" onchange="window.ipadYard.importAssessmentPackageFile(this)">
     </div>
     <p id="iy-import-msg" class="iy-msg"></p>
     <div id="iy-race-tabs" class="iy-race-bar"></div>
@@ -509,6 +512,33 @@ export function buildIpadYardDomHtml(): string {
       <div class="iy-export-actions">
         <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.selectAllDownloadPackage()">Select All</button>
         <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.closeDownloadPanel()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="iy-assessment-package-export-overlay" class="iy-export-overlay iy-hidden">
+    <div class="iy-export-panel">
+      <div class="iy-export-title">Assessment Package</div>
+      <div id="iy-assessment-package-export-filename" class="iy-export-filename"></div>
+      <p class="iy-export-hint">Copy this JSON and paste on your laptop with Import Assessment Package, or save to Files.</p>
+      <textarea id="iy-assessment-package-export-text" class="iy-export-text" readonly></textarea>
+      <div class="iy-export-actions">
+        <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.selectAllAssessmentPackageExport()">Select All</button>
+        <button type="button" id="iy-assessment-package-download-btn" class="iy-toolbar-btn iy-hidden" onclick="window.ipadYard.downloadAssessmentPackageExport()">Download</button>
+        <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.closeAssessmentPackageExportPanel()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="iy-assessment-package-import-overlay" class="iy-export-overlay iy-hidden">
+    <div class="iy-export-panel">
+      <div class="iy-export-title">Import Assessment Package</div>
+      <p class="iy-export-hint">Paste the JSON from Export Assessment Package on iPad, or choose a <code>_yard-package.json</code> file.</p>
+      <textarea id="iy-assessment-package-import-text" class="iy-export-text" placeholder="Paste assessment package JSON here…"></textarea>
+      <div class="iy-export-actions">
+        <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.importAssessmentPackageFromPanel()">Import</button>
+        <button type="button" class="iy-toolbar-btn" onclick="document.getElementById('iy-assessment-package-file').click()">Choose file</button>
+        <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.closeAssessmentPackageImportPanel()">Close</button>
       </div>
     </div>
   </div>
