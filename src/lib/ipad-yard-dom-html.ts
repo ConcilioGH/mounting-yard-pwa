@@ -62,12 +62,67 @@ export function buildIpadYardDomHtml(): string {
     html, body { height: 100%; }
     body {
       margin: 0;
-      padding: 8px;
+      padding: 0;
       padding-bottom: 56px;
       font-family: -apple-system, BlinkMacSystemFont, sans-serif;
       background: #e2e8f0;
       color: #0f172a;
     }
+    .iy-app-nav {
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      border-bottom: 1px solid #1e293b;
+      background: rgba(2, 6, 23, 0.95);
+      padding: calc(0.5rem + env(safe-area-inset-top, 0px)) 12px 8px;
+      -webkit-backdrop-filter: blur(12px);
+      backdrop-filter: blur(12px);
+    }
+    .iy-app-nav-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+    .iy-app-nav-brand {
+      display: inline;
+      margin-right: 4px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #94a3b8;
+      text-decoration: none;
+    }
+    .iy-app-nav-brand:hover { color: #cbd5e1; }
+    .iy-app-nav-links {
+      display: flex;
+      flex: 1;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .iy-app-nav-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      min-width: 4.5rem;
+      padding: 0 16px;
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      background: #0f172a;
+      color: #e2e8f0;
+      box-shadow: inset 0 0 0 1px #334155;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .iy-app-nav-link.iy-app-nav-active {
+      background: #0891b2;
+      color: #fff;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+    .iy-page { padding: 8px; }
     .iy-header { margin-bottom: 6px; }
     h1 { font-size: 18px; font-weight: 700; margin: 0 0 2px; }
     .iy-meta { margin: 0; font-size: 11px; color: #64748b; line-height: 1.3; }
@@ -422,6 +477,17 @@ export function buildIpadYardDomHtml(): string {
   </style>
 </head>
 <body>
+  <nav class="iy-app-nav" aria-label="Main">
+    <div class="iy-app-nav-inner">
+      <a href="/" class="iy-app-nav-brand">Mounting Yard</a>
+      <div class="iy-app-nav-links">
+        <a href="/ipad-yard-dom" class="iy-app-nav-link iy-app-nav-active">Yard</a>
+        <a href="/speed-map" class="iy-app-nav-link">Speed Map</a>
+        <a href="/bias" class="iy-app-nav-link">Bias</a>
+      </div>
+    </div>
+  </nav>
+  <div class="iy-page">
   <div class="iy-header">
     <h1>Mounting Yard</h1>
     <p class="iy-meta">iPad · Build ${escapeHtml(APP_BUILD_VERSION)} · <span id="iy-meeting-label"></span> · <span id="iy-network-status" class="iy-network-status iy-network-online">Online</span> · <span id="iy-downloaded-badge" class="iy-downloaded-badge iy-hidden">Downloaded meeting active</span></p>
@@ -471,6 +537,8 @@ export function buildIpadYardDomHtml(): string {
   </div>
 
   </div>
+
+  </div><!-- .iy-page -->
 
   <div id="iy-fixed-nav" class="iy-fixed-nav">
     <button type="button" class="iy-nav-btn" onclick="window.ipadYard.prevRunner()">← Prev</button>

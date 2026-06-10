@@ -30,7 +30,6 @@ import type { ApplyResultsSpReport } from "@/lib/race-day-bias/apply-results-sp"
 import type { FinisherSlot, PositionField, RaceDayBiasState } from "@/lib/race-day-bias/types";
 import { cn } from "@/lib/utils";
 import { useDebouncedCallback } from "@/hooks/useDebouncedCallback";
-import { InitErrorPanel } from "@/components/init-error-panel";
 import {
   logLoadingState,
   logStartupStep,
@@ -81,7 +80,6 @@ const biasModalCancelButtonClass = cn(
 );
 
 export default function RaceDayBiasApp() {
-  const [initErrors, setInitErrors] = useState<string[]>([]);
   const [state, setState] = useState<RaceDayBiasState>(() => {
     try {
       return loadRaceDayBiasState();
@@ -115,18 +113,12 @@ export default function RaceDayBiasApp() {
     logLoadingState("RaceDayBiasApp", true, "background-init");
     let cancelled = false;
 
-    const pushInitError = (error: unknown) => {
-      const message = error instanceof Error ? error.message : String(error);
-      setInitErrors((prev) => (prev.includes(message) ? prev : [...prev, message]));
-    };
-
     const refreshFieldSizes = async () => {
       try {
         const races = await loadAllRaces();
         if (!cancelled) setFieldSizeByRaceNo(buildRaceFieldSizeMap(races));
       } catch (error) {
         reportStartupFailure("race-day-bias-field-sizes", error);
-        pushInitError(error);
       }
     };
 
@@ -150,7 +142,6 @@ export default function RaceDayBiasApp() {
         setState(loaded);
       } catch (error) {
         reportStartupFailure("race-day-bias-state-load", error);
-        pushInitError(error);
       }
     };
 
@@ -168,7 +159,6 @@ export default function RaceDayBiasApp() {
       logLoadingState("RaceDayBiasApp", false, "background-init-done");
     } catch (error) {
       reportStartupFailure("race-day-bias-init", error);
-      pushInitError(error);
     }
 
     window.addEventListener(MEETING_IMPORTED_EVENT, refresh);
@@ -271,7 +261,6 @@ export default function RaceDayBiasApp() {
 
   return (
     <div className="mx-auto max-w-6xl space-y-4 p-3 pb-[calc(1rem+env(safe-area-inset-bottom))] pt-2 md:p-4">
-      <InitErrorPanel errors={initErrors} />
       <header className="rounded-2xl border border-slate-800 bg-slate-950/90 p-4">
         <h1 className="text-2xl font-bold tracking-tight text-slate-50">Race Day Bias</h1>
         <p className="mt-1 text-sm text-slate-400">

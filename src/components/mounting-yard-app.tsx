@@ -42,20 +42,14 @@ import type { Assessment, Race, Runner, WetBodyType, WetFeet } from "@/lib/types
 import { wetIsSet, wetShorthand } from "@/lib/wet";
 import { cn, emptyAssessment, makeKey, marks, nextNegative, nextPositive } from "@/lib/utils";
 import { useDebouncedCallback } from "@/hooks/useDebouncedCallback";
-import { InitErrorPanel } from "@/components/init-error-panel";
 import { enableIOS12CompatMode } from "@/lib/ios12-compat-mode";
 import { shouldSkipYardPersistence, shouldSkipYardStartupLoad } from "@/lib/ios12-yard-fallback";
 import { installIOS12OverlayFix, removeBlockingOverlays } from "@/lib/ios12-overlay-fix";
-import {
-  IOS12_TAP_BUTTON_STYLE,
-  installYardDocumentTouchDiagnostics,
-  type YardDocumentTouchDiagnostics,
-} from "@/lib/ios12-yard-tap";
+import { IOS12_TAP_BUTTON_STYLE } from "@/lib/ios12-yard-tap";
 import { isIOS12, shouldSkipIndexedDB } from "@/lib/legacy-safari";
 import { yardControlClick } from "@/lib/ios12-safe-interaction";
 import {
   createAssessmentPressProps,
-  logMountedBlockingOverlays,
   removeLegacyStartupOverlays,
   type AssessmentPressProps,
 } from "@/lib/yard-touch-diagnostics";
@@ -70,7 +64,6 @@ import {
   type YardDomBridgeHandlers,
 } from "@/lib/ios12-yard-dom-bridge";
 import YardLegacyIOS12 from "@/components/yard-legacy-ios12";
-import { APP_BUILD_VERSION } from "@/lib/build-version";
 
 function isPositiveAssessmentFactor(factor: string): boolean {
   return factor === SWEAT_POS_KEY || factor.endsWith("+");
@@ -155,9 +148,6 @@ const ios12FactorBtnClass =
   "yard-interactive inline-flex w-full cursor-pointer items-center justify-center gap-2 font-semibold rounded-2xl border border-slate-200 bg-white min-h-[56px]";
 
 type PhysicalPicker = GearTileCode | "WET" | null;
-
-/** Literal HTML — inline onclick/ontouchstart for old iOS compatibility test (not React events). */
-const RAW_IPAD_INLINE_TEST_HTML = `<button id="raw-ipad-test-button" onclick="this.innerHTML='RAW CLICKED'" ontouchstart="this.innerHTML='RAW TOUCHED'" style="position:fixed;top:80px;left:10px;z-index:99999999;background:red;color:white;font-size:24px;padding:12px;pointer-events:auto;border:none;cursor:pointer;">RAW INLINE TEST</button>`;
 
 const ios12BtnClass =
   "yard-interactive inline-flex cursor-pointer items-center justify-center gap-2 font-semibold min-h-[56px] rounded-2xl px-5 text-lg";
@@ -267,7 +257,6 @@ export default function MountingYardApp() {
         }}
       >
         <div style={{ fontSize: 18, fontWeight: 600 }}>Loading Yard...</div>
-        <div style={{ marginTop: 8, fontSize: 14, color: "#64748b" }}>Build {APP_BUILD_VERSION}</div>
       </div>
     );
   }
@@ -280,7 +269,6 @@ export default function MountingYardApp() {
 }
 
 function MountingYardModernApp() {
-  const [initErrors, setInitErrors] = useState<string[]>([]);
   const [races, setRaces] = useState<Race[]>(DEFAULT_RACES);
   const [raceId, setRaceId] = useState(DEFAULT_RACES[0]?.id ?? "R1");
   const [selectedRunner, setSelectedRunner] = useState(DEFAULT_RACES[0]?.runners[0]?.no ?? 1);
@@ -300,31 +288,15 @@ function MountingYardModernApp() {
   const bridgeHandlersRef = useRef<YardDomBridgeHandlers | null>(null);
   const lastTouchTimeRef = useRef(0);
   const userInteractedRef = useRef(false);
-  const [tapCount, setTapCount] = useState(0);
-  const [bridgeTapCount, setBridgeTapCount] = useState(0);
-  const [docTouch, setDocTouch] = useState<YardDocumentTouchDiagnostics>({
-    touchStart: 0,
-    touchEnd: 0,
-    click: 0,
-    lastTargetTag: "—",
-    lastTargetClassName: "—",
-    lastTargetText: "—",
-  });
 
-  const incrementTap = useCallback(() => {
+  const markUserInteraction = useCallback(() => {
     userInteractedRef.current = true;
-    setTapCount((count) => count + 1);
   }, []);
 
   useEffect(() => {
     removeLegacyStartupOverlays();
     removeBlockingOverlays();
-    logMountedBlockingOverlays();
     if (isIOS12()) void enableIOS12CompatMode();
-  }, []);
-
-  useEffect(() => {
-    return installYardDocumentTouchDiagnostics(setDocTouch);
   }, []);
 
   useEffect(() => {
@@ -378,11 +350,6 @@ function MountingYardModernApp() {
     logLoadingState("MountingYardApp", true, "background-init");
     let cancelled = false;
 
-    const pushInitError = (error: unknown) => {
-      const message = error instanceof Error ? error.message : String(error);
-      setInitErrors((prev) => (prev.includes(message) ? prev : [...prev, message]));
-    };
-
     const applyMeetingManifest = () => {
       logStartupStep("meeting-load:start");
       let manifest = null;
@@ -390,7 +357,6 @@ function MountingYardModernApp() {
         manifest = loadMeetingManifest();
       } catch (manifestError) {
         reportStartupFailure("meeting-manifest-load", manifestError);
-        pushInitError(manifestError);
       }
       logStartupStep("meeting-load:end", {
         hasManifest: Boolean(manifest),
@@ -441,7 +407,6 @@ function MountingYardModernApp() {
       } catch (error) {
         if (!cancelled) {
           reportStartupFailure("mounting-yard-init", error);
-          pushInitError(error);
           applyMeetingManifest();
         }
       } finally {
@@ -488,10 +453,10 @@ function MountingYardModernApp() {
 
   const handleAssessmentPress = useCallback(
     (_label: string, handler: () => void) => {
-      incrementTap();
+      markUserInteraction();
       handler();
     },
-    [incrementTap],
+    [markUserInteraction],
   );
 
   const assessmentPress = useCallback(
@@ -507,10 +472,10 @@ function MountingYardModernApp() {
   const yardClick = useCallback(
     (_label: string, handler: () => void) =>
       yardControlClick(() => {
-        incrementTap();
+        markUserInteraction();
         handler();
       }),
-    [incrementTap],
+    [markUserInteraction],
   );
 
   const updateRecord = useCallback(
@@ -592,22 +557,22 @@ function MountingYardModernApp() {
   );
 
   bridgeHandlersRef.current = {
-    onBridgeTap: () => setBridgeTapCount((count) => count + 1),
+    onBridgeTap: markUserInteraction,
     selectRace: (raceId) => {
-      incrementTap();
+      markUserInteraction();
       selectRace(raceId);
     },
     selectRunner: (runnerNo) => {
-      incrementTap();
+      markUserInteraction();
       setGearPicker(null);
       setSelectedRunner(runnerNo);
     },
     goPrev: () => {
-      incrementTap();
+      markUserInteraction();
       goPrev();
     },
     goNext: () => {
-      incrementTap();
+      markUserInteraction();
       goNext();
     },
     tapAssessment: (factor) => {
@@ -706,38 +671,6 @@ function MountingYardModernApp() {
       data-yard-root
       className="min-h-[100dvh] bg-slate-100 pb-[calc(5.5rem+env(safe-area-inset-bottom))] pt-[env(safe-area-inset-top)] text-slate-900"
     >
-      <div dangerouslySetInnerHTML={{ __html: RAW_IPAD_INLINE_TEST_HTML }} />
-      <div
-        aria-live="polite"
-        className="fixed-debug-layer"
-        style={{
-          position: "fixed",
-          top: 45,
-          right: 10,
-          zIndex: 999999,
-          background: "red",
-          color: "white",
-          fontSize: isIOS12() ? 14 : 20,
-          padding: 8,
-          maxWidth: "min(92vw, 320px)",
-          lineHeight: 1.35,
-          pointerEvents: "none",
-        }}
-      >
-        <div>Tap: {tapCount}</div>
-        {isIOS12() ? (
-          <>
-            <div id="yard-bridge-tap">BridgeTap: {bridgeTapCount}</div>
-            <div id="yard-debug-touchstart">TouchStart: {docTouch.touchStart}</div>
-            <div id="yard-debug-touchend">TouchEnd: {docTouch.touchEnd}</div>
-            <div id="yard-debug-click">Click: {docTouch.click}</div>
-            <div id="yard-debug-tag">Tag: {docTouch.lastTargetTag}</div>
-            <div id="yard-debug-class">Class: {docTouch.lastTargetClassName}</div>
-            <div id="yard-debug-text">Text: {docTouch.lastTargetText}</div>
-          </>
-        ) : null}
-      </div>
-      <InitErrorPanel errors={initErrors} />
       <div className="mx-auto max-w-7xl space-y-3 p-3">
         <header className="flex flex-col gap-4 rounded-3xl bg-white p-5 shadow-sm lg:flex-row lg:items-center lg:justify-between">
           <div className="min-w-0 flex-1">
@@ -804,7 +737,7 @@ function MountingYardModernApp() {
                       selected ? "bg-slate-900 text-white" : "bg-white text-slate-800 ring-1 ring-slate-200",
                     )}
                     onClick={() => {
-                      incrementTap();
+                      markUserInteraction();
                       selectRace(r.id);
                     }}
                   >
@@ -817,7 +750,7 @@ function MountingYardModernApp() {
             <Tabs
               value={raceId}
               onValueChange={(v) => {
-                incrementTap();
+                markUserInteraction();
                 selectRace(v);
               }}
             >
@@ -860,7 +793,7 @@ function MountingYardModernApp() {
                           ? {
                               style: IOS12_TAP_BUTTON_STYLE,
                               onClick: () => {
-                                incrementTap();
+                                markUserInteraction();
                                 setGearPicker(null);
                                 setSelectedRunner(r.no);
                               },
@@ -1209,7 +1142,7 @@ function MountingYardModernApp() {
             tapDebugAlways
             yardAction="prev-runner"
             onClick={() => {
-              incrementTap();
+              markUserInteraction();
               goPrev();
             }}
           >
@@ -1221,7 +1154,7 @@ function MountingYardModernApp() {
             tapDebugAlways
             yardAction="next-runner"
             onClick={() => {
-              incrementTap();
+              markUserInteraction();
               goNext();
             }}
           >
