@@ -369,21 +369,29 @@
       ? parseMeetingFolderMeta(options.directoryName)
       : null;
     var fromMaster = options.fileName ? parseMasterCsvFileName(options.fileName) : null;
+    var explicitTrackSlug = options.trackName ? sanitizeMeetingSlug(options.trackName) : "";
+    var explicitDate = String(options.date || "").trim();
     var trackSlug =
       (folderFromPath && folderFromPath.track) ||
       (folderFromDir && folderFromDir.track) ||
       (fromMaster && fromMaster.track) ||
+      explicitTrackSlug ||
       (existing && existing.trackSlug) ||
-      sanitizeMeetingSlug(options.trackName || "");
+      "";
     var date =
       (folderFromPath && folderFromPath.date) ||
       (folderFromDir && folderFromDir.date) ||
       (fromMaster && fromMaster.date) ||
-      (options.date || "") ||
+      explicitDate ||
       (existing && existing.date) ||
       new Date().toISOString().slice(0, 10);
     var trackName = String(
-      options.trackName || (existing && existing.trackName) || trackSlug || "",
+      options.trackName ||
+        (folderFromPath && folderFromPath.track) ||
+        (fromMaster && fromMaster.track) ||
+        (existing && existing.trackName) ||
+        trackSlug ||
+        "",
     ).trim();
     if (!trackName && options.meetingLabel) {
       var labelOnly = String(options.meetingLabel).trim();

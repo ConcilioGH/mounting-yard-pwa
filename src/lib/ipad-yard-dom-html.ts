@@ -207,13 +207,20 @@ export function buildIpadYardDomHtml(): string {
       letter-spacing: 0.02em;
     }
     .iy-downloaded-badge.iy-hidden { display: none !important; }
-    .iy-toolbar { display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0 4px; }
+    .iy-toolbar { margin: 6px 0 4px; }
+    .iy-toolbar-primary {
+      display: -webkit-box;
+      display: flex;
+      gap: 4px;
+      -webkit-box-align: stretch;
+      align-items: stretch;
+    }
+    .iy-toolbar-slot { position: relative; -webkit-box-flex: 1; flex: 1; min-width: 0; }
     .iy-toolbar-btn {
-      flex: 1;
-      min-width: 88px;
+      width: 100%;
       margin: 0;
-      padding: 8px 6px;
-      font-size: 12px;
+      padding: 10px 4px;
+      font-size: 13px;
       font-weight: 700;
       border: 1px solid #94a3b8;
       border-radius: 8px;
@@ -221,7 +228,41 @@ export function buildIpadYardDomHtml(): string {
       color: #0f172a;
       cursor: pointer;
       text-align: center;
+      -webkit-tap-highlight-color: transparent;
     }
+    .iy-toolbar-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 4px);
+      right: 0;
+      left: 0;
+      z-index: 150;
+      min-width: 11rem;
+      padding: 4px;
+      border: 1px solid #94a3b8;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+    }
+    .iy-toolbar-menu.iy-open { display: block; }
+    .iy-toolbar-menu-item {
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 10px 10px;
+      border: 0;
+      border-radius: 6px;
+      background: transparent;
+      color: #0f172a;
+      font-size: 12px;
+      font-weight: 600;
+      text-align: left;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .iy-toolbar-menu-item:active { background: #f1f5f9; }
+    .iy-toolbar-menu-item.iy-hidden { display: none !important; }
+    .iy-toolbar-more-menu { left: auto; right: 0; min-width: 13.5rem; }
     .iy-race-bar {
       display: flex;
       flex-wrap: wrap;
@@ -557,16 +598,36 @@ export function buildIpadYardDomHtml(): string {
       </div>
     </div>
     <div class="iy-toolbar">
-      <button type="button" id="iy-btn-meetings" class="iy-toolbar-btn iy-toolbar-btn-primary" onclick="window.ipadYard.showLibrary()">Meetings</button>
-      <button type="button" id="iy-btn-download-meeting" class="iy-toolbar-btn" onclick="window.ipadYard.downloadMeetingToIpad()">Download Meeting to iPad</button>
-      <button type="button" id="iy-btn-use-downloaded" class="iy-toolbar-btn" onclick="window.ipadYard.useDownloadedMeeting()">Use Downloaded Meeting</button>
-      <button type="button" id="iy-btn-clear-downloaded" class="iy-toolbar-btn" onclick="window.ipadYard.clearDownloadedMeeting()">Clear Downloaded Meeting</button>
-      <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.clearCurrentMeeting()">Clear Current Meeting</button>
-      <button type="button" id="iy-btn-import-folder" class="iy-toolbar-btn iy-hidden" onclick="window.ipadYard.importMeetingFolder()">Import meeting folder</button>
-      <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.exportAllAssessments()">Export all assessments</button>
-      <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.exportAssessmentPackage()">Export Assessment Package</button>
-      <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.showAssessmentPackageImportPanel()">Import Assessment Package</button>
-      <button type="button" class="iy-toolbar-btn" onclick="document.getElementById('iy-csv-input').click()">Import CSV</button>
+      <div class="iy-toolbar-primary">
+        <div class="iy-toolbar-slot">
+          <button type="button" id="iy-btn-meetings" class="iy-toolbar-btn iy-toolbar-btn-primary" onclick="window.ipadYard.showLibrary()">Meetings</button>
+        </div>
+        <div class="iy-toolbar-slot">
+          <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.clearCurrentMeeting()">Clear</button>
+        </div>
+        <div class="iy-toolbar-slot">
+          <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.exportAllAssessments()">Export</button>
+        </div>
+        <div class="iy-toolbar-slot">
+          <button type="button" id="iy-btn-package" class="iy-toolbar-btn" onclick="window.ipadYard.togglePackageMenu()">Package</button>
+          <div id="iy-package-menu" class="iy-toolbar-menu">
+            <button type="button" class="iy-toolbar-menu-item" onclick="window.ipadYard.exportAssessmentPackage(); window.ipadYard.closeToolbarMenus()">Export package</button>
+            <button type="button" class="iy-toolbar-menu-item" onclick="window.ipadYard.showAssessmentPackageImportPanel(); window.ipadYard.closeToolbarMenus()">Import package</button>
+          </div>
+        </div>
+        <div class="iy-toolbar-slot">
+          <button type="button" id="iy-btn-more" class="iy-toolbar-btn" onclick="window.ipadYard.toggleMoreMenu()">More</button>
+          <div id="iy-more-menu" class="iy-toolbar-menu iy-toolbar-more-menu">
+            <button type="button" id="iy-btn-download-meeting" class="iy-toolbar-menu-item iy-hidden" onclick="window.ipadYard.downloadMeetingToIpad(); window.ipadYard.closeToolbarMenus()">Download meeting to iPad</button>
+            <button type="button" id="iy-btn-use-downloaded" class="iy-toolbar-menu-item" onclick="window.ipadYard.useDownloadedMeeting(); window.ipadYard.closeToolbarMenus()">Use downloaded meeting</button>
+            <button type="button" id="iy-btn-clear-downloaded" class="iy-toolbar-menu-item" onclick="window.ipadYard.clearDownloadedMeeting(); window.ipadYard.closeToolbarMenus()">Clear downloaded meeting</button>
+            <button type="button" id="iy-btn-import-folder" class="iy-toolbar-menu-item iy-hidden" onclick="window.ipadYard.importMeetingFolder(); window.ipadYard.closeToolbarMenus()">Import meeting folder</button>
+            <button type="button" class="iy-toolbar-menu-item" onclick="window.ipadYard.exportAssessmentPackage(); window.ipadYard.closeToolbarMenus()">Export assessment package</button>
+            <button type="button" class="iy-toolbar-menu-item" onclick="window.ipadYard.showAssessmentPackageImportPanel(); window.ipadYard.closeToolbarMenus()">Import assessment package</button>
+            <button type="button" class="iy-toolbar-menu-item" onclick="document.getElementById('iy-csv-input').click(); window.ipadYard.closeToolbarMenus()">Import CSV</button>
+          </div>
+        </div>
+      </div>
       <input id="iy-csv-input" type="file" accept=".csv,text/csv" style="display:none" onchange="window.ipadYard.importCsv(this)">
       <input id="iy-assessment-package-file" type="file" accept=".json,application/json" style="display:none" onchange="window.ipadYard.importAssessmentPackageFile(this)">
     </div>
