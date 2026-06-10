@@ -6,6 +6,7 @@
 
   var cfg = window.IPAD_YARD_CONFIG || {};
   var ASSESSMENTS_KEY = cfg.assessmentsKey || "ipad-yard-assessments";
+  var MEETING_STORE_KEY = cfg.meetingStoreKey || "ipad-yard-meeting-store-v2";
   var RACES_KEY = cfg.racesKey || "ipad-yard-races-v1";
   var DOWNLOADED_MEETING_KEY = cfg.downloadedMeetingKey || "ipad-yard-downloaded-meeting-v1";
   var LIBRARY_CACHE_KEY = "ipad-yard-library-cache-v1";
@@ -40,6 +41,7 @@
     meetingLoadingPath: null,
     downloadedMeetingActive: false,
     countdownTimerId: null,
+    activeMeetingId: "",
     state: {
       tapCount: 0,
       selectedRaceId: null,
@@ -235,15 +237,197 @@
       this.state.tapCount += 1;
     },
 
-    persist: function () {
+    readMeetingStore: function () {
       try {
-        localStorage.setItem(ASSESSMENTS_KEY, JSON.stringify(this.state));
+        var raw = localStorage.getItem(MEETING_STORE_KEY);
+        if (raw) {
+          var parsed = JSON.parse(raw);
+          if (parsed && parsed.version === 2 && parsed.meetings) return parsed;
+        }
       } catch (e) {
-        this.setImportMsg("Could not save assessments: " + e.message);
+        /* ignore */
+      }
+      return { version: 2, activeMeetingId: "", meetings: {} };
+    },
+
+    writeMeetingStore: function (store) {
+      try {
+        localStorage.setItem(MEETING_STORE_KEY, JSON.stringify(store));
+      } catch (e) {
+        this.setImportMsg("Could not save meeting data: " + e.message);
       }
     },
 
+    resolveMeetingId: function (hints) {
+      hints = hints || {};
+      var delivery = window.MeetingExportDelivery;
+      if (hints.meetingId) return String(hints.meetingId);
+      if (hints.manifest) {
+        if (hints.manifest.meetingId) return String(hints.manifest.meetingId);
+        if (hints.manifest.date && hints.manifest.trackSlug) {
+          return hints.manifest.date + "-" + hints.manifest.trackSlug;
+        }
+        if (hints.manifest.meetingKey) return "key:" + hints.manifest.meetingKey;
+      }
+      if (!hints.skipManifest && delivery) {
+        var manifest = delivery.loadMeetingManifest();
+        if (manifest) {
+          if (manifest.meetingId) return String(manifest.meetingId);
+          if (manifest.date && manifest.trackSlug) {
+            return manifest.date + "-" + manifest.trackSlug;
+          }
+          if (manifest.meetingKey) return "key:" + manifest.meetingKey;
+        }
+      }
+      var path = hints.meetingPath || hints.loadedMeetingPath || this.state.loadedMeetingPath || "";
+      var meta = this.parseMeetingPathMeta(path);
+      if (meta.date && meta.track) {
+        var slug = delivery ? delivery.sanitizeMeetingSlug(meta.track) : meta.track;
+        return meta.date + "-" + slug;
+      }
+      if (hints.date && (hints.trackName || hints.track)) {
+        var trackInput = hints.trackName || hints.track;
+        var trackSlug = delivery ? delivery.sanitizeMeetingSlug(trackInput) : trackInput;
+        return hints.date + "-" + trackSlug;
+      }
+      return "";
+    },
+
+    raceIdExists: function (raceId) {
+      if (!raceId) return false;
+      for (var i = 0; i < this.races.length; i++) {
+        if (this.races[i].id === raceId) return true;
+      }
+      return false;
+    },
+
+    normalizeSelection: function () {
+      if (!this.races.length) {
+        this.state.selectedRaceId = null;
+        this.state.selectedRunnerNo = null;
+        return;
+      }
+      if (!this.raceIdExists(this.state.selectedRaceId)) {
+        this.state.selectedRaceId = this.races[0].id;
+        this.state.selectedRunnerNo = this.races[0].runners[0] ? this.races[0].runners[0].no : null;
+        return;
+      }
+      var race = this.getRace();
+      if (!race || !race.runners || !race.runners.length) return;
+      var found = false;
+      for (var i = 0; i < race.runners.length; i++) {
+        if (race.runners[i].no === this.state.selectedRunnerNo) {
+          found = true;
+          break;
+        }
+      }
+      if (!found) this.state.selectedRunnerNo = race.runners[0].no;
+    },
+
+    saveActiveMeetingToStore: function () {
+      var meetingId = this.activeMeetingId;
+      if (!meetingId) return;
+      var store = this.readMeetingStore();
+      store.activeMeetingId = meetingId;
+      store.meetings[meetingId] = {
+        assessments: this.state.assessments || {},
+        selectedRaceId: this.state.selectedRaceId,
+        selectedRunnerNo: this.state.selectedRunnerNo,
+        meetingLabel: this.state.meetingLabel || "",
+        loadedMeetingPath: this.state.loadedMeetingPath || "",
+        races: this.races || [],
+        tapCount: this.state.tapCount || 0,
+      };
+      this.writeMeetingStore(store);
+    },
+
+    switchToMeeting: function (meetingId, options) {
+      options = options || {};
+      if (!meetingId) {
+        this.state.assessments = options.assessments || {};
+        this.normalizeSelection();
+        return;
+      }
+      if (this.activeMeetingId && this.activeMeetingId !== meetingId) {
+        this.saveActiveMeetingToStore();
+      }
+      this.activeMeetingId = meetingId;
+      var store = this.readMeetingStore();
+      var saved = store.meetings[meetingId];
+
+      if (options.assessments) {
+        this.state.assessments = options.assessments;
+      } else if (saved && saved.assessments) {
+        this.state.assessments = saved.assessments;
+      } else {
+        this.state.assessments = {};
+      }
+
+      if (!options.keepMeetingMeta && saved) {
+        if (saved.meetingLabel) this.state.meetingLabel = saved.meetingLabel;
+        if (saved.loadedMeetingPath) this.state.loadedMeetingPath = saved.loadedMeetingPath;
+      }
+
+      if (!options.keepRaces && saved && saved.races && saved.races.length) {
+        this.races = saved.races;
+      }
+
+      if (!options.keepSelection && saved) {
+        if (saved.selectedRaceId) this.state.selectedRaceId = saved.selectedRaceId;
+        if (saved.selectedRunnerNo != null) this.state.selectedRunnerNo = saved.selectedRunnerNo;
+      }
+
+      if (options.selectedRaceId) this.state.selectedRaceId = options.selectedRaceId;
+      if (options.selectedRunnerNo != null) this.state.selectedRunnerNo = options.selectedRunnerNo;
+
+      this.normalizeSelection();
+      this.gearPickerOpen = null;
+      this.notesRunnerKey = null;
+      this.saveActiveMeetingToStore();
+    },
+
+    migrateLegacyStorage: function () {
+      var store = this.readMeetingStore();
+      if (store.meetings && Object.keys(store.meetings).length > 0) return;
+
+      var legacyAssessments = null;
+      var legacyRaces = null;
+      try {
+        var raw = localStorage.getItem(ASSESSMENTS_KEY);
+        if (raw) legacyAssessments = JSON.parse(raw);
+      } catch (e) {
+        /* ignore */
+      }
+      try {
+        var rawRaces = localStorage.getItem(RACES_KEY);
+        if (rawRaces) legacyRaces = JSON.parse(rawRaces);
+      } catch (e) {
+        /* ignore */
+      }
+      if (!legacyAssessments && !legacyRaces) return;
+
+      var meetingId = this.resolveMeetingId({ skipManifest: false });
+      if (!meetingId) meetingId = "legacy-session";
+
+      store.activeMeetingId = meetingId;
+      store.meetings[meetingId] = {
+        assessments: (legacyAssessments && legacyAssessments.assessments) || {},
+        selectedRaceId: legacyAssessments && legacyAssessments.selectedRaceId,
+        selectedRunnerNo: legacyAssessments && legacyAssessments.selectedRunnerNo,
+        meetingLabel: (legacyAssessments && legacyAssessments.meetingLabel) || "",
+        loadedMeetingPath: (legacyAssessments && legacyAssessments.loadedMeetingPath) || "",
+        races: Array.isArray(legacyRaces) ? legacyRaces : [],
+        tapCount: (legacyAssessments && legacyAssessments.tapCount) || 0,
+      };
+      this.writeMeetingStore(store);
+    },
+
+    persist: function () {
+      this.saveActiveMeetingToStore();
+    },
+
     persistRaces: function () {
+      this.saveActiveMeetingToStore();
       try {
         localStorage.setItem(RACES_KEY, JSON.stringify(this.races));
       } catch (e) {
@@ -253,17 +437,17 @@
 
     loadPersisted: function () {
       try {
-        var raw = localStorage.getItem(ASSESSMENTS_KEY);
-        if (raw) {
-          var parsed = JSON.parse(raw);
-          if (parsed && typeof parsed === "object") {
-            if (parsed.assessments) this.state.assessments = parsed.assessments;
-            if (parsed.selectedRaceId) this.state.selectedRaceId = parsed.selectedRaceId;
-            if (parsed.selectedRunnerNo != null) this.state.selectedRunnerNo = parsed.selectedRunnerNo;
-            if (parsed.tapCount != null) this.state.tapCount = parsed.tapCount;
-            if (parsed.meetingLabel) this.state.meetingLabel = parsed.meetingLabel;
-            if (parsed.loadedMeetingPath) this.state.loadedMeetingPath = parsed.loadedMeetingPath;
-          }
+        var store = this.readMeetingStore();
+        this.activeMeetingId = store.activeMeetingId || "";
+        if (this.activeMeetingId && store.meetings[this.activeMeetingId]) {
+          var saved = store.meetings[this.activeMeetingId];
+          this.state.assessments = saved.assessments || {};
+          this.state.selectedRaceId = saved.selectedRaceId || null;
+          this.state.selectedRunnerNo = saved.selectedRunnerNo;
+          this.state.meetingLabel = saved.meetingLabel || "";
+          this.state.loadedMeetingPath = saved.loadedMeetingPath || "";
+          if (saved.tapCount != null) this.state.tapCount = saved.tapCount;
+          if (saved.races && saved.races.length) this.races = saved.races;
         }
       } catch (e) {
         this.setImportMsg("Load assessments failed: " + e.message);
@@ -271,6 +455,7 @@
     },
 
     loadRaces: function () {
+      if (this.races && this.races.length) return;
       try {
         var raw = localStorage.getItem(RACES_KEY);
         if (raw) {
@@ -478,10 +663,22 @@
     },
 
     buildDownloadedMeetingPackage: function () {
+      var delivery = window.MeetingExportDelivery;
+      var manifest = delivery ? delivery.loadMeetingManifest() : null;
       var meta = this.parseMeetingPathMeta(this.state.loadedMeetingPath);
+      var meetingId =
+        this.activeMeetingId ||
+        this.resolveMeetingId({
+          manifest: manifest,
+          meetingPath: this.state.loadedMeetingPath,
+          date: meta.date,
+          trackName: meta.track,
+        });
       return {
         version: 1,
         downloadedAt: new Date().toISOString(),
+        meetingId: meetingId,
+        manifest: manifest,
         meetingPath: this.state.loadedMeetingPath || "",
         meetingName: this.state.meetingLabel || meta.meetingName,
         track: meta.track,
@@ -527,42 +724,78 @@
       if (!pkg || !pkg.races || !pkg.races.length) {
         throw new Error("Invalid meeting package");
       }
-      var mergedAssessments = {};
-      var pkgAssessments = (pkg.state && pkg.state.assessments) || {};
-      var savedAssessments = this.state.assessments || {};
-      var key;
-      for (key in pkgAssessments) {
-        if (Object.prototype.hasOwnProperty.call(pkgAssessments, key)) {
-          mergedAssessments[key] = pkgAssessments[key];
-        }
-      }
-      for (key in savedAssessments) {
-        if (Object.prototype.hasOwnProperty.call(savedAssessments, key)) {
-          mergedAssessments[key] = savedAssessments[key];
-        }
-      }
       this.races = pkg.races;
       this.state.meetingLabel = pkg.meetingName || (pkg.state && pkg.state.meetingLabel) || "";
       this.state.loadedMeetingPath = pkg.meetingPath || (pkg.state && pkg.state.loadedMeetingPath) || "";
-      this.state.assessments = mergedAssessments;
-      if (pkg.state && pkg.state.selectedRaceId) {
-        this.state.selectedRaceId = pkg.state.selectedRaceId;
-      } else if (pkg.races[0]) {
-        this.state.selectedRaceId = pkg.races[0].id;
-      }
-      if (pkg.state && pkg.state.selectedRunnerNo != null) {
-        this.state.selectedRunnerNo = pkg.state.selectedRunnerNo;
-      } else if (pkg.races[0] && pkg.races[0].runners && pkg.races[0].runners[0]) {
-        this.state.selectedRunnerNo = pkg.races[0].runners[0].no;
-      }
-      this.gearPickerOpen = null;
-      this.downloadedMeetingActive = true;
       this.syncMeetingManifest({
         meetingPath: this.state.loadedMeetingPath,
         trackName: pkg.track || this.state.meetingLabel,
         date: pkg.date || "",
       });
-      this.saveDownloadedMeetingPackage(pkg);
+      var delivery = window.MeetingExportDelivery;
+      var manifest = (pkg.manifest && pkg.manifest.raceNos && pkg.manifest) || (delivery ? delivery.loadMeetingManifest() : null);
+      var meetingId =
+        pkg.meetingId ||
+        this.resolveMeetingId({
+          manifest: manifest,
+          meetingPath: this.state.loadedMeetingPath,
+          date: pkg.date || "",
+          trackName: pkg.track || "",
+        });
+      var pkgAssessments = (pkg.state && pkg.state.assessments) || {};
+      var mergedAssessments = {};
+      var key;
+      if (meetingId) {
+        var store = this.readMeetingStore();
+        var saved = store.meetings[meetingId] ? store.meetings[meetingId] : null;
+        if (saved && saved.assessments) {
+          for (key in saved.assessments) {
+            if (Object.prototype.hasOwnProperty.call(saved.assessments, key)) {
+              mergedAssessments[key] = saved.assessments[key];
+            }
+          }
+        }
+        for (key in pkgAssessments) {
+          if (Object.prototype.hasOwnProperty.call(pkgAssessments, key)) {
+            mergedAssessments[key] = pkgAssessments[key];
+          }
+        }
+      } else {
+        for (key in pkgAssessments) {
+          if (Object.prototype.hasOwnProperty.call(pkgAssessments, key)) {
+            mergedAssessments[key] = pkgAssessments[key];
+          }
+        }
+        if (this.activeMeetingId) this.saveActiveMeetingToStore();
+        this.activeMeetingId = "";
+      }
+      var selectedRaceId =
+        (pkg.state && pkg.state.selectedRaceId) || (pkg.races[0] && pkg.races[0].id) || null;
+      var selectedRunnerNo =
+        pkg.state && pkg.state.selectedRunnerNo != null
+          ? pkg.state.selectedRunnerNo
+          : pkg.races[0] && pkg.races[0].runners && pkg.races[0].runners[0]
+            ? pkg.races[0].runners[0].no
+            : null;
+      if (meetingId) {
+        this.switchToMeeting(meetingId, {
+          assessments: mergedAssessments,
+          keepRaces: true,
+          keepMeetingMeta: true,
+          selectedRaceId: selectedRaceId,
+          selectedRunnerNo: selectedRunnerNo,
+        });
+      } else {
+        this.state.assessments = mergedAssessments;
+        this.state.selectedRaceId = selectedRaceId;
+        this.state.selectedRunnerNo = selectedRunnerNo;
+        this.normalizeSelection();
+        this.gearPickerOpen = null;
+        this.notesRunnerKey = null;
+      }
+      this.downloadedMeetingActive = true;
+      var savedPkg = this.buildDownloadedMeetingPackage();
+      this.saveDownloadedMeetingPackage(savedPkg);
       if (!options.silent) this.showAssess();
       else this.render();
       this.updateDownloadedBadge();
@@ -679,12 +912,33 @@
       if (!window.confirm("Clear meeting?\nThis cannot be undone.")) {
         return;
       }
+      var meetingId = this.activeMeetingId;
       try {
-        localStorage.removeItem(DOWNLOADED_MEETING_KEY);
+        if (meetingId) {
+          var store = this.readMeetingStore();
+          delete store.meetings[meetingId];
+          if (store.activeMeetingId === meetingId) store.activeMeetingId = "";
+          this.writeMeetingStore(store);
+        }
+        var pkg = this.readDownloadedMeetingPackage();
+        if (pkg) {
+          var pkgMeetingId =
+            pkg.meetingId ||
+            this.resolveMeetingId({
+              manifest: pkg.manifest,
+              meetingPath: pkg.meetingPath || "",
+              date: pkg.date || "",
+              trackName: pkg.track || "",
+            });
+          if (!meetingId || !pkgMeetingId || pkgMeetingId === meetingId) {
+            localStorage.removeItem(DOWNLOADED_MEETING_KEY);
+          }
+        }
         localStorage.removeItem(RACES_KEY);
       } catch (e) {
         /* ignore */
       }
+      this.activeMeetingId = "";
       this.races = [];
       this.gearPickerOpen = null;
       this.notesRunnerKey = null;
@@ -695,7 +949,6 @@
       this.state.loadedMeetingPath = "";
       this.state.selectedRaceId = null;
       this.state.selectedRunnerNo = null;
-      this.persist();
       this.updateDownloadedBadge();
       this.updateMeetingToolbar();
       this.setText("iy-meeting-label", "");
@@ -752,7 +1005,13 @@
     },
 
     hasStoredRaces: function () {
+      if (this.races && this.races.length) return true;
       try {
+        var store = this.readMeetingStore();
+        if (store.activeMeetingId && store.meetings[store.activeMeetingId]) {
+          var saved = store.meetings[store.activeMeetingId];
+          if (saved.races && saved.races.length) return true;
+        }
         var raw = localStorage.getItem(RACES_KEY);
         if (!raw) return false;
         var parsed = JSON.parse(raw);
@@ -1736,10 +1995,14 @@
       var delivery = window.MeetingExportDelivery;
       var manifest = this.syncMeetingManifest();
       if (!manifest && delivery) manifest = delivery.loadMeetingManifest();
+      var meetingId =
+        this.activeMeetingId ||
+        this.resolveMeetingId({ manifest: manifest, meetingPath: this.state.loadedMeetingPath });
       return {
         kind: "mounting-yard-yard-package",
         version: 1,
         exportedAt: new Date().toISOString(),
+        meetingId: meetingId,
         manifest: manifest,
         meetingLabel: this.state.meetingLabel,
         loadedMeetingPath: this.state.loadedMeetingPath,
@@ -1757,21 +2020,7 @@
       if (!this.isValidAssessmentSyncPackage(pkg)) {
         throw new Error("Invalid assessment package — export from Export Assessment Package");
       }
-      var merged = {};
-      var key;
-      for (key in this.state.assessments) {
-        if (Object.prototype.hasOwnProperty.call(this.state.assessments, key)) {
-          merged[key] = this.state.assessments[key];
-        }
-      }
-      var incoming = pkg.assessments || {};
-      for (key in incoming) {
-        if (Object.prototype.hasOwnProperty.call(incoming, key)) {
-          merged[key] = incoming[key];
-        }
-      }
       this.races = pkg.races;
-      this.state.assessments = merged;
       this.state.meetingLabel =
         pkg.meetingLabel ||
         (pkg.manifest && pkg.manifest.meetingLabel) ||
@@ -1791,16 +2040,45 @@
           meetingLabel: this.state.meetingLabel,
         });
       }
-      if (pkg.state && pkg.state.selectedRaceId) {
-        this.state.selectedRaceId = pkg.state.selectedRaceId;
-      } else if (this.races[0]) {
-        this.state.selectedRaceId = this.races[0].id;
+      var manifest = pkg.manifest || (delivery ? delivery.loadMeetingManifest() : null);
+      var meetingId =
+        pkg.meetingId ||
+        this.resolveMeetingId({
+          manifest: manifest,
+          meetingPath: this.state.loadedMeetingPath,
+        });
+      var store = this.readMeetingStore();
+      var saved = meetingId && store.meetings[meetingId] ? store.meetings[meetingId] : null;
+      var merged = {};
+      var key;
+      if (saved && saved.assessments) {
+        for (key in saved.assessments) {
+          if (Object.prototype.hasOwnProperty.call(saved.assessments, key)) {
+            merged[key] = saved.assessments[key];
+          }
+        }
       }
-      if (pkg.state && pkg.state.selectedRunnerNo != null) {
-        this.state.selectedRunnerNo = pkg.state.selectedRunnerNo;
-      } else if (this.races[0] && this.races[0].runners && this.races[0].runners[0]) {
-        this.state.selectedRunnerNo = this.races[0].runners[0].no;
+      var incoming = pkg.assessments || {};
+      for (key in incoming) {
+        if (Object.prototype.hasOwnProperty.call(incoming, key)) {
+          merged[key] = incoming[key];
+        }
       }
+      var selectedRaceId =
+        (pkg.state && pkg.state.selectedRaceId) || (this.races[0] && this.races[0].id) || null;
+      var selectedRunnerNo =
+        pkg.state && pkg.state.selectedRunnerNo != null
+          ? pkg.state.selectedRunnerNo
+          : this.races[0] && this.races[0].runners && this.races[0].runners[0]
+            ? this.races[0].runners[0].no
+            : null;
+      this.switchToMeeting(meetingId, {
+        assessments: merged,
+        keepRaces: true,
+        keepMeetingMeta: true,
+        selectedRaceId: selectedRaceId,
+        selectedRunnerNo: selectedRunnerNo,
+      });
       this.gearPickerOpen = null;
       this.persistRaces();
       this.persist();
@@ -2152,6 +2430,20 @@
       if (syncedManifest && syncedManifest.meetingLabel) {
         this.state.meetingLabel = syncedManifest.meetingLabel;
       }
+      var meetingId = this.resolveMeetingId({
+        manifest: syncedManifest,
+        meetingPath: options.meetingPath || this.state.loadedMeetingPath,
+        date: options.date || "",
+        trackName: options.trackName || "",
+      });
+      if (meetingId) {
+        this.switchToMeeting(meetingId, { keepRaces: true, keepMeetingMeta: true });
+      } else {
+        if (this.activeMeetingId) this.saveActiveMeetingToStore();
+        this.activeMeetingId = "";
+        this.state.assessments = {};
+        this.normalizeSelection();
+      }
       if (options.directoryHandle && window.MeetingExportDelivery) {
         var manifest = window.MeetingExportDelivery.loadMeetingManifest();
         if (manifest && manifest.meetingKey) {
@@ -2171,6 +2463,7 @@
     },
 
     init: function () {
+      this.migrateLegacyStorage();
       this.loadPersisted();
       this.loadRaces();
       this.loadManifestLabel();

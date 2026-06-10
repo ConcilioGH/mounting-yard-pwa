@@ -31,6 +31,7 @@ export function buildIpadYardDomHtml(): string {
     sweatLegend: SWEAT_LEGEND,
     sweatPosKey: SWEAT_POS_KEY,
     assessmentsKey: "ipad-yard-assessments",
+    meetingStoreKey: "ipad-yard-meeting-store-v2",
     racesKey: "ipad-yard-races-v1",
     downloadedMeetingKey: "ipad-yard-downloaded-meeting-v1",
     manifestKey: MEETING_MANIFEST_STORAGE_KEY,
