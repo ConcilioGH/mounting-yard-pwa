@@ -35,7 +35,13 @@ import {
   formatMeetingDisplayLabel,
   importMeetingFromCsv,
   loadMeetingManifest,
+  MEETING_IMPORTED_EVENT,
+  MEETING_MANIFEST_STORAGE_KEY,
 } from "@/lib/meeting-coordination";
+import {
+  ensureActiveMeetingSynced,
+  racesMatchManifest,
+} from "@/lib/active-meeting-session";
 import { YardNextRaceCountdown } from "@/components/yard-next-race-countdown";
 import { applyGearTileSelection, type GearTileCode } from "@/lib/gear";
 import type { Assessment, Race, Runner, WetBodyType, WetFeet } from "@/lib/types";
@@ -372,18 +378,25 @@ function MountingYardModernApp() {
         return;
       }
       await seedRacesIfEmpty();
+      await ensureActiveMeetingSynced();
+      const manifest = loadMeetingManifest();
       const [loadedRaces, loadedAssessments] = await Promise.all([
         loadAllRaces(),
         loadAllAssessments(),
       ]);
       applyMeetingManifest();
-      if (loadedRaces.length && !userInteractedRef.current) {
+      const racesOk = manifest ? racesMatchManifest(loadedRaces, manifest) : loadedRaces.length > 0;
+      if (loadedRaces.length && racesOk && !userInteractedRef.current) {
         setRaces(loadedRaces);
         const first = loadedRaces[0];
         setRaceId(first.id);
         setSelectedRunner(first.runners[0]?.no ?? 1);
+      } else if (manifest && !racesOk && !userInteractedRef.current) {
+        setRaces([]);
+        dataRef.current = {};
+        setData({});
       }
-      if (!userInteractedRef.current) {
+      if (!userInteractedRef.current && racesOk) {
         dataRef.current = loadedAssessments;
         setData(loadedAssessments);
       }
@@ -420,6 +433,35 @@ function MountingYardModernApp() {
     return () => {
       cancelled = true;
       window.clearTimeout(safetyTimer);
+    };
+  }, []);
+
+  useEffect(() => {
+    const refreshFromSharedMeeting = () => {
+      void (async () => {
+        await ensureActiveMeetingSynced();
+        const manifest = loadMeetingManifest();
+        setMeetingLabel(formatMeetingDisplayLabel(manifest));
+        setMeetingDate(manifest?.date ?? "");
+        if (shouldSkipIndexedDB()) return;
+        const loadedRaces = await loadAllRaces();
+        if (manifest && racesMatchManifest(loadedRaces, manifest)) {
+          setRaces(loadedRaces);
+          setRaceId(loadedRaces[0]!.id);
+          setSelectedRunner(loadedRaces[0]!.runners[0]?.no ?? 1);
+        }
+      })();
+    };
+    window.addEventListener(MEETING_IMPORTED_EVENT, refreshFromSharedMeeting);
+    const onStorage = (event: StorageEvent) => {
+      if (event.key === MEETING_MANIFEST_STORAGE_KEY) {
+        refreshFromSharedMeeting();
+      }
+    };
+    window.addEventListener("storage", onStorage);
+    return () => {
+      window.removeEventListener(MEETING_IMPORTED_EVENT, refreshFromSharedMeeting);
+      window.removeEventListener("storage", onStorage);
     };
   }, []);
 

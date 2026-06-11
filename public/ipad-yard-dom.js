@@ -11,6 +11,9 @@
   var DOWNLOADED_MEETING_KEY = cfg.downloadedMeetingKey || "ipad-yard-downloaded-meeting-v1";
   var LIBRARY_CACHE_KEY = "ipad-yard-library-cache-v1";
   var MANIFEST_KEY = cfg.manifestKey || "mounting-yard-meeting-manifest-v1";
+  var LAST_MEETING_CSV_KEY = "mounting-yard-last-meeting-csv-v1";
+  var LAST_MEETING_CSV_META_KEY = "mounting-yard-last-meeting-csv-meta-v1";
+  var MEETING_IMPORTED_EVENT = "mounting-yard-meeting-imported";
   var GEAR_TILES = cfg.gearTiles || [];
   var WET_TILE = cfg.wetTile || { code: "WET", label: "Wet Suitability" };
   var WET_BODY_TYPES = cfg.wetBodyTypes || [];
@@ -637,6 +640,35 @@
         fileName: options.fileName || rawPath,
         directoryName: options.directoryName || "",
       });
+    },
+
+    cacheDesktopMeetingCsv: function (text, options) {
+      options = options || {};
+      try {
+        localStorage.setItem(LAST_MEETING_CSV_KEY, text);
+        localStorage.setItem(
+          LAST_MEETING_CSV_META_KEY,
+          JSON.stringify({
+            fileName: options.fileName || "",
+            importPath: options.importPath || options.meetingPath || "",
+            meetingFolderPath: options.meetingFolderPath || "",
+            directoryName: options.directoryName || "",
+            trackName: options.trackName || "",
+            date: options.date || "",
+          }),
+        );
+      } catch (e) {
+        /* ignore */
+      }
+    },
+
+    notifyDesktopMeetingImported: function () {
+      if (typeof window === "undefined" || !window.dispatchEvent) return;
+      try {
+        window.dispatchEvent(new CustomEvent(MEETING_IMPORTED_EVENT));
+      } catch (e) {
+        /* ignore */
+      }
     },
 
     wetBodyLabel: function (value) {
@@ -2565,6 +2597,15 @@
       }
       this.persistRaces();
       this.persist();
+      this.cacheDesktopMeetingCsv(text, {
+        fileName: options.fileName || fileName || "",
+        importPath: options.meetingPath || "",
+        meetingFolderPath: options.meetingPath || "",
+        directoryName: options.directoryName || "",
+        trackName: options.trackName || "",
+        date: options.date || "",
+      });
+      this.notifyDesktopMeetingImported();
       if (options.switchToAssess) this.showAssess();
       else this.render();
       this.setImportMsg("Loaded " + races.length + " races (saved locally on iPad).");

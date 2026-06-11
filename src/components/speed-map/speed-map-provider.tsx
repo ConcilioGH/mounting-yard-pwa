@@ -12,11 +12,19 @@ import {
 } from "react";
 import {
   emptySpeedMapSession,
-  loadSpeedMapFromStorage,
   saveSpeedMapToStorage,
   type SpeedMapSessionState,
 } from "@/lib/speed-map-persistence";
-import { MEETING_IMPORTED_EVENT } from "@/lib/meeting-coordination";
+import {
+  MEETING_IMPORTED_EVENT,
+  MEETING_MANIFEST_STORAGE_KEY,
+  loadMeetingManifest,
+} from "@/lib/meeting-coordination";
+import {
+  ensureActiveMeetingSynced,
+  emptySpeedMapSessionForManifest,
+  loadSpeedMapSessionForManifest,
+} from "@/lib/active-meeting-session";
 import { reconcileSpeedMapActivePlacement } from "@/lib/meeting-speed-map-sync";
 import { clearSpeedMapLocalStorage } from "@/lib/speed-map-storage";
 import type { RaceMapStateEntry } from "@/lib/speed-map";
@@ -56,35 +64,64 @@ export function SpeedMapProvider({ children }: { children: ReactNode }) {
   const markStageRef = useRef(hydrationStage?.markStage);
   markStageRef.current = hydrationStage?.markStage;
 
+  const applyManifestSession = useCallback(() => {
+    const manifest = loadMeetingManifest();
+    const loaded = loadSpeedMapSessionForManifest(manifest);
+    if (loaded) {
+      setSession(traceSync("speed-map-session-reconcile", () => reconcileSpeedMapActivePlacement(loaded)));
+      return;
+    }
+    if (manifest) {
+      setSession(emptySpeedMapSessionForManifest(manifest));
+      return;
+    }
+    setSession(emptySpeedMapSession());
+  }, []);
+
   useEffect(() => {
     logLoadingState("SpeedMapProvider", true, "hydrated=false");
     markStageRef.current?.("B", "SpeedMapProvider mounted");
 
-    try {
-      const loaded = loadSpeedMapFromStorage();
-      if (loaded) {
-        setSession(
-          traceSync("speed-map-session-reconcile", () => reconcileSpeedMapActivePlacement(loaded)),
-        );
-      }
-      markStageRef.current?.("C", "localStorage read complete");
-    } catch (error) {
-      reportStartupFailure("speed-map-provider-hydrate", error);
-      console.error("Failed to hydrate speed map session", error);
-    } finally {
-      logLoadingState("SpeedMapProvider", false, "hydrated=true");
-      setHydrated(true);
-    }
-  }, []);
+    let cancelled = false;
+    void ensureActiveMeetingSynced()
+      .then(() => {
+        if (cancelled) return;
+        applyManifestSession();
+        markStageRef.current?.("C", "localStorage read complete");
+      })
+      .catch((error) => {
+        if (cancelled) return;
+        reportStartupFailure("speed-map-provider-hydrate", error);
+        console.error("Failed to hydrate speed map session", error);
+        applyManifestSession();
+      })
+      .finally(() => {
+        if (cancelled) return;
+        logLoadingState("SpeedMapProvider", false, "hydrated=true");
+        setHydrated(true);
+      });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [applyManifestSession]);
 
   useEffect(() => {
     const onMeetingImported = () => {
-      const loaded = loadSpeedMapFromStorage();
-      if (loaded) setSession(reconcileSpeedMapActivePlacement(loaded));
+      void ensureActiveMeetingSynced().then(() => applyManifestSession());
     };
     window.addEventListener(MEETING_IMPORTED_EVENT, onMeetingImported);
-    return () => window.removeEventListener(MEETING_IMPORTED_EVENT, onMeetingImported);
-  }, []);
+    const onStorage = (event: StorageEvent) => {
+      if (event.key === MEETING_MANIFEST_STORAGE_KEY) {
+        void ensureActiveMeetingSynced().then(() => applyManifestSession());
+      }
+    };
+    window.addEventListener("storage", onStorage);
+    return () => {
+      window.removeEventListener(MEETING_IMPORTED_EVENT, onMeetingImported);
+      window.removeEventListener("storage", onStorage);
+    };
+  }, [applyManifestSession]);
 
   const persistNow = useCallback((statusMessage?: string) => {
     saveSpeedMapToStorage(sessionRef.current);
@@ -100,7 +137,8 @@ export function SpeedMapProvider({ children }: { children: ReactNode }) {
   }, [session, hydrated]);
 
   const loadFromStorage = useCallback(() => {
-    const loaded = loadSpeedMapFromStorage();
+    const manifest = loadMeetingManifest();
+    const loaded = loadSpeedMapSessionForManifest(manifest);
     if (!loaded) return false;
     setSession(loaded);
     return true;

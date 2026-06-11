@@ -25,6 +25,49 @@ import {
 import type { RaceBiasEntry, RaceDayBiasState } from "@/lib/race-day-bias/types";
 
 export const MEETING_MANIFEST_STORAGE_KEY = "mounting-yard-meeting-manifest-v1";
+export const LAST_MEETING_CSV_STORAGE_KEY = "mounting-yard-last-meeting-csv-v1";
+export const LAST_MEETING_CSV_META_STORAGE_KEY = "mounting-yard-last-meeting-csv-meta-v1";
+
+export type LastMeetingCsvMeta = {
+  fileName?: string;
+  importPath?: string;
+  meetingFolderPath?: string;
+  directoryName?: string;
+  trackName?: string;
+  date?: string;
+};
+
+export function saveLastMeetingCsvImport(text: string, meta?: LastMeetingCsvMeta): void {
+  if (typeof localStorage === "undefined") return;
+  try {
+    localStorage.setItem(LAST_MEETING_CSV_STORAGE_KEY, text);
+    if (meta) {
+      localStorage.setItem(LAST_MEETING_CSV_META_STORAGE_KEY, JSON.stringify(meta));
+    }
+  } catch {
+    /* ignore quota errors */
+  }
+}
+
+export function loadLastMeetingCsvImport(): { text: string; options: ImportMeetingOptions } | null {
+  if (typeof localStorage === "undefined") return null;
+  try {
+    const text = localStorage.getItem(LAST_MEETING_CSV_STORAGE_KEY);
+    if (!text?.trim()) return null;
+    const rawMeta = localStorage.getItem(LAST_MEETING_CSV_META_STORAGE_KEY);
+    const meta = rawMeta ? (JSON.parse(rawMeta) as LastMeetingCsvMeta) : {};
+    return {
+      text,
+      options: {
+        fileName: meta.fileName,
+        importPath: meta.importPath,
+        meetingFolderPath: meta.meetingFolderPath,
+      },
+    };
+  } catch {
+    return null;
+  }
+}
 
 /** Fired after a meeting CSV import syncs all modules. */
 export const MEETING_IMPORTED_EVENT = "mounting-yard-meeting-imported";
@@ -224,7 +267,7 @@ export async function importMeetingFromCsv(
     folderFromPath?.track ||
     folderFromDir?.track ||
     fromMasterName?.track ||
-    sanitizeMeetingSlug(parsed.meta.trackName.trim() || fileTrack || existingManifest?.trackSlug || "") ||
+    sanitizeMeetingSlug(parsed.meta.trackName.trim() || fileTrack || "") ||
     "meeting";
 
   const date =
@@ -233,14 +276,12 @@ export async function importMeetingFromCsv(
     fromMasterName?.date ||
     parsed.meta.date.trim() ||
     fileDate ||
-    existingManifest?.date ||
     new Date().toISOString().slice(0, 10);
 
   const trackName =
     parsed.meta.trackName.trim() ||
     fileTrack ||
-    trackSlug ||
-    existingManifest?.trackName ||
+    (trackSlug !== "meeting" ? trackSlug.replace(/-/g, " ") : "") ||
     "";
 
   const meetingFolderPath =
@@ -253,7 +294,6 @@ export async function importMeetingFromCsv(
       track: trackSlug,
       date,
     }) ||
-    existingManifest?.meetingFolderPath ||
     "";
 
   await saveRaces(parsed.races);
@@ -284,6 +324,15 @@ export async function importMeetingFromCsv(
     meetingLabel: trackName,
   });
   syncSpeedMapOnMeetingImport(parsed, { sameMeeting, meetingKey });
+
+  saveLastMeetingCsvImport(text, {
+    fileName: options?.fileName,
+    importPath: options?.importPath,
+    meetingFolderPath: options?.meetingFolderPath,
+    directoryName: options?.directoryHandle?.name,
+    trackName,
+    date,
+  });
 
   if (typeof window !== "undefined") {
     window.dispatchEvent(new CustomEvent(MEETING_IMPORTED_EVENT));

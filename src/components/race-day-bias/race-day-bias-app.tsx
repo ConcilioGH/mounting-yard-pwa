@@ -15,7 +15,6 @@ import { sanitizePositionCodeInput } from "@/lib/race-day-bias/lane";
 import { parseSp, sanitizeSpInput } from "@/lib/race-day-bias/sp";
 import {
   isBiasStorageKey,
-  loadRaceDayBiasState,
   loadRaceDayBiasStateForMeeting,
   logBiasStorageDebug,
   removeLegacyBiasStorageKeys,
@@ -26,6 +25,10 @@ import {
   MEETING_IMPORTED_EVENT,
   MEETING_MANIFEST_STORAGE_KEY,
 } from "@/lib/meeting-coordination";
+import {
+  ensureActiveMeetingSynced,
+  loadBiasStateForManifest,
+} from "@/lib/active-meeting-session";
 import type { ApplyResultsSpReport } from "@/lib/race-day-bias/apply-results-sp";
 import type { FinisherSlot, PositionField, RaceDayBiasState } from "@/lib/race-day-bias/types";
 import { cn } from "@/lib/utils";
@@ -80,13 +83,11 @@ const biasModalCancelButtonClass = cn(
 );
 
 export default function RaceDayBiasApp() {
-  const [state, setState] = useState<RaceDayBiasState>(() => {
-    try {
-      return loadRaceDayBiasState();
-    } catch (error) {
-      return { meetingLabel: "", races: [], updatedAt: new Date().toISOString() };
-    }
-  });
+  const [state, setState] = useState<RaceDayBiasState>(() => ({
+    meetingLabel: "",
+    races: [],
+    updatedAt: new Date().toISOString(),
+  }));
   const [saveState, setSaveState] = useState<"idle" | "saving" | "saved">("idle");
   const [editingCell, setEditingCell] = useState<CellKey | null>(null);
   const [draft, setDraft] = useState<FinisherSlot>({ positionCode: "", sp: "" });
@@ -122,31 +123,33 @@ export default function RaceDayBiasApp() {
       }
     };
 
-    const refreshBiasState = () => {
+    const refreshBiasState = async () => {
       try {
         removeLegacyBiasStorageKeys();
         logStartupStep("meeting-load:start");
+        await ensureActiveMeetingSynced();
         const manifest = loadMeetingManifest();
         logStartupStep("meeting-load:end", {
           hasManifest: Boolean(manifest),
           meetingId: manifest?.meetingId ?? null,
         });
         if (!manifest?.meetingId) {
-          setState({ meetingLabel: "", races: [], updatedAt: new Date().toISOString() });
+          if (!cancelled) {
+            setState({ meetingLabel: "", races: [], updatedAt: new Date().toISOString() });
+          }
           return;
         }
-        const { state: loaded, biasKey, loadedExisting, meetingId } = loadRaceDayBiasStateForMeeting(
-          manifest.meetingId,
-        );
+        const loaded = loadBiasStateForManifest(manifest);
+        const { biasKey, loadedExisting, meetingId } = loadRaceDayBiasStateForMeeting(manifest.meetingId);
         logBiasStorageDebug(meetingId, biasKey, loadedExisting, loaded.races.length);
-        setState(loaded);
+        if (!cancelled) setState(loaded);
       } catch (error) {
         reportStartupFailure("race-day-bias-state-load", error);
       }
     };
 
     const refresh = () => {
-      refreshBiasState();
+      void refreshBiasState();
       void refreshFieldSizes();
     };
 
