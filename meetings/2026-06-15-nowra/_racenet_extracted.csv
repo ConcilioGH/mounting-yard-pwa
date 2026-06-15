@@ -1,0 +1,73 @@
+race_no,race_name,start_time,distance,track,grade,going,rail,no,horse,horse_name,name,barrier,trainer,jockey,weight,odds,scratched
+1,12:35 pm South Coast Retreat Class 3 Handicap,12:35 pm,1100m,Nowra,Class 3,Heavy 8,True,2,Bode Akuna,Bode Akuna,Bode Akuna,6,Jason Coyle,Jessica Taylor,59.5kg,$4.4,false
+1,12:35 pm South Coast Retreat Class 3 Handicap,12:35 pm,1100m,Nowra,Class 3,Heavy 8,True,3,Overtook,Overtook,Overtook,2,Ciaron Maher,Louise Day,57kg,$5.5,false
+1,12:35 pm South Coast Retreat Class 3 Handicap,12:35 pm,1100m,Nowra,Class 3,Heavy 8,True,5,Voltage Lass,Voltage Lass,Voltage Lass,1,Danielle Seib,Pierre Boudvillain,56.5kg,$2.4,false
+1,12:35 pm South Coast Retreat Class 3 Handicap,12:35 pm,1100m,Nowra,Class 3,Heavy 8,True,6,Bivacco,Bivacco,Bivacco,5,Ciaron Maher,Keagan Latham (a0.5),55.5kg,$5,false
+1,12:35 pm South Coast Retreat Class 3 Handicap,12:35 pm,1100m,Nowra,Class 3,Heavy 8,True,7,Casino Shaw,Casino Shaw,Casino Shaw,7,Shaun Coady,Amy McLucas,55kg,$6,false
+1,12:35 pm South Coast Retreat Class 3 Handicap,12:35 pm,1100m,Nowra,Class 3,Heavy 8,True,8,Starlight Nation,Starlight Nation,Starlight Nation,8,Amanda Turner,Winona Costin,55kg,$34,false
+1,12:35 pm South Coast Retreat Class 3 Handicap,12:35 pm,1100m,Nowra,Class 3,Heavy 8,True,1,Margin Call,Margin Call,Margin Call,3,Ciaron Maher,Adam Farragher,61kg,SCR,true
+1,12:35 pm South Coast Retreat Class 3 Handicap,12:35 pm,1100m,Nowra,Class 3,Heavy 8,True,4,Maz Kanata,Maz Kanata,Maz Kanata,4,,Jason Coyle,56.5kg,SCR,true
+2,1:10 pm Kel Campbell Fuel Haulage Country Boosted Maiden Plate,1:10 pm,1100m,Nowra,Maiden,Heavy 8,True,3,Vertebra,Vertebra,Vertebra,8,Joe Cleary,Quayde Krogh,59kg,$16,false
+2,1:10 pm Kel Campbell Fuel Haulage Country Boosted Maiden Plate,1:10 pm,1100m,Nowra,Maiden,Heavy 8,True,4,Loujen Francaise,Loujen Francaise,Loujen Francaise,1,John Morrison,Emma Ly (a-2),57kg,$201,false
+2,1:10 pm Kel Campbell Fuel Haulage Country Boosted Maiden Plate,1:10 pm,1100m,Nowra,Maiden,Heavy 8,True,5,Novel Attraction,Novel Attraction,Novel Attraction,3,Gary Crossley Rebecca,Bronett Prag,57kg,$31,false
+2,1:10 pm Kel Campbell Fuel Haulage Country Boosted Maiden Plate,1:10 pm,1100m,Nowra,Maiden,Heavy 8,True,6,Roselily,Roselily,Roselily,2,Scott Collings,Louise Day,57kg,$11,false
+2,1:10 pm Kel Campbell Fuel Haulage Country Boosted Maiden Plate,1:10 pm,1100m,Nowra,Maiden,Heavy 8,True,7,This Ain't Texas,This Ain't Texas,This Ain't Texas,6,Matthew Dale,Keagan Latham,57kg,$2.7,false
+2,1:10 pm Kel Campbell Fuel Haulage Country Boosted Maiden Plate,1:10 pm,1100m,Nowra,Maiden,Heavy 8,True,8,Kathleen's Prayer,Kathleen's Prayer,Kathleen's Prayer,4,Norm Gardner,Sairyn Fawke,55kg,$10,false
+2,1:10 pm Kel Campbell Fuel Haulage Country Boosted Maiden Plate,1:10 pm,1100m,Nowra,Maiden,Heavy 8,True,9,Red Rocquette,Red Rocquette,Red Rocquette,7,Scott Collings,Blaike McDougall (a1),55kg,$1.8,false
+2,1:10 pm Kel Campbell Fuel Haulage Country Boosted Maiden Plate,1:10 pm,1100m,Nowra,Maiden,Heavy 8,True,1,Glenn's Legacy,Glenn's Legacy,Glenn's Legacy,5,Danny Williams,Adrian Layt,59kg,SCR,true
+2,1:10 pm Kel Campbell Fuel Haulage Country Boosted Maiden Plate,1:10 pm,1100m,Nowra,Maiden,Heavy 8,True,2,Smolenski,Smolenski,Smolenski,9,,Scott Collings,59kg,SCR,true
+3,1:50 pm Carpet Court Maiden Plate,1:50 pm,1200m,Nowra,Maiden,Heavy 8,True,2,Beyond Reach,Beyond Reach,Beyond Reach,2,Robert & Luke Price,Jay Ford,59kg,$17,false
+3,1:50 pm Carpet Court Maiden Plate,1:50 pm,1200m,Nowra,Maiden,Heavy 8,True,3,Final Spirit,Final Spirit,Final Spirit,3,Theresa Bateup,Jessica Taylor,59kg,$6.5,false
+3,1:50 pm Carpet Court Maiden Plate,1:50 pm,1200m,Nowra,Maiden,Heavy 8,True,4,Gold Earth,Gold Earth,Gold Earth,9,Tommy Wong,Jeff Penza,59kg,$4.6,false
+3,1:50 pm Carpet Court Maiden Plate,1:50 pm,1200m,Nowra,Maiden,Heavy 8,True,6,Russian Reign,Russian Reign,Russian Reign,10,Richard Litt Jean,Van Overmeire,59kg,$23,false
+3,1:50 pm Carpet Court Maiden Plate,1:50 pm,1200m,Nowra,Maiden,Heavy 8,True,9,Grand Carousel,Grand Carousel,Grand Carousel,5,Mitchell Beer & George Carpenter,Adam Farragher,57kg,$3.1,false
+3,1:50 pm Carpet Court Maiden Plate,1:50 pm,1200m,Nowra,Maiden,Heavy 8,True,10,Rockthevelio,Rockthevelio,Rockthevelio,1,David Pfieffer,Alysha Collett,57kg,$2.4,false
+3,1:50 pm Carpet Court Maiden Plate,1:50 pm,1200m,Nowra,Maiden,Heavy 8,True,1,Bellagio Beach,Bellagio Beach,Bellagio Beach,6,Amanda Turner,Olivia Chambers,59kg,SCR,true
+3,1:50 pm Carpet Court Maiden Plate,1:50 pm,1200m,Nowra,Maiden,Heavy 8,True,5,Pariah Time,Pariah Time,Pariah Time,11,Mitchell Beer &,George Carpenter,59kg,SCR,true
+3,1:50 pm Carpet Court Maiden Plate,1:50 pm,1200m,Nowra,Maiden,Heavy 8,True,7,Smichov,Smichov,Smichov,8,Jarrod Austin,Louise Day,59kg,SCR,true
+3,1:50 pm Carpet Court Maiden Plate,1:50 pm,1200m,Nowra,Maiden,Heavy 8,True,8,Zougotme,Zougotme,Zougotme,4,Robert & Luke Price,Brock Ryan,59kg,SCR,true
+3,1:50 pm Carpet Court Maiden Plate,1:50 pm,1200m,Nowra,Maiden,Heavy 8,True,11,Moncel,Moncel,Moncel,7,Annabel & Rob Archibald,Mollie Fitzgerald,56.5kg,SCR,true
+4,2:25 pm Tige's Tiles Maiden Handicap,2:25 pm,1400m,Nowra,Maiden,Heavy 8,True,1,Feazabeel,Feazabeel,Feazabeel,7,Annabel & Rob Archibald,Mollie Fitzgerald,59kg,$3,false
+4,2:25 pm Tige's Tiles Maiden Handicap,2:25 pm,1400m,Nowra,Maiden,Heavy 8,True,2,Royal And Ready,Royal And Ready,Royal And Ready,5,Matthew Smith,Andrew Calder,59kg,$2.9,false
+4,2:25 pm Tige's Tiles Maiden Handicap,2:25 pm,1400m,Nowra,Maiden,Heavy 8,True,3,Rouladen,Rouladen,Rouladen,9,Mitchell Beer & George Carpenter,Robyn Freeman,58.5kg,$6.5,false
+4,2:25 pm Tige's Tiles Maiden Handicap,2:25 pm,1400m,Nowra,Maiden,Heavy 8,True,4,Arizona Loner,Arizona Loner,Arizona Loner,2,John Thompson,Brock Ryan,58kg,$4.4,false
+4,2:25 pm Tige's Tiles Maiden Handicap,2:25 pm,1400m,Nowra,Maiden,Heavy 8,True,5,Atossa,Atossa,Atossa,10,Theresa Bateup,Amy McLucas,57kg,$21,false
+4,2:25 pm Tige's Tiles Maiden Handicap,2:25 pm,1400m,Nowra,Maiden,Heavy 8,True,7,Flying Giselle,Flying Giselle,Flying Giselle,8,Marc & Mitchell Conners,Deanne Panya,55kg,$14,false
+4,2:25 pm Tige's Tiles Maiden Handicap,2:25 pm,1400m,Nowra,Maiden,Heavy 8,True,9,Goddess Minerva,Goddess Minerva,Goddess Minerva,6,Terry Robinson,Jeff Penza,55kg,$27,false
+4,2:25 pm Tige's Tiles Maiden Handicap,2:25 pm,1400m,Nowra,Maiden,Heavy 8,True,10,Medieval Mayhem,Medieval Mayhem,Medieval Mayhem,1,Graham Brown,Sairyn Fawke,55kg,$151,false
+4,2:25 pm Tige's Tiles Maiden Handicap,2:25 pm,1400m,Nowra,Maiden,Heavy 8,True,11,Second Deb,Second Deb,Second Deb,3,John Steinmetz,Adrian Layt,55kg,$126,false
+4,2:25 pm Tige's Tiles Maiden Handicap,2:25 pm,1400m,Nowra,Maiden,Heavy 8,True,6,Michonne's Katana,Michonne's Katana,Michonne's Katana,11,Gerald Ryan & Sterling Alexiou,Jay Ford,56kg,SCR,true
+4,2:25 pm Tige's Tiles Maiden Handicap,2:25 pm,1400m,Nowra,Maiden,Heavy 8,True,8,Follow That Dream,Follow That Dream,Follow That Dream,4,Jarrod Austin,Jessica Taylor,55kg,SCR,true
+5,3:05 pm Shire Law Benchmark 58 Handicap,3:05 pm,1400m,Nowra,BM58,Heavy 8,True,1,A Book Of Days,A Book Of Days,A Book Of Days,6,John Rolfe,Rochelle Wedrat-kroezen (a-2),62.5kg,$7,false
+5,3:05 pm Shire Law Benchmark 58 Handicap,3:05 pm,1400m,Nowra,BM58,Heavy 8,True,2,Ferrari Man,Ferrari Man,Ferrari Man,9,Andrew Bourke,Dale Cole (a-2),61.5kg,$26,false
+5,3:05 pm Shire Law Benchmark 58 Handicap,3:05 pm,1400m,Nowra,BM58,Heavy 8,True,4,Shezain,Shezain,Shezain,4,Keith Dryden & Libby Snowden,Jessica Brookes (a-2),61kg,$3.2,false
+5,3:05 pm Shire Law Benchmark 58 Handicap,3:05 pm,1400m,Nowra,BM58,Heavy 8,True,5,Reckless Behaviour,Reckless Behaviour,Reckless Behaviour,8,Matthew Dale,Brodie Loy,60kg,$3.5,false
+5,3:05 pm Shire Law Benchmark 58 Handicap,3:05 pm,1400m,Nowra,BM58,Heavy 8,True,6,Jalmari,Jalmari,Jalmari,3,Greg Backhouse,Amy McLucas,59kg,$6,false
+5,3:05 pm Shire Law Benchmark 58 Handicap,3:05 pm,1400m,Nowra,BM58,Heavy 8,True,7,Ken'ker,Ken'ker,Ken'ker,10,Dale Wagstaff,Jordan Quince (a-2),58.5kg,$19,false
+5,3:05 pm Shire Law Benchmark 58 Handicap,3:05 pm,1400m,Nowra,BM58,Heavy 8,True,8,Think I'm Irish,Think I'm Irish,Think I'm Irish,7,Dale Wagstaff,Adam Farragher,56.5kg,$12,false
+5,3:05 pm Shire Law Benchmark 58 Handicap,3:05 pm,1400m,Nowra,BM58,Heavy 8,True,9,Via Varallo,Via Varallo,Via Varallo,2,Amanda Turner,Olivia Chambers,56kg,$6.5,false
+5,3:05 pm Shire Law Benchmark 58 Handicap,3:05 pm,1400m,Nowra,BM58,Heavy 8,True,3,Felis Chaus,Felis Chaus,Felis Chaus,1,Richard Litt,Alysha Collett,61kg,SCR,true
+5,3:05 pm Shire Law Benchmark 58 Handicap,3:05 pm,1400m,Nowra,BM58,Heavy 8,True,10,Beograd Boy,Beograd Boy,Beograd Boy,5,,John Rolfe,55kg,SCR,true
+6,3:40 pm Affinity Constructions Country Boosted Benchmark 58 Handicap,3:40 pm,1000m,Nowra,BM58,Heavy 8,True,3,Sneaky Pee Cee,Sneaky Pee Cee,Sneaky Pee Cee,1,Danny Williams,Brodie Loy,60kg,$1.45,false
+6,3:40 pm Affinity Constructions Country Boosted Benchmark 58 Handicap,3:40 pm,1000m,Nowra,BM58,Heavy 8,True,5,Vainstream,Vainstream,Vainstream,11,Todd Smart,Sairyn Fawke,59kg,$6,false
+6,3:40 pm Affinity Constructions Country Boosted Benchmark 58 Handicap,3:40 pm,1000m,Nowra,BM58,Heavy 8,True,6,Insane Volt,Insane Volt,Insane Volt,4,John Rolfe,Jessica Taylor,57.5kg,$11,false
+6,3:40 pm Affinity Constructions Country Boosted Benchmark 58 Handicap,3:40 pm,1000m,Nowra,BM58,Heavy 8,True,7,Santolini,Santolini,Santolini,10,Garry Kirkup Rebecca,Bronett Prag,57.5kg,$6.5,false
+6,3:40 pm Affinity Constructions Country Boosted Benchmark 58 Handicap,3:40 pm,1000m,Nowra,BM58,Heavy 8,True,8,Wrong Footed,Wrong Footed,Wrong Footed,9,Rex Cole,Quayde Krogh,56.5kg,$20,false
+6,3:40 pm Affinity Constructions Country Boosted Benchmark 58 Handicap,3:40 pm,1000m,Nowra,BM58,Heavy 8,True,10,Spiritual Mystery,Spiritual Mystery,Spiritual Mystery,7,Darryl Rolfe,Jeff Penza,55kg,$27,false
+6,3:40 pm Affinity Constructions Country Boosted Benchmark 58 Handicap,3:40 pm,1000m,Nowra,BM58,Heavy 8,True,11,Sogeri,Sogeri,Sogeri,6,John Rolfe,Rochelle Wedrat-kroezen (a-2),55kg,$31,false
+6,3:40 pm Affinity Constructions Country Boosted Benchmark 58 Handicap,3:40 pm,1000m,Nowra,BM58,Heavy 8,True,1,Dubbo Boy,Dubbo Boy,Dubbo Boy,5,Danny Williams,Dale Cole (a-2),62.5kg,SCR,true
+6,3:40 pm Affinity Constructions Country Boosted Benchmark 58 Handicap,3:40 pm,1000m,Nowra,BM58,Heavy 8,True,2,Voltage Lass,Voltage Lass,Voltage Lass,8,,Danielle Seib,61.5kg,SCR,true
+6,3:40 pm Affinity Constructions Country Boosted Benchmark 58 Handicap,3:40 pm,1000m,Nowra,BM58,Heavy 8,True,4,Foreign Encounter,Foreign Encounter,Foreign Encounter,2,Danny Williams,Jay Ford,59.5kg,SCR,true
+6,3:40 pm Affinity Constructions Country Boosted Benchmark 58 Handicap,3:40 pm,1000m,Nowra,BM58,Heavy 8,True,9,Into The Fire,Into The Fire,Into The Fire,3,Scott Jamieson,Jessica Brookes (a-2),56kg,SCR,true
+7,4:15 pm Country Motor Company Benchmark 66 Handicap,4:15 pm,1600m,Nowra,BM66,Heavy 8,True,2,Soul Lady,Soul Lady,Soul Lady,1,Joe Cleary,Keagan Latham,61kg,$3,false
+7,4:15 pm Country Motor Company Benchmark 66 Handicap,4:15 pm,1600m,Nowra,BM66,Heavy 8,True,3,Spiritualistic,Spiritualistic,Spiritualistic,11,Mitchell Beer & George Carpenter,Adam Farragher,60kg,$3.3,false
+7,4:15 pm Country Motor Company Benchmark 66 Handicap,4:15 pm,1600m,Nowra,BM66,Heavy 8,True,5,Brannum,Brannum,Brannum,12,Theresa Bateup,Amy McLucas,57.5kg,$18,false
+7,4:15 pm Country Motor Company Benchmark 66 Handicap,4:15 pm,1600m,Nowra,BM66,Heavy 8,True,6,Lightning Speed,Lightning Speed,Lightning Speed,2,Todd Smart,Sairyn Fawke,57.5kg,$7,false
+7,4:15 pm Country Motor Company Benchmark 66 Handicap,4:15 pm,1600m,Nowra,BM66,Heavy 8,True,7,Star Bling,Star Bling,Star Bling,9,Nick Olive,Shaun Guymer,57.5kg,$6.5,false
+7,4:15 pm Country Motor Company Benchmark 66 Handicap,4:15 pm,1600m,Nowra,BM66,Heavy 8,True,8,More Mischief,More Mischief,More Mischief,4,Amanda Turner,Winona Costin,56.5kg,$11,false
+7,4:15 pm Country Motor Company Benchmark 66 Handicap,4:15 pm,1600m,Nowra,BM66,Heavy 8,True,12,Ulysses Blue,Ulysses Blue,Ulysses Blue,5,Terry Robinson,Jeff Penza,55kg,$7.5,false
+7,4:15 pm Country Motor Company Benchmark 66 Handicap,4:15 pm,1600m,Nowra,BM66,Heavy 8,True,1,Missile Leader,Missile Leader,Missile Leader,8,Keith Dryden & Libby Snowden,Jessica Brookes (a-2),62.5kg,SCR,true
+7,4:15 pm Country Motor Company Benchmark 66 Handicap,4:15 pm,1600m,Nowra,BM66,Heavy 8,True,4,Kindamagic,Kindamagic,Kindamagic,7,Mitchell Maloney-stone,Blaike McDougall,58kg,SCR,true
+7,4:15 pm Country Motor Company Benchmark 66 Handicap,4:15 pm,1600m,Nowra,BM66,Heavy 8,True,9,Sweet Treats,Sweet Treats,Sweet Treats,10,Danielle Seib,Pierre Boudvillain (a1),55kg,SCR,true
+7,4:15 pm Country Motor Company Benchmark 66 Handicap,4:15 pm,1600m,Nowra,BM66,Heavy 8,True,10,Beauer,Beauer,Beauer,3,Paul Murray Jean,Van Overmeire,55kg,SCR,true
+7,4:15 pm Country Motor Company Benchmark 66 Handicap,4:15 pm,1600m,Nowra,BM66,Heavy 8,True,11,Mamma Mia,Mamma Mia,Mamma Mia,6,John Thompson,Alysha Collett,55kg,SCR,true

@@ -1155,15 +1155,17 @@
       this.closeToolbarMenus();
       this.view = "library";
       this.updateViewVisibility();
-      this.renderLibrary();
       if (!this.libraryMeetings.length) {
-        if (this.isOnline()) this.fetchLibrary();
-        else if (this.loadCachedLibrary()) {
-          this.setLibraryMsg("Offline — showing cached meeting list.");
-          this.renderLibrary();
-        } else {
-          this.setLibraryMsg("Offline — connect to laptop to load meetings.");
-        }
+        this.loadCachedLibrary();
+      }
+      this.renderLibrary();
+      if (this.isOnline()) {
+        this.fetchLibrary();
+      } else if (!this.libraryMeetings.length && this.loadCachedLibrary()) {
+        this.setLibraryMsg("Offline — showing cached meeting list.");
+        this.renderLibrary();
+      } else if (!this.libraryMeetings.length) {
+        this.setLibraryMsg("Offline — connect to load meetings.");
       }
     },
 
@@ -1257,8 +1259,9 @@
       if (!this.libraryMeetings.length) {
         return (
           '<div class="iy-library-empty">' +
-          "No meetings found. On the laptop run <strong>npm run build-meeting-csv</strong> " +
-          "then keep <strong>npm run dev -- -H 0.0.0.0</strong> running so the iPad can reach this server." +
+          "No meetings listed yet. Add a folder under <code>meetings/YYYY-MM-DD-track/</code> " +
+          "with <code>{track}_YYYY-MM-DD_master.csv</code>, push to GitHub, wait for deploy, then tap <strong>Refresh</strong>. " +
+          "On laptop dev you can also run <strong>npm run build-meeting-csv</strong>." +
           "</div>"
         );
       }
@@ -2641,12 +2644,8 @@
         if (!this.isOnline()) {
           this.setImportMsg("Offline — using meeting and assessments stored on this iPad.");
         }
-      } else if (this.isOnline() && this.isLaptopDevServer()) {
-        this.showLibrary();
-        this.fetchLibrary();
       } else if (this.isOnline()) {
         this.showLibrary();
-        this.setLibraryMsg("Load a downloaded meeting with Use Downloaded Meeting.");
       } else if (this.loadCachedLibrary()) {
         this.showLibrary();
         this.setLibraryMsg("Offline — cached meetings shown. Use Downloaded Meeting if needed.");

@@ -1,54 +1,54 @@
 race_id,track,race_no,race_title,distance,grade,going,rail,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir
-R1,Gosford,1,12:45 pm Dahlsens Midway Maiden Plate,1100m,Maiden,Soft 5,True,1,1,Arato,Arato,Arato,7,Edward Cummings,Rachel King,$11,
-R1,Gosford,1,12:45 pm Dahlsens Midway Maiden Plate,1100m,Maiden,Soft 5,True,2,2,Encryptix,Encryptix,Encryptix,5,Gregory McFarlane,Tommy Berry,$3.1,
-R1,Gosford,1,12:45 pm Dahlsens Midway Maiden Plate,1100m,Maiden,Soft 5,True,4,4,Orange Tsunami,Orange Tsunami,Orange Tsunami,2,Richard & Will Freedman,Lee Magorrian,$3.9,NA
-R1,Gosford,1,12:45 pm Dahlsens Midway Maiden Plate,1100m,Maiden,Soft 5,True,5,5,Slam Dunk,Slam Dunk,Slam Dunk,1,Kylie Gavenlock,Mollie Fitzgerald,$21,NA
+R1,Gosford,1,12:45 pm Dahlsens Midway Maiden Plate,1100m,Maiden,Soft 5,True,1,1,Arato,Arato,Arato,7,Edward Cummings,Rachel King,$11,3
+R1,Gosford,1,12:45 pm Dahlsens Midway Maiden Plate,1100m,Maiden,Soft 5,True,2,2,Encryptix,Encryptix,Encryptix,5,Gregory McFarlane,Tommy Berry,$3.1,2
+R1,Gosford,1,12:45 pm Dahlsens Midway Maiden Plate,1100m,Maiden,Soft 5,True,4,4,Orange Tsunami,Orange Tsunami,Orange Tsunami,2,Richard & Will Freedman,Lee Magorrian,$3.9,4.8
+R1,Gosford,1,12:45 pm Dahlsens Midway Maiden Plate,1100m,Maiden,Soft 5,True,5,5,Slam Dunk,Slam Dunk,Slam Dunk,1,Kylie Gavenlock,Mollie Fitzgerald,$21,2.4
 R1,Gosford,1,12:45 pm Dahlsens Midway Maiden Plate,1100m,Maiden,Soft 5,True,6,6,Tellurium,Tellurium,Tellurium,8,Richard Litt,Tom Sherry,$4.8,NA
-R1,Gosford,1,12:45 pm Dahlsens Midway Maiden Plate,1100m,Maiden,Soft 5,True,7,7,Kasumi,Kasumi,Kasumi,3,Dale Wagstaff,Donovan Dillon,$201,
-R1,Gosford,1,12:45 pm Dahlsens Midway Maiden Plate,1100m,Maiden,Soft 5,True,8,8,Love You Anyway,Love You Anyway,Love You Anyway,9,Barry Lawrence Shannen,Llewellyn A3 (a-2),$9,2.6
-R1,Gosford,1,12:45 pm Dahlsens Midway Maiden Plate,1100m,Maiden,Soft 5,True,9,9,Hellflight,Hellflight,Hellflight,4,Richard & Will Freedman,Chad Schofield,$4.8,
-R2,Gosford,2,1:20 pm Thymely Food Co. Super Maiden Handicap,1600m,Maiden,Soft 5,True,1,1,Flying Party,Flying Party,Flying Party,6,Ciaron Maher Shannen,Llewellyn A3 (a-2),$2.7,NA
-R2,Gosford,2,1:20 pm Thymely Food Co. Super Maiden Handicap,1600m,Maiden,Soft 5,True,2,2,Jonson,Jonson,Jonson,3,Marc & Mitchell Conners,Deanne Panya,$2.7,3.3
-R2,Gosford,2,1:20 pm Thymely Food Co. Super Maiden Handicap,1600m,Maiden,Soft 5,True,3,3,Kharif,Kharif,Kharif,2,Ciaron Maher,Keagan Latham,$4.6,10
-R2,Gosford,2,1:20 pm Thymely Food Co. Super Maiden Handicap,1600m,Maiden,Soft 5,True,4,4,Ruskana,Ruskana,Ruskana,5,Gai Waterhouse & Adrian Bott,Rachel King,$5.5,2
-R2,Gosford,2,1:20 pm Thymely Food Co. Super Maiden Handicap,1600m,Maiden,Soft 5,True,8,8,Scoish Maloish,Scoish Maloish,Scoish Maloish,8,Marc & Mitchell Conners,Jessica Taylor,$15,6.3
-R3,Gosford,3,1:55 pm Eve Electrical & Communications 2&3yo Maiden Handicap,1100m,Maiden,Soft 5,True,1,1,Magic Blaze,Magic Blaze,Magic Blaze,6,Jim & Greg Lee,Reece Jones,$4.2,7.5
-R3,Gosford,3,1:55 pm Eve Electrical & Communications 2&3yo Maiden Handicap,1100m,Maiden,Soft 5,True,4,4,Nuns Chorus,Nuns Chorus,Nuns Chorus,4,Richard Litt,Jay Ford,$31,1.4
-R3,Gosford,3,1:55 pm Eve Electrical & Communications 2&3yo Maiden Handicap,1100m,Maiden,Soft 5,True,5,5,Rainbow Charlie,Rainbow Charlie,Rainbow Charlie,1,Brad Widdup,Tommy Berry,$5,3.8
-R3,Gosford,3,1:55 pm Eve Electrical & Communications 2&3yo Maiden Handicap,1100m,Maiden,Soft 5,True,6,6,Street Jewel,Street Jewel,Street Jewel,13,Brad Widdup,Regan Bayliss,$8,7.7
-R3,Gosford,3,1:55 pm Eve Electrical & Communications 2&3yo Maiden Handicap,1100m,Maiden,Soft 5,True,7,7,Iambubb,Iambubb,Iambubb,2,Mitchell & Desiree Kearney,Jeff Penza,$8.5,NA
-R3,Gosford,3,1:55 pm Eve Electrical & Communications 2&3yo Maiden Handicap,1100m,Maiden,Soft 5,True,8,8,Pazyryk,Pazyryk,Pazyryk,5,Michael Freedman,Rachel King,$2.75,4.5
-R3,Gosford,3,1:55 pm Eve Electrical & Communications 2&3yo Maiden Handicap,1100m,Maiden,Soft 5,True,11,11,Hatsumomo,Hatsumomo,Hatsumomo,9,Joseph Pride,Chad Schofield,$6,
-R4,Gosford,4,2:35 pm Elite Sand & Soil Maiden Plate,1200m,Maiden,Soft 5,True,3,3,Firey Truth,Firey Truth,Firey Truth,5,Kris Lees,Ashley Morgan,$10,1.9
-R4,Gosford,4,2:35 pm Elite Sand & Soil Maiden Plate,1200m,Maiden,Soft 5,True,4,4,Grunge,Grunge,Grunge,4,Marc Chevalier,Louis Beuzelin,$34,4.3
-R4,Gosford,4,2:35 pm Elite Sand & Soil Maiden Plate,1200m,Maiden,Soft 5,True,5,5,Last Tour,Last Tour,Last Tour,1,Brad Widdup,Leeshelle Small (a-3),$11,
-R4,Gosford,4,2:35 pm Elite Sand & Soil Maiden Plate,1200m,Maiden,Soft 5,True,6,6,Opine,Opine,Opine,8,Joseph Pride,Andrew Adkins,$5,5
-R4,Gosford,4,2:35 pm Elite Sand & Soil Maiden Plate,1200m,Maiden,Soft 5,True,7,7,Pharland,Pharland,Pharland,6,Gerald Ryan & Sterling Alexiou,Kerrin McEvoy,$8.5,5.1
-R4,Gosford,4,2:35 pm Elite Sand & Soil Maiden Plate,1200m,Maiden,Soft 5,True,9,9,Miss Binman,Miss Binman,Miss Binman,11,Mark Sues Shannen,Llewellyn A3 (a-2),$301,2.8
-R4,Gosford,4,2:35 pm Elite Sand & Soil Maiden Plate,1200m,Maiden,Soft 5,True,10,10,Sorentina,Sorentina,Sorentina,9,Richard Litt,Tom Sherry,$4.8,
-R4,Gosford,4,2:35 pm Elite Sand & Soil Maiden Plate,1200m,Maiden,Soft 5,True,12,12,Tannin,Tannin,Tannin,7,Michael Freedman,Tommy Berry,$2.25,3.6
-R5,Gosford,5,3:10 pm Ip Advokat Group Benchmark 64 Handicap,1600m,BM64,Soft 5,True,1,1,Squeezebox,Squeezebox,Squeezebox,6,Kim Waugh,Keagan Latham,$2.6,8
-R5,Gosford,5,3:10 pm Ip Advokat Group Benchmark 64 Handicap,1600m,BM64,Soft 5,True,2,2,Altair I Am,Altair I Am,Altair I Am,4,Jake Hull,Rory Hutchings,$41,
-R5,Gosford,5,3:10 pm Ip Advokat Group Benchmark 64 Handicap,1600m,BM64,Soft 5,True,3,3,Tip Top Timing,Tip Top Timing,Tip Top Timing,3,Clarry Conners,Deanne Panya,$26,5.9
-R5,Gosford,5,3:10 pm Ip Advokat Group Benchmark 64 Handicap,1600m,BM64,Soft 5,True,4,4,Inception,Inception,Inception,1,Nathan Doyle,Ashley Morgan,$5.5,3.7
-R5,Gosford,5,3:10 pm Ip Advokat Group Benchmark 64 Handicap,1600m,BM64,Soft 5,True,5,5,Chilly Charlie,Chilly Charlie,Chilly Charlie,7,Sara Ryan,Alysha Collett,$4.2,
-R5,Gosford,5,3:10 pm Ip Advokat Group Benchmark 64 Handicap,1600m,BM64,Soft 5,True,6,6,I Am Wild,I Am Wild,I Am Wild,5,Ron Quinton,Louise Day,$13,7
-R5,Gosford,5,3:10 pm Ip Advokat Group Benchmark 64 Handicap,1600m,BM64,Soft 5,True,7,7,Ivy Legend,Ivy Legend,Ivy Legend,8,Chris Waller,Tommy Berry,$3.9,4.7
-R6,Gosford,6,3:45 pm Sneddon Bros Class 1 Handicap,1100m,Class 1,Soft 5,True,1,1,Aeternum,Aeternum,Aeternum,9,Kristen Buchanan,Alysha Collett,$8.5,4.7
-R6,Gosford,6,3:45 pm Sneddon Bros Class 1 Handicap,1100m,Class 1,Soft 5,True,2,2,One Run Won,One Run Won,One Run Won,8,John Sargent,Donovan Dillon,$10,2.5
-R6,Gosford,6,3:45 pm Sneddon Bros Class 1 Handicap,1100m,Class 1,Soft 5,True,3,3,Don't What Me,Don't What Me,Don't What Me,7,Jason Coyle,Mitchell Bell,$15,9.2
-R6,Gosford,6,3:45 pm Sneddon Bros Class 1 Handicap,1100m,Class 1,Soft 5,True,4,4,Luskintyre,Luskintyre,Luskintyre,6,Ron Quinton,Louise Day,$5,6.2
-R6,Gosford,6,3:45 pm Sneddon Bros Class 1 Handicap,1100m,Class 1,Soft 5,True,5,5,Serinda,Serinda,Serinda,2,Blake Ryan,Jay Ford,$3,3.1
-R6,Gosford,6,3:45 pm Sneddon Bros Class 1 Handicap,1100m,Class 1,Soft 5,True,7,7,Red Chick,Red Chick,Red Chick,12,Jake Hull Shannen,Llewellyn A3 (a-2),$3.2,6.6
-R6,Gosford,6,3:45 pm Sneddon Bros Class 1 Handicap,1100m,Class 1,Soft 5,True,9,9,Salma's Star,Salma's Star,Salma's Star,3,Gregory McFarlane,Jessica Taylor,$16,
-R6,Gosford,6,3:45 pm Sneddon Bros Class 1 Handicap,1100m,Class 1,Soft 5,True,11,11,Manwe,Manwe,Manwe,5,Rebecca Dunn,Siena Grima (a-2),$34,5
-R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,1,1,Harlex,Harlex,Harlex,12,Paul Perry,William Stanley (a-1.5),$6,1.6
-R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,2,2,King Larry,King Larry,King Larry,1,Wayne Wilkes Shannen,Llewellyn A3 (a-2),$9,3.4
-R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,4,4,Prince Harrison,Prince Harrison,Prince Harrison,3,Marc & Mitchell Conners,Deanne Panya,$6.5,4
-R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,5,5,Kirkuk,Kirkuk,Kirkuk,4,Jim & Greg Lee,Mitch Stapleford (a-1.5),$10,3.1
-R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,6,6,Broadway Follies,Broadway Follies,Broadway Follies,8,Kristen Buchanan,Olivia Chambers (a-2),$8,
-R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,7,7,Kosrae,Kosrae,Kosrae,13,Brad Widdup,Leeshelle Small (a-3),$6,4.2
-R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,8,8,Starinion,Starinion,Starinion,5,Steven Sampson Rebecca,Bronett Prag (a-3),$11,6.1
-R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,9,9,Super Choice,Super Choice,Super Choice,9,Gai Waterhouse & Adrian Bott,Rachel King,$4.6,7.3
-R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,10,10,Are Ee Que,Are Ee Que,Are Ee Que,10,Ron Quinton,Matt Kirk (a-4),$14,5.7
-R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,11,11,Cosmolicious,Cosmolicious,Cosmolicious,6,Cheryl Grouse,Andrew Gibbons,$21,1.2
+R1,Gosford,1,12:45 pm Dahlsens Midway Maiden Plate,1100m,Maiden,Soft 5,True,7,7,Kasumi,Kasumi,Kasumi,3,Dale Wagstaff,Donovan Dillon,$201,4.5
+R1,Gosford,1,12:45 pm Dahlsens Midway Maiden Plate,1100m,Maiden,Soft 5,True,8,8,Love You Anyway,Love You Anyway,Love You Anyway,9,Barry Lawrence Shannen,Llewellyn A3 (a-2),$9,4.1
+R1,Gosford,1,12:45 pm Dahlsens Midway Maiden Plate,1100m,Maiden,Soft 5,True,9,9,Hellflight,Hellflight,Hellflight,4,Richard & Will Freedman,Chad Schofield,$4.8,NA
+R2,Gosford,2,1:20 pm Thymely Food Co. Super Maiden Handicap,1600m,Maiden,Soft 5,True,1,1,Flying Party,Flying Party,Flying Party,6,Ciaron Maher Shannen,Llewellyn A3 (a-2),$2.7,5.5
+R2,Gosford,2,1:20 pm Thymely Food Co. Super Maiden Handicap,1600m,Maiden,Soft 5,True,2,2,Jonson,Jonson,Jonson,3,Marc & Mitchell Conners,Deanne Panya,$2.7,4.4
+R2,Gosford,2,1:20 pm Thymely Food Co. Super Maiden Handicap,1600m,Maiden,Soft 5,True,3,3,Kharif,Kharif,Kharif,2,Ciaron Maher,Keagan Latham,$4.6,5.5
+R2,Gosford,2,1:20 pm Thymely Food Co. Super Maiden Handicap,1600m,Maiden,Soft 5,True,4,4,Ruskana,Ruskana,Ruskana,5,Gai Waterhouse & Adrian Bott,Rachel King,$5.5,2.7
+R2,Gosford,2,1:20 pm Thymely Food Co. Super Maiden Handicap,1600m,Maiden,Soft 5,True,8,8,Scoish Maloish,Scoish Maloish,Scoish Maloish,8,Marc & Mitchell Conners,Jessica Taylor,$15,6.8
+R3,Gosford,3,1:55 pm Eve Electrical & Communications 2&3yo Maiden Handicap,1100m,Maiden,Soft 5,True,1,1,Magic Blaze,Magic Blaze,Magic Blaze,6,Jim & Greg Lee,Reece Jones,$4.2,NA
+R3,Gosford,3,1:55 pm Eve Electrical & Communications 2&3yo Maiden Handicap,1100m,Maiden,Soft 5,True,4,4,Nuns Chorus,Nuns Chorus,Nuns Chorus,4,Richard Litt,Jay Ford,$31,6.3
+R3,Gosford,3,1:55 pm Eve Electrical & Communications 2&3yo Maiden Handicap,1100m,Maiden,Soft 5,True,5,5,Rainbow Charlie,Rainbow Charlie,Rainbow Charlie,1,Brad Widdup,Tommy Berry,$5,2
+R3,Gosford,3,1:55 pm Eve Electrical & Communications 2&3yo Maiden Handicap,1100m,Maiden,Soft 5,True,6,6,Street Jewel,Street Jewel,Street Jewel,13,Brad Widdup,Regan Bayliss,$8,NA
+R3,Gosford,3,1:55 pm Eve Electrical & Communications 2&3yo Maiden Handicap,1100m,Maiden,Soft 5,True,7,7,Iambubb,Iambubb,Iambubb,2,Mitchell & Desiree Kearney,Jeff Penza,$8.5,4.7
+R3,Gosford,3,1:55 pm Eve Electrical & Communications 2&3yo Maiden Handicap,1100m,Maiden,Soft 5,True,8,8,Pazyryk,Pazyryk,Pazyryk,5,Michael Freedman,Rachel King,$2.75,4.7
+R3,Gosford,3,1:55 pm Eve Electrical & Communications 2&3yo Maiden Handicap,1100m,Maiden,Soft 5,True,11,11,Hatsumomo,Hatsumomo,Hatsumomo,9,Joseph Pride,Chad Schofield,$6,NA
+R4,Gosford,4,2:35 pm Elite Sand & Soil Maiden Plate,1200m,Maiden,Soft 5,True,3,3,Firey Truth,Firey Truth,Firey Truth,5,Kris Lees,Ashley Morgan,$10,5.2
+R4,Gosford,4,2:35 pm Elite Sand & Soil Maiden Plate,1200m,Maiden,Soft 5,True,4,4,Grunge,Grunge,Grunge,4,Marc Chevalier,Louis Beuzelin,$34,1
+R4,Gosford,4,2:35 pm Elite Sand & Soil Maiden Plate,1200m,Maiden,Soft 5,True,5,5,Last Tour,Last Tour,Last Tour,1,Brad Widdup,Leeshelle Small (a-3),$11,4.2
+R4,Gosford,4,2:35 pm Elite Sand & Soil Maiden Plate,1200m,Maiden,Soft 5,True,6,6,Opine,Opine,Opine,8,Joseph Pride,Andrew Adkins,$5,NA
+R4,Gosford,4,2:35 pm Elite Sand & Soil Maiden Plate,1200m,Maiden,Soft 5,True,7,7,Pharland,Pharland,Pharland,6,Gerald Ryan & Sterling Alexiou,Kerrin McEvoy,$8.5,NA
+R4,Gosford,4,2:35 pm Elite Sand & Soil Maiden Plate,1200m,Maiden,Soft 5,True,9,9,Miss Binman,Miss Binman,Miss Binman,11,Mark Sues Shannen,Llewellyn A3 (a-2),$301,9.3
+R4,Gosford,4,2:35 pm Elite Sand & Soil Maiden Plate,1200m,Maiden,Soft 5,True,10,10,Sorentina,Sorentina,Sorentina,9,Richard Litt,Tom Sherry,$4.8,4.7
+R4,Gosford,4,2:35 pm Elite Sand & Soil Maiden Plate,1200m,Maiden,Soft 5,True,12,12,Tannin,Tannin,Tannin,7,Michael Freedman,Tommy Berry,$2.25,NA
+R5,Gosford,5,3:10 pm Ip Advokat Group Benchmark 64 Handicap,1600m,BM64,Soft 5,True,1,1,Squeezebox,Squeezebox,Squeezebox,6,Kim Waugh,Keagan Latham,$2.6,6.2
+R5,Gosford,5,3:10 pm Ip Advokat Group Benchmark 64 Handicap,1600m,BM64,Soft 5,True,2,2,Altair I Am,Altair I Am,Altair I Am,4,Jake Hull,Rory Hutchings,$41,7.2
+R5,Gosford,5,3:10 pm Ip Advokat Group Benchmark 64 Handicap,1600m,BM64,Soft 5,True,3,3,Tip Top Timing,Tip Top Timing,Tip Top Timing,3,Clarry Conners,Deanne Panya,$26,5.6
+R5,Gosford,5,3:10 pm Ip Advokat Group Benchmark 64 Handicap,1600m,BM64,Soft 5,True,4,4,Inception,Inception,Inception,1,Nathan Doyle,Ashley Morgan,$5.5,2.9
+R5,Gosford,5,3:10 pm Ip Advokat Group Benchmark 64 Handicap,1600m,BM64,Soft 5,True,5,5,Chilly Charlie,Chilly Charlie,Chilly Charlie,7,Sara Ryan,Alysha Collett,$4.2,3.7
+R5,Gosford,5,3:10 pm Ip Advokat Group Benchmark 64 Handicap,1600m,BM64,Soft 5,True,6,6,I Am Wild,I Am Wild,I Am Wild,5,Ron Quinton,Louise Day,$13,7.1
+R5,Gosford,5,3:10 pm Ip Advokat Group Benchmark 64 Handicap,1600m,BM64,Soft 5,True,7,7,Ivy Legend,Ivy Legend,Ivy Legend,8,Chris Waller,Tommy Berry,$3.9,4.6
+R6,Gosford,6,3:45 pm Sneddon Bros Class 1 Handicap,1100m,Class 1,Soft 5,True,1,1,Aeternum,Aeternum,Aeternum,9,Kristen Buchanan,Alysha Collett,$8.5,1.3
+R6,Gosford,6,3:45 pm Sneddon Bros Class 1 Handicap,1100m,Class 1,Soft 5,True,2,2,One Run Won,One Run Won,One Run Won,8,John Sargent,Donovan Dillon,$10,1.8
+R6,Gosford,6,3:45 pm Sneddon Bros Class 1 Handicap,1100m,Class 1,Soft 5,True,3,3,Don't What Me,Don't What Me,Don't What Me,7,Jason Coyle,Mitchell Bell,$15,3.6
+R6,Gosford,6,3:45 pm Sneddon Bros Class 1 Handicap,1100m,Class 1,Soft 5,True,4,4,Luskintyre,Luskintyre,Luskintyre,6,Ron Quinton,Louise Day,$5,4.7
+R6,Gosford,6,3:45 pm Sneddon Bros Class 1 Handicap,1100m,Class 1,Soft 5,True,5,5,Serinda,Serinda,Serinda,2,Blake Ryan,Jay Ford,$3,5.4
+R6,Gosford,6,3:45 pm Sneddon Bros Class 1 Handicap,1100m,Class 1,Soft 5,True,7,7,Red Chick,Red Chick,Red Chick,12,Jake Hull Shannen,Llewellyn A3 (a-2),$3.2,2.7
+R6,Gosford,6,3:45 pm Sneddon Bros Class 1 Handicap,1100m,Class 1,Soft 5,True,9,9,Salma's Star,Salma's Star,Salma's Star,3,Gregory McFarlane,Jessica Taylor,$16,4.5
+R6,Gosford,6,3:45 pm Sneddon Bros Class 1 Handicap,1100m,Class 1,Soft 5,True,11,11,Manwe,Manwe,Manwe,5,Rebecca Dunn,Siena Grima (a-2),$34,3.9
+R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,1,1,Harlex,Harlex,Harlex,12,Paul Perry,William Stanley (a-1.5),$6,3.4
+R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,2,2,King Larry,King Larry,King Larry,1,Wayne Wilkes Shannen,Llewellyn A3 (a-2),$9,5.6
+R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,4,4,Prince Harrison,Prince Harrison,Prince Harrison,3,Marc & Mitchell Conners,Deanne Panya,$6.5,2.7
+R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,5,5,Kirkuk,Kirkuk,Kirkuk,4,Jim & Greg Lee,Mitch Stapleford (a-1.5),$10,7.4
+R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,6,6,Broadway Follies,Broadway Follies,Broadway Follies,8,Kristen Buchanan,Olivia Chambers (a-2),$8,5.4
+R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,7,7,Kosrae,Kosrae,Kosrae,13,Brad Widdup,Leeshelle Small (a-3),$6,1.9
+R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,8,8,Starinion,Starinion,Starinion,5,Steven Sampson Rebecca,Bronett Prag (a-3),$11,3.6
+R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,9,9,Super Choice,Super Choice,Super Choice,9,Gai Waterhouse & Adrian Bott,Rachel King,$4.6,1.3
+R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,10,10,Are Ee Que,Are Ee Que,Are Ee Que,10,Ron Quinton,Matt Kirk (a-4),$14,3.1
+R7,Gosford,7,4:20 pm Christmas In July @ Grc Sat 18 July 2026 Benchmark 64 Handicap,1200m,BM64,Soft 5,True,11,11,Cosmolicious,Cosmolicious,Cosmolicious,6,Cheryl Grouse,Andrew Gibbons,$21,2.1
