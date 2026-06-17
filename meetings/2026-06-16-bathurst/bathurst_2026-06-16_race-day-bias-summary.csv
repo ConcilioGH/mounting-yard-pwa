@@ -1,0 +1,27 @@
+meeting,category,group,wins,places,avg_sp,actual_share,expected_share,bias_score,finisher_count,heat_tier,trackside_tag,interpretation
+Bathurst · 2026-06-16,lane,Rail,4,9,14.71,56.6,49.2,7.3,13,,,
+Bathurst · 2026-06-16,lane,Running Line,2,9,9.86,43.4,50.8,-7.3,11,,,
+Bathurst · 2026-06-16,lane,3 Wide,0,0,,0,0,0,0,,,
+Bathurst · 2026-06-16,lane,4 Wide+,0,0,,0,0,0,0,,,
+Bathurst · 2026-06-16,position,Leader / Front Pair,3,6,10.79,44.2,29.8,14.3,9,,,
+Bathurst · 2026-06-16,position,On Pace,0,0,,0,0,0,0,,,
+Bathurst · 2026-06-16,position,Midfield,3,4,18.83,31.8,24.5,7.3,7,,,
+Bathurst · 2026-06-16,position,Backmarker,0,8,8.86,24,45.7,-21.7,8,,,
+Bathurst · 2026-06-16,position,Wide Forward,0,0,,0,0,0,0,,,
+Bathurst · 2026-06-16,position,Wide Midfield,0,0,,0,0,0,0,,,
+Bathurst · 2026-06-16,position,Wide Back,0,0,,0,0,0,0,,,
+Bathurst · 2026-06-16,composite,Rail Front,,,,24.4,8.9,15.5,5,strongPositive,,
+Bathurst · 2026-06-16,composite,Rail Midfield,,,,17.1,10.7,6.4,3,neutral,,
+Bathurst · 2026-06-16,composite,Rail Back,,,,15.1,29.7,-14.6,5,negative,,
+Bathurst · 2026-06-16,composite,Running Line Front,,,,19.8,20.9,-1.2,4,neutral,,
+Bathurst · 2026-06-16,composite,Running Line Midfield,,,,14.7,13.8,0.9,4,neutral,,
+Bathurst · 2026-06-16,composite,Running Line Back,,,,8.9,16,-7.1,3,neutral,,
+Bathurst · 2026-06-16,composite,3 Wide Front,,,,0,0,0,0,insufficient,,
+Bathurst · 2026-06-16,composite,3 Wide Midfield,,,,0,0,0,0,insufficient,,
+Bathurst · 2026-06-16,composite,3 Wide Back,,,,0,0,0,0,insufficient,,
+Bathurst · 2026-06-16,composite,4 Wide+ Front,,,,0,0,0,0,insufficient,,
+Bathurst · 2026-06-16,composite,4 Wide+ Midfield,,,,0,0,0,0,insufficient,,
+Bathurst · 2026-06-16,composite,4 Wide+ Back,,,,0,0,0,0,insufficient,,
+Bathurst · 2026-06-16,conclusion,RAIL FRONT,,,,,,15.5,5,strongPositive,STRONG POSITIVE,Leaders on the rail are outperforming market expectation.
+Bathurst · 2026-06-16,conclusion,RAIL MIDFIELD,,,,,,6.4,3,neutral,NEUTRAL,On the rail in midfield positions are performing slightly above market expectation.
+Bathurst · 2026-06-16,conclusion,RAIL BACK,,,,,,-14.6,5,negative,AVOID,On the rail from backmarker positions are underperforming market expectation.

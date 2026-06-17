@@ -773,6 +773,7 @@
     updateMeetingToolbar: function () {
       var downloadBtn = document.getElementById("iy-btn-download-meeting");
       var importFolderBtn = document.getElementById("iy-btn-import-folder");
+      var saveToLaptopBtn = document.getElementById("iy-btn-save-to-laptop");
       var hasRaces = this.races && this.races.length > 0;
       var onLaptop = this.isLaptopDevServer();
       var delivery = window.MeetingExportDelivery;
@@ -785,7 +786,21 @@
         if (supportsFolder) importFolderBtn.classList.remove("iy-hidden");
         else importFolderBtn.classList.add("iy-hidden");
       }
+      if (saveToLaptopBtn) {
+        if (this.canSaveToLaptop()) saveToLaptopBtn.classList.remove("iy-hidden");
+        else saveToLaptopBtn.classList.add("iy-hidden");
+      }
       this.updateCountdownDisplay();
+    },
+
+    canSaveToLaptop: function () {
+      if (!this.isOnline()) return false;
+      var delivery = window.MeetingExportDelivery;
+      var manifest = this.syncMeetingManifest();
+      if (!manifest && delivery) manifest = delivery.loadMeetingManifest();
+      var folderPath =
+        manifest && manifest.meetingFolderPath ? String(manifest.meetingFolderPath).trim() : "";
+      return Boolean(folderPath);
     },
 
     buildDownloadedMeetingPackage: function () {
@@ -1099,6 +1114,7 @@
       self.updateNetworkStatus();
       window.addEventListener("online", function () {
         self.updateNetworkStatus();
+        self.updateMeetingToolbar();
         self.setImportMsg("Back online.");
         if (self.view === "library" && !self.libraryMeetings.length) {
           self.fetchLibrary();
@@ -1106,6 +1122,7 @@
       });
       window.addEventListener("offline", function () {
         self.updateNetworkStatus();
+        self.updateMeetingToolbar();
         self.setImportMsg("Offline — yard data saved locally on this iPad.");
       });
     },
@@ -2033,6 +2050,72 @@
       } catch (e) {
         this.setImportMsg("Download failed — use Select All and copy.");
       }
+    },
+
+    saveToLaptop: function () {
+      this.bump();
+      var self = this;
+      var delivery = window.MeetingExportDelivery;
+      if (!self.races || !self.races.length) {
+        self.setImportMsg("Load a meeting first.");
+        return;
+      }
+      var manifest = self.syncMeetingManifest();
+      if (!manifest && delivery) manifest = delivery.loadMeetingManifest();
+      var folderPath =
+        manifest && manifest.meetingFolderPath ? String(manifest.meetingFolderPath).trim() : "";
+      if (!folderPath) {
+        self.setImportMsg("Meeting folder unknown — reload from library and try again.");
+        return;
+      }
+      if (!self.isOnline()) {
+        self.setImportMsg("Offline — connect to the laptop Wi‑Fi and try again.");
+        return;
+      }
+      var csvText = self.buildExportCsvText();
+      var filename = delivery
+        ? delivery.buildMeetingExportFilename("mounting-yard-assessments", manifest)
+        : "mounting-yard-assessments.csv";
+
+      function showCsvFallback(reason) {
+        self.showExportPanel(csvText, filename);
+        self.setImportMsg("Copy CSV below — " + (reason || "laptop save unavailable") + ".");
+      }
+
+      self.setImportMsg("Saving to laptop…");
+      fetch("/api/meeting-export", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          folderPath: folderPath,
+          filename: filename,
+          content: csvText,
+        }),
+      })
+        .then(function (res) {
+          return res
+            .json()
+            .then(function (data) {
+              return { res: res, data: data };
+            })
+            .catch(function () {
+              return { res: res, data: null };
+            });
+        })
+        .then(function (result) {
+          if (result.res.ok && result.data && result.data.ok) {
+            self.setImportMsg("Saved to:\n" + folderPath + "/");
+            return;
+          }
+          var err =
+            result.data && result.data.error
+              ? String(result.data.error)
+              : "laptop save unavailable";
+          showCsvFallback(err);
+        })
+        .catch(function () {
+          showCsvFallback("could not reach laptop");
+        });
     },
 
     exportAllAssessments: function () {

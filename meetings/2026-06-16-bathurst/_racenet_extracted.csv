@@ -1,0 +1,63 @@
+race_no,race_name,start_time,distance,track,grade,going,rail,no,horse,horse_name,name,barrier,trainer,jockey,weight,odds,scratched
+1,"1:15 pm Bathurst Ag, Horse & Pet Country Boosted Maiden Plate",1:15 pm,1200m,Bathurst,Maiden,Heavy 9,True,2,De Joker,De Joker,De Joker,5,Angus Stewart,Chad Lever,59kg,$6,false
+1,"1:15 pm Bathurst Ag, Horse & Pet Country Boosted Maiden Plate",1:15 pm,1200m,Bathurst,Maiden,Heavy 9,True,3,Argyle Springs,Argyle Springs,Argyle Springs,6,Alison Smith,Grant Buckley,57kg,$6.75,false
+1,"1:15 pm Bathurst Ag, Horse & Pet Country Boosted Maiden Plate",1:15 pm,1200m,Bathurst,Maiden,Heavy 9,True,4,Don't Say,Don't Say,Don't Say,1,Rodney Northam,Reece Jones,57kg,$2.2,false
+1,"1:15 pm Bathurst Ag, Horse & Pet Country Boosted Maiden Plate",1:15 pm,1200m,Bathurst,Maiden,Heavy 9,True,5,Odaka,Odaka,Odaka,4,Bob Howe,Jake Pracey-holmes,57kg,$5,false
+1,"1:15 pm Bathurst Ag, Horse & Pet Country Boosted Maiden Plate",1:15 pm,1200m,Bathurst,Maiden,Heavy 9,True,6,Pallene,Pallene,Pallene,2,Gayna Williams,Adam Farragher,57kg,$41,false
+1,"1:15 pm Bathurst Ag, Horse & Pet Country Boosted Maiden Plate",1:15 pm,1200m,Bathurst,Maiden,Heavy 9,True,7,Smokin' Genie,Smokin' Genie,Smokin' Genie,3,Melissa Harrison,Clayton Gallagher,57kg,$7,false
+1,"1:15 pm Bathurst Ag, Horse & Pet Country Boosted Maiden Plate",1:15 pm,1200m,Bathurst,Maiden,Heavy 9,True,1,Black Dynasty,Black Dynasty,Black Dynasty,6,,Michael Mulholland,59kg,SCR,true
+1,"1:15 pm Bathurst Ag, Horse & Pet Country Boosted Maiden Plate",1:15 pm,1200m,Bathurst,Maiden,Heavy 9,True,8,Spunky Reward,Spunky Reward,Spunky Reward,8,,Melissa Harrison,57kg,SCR,true
+2,1:55 pm Captain Thunderbolt Maiden Plate,1:55 pm,1400m,Bathurst,Maiden,Heavy 9,True,1,Forwarding,Forwarding,Forwarding,4,Garry Lunn,Jacob Stiff (a-2),59kg,$6,false
+2,1:55 pm Captain Thunderbolt Maiden Plate,1:55 pm,1400m,Bathurst,Maiden,Heavy 9,True,2,Italus,Italus,Italus,9,Angus Stewart,Reece Jones,59kg,$7.5,false
+2,1:55 pm Captain Thunderbolt Maiden Plate,1:55 pm,1400m,Bathurst,Maiden,Heavy 9,True,3,Wizard's Star,Wizard's Star,Wizard's Star,1,Edward Cummings,Lee Magorrian,59kg,$4.4,false
+2,1:55 pm Captain Thunderbolt Maiden Plate,1:55 pm,1400m,Bathurst,Maiden,Heavy 9,True,4,Zaddicted,Zaddicted,Zaddicted,5,Claire Lever,Amy McLucas,59kg,$71,false
+2,1:55 pm Captain Thunderbolt Maiden Plate,1:55 pm,1400m,Bathurst,Maiden,Heavy 9,True,5,Follow That Dream,Follow That Dream,Follow That Dream,2,Jarrod Austin,Jake Pracey-holmes,57kg,$34,false
+2,1:55 pm Captain Thunderbolt Maiden Plate,1:55 pm,1400m,Bathurst,Maiden,Heavy 9,True,8,Michonne's Katana,Michonne's Katana,Michonne's Katana,3,Gerald Ryan & Sterling Alexiou,Grant Buckley,57kg,$2.2,false
+2,1:55 pm Captain Thunderbolt Maiden Plate,1:55 pm,1400m,Bathurst,Maiden,Heavy 9,True,9,Miss Peony,Miss Peony,Miss Peony,8,Sharon Jeffries,Mikayla Weir,57kg,$7,false
+2,1:55 pm Captain Thunderbolt Maiden Plate,1:55 pm,1400m,Bathurst,Maiden,Heavy 9,True,6,Go Baby,Go Baby,Go Baby,6,Kylie Kennedy,Clayton Gallagher,57kg,SCR,true
+2,1:55 pm Captain Thunderbolt Maiden Plate,1:55 pm,1400m,Bathurst,Maiden,Heavy 9,True,7,I Am Overs,I Am Overs,I Am Overs,7,Annabel & Rob Archibald Heavelon Van,Der Hoven,57kg,SCR,true
+3,2:35 pm Central West Smoke Alarms Benchmark 58 Handicap,2:35 pm,2000m,Bathurst,BM58,Heavy 9,True,2,Casterly Rock,Casterly Rock,Casterly Rock,5,Todd Smith,Liam Blanch,60kg,$12,false
+3,2:35 pm Central West Smoke Alarms Benchmark 58 Handicap,2:35 pm,2000m,Bathurst,BM58,Heavy 9,True,3,Lucky Star,Lucky Star,Lucky Star,1,Claire Lever,Amy McLucas,59.5kg,$7,false
+3,2:35 pm Central West Smoke Alarms Benchmark 58 Handicap,2:35 pm,2000m,Bathurst,BM58,Heavy 9,True,4,Reel Crystal,Reel Crystal,Reel Crystal,2,Nick Olive,Coriah Keatings,59kg,$1.75,false
+3,2:35 pm Central West Smoke Alarms Benchmark 58 Handicap,2:35 pm,2000m,Bathurst,BM58,Heavy 9,True,6,Devils Daughter,Devils Daughter,Devils Daughter,4,Paul & Martha Cave,Dale Cole (a-2),57kg,$6,false
+3,2:35 pm Central West Smoke Alarms Benchmark 58 Handicap,2:35 pm,2000m,Bathurst,BM58,Heavy 9,True,7,Charlotting,Charlotting,Charlotting,7,Garry Lunn,Jacob Stiff (a-2),56kg,$6.25,false
+3,2:35 pm Central West Smoke Alarms Benchmark 58 Handicap,2:35 pm,2000m,Bathurst,BM58,Heavy 9,True,8,Farraige,Farraige,Farraige,3,Dale Wagstaff,Adam Farragher,55kg,$11,false
+3,2:35 pm Central West Smoke Alarms Benchmark 58 Handicap,2:35 pm,2000m,Bathurst,BM58,Heavy 9,True,1,Koning,Koning,Koning,6,Richard & Will Freedman,Lee Magorrian,63kg,SCR,true
+3,2:35 pm Central West Smoke Alarms Benchmark 58 Handicap,2:35 pm,2000m,Bathurst,BM58,Heavy 9,True,5,Nay Pee Cee,Nay Pee Cee,Nay Pee Cee,8,Gregory McFarlane,Clayton Gallagher,58.5kg,SCR,true
+4,3:10 pm The Ben Hall Dash Maiden Handicap,3:10 pm,1100m,Bathurst,Maiden,Heavy 9,True,1,Smichov,Smichov,Smichov,1,Jarrod Austin,Reece Jones,59.5kg,$3.2,false
+4,3:10 pm The Ben Hall Dash Maiden Handicap,3:10 pm,1100m,Bathurst,Maiden,Heavy 9,True,2,Spare,Spare,Spare,3,Jason Attard,Rory Hutchings,59kg,$3.6,false
+4,3:10 pm The Ben Hall Dash Maiden Handicap,3:10 pm,1100m,Bathurst,Maiden,Heavy 9,True,4,Gold Finger,Gold Finger,Gold Finger,8,Michael Mulholland,Jacob Stiff (a-2),57kg,$3.5,false
+4,3:10 pm The Ben Hall Dash Maiden Handicap,3:10 pm,1100m,Bathurst,Maiden,Heavy 9,True,5,Foray,Foray,Foray,6,Angus Stewart Jean,Van Overmeire,56.5kg,$5.25,false
+4,3:10 pm The Ben Hall Dash Maiden Handicap,3:10 pm,1100m,Bathurst,Maiden,Heavy 9,True,8,Carafe,Carafe,Carafe,9,Dale Wagstaff,Adam Farragher,55kg,$81,false
+4,3:10 pm The Ben Hall Dash Maiden Handicap,3:10 pm,1100m,Bathurst,Maiden,Heavy 9,True,9,Lucky Monkey,Lucky Monkey,Lucky Monkey,7,Karen Outtrim,Jake Pracey-holmes,55kg,$61,false
+4,3:10 pm The Ben Hall Dash Maiden Handicap,3:10 pm,1100m,Bathurst,Maiden,Heavy 9,True,10,Pacific Diamond,Pacific Diamond,Pacific Diamond,5,Richard & Will Freedman,Dale Cole (a-2),55kg,$8.5,false
+4,3:10 pm The Ben Hall Dash Maiden Handicap,3:10 pm,1100m,Bathurst,Maiden,Heavy 9,True,3,Monocru,Monocru,Monocru,2,Ciaron Maher,Adam Farragher,58kg,SCR,true
+4,3:10 pm The Ben Hall Dash Maiden Handicap,3:10 pm,1100m,Bathurst,Maiden,Heavy 9,True,6,Prankaj,Prankaj,Prankaj,10,Blake Ryan Jean,Van Overmeire,55.5kg,SCR,true
+4,3:10 pm The Ben Hall Dash Maiden Handicap,3:10 pm,1100m,Bathurst,Maiden,Heavy 9,True,7,Argantorati,Argantorati,Argantorati,4,,Joseph Ible,55kg,SCR,true
+5,3:45 pm Happy Birthday Paul Thoebald Benchmark 58 Handicap,3:45 pm,1100m,Bathurst,BM58,Heavy 9,True,1,Zahdi,Zahdi,Zahdi,3,Gayna Williams,Reece Jones,61.5kg,$8,false
+5,3:45 pm Happy Birthday Paul Thoebald Benchmark 58 Handicap,3:45 pm,1100m,Bathurst,BM58,Heavy 9,True,2,Baycat,Baycat,Baycat,6,Jarrod Austin,Chad Lever,61kg,$5.75,false
+5,3:45 pm Happy Birthday Paul Thoebald Benchmark 58 Handicap,3:45 pm,1100m,Bathurst,BM58,Heavy 9,True,3,Prorata,Prorata,Prorata,7,Gregory Hickman,Jacob Stiff (a-2),60.5kg,$2,false
+5,3:45 pm Happy Birthday Paul Thoebald Benchmark 58 Handicap,3:45 pm,1100m,Bathurst,BM58,Heavy 9,True,5,Gidgee Guy,Gidgee Guy,Gidgee Guy,10,Richard Jackson Jean,Van Overmeire,59.5kg,$31,false
+5,3:45 pm Happy Birthday Paul Thoebald Benchmark 58 Handicap,3:45 pm,1100m,Bathurst,BM58,Heavy 9,True,6,La Cache A Vin,La Cache A Vin,La Cache A Vin,1,Edward Cummings,Lee Magorrian,59kg,$8,false
+5,3:45 pm Happy Birthday Paul Thoebald Benchmark 58 Handicap,3:45 pm,1100m,Bathurst,BM58,Heavy 9,True,9,Cheap,Cheap,Cheap,13,Gayna Williams,Clayton Gallagher,57kg,$7,false
+5,3:45 pm Happy Birthday Paul Thoebald Benchmark 58 Handicap,3:45 pm,1100m,Bathurst,BM58,Heavy 9,True,11,Elderberry Wine,Elderberry Wine,Elderberry Wine,9,Alison Smith,Grant Buckley,55kg,$16,false
+5,3:45 pm Happy Birthday Paul Thoebald Benchmark 58 Handicap,3:45 pm,1100m,Bathurst,BM58,Heavy 9,True,12,Xaphan,Xaphan,Xaphan,2,Brad Draper,Mikayla Weir,55kg,$41,false
+5,3:45 pm Happy Birthday Paul Thoebald Benchmark 58 Handicap,3:45 pm,1100m,Bathurst,BM58,Heavy 9,True,13,Yael's Delight,Yael's Delight,Yael's Delight,11,Barry Wall,Jordan Quince (a-2),55kg,$51,false
+5,3:45 pm Happy Birthday Paul Thoebald Benchmark 58 Handicap,3:45 pm,1100m,Bathurst,BM58,Heavy 9,True,4,Catchy Tunes,Catchy Tunes,Catchy Tunes,5,Gregory McFarlane,Mathew Cahill,59.5kg,SCR,true
+5,3:45 pm Happy Birthday Paul Thoebald Benchmark 58 Handicap,3:45 pm,1100m,Bathurst,BM58,Heavy 9,True,7,Very Sirius,Very Sirius,Very Sirius,4,David Pfieffer,Robyn Freeman,58.5kg,SCR,true
+5,3:45 pm Happy Birthday Paul Thoebald Benchmark 58 Handicap,3:45 pm,1100m,Bathurst,BM58,Heavy 9,True,8,Nabha,Nabha,Nabha,8,,Rob Potter,57.5kg,SCR,true
+5,3:45 pm Happy Birthday Paul Thoebald Benchmark 58 Handicap,3:45 pm,1100m,Bathurst,BM58,Heavy 9,True,10,Torendosetta,Torendosetta,Torendosetta,12,,Bob Howe,56kg,SCR,true
+6,4:25 pm Dusty Hooves Media Country Boosted Class 2 Plate,4:25 pm,1200m,Bathurst,Class 2,Heavy 9,True,4,Twin Gift,Twin Gift,Twin Gift,14,Brad Draper,Mikayla Weir,59kg,$34,false
+6,4:25 pm Dusty Hooves Media Country Boosted Class 2 Plate,4:25 pm,1200m,Bathurst,Class 2,Heavy 9,True,7,Cool Space,Cool Space,Cool Space,3,Michael Mulholland,Jacob Stiff (a-2),57kg,$6.75,false
+6,4:25 pm Dusty Hooves Media Country Boosted Class 2 Plate,4:25 pm,1200m,Bathurst,Class 2,Heavy 9,True,8,Giovanna Star,Giovanna Star,Giovanna Star,4,Dean Mirfin,Donovan Dillon,57kg,$16,false
+6,4:25 pm Dusty Hooves Media Country Boosted Class 2 Plate,4:25 pm,1200m,Bathurst,Class 2,Heavy 9,True,10,Princess Mary,Princess Mary,Princess Mary,6,Alison Smith,Clayton Gallagher,57kg,$26,false
+6,4:25 pm Dusty Hooves Media Country Boosted Class 2 Plate,4:25 pm,1200m,Bathurst,Class 2,Heavy 9,True,11,Sorrento Palace,Sorrento Palace,Sorrento Palace,10,Brett Thompson,Jake Pracey-holmes,57kg,$10,false
+6,4:25 pm Dusty Hooves Media Country Boosted Class 2 Plate,4:25 pm,1200m,Bathurst,Class 2,Heavy 9,True,12,Indi Springs,Indi Springs,Indi Springs,9,Mack Griffith Jean,Van Overmeire,55.5kg,$1.85,false
+6,4:25 pm Dusty Hooves Media Country Boosted Class 2 Plate,4:25 pm,1200m,Bathurst,Class 2,Heavy 9,True,13,Roman Miss,Roman Miss,Roman Miss,12,Alison Smith,Robyn Freeman,55kg,$41,false
+6,4:25 pm Dusty Hooves Media Country Boosted Class 2 Plate,4:25 pm,1200m,Bathurst,Class 2,Heavy 9,True,14,Spring Prospect,Spring Prospect,Spring Prospect,2,David J Smith,Zoe Hunt,55kg,$3.3,false
+6,4:25 pm Dusty Hooves Media Country Boosted Class 2 Plate,4:25 pm,1200m,Bathurst,Class 2,Heavy 9,True,1,Fan Harder,Fan Harder,Fan Harder,5,Rodney Northam,Reece Jones,59kg,SCR,true
+6,4:25 pm Dusty Hooves Media Country Boosted Class 2 Plate,4:25 pm,1200m,Bathurst,Class 2,Heavy 9,True,2,Kirk,Kirk,Kirk,7,Gayna Williams,Ashleigh McCabe,59kg,SCR,true
+6,4:25 pm Dusty Hooves Media Country Boosted Class 2 Plate,4:25 pm,1200m,Bathurst,Class 2,Heavy 9,True,3,Midnight Moose,Midnight Moose,Midnight Moose,11,,Rob Potter,59kg,SCR,true
+6,4:25 pm Dusty Hooves Media Country Boosted Class 2 Plate,4:25 pm,1200m,Bathurst,Class 2,Heavy 9,True,5,Denman Bandit,Denman Bandit,Denman Bandit,13,,Brett Thompson,57.5kg,SCR,true
+6,4:25 pm Dusty Hooves Media Country Boosted Class 2 Plate,4:25 pm,1200m,Bathurst,Class 2,Heavy 9,True,6,Invincible Salex,Invincible Salex,Invincible Salex,1,Kylie Kennedy,Dale Cole (a-2),57.5kg,SCR,true
+6,4:25 pm Dusty Hooves Media Country Boosted Class 2 Plate,4:25 pm,1200m,Bathurst,Class 2,Heavy 9,True,9,Golden Vader,Golden Vader,Golden Vader,8,Liam Ruddy,Adam Farragher,57kg,SCR,true

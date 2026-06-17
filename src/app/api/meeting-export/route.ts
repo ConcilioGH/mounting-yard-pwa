@@ -22,17 +22,26 @@ function safeFileName(filename: string): string | null {
   return base;
 }
 
+const CORS_HEADERS = {
+  "Access-Control-Allow-Origin": "*",
+  "Access-Control-Allow-Methods": "POST, OPTIONS",
+  "Access-Control-Allow-Headers": "Content-Type",
+};
+
 /** Dev/local: write export CSV into repo `meetings/` folder. */
 export async function POST(request: Request) {
   if (process.env.NODE_ENV === "production") {
-    return Response.json({ ok: false, error: "Not available in production" }, { status: 403 });
+    return Response.json(
+      { ok: false, error: "Not available in production" },
+      { status: 403, headers: CORS_HEADERS },
+    );
   }
 
   let body: ExportBody;
   try {
     body = (await request.json()) as ExportBody;
   } catch {
-    return Response.json({ ok: false, error: "Invalid JSON" }, { status: 400 });
+    return Response.json({ ok: false, error: "Invalid JSON" }, { status: 400, headers: CORS_HEADERS });
   }
 
   const folderPath = safeMeetingRelativePath(String(body.folderPath ?? ""));
@@ -40,7 +49,7 @@ export async function POST(request: Request) {
   const content = typeof body.content === "string" ? body.content : "";
 
   if (!folderPath || !filename) {
-    return Response.json({ ok: false, error: "Invalid path or filename" }, { status: 400 });
+    return Response.json({ ok: false, error: "Invalid path or filename" }, { status: 400, headers: CORS_HEADERS });
   }
 
   const destDir = path.join(process.cwd(), folderPath);
@@ -50,5 +59,5 @@ export async function POST(request: Request) {
   await writeFile(destFile, content, "utf8");
 
   const relative = path.join(folderPath, filename).replace(/\\/g, "/");
-  return Response.json({ ok: true, path: relative });
+  return Response.json({ ok: true, path: relative }, { headers: CORS_HEADERS });
 }

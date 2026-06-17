@@ -1,0 +1,87 @@
+race_no,race_name,start_time,distance,track,grade,going,rail,no,horse,horse_name,name,barrier,trainer,jockey,weight,odds,scratched
+1,12:50 pm Cactus Imaging Plate,12:50 pm,1550m,Canterbury,,Soft 7,+3m Entire,1,Farset,Farset,Farset,9,Gai Waterhouse & Adrian Bott,Zac Wadick (a-2),58.5kg,$2.8,false
+1,12:50 pm Cactus Imaging Plate,12:50 pm,1550m,Canterbury,,Soft 7,+3m Entire,3,My Mate Elvis,My Mate Elvis,My Mate Elvis,4,Doug Gorrel,Jason Collett,58.5kg,$41,false
+1,12:50 pm Cactus Imaging Plate,12:50 pm,1550m,Canterbury,,Soft 7,+3m Entire,4,Naughton's Bar,Naughton's Bar,Naughton's Bar,6,Michael Travers Rebecca,Bronett Prag (a-3),58.5kg,$41,false
+1,12:50 pm Cactus Imaging Plate,12:50 pm,1550m,Canterbury,,Soft 7,+3m Entire,5,Reschs Milk,Reschs Milk,Reschs Milk,2,Kris Lees,Kerrin McEvoy,56.5kg,$13,false
+1,12:50 pm Cactus Imaging Plate,12:50 pm,1550m,Canterbury,,Soft 7,+3m Entire,6,Sharbino,Sharbino,Sharbino,1,Gary Nickson,Winona Costin,56.5kg,$11,false
+1,12:50 pm Cactus Imaging Plate,12:50 pm,1550m,Canterbury,,Soft 7,+3m Entire,7,Wairarapa,Wairarapa,Wairarapa,7,Gai Waterhouse & Adrian Bott,Tim Clark,56.5kg,$2.25,false
+1,12:50 pm Cactus Imaging Plate,12:50 pm,1550m,Canterbury,,Soft 7,+3m Entire,8,Sacred Well,Sacred Well,Sacred Well,8,Kris Lees,Dylan Gibbons,56kg,$21,false
+1,12:50 pm Cactus Imaging Plate,12:50 pm,1550m,Canterbury,,Soft 7,+3m Entire,9,Scoish Maloish,Scoish Maloish,Scoish Maloish,3,Marc & Mitchell Conners,Tommy Berry,56kg,$6.5,false
+1,12:50 pm Cactus Imaging Plate,12:50 pm,1550m,Canterbury,,Soft 7,+3m Entire,2,Flying Artisam,Flying Artisam,Flying Artisam,5,Gai Waterhouse & Adrian Bott,Regan Bayliss,58.5kg,SCR,true
+2,1:25 pm Ole Kirk @ Vinery Stud Handicap,1:25 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,1,Castelbella,Castelbella,Castelbella,2,Gary Portelli,Jason Collett,58kg,$5.5,false
+2,1:25 pm Ole Kirk @ Vinery Stud Handicap,1:25 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,2,Demerzel,Demerzel,Demerzel,4,Gai Waterhouse & Adrian Bott,Tim Clark,58kg,$3,false
+2,1:25 pm Ole Kirk @ Vinery Stud Handicap,1:25 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,3,Forsaken,Forsaken,Forsaken,6,Tom Charlton,Dylan Gibbons,58kg,$11,false
+2,1:25 pm Ole Kirk @ Vinery Stud Handicap,1:25 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,4,Lone Piper,Lone Piper,Lone Piper,7,Chris Waller,Tommy Berry,58kg,$5,false
+2,1:25 pm Ole Kirk @ Vinery Stud Handicap,1:25 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,5,Woodenbridge,Woodenbridge,Woodenbridge,1,Gerald Ryan & Sterling Alexiou,Tom Sherry,58kg,$6.5,false
+2,1:25 pm Ole Kirk @ Vinery Stud Handicap,1:25 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,6,Bollente Bella,Bollente Bella,Bollente Bella,5,Kris Lees,Kerrin McEvoy,57kg,$15,false
+2,1:25 pm Ole Kirk @ Vinery Stud Handicap,1:25 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,7,Consulate,Consulate,Consulate,3,Chris Waller,Siena Grima (a-2),57kg,$5.5,false
+2,1:25 pm Ole Kirk @ Vinery Stud Handicap,1:25 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,8,Grey Star,Grey Star,Grey Star,8,Tom Charlton,Andrew Adkins,57kg,$61,false
+3,2:00 pm Irresistible Pools And Spas Handicap,2:00 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,1,Defensemen,Defensemen,Defensemen,6,Chris Waller,Jason Collett,58kg,$11,false
+3,2:00 pm Irresistible Pools And Spas Handicap,2:00 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,2,Klocke,Klocke,Klocke,9,Chris Waller,Adam Hyeronimus,58kg,$3.1,false
+3,2:00 pm Irresistible Pools And Spas Handicap,2:00 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,3,By Napolean Hill,By Napolean Hill,By Napolean Hill,2,Tom Charlton,Nash Rawiller (a0.5),57.5kg,$4.8,false
+3,2:00 pm Irresistible Pools And Spas Handicap,2:00 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,4,Brothers In Arms,Brothers In Arms,Brothers In Arms,12,Peter Snowden,Tom Sherry,57kg,$17,false
+3,2:00 pm Irresistible Pools And Spas Handicap,2:00 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,5,Elio,Elio,Elio,5,Gai Waterhouse & Adrian Bott,Tim Clark,57kg,$6,false
+3,2:00 pm Irresistible Pools And Spas Handicap,2:00 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,6,Horologist,Horologist,Horologist,3,Chris Waller,Siena Grima (a-2),57kg,$18,false
+3,2:00 pm Irresistible Pools And Spas Handicap,2:00 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,7,Rebel Shield,Rebel Shield,Rebel Shield,11,Gary Portelli,Alysha Collett,57kg,$61,false
+3,2:00 pm Irresistible Pools And Spas Handicap,2:00 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,8,Snitzel A'la Rouge,Snitzel A'la Rouge,Snitzel A'la Rouge,4,Chris Waller,Tommy Berry,57kg,$10,false
+3,2:00 pm Irresistible Pools And Spas Handicap,2:00 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,9,The Diplomat,The Diplomat,The Diplomat,7,Annabel & Rob Archibald,Braith Nock (a-1.5),57kg,$17,false
+3,2:00 pm Irresistible Pools And Spas Handicap,2:00 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,10,Moncel,Moncel,Moncel,10,Annabel & Rob Archibald,Dylan Gibbons,56.5kg,$71,false
+3,2:00 pm Irresistible Pools And Spas Handicap,2:00 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,11,Predation,Predation,Predation,1,Edward O'Rourke,Kerrin McEvoy,56.5kg,$13,false
+3,2:00 pm Irresistible Pools And Spas Handicap,2:00 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,12,Zeitgeist,Zeitgeist,Zeitgeist,8,Chris Waller,Sam Clipperton,56.5kg,$15,false
+3,2:00 pm Irresistible Pools And Spas Handicap,2:00 pm,1250m,Canterbury,Handicap,Soft 7,+3m Entire,13,The Circle,The Circle,The Circle,13,Paul Perry,William Stanley (a-3),56kg,$126,false
+4,2:35 pm Inglis Xtra Bonus Plate,2:35 pm,1250m,Canterbury,,Soft 7,+3m Entire,2,Flying Artisam,Flying Artisam,Flying Artisam,9,Gai Waterhouse & Adrian Bott,Regan Bayliss,57kg,$16,false
+4,2:35 pm Inglis Xtra Bonus Plate,2:35 pm,1250m,Canterbury,,Soft 7,+3m Entire,3,Hard Liner,Hard Liner,Hard Liner,5,Joseph Pride,Sam Clipperton,57kg,$81,false
+4,2:35 pm Inglis Xtra Bonus Plate,2:35 pm,1250m,Canterbury,,Soft 7,+3m Entire,4,King For A Day,King For A Day,King For A Day,2,Matthew Smith,Ashley Morgan,57kg,$6.5,false
+4,2:35 pm Inglis Xtra Bonus Plate,2:35 pm,1250m,Canterbury,,Soft 7,+3m Entire,5,Seguro,Seguro,Seguro,7,Garry Kirkup,William Stanley (a-3),57kg,$151,false
+4,2:35 pm Inglis Xtra Bonus Plate,2:35 pm,1250m,Canterbury,,Soft 7,+3m Entire,6,Cape Douglas,Cape Douglas,Cape Douglas,11,Marc Chevalier,Andrew Adkins,55kg,$61,false
+4,2:35 pm Inglis Xtra Bonus Plate,2:35 pm,1250m,Canterbury,,Soft 7,+3m Entire,7,Claudel,Claudel,Claudel,4,Chris Waller,Tim Clark,55kg,$2.75,false
+4,2:35 pm Inglis Xtra Bonus Plate,2:35 pm,1250m,Canterbury,,Soft 7,+3m Entire,8,Gatwick,Gatwick,Gatwick,3,Mick Price & Michael Kent Jnr,Dylan Gibbons,55kg,$8.5,false
+4,2:35 pm Inglis Xtra Bonus Plate,2:35 pm,1250m,Canterbury,,Soft 7,+3m Entire,9,Merini,Merini,Merini,6,Kris Lees,Kerrin McEvoy,55kg,$16,false
+4,2:35 pm Inglis Xtra Bonus Plate,2:35 pm,1250m,Canterbury,,Soft 7,+3m Entire,10,Miss Supernova,Miss Supernova,Miss Supernova,1,Gerald Ryan & Sterling Alexiou,Chad Schofield,55kg,$7.5,false
+4,2:35 pm Inglis Xtra Bonus Plate,2:35 pm,1250m,Canterbury,,Soft 7,+3m Entire,11,Our Huntress,Our Huntress,Our Huntress,12,Michael Freedman,Tommy Berry (a0.5),55kg,$6,false
+4,2:35 pm Inglis Xtra Bonus Plate,2:35 pm,1250m,Canterbury,,Soft 7,+3m Entire,12,Saloon Passage,Saloon Passage,Saloon Passage,8,Chris Waller,Jason Collett,55kg,$7.5,false
+4,2:35 pm Inglis Xtra Bonus Plate,2:35 pm,1250m,Canterbury,,Soft 7,+3m Entire,1,Creator Of World,Creator Of World,Creator Of World,10,Ross McConville,Brock Ryan,57kg,SCR,true
+5,3:10 pm Ranvet Handicap,3:10 pm,1550m,Canterbury,Handicap,Soft 7,+3m Entire,1,General,General,General,10,Paul Perry,William Stanley (a-3),60kg,$26,false
+5,3:10 pm Ranvet Handicap,3:10 pm,1550m,Canterbury,Handicap,Soft 7,+3m Entire,2,Portsmouth,Portsmouth,Portsmouth,12,Annabel & Rob Archibald,Braith Nock (a-1.5),60kg,$18,false
+5,3:10 pm Ranvet Handicap,3:10 pm,1550m,Canterbury,Handicap,Soft 7,+3m Entire,3,Full Hao,Full Hao,Full Hao,2,Chris Waller,Nash Rawiller,59kg,$4.4,false
+5,3:10 pm Ranvet Handicap,3:10 pm,1550m,Canterbury,Handicap,Soft 7,+3m Entire,4,Mo Chroi,Mo Chroi,Mo Chroi,4,Gai Waterhouse & Adrian Bott,Tim Clark,58kg,$2.5,false
+5,3:10 pm Ranvet Handicap,3:10 pm,1550m,Canterbury,Handicap,Soft 7,+3m Entire,5,Viewpoint,Viewpoint,Viewpoint,6,Nacim Dilmi,Tom Sherry,57.5kg,$7,false
+5,3:10 pm Ranvet Handicap,3:10 pm,1550m,Canterbury,Handicap,Soft 7,+3m Entire,6,Dubai Warrior,Dubai Warrior,Dubai Warrior,1,Matthew Smith,Ashley Morgan,56.5kg,$9.5,false
+5,3:10 pm Ranvet Handicap,3:10 pm,1550m,Canterbury,Handicap,Soft 7,+3m Entire,7,Emballee,Emballee,Emballee,7,Chris Waller,Tommy Berry,56kg,$7.5,false
+5,3:10 pm Ranvet Handicap,3:10 pm,1550m,Canterbury,Handicap,Soft 7,+3m Entire,9,Astunner,Astunner,Astunner,3,Darrell Burnet,Coriah Keatings (a-3),55.5kg,$14,false
+5,3:10 pm Ranvet Handicap,3:10 pm,1550m,Canterbury,Handicap,Soft 7,+3m Entire,10,Craft,Craft,Craft,8,Becky Byrne,Sairyn Fawke,54kg,$81,false
+5,3:10 pm Ranvet Handicap,3:10 pm,1550m,Canterbury,Handicap,Soft 7,+3m Entire,11,Missile Leader,Missile Leader,Missile Leader,5,Keith Dryden & Libby Snowden,Jessica Brookes (a-3),54kg,$23,false
+5,3:10 pm Ranvet Handicap,3:10 pm,1550m,Canterbury,Handicap,Soft 7,+3m Entire,12,Spurline,Spurline,Spurline,11,Tom Wilson,Olivia Chambers (a-3),54kg,$151,false
+5,3:10 pm Ranvet Handicap,3:10 pm,1550m,Canterbury,Handicap,Soft 7,+3m Entire,8,Hush Hush,Hush Hush,Hush Hush,9,Ciaron Maher,Adam Farragher,56kg,SCR,true
+6,3:45 pm Asahi Super Dry Handicap,3:45 pm,1900m,Canterbury,Handicap,Soft 7,+3m Entire,1,Luskaire,Luskaire,Luskaire,3,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),62.5kg,$18,false
+6,3:45 pm Asahi Super Dry Handicap,3:45 pm,1900m,Canterbury,Handicap,Soft 7,+3m Entire,2,Sacrify,Sacrify,Sacrify,12,Annabel & Rob Archibald,Braith Nock (a-1.5),61.5kg,$8,false
+6,3:45 pm Asahi Super Dry Handicap,3:45 pm,1900m,Canterbury,Handicap,Soft 7,+3m Entire,4,Elle Hudson,Elle Hudson,Elle Hudson,9,Joseph Pride,Sam Clipperton,57.5kg,$7.5,false
+6,3:45 pm Asahi Super Dry Handicap,3:45 pm,1900m,Canterbury,Handicap,Soft 7,+3m Entire,5,Fioprospero,Fioprospero,Fioprospero,14,Matthew Smith,Kerrin McEvoy,57.5kg,$11,false
+6,3:45 pm Asahi Super Dry Handicap,3:45 pm,1900m,Canterbury,Handicap,Soft 7,+3m Entire,6,Format,Format,Format,5,Gai Waterhouse & Adrian Bott,Adam Hyeronimus,57.5kg,$5.5,false
+6,3:45 pm Asahi Super Dry Handicap,3:45 pm,1900m,Canterbury,Handicap,Soft 7,+3m Entire,7,Le Troisir,Le Troisir,Le Troisir,7,Chris Waller,Tommy Berry,57.5kg,$6,false
+6,3:45 pm Asahi Super Dry Handicap,3:45 pm,1900m,Canterbury,Handicap,Soft 7,+3m Entire,8,Allegro Miss,Allegro Miss,Allegro Miss,11,Con Karakatsanis,Jay Ford,57kg,$16,false
+6,3:45 pm Asahi Super Dry Handicap,3:45 pm,1900m,Canterbury,Handicap,Soft 7,+3m Entire,10,Velaris,Velaris,Velaris,1,Chris Waller,Nash Rawiller (a1),57kg,$5.5,false
+6,3:45 pm Asahi Super Dry Handicap,3:45 pm,1900m,Canterbury,Handicap,Soft 7,+3m Entire,11,Full Regalia,Full Regalia,Full Regalia,4,Karen Owen,Madeline Owen,56kg,$27,false
+6,3:45 pm Asahi Super Dry Handicap,3:45 pm,1900m,Canterbury,Handicap,Soft 7,+3m Entire,12,Coto De Caza,Coto De Caza,Coto De Caza,2,Todd Howlett,Alysha Collett,54.5kg,$91,false
+6,3:45 pm Asahi Super Dry Handicap,3:45 pm,1900m,Canterbury,Handicap,Soft 7,+3m Entire,13,Think I Will,Think I Will,Think I Will,8,Gai Waterhouse & Adrian Bott,Siena Grima (a-2),54kg,$5.5,false
+6,3:45 pm Asahi Super Dry Handicap,3:45 pm,1900m,Canterbury,Handicap,Soft 7,+3m Entire,14,He's Godspeed,He's Godspeed,He's Godspeed,13,Brett Lazzarini,Teighan Worsnop,54kg,$151,false
+6,3:45 pm Asahi Super Dry Handicap,3:45 pm,1900m,Canterbury,Handicap,Soft 7,+3m Entire,3,Pleasure Artist,Pleasure Artist,Pleasure Artist,10,Richard &,Will Freedman,59kg,SCR,true
+6,3:45 pm Asahi Super Dry Handicap,3:45 pm,1900m,Canterbury,Handicap,Soft 7,+3m Entire,9,Four Candles,Four Candles,Four Candles,6,"Michael, John & Wayne Hawkes",Jason Collett,57kg,SCR,true
+7,4:20 pm Tab Handicap,4:20 pm,1200m,Canterbury,Handicap,Soft 7,+3m Entire,1,Balkans,Balkans,Balkans,8,Richard Litt,Siena Grima (a-2),62kg,$23,false
+7,4:20 pm Tab Handicap,4:20 pm,1200m,Canterbury,Handicap,Soft 7,+3m Entire,2,Conchiero,Conchiero,Conchiero,16,Gai Waterhouse & Adrian Bott,Zac Wadick (a-2),61.5kg,$23,false
+7,4:20 pm Tab Handicap,4:20 pm,1200m,Canterbury,Handicap,Soft 7,+3m Entire,3,Bat Out Of Hell,Bat Out Of Hell,Bat Out Of Hell,7,Bjorn Baker,Ashley Morgan,61kg,$15,false
+7,4:20 pm Tab Handicap,4:20 pm,1200m,Canterbury,Handicap,Soft 7,+3m Entire,4,Madrina,Madrina,Madrina,2,Nick Olive,Coriah Keatings (a-3),60kg,$11,false
+7,4:20 pm Tab Handicap,4:20 pm,1200m,Canterbury,Handicap,Soft 7,+3m Entire,5,Formal,Formal,Formal,9,Nathan Doyle,William Stanley (a-3),59.5kg,$16,false
+7,4:20 pm Tab Handicap,4:20 pm,1200m,Canterbury,Handicap,Soft 7,+3m Entire,6,Zouripper,Zouripper,Zouripper,11,Joseph Pride,Chad Schofield,59.5kg,$11,false
+7,4:20 pm Tab Handicap,4:20 pm,1200m,Canterbury,Handicap,Soft 7,+3m Entire,7,Clear Proof,Clear Proof,Clear Proof,17,John Thompson,Dylan Gibbons,59kg,$16,false
+7,4:20 pm Tab Handicap,4:20 pm,1200m,Canterbury,Handicap,Soft 7,+3m Entire,8,Scintilla,Scintilla,Scintilla,14,Les Bridge,Anna Roper (a-2),59kg,$13,false
+7,4:20 pm Tab Handicap,4:20 pm,1200m,Canterbury,Handicap,Soft 7,+3m Entire,9,Roussillon,Roussillon,Roussillon,5,Clare Collett,Jason Collett,58.5kg,$27,false
+7,4:20 pm Tab Handicap,4:20 pm,1200m,Canterbury,Handicap,Soft 7,+3m Entire,10,Motoscafo,Motoscafo,Motoscafo,13,John Thompson,Kerrin McEvoy,58kg,$35,false
+7,4:20 pm Tab Handicap,4:20 pm,1200m,Canterbury,Handicap,Soft 7,+3m Entire,11,Unstopabull,Unstopabull,Unstopabull,15,Chris Waller,Sam Clipperton,58kg,$20,false
+7,4:20 pm Tab Handicap,4:20 pm,1200m,Canterbury,Handicap,Soft 7,+3m Entire,12,Twisted Queen,Twisted Queen,Twisted Queen,3,Joseph Pride,Adam Hyeronimus,57.5kg,$14,false
+7,4:20 pm Tab Handicap,4:20 pm,1200m,Canterbury,Handicap,Soft 7,+3m Entire,13,Mrs Maree,Mrs Maree,Mrs Maree,18,Clarry Conners,Nash Rawiller (a1),57kg,$12,false
+7,4:20 pm Tab Handicap,4:20 pm,1200m,Canterbury,Handicap,Soft 7,+3m Entire,14,Island Dec,Island Dec,Island Dec,4,Robert & Luke Price,Tommy Berry,56.5kg,$10,false
+7,4:20 pm Tab Handicap,4:20 pm,1200m,Canterbury,Handicap,Soft 7,+3m Entire,15,Donwon,Donwon,Donwon,6,Ross McConville,Mollie Fitzgerald (a-3),56kg,$126,false
+7,4:20 pm Tab Handicap,4:20 pm,1200m,Canterbury,Handicap,Soft 7,+3m Entire,16,Eton,Eton,Eton,1,Gai Waterhouse & Adrian Bott,Tim Clark,55.5kg,$2.9,false
+7,4:20 pm Tab Handicap,4:20 pm,1200m,Canterbury,Handicap,Soft 7,+3m Entire,17,Prinzerro,Prinzerro,Prinzerro,10,,Ciaron Maher,55.5kg,$91,false
+7,4:20 pm Tab Handicap,4:20 pm,1200m,Canterbury,Handicap,Soft 7,+3m Entire,18,Vis I,Vis I,Vis I,12,,Anthony Mountney,54kg,SCR,true

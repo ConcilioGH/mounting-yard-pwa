@@ -609,6 +609,9 @@ export function buildIpadYardDomHtml(): string {
           <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.exportAllAssessments()">Export</button>
         </div>
         <div class="iy-toolbar-slot">
+          <button type="button" id="iy-btn-save-to-laptop" class="iy-toolbar-btn iy-hidden" onclick="window.ipadYard.saveToLaptop()">Save to Laptop</button>
+        </div>
+        <div class="iy-toolbar-slot">
           <button type="button" id="iy-btn-package" class="iy-toolbar-btn" onclick="window.ipadYard.togglePackageMenu()">Package</button>
           <div id="iy-package-menu" class="iy-toolbar-menu">
             <button type="button" class="iy-toolbar-menu-item" onclick="window.ipadYard.exportAssessmentPackage(); window.ipadYard.closeToolbarMenus()">Export package</button>
