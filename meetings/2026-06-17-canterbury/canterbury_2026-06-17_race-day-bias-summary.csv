@@ -1,0 +1,27 @@
+meeting,category,group,wins,places,avg_sp,actual_share,expected_share,bias_score,finisher_count,heat_tier,trackside_tag,interpretation
+canterbury · 2026-06-17,lane,Rail,6,14,11.43,82.1,77.6,4.4,20,,,
+canterbury · 2026-06-17,lane,Running Line,1,7,9.51,17.9,22.4,-4.4,8,,,
+canterbury · 2026-06-17,lane,3 Wide,0,0,,0,0,0,0,,,
+canterbury · 2026-06-17,lane,4 Wide+,0,0,,0,0,0,0,,,
+canterbury · 2026-06-17,position,Leader / Front Pair,3,6,12.06,32.6,26.8,5.8,9,,,
+canterbury · 2026-06-17,position,On Pace,3,2,6.52,25.2,21.7,3.5,5,,,
+canterbury · 2026-06-17,position,Midfield,1,10,7.68,32.9,41.8,-9,11,,,
+canterbury · 2026-06-17,position,Backmarker,0,3,26.33,9.3,9.7,-0.4,3,,,
+canterbury · 2026-06-17,position,Wide Forward,0,0,,0,0,0,0,,,
+canterbury · 2026-06-17,position,Wide Midfield,0,0,,0,0,0,0,,,
+canterbury · 2026-06-17,position,Wide Back,0,0,,0,0,0,0,,,
+canterbury · 2026-06-17,composite,Rail Front,,,,44.9,34.2,10.7,9,positive,,
+canterbury · 2026-06-17,composite,Rail Midfield,,,,27.9,33.8,-5.9,8,neutral,,
+canterbury · 2026-06-17,composite,Rail Back,,,,9.3,9.7,-0.4,3,neutral,,
+canterbury · 2026-06-17,composite,Running Line Front,,,,13,14.3,-1.3,5,neutral,,
+canterbury · 2026-06-17,composite,Running Line Midfield,,,,5,8.1,-3.1,3,neutral,,
+canterbury · 2026-06-17,composite,Running Line Back,,,,0,0,0,0,insufficient,,
+canterbury · 2026-06-17,composite,3 Wide Front,,,,0,0,0,0,insufficient,,
+canterbury · 2026-06-17,composite,3 Wide Midfield,,,,0,0,0,0,insufficient,,
+canterbury · 2026-06-17,composite,3 Wide Back,,,,0,0,0,0,insufficient,,
+canterbury · 2026-06-17,composite,4 Wide+ Front,,,,0,0,0,0,insufficient,,
+canterbury · 2026-06-17,composite,4 Wide+ Midfield,,,,0,0,0,0,insufficient,,
+canterbury · 2026-06-17,composite,4 Wide+ Back,,,,0,0,0,0,insufficient,,
+canterbury · 2026-06-17,conclusion,RAIL FRONT,,,,,,10.7,9,positive,POSITIVE,Leaders on the rail are outperforming market expectation.
+canterbury · 2026-06-17,conclusion,RAIL BACK,,,,,,-0.4,3,neutral,NEUTRAL,On the rail from backmarker positions are performing slightly above market expectation.
+canterbury · 2026-06-17,conclusion,RAIL MIDFIELD,,,,,,-5.9,8,neutral,NEUTRAL,On the rail in midfield positions are underperforming market expectation.
