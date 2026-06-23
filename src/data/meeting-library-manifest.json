@@ -1,0 +1,343 @@
+{
+  "generatedAt": "2026-06-23T06:32:25.839Z",
+  "meetings": [
+    {
+      "id": "meetings/2026-06-23-hawkesbury/hawkesbury_2026-06-23_master.csv",
+      "label": "2026-06-23 · Hawkesbury",
+      "date": "2026-06-23",
+      "track": "hawkesbury",
+      "trackLabel": "Hawkesbury",
+      "relativePath": "meetings/2026-06-23-hawkesbury/hawkesbury_2026-06-23_master.csv",
+      "fileName": "hawkesbury_2026-06-23_master.csv",
+      "modifiedAt": "2026-06-23T02:11:04.665Z"
+    },
+    {
+      "id": "meetings/2026-06-20-randwick/randwick_2026-06-20_master.csv",
+      "label": "2026-06-20 · Randwick",
+      "date": "2026-06-20",
+      "track": "randwick",
+      "trackLabel": "Randwick",
+      "relativePath": "meetings/2026-06-20-randwick/randwick_2026-06-20_master.csv",
+      "fileName": "randwick_2026-06-20_master.csv",
+      "modifiedAt": "2026-06-22T23:07:02.221Z"
+    },
+    {
+      "id": "meetings/2026-06-18-gosford/gosford_2026-06-18_master.csv",
+      "label": "2026-06-18 · Gosford",
+      "date": "2026-06-18",
+      "track": "gosford",
+      "trackLabel": "Gosford",
+      "relativePath": "meetings/2026-06-18-gosford/gosford_2026-06-18_master.csv",
+      "fileName": "gosford_2026-06-18_master.csv",
+      "modifiedAt": "2026-06-17T23:56:09.219Z"
+    },
+    {
+      "id": "meetings/2026-06-17-canterbury/canterbury_2026-06-17_master.csv",
+      "label": "2026-06-17 · Canterbury",
+      "date": "2026-06-17",
+      "track": "canterbury",
+      "trackLabel": "Canterbury",
+      "relativePath": "meetings/2026-06-17-canterbury/canterbury_2026-06-17_master.csv",
+      "fileName": "canterbury_2026-06-17_master.csv",
+      "modifiedAt": "2026-06-16T23:56:12.386Z"
+    },
+    {
+      "id": "meetings/2026-06-16-bathurst/bathurst_2026-06-16_master.csv",
+      "label": "2026-06-16 · Bathurst",
+      "date": "2026-06-16",
+      "track": "bathurst",
+      "trackLabel": "Bathurst",
+      "relativePath": "meetings/2026-06-16-bathurst/bathurst_2026-06-16_master.csv",
+      "fileName": "bathurst_2026-06-16_master.csv",
+      "modifiedAt": "2026-06-16T03:51:22.971Z"
+    },
+    {
+      "id": "meetings/2026-06-15-nowra/nowra_2026-06-15_master.csv",
+      "label": "2026-06-15 · Nowra",
+      "date": "2026-06-15",
+      "track": "nowra",
+      "trackLabel": "Nowra",
+      "relativePath": "meetings/2026-06-15-nowra/nowra_2026-06-15_master.csv",
+      "fileName": "nowra_2026-06-15_master.csv",
+      "modifiedAt": "2026-06-14T23:38:34.138Z"
+    },
+    {
+      "id": "meetings/2026-06-13-test/test_2026-06-13_master.csv",
+      "label": "2026-06-13 · Test",
+      "date": "2026-06-13",
+      "track": "test",
+      "trackLabel": "Test",
+      "relativePath": "meetings/2026-06-13-test/test_2026-06-13_master.csv",
+      "fileName": "test_2026-06-13_master.csv",
+      "modifiedAt": "2026-06-23T03:45:35.529Z"
+    },
+    {
+      "id": "meetings/2026-06-11-gosford/nowra_2026-06-15_master.csv",
+      "label": "2026-06-11 · Gosford",
+      "date": "2026-06-11",
+      "track": "gosford",
+      "trackLabel": "Gosford",
+      "relativePath": "meetings/2026-06-11-gosford/nowra_2026-06-15_master.csv",
+      "fileName": "nowra_2026-06-15_master.csv",
+      "modifiedAt": "2026-06-14T23:38:34.138Z"
+    },
+    {
+      "id": "meetings/2026-06-11-gosford/gosford_2026-06-11_master.csv",
+      "label": "2026-06-11 · Gosford",
+      "date": "2026-06-11",
+      "track": "gosford",
+      "trackLabel": "Gosford",
+      "relativePath": "meetings/2026-06-11-gosford/gosford_2026-06-11_master.csv",
+      "fileName": "gosford_2026-06-11_master.csv",
+      "modifiedAt": "2026-06-11T02:31:13.801Z"
+    },
+    {
+      "id": "meetings/2026-06-10-kensington/kensington_2026-06-10_master.csv",
+      "label": "2026-06-10 · Kensington",
+      "date": "2026-06-10",
+      "track": "kensington",
+      "trackLabel": "Kensington",
+      "relativePath": "meetings/2026-06-10-kensington/kensington_2026-06-10_master.csv",
+      "fileName": "kensington_2026-06-10_master.csv",
+      "modifiedAt": "2026-06-10T00:04:22.069Z"
+    },
+    {
+      "id": "meetings/2026-06-08-canterbury/canterbury_2026-06-08_master.csv",
+      "label": "2026-06-08 · Canterbury",
+      "date": "2026-06-08",
+      "track": "canterbury",
+      "trackLabel": "Canterbury",
+      "relativePath": "meetings/2026-06-08-canterbury/canterbury_2026-06-08_master.csv",
+      "fileName": "canterbury_2026-06-08_master.csv",
+      "modifiedAt": "2026-06-08T00:41:54.068Z"
+    },
+    {
+      "id": "meetings/2026-06-06-randwick/randwick_2026-06-06_master.csv",
+      "label": "2026-06-06 · Randwick",
+      "date": "2026-06-06",
+      "track": "randwick",
+      "trackLabel": "Randwick",
+      "relativePath": "meetings/2026-06-06-randwick/randwick_2026-06-06_master.csv",
+      "fileName": "randwick_2026-06-06_master.csv",
+      "modifiedAt": "2026-06-06T00:11:06.681Z"
+    },
+    {
+      "id": "meetings/2026-06-04-hawkesbury/hawkesbury_2026-06-04_master.csv",
+      "label": "2026-06-04 · Hawkesbury",
+      "date": "2026-06-04",
+      "track": "hawkesbury",
+      "trackLabel": "Hawkesbury",
+      "relativePath": "meetings/2026-06-04-hawkesbury/hawkesbury_2026-06-04_master.csv",
+      "fileName": "hawkesbury_2026-06-04_master.csv",
+      "modifiedAt": "2026-06-04T00:15:55.495Z"
+    },
+    {
+      "id": "meetings/2026-06-03-warwick-farm/warwick_farm_2026-06-03_master.csv",
+      "label": "2026-06-03 · Warwick Farm",
+      "date": "2026-06-03",
+      "track": "warwick-farm",
+      "trackLabel": "Warwick Farm",
+      "relativePath": "meetings/2026-06-03-warwick-farm/warwick_farm_2026-06-03_master.csv",
+      "fileName": "warwick_farm_2026-06-03_master.csv",
+      "modifiedAt": "2026-06-03T00:09:30.321Z"
+    },
+    {
+      "id": "meetings/2026-06-02-kembla-grange/kembla_grange_2026-06-02_master.csv",
+      "label": "2026-06-02 · Kembla Grange",
+      "date": "2026-06-02",
+      "track": "kembla-grange",
+      "trackLabel": "Kembla Grange",
+      "relativePath": "meetings/2026-06-02-kembla-grange/kembla_grange_2026-06-02_master.csv",
+      "fileName": "kembla_grange_2026-06-02_master.csv",
+      "modifiedAt": "2026-06-02T03:07:01.919Z"
+    },
+    {
+      "id": "meetings/2026-05-31-scone/scone_2026-05-31_master.csv",
+      "label": "2026-05-31 · Scone",
+      "date": "2026-05-31",
+      "track": "scone",
+      "trackLabel": "Scone",
+      "relativePath": "meetings/2026-05-31-scone/scone_2026-05-31_master.csv",
+      "fileName": "scone_2026-05-31_master.csv",
+      "modifiedAt": "2026-05-31T05:59:55.273Z"
+    },
+    {
+      "id": "meetings/2026-05-30-rosehill/rosehill_2026-05-30_master.csv",
+      "label": "2026-05-30 · Rosehill",
+      "date": "2026-05-30",
+      "track": "rosehill",
+      "trackLabel": "Rosehill",
+      "relativePath": "meetings/2026-05-30-rosehill/rosehill_2026-05-30_master.csv",
+      "fileName": "rosehill_2026-05-30_master.csv",
+      "modifiedAt": "2026-05-31T05:20:21.359Z"
+    },
+    {
+      "id": "meetings/2026-05-27-canterbury/canterbury_2026-05-27_master.csv",
+      "label": "2026-05-27 · Canterbury",
+      "date": "2026-05-27",
+      "track": "canterbury",
+      "trackLabel": "Canterbury",
+      "relativePath": "meetings/2026-05-27-canterbury/canterbury_2026-05-27_master.csv",
+      "fileName": "canterbury_2026-05-27_master.csv",
+      "modifiedAt": "2026-05-26T23:56:39.071Z"
+    },
+    {
+      "id": "meetings/2026-05-26-albury/albury_2026-05-26_master.csv",
+      "label": "2026-05-26 · Albury",
+      "date": "2026-05-26",
+      "track": "albury",
+      "trackLabel": "Albury",
+      "relativePath": "meetings/2026-05-26-albury/albury_2026-05-26_master.csv",
+      "fileName": "albury_2026-05-26_master.csv",
+      "modifiedAt": "2026-05-26T03:02:32.845Z"
+    },
+    {
+      "id": "meetings/2026-05-23-randwick/randwick_2026-05-23_master.csv",
+      "label": "2026-05-23 · Randwick",
+      "date": "2026-05-23",
+      "track": "randwick",
+      "trackLabel": "Randwick",
+      "relativePath": "meetings/2026-05-23-randwick/randwick_2026-05-23_master.csv",
+      "fileName": "randwick_2026-05-23_master.csv",
+      "modifiedAt": "2026-05-22T08:43:56.525Z"
+    },
+    {
+      "id": "meetings/2026-05-21-hawkesbury/hawkesbury_2026-05-21_master.csv",
+      "label": "2026-05-21 · Hawkesbury",
+      "date": "2026-05-21",
+      "track": "hawkesbury",
+      "trackLabel": "Hawkesbury",
+      "relativePath": "meetings/2026-05-21-hawkesbury/hawkesbury_2026-05-21_master.csv",
+      "fileName": "hawkesbury_2026-05-21_master.csv",
+      "modifiedAt": "2026-05-22T05:52:59.036Z"
+    },
+    {
+      "id": "meetings/2026-05-20-warwickfarm/warwickfarm_2026-05-20_master.csv",
+      "label": "2026-05-20 · Warwickfarm",
+      "date": "2026-05-20",
+      "track": "warwickfarm",
+      "trackLabel": "Warwickfarm",
+      "relativePath": "meetings/2026-05-20-warwickfarm/warwickfarm_2026-05-20_master.csv",
+      "fileName": "warwickfarm_2026-05-20_master.csv",
+      "modifiedAt": "2026-05-22T02:43:17.127Z"
+    },
+    {
+      "id": "meetings/2026-05-19-newcastle/newcastle_2026-05-19_master.csv",
+      "label": "2026-05-19 · Newcastle",
+      "date": "2026-05-19",
+      "track": "newcastle",
+      "trackLabel": "Newcastle",
+      "relativePath": "meetings/2026-05-19-newcastle/newcastle_2026-05-19_master.csv",
+      "fileName": "newcastle_2026-05-19_master.csv",
+      "modifiedAt": "2026-05-18T22:58:51.719Z"
+    },
+    {
+      "id": "meetings/2026-05-16-scone/scone_2026-05-16_master.csv",
+      "label": "2026-05-16 · Scone",
+      "date": "2026-05-16",
+      "track": "scone",
+      "trackLabel": "Scone",
+      "relativePath": "meetings/2026-05-16-scone/scone_2026-05-16_master.csv",
+      "fileName": "scone_2026-05-16_master.csv",
+      "modifiedAt": "2026-05-22T01:29:55.620Z"
+    },
+    {
+      "id": "meetings/2026-05-15-scone/scone_2026-05-15_master.csv",
+      "label": "2026-05-15 · Scone",
+      "date": "2026-05-15",
+      "track": "scone",
+      "trackLabel": "Scone",
+      "relativePath": "meetings/2026-05-15-scone/scone_2026-05-15_master.csv",
+      "fileName": "scone_2026-05-15_master.csv",
+      "modifiedAt": "2026-05-14T14:13:40.117Z"
+    },
+    {
+      "id": "meetings/2026-05-14-hawkesbury/hawkesbury_2026-05-14_master.csv",
+      "label": "2026-05-14 · Hawkesbury",
+      "date": "2026-05-14",
+      "track": "hawkesbury",
+      "trackLabel": "Hawkesbury",
+      "relativePath": "meetings/2026-05-14-hawkesbury/hawkesbury_2026-05-14_master.csv",
+      "fileName": "hawkesbury_2026-05-14_master.csv",
+      "modifiedAt": "2026-05-14T14:10:48.793Z"
+    },
+    {
+      "id": "meetings/2026-05-13-kensington/kensington_2026-05-13_master.csv",
+      "label": "2026-05-13 · Kensington",
+      "date": "2026-05-13",
+      "track": "kensington",
+      "trackLabel": "Kensington",
+      "relativePath": "meetings/2026-05-13-kensington/kensington_2026-05-13_master.csv",
+      "fileName": "kensington_2026-05-13_master.csv",
+      "modifiedAt": "2026-05-11T11:25:15.968Z"
+    }
+  ],
+  "scan": {
+    "rootPath": "build-manifest",
+    "foldersScanned": [
+      "meetings/2026-05-13-kensington",
+      "meetings/2026-05-14-hawkesbury",
+      "meetings/2026-05-15-scone",
+      "meetings/2026-05-16-scone",
+      "meetings/2026-05-19-newcastle",
+      "meetings/2026-05-20-warwick",
+      "meetings/2026-05-20-warwickfarm",
+      "meetings/2026-05-21-hawkesbury",
+      "meetings/2026-05-23-randwick",
+      "meetings/2026-05-26-albury",
+      "meetings/2026-05-27-canterbury",
+      "meetings/2026-05-30-rosehill",
+      "meetings/2026-05-31-scone",
+      "meetings/2026-06-02-kembla-grange",
+      "meetings/2026-06-03-warwick-farm",
+      "meetings/2026-06-04-hawkesbury",
+      "meetings/2026-06-06-randwick",
+      "meetings/2026-06-08-canterbury",
+      "meetings/2026-06-10-kensington",
+      "meetings/2026-06-11-gosford",
+      "meetings/2026-06-13-test",
+      "meetings/2026-06-15-nowra",
+      "meetings/2026-06-16-bathurst",
+      "meetings/2026-06-17-canterbury",
+      "meetings/2026-06-18-gosford",
+      "meetings/2026-06-20-randwick",
+      "meetings/2026-06-23-hawkesbury"
+    ],
+    "masterCsvFiles": [
+      "meetings/2026-05-13-kensington/kensington_2026-05-13_master.csv",
+      "meetings/2026-05-14-hawkesbury/hawkesbury_2026-05-14_master.csv",
+      "meetings/2026-05-15-scone/scone_2026-05-15_master.csv",
+      "meetings/2026-05-16-scone/scone_2026-05-16_master.csv",
+      "meetings/2026-05-19-newcastle/newcastle_2026-05-19_master.csv",
+      "meetings/2026-05-20-warwickfarm/warwickfarm_2026-05-20_master.csv",
+      "meetings/2026-05-21-hawkesbury/hawkesbury_2026-05-21_master.csv",
+      "meetings/2026-05-23-randwick/randwick_2026-05-23_master.csv",
+      "meetings/2026-05-26-albury/albury_2026-05-26_master.csv",
+      "meetings/2026-05-27-canterbury/canterbury_2026-05-27_master.csv",
+      "meetings/2026-05-30-rosehill/rosehill_2026-05-30_master.csv",
+      "meetings/2026-05-31-scone/scone_2026-05-31_master.csv",
+      "meetings/2026-06-02-kembla-grange/kembla_grange_2026-06-02_master.csv",
+      "meetings/2026-06-03-warwick-farm/warwick_farm_2026-06-03_master.csv",
+      "meetings/2026-06-04-hawkesbury/hawkesbury_2026-06-04_master.csv",
+      "meetings/2026-06-06-randwick/randwick_2026-06-06_master.csv",
+      "meetings/2026-06-08-canterbury/canterbury_2026-06-08_master.csv",
+      "meetings/2026-06-10-kensington/kensington_2026-06-10_master.csv",
+      "meetings/2026-06-11-gosford/gosford_2026-06-11_master.csv",
+      "meetings/2026-06-11-gosford/nowra_2026-06-15_master.csv",
+      "meetings/2026-06-13-test/test_2026-06-13_master.csv",
+      "meetings/2026-06-15-nowra/nowra_2026-06-15_master.csv",
+      "meetings/2026-06-16-bathurst/bathurst_2026-06-16_master.csv",
+      "meetings/2026-06-17-canterbury/canterbury_2026-06-17_master.csv",
+      "meetings/2026-06-18-gosford/gosford_2026-06-18_master.csv",
+      "meetings/2026-06-20-randwick/randwick_2026-06-20_master.csv",
+      "meetings/2026-06-23-hawkesbury/hawkesbury_2026-06-23_master.csv"
+    ],
+    "meetingsReturned": 27,
+    "foldersExcluded": [
+      {
+        "folder": "meetings/2026-05-20-warwick",
+        "reason": "no *_master.csv file in folder"
+      }
+    ]
+  }
+}
