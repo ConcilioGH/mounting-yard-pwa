@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npx tsx scripts/generate-meeting-library-manifest.mts && next build",
     "start": "next start",
     "lint": "eslint",
     "create-master-csv": "node scripts/create-master-csv.js",

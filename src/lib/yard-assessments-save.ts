@@ -1,6 +1,6 @@
 import { mkdir, writeFile } from "node:fs/promises";
 import path from "node:path";
-import { safeMeetingCsvRelativePath } from "@/lib/meeting-library-server";
+import { safeMeetingCsvRelativePath } from "@/lib/meeting-library-paths";
 
 export type YardAssessmentRow = {
   race: string;
