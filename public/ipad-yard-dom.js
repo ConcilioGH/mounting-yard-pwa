@@ -9,7 +9,7 @@
   var MEETING_STORE_KEY = cfg.meetingStoreKey || "ipad-yard-meeting-store-v2";
   var RACES_KEY = cfg.racesKey || "ipad-yard-races-v1";
   var DOWNLOADED_MEETING_KEY = cfg.downloadedMeetingKey || "ipad-yard-downloaded-meeting-v1";
-  var LIBRARY_CACHE_KEY = "ipad-yard-library-cache-v1";
+  var LIBRARY_CACHE_KEY = "ipad-yard-library-cache-v2";
   var MANIFEST_KEY = cfg.manifestKey || "mounting-yard-meeting-manifest-v1";
   var LAST_MEETING_CSV_KEY = "mounting-yard-last-meeting-csv-v1";
   var LAST_MEETING_CSV_META_KEY = "mounting-yard-last-meeting-csv-meta-v1";
@@ -1218,23 +1218,34 @@
       }
     },
 
-    fetchLibrary: function () {
+    fetchLibrary: function (options) {
+      options = options || {};
+      var bypassCache = Boolean(options.bypassCache);
       var self = this;
       if (self.libraryLoading) return;
       if (!self.isOnline()) {
-        if (self.loadCachedLibrary()) {
+        if (!bypassCache && self.loadCachedLibrary()) {
           self.setLibraryMsg("Offline — showing cached meeting list.");
           self.renderLibrary();
         } else {
-          self.setLibraryMsg("Offline — connect to laptop to refresh meetings.");
+          self.setLibraryMsg("Offline — connect to refresh meetings from server.");
           self.renderLibrary();
         }
         return;
       }
+      if (bypassCache) {
+        self.libraryMeetings = [];
+        self.renderLibrary();
+      }
       self.libraryLoading = true;
-      self.setLibraryMsg("Loading meetings…");
+      self.setLibraryMsg(bypassCache ? "Refreshing from server…" : "Loading meetings…");
       var xhr = new XMLHttpRequest();
-      xhr.open("GET", "/api/meeting-library");
+      xhr.open(
+        "GET",
+        "/api/meeting-library?_=" + encodeURIComponent(String(Date.now())),
+      );
+      xhr.setRequestHeader("Cache-Control", "no-cache");
+      xhr.setRequestHeader("Pragma", "no-cache");
       xhr.onload = function () {
         self.libraryLoading = false;
         try {
@@ -1245,27 +1256,52 @@
           if (!data.ok || !data.meetings) {
             throw new Error(data.error || "Invalid library response");
           }
+          if (data.scan) {
+            console.log("[meeting-library] folders scanned:", data.scan.foldersScanned);
+            console.log("[meeting-library] master CSV files found:", data.scan.masterCsvFiles);
+            console.log("[meeting-library] folders excluded:", data.scan.foldersExcluded);
+            console.log("[meeting-library] meetings returned:", data.scan.meetingsReturned);
+            console.log(
+              "[meeting-library] API meetings:",
+              (data.meetings || []).map(function (m) {
+                return m.relativePath;
+              }),
+            );
+          }
           self.libraryMeetings = data.meetings;
           self.cacheLibraryMeetings(data.meetings);
-          self.setLibraryMsg(
-            data.meetings.length
-              ? data.meetings.length + " meetings available"
-              : "No master CSVs found in meetings/",
-          );
+          if (bypassCache) {
+            self.setLibraryMsg(
+              "Meeting Library refreshed from server." +
+                (data.meetings.length
+                  ? " " + data.meetings.length + " meetings available."
+                  : " No master CSVs found in meetings/."),
+            );
+          } else {
+            self.setLibraryMsg(
+              data.meetings.length
+                ? data.meetings.length + " meetings available"
+                : "No master CSVs found in meetings/",
+            );
+          }
           self.renderLibrary();
         } catch (e) {
-          self.libraryMeetings = [];
-          self.setLibraryMsg("Could not load library: " + e.message);
+          if (!bypassCache && self.loadCachedLibrary()) {
+            self.setLibraryMsg("Could not load library — showing cached meeting list.");
+          } else {
+            self.libraryMeetings = [];
+            self.setLibraryMsg("Could not load library: " + e.message);
+          }
           self.renderLibrary();
         }
       };
       xhr.onerror = function () {
         self.libraryLoading = false;
-        if (self.loadCachedLibrary()) {
-          self.setLibraryMsg("Could not reach laptop — showing cached meeting list.");
+        if (!bypassCache && self.loadCachedLibrary()) {
+          self.setLibraryMsg("Could not reach server — showing cached meeting list.");
         } else {
           self.libraryMeetings = [];
-          self.setLibraryMsg("Network error loading meetings.");
+          self.setLibraryMsg("Network error — could not refresh from server.");
         }
         self.renderLibrary();
       };

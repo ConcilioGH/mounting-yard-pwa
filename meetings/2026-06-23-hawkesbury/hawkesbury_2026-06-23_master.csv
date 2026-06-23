@@ -1,0 +1,74 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir
+R1,Hawkesbury,1,12:10 pm Family Funday 19 July Midway Maiden Plate,1300m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",1,1,Capone,Capone,Capone,1,John Thompson,Chad Schofield,$5.5,5.7
+R1,Hawkesbury,1,12:10 pm Family Funday 19 July Midway Maiden Plate,1300m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",2,2,Galactic Force,Galactic Force,Galactic Force,5,Sara Ryan,Tim Clark,$1.75,5.5
+R1,Hawkesbury,1,12:10 pm Family Funday 19 July Midway Maiden Plate,1300m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",3,3,Heeza Steve,Heeza Steve,Heeza Steve,6,Mitchell & Desiree Kearney,Olivia Chambers (a-2),$51,4
+R1,Hawkesbury,1,12:10 pm Family Funday 19 July Midway Maiden Plate,1300m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",4,4,Yes Arnie,Yes Arnie,Yes Arnie,7,Theresa Bateup,Amy McLucas,$7.5,4.6
+R1,Hawkesbury,1,12:10 pm Family Funday 19 July Midway Maiden Plate,1300m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",5,5,Anna Karenina,Anna Karenina,Anna Karenina,4,Brad Widdup,Alysha Collett,$13,6
+R1,Hawkesbury,1,12:10 pm Family Funday 19 July Midway Maiden Plate,1300m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",6,6,Blackjack Lady,Blackjack Lady,Blackjack Lady,8,Jarrod Austin,Louise Day,$34,NA
+R1,Hawkesbury,1,12:10 pm Family Funday 19 July Midway Maiden Plate,1300m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",7,7,Catch A Vibe,Catch A Vibe,Catch A Vibe,2,Wayne Austin,Ellen Hennessy,$81,7.7
+R1,Hawkesbury,1,12:10 pm Family Funday 19 July Midway Maiden Plate,1300m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",8,8,Ole Got Swagger,Ole Got Swagger,Ole Got Swagger,3,Lee & Cherie Curtis,Jeff Penza,$9,7
+R2,Hawkesbury,2,12:45 pm Elite Sand & Soil Super Maiden Plate,1500m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",1,1,Hellfighter,Hellfighter,Hellfighter,6,Nathan Doyle,Shannen Llewellyn (a-2),$3.4,7
+R2,Hawkesbury,2,12:45 pm Elite Sand & Soil Super Maiden Plate,1500m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",3,3,Master Johnny,Master Johnny,Master Johnny,1,Theresa Bateup,Amy McLucas,$4,2.3
+R2,Hawkesbury,2,12:45 pm Elite Sand & Soil Super Maiden Plate,1500m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",4,4,Show King,Show King,Show King,3,Anthony Warren,Coriah Keatings (a-3),$126,5
+R2,Hawkesbury,2,12:45 pm Elite Sand & Soil Super Maiden Plate,1500m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",5,5,The Prospect,The Prospect,The Prospect,4,Nacim Dilmi,Lee Magorrian,$16,5.7
+R2,Hawkesbury,2,12:45 pm Elite Sand & Soil Super Maiden Plate,1500m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",6,6,Tupelo Twist,Tupelo Twist,Tupelo Twist,5,Theresa Bateup,Jessica Taylor,$126,8
+R2,Hawkesbury,2,12:45 pm Elite Sand & Soil Super Maiden Plate,1500m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",7,7,Blessed Express,Blessed Express,Blessed Express,10,Nathan Doyle,Tim Clark,$6,6.7
+R2,Hawkesbury,2,12:45 pm Elite Sand & Soil Super Maiden Plate,1500m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",8,8,Grey Belief,Grey Belief,Grey Belief,8,Terry Croft,Siena Grima (a-2),$19,4.6
+R2,Hawkesbury,2,12:45 pm Elite Sand & Soil Super Maiden Plate,1500m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",10,10,Royal Princess,Royal Princess,Royal Princess,2,Ciaron Maher,Mitchell Bell,$2.65,4.8
+R3,Hawkesbury,3,1:20 pm Xxxx Gold 3yo Maiden Handicap,1400m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",1,1,State Secret,State Secret,State Secret,1,Gai Waterhouse & Adrian Bott,Regan Bayliss,$5.5,1.3
+R3,Hawkesbury,3,1:20 pm Xxxx Gold 3yo Maiden Handicap,1400m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",2,2,Movie Night,Movie Night,Movie Night,7,Tom Charlton,Tommy Berry,$2.1,6
+R3,Hawkesbury,3,1:20 pm Xxxx Gold 3yo Maiden Handicap,1400m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",6,6,Conquest,Conquest,Conquest,3,Wayne Austin,Ellen Hennessy,$23,NA
+R3,Hawkesbury,3,1:20 pm Xxxx Gold 3yo Maiden Handicap,1400m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",8,8,He's Got Grunt,He's Got Grunt,He's Got Grunt,6,Marc Chevalier,Tyler Schiller,$26,3.6
+R3,Hawkesbury,3,1:20 pm Xxxx Gold 3yo Maiden Handicap,1400m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",10,10,Stardust Memories,Stardust Memories,Stardust Memories,2,Gai Waterhouse & Adrian Bott,Tim Clark,$2.35,3.7
+R3,Hawkesbury,3,1:20 pm Xxxx Gold 3yo Maiden Handicap,1400m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",11,11,Another Mission,Another Mission,Another Mission,12,Peter Green,Grant Buckley,$34,5.5
+R4,Hawkesbury,4,1:55 pm Pioneer Services Maiden Plate,1000m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",1,1,Hy,Hy,Hy,5,Jim & Greg Lee,Zac Wadick,$20,NA
+R4,Hawkesbury,4,1:55 pm Pioneer Services Maiden Plate,1000m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",6,6,Majestic Legend,Majestic Legend,Majestic Legend,7,Les Bridge,Tommy Berry,$29,4.2
+R4,Hawkesbury,4,1:55 pm Pioneer Services Maiden Plate,1000m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",8,8,Radicals,Radicals,Radicals,11,Joseph Pride,Kerrin McEvoy,$11,3
+R4,Hawkesbury,4,1:55 pm Pioneer Services Maiden Plate,1000m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",9,9,Internal Affairs,Internal Affairs,Internal Affairs,1,Brad Widdup,Tyler Schiller,$1.8,2.7
+R4,Hawkesbury,4,1:55 pm Pioneer Services Maiden Plate,1000m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",10,10,Order Of The Day,Order Of The Day,Order Of The Day,2,Amanda Turner,Olivia Chambers (a-2),$29,NA
+R4,Hawkesbury,4,1:55 pm Pioneer Services Maiden Plate,1000m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",11,11,Skystone,Skystone,Skystone,6,Tom Charlton,Dylan Gibbons,$2.4,NA
+R4,Hawkesbury,4,1:55 pm Pioneer Services Maiden Plate,1000m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",12,12,Theander,Theander,Theander,4,Gary Portelli,Alysha Collett,$41,NA
+R5,Hawkesbury,5,2:35 pm Hrc Motel Benchmark 64 Handicap,1500m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",1,1,I've Bean Tryin',I've Bean Tryin',I've Bean Tryin',10,Matthew Kelley,Coriah Keatings (a-3),$8.5,7.8
+R5,Hawkesbury,5,2:35 pm Hrc Motel Benchmark 64 Handicap,1500m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",2,2,Dr Evil,Dr Evil,Dr Evil,11,John Steinmetz,Deanne Panya,$61,8.3
+R5,Hawkesbury,5,2:35 pm Hrc Motel Benchmark 64 Handicap,1500m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",3,3,Pentagon,Pentagon,Pentagon,1,Bjorn Baker,Tommy Berry,$2.2,3.6
+R5,Hawkesbury,5,2:35 pm Hrc Motel Benchmark 64 Handicap,1500m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",4,4,Silver Tempest,Silver Tempest,Silver Tempest,5,Annabel & Rob Archibald,Alysha Collett,$41,6.6
+R5,Hawkesbury,5,2:35 pm Hrc Motel Benchmark 64 Handicap,1500m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",5,5,Squeezebox,Squeezebox,Squeezebox,7,Kim Waugh,Keagan Latham,$7.5,6
+R5,Hawkesbury,5,2:35 pm Hrc Motel Benchmark 64 Handicap,1500m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",7,7,Costabit,Costabit,Costabit,4,Gerald Ryan & Sterling Alexiou,Tyler Schiller,$13,8.2
+R5,Hawkesbury,5,2:35 pm Hrc Motel Benchmark 64 Handicap,1500m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",8,8,Kirkuk,Kirkuk,Kirkuk,8,Jim & Greg Lee,Regan Bayliss,$15,7.7
+R5,Hawkesbury,5,2:35 pm Hrc Motel Benchmark 64 Handicap,1500m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",9,9,Prefer Diamonds,Prefer Diamonds,Prefer Diamonds,6,Jason Attard,Dylan Gibbons,$10,4
+R5,Hawkesbury,5,2:35 pm Hrc Motel Benchmark 64 Handicap,1500m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",10,10,Inception,Inception,Inception,3,Nathan Doyle,Ashley Morgan,$6,2.8
+R5,Hawkesbury,5,2:35 pm Hrc Motel Benchmark 64 Handicap,1500m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",11,11,Otono,Otono,Otono,12,Matthew Dale,Tim Clark,$23,6.8
+R6,Hawkesbury,6,3:10 pm St Johns Park Bowling Club Provincial Benchmark 64 Handicap,1100m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",1,1,Leave No Doubt,Leave No Doubt,Leave No Doubt,12,Garry Frazer,Siena Grima (a-2),$41,7.1
+R6,Hawkesbury,6,3:10 pm St Johns Park Bowling Club Provincial Benchmark 64 Handicap,1100m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",2,2,Divo,Divo,Divo,7,Nathan Doyle,Shannen Llewellyn (a-2),$7,2.1
+R6,Hawkesbury,6,3:10 pm St Johns Park Bowling Club Provincial Benchmark 64 Handicap,1100m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",3,3,Donwon,Donwon,Donwon,11,Ross McConville,Coriah Keatings (a-3),$14,4
+R6,Hawkesbury,6,3:10 pm St Johns Park Bowling Club Provincial Benchmark 64 Handicap,1100m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",4,4,Up The Front,Up The Front,Up The Front,10,Blake Ryan,Grant Buckley,$15,6.8
+R6,Hawkesbury,6,3:10 pm St Johns Park Bowling Club Provincial Benchmark 64 Handicap,1100m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",5,5,Escargoes,Escargoes,Escargoes,5,Brad Widdup,Tommy Berry,$2.3,5.6
+R6,Hawkesbury,6,3:10 pm St Johns Park Bowling Club Provincial Benchmark 64 Handicap,1100m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",6,6,Iron Fury,Iron Fury,Iron Fury,2,Nathan Doyle,Tim Clark,$5.75,3.8
+R6,Hawkesbury,6,3:10 pm St Johns Park Bowling Club Provincial Benchmark 64 Handicap,1100m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",7,7,Kosrae,Kosrae,Kosrae,4,Brad Widdup,Leeshelle Small (a-3),$13,1.6
+R6,Hawkesbury,6,3:10 pm St Johns Park Bowling Club Provincial Benchmark 64 Handicap,1100m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",8,8,Lady Shenanigans,Lady Shenanigans,Lady Shenanigans,3,Mitchell & Desiree Kearney,Olivia Chambers (a-2),$41,3.6
+R6,Hawkesbury,6,3:10 pm St Johns Park Bowling Club Provincial Benchmark 64 Handicap,1100m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",10,10,Altercation,Altercation,Altercation,6,Jason Deamer,Dylan Gibbons,$11,5.8
+R6,Hawkesbury,6,3:10 pm St Johns Park Bowling Club Provincial Benchmark 64 Handicap,1100m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",11,11,Gaelic Gem,Gaelic Gem,Gaelic Gem,1,Tracey Bartley,Alysha Collett,$16,2.8
+R6,Hawkesbury,6,3:10 pm St Johns Park Bowling Club Provincial Benchmark 64 Handicap,1100m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",13,13,Truce,Truce,Truce,13,Sara Ryan,Reece Jones,$61,4.7
+R6,Hawkesbury,6,3:10 pm St Johns Park Bowling Club Provincial Benchmark 64 Handicap,1100m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",14,14,Rainagain,Rainagain,Rainagain,8,Norm Lewis,Ellen Hennessy,$201,3.1
+R7,Hawkesbury,7,3:50 pm Richmond Club Class 1 & Maiden Plate,1800m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",1,1,Abandonment,Abandonment,Abandonment,7,Bjorn Baker,Tommy Berry,$5,4.9
+R7,Hawkesbury,7,3:50 pm Richmond Club Class 1 & Maiden Plate,1800m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",3,3,Coyote,Coyote,Coyote,2,Peter Green,Grant Buckley,$19,4.9
+R7,Hawkesbury,7,3:50 pm Richmond Club Class 1 & Maiden Plate,1800m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",4,4,Noble One,Noble One,Noble One,6,Matthew Smith,Winona Costin,$51,6.5
+R7,Hawkesbury,7,3:50 pm Richmond Club Class 1 & Maiden Plate,1800m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",5,5,Portsmouth,Portsmouth,Portsmouth,9,Annabel & Rob Archibald,Braith Nock,$7,3.3
+R7,Hawkesbury,7,3:50 pm Richmond Club Class 1 & Maiden Plate,1800m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",6,6,The Iron Star,The Iron Star,The Iron Star,12,Marc Chevalier,Tyler Schiller,$9,6.1
+R7,Hawkesbury,7,3:50 pm Richmond Club Class 1 & Maiden Plate,1800m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",7,7,Five Of A Kind,Five Of A Kind,Five Of A Kind,16,"Michael, John & Wayne Hawkes",Ashley Morgan,$10,5.7
+R7,Hawkesbury,7,3:50 pm Richmond Club Class 1 & Maiden Plate,1800m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",8,8,Little Lunch,Little Lunch,Little Lunch,10,Jarrod Austin,Jessica Taylor,$126,4.5
+R7,Hawkesbury,7,3:50 pm Richmond Club Class 1 & Maiden Plate,1800m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",11,11,Wounder,Wounder,Wounder,4,Chris Waller,Lee Magorrian,$4.6,5.3
+R7,Hawkesbury,7,3:50 pm Richmond Club Class 1 & Maiden Plate,1800m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",13,13,Sheeza Diva,Sheeza Diva,Sheeza Diva,17,Mitchell & Desiree Kearney,Jeff Penza,$6.5,7.6
+R7,Hawkesbury,7,3:50 pm Richmond Club Class 1 & Maiden Plate,1800m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",14,14,Vondel,Vondel,Vondel,14,Brad Widdup,Alysha Collett,$7.5,2.2
+R7,Hawkesbury,7,3:50 pm Richmond Club Class 1 & Maiden Plate,1800m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",15,15,Chaithnia,Chaithnia,Chaithnia,1,Matthew Smith,Claire Ramsbotham (a-3),$18,6.3
+R7,Hawkesbury,7,3:50 pm Richmond Club Class 1 & Maiden Plate,1800m,Maiden,Soft 5,"+2m 1100m-450m, True Remainder",17,17,Kittano,Kittano,Kittano,11,Gregory Hickman,Mitch Stapleford (a-1.5),$201,7.8
+R8,Hawkesbury,8,4:25 pm Blakes Marine Benchmark 64 Handicap,1300m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",3,3,Sirius Legend,Sirius Legend,Sirius Legend,11,Anthony & Sam Freedman,Dylan Gibbons,$15,5.3
+R8,Hawkesbury,8,4:25 pm Blakes Marine Benchmark 64 Handicap,1300m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",4,4,Convergent,Convergent,Convergent,18,Jim & Greg Lee,Regan Bayliss,$31,6.3
+R8,Hawkesbury,8,4:25 pm Blakes Marine Benchmark 64 Handicap,1300m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",5,5,Panic,Panic,Panic,13,Matthew Kelley,Coriah Keatings (a-3),$12,5.3
+R8,Hawkesbury,8,4:25 pm Blakes Marine Benchmark 64 Handicap,1300m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",7,7,Whoa Nellie,Whoa Nellie,Whoa Nellie,10,Brad Widdup,Tyler Schiller,$3.5,5.2
+R8,Hawkesbury,8,4:25 pm Blakes Marine Benchmark 64 Handicap,1300m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",8,8,Yachiyo,Yachiyo,Yachiyo,5,Mick Price & Michael Kent Jnr,Ashley Morgan,$6.5,4
+R8,Hawkesbury,8,4:25 pm Blakes Marine Benchmark 64 Handicap,1300m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",10,10,Graphic Sight,Graphic Sight,Graphic Sight,8,Gai Waterhouse & Adrian Bott,Tim Clark,$8,4.3
+R8,Hawkesbury,8,4:25 pm Blakes Marine Benchmark 64 Handicap,1300m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",13,13,Call Me Sassy,Call Me Sassy,Call Me Sassy,2,David Pfieffer,Tommy Berry,$2.5,5
+R8,Hawkesbury,8,4:25 pm Blakes Marine Benchmark 64 Handicap,1300m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",17,17,Purple Rose,Purple Rose,Purple Rose,4,John Thompson,Chad Schofield,$10,1.8
+R8,Hawkesbury,8,4:25 pm Blakes Marine Benchmark 64 Handicap,1300m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",19,19,Johnny Smash ho,Johnny Smash ho,Johnny Smash ho,7,Mike Van Gestel,Reece Jones,$126,5.8
+R8,Hawkesbury,8,4:25 pm Blakes Marine Benchmark 64 Handicap,1300m,BM64,Soft 5,"+2m 1100m-450m, True Remainder",20,20,Surf Sonic,Surf Sonic,Surf Sonic,1,Karen Outtrim,Jeff Penza,$151,5.2

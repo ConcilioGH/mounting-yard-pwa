@@ -17,6 +17,19 @@ export type MeetingLibraryEntry = {
   modifiedAt: string;
 };
 
+export type MeetingLibraryScan = {
+  rootPath: string;
+  foldersScanned: string[];
+  masterCsvFiles: string[];
+  meetingsReturned: number;
+  foldersExcluded: Array<{ folder: string; reason: string }>;
+};
+
+export type MeetingLibraryResult = {
+  meetings: MeetingLibraryEntry[];
+  scan: MeetingLibraryScan;
+};
+
 const MEETINGS_ROOT = "meetings";
 
 export function safeMeetingCsvRelativePath(relativePath: string): string | null {
@@ -58,17 +71,30 @@ function labelForEntry(folderName: string, fileName: string): {
 async function listMasterCsvInDir(
   absoluteDir: string,
   relativeDir: string,
-): Promise<MeetingLibraryEntry[]> {
+): Promise<{ entries: MeetingLibraryEntry[]; exclusionReason: string | null }> {
   let names: string[];
   try {
     names = await readdir(absoluteDir);
-  } catch {
-    return [];
+  } catch (error) {
+    const message = error instanceof Error ? error.message : "could not read folder";
+    return { entries: [], exclusionReason: `could not read folder: ${message}` };
+  }
+
+  const masterNames = names.filter((name) => /_master\.csv$/i.test(name));
+  if (!masterNames.length) {
+    const csvNames = names.filter((name) => /\.csv$/i.test(name));
+    if (csvNames.length) {
+      return {
+        entries: [],
+        exclusionReason: `no *_master.csv file (found ${csvNames.length} other .csv: ${csvNames.join(", ")})`,
+      };
+    }
+    return { entries: [], exclusionReason: "no *_master.csv file in folder" };
   }
 
   const entries: MeetingLibraryEntry[] = [];
-  for (const name of names) {
-    if (!/_master\.csv$/i.test(name)) continue;
+  const statFailures: string[] = [];
+  for (const name of masterNames) {
     const relativePath = `${relativeDir}/${name}`.replace(/\\/g, "/");
     const absoluteFile = path.join(absoluteDir, name);
     let modifiedAt = "";
@@ -76,6 +102,7 @@ async function listMasterCsvInDir(
       const fileStat = await stat(absoluteFile);
       modifiedAt = fileStat.mtime.toISOString();
     } catch {
+      statFailures.push(name);
       continue;
     }
     const folderName = path.basename(relativeDir);
@@ -91,26 +118,55 @@ async function listMasterCsvInDir(
       modifiedAt,
     });
   }
-  return entries;
+
+  if (!entries.length && statFailures.length) {
+    return {
+      entries: [],
+      exclusionReason: `*_master.csv present but unreadable: ${statFailures.join(", ")}`,
+    };
+  }
+
+  return { entries, exclusionReason: null };
 }
 
-/** Scan repo `meetings/` for `*_master.csv` files (laptop dev workflow). */
-export async function listMeetingLibrary(): Promise<MeetingLibraryEntry[]> {
+/** Scan repo `meetings/` for `*_master.csv` files — always reads disk, no caching. */
+export async function listMeetingLibrary(): Promise<MeetingLibraryResult> {
   const root = path.join(process.cwd(), MEETINGS_ROOT);
   let folderNames: string[];
   try {
     const items = await readdir(root, { withFileTypes: true });
     folderNames = items.filter((d) => d.isDirectory()).map((d) => d.name);
   } catch {
-    return [];
+    const scan: MeetingLibraryScan = {
+      rootPath: root,
+      foldersScanned: [],
+      masterCsvFiles: [],
+      meetingsReturned: 0,
+      foldersExcluded: [],
+    };
+    console.log("[meeting-library] folders scanned:", 0, []);
+    console.log("[meeting-library] master CSV files found:", 0, []);
+    console.log("[meeting-library] folders excluded:", 0, []);
+    console.log("[meeting-library] meetings returned:", 0);
+    return { meetings: [], scan };
   }
 
+  folderNames.sort((a, b) => a.localeCompare(b));
+
   const all: MeetingLibraryEntry[] = [];
+  const masterCsvFiles: string[] = [];
+  const foldersExcluded: Array<{ folder: string; reason: string }> = [];
   for (const folderName of folderNames) {
     const relativeDir = `${MEETINGS_ROOT}/${folderName}`;
     const absoluteDir = path.join(root, folderName);
-    const found = await listMasterCsvInDir(absoluteDir, relativeDir);
-    all.push(...found);
+    const { entries, exclusionReason } = await listMasterCsvInDir(absoluteDir, relativeDir);
+    if (!entries.length && exclusionReason) {
+      foldersExcluded.push({ folder: relativeDir, reason: exclusionReason });
+    }
+    for (const entry of entries) {
+      masterCsvFiles.push(entry.relativePath);
+    }
+    all.push(...entries);
   }
 
   all.sort((a, b) => {
@@ -118,7 +174,32 @@ export async function listMeetingLibrary(): Promise<MeetingLibraryEntry[]> {
     return b.modifiedAt.localeCompare(a.modifiedAt);
   });
 
-  return all;
+  const scan: MeetingLibraryScan = {
+    rootPath: root,
+    foldersScanned: folderNames.map((name) => `${MEETINGS_ROOT}/${name}`),
+    masterCsvFiles,
+    meetingsReturned: all.length,
+    foldersExcluded,
+  };
+
+  console.log(
+    "[meeting-library] folders scanned:",
+    scan.foldersScanned.length,
+    scan.foldersScanned,
+  );
+  console.log(
+    "[meeting-library] master CSV files found:",
+    scan.masterCsvFiles.length,
+    scan.masterCsvFiles,
+  );
+  console.log(
+    "[meeting-library] folders excluded:",
+    scan.foldersExcluded.length,
+    scan.foldersExcluded,
+  );
+  console.log("[meeting-library] meetings returned:", scan.meetingsReturned);
+
+  return { meetings: all, scan };
 }
 
 export async function readMeetingLibraryCsv(relativePath: string): Promise<string> {

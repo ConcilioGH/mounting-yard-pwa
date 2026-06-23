@@ -31,10 +31,15 @@ export async function GET(request: Request) {
   }
 
   try {
-    const meetings = await listMeetingLibrary();
+    const { meetings, scan } = await listMeetingLibrary();
     return Response.json(
-      { ok: true, meetings },
-      { headers: { "Cache-Control": "no-store" } },
+      { ok: true, meetings, scan },
+      {
+        headers: {
+          "Cache-Control": "no-store, no-cache, must-revalidate",
+          Pragma: "no-cache",
+        },
+      },
     );
   } catch (error) {
     const message = error instanceof Error ? error.message : "Failed to list meetings";

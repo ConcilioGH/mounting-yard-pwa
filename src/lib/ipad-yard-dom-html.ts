@@ -642,7 +642,7 @@ export function buildIpadYardDomHtml(): string {
     <div class="iy-library-title">Meeting Library</div>
     <p class="iy-library-sub">Meetings from repo <code>meetings/</code> (push to GitHub → deploy → tap Refresh). Each folder needs a <code>*_master.csv</code> file.</p>
     <div class="iy-toolbar" style="margin-bottom:8px;">
-      <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.fetchLibrary()">Refresh</button>
+      <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.fetchLibrary({ bypassCache: true })">Refresh</button>
       <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.showAssess()">Back to Yard</button>
     </div>
     <p id="iy-library-msg" class="iy-msg"></p>
