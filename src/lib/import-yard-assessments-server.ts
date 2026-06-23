@@ -21,7 +21,8 @@ export function safeMeetingFolderPath(folderPath: string): string | null {
 }
 
 async function findMeetingFolderByKey(meetingKey: string): Promise<string | null> {
-  const entries = await listMeetingLibrary();
+  const result = await listMeetingLibrary();
+  const entries = result.meetings ?? [];
   for (const entry of entries) {
     try {
       const content = await readMeetingLibraryCsv(entry.relativePath);
