@@ -1,4 +1,8 @@
-import { isLocalMeetingsFsEnabled } from "@/lib/local-meetings-fs";
+import {
+  listMeetingLibrary,
+  readMeetingLibraryCsv,
+  safeMeetingCsvRelativePath,
+} from "@/lib/meeting-library-server";
 
 export const dynamic = "force-dynamic";
 
@@ -7,36 +11,8 @@ const NO_STORE_HEADERS = {
   Pragma: "no-cache",
 };
 
-function localOnlyResponse() {
-  return Response.json(
-    {
-      ok: false,
-      localOnly: true,
-      error: "Meeting library filesystem access is only available on localhost/dev",
-      meetings: [],
-      scan: {
-        foldersScanned: [],
-        masterCsvFiles: [],
-        meetingsReturned: 0,
-        foldersExcluded: [],
-      },
-    },
-    { status: 403, headers: NO_STORE_HEADERS },
-  );
-}
-
-/** List or fetch meeting master CSVs from repo `meetings/` (dev / local network only). */
+/** List or fetch meeting master CSVs from committed repo `meetings/` (dev + Vercel production). */
 export async function GET(request: Request) {
-  if (!isLocalMeetingsFsEnabled()) {
-    return localOnlyResponse();
-  }
-
-  const {
-    listMeetingLibrary,
-    readMeetingLibraryCsv,
-    safeMeetingCsvRelativePath,
-  } = await import("@/lib/meeting-library-server");
-
   const url = new URL(request.url);
   const relativePath = url.searchParams.get("path")?.trim() ?? "";
 
@@ -44,6 +20,9 @@ export async function GET(request: Request) {
     const safe = safeMeetingCsvRelativePath(relativePath);
     if (!safe) {
       return Response.json({ ok: false, error: "Invalid path" }, { status: 400 });
+    }
+    if (!/_master\.csv$/i.test(safe)) {
+      return Response.json({ ok: false, error: "Only *_master.csv files are available" }, { status: 400 });
     }
     try {
       const content = await readMeetingLibraryCsv(safe);
