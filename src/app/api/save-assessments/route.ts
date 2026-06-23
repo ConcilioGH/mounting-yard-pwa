@@ -1,7 +1,5 @@
-import {
-  saveYardAssessmentsToMeetingFolder,
-  type YardAssessmentRow,
-} from "@/lib/yard-assessments-save";
+import { isLocalMeetingsFsEnabled } from "@/lib/local-meetings-fs";
+import type { YardAssessmentRow } from "@/lib/yard-assessments-save";
 
 export const dynamic = "force-dynamic";
 
@@ -35,7 +33,7 @@ function isAssessmentRow(value: unknown): value is YardAssessmentRow {
 
 /** Dev/local: save iPad yard assessments into repo `meetings/{folder}/yard_assessments.csv`. */
 export async function POST(request: Request) {
-  if (process.env.NODE_ENV === "production") {
+  if (!isLocalMeetingsFsEnabled()) {
     return Response.json(
       { ok: false, error: "Not available in production" },
       { status: 403, headers: CORS_HEADERS },
@@ -79,6 +77,7 @@ export async function POST(request: Request) {
   }
 
   try {
+    const { saveYardAssessmentsToMeetingFolder } = await import("@/lib/yard-assessments-save");
     const savedTo = await saveYardAssessmentsToMeetingFolder(meetingPath, rows);
     return Response.json({ ok: true, savedTo }, { headers: CORS_HEADERS });
   } catch (error) {

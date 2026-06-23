@@ -14,6 +14,13 @@ const withPWA = withPWAInit({
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  outputFileTracingExcludes: {
+    "/api/*": [
+      "./meetings/**/*",
+      "./**/*.pdf",
+      "./**/speedproxy*.html",
+    ],
+  },
 };
 
 export default withPWA(nextConfig);

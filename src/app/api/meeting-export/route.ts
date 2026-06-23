@@ -1,5 +1,4 @@
-import { mkdir, writeFile } from "node:fs/promises";
-import path from "node:path";
+import { isLocalMeetingsFsEnabled } from "@/lib/local-meetings-fs";
 
 type ExportBody = {
   folderPath?: string;
@@ -15,7 +14,7 @@ function safeMeetingRelativePath(folderPath: string): string | null {
 }
 
 function safeFileName(filename: string): string | null {
-  const base = path.basename(filename);
+  const base = filename.replace(/\\/g, "/").split("/").pop() ?? "";
   if (!base || base !== filename.replace(/\\/g, "/").split("/").pop()) return null;
   if (!base.toLowerCase().endsWith(".csv")) return null;
   if (base.includes("..")) return null;
@@ -30,9 +29,9 @@ const CORS_HEADERS = {
 
 /** Dev/local: write export CSV into repo `meetings/` folder. */
 export async function POST(request: Request) {
-  if (process.env.NODE_ENV === "production") {
+  if (!isLocalMeetingsFsEnabled()) {
     return Response.json(
-      { ok: false, error: "Not available in production" },
+      { ok: false, writable: false, error: "Not available in production" },
       { status: 403, headers: CORS_HEADERS },
     );
   }
@@ -51,6 +50,9 @@ export async function POST(request: Request) {
   if (!folderPath || !filename) {
     return Response.json({ ok: false, error: "Invalid path or filename" }, { status: 400, headers: CORS_HEADERS });
   }
+
+  const { mkdir, writeFile } = await import("node:fs/promises");
+  const path = await import("node:path");
 
   const destDir = path.join(process.cwd(), folderPath);
   const destFile = path.join(destDir, filename);

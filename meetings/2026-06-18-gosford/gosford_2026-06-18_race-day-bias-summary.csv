@@ -1,0 +1,27 @@
+meeting,category,group,wins,places,avg_sp,actual_share,expected_share,bias_score,finisher_count,heat_tier,trackside_tag,interpretation
+Gosford · 2026-06-18,lane,Rail,3,9,9.23,36,37.5,-1.4,12,,,
+Gosford · 2026-06-18,lane,Running Line,5,15,9.58,64,62.5,1.4,20,,,
+Gosford · 2026-06-18,lane,3 Wide,0,0,,0,0,0,0,,,
+Gosford · 2026-06-18,lane,4 Wide+,0,0,,0,0,0,0,,,
+Gosford · 2026-06-18,position,Leader / Front Pair,3,8,6.18,39.2,43.7,-4.5,11,,,
+Gosford · 2026-06-18,position,On Pace,0,0,,0,0,0,0,,,
+Gosford · 2026-06-18,position,Midfield,2,7,8.88,25.6,28.6,-3,9,,,
+Gosford · 2026-06-18,position,Backmarker,3,9,12.88,35.2,27.7,7.5,12,,,
+Gosford · 2026-06-18,position,Wide Forward,0,0,,0,0,0,0,,,
+Gosford · 2026-06-18,position,Wide Midfield,0,0,,0,0,0,0,,,
+Gosford · 2026-06-18,position,Wide Back,0,0,,0,0,0,0,,,
+Gosford · 2026-06-18,composite,Rail Front,,,,18.3,19.2,-0.9,5,neutral,,
+Gosford · 2026-06-18,composite,Rail Midfield,,,,4.1,10,-6,2,insufficient,,
+Gosford · 2026-06-18,composite,Rail Back,,,,13.7,8.2,5.4,5,neutral,,
+Gosford · 2026-06-18,composite,Running Line Front,,,,20.9,24.5,-3.6,6,neutral,,
+Gosford · 2026-06-18,composite,Running Line Midfield,,,,21.5,18.6,2.9,7,neutral,,
+Gosford · 2026-06-18,composite,Running Line Back,,,,21.5,19.5,2.1,7,neutral,,
+Gosford · 2026-06-18,composite,3 Wide Front,,,,0,0,0,0,insufficient,,
+Gosford · 2026-06-18,composite,3 Wide Midfield,,,,0,0,0,0,insufficient,,
+Gosford · 2026-06-18,composite,3 Wide Back,,,,0,0,0,0,insufficient,,
+Gosford · 2026-06-18,composite,4 Wide+ Front,,,,0,0,0,0,insufficient,,
+Gosford · 2026-06-18,composite,4 Wide+ Midfield,,,,0,0,0,0,insufficient,,
+Gosford · 2026-06-18,composite,4 Wide+ Back,,,,0,0,0,0,insufficient,,
+Gosford · 2026-06-18,conclusion,RAIL BACK,,,,,,5.4,5,neutral,NEUTRAL,On the rail from backmarker positions are outperforming market expectation.
+Gosford · 2026-06-18,conclusion,RUNNING LINE MIDFIELD,,,,,,2.9,7,neutral,NEUTRAL,Horses settling one-off the fence in midfield positions are outperforming market expectation.
+Gosford · 2026-06-18,conclusion,RUNNING LINE FRONT,,,,,,-3.6,6,neutral,NEUTRAL,Horses on the running line near the lead are underperforming expectation.
