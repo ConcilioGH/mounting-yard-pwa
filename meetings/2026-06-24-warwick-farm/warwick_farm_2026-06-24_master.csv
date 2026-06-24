@@ -1,0 +1,73 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir
+R1,Warwick Farm,1,12:50 pm Hyland Race Colours Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",1,1,Pin Up Sheila,Pin Up Sheila,Pin Up Sheila,3,Tom Charlton,Dylan Gibbons,$2.6,1
+R1,Warwick Farm,1,12:50 pm Hyland Race Colours Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",2,2,Scuro Star,Scuro Star,Scuro Star,7,Peter Snowden,Andrew Adkins,$7,4
+R1,Warwick Farm,1,12:50 pm Hyland Race Colours Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",3,3,Sambuca Sky,Sambuca Sky,Sambuca Sky,2,Nathan Doyle,Ashley Morgan,$5,1
+R1,Warwick Farm,1,12:50 pm Hyland Race Colours Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",5,5,Bonvoy,Bonvoy,Bonvoy,4,Peter Snowden,Tom Sherry,$4.6,NA
+R1,Warwick Farm,1,12:50 pm Hyland Race Colours Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",7,7,Posh Pommery,Posh Pommery,Posh Pommery,5,Chris Waller,Tommy Berry,$10,NA
+R1,Warwick Farm,1,12:50 pm Hyland Race Colours Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",9,9,Tatiana,Tatiana,Tatiana,6,Gary Portelli,Alysha Collett,$9,8.5
+R1,Warwick Farm,1,12:50 pm Hyland Race Colours Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",10,10,Lady Beauvoir,Lady Beauvoir,Lady Beauvoir,1,Edward Cummings,Adam Farragher,$201,10
+R2,Warwick Farm,2,1:25 pm Asahi Super Dry Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",2,2,Dubious Express,Dubious Express,Dubious Express,6,Richard & Will Freedman,Keagan Latham,$12,8
+R2,Warwick Farm,2,1:25 pm Asahi Super Dry Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",4,4,I'm Relevant,I'm Relevant,I'm Relevant,1,John Thompson,Dylan Gibbons,$20,NA
+R2,Warwick Farm,2,1:25 pm Asahi Super Dry Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",6,6,Letters Patent,Letters Patent,Letters Patent,8,Chris Waller,Chad Schofield,$10,NA
+R2,Warwick Farm,2,1:25 pm Asahi Super Dry Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",7,7,Omolong,Omolong,Omolong,4,Chris Waller,Tommy Berry,$1.9,NA
+R2,Warwick Farm,2,1:25 pm Asahi Super Dry Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",8,8,Rebel Shield,Rebel Shield,Rebel Shield,5,Gary Portelli,Alysha Collett,$41,NA
+R2,Warwick Farm,2,1:25 pm Asahi Super Dry Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",9,9,Sanctum,Sanctum,Sanctum,3,Chris Waller,Siena Grima (a-2),$18,NA
+R2,Warwick Farm,2,1:25 pm Asahi Super Dry Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",10,10,Spain,Spain,Spain,2,Gai Waterhouse & Adrian Bott,Tim Clark,$2.9,NA
+R3,Warwick Farm,3,2:00 pm Drinkwise Plate,1100m,Maiden,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",1,1,Crossways,Crossways,Crossways,12,Mick Price & Michael Kent Jnr,Dylan Gibbons,$2.25,NA
+R3,Warwick Farm,3,2:00 pm Drinkwise Plate,1100m,Maiden,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",2,2,Indigo Star,Indigo Star,Indigo Star,6,Chris Waller,Siena Grima (a-2),$41,4.6
+R3,Warwick Farm,3,2:00 pm Drinkwise Plate,1100m,Maiden,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",4,4,Kalim,Kalim,Kalim,10,Jim & Greg Lee,Nash Rawiller,$21,NA
+R3,Warwick Farm,3,2:00 pm Drinkwise Plate,1100m,Maiden,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",5,5,Noble Pride,Noble Pride,Noble Pride,7,Joseph Pride,Adam Hyeronimus,$61,NA
+R3,Warwick Farm,3,2:00 pm Drinkwise Plate,1100m,Maiden,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",6,6,Tellurium,Tellurium,Tellurium,13,Richard Litt,Tom Sherry,$126,8
+R3,Warwick Farm,3,2:00 pm Drinkwise Plate,1100m,Maiden,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",7,7,The Agent,The Agent,The Agent,8,Amanda Turner,Adam Farragher,$61,NA
+R3,Warwick Farm,3,2:00 pm Drinkwise Plate,1100m,Maiden,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",8,8,Appin Opal,Appin Opal,Appin Opal,3,David Pfieffer,Tyler Schiller,$61,3.7
+R3,Warwick Farm,3,2:00 pm Drinkwise Plate,1100m,Maiden,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",9,9,Ballet Encore,Ballet Encore,Ballet Encore,14,Bryce Heys,Mollie Fitzgerald (a-3),$41,2
+R3,Warwick Farm,3,2:00 pm Drinkwise Plate,1100m,Maiden,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",10,10,Farfetched,Farfetched,Farfetched,4,Gai Waterhouse & Adrian Bott,Regan Bayliss,$6.25,2.2
+R3,Warwick Farm,3,2:00 pm Drinkwise Plate,1100m,Maiden,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",13,13,Stylish Edition,Stylish Edition,Stylish Edition,2,Chris Waller,Tommy Berry,$201,NA
+R3,Warwick Farm,3,2:00 pm Drinkwise Plate,1100m,Maiden,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",14,14,Touching Hans,Touching Hans,Touching Hans,1,Matthew Smith,Jay Ford,$61,8
+R3,Warwick Farm,3,2:00 pm Drinkwise Plate,1100m,Maiden,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",15,15,Zoufame,Zoufame,Zoufame,5,Bjorn Baker,Kerrin McEvoy,$2.45,8.7
+R4,Warwick Farm,4,2:35 pm Exceedance @ Vinery Stud Handicap,1600m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",1,1,Hot Bandit,Hot Bandit,Hot Bandit,7,Luke Pepper,Claire Ramsbotham (a-3),$10,7.3
+R4,Warwick Farm,4,2:35 pm Exceedance @ Vinery Stud Handicap,1600m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",2,2,Tazaral,Tazaral,Tazaral,1,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),$31,8.4
+R4,Warwick Farm,4,2:35 pm Exceedance @ Vinery Stud Handicap,1600m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",4,4,Trapalanda,Trapalanda,Trapalanda,2,Annabel & Rob Archibald,Braith Nock (a-1.5),$3.1,4.4
+R4,Warwick Farm,4,2:35 pm Exceedance @ Vinery Stud Handicap,1600m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",8,8,Lennox,Lennox,Lennox,5,Annabel & Rob Archibald,Dylan Gibbons,$11,3.5
+R4,Warwick Farm,4,2:35 pm Exceedance @ Vinery Stud Handicap,1600m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",9,9,Dances With Hooves,Dances With Hooves,Dances With Hooves,14,Cameron Crockett,William Stanley (a-3),$26,8.6
+R4,Warwick Farm,4,2:35 pm Exceedance @ Vinery Stud Handicap,1600m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",10,10,Deal N' Dash,Deal N' Dash,Deal N' Dash,11,Bjorn Baker,Tim Clark,$4.2,7.8
+R4,Warwick Farm,4,2:35 pm Exceedance @ Vinery Stud Handicap,1600m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",11,11,Concordia Wind,Concordia Wind,Concordia Wind,12,Chris Waller,Siena Grima (a-2),$5.5,6.7
+R4,Warwick Farm,4,2:35 pm Exceedance @ Vinery Stud Handicap,1600m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",13,13,Monkhana,Monkhana,Monkhana,3,Denim Wynen,Anna Roper (a-2),$16,4.3
+R4,Warwick Farm,4,2:35 pm Exceedance @ Vinery Stud Handicap,1600m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",14,14,Tanglewood Jimmy,Tanglewood Jimmy,Tanglewood Jimmy,9,Wayne Wilkes,Shannen Llewellyn (a-3),$8,8.7
+R5,Warwick Farm,5,3:10 pm Catanach's Jewellers Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",1,1,Scintilla,Scintilla,Scintilla,5,Les Bridge,Anna Roper (a-2),$7.5,3.7
+R5,Warwick Farm,5,3:10 pm Catanach's Jewellers Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",2,2,Deep Pleasure,Deep Pleasure,Deep Pleasure,3,Mick Price & Michael Kent Jnr,Braith Nock (a-1.5),$5,4
+R5,Warwick Farm,5,3:10 pm Catanach's Jewellers Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",3,3,Wollzeile,Wollzeile,Wollzeile,4,Kris Lees,William Stanley (a-3),$26,6.4
+R5,Warwick Farm,5,3:10 pm Catanach's Jewellers Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",4,4,Mamushka,Mamushka,Mamushka,16,Tom Charlton,Chad Schofield,$15,3
+R5,Warwick Farm,5,3:10 pm Catanach's Jewellers Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",5,5,Ernaux,Ernaux,Ernaux,7,Chris Waller,Tyler Schiller,$7.5,5.7
+R5,Warwick Farm,5,3:10 pm Catanach's Jewellers Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",6,6,Mrs Maree,Mrs Maree,Mrs Maree,9,Clarry Conners,Nash Rawiller,$5.5,1.4
+R5,Warwick Farm,5,3:10 pm Catanach's Jewellers Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",7,7,Sister Daae,Sister Daae,Sister Daae,1,Chris Waller,Siena Grima (a-2),$5.5,6.6
+R5,Warwick Farm,5,3:10 pm Catanach's Jewellers Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",9,9,Wear The Crown,Wear The Crown,Wear The Crown,8,Danielle Seib,Alysha Collett,$20,5.7
+R5,Warwick Farm,5,3:10 pm Catanach's Jewellers Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",10,10,Celtic Sin,Celtic Sin,Celtic Sin,11,Tom Charlton,Dylan Gibbons,$41,5.3
+R5,Warwick Farm,5,3:10 pm Catanach's Jewellers Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",12,12,Wootton Way,Wootton Way,Wootton Way,2,Chris Waller,Tommy Berry,$6.5,5.3
+R5,Warwick Farm,5,3:10 pm Catanach's Jewellers Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",15,15,Molteuno,Molteuno,Molteuno,13,Tash Burleigh,Adrian Layt,$61,3.9
+R5,Warwick Farm,5,3:10 pm Catanach's Jewellers Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",17,17,Miss Emma,Miss Emma,Miss Emma,12,Becky Byrne,Sairyn Fawke,$51,3.4
+R6,Warwick Farm,6,3:45 pm Irresistible Pools And Spas Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",2,2,Canadian Ruler,Canadian Ruler,Canadian Ruler,9,Matthew Dale,Mollie Fitzgerald (a-3),$26,2.8
+R6,Warwick Farm,6,3:45 pm Irresistible Pools And Spas Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",4,4,High Blue Sea,High Blue Sea,High Blue Sea,16,Gerald Ryan & Sterling Alexiou,Andrew Adkins,$15,5
+R6,Warwick Farm,6,3:45 pm Irresistible Pools And Spas Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",5,5,Swift Legend,Swift Legend,Swift Legend,3,Les Bridge,Dylan Gibbons,$9.5,6.4
+R6,Warwick Farm,6,3:45 pm Irresistible Pools And Spas Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",6,6,Banknote Hustler,Banknote Hustler,Banknote Hustler,2,Mick Price & Michael Kent Jnr,Tyler Schiller,$12,5.4
+R6,Warwick Farm,6,3:45 pm Irresistible Pools And Spas Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",7,7,Dusty Bay,Dusty Bay,Dusty Bay,1,Tracey Bartley,Alysha Collett,$11,2.7
+R6,Warwick Farm,6,3:45 pm Irresistible Pools And Spas Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",8,8,Steel Blaze,Steel Blaze,Steel Blaze,12,Brett Lazzarini,Teighan Worsnop,$151,7.5
+R6,Warwick Farm,6,3:45 pm Irresistible Pools And Spas Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",9,9,Champagne Hero,Champagne Hero,Champagne Hero,7,Gai Waterhouse & Adrian Bott,Zac Wadick (a-2),$7.5,5.4
+R6,Warwick Farm,6,3:45 pm Irresistible Pools And Spas Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",10,10,Sociable,Sociable,Sociable,6,Ciaron Maher,Adam Hyeronimus,$8.5,4.9
+R6,Warwick Farm,6,3:45 pm Irresistible Pools And Spas Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",11,11,The Replicant,The Replicant,The Replicant,5,Joseph Pride,Nash Rawiller,$11,5.2
+R6,Warwick Farm,6,3:45 pm Irresistible Pools And Spas Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",12,12,Unstopabull,Unstopabull,Unstopabull,11,Chris Waller,Chad Schofield,$8,7.2
+R6,Warwick Farm,6,3:45 pm Irresistible Pools And Spas Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",13,13,Airworthy,Airworthy,Airworthy,4,Gai Waterhouse & Adrian Bott,Tim Clark,$4.2,2.1
+R6,Warwick Farm,6,3:45 pm Irresistible Pools And Spas Handicap,1300m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",15,15,Three Arrows,Three Arrows,Three Arrows,10,Tom Charlton,Tommy Berry,$8.5,4.7
+R7,Warwick Farm,7,4:20 pm Tab Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",2,2,Clear Proof,Clear Proof,Clear Proof,10,John Thompson,Dylan Gibbons,$10,6.4
+R7,Warwick Farm,7,4:20 pm Tab Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",3,3,Tequila Baby,Tequila Baby,Tequila Baby,9,Brad Widdup,William Stanley (a-3),$13,3.5
+R7,Warwick Farm,7,4:20 pm Tab Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",4,4,Quietly Arrogant,Quietly Arrogant,Quietly Arrogant,11,Richard Litt,Tom Sherry,$26,5.5
+R7,Warwick Farm,7,4:20 pm Tab Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",5,5,Zaragoza,Zaragoza,Zaragoza,18,Robert & Luke Price,Tommy Berry,$7.5,7.7
+R7,Warwick Farm,7,4:20 pm Tab Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",6,6,Astronomix,Astronomix,Astronomix,8,Tom Charlton,Anna Roper (a-2),$3.6,1.7
+R7,Warwick Farm,7,4:20 pm Tab Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",7,7,Glounthaune,Glounthaune,Glounthaune,12,Gregory Hickman,Nash Rawiller,$51,5.7
+R7,Warwick Farm,7,4:20 pm Tab Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",9,9,Sunday Tycoon,Sunday Tycoon,Sunday Tycoon,4,Clarry Conners,Keagan Latham,$23,5
+R7,Warwick Farm,7,4:20 pm Tab Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",10,10,Tarpaulin,Tarpaulin,Tarpaulin,2,Matthew Kelley,Coriah Keatings (a-3),$15,6.3
+R7,Warwick Farm,7,4:20 pm Tab Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",11,11,Zale,Zale,Zale,15,Gary Nickson,Winona Costin,$9,2.8
+R7,Warwick Farm,7,4:20 pm Tab Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",12,12,Divine Vicky,Divine Vicky,Divine Vicky,3,Matthew Smith,Claire Ramsbotham (a-3),$20,7.2
+R7,Warwick Farm,7,4:20 pm Tab Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",13,13,Indefensible,Indefensible,Indefensible,14,Joseph Pride,Jay Ford,$13,5.9
+R7,Warwick Farm,7,4:20 pm Tab Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",15,15,Dear Jewel,Dear Jewel,Dear Jewel,7,Joseph Pride,Andrew Adkins,$11,5.3
+R7,Warwick Farm,7,4:20 pm Tab Handicap,1100m,Handicap,Soft 5,"+5m 1000m- Winning Post, +3m Remainder",18,18,Against The Law,Against The Law,Against The Law,1,Bryce Heys,Mollie Fitzgerald (a-3),$9.5,5.8
