@@ -376,20 +376,17 @@
       (folderFromDir && folderFromDir.track) ||
       (fromMaster && fromMaster.track) ||
       explicitTrackSlug ||
-      (existing && existing.trackSlug) ||
       "";
     var date =
       (folderFromPath && folderFromPath.date) ||
       (folderFromDir && folderFromDir.date) ||
       (fromMaster && fromMaster.date) ||
       explicitDate ||
-      (existing && existing.date) ||
       new Date().toISOString().slice(0, 10);
     var trackName = String(
       options.trackName ||
         (folderFromPath && folderFromPath.track) ||
         (fromMaster && fromMaster.track) ||
-        (existing && existing.trackName) ||
         trackSlug ||
         "",
     ).trim();
@@ -413,7 +410,6 @@
         track: trackSlug,
         date: date,
       }) ||
-      (existing && existing.meetingFolderPath) ||
       "";
     var meetingId =
       deriveMeetingId({ date: date, trackSlug: trackSlug, meetingFolderPath: meetingFolderPath }) ||

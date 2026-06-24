@@ -27,6 +27,8 @@ import type { RaceBiasEntry, RaceDayBiasState } from "@/lib/race-day-bias/types"
 export const MEETING_MANIFEST_STORAGE_KEY = "mounting-yard-meeting-manifest-v1";
 export const LAST_MEETING_CSV_STORAGE_KEY = "mounting-yard-last-meeting-csv-v1";
 export const LAST_MEETING_CSV_META_STORAGE_KEY = "mounting-yard-last-meeting-csv-meta-v1";
+/** IndexedDB races were saved for this manifest meeting id. */
+export const RACES_MEETING_ID_STORAGE_KEY = "mounting-yard-races-meeting-id-v1";
 
 export type LastMeetingCsvMeta = {
   fileName?: string;
@@ -64,6 +66,24 @@ export function loadLastMeetingCsvImport(): { text: string; options: ImportMeeti
         meetingFolderPath: meta.meetingFolderPath,
       },
     };
+  } catch {
+    return null;
+  }
+}
+
+export function saveRacesMeetingId(meetingId: string): void {
+  if (typeof localStorage === "undefined" || !meetingId.trim()) return;
+  try {
+    localStorage.setItem(RACES_MEETING_ID_STORAGE_KEY, meetingId.trim());
+  } catch {
+    /* ignore */
+  }
+}
+
+export function loadRacesMeetingId(): string | null {
+  if (typeof localStorage === "undefined") return null;
+  try {
+    return localStorage.getItem(RACES_MEETING_ID_STORAGE_KEY)?.trim() || null;
   } catch {
     return null;
   }
@@ -296,10 +316,11 @@ export async function importMeetingFromCsv(
     }) ||
     "";
 
-  await saveRaces(parsed.races);
-
   const meetingId =
     deriveMeetingId({ date, trackSlug, meetingFolderPath }) || meetingKey;
+
+  await saveRaces(parsed.races);
+  saveRacesMeetingId(meetingId);
 
   const sameMeeting = existingManifest?.meetingId === meetingId;
 
@@ -323,7 +344,7 @@ export async function importMeetingFromCsv(
     trackName,
     meetingLabel: trackName,
   });
-  syncSpeedMapOnMeetingImport(parsed, { sameMeeting, meetingKey });
+  syncSpeedMapOnMeetingImport(parsed, { sameMeeting, meetingKey, meetingId });
 
   saveLastMeetingCsvImport(text, {
     fileName: options?.fileName,

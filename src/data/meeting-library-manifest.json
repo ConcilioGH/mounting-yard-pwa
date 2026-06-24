@@ -1,6 +1,16 @@
 {
-  "generatedAt": "2026-06-23T10:08:27.369Z",
+  "generatedAt": "2026-06-24T04:26:43.632Z",
   "meetings": [
+    {
+      "id": "meetings/2026-06-24-warwick-farm/warwick_farm_2026-06-24_master.csv",
+      "label": "2026-06-24 · Warwick Farm",
+      "date": "2026-06-24",
+      "track": "warwick-farm",
+      "trackLabel": "Warwick Farm",
+      "relativePath": "meetings/2026-06-24-warwick-farm/warwick_farm_2026-06-24_master.csv",
+      "fileName": "warwick_farm_2026-06-24_master.csv",
+      "modifiedAt": "2026-06-24T02:26:43.852Z"
+    },
     {
       "id": "meetings/2026-06-23-hawkesbury/hawkesbury_2026-06-23_master.csv",
       "label": "2026-06-23 · Hawkesbury",
@@ -301,7 +311,9 @@
       "meetings/2026-06-17-canterbury",
       "meetings/2026-06-18-gosford",
       "meetings/2026-06-20-randwick",
-      "meetings/2026-06-23-hawkesbury"
+      "meetings/2026-06-23-hawkesbury",
+      "meetings/2026-06-24-warwick-farm",
+      "meetings/2026-06-25-wyong"
     ],
     "masterCsvFiles": [
       "meetings/2026-05-13-kensington/kensington_2026-05-13_master.csv",
@@ -330,12 +342,17 @@
       "meetings/2026-06-17-canterbury/canterbury_2026-06-17_master.csv",
       "meetings/2026-06-18-gosford/gosford_2026-06-18_master.csv",
       "meetings/2026-06-20-randwick/randwick_2026-06-20_master.csv",
-      "meetings/2026-06-23-hawkesbury/hawkesbury_2026-06-23_master.csv"
+      "meetings/2026-06-23-hawkesbury/hawkesbury_2026-06-23_master.csv",
+      "meetings/2026-06-24-warwick-farm/warwick_farm_2026-06-24_master.csv"
     ],
-    "meetingsReturned": 27,
+    "meetingsReturned": 28,
     "foldersExcluded": [
       {
         "folder": "meetings/2026-05-20-warwick",
+        "reason": "no *_master.csv file in folder"
+      },
+      {
+        "folder": "meetings/2026-06-25-wyong",
         "reason": "no *_master.csv file in folder"
       }
     ]

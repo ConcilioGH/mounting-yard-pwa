@@ -7,7 +7,9 @@ import { SPEED_MAP_STORAGE_KEY } from "@/lib/speed-map-storage";
 import { reportStartupFailure, traceSync } from "@/lib/startup-diagnostics";
 
 export type SpeedMapSessionState = {
-  /** Links session to shared meeting manifest (`meetingKey`). */
+  /** Stable meeting identity (e.g. 2026-06-03-warwick-farm). */
+  meetingId?: string;
+  /** Ordered race numbers signature — import shape only, not meeting identity. */
   meetingKey?: string;
   meetingTrack: string;
   meetingGoing: string;
@@ -21,6 +23,7 @@ export type SpeedMapSessionState = {
 };
 
 export const emptySpeedMapSession = (): SpeedMapSessionState => ({
+  meetingId: "",
   meetingKey: "",
   meetingTrack: "",
   meetingGoing: "",
@@ -64,6 +67,8 @@ export function loadSpeedMapFromStorage(): SpeedMapSessionState | null {
     if (!raw) return null;
     try {
       const parsed = JSON.parse(raw) as SavedMapState & {
+      meetingId?: string;
+      meetingKey?: string;
       raceOrder?: string[];
       selectedRunnerIds?: string[];
       focusMode?: boolean;
@@ -79,6 +84,7 @@ export function loadSpeedMapFromStorage(): SpeedMapSessionState | null {
         : Object.keys(loadedRaces).sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
     const activeRaceNo = parsed.activeRaceNo || raceOrder[0] || "";
     return {
+      meetingId: String(parsed.meetingId ?? "").trim(),
       meetingKey: String(parsed.meetingKey ?? "").trim(),
       meetingTrack: parsed.meetingTrack?.trim() ?? parsed.meta?.track?.trim() ?? "",
       meetingGoing: parsed.meetingGoing?.trim() ?? parsed.meta?.going?.trim() ?? "",
@@ -100,12 +106,14 @@ export function loadSpeedMapFromStorage(): SpeedMapSessionState | null {
 export function saveSpeedMapToStorage(session: SpeedMapSessionState): void {
   if (typeof localStorage === "undefined") return;
   const payload: SavedMapState & {
+    meetingId?: string;
     meetingKey?: string;
     raceOrder: string[];
     selectedRunnerIds: string[];
     focusMode: boolean;
     pressureOverlay: boolean;
   } = {
+    meetingId: session.meetingId,
     meetingKey: session.meetingKey,
     meetingTrack: session.meetingTrack,
     meetingGoing: session.meetingGoing,

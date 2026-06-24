@@ -430,6 +430,7 @@
       this.activeMeetingKey = newMeetingKey;
       this.normalizeSelection();
       this.saveActiveMeetingToStore();
+      this.updateCountdownDisplay();
     },
 
     migrateLegacyStorage: function () {
@@ -2728,6 +2729,7 @@
         date: options.date || "",
       });
       this.notifyDesktopMeetingImported();
+      this.startCountdownTimer();
       if (options.switchToAssess) this.showAssess();
       else this.render();
       this.setImportMsg("Loaded " + races.length + " races (saved locally on iPad).");

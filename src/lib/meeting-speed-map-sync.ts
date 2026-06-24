@@ -156,9 +156,17 @@ export function reconcileSpeedMapActivePlacement(
  */
 export function syncSpeedMapOnMeetingImport(
   parsed: MeetingCsvParseResult,
-  options: { sameMeeting: boolean; meetingKey: string },
+  options: { sameMeeting: boolean; meetingKey: string; meetingId: string },
 ): SpeedMapSessionState {
-  const existing = options.sameMeeting ? loadSpeedMapFromStorage() : null;
+  const existing =
+    options.sameMeeting && options.meetingId
+      ? loadSpeedMapFromStorage()
+      : null;
+  const reuseExisting =
+    existing &&
+    (!existing.meetingId || existing.meetingId === options.meetingId) &&
+    existing.meetingKey === options.meetingKey;
+  const preserved = reuseExisting ? existing : null;
   const meetingMeta = {
     track: parsed.meta.trackName,
     going: parsed.meta.going,
@@ -176,7 +184,7 @@ export function syncSpeedMapOnMeetingImport(
     const freshRunners = race.runners.map((row, index) =>
       speedRunnerFromRow(raceNo, index, row.no, row.horse, row.barrier, row.wIrRaw),
     );
-    const merged = mergePreservedRunners(freshRunners, existing?.raceMap[raceNo]?.runners);
+    const merged = mergePreservedRunners(freshRunners, preserved?.raceMap[raceNo]?.runners);
     const placed = placeRunnersWithActiveBoardEngine(merged, raceNo);
 
     const bucket: RaceBucket = {
@@ -209,11 +217,12 @@ export function syncSpeedMapOnMeetingImport(
 
   order.sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
 
-  const prevActive = existing?.activeRaceNo;
+  const prevActive = preserved?.activeRaceNo;
   const activeRaceNo =
     prevActive && order.includes(prevActive) ? prevActive : order[0] ?? "";
 
   const session: SpeedMapSessionState = {
+    meetingId: options.meetingId,
     meetingKey: options.meetingKey,
     meetingTrack: parsed.meta.trackName,
     meetingGoing: parsed.meta.going,
@@ -221,9 +230,9 @@ export function syncSpeedMapOnMeetingImport(
     raceMap: map,
     raceOrder: order,
     activeRaceNo,
-    selectedRunnerIds: options.sameMeeting ? (existing?.selectedRunnerIds ?? []) : [],
-    focusMode: existing?.focusMode ?? false,
-    pressureOverlay: existing?.pressureOverlay ?? true,
+    selectedRunnerIds: reuseExisting ? (preserved?.selectedRunnerIds ?? []) : [],
+    focusMode: preserved?.focusMode ?? false,
+    pressureOverlay: preserved?.pressureOverlay ?? true,
   };
 
   const reconciled = reconcileSpeedMapActivePlacement(session);

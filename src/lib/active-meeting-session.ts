@@ -5,6 +5,7 @@ import {
   importMeetingFromCsv,
   loadLastMeetingCsvImport,
   loadMeetingManifest,
+  loadRacesMeetingId,
   raceNosFromMountingYardRaces,
   syncRaceDayBiasOnMeetingImport,
   type MeetingManifest,
@@ -17,11 +18,17 @@ import {
 } from "@/lib/speed-map-persistence";
 import { clearSpeedMapLocalStorage } from "@/lib/speed-map-storage";
 import type { RaceDayBiasState } from "@/lib/race-day-bias/types";
-import { loadRaceDayBiasStateForMeeting } from "@/lib/race-day-bias/storage";
+import {
+  getActiveBiasMeetingId,
+  loadRaceDayBiasStateForMeeting,
+  setActiveBiasMeetingId,
+} from "@/lib/race-day-bias/storage";
 import type { Race } from "@/lib/types";
 
 export function racesMatchManifest(races: Race[], manifest: MeetingManifest): boolean {
   if (!races.length) return false;
+  const storedMeetingId = loadRacesMeetingId();
+  if (!storedMeetingId || storedMeetingId !== manifest.meetingId) return false;
   return buildMeetingKey(raceNosFromMountingYardRaces(races)) === manifest.meetingKey;
 }
 
@@ -29,8 +36,13 @@ export function speedMapMatchesManifest(
   session: SpeedMapSessionState | null | undefined,
   manifest: MeetingManifest,
 ): boolean {
-  if (!session?.meetingKey) return false;
-  return session.meetingKey === manifest.meetingKey;
+  if (!session?.meetingId?.trim()) return false;
+  return session.meetingId.trim() === manifest.meetingId;
+}
+
+export function biasMatchesManifest(manifest: MeetingManifest): boolean {
+  const activeId = getActiveBiasMeetingId();
+  return Boolean(activeId && activeId === manifest.meetingId);
 }
 
 /** Ensure bias rows exist for the active manifest (idempotent). */
@@ -68,6 +80,7 @@ export function loadSpeedMapSessionForManifest(
 export function emptySpeedMapSessionForManifest(manifest: MeetingManifest): SpeedMapSessionState {
   return {
     ...emptySpeedMapSession(),
+    meetingId: manifest.meetingId,
     meetingKey: manifest.meetingKey,
     meetingTrack: manifest.trackName,
   };
@@ -75,13 +88,11 @@ export function emptySpeedMapSessionForManifest(manifest: MeetingManifest): Spee
 
 /**
  * Single desktop reconciliation entry point.
- * Keeps manifest, IndexedDB races, speed map, and bias aligned.
+ * Keeps manifest, IndexedDB races, speed map, and bias aligned by meetingId.
  */
 export async function ensureActiveMeetingSynced(): Promise<MeetingManifest | null> {
   const manifest = loadMeetingManifest();
   if (!manifest) return null;
-
-  reconcileBiasForManifest(manifest);
 
   const [races, speedSession] = await Promise.all([
     loadAllRaces(),
@@ -90,20 +101,29 @@ export async function ensureActiveMeetingSynced(): Promise<MeetingManifest | nul
 
   const racesOk = racesMatchManifest(races, manifest);
   const speedOk = speedMapMatchesManifest(speedSession, manifest);
+  const biasOk = biasMatchesManifest(manifest);
 
-  if (racesOk && speedOk) {
+  if (racesOk && speedOk && biasOk) {
+    reconcileBiasForManifest(manifest);
     return manifest;
   }
 
   const cached = loadLastMeetingCsvImport();
   if (cached?.text) {
-    await importMeetingFromCsv(cached.text, cached.options);
+    await importMeetingFromCsv(cached.text, {
+      ...cached.options,
+      meetingFolderPath: cached.options.meetingFolderPath || manifest.meetingFolderPath,
+    });
     return loadMeetingManifest();
   }
 
   if (!speedOk && speedSession) {
     clearSpeedMapLocalStorage();
   }
+  if (!biasOk) {
+    setActiveBiasMeetingId(manifest.meetingId);
+  }
+  reconcileBiasForManifest(manifest);
 
   return manifest;
 }
