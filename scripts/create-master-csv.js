@@ -25,7 +25,11 @@ const OUTPUT_COLUMNS = [
   "jockey",
   "odds",
   "w_ir",
+  "source",
 ];
+
+const WARNING_COLUMNS = ["race_no", "runner_no", "horse", "warning_type", "detail"];
+const UNMATCHED_SPEEDPROXY_COLUMNS = ["race_no", "no", "horse", "w_ir"];
 
 /** Racenet legend suffix letters; must match pdf_to_csv.py _LEGEND_SUFFIX_CHARS. */
 const LEGEND_SUFFIX_CHARS = new Set([..."tdhbosc"]);
@@ -283,25 +287,164 @@ function runnerKey(raceNo, runnerNo) {
   return `${r}::${n}`;
 }
 
-function mergeRows(racenetRows, speedproxyRows, spMetaByRace, meetingMeta, folderTrack) {
-  const speedByKey = new Map();
+function normalizeHorseNameForMatch(horse) {
+  return String(horse || "")
+    .toUpperCase()
+    .replace(/[^A-Z0-9]+/g, "");
+}
+
+function horseMatchKey(raceNo, horse) {
+  const r = String(raceNo || "").trim();
+  return `${r}::${normalizeHorseNameForMatch(horse)}`;
+}
+
+function cleanFieldHorseName(horse, source) {
+  const raw = String(horse || "").trim();
+  if (!raw) return raw;
+  return source === "racenet" ? cleanRacenetHorseName(raw) : raw;
+}
+
+function collectFieldParseWarnings(rows) {
+  const warnings = [];
+  const horsesByRace = new Map();
+
+  for (const row of rows) {
+    const raceNo = String(row.race_no || "").trim();
+    const runnerNo = String(row.no || "").trim();
+    const horse = String(row.horse || "").trim();
+    if (!raceNo || !horse) continue;
+
+    if (!horsesByRace.has(raceNo)) horsesByRace.set(raceNo, new Map());
+    const raceHorses = horsesByRace.get(raceNo);
+    const horseKey = normalizeHorseNameForMatch(horse);
+    if (!raceHorses.has(horseKey)) raceHorses.set(horseKey, []);
+    raceHorses.get(horseKey).push(runnerNo);
+
+    if (!String(row.barrier || "").trim()) {
+      warnings.push({
+        race_no: raceNo,
+        runner_no: runnerNo,
+        horse,
+        warning_type: "missing_barrier",
+        detail: "Barrier is empty",
+      });
+    }
+    if (!String(row.jockey || "").trim()) {
+      warnings.push({
+        race_no: raceNo,
+        runner_no: runnerNo,
+        horse,
+        warning_type: "missing_jockey",
+        detail: "Jockey is empty",
+      });
+    }
+    if (!String(row.trainer || "").trim()) {
+      warnings.push({
+        race_no: raceNo,
+        runner_no: runnerNo,
+        horse,
+        warning_type: "missing_trainer",
+        detail: "Trainer is empty",
+      });
+    }
+    if (String(row.scratched || "").toLowerCase() === "true") {
+      warnings.push({
+        race_no: raceNo,
+        runner_no: runnerNo,
+        horse,
+        warning_type: "scratched_runner",
+        detail: "Runner marked scratched",
+      });
+    }
+    if (String(row.emergency || "").toLowerCase() === "true") {
+      warnings.push({
+        race_no: raceNo,
+        runner_no: runnerNo,
+        horse,
+        warning_type: "emergency_runner",
+        detail: "Emergency acceptor",
+      });
+    }
+  }
+
+  for (const [raceNo, horseMap] of horsesByRace) {
+    for (const [horseKey, runnerNos] of horseMap) {
+      if (runnerNos.length <= 1) continue;
+      warnings.push({
+        race_no: raceNo,
+        runner_no: runnerNos.join("/"),
+        horse: horseKey,
+        warning_type: "duplicate_horse_name",
+        detail: `Duplicate horse in race ${raceNo}: runner_no ${runnerNos.join(", ")}`,
+      });
+    }
+  }
+
+  return warnings;
+}
+
+function writeValidationCsv(filePath, fields, rows) {
+  const csv = Papa.unparse({ fields, data: rows });
+  fs.writeFileSync(filePath, csv, "utf8");
+}
+
+function resolveFieldPdfSource(targetFolder) {
+  const racenetPath = path.join(targetFolder, "racenet.pdf");
+  const risaPath = path.join(targetFolder, "risa.pdf");
+  if (fs.existsSync(racenetPath)) {
+    return { source: "racenet", pdfPath: racenetPath, extractedCsvName: "_racenet_extracted.csv" };
+  }
+  if (fs.existsSync(risaPath)) {
+    return { source: "risa", pdfPath: risaPath, extractedCsvName: "_risa_extracted.csv" };
+  }
+  throw new Error("No supported field PDF found. Expected racenet.pdf or risa.pdf.");
+}
+
+function extractFieldRows(root, pdfSource) {
+  const extractedCsvPath = path.join(path.dirname(pdfSource.pdfPath), pdfSource.extractedCsvName);
+  const scriptName = pdfSource.source === "risa" ? "scripts/parse_risa_pdf.py" : "scripts/pdf_to_csv.py";
+  const pyRun = spawnSync("python", [scriptName, pdfSource.pdfPath, "-o", extractedCsvPath], {
+    cwd: root,
+    encoding: "utf8",
+  });
+  if (pyRun.status !== 0) {
+    const stderr = pyRun.stderr?.trim();
+    const stdout = pyRun.stdout?.trim();
+    throw new Error(`${scriptName} failed.\n${stderr || stdout || "Unknown error"}`);
+  }
+  return parseCsvFile(extractedCsvPath);
+}
+
+function mergeRows(fieldRows, speedproxyRows, spMetaByRace, meetingMeta, folderTrack, options = {}) {
+  const { source = "racenet", matchByHorse = false } = options;
+  const speedByRunnerKey = new Map();
+  const speedByHorseKey = new Map();
   for (const row of speedproxyRows) {
     const raceNo = String(row.race_no || "").trim();
     const no = String(row.no || "").trim().replace(/^0+/, "") || "0";
+    const horse = cleanHtmlText(String(row.horse || "").trim());
     if (!raceNo || !no) continue;
-    speedByKey.set(runnerKey(raceNo, no), row);
+    speedByRunnerKey.set(runnerKey(raceNo, no), row);
+    if (horse) speedByHorseKey.set(horseMatchKey(raceNo, horse), row);
   }
 
   const merged = [];
   const missingWir = [];
+  const matchedSpeedproxyKeys = new Set();
 
-  for (const row of racenetRows) {
+  for (const row of fieldRows) {
     const raceNo = String(row.race_no || "").trim();
-    const horseClean = cleanRacenetHorseName(String(row.horse || "").trim());
+    const horseClean = cleanFieldHorseName(String(row.horse || "").trim(), source);
     const runnerNo = String(row.no || "").trim().replace(/^0+/, "") || "0";
-    const key = runnerKey(raceNo, runnerNo);
-    const sp = speedByKey.get(key);
+    let sp = speedByRunnerKey.get(runnerKey(raceNo, runnerNo));
+    if (!sp && (matchByHorse || source === "risa")) {
+      sp = speedByHorseKey.get(horseMatchKey(raceNo, horseClean));
+    }
     const wIr = sp ? String(sp.w_ir || "").trim() : "";
+    if (sp) {
+      matchedSpeedproxyKeys.add(runnerKey(String(sp.race_no || "").trim(), sp.no));
+      matchedSpeedproxyKeys.add(horseMatchKey(String(sp.race_no || "").trim(), sp.horse));
+    }
     const spMeta = spMetaByRace.get(raceNo) || {};
     const fields = resolveRaceFields(row, spMeta, meetingMeta, folderTrack);
 
@@ -328,20 +471,36 @@ function mergeRows(racenetRows, speedproxyRows, spMetaByRace, meetingMeta, folde
       jockey: String(row.jockey || "").trim(),
       odds: String(row.odds || "").trim(),
       w_ir: wIr,
+      source,
     });
   }
 
-  const racenetKeys = new Set(racenetRows.map((r) => runnerKey(r.race_no, r.no)));
+  const fieldRunnerKeys = new Set(fieldRows.map((r) => runnerKey(r.race_no, r.no)));
+  const fieldHorseKeys = new Set(
+    fieldRows.map((r) => horseMatchKey(r.race_no, cleanFieldHorseName(String(r.horse || "").trim(), source))),
+  );
   const unmatchedSeen = new Set();
   const unmatchedSpeedproxy = [];
   for (const row of speedproxyRows) {
     const raceNo = String(row.race_no || "").trim();
     const no = String(row.no || "").trim().replace(/^0+/, "") || "0";
+    const horse = cleanHtmlText(String(row.horse || "").trim());
     if (!raceNo || !no) continue;
-    const key = runnerKey(raceNo, no);
-    if (!racenetKeys.has(key) && !unmatchedSeen.has(key)) {
-      unmatchedSeen.add(key);
-      unmatchedSpeedproxy.push(row);
+    const runnerMatchKey = runnerKey(raceNo, no);
+    const horseKey = horseMatchKey(raceNo, horse);
+    const matchedField =
+      fieldRunnerKeys.has(runnerMatchKey) ||
+      (source === "risa" && fieldHorseKeys.has(horseKey)) ||
+      matchedSpeedproxyKeys.has(runnerMatchKey) ||
+      matchedSpeedproxyKeys.has(horseKey);
+    if (!matchedField && !unmatchedSeen.has(runnerMatchKey)) {
+      unmatchedSeen.add(runnerMatchKey);
+      unmatchedSpeedproxy.push({
+        race_no: raceNo,
+        no,
+        horse,
+        w_ir: String(row.w_ir || "").trim(),
+      });
     }
   }
 
@@ -364,13 +523,13 @@ function countByRace(rows, raceField, runnerField) {
   return map;
 }
 
-function printRaceValidation(racenetActiveRows, mergedRows) {
-  const expected = countByRace(racenetActiveRows, "race_no", "no");
+function printRaceValidation(fieldActiveRows, mergedRows, sourceLabel) {
+  const expected = countByRace(fieldActiveRows, "race_no", "no");
   const actual = countByRace(mergedRows, "race_no", "runner_no");
   const raceNos = [...new Set([...expected.keys(), ...actual.keys()])].sort((a, b) => Number(a) - Number(b));
 
   console.log("");
-  console.log("Per-race validation (expected = active Racenet runners, actual = master CSV rows)");
+  console.log(`Per-race validation (expected = active ${sourceLabel} runners, actual = master CSV rows)`);
   let totalExpected = 0;
   let totalActual = 0;
   for (const raceNo of raceNos) {
@@ -429,54 +588,48 @@ function main() {
   const targetFolder = folderArg ? path.resolve(root, folderArg) : path.join(root, "input");
   ensureDir(targetFolder);
 
-  const pdfPath = path.join(targetFolder, "racenet.pdf");
   const htmlPath = path.join(targetFolder, "speedproxy.html");
-  const racenetCsvPath = path.join(targetFolder, "_racenet_extracted.csv");
   const { date, track: folderTrack } = parseFolderMeta(targetFolder);
   const outputPath = path.join(targetFolder, `${folderTrack}_${date}_master.csv`);
+  const warningsPath = path.join(targetFolder, "parse_warnings.csv");
+  const unmatchedPath = path.join(targetFolder, "unmatched_speedproxy.csv");
 
-  if (!fs.existsSync(pdfPath)) {
-    throw new Error(`Missing input PDF: ${pdfPath}`);
-  }
+  const pdfSource = resolveFieldPdfSource(targetFolder);
   if (!fs.existsSync(htmlPath)) {
     throw new Error(`Missing input HTML: ${htmlPath}`);
   }
 
-  const pyRun = spawnSync("python", ["scripts/pdf_to_csv.py", pdfPath, "-o", racenetCsvPath], {
-    cwd: root,
-    encoding: "utf8",
-  });
-  if (pyRun.status !== 0) {
-    const stderr = pyRun.stderr?.trim();
-    const stdout = pyRun.stdout?.trim();
-    throw new Error(`pdf_to_csv.py failed.\n${stderr || stdout || "Unknown error"}`);
-  }
-
-  const rawRacenet = parseCsvFile(racenetCsvPath);
-  const racenetRows = rawRacenet.filter((r) => String(r.scratched || "").toLowerCase() !== "true");
+  const rawFieldRows = extractFieldRows(root, pdfSource);
+  const parseWarnings = collectFieldParseWarnings(rawFieldRows);
+  const fieldRows = rawFieldRows.filter((r) => String(r.scratched || "").toLowerCase() !== "true");
   const speedproxyHtml = fs.readFileSync(htmlPath, "utf8");
   const spMetaByRace = parseSpeedproxyRaceMeta(speedproxyHtml);
-  const meetingMeta = meetingMetaFromRacenetRows(racenetRows);
+  const meetingMeta = meetingMetaFromRacenetRows(fieldRows);
   const speedproxyRows = parseSpeedproxyHtml(htmlPath);
   const { merged, missingWir, unmatchedSpeedproxy } = mergeRows(
-    racenetRows,
+    fieldRows,
     speedproxyRows,
     spMetaByRace,
     meetingMeta,
     folderTrack,
+    { source: pdfSource.source, matchByHorse: pdfSource.source === "risa" },
   );
 
   const csv = Papa.unparse({ fields: OUTPUT_COLUMNS, data: merged });
   fs.writeFileSync(outputPath, csv, "utf8");
+  writeValidationCsv(warningsPath, WARNING_COLUMNS, parseWarnings);
+  writeValidationCsv(unmatchedPath, UNMATCHED_SPEEDPROXY_COLUMNS, unmatchedSpeedproxy);
 
   const raceCount = new Set(merged.map((r) => r.race_no)).size;
   const matchedWir = merged.filter((r) => String(r.w_ir || "").trim() !== "").length;
+  const sourceLabel = pdfSource.source === "risa" ? "RISA" : "Racenet";
 
-  printRaceValidation(racenetRows, merged);
+  printRaceValidation(fieldRows, merged, sourceLabel);
   printRaceMetadataSummary(merged);
 
   console.log("");
   console.log("Master CSV created");
+  console.log(`field PDF source: ${pdfSource.source} (${path.basename(pdfSource.pdfPath)})`);
   console.log(`number of races: ${raceCount}`);
   console.log(`number of runners: ${merged.length}`);
   console.log(`number matched with w_ir: ${matchedWir}`);
@@ -493,12 +646,14 @@ function main() {
       console.log(`  - R${raceNo} missing w_ir runner_no: ${nos.join(", ")}`);
     }
   }
-  console.log(`speedproxy rows with no Racenet runner (race_no + runner_no): ${unmatchedSpeedproxy.length}`);
+  console.log(`speedproxy rows with no field runner match: ${unmatchedSpeedproxy.length}`);
   if (unmatchedSpeedproxy.length) {
     for (const row of unmatchedSpeedproxy) {
       console.log(`  - race ${row.race_no} runner ${row.no}: ${row.horse}`);
     }
   }
+  console.log(`parse warnings: ${parseWarnings.length} (see ${warningsPath})`);
+  console.log(`unmatched speedproxy report: ${unmatchedPath}`);
   console.log(`output file path: ${outputPath}`);
 }
 

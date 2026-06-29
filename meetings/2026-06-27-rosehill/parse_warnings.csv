@@ -1,0 +1,30 @@
+race_no,runner_no,horse,warning_type,detail
+1,9,KOIOS,missing_jockey,Jockey is empty
+1,12,NULLARBOR JANE,scratched_runner,Runner marked scratched
+1,15,STARINION,emergency_runner,Emergency acceptor
+1,16,FELIS CHAUS,emergency_runner,Emergency acceptor
+2,17,RELEASE POINT,emergency_runner,Emergency acceptor
+2,18,WHATELEY,emergency_runner,Emergency acceptor
+2,19,BONUS TEMPUS,emergency_runner,Emergency acceptor
+2,20,DANCE DANCE DANCE,emergency_runner,Emergency acceptor
+2,21,DEMI GOD,missing_jockey,Jockey is empty
+2,21,DEMI GOD,emergency_runner,Emergency acceptor
+3,14,LIGHTHOUSE LASS,emergency_runner,Emergency acceptor
+4,7,ZUNNA,missing_jockey,Jockey is empty
+4,9,TWISTED QUEEN,scratched_runner,Runner marked scratched
+4,15,COLD BREW,missing_jockey,Jockey is empty
+4,15,COLD BREW,emergency_runner,Emergency acceptor
+4,17,MAYBE MOET,emergency_runner,Emergency acceptor
+4,16,RACH,emergency_runner,Emergency acceptor
+5,15,VIRGIL’S GIFT,emergency_runner,Emergency acceptor
+7,4,INDISPENSABLE,missing_jockey,Jockey is empty
+7,15,CONGRESSMAN,emergency_runner,Emergency acceptor
+7,17,EXISTENTIAL BOB (NZ),emergency_runner,Emergency acceptor
+7,16,CLAIM THE CROWN (IRE),missing_jockey,Jockey is empty
+7,16,CLAIM THE CROWN (IRE),emergency_runner,Emergency acceptor
+7,18,ALLEGRO MISS,missing_jockey,Jockey is empty
+7,18,ALLEGRO MISS,emergency_runner,Emergency acceptor
+7,20,ELLE HUDSON (NZ),emergency_runner,Emergency acceptor
+9,17,ZOURIPPER,emergency_runner,Emergency acceptor
+9,18,FIRST LANDING (NZ),emergency_runner,Emergency acceptor
+10,17,SEVEN’S (IRE),emergency_runner,Emergency acceptor

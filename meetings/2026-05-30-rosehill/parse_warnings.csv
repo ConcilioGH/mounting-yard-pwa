@@ -1,0 +1,82 @@
+race_no,runner_no,horse,warning_type,detail
+1,4,Quarterback,scratched_runner,Runner marked scratched
+1,7,Sun Palace,missing_trainer,Trainer is empty
+1,7,Sun Palace,scratched_runner,Runner marked scratched
+1,8,Crunch,scratched_runner,Runner marked scratched
+1,9,Another Lahar,missing_trainer,Trainer is empty
+1,9,Another Lahar,scratched_runner,Runner marked scratched
+1,10,Gridlock,scratched_runner,Runner marked scratched
+2,1,Autumn King,scratched_runner,Runner marked scratched
+2,3,Dale,scratched_runner,Runner marked scratched
+2,9,Shyamalan,missing_trainer,Trainer is empty
+2,9,Shyamalan,scratched_runner,Runner marked scratched
+2,14,Antilocapra,scratched_runner,Runner marked scratched
+2,19,Parfumier,scratched_runner,Runner marked scratched
+3,2,Ice Kool,scratched_runner,Runner marked scratched
+3,5,Stratafy,scratched_runner,Runner marked scratched
+3,6,Zounaka,scratched_runner,Runner marked scratched
+3,8,Island Dec,scratched_runner,Runner marked scratched
+3,9,Bode Akuna,missing_trainer,Trainer is empty
+3,9,Bode Akuna,scratched_runner,Runner marked scratched
+3,10,Nullarbor Jane,missing_trainer,Trainer is empty
+3,10,Nullarbor Jane,scratched_runner,Runner marked scratched
+3,12,Mrs Maree,scratched_runner,Runner marked scratched
+3,15,Maz Kanata,scratched_runner,Runner marked scratched
+4,11,Cormac,scratched_runner,Runner marked scratched
+4,10,Extraordinaire,scratched_runner,Runner marked scratched
+4,4,King Pedro,scratched_runner,Runner marked scratched
+4,15,Nasebah,scratched_runner,Runner marked scratched
+4,6,Nobler,scratched_runner,Runner marked scratched
+4,13,Pleasure Artist,scratched_runner,Runner marked scratched
+5,2,Wootton Lass,scratched_runner,Runner marked scratched
+5,3,Crossbow,scratched_runner,Runner marked scratched
+5,5,I Am Carrot,missing_trainer,Trainer is empty
+5,5,I Am Carrot,scratched_runner,Runner marked scratched
+5,8,Let's Fly,scratched_runner,Runner marked scratched
+5,10,Deepwater Artist,missing_trainer,Trainer is empty
+5,10,Deepwater Artist,scratched_runner,Runner marked scratched
+5,11,Viewpoint,scratched_runner,Runner marked scratched
+5,12,Bella Corazon,scratched_runner,Runner marked scratched
+5,16,Empress Of Japan,scratched_runner,Runner marked scratched
+5,18,Glastonbury Girl,scratched_runner,Runner marked scratched
+6,8,I Am Carrot,missing_trainer,Trainer is empty
+6,8,I Am Carrot,scratched_runner,Runner marked scratched
+6,9,Covert Thinking,scratched_runner,Runner marked scratched
+6,11,Boltsaver,scratched_runner,Runner marked scratched
+6,12,Peace Officer,scratched_runner,Runner marked scratched
+6,13,Horizons,scratched_runner,Runner marked scratched
+7,4,Century Song,scratched_runner,Runner marked scratched
+7,5,Take The Rap,missing_trainer,Trainer is empty
+7,5,Take The Rap,scratched_runner,Runner marked scratched
+7,6,High On The Hill,missing_trainer,Trainer is empty
+7,6,High On The Hill,scratched_runner,Runner marked scratched
+7,10,Wave Breaker,scratched_runner,Runner marked scratched
+7,14,Alphard,scratched_runner,Runner marked scratched
+7,17,La Mer Bleue,missing_trainer,Trainer is empty
+7,17,La Mer Bleue,scratched_runner,Runner marked scratched
+7,18,La Basilique,missing_trainer,Trainer is empty
+7,18,La Basilique,scratched_runner,Runner marked scratched
+7,19,Hay Street,scratched_runner,Runner marked scratched
+7,20,Ice Kool,scratched_runner,Runner marked scratched
+7,21,Ernaux,missing_trainer,Trainer is empty
+7,21,Ernaux,scratched_runner,Runner marked scratched
+7,22,Gorgeous,scratched_runner,Runner marked scratched
+8,4,La Basilique,scratched_runner,Runner marked scratched
+8,9,Sequista,scratched_runner,Runner marked scratched
+8,12,West Of Dalby,scratched_runner,Runner marked scratched
+9,1,Tavi Time,scratched_runner,Runner marked scratched
+9,2,Bianco Vilano,scratched_runner,Runner marked scratched
+9,21,Sir Dinadan,scratched_runner,Runner marked scratched
+10,1,Bandi's Boy,scratched_runner,Runner marked scratched
+10,3,Mogo Magic,scratched_runner,Runner marked scratched
+10,4,Little Beginnings,scratched_runner,Runner marked scratched
+10,6,Lightning Glory,missing_trainer,Trainer is empty
+10,6,Lightning Glory,scratched_runner,Runner marked scratched
+10,7,Piastri,missing_trainer,Trainer is empty
+10,7,Piastri,scratched_runner,Runner marked scratched
+10,8,Balkans,scratched_runner,Runner marked scratched
+10,17,Cape Byron,scratched_runner,Runner marked scratched
+10,19,Kreon,scratched_runner,Runner marked scratched
+10,20,Panic,missing_trainer,Trainer is empty
+10,20,Panic,scratched_runner,Runner marked scratched
+10,21,Cold Brew,scratched_runner,Runner marked scratched

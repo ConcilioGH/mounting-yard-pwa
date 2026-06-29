@@ -1,115 +1,115 @@
-race_id,track,race_no,race_title,distance,grade,going,rail,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir
-R1,Rosehill Gardens,1,11:00 am Bookmakers Recognition Day Handicap,1300m,Handicap,Heavy 9,True,1,1,Tron Bolt,Tron Bolt,Tron Bolt,8,Chris Waller,Siena Grima (a-2),$2.6,3
-R1,Rosehill Gardens,1,11:00 am Bookmakers Recognition Day Handicap,1300m,Handicap,Heavy 9,True,2,2,Nations League,Nations League,Nations League,1,Chris Waller,Sam Clipperton,$4.5,4.2
-R1,Rosehill Gardens,1,11:00 am Bookmakers Recognition Day Handicap,1300m,Handicap,Heavy 9,True,3,3,Cormier,Cormier,Cormier,10,Paul Messara & Leah Gavranich,Aaron Bullock (a0.5),$2.9,5
-R1,Rosehill Gardens,1,11:00 am Bookmakers Recognition Day Handicap,1300m,Handicap,Heavy 9,True,5,5,Heatstroke,Heatstroke,Heatstroke,7,Richard & Will Freedman,Braith Nock (a-1.5),$51,10
-R1,Rosehill Gardens,1,11:00 am Bookmakers Recognition Day Handicap,1300m,Handicap,Heavy 9,True,6,6,Iommi,Iommi,Iommi,2,Chris Waller,Regan Bayliss,$8.5,2
-R1,Rosehill Gardens,1,11:00 am Bookmakers Recognition Day Handicap,1300m,Handicap,Heavy 9,True,11,11,Malua Bay,Malua Bay,Malua Bay,3,Bjorn Baker,Dylan Gibbons,$21,5
-R1,Rosehill Gardens,1,11:00 am Bookmakers Recognition Day Handicap,1300m,Handicap,Heavy 9,True,12,12,Not Inevitable,Not Inevitable,Not Inevitable,6,John Sargent,Anna Roper (a-2),$101,NA
-R1,Rosehill Gardens,1,11:00 am Bookmakers Recognition Day Handicap,1300m,Handicap,Heavy 9,True,13,13,Parisest Magic,Parisest Magic,Parisest Magic,4,Alexandre Lemarie,Tyler Schiller,$21,7
-R1,Rosehill Gardens,1,11:00 am Bookmakers Recognition Day Handicap,1300m,Handicap,Heavy 9,True,14,14,Iminastate,Iminastate,Iminastate,14,Richard & Will Freedman,Ashley Morgan,$51,7
-R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,2,2,Solitario,Solitario,Solitario,13,Paul Messara & Leah Gavranich,Aaron Bullock,$10,8.3
-R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,4,4,Jasper's Way,Jasper's Way,Jasper's Way,16,Michael Mulholland,Chad Lever,$51,6.5
-R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,5,5,Bombelleistic,Bombelleistic,Bombelleistic,5,"Barbara Joseph, Paul & Matt Jones",Alysha Collett,$61,5.7
-R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,6,6,Hammoon Sensation,Hammoon Sensation,Hammoon Sensation,1,Rodney Northam,Reece Jones,$13,3.1
-R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,7,7,Moon Sweeper,Moon Sweeper,Moon Sweeper,2,Matthew Dunn,Sam Clipperton,$2.8,6.6
-R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,8,8,Brilliant Knight,Brilliant Knight,Brilliant Knight,11,Cassandra Schmidt,Luke Rolls,$27,3.6
-R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,10,10,Oakfield Utah,Oakfield Utah,Oakfield Utah,7,Scott Singleton,Jay Ford,$19,5.8
-R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,11,11,Delago Serg,Delago Serg,Delago Serg,10,Paul Facoory,Adam Farragher,$126,1.9
-R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,12,12,Red Rags To Bulls,Red Rags To Bulls,Red Rags To Bulls,14,Jeremy Gask,Siena Grima (a-2),$5.5,9.9
-R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,13,13,Buenos,Buenos,Buenos,6,Keith Dryden & Libby Snowden,Andrew Adkins,$23,7.4
-R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,15,15,Brutal Belle,Brutal Belle,Brutal Belle,17,Luke Pepper,Mollie Fitzgerald (a-3),$10,5.8
-R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,16,16,Airliner,Airliner,Airliner,9,Terry Robinson,Dylan Gibbons,$101,7.9
-R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,17,17,Ocean Tsunami,Ocean Tsunami,Ocean Tsunami,19,Scott Singleton,Mikayla Weir,$6.5,6.7
-R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,18,18,Shezain,Shezain,Shezain,4,Keith Dryden & Libby Snowden,Tyler Schiller,$26,7.4
-R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,20,20,Ulysses Blue ho,Ulysses Blue ho,Ulysses Blue ho,12,Terry Robinson,Jeff Penza,$126,8.8
-R3,Rosehill Gardens,3,12:10 pm Midway Handicap,1100m,Handicap,Heavy 9,True,1,1,Cold Brew,Cold Brew,Cold Brew,2,Richard & Will Freedman,Siena Grima (a-2),$7.5,2.3
-R3,Rosehill Gardens,3,12:10 pm Midway Handicap,1100m,Handicap,Heavy 9,True,3,3,Shaggy,Shaggy,Shaggy,7,Allan Kehoe,Mollie Fitzgerald (a-3),$17,2.6
-R3,Rosehill Gardens,3,12:10 pm Midway Handicap,1100m,Handicap,Heavy 9,True,4,4,Norton Road,Norton Road,Norton Road,3,Rodney Bailey,Shannen Llewellyn (a-3),$34,4.5
-R3,Rosehill Gardens,3,12:10 pm Midway Handicap,1100m,Handicap,Heavy 9,True,7,7,Sir Les,Sir Les,Sir Les,9,Craig Carmody,Chad Lever,$2.8,1.7
-R3,Rosehill Gardens,3,12:10 pm Midway Handicap,1100m,Handicap,Heavy 9,True,11,11,Gorgeous,Gorgeous,Gorgeous,6,David Pfieffer,Braith Nock (a-1.5),$2.35,7
-R3,Rosehill Gardens,3,12:10 pm Midway Handicap,1100m,Handicap,Heavy 9,True,13,13,She Swings,She Swings,She Swings,4,David Pfieffer,Alysha Collett,$19,7.1
-R3,Rosehill Gardens,3,12:10 pm Midway Handicap,1100m,Handicap,Heavy 9,True,14,14,All The Way Mae,All The Way Mae,All The Way Mae,1,Kerry Parker,Andrew Adkins,$8,2.7
-R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,1,1,Sir Dinadan,Sir Dinadan,Sir Dinadan,1,Chris Waller,Jay Ford,$5.5,7
-R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,2,2,Mister Rizz,Mister Rizz,Mister Rizz,2,Tom Charlton,Sam Clipperton,$7,3
-R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,3,3,Stylebender,Stylebender,Stylebender,14,Kristen Buchanan,Shannen Llewellyn (a-3),$31,4.8
-R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,5,5,Perfect Play,Perfect Play,Perfect Play,8,Annabel & Rob Archibald,Braith Nock (a-1.5),$19,5.2
-R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,7,7,Sounds Unusual,Sounds Unusual,Sounds Unusual,4,Chris Waller,Reece Jones,$7,7.3
-R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,8,8,Oceanfront,Oceanfront,Oceanfront,6,Nacim Dilmi,Regan Bayliss,$14,5.8
-R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,9,9,Sacrify,Sacrify,Sacrify,11,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),$11,4.1
-R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,12,12,Belle Detelle,Belle Detelle,Belle Detelle,12,Chris Waller,Andrew Adkins,$10,7.4
-R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,14,14,Shangri La Impact,Shangri La Impact,Shangri La Impact,9,Tom Charlton,Dylan Gibbons,$3.1,2.3
-R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,16,16,Spenzalot,Spenzalot,Spenzalot,3,Scott Singleton,Mikayla Weir,$23,8.5
-R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,1,1,Duvana,Duvana,Duvana,11,Nathan Doyle,Shannen Llewellyn (a-3),$6.5,7.3
-R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,4,4,Island Dream,Island Dream,Island Dream,5,Chris Waller,Sam Clipperton,$14,6
-R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,6,6,Full Hao,Full Hao,Full Hao,16,Chris Waller,Siena Grima (a-2),$12,7.2
-R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,7,7,Covert Thinking,Covert Thinking,Covert Thinking,3,Ciaron Maher,William Stanley (a-3),$11,4.3
-R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,9,9,John Dory,John Dory,John Dory,14,Chris Waller,Regan Bayliss,$9.5,5.1
-R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,13,13,Change My Address,Change My Address,Change My Address,9,John Sargent,Anna Roper (a-2),$8.5,7.8
-R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,14,14,Hush Hush,Hush Hush,Hush Hush,8,Ciaron Maher,Adam Farragher,$14,7.4
-R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,15,15,Ertijaaj,Ertijaaj,Ertijaaj,4,Chris Waller,Tyler Schiller,$3.4,5
-R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,17,17,Costabit,Costabit,Costabit,12,Gerald Ryan & Sterling Alexiou,Braith Nock (a-1.5),$11,7.6
-R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,19,19,Blue Willow,Blue Willow,Blue Willow,20,Ciaron Maher,Reece Jones,$13,8.3
-R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,20,20,Unreal Expectation,Unreal Expectation,Unreal Expectation,6,Tara & Philippe Vigouroux,Winona Costin,$41,4.7
-R6,Rosehill Gardens,6,1:55 pm Ranvet Handicap,1500m,Handicap,Heavy 9,True,1,1,Cellarmaster,Cellarmaster,Cellarmaster,10,Tom Charlton,Anna Roper (a-2),$6,6.2
-R6,Rosehill Gardens,6,1:55 pm Ranvet Handicap,1500m,Handicap,Heavy 9,True,2,2,Man Of Worth,Man Of Worth,Man Of Worth,6,Chris Waller,Siena Grima (a-2),$4,3.9
-R6,Rosehill Gardens,6,1:55 pm Ranvet Handicap,1500m,Handicap,Heavy 9,True,3,3,Fiddlers Green,Fiddlers Green,Fiddlers Green,4,Annabel & Rob Archibald,Braith Nock (a-1.5),$6.5,5.7
-R6,Rosehill Gardens,6,1:55 pm Ranvet Handicap,1500m,Handicap,Heavy 9,True,4,4,Mawjood,Mawjood,Mawjood,7,Bjorn Baker,Aaron Bullock,$3.2,3.6
-R6,Rosehill Gardens,6,1:55 pm Ranvet Handicap,1500m,Handicap,Heavy 9,True,5,5,Anythink Goes,Anythink Goes,Anythink Goes,12,Matthew Smith,Ashley Morgan,$18,6.2
-R6,Rosehill Gardens,6,1:55 pm Ranvet Handicap,1500m,Handicap,Heavy 9,True,6,6,Amplify,Amplify,Amplify,1,Ciaron Maher,Regan Bayliss,$10,8.2
-R6,Rosehill Gardens,6,1:55 pm Ranvet Handicap,1500m,Handicap,Heavy 9,True,7,7,I've Bean Tryin',I've Bean Tryin',I've Bean Tryin',9,Matthew Kelley,Alysha Collett,$21,7.8
-R6,Rosehill Gardens,6,1:55 pm Ranvet Handicap,1500m,Handicap,Heavy 9,True,10,10,Let's Fly,Let's Fly,Let's Fly,2,Richard & Will Freedman,Tyler Schiller,$11,6
-R6,Rosehill Gardens,6,1:55 pm Ranvet Handicap,1500m,Handicap,Heavy 9,True,14,14,Marsabit,Marsabit,Marsabit,3,Danny Williams,Winona Costin,$71,8
-R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,1,1,Shall Be,Shall Be,Shall Be,7,Mark Minervini,William Stanley (a-3),$31,2.2
-R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,2,2,Madrina,Madrina,Madrina,6,Nick Olive,Anna Roper (a-2),$7,3.4
-R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,3,3,Shropshire Lad,Shropshire Lad,Shropshire Lad,14,Rodney Northam,Reece Jones,$9.5,7.7
-R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,7,7,Couples Retreat,Couples Retreat,Couples Retreat,2,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),$7.5,4.3
-R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,8,8,Benevac,Benevac,Benevac,12,Ciaron Maher,Dylan Gibbons,$16,3
-R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,9,9,Casserousse,Casserousse,Casserousse,8,Joseph Pride,Alysha Collett,$13,2.3
-R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,11,11,Confidentiality,Confidentiality,Confidentiality,22,Joseph Pride,Sam Clipperton,$5.75,4.3
-R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,12,12,Big Papa,Big Papa,Big Papa,11,Bjorn Baker,Regan Bayliss,$5,5.5
-R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,13,13,Agatha,Agatha,Agatha,20,Michael Freedman,Andrew Adkins,$6,7.8
-R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,15,15,Raskol,Raskol,Raskol,4,Peter Snowden,Ashley Morgan,$12,2.5
-R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,16,16,Silver Serenade,Silver Serenade,Silver Serenade,1,Danny Williams,Winona Costin,$34,3.4
-R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,1,1,Super Norwest,Super Norwest,Super Norwest,13,Matthew Dale,Braith Nock (a-1.5),$21,4.1
-R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,2,2,Crepe Myrtle,Crepe Myrtle,Crepe Myrtle,4,Joseph Pride,Tyler Schiller,$5.5,3.2
-R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,3,3,Ticklebelly,Ticklebelly,Ticklebelly,11,Scott Collings,Aaron Bullock,$19,3.2
-R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,5,5,Miss Kim Kar,Miss Kim Kar,Miss Kim Kar,8,Bjorn Baker,Regan Bayliss,$9.5,7.7
-R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,6,6,Super Nui,Super Nui,Super Nui,3,Ron Quinton,Louise Day,$6.5,4.9
-R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,7,7,Thames,Thames,Thames,15,Gary Portelli,Anna Roper (a-2),$10,7.2
-R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,8,8,Mother Goose,Mother Goose,Mother Goose,1,Gary Portelli,Alysha Collett,$11,2.2
-R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,10,10,Maybe Moet,Maybe Moet,Maybe Moet,5,Chris Waller,Sam Clipperton,$8.5,6.4
-R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,11,11,Super Bright,Super Bright,Super Bright,6,Nathan Doyle,Dylan Gibbons,$27,7.1
-R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,13,13,Ernaux,Ernaux,Ernaux,2,Chris Waller,Siena Grima (a-2),$7,5.7
-R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,14,14,Miss Jennifer,Miss Jennifer,Miss Jennifer,7,Danny Williams,Jay Ford,$41,8.8
-R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,15,15,Infusion,Infusion,Infusion,12,Peter Snowden,Andrew Adkins,$14,5.2
-R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,16,16,Fleeting Spirit,Fleeting Spirit,Fleeting Spirit,10,Gerald Ryan & Sterling Alexiou,Ashley Morgan,$17,4.6
-R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,3,3,Osipenko,Osipenko,Osipenko,21,Chris Waller,Aaron Bullock,$31,8.2
-R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,4,4,Zambardo,Zambardo,Zambardo,2,Mick Price & Michael Kent Jnr,Dylan Gibbons,$3.4,6.1
-R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,5,5,Doctor Askar,Doctor Askar,Doctor Askar,7,Chris Waller,Siena Grima,$81,10
-R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,6,6,Maison Louis,Maison Louis,Maison Louis,19,Tom Charlton,Sam Clipperton,$21,7.7
-R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,7,7,Sayedaty Sadaty,Sayedaty Sadaty,Sayedaty Sadaty,1,Ciaron Maher,Regan Bayliss,$19,3.6
-R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,8,8,Navajo Peak,Navajo Peak,Navajo Peak,15,Peter Bloomfield,Anna Roper,$151,6.1
-R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,9,9,Lord Penman,Lord Penman,Lord Penman,4,Chris Waller,Jeff Penza,$21,7.2
-R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,10,10,Belvedere Boys,Belvedere Boys,Belvedere Boys,14,Matthew Dunn,Jake Bayliss,$13,9.3
-R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,11,11,Touristic,Touristic,Touristic,3,Peter Snowden,Andrew Adkins,$12,8.2
-R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,12,12,Glory Daze,Glory Daze,Glory Daze,17,Ciaron Maher,Adam Farragher,$23,4.6
-R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,13,13,Nellie Leylax,Nellie Leylax,Nellie Leylax,13,Annabel & Rob Archibald,Alysha Collett,$15,3.7
-R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,14,14,You Wahng,You Wahng,You Wahng,5,Kris Lees,Jay Ford,$18,7.9
-R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,15,15,Imperialist,Imperialist,Imperialist,16,Chris Waller,Ashley Morgan,$19,5.9
-R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,16,16,Portland,Portland,Portland,12,Matthew Smith,Winona Costin,$11,6.8
-R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,17,17,Zaphod,Zaphod,Zaphod,11,Kris Lees,Andrew Gibbons,$19,3.6
-R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,18,18,Caboche,Caboche,Caboche,20,Chris Waller,Tyler Schiller,$101,6.1
-R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,19,19,Black Run,Black Run,Black Run,9,Annabel & Rob Archibald,Braith Nock,$21,2.9
-R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,20,20,Thebudgiesmugla,Thebudgiesmugla,Thebudgiesmugla,18,Bjorn Baker,Reece Jones,$8.5,4.6
-R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,2,2,Midnight Opal,Midnight Opal,Midnight Opal,5,Nathan Doyle,Shannen Llewellyn (a-3),$7,5.1
-R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,5,5,Our Last Cash,Our Last Cash,Our Last Cash,16,Donna Scott,Alysha Collett,$41,7.1
-R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,9,9,Hay Street,Hay Street,Hay Street,14,Annabel & Rob Archibald,Braith Nock (a-1.5),$2.6,2.4
-R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,10,10,Sir Ravanelli,Sir Ravanelli,Sir Ravanelli,10,Terry Evans,Andrew Gibbons,$23,5
-R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,11,11,Who Ever Thought,Who Ever Thought,Who Ever Thought,4,Jeremy Gask,William Stanley (a-3),$34,3
-R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,12,12,Damien,Damien,Damien,1,Kris Lees,Tyler Schiller,$8,6.8
-R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,13,13,Applaud,Applaud,Applaud,6,Peter Snowden,Mitch Stapleford (a-3),$10,6.3
-R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,14,14,Pokerjack,Pokerjack,Pokerjack,19,Tash Burleigh,Winona Costin,$34,4.7
-R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,15,15,Stardeel,Stardeel,Stardeel,15,Bjorn Baker,Ashley Morgan,$14,6
-R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,16,16,Silvanito,Silvanito,Silvanito,21,Nathan Doyle,Regan Bayliss,$15,5.8
-R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,18,18,Just Response,Just Response,Just Response,13,Nathan Doyle,Andrew Adkins,$6,1.4
+race_id,track,race_no,race_title,distance,grade,going,rail,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
+R1,Rosehill Gardens,1,11:00 am Bookmakers Recognition Day Handicap,1300m,Handicap,Heavy 9,True,1,1,Tron Bolt,Tron Bolt,Tron Bolt,8,Chris Waller,Siena Grima (a-2),$2.6,3,racenet
+R1,Rosehill Gardens,1,11:00 am Bookmakers Recognition Day Handicap,1300m,Handicap,Heavy 9,True,2,2,Nations League,Nations League,Nations League,1,Chris Waller,Sam Clipperton,$4.5,4.2,racenet
+R1,Rosehill Gardens,1,11:00 am Bookmakers Recognition Day Handicap,1300m,Handicap,Heavy 9,True,3,3,Cormier,Cormier,Cormier,10,Paul Messara & Leah Gavranich,Aaron Bullock (a0.5),$2.9,5,racenet
+R1,Rosehill Gardens,1,11:00 am Bookmakers Recognition Day Handicap,1300m,Handicap,Heavy 9,True,5,5,Heatstroke,Heatstroke,Heatstroke,7,Richard & Will Freedman,Braith Nock (a-1.5),$51,10,racenet
+R1,Rosehill Gardens,1,11:00 am Bookmakers Recognition Day Handicap,1300m,Handicap,Heavy 9,True,6,6,Iommi,Iommi,Iommi,2,Chris Waller,Regan Bayliss,$8.5,2,racenet
+R1,Rosehill Gardens,1,11:00 am Bookmakers Recognition Day Handicap,1300m,Handicap,Heavy 9,True,11,11,Malua Bay,Malua Bay,Malua Bay,3,Bjorn Baker,Dylan Gibbons,$21,5,racenet
+R1,Rosehill Gardens,1,11:00 am Bookmakers Recognition Day Handicap,1300m,Handicap,Heavy 9,True,12,12,Not Inevitable,Not Inevitable,Not Inevitable,6,John Sargent,Anna Roper (a-2),$101,NA,racenet
+R1,Rosehill Gardens,1,11:00 am Bookmakers Recognition Day Handicap,1300m,Handicap,Heavy 9,True,13,13,Parisest Magic,Parisest Magic,Parisest Magic,4,Alexandre Lemarie,Tyler Schiller,$21,7,racenet
+R1,Rosehill Gardens,1,11:00 am Bookmakers Recognition Day Handicap,1300m,Handicap,Heavy 9,True,14,14,Iminastate,Iminastate,Iminastate,14,Richard & Will Freedman,Ashley Morgan,$51,7,racenet
+R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,2,2,Solitario,Solitario,Solitario,13,Paul Messara & Leah Gavranich,Aaron Bullock,$10,8.3,racenet
+R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,4,4,Jasper's Way,Jasper's Way,Jasper's Way,16,Michael Mulholland,Chad Lever,$51,6.5,racenet
+R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,5,5,Bombelleistic,Bombelleistic,Bombelleistic,5,"Barbara Joseph, Paul & Matt Jones",Alysha Collett,$61,5.7,racenet
+R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,6,6,Hammoon Sensation,Hammoon Sensation,Hammoon Sensation,1,Rodney Northam,Reece Jones,$13,3.1,racenet
+R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,7,7,Moon Sweeper,Moon Sweeper,Moon Sweeper,2,Matthew Dunn,Sam Clipperton,$2.8,6.6,racenet
+R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,8,8,Brilliant Knight,Brilliant Knight,Brilliant Knight,11,Cassandra Schmidt,Luke Rolls,$27,3.6,racenet
+R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,10,10,Oakfield Utah,Oakfield Utah,Oakfield Utah,7,Scott Singleton,Jay Ford,$19,5.8,racenet
+R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,11,11,Delago Serg,Delago Serg,Delago Serg,10,Paul Facoory,Adam Farragher,$126,1.9,racenet
+R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,12,12,Red Rags To Bulls,Red Rags To Bulls,Red Rags To Bulls,14,Jeremy Gask,Siena Grima (a-2),$5.5,9.9,racenet
+R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,13,13,Buenos,Buenos,Buenos,6,Keith Dryden & Libby Snowden,Andrew Adkins,$23,7.4,racenet
+R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,15,15,Brutal Belle,Brutal Belle,Brutal Belle,17,Luke Pepper,Mollie Fitzgerald (a-3),$10,5.8,racenet
+R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,16,16,Airliner,Airliner,Airliner,9,Terry Robinson,Dylan Gibbons,$101,7.9,racenet
+R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,17,17,Ocean Tsunami,Ocean Tsunami,Ocean Tsunami,19,Scott Singleton,Mikayla Weir,$6.5,6.7,racenet
+R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,18,18,Shezain,Shezain,Shezain,4,Keith Dryden & Libby Snowden,Tyler Schiller,$26,7.4,racenet
+R2,Rosehill Gardens,2,11:35 am Tab Highway Plate,1500m,Class 3,Heavy 9,True,20,20,Ulysses Blue ho,Ulysses Blue ho,Ulysses Blue ho,12,Terry Robinson,Jeff Penza,$126,8.8,racenet
+R3,Rosehill Gardens,3,12:10 pm Midway Handicap,1100m,Handicap,Heavy 9,True,1,1,Cold Brew,Cold Brew,Cold Brew,2,Richard & Will Freedman,Siena Grima (a-2),$7.5,2.3,racenet
+R3,Rosehill Gardens,3,12:10 pm Midway Handicap,1100m,Handicap,Heavy 9,True,3,3,Shaggy,Shaggy,Shaggy,7,Allan Kehoe,Mollie Fitzgerald (a-3),$17,2.6,racenet
+R3,Rosehill Gardens,3,12:10 pm Midway Handicap,1100m,Handicap,Heavy 9,True,4,4,Norton Road,Norton Road,Norton Road,3,Rodney Bailey,Shannen Llewellyn (a-3),$34,4.5,racenet
+R3,Rosehill Gardens,3,12:10 pm Midway Handicap,1100m,Handicap,Heavy 9,True,7,7,Sir Les,Sir Les,Sir Les,9,Craig Carmody,Chad Lever,$2.8,1.7,racenet
+R3,Rosehill Gardens,3,12:10 pm Midway Handicap,1100m,Handicap,Heavy 9,True,11,11,Gorgeous,Gorgeous,Gorgeous,6,David Pfieffer,Braith Nock (a-1.5),$2.35,7,racenet
+R3,Rosehill Gardens,3,12:10 pm Midway Handicap,1100m,Handicap,Heavy 9,True,13,13,She Swings,She Swings,She Swings,4,David Pfieffer,Alysha Collett,$19,7.1,racenet
+R3,Rosehill Gardens,3,12:10 pm Midway Handicap,1100m,Handicap,Heavy 9,True,14,14,All The Way Mae,All The Way Mae,All The Way Mae,1,Kerry Parker,Andrew Adkins,$8,2.7,racenet
+R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,1,1,Sir Dinadan,Sir Dinadan,Sir Dinadan,1,Chris Waller,Jay Ford,$5.5,7,racenet
+R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,2,2,Mister Rizz,Mister Rizz,Mister Rizz,2,Tom Charlton,Sam Clipperton,$7,3,racenet
+R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,3,3,Stylebender,Stylebender,Stylebender,14,Kristen Buchanan,Shannen Llewellyn (a-3),$31,4.8,racenet
+R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,5,5,Perfect Play,Perfect Play,Perfect Play,8,Annabel & Rob Archibald,Braith Nock (a-1.5),$19,5.2,racenet
+R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,7,7,Sounds Unusual,Sounds Unusual,Sounds Unusual,4,Chris Waller,Reece Jones,$7,7.3,racenet
+R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,8,8,Oceanfront,Oceanfront,Oceanfront,6,Nacim Dilmi,Regan Bayliss,$14,5.8,racenet
+R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,9,9,Sacrify,Sacrify,Sacrify,11,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),$11,4.1,racenet
+R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,12,12,Belle Detelle,Belle Detelle,Belle Detelle,12,Chris Waller,Andrew Adkins,$10,7.4,racenet
+R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,14,14,Shangri La Impact,Shangri La Impact,Shangri La Impact,9,Tom Charlton,Dylan Gibbons,$3.1,2.3,racenet
+R4,Rosehill Gardens,4,12:45 pm Greg Millett Handicap,1800m,Handicap,Heavy 9,True,16,16,Spenzalot,Spenzalot,Spenzalot,3,Scott Singleton,Mikayla Weir,$23,8.5,racenet
+R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,1,1,Duvana,Duvana,Duvana,11,Nathan Doyle,Shannen Llewellyn (a-3),$6.5,7.3,racenet
+R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,4,4,Island Dream,Island Dream,Island Dream,5,Chris Waller,Sam Clipperton,$14,6,racenet
+R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,6,6,Full Hao,Full Hao,Full Hao,16,Chris Waller,Siena Grima (a-2),$12,7.2,racenet
+R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,7,7,Covert Thinking,Covert Thinking,Covert Thinking,3,Ciaron Maher,William Stanley (a-3),$11,4.3,racenet
+R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,9,9,John Dory,John Dory,John Dory,14,Chris Waller,Regan Bayliss,$9.5,5.1,racenet
+R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,13,13,Change My Address,Change My Address,Change My Address,9,John Sargent,Anna Roper (a-2),$8.5,7.8,racenet
+R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,14,14,Hush Hush,Hush Hush,Hush Hush,8,Ciaron Maher,Adam Farragher,$14,7.4,racenet
+R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,15,15,Ertijaaj,Ertijaaj,Ertijaaj,4,Chris Waller,Tyler Schiller,$3.4,5,racenet
+R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,17,17,Costabit,Costabit,Costabit,12,Gerald Ryan & Sterling Alexiou,Braith Nock (a-1.5),$11,7.6,racenet
+R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,19,19,Blue Willow,Blue Willow,Blue Willow,20,Ciaron Maher,Reece Jones,$13,8.3,racenet
+R5,Rosehill Gardens,5,1:20 pm Nsw Bookmakers Co-op Handicap,1500m,Handicap,Heavy 9,True,20,20,Unreal Expectation,Unreal Expectation,Unreal Expectation,6,Tara & Philippe Vigouroux,Winona Costin,$41,4.7,racenet
+R6,Rosehill Gardens,6,1:55 pm Ranvet Handicap,1500m,Handicap,Heavy 9,True,1,1,Cellarmaster,Cellarmaster,Cellarmaster,10,Tom Charlton,Anna Roper (a-2),$6,6.2,racenet
+R6,Rosehill Gardens,6,1:55 pm Ranvet Handicap,1500m,Handicap,Heavy 9,True,2,2,Man Of Worth,Man Of Worth,Man Of Worth,6,Chris Waller,Siena Grima (a-2),$4,3.9,racenet
+R6,Rosehill Gardens,6,1:55 pm Ranvet Handicap,1500m,Handicap,Heavy 9,True,3,3,Fiddlers Green,Fiddlers Green,Fiddlers Green,4,Annabel & Rob Archibald,Braith Nock (a-1.5),$6.5,5.7,racenet
+R6,Rosehill Gardens,6,1:55 pm Ranvet Handicap,1500m,Handicap,Heavy 9,True,4,4,Mawjood,Mawjood,Mawjood,7,Bjorn Baker,Aaron Bullock,$3.2,3.6,racenet
+R6,Rosehill Gardens,6,1:55 pm Ranvet Handicap,1500m,Handicap,Heavy 9,True,5,5,Anythink Goes,Anythink Goes,Anythink Goes,12,Matthew Smith,Ashley Morgan,$18,6.2,racenet
+R6,Rosehill Gardens,6,1:55 pm Ranvet Handicap,1500m,Handicap,Heavy 9,True,6,6,Amplify,Amplify,Amplify,1,Ciaron Maher,Regan Bayliss,$10,8.2,racenet
+R6,Rosehill Gardens,6,1:55 pm Ranvet Handicap,1500m,Handicap,Heavy 9,True,7,7,I've Bean Tryin',I've Bean Tryin',I've Bean Tryin',9,Matthew Kelley,Alysha Collett,$21,7.8,racenet
+R6,Rosehill Gardens,6,1:55 pm Ranvet Handicap,1500m,Handicap,Heavy 9,True,10,10,Let's Fly,Let's Fly,Let's Fly,2,Richard & Will Freedman,Tyler Schiller,$11,6,racenet
+R6,Rosehill Gardens,6,1:55 pm Ranvet Handicap,1500m,Handicap,Heavy 9,True,14,14,Marsabit,Marsabit,Marsabit,3,Danny Williams,Winona Costin,$71,8,racenet
+R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,1,1,Shall Be,Shall Be,Shall Be,7,Mark Minervini,William Stanley (a-3),$31,2.2,racenet
+R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,2,2,Madrina,Madrina,Madrina,6,Nick Olive,Anna Roper (a-2),$7,3.4,racenet
+R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,3,3,Shropshire Lad,Shropshire Lad,Shropshire Lad,14,Rodney Northam,Reece Jones,$9.5,7.7,racenet
+R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,7,7,Couples Retreat,Couples Retreat,Couples Retreat,2,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),$7.5,4.3,racenet
+R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,8,8,Benevac,Benevac,Benevac,12,Ciaron Maher,Dylan Gibbons,$16,3,racenet
+R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,9,9,Casserousse,Casserousse,Casserousse,8,Joseph Pride,Alysha Collett,$13,2.3,racenet
+R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,11,11,Confidentiality,Confidentiality,Confidentiality,22,Joseph Pride,Sam Clipperton,$5.75,4.3,racenet
+R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,12,12,Big Papa,Big Papa,Big Papa,11,Bjorn Baker,Regan Bayliss,$5,5.5,racenet
+R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,13,13,Agatha,Agatha,Agatha,20,Michael Freedman,Andrew Adkins,$6,7.8,racenet
+R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,15,15,Raskol,Raskol,Raskol,4,Peter Snowden,Ashley Morgan,$12,2.5,racenet
+R7,Rosehill Gardens,7,2:30 pm Vale Peter Taylor Handicap,1100m,Handicap,Heavy 9,True,16,16,Silver Serenade,Silver Serenade,Silver Serenade,1,Danny Williams,Winona Costin,$34,3.4,racenet
+R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,1,1,Super Norwest,Super Norwest,Super Norwest,13,Matthew Dale,Braith Nock (a-1.5),$21,4.1,racenet
+R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,2,2,Crepe Myrtle,Crepe Myrtle,Crepe Myrtle,4,Joseph Pride,Tyler Schiller,$5.5,3.2,racenet
+R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,3,3,Ticklebelly,Ticklebelly,Ticklebelly,11,Scott Collings,Aaron Bullock,$19,3.2,racenet
+R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,5,5,Miss Kim Kar,Miss Kim Kar,Miss Kim Kar,8,Bjorn Baker,Regan Bayliss,$9.5,7.7,racenet
+R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,6,6,Super Nui,Super Nui,Super Nui,3,Ron Quinton,Louise Day,$6.5,4.9,racenet
+R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,7,7,Thames,Thames,Thames,15,Gary Portelli,Anna Roper (a-2),$10,7.2,racenet
+R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,8,8,Mother Goose,Mother Goose,Mother Goose,1,Gary Portelli,Alysha Collett,$11,2.2,racenet
+R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,10,10,Maybe Moet,Maybe Moet,Maybe Moet,5,Chris Waller,Sam Clipperton,$8.5,6.4,racenet
+R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,11,11,Super Bright,Super Bright,Super Bright,6,Nathan Doyle,Dylan Gibbons,$27,7.1,racenet
+R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,13,13,Ernaux,Ernaux,Ernaux,2,Chris Waller,Siena Grima (a-2),$7,5.7,racenet
+R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,14,14,Miss Jennifer,Miss Jennifer,Miss Jennifer,7,Danny Williams,Jay Ford,$41,8.8,racenet
+R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,15,15,Infusion,Infusion,Infusion,12,Peter Snowden,Andrew Adkins,$14,5.2,racenet
+R8,Rosehill Gardens,8,3:05 pm Vale Sandro D'amore Handicap,1200m,Handicap,Heavy 9,True,16,16,Fleeting Spirit,Fleeting Spirit,Fleeting Spirit,10,Gerald Ryan & Sterling Alexiou,Ashley Morgan,$17,4.6,racenet
+R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,3,3,Osipenko,Osipenko,Osipenko,21,Chris Waller,Aaron Bullock,$31,8.2,racenet
+R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,4,4,Zambardo,Zambardo,Zambardo,2,Mick Price & Michael Kent Jnr,Dylan Gibbons,$3.4,6.1,racenet
+R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,5,5,Doctor Askar,Doctor Askar,Doctor Askar,7,Chris Waller,Siena Grima,$81,10,racenet
+R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,6,6,Maison Louis,Maison Louis,Maison Louis,19,Tom Charlton,Sam Clipperton,$21,7.7,racenet
+R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,7,7,Sayedaty Sadaty,Sayedaty Sadaty,Sayedaty Sadaty,1,Ciaron Maher,Regan Bayliss,$19,3.6,racenet
+R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,8,8,Navajo Peak,Navajo Peak,Navajo Peak,15,Peter Bloomfield,Anna Roper,$151,6.1,racenet
+R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,9,9,Lord Penman,Lord Penman,Lord Penman,4,Chris Waller,Jeff Penza,$21,7.2,racenet
+R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,10,10,Belvedere Boys,Belvedere Boys,Belvedere Boys,14,Matthew Dunn,Jake Bayliss,$13,9.3,racenet
+R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,11,11,Touristic,Touristic,Touristic,3,Peter Snowden,Andrew Adkins,$12,8.2,racenet
+R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,12,12,Glory Daze,Glory Daze,Glory Daze,17,Ciaron Maher,Adam Farragher,$23,4.6,racenet
+R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,13,13,Nellie Leylax,Nellie Leylax,Nellie Leylax,13,Annabel & Rob Archibald,Alysha Collett,$15,3.7,racenet
+R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,14,14,You Wahng,You Wahng,You Wahng,5,Kris Lees,Jay Ford,$18,7.9,racenet
+R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,15,15,Imperialist,Imperialist,Imperialist,16,Chris Waller,Ashley Morgan,$19,5.9,racenet
+R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,16,16,Portland,Portland,Portland,12,Matthew Smith,Winona Costin,$11,6.8,racenet
+R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,17,17,Zaphod,Zaphod,Zaphod,11,Kris Lees,Andrew Gibbons,$19,3.6,racenet
+R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,18,18,Caboche,Caboche,Caboche,20,Chris Waller,Tyler Schiller,$101,6.1,racenet
+R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,19,19,Black Run,Black Run,Black Run,9,Annabel & Rob Archibald,Braith Nock,$21,2.9,racenet
+R9,Rosehill Gardens,9,3:40 pm Lord Mayors Cup,2000m,Open Quality 3yo+ NA,Heavy 9,True,20,20,Thebudgiesmugla,Thebudgiesmugla,Thebudgiesmugla,18,Bjorn Baker,Reece Jones,$8.5,4.6,racenet
+R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,2,2,Midnight Opal,Midnight Opal,Midnight Opal,5,Nathan Doyle,Shannen Llewellyn (a-3),$7,5.1,racenet
+R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,5,5,Our Last Cash,Our Last Cash,Our Last Cash,16,Donna Scott,Alysha Collett,$41,7.1,racenet
+R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,9,9,Hay Street,Hay Street,Hay Street,14,Annabel & Rob Archibald,Braith Nock (a-1.5),$2.6,2.4,racenet
+R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,10,10,Sir Ravanelli,Sir Ravanelli,Sir Ravanelli,10,Terry Evans,Andrew Gibbons,$23,5,racenet
+R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,11,11,Who Ever Thought,Who Ever Thought,Who Ever Thought,4,Jeremy Gask,William Stanley (a-3),$34,3,racenet
+R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,12,12,Damien,Damien,Damien,1,Kris Lees,Tyler Schiller,$8,6.8,racenet
+R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,13,13,Applaud,Applaud,Applaud,6,Peter Snowden,Mitch Stapleford (a-3),$10,6.3,racenet
+R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,14,14,Pokerjack,Pokerjack,Pokerjack,19,Tash Burleigh,Winona Costin,$34,4.7,racenet
+R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,15,15,Stardeel,Stardeel,Stardeel,15,Bjorn Baker,Ashley Morgan,$14,6,racenet
+R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,16,16,Silvanito,Silvanito,Silvanito,21,Nathan Doyle,Regan Bayliss,$15,5.8,racenet
+R10,Rosehill Gardens,10,4:20 pm Denham Carter Handicap,1200m,Handicap,Heavy 9,True,18,18,Just Response,Just Response,Just Response,13,Nathan Doyle,Andrew Adkins,$6,1.4,racenet
