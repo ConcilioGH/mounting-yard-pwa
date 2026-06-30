@@ -32,14 +32,32 @@ export async function GET(request: Request) {
   }
 
   try {
-    const res = await fetch(url, {
-      method: "GET",
-      headers: {
-        Accept: "text/html,application/xhtml+xml",
-        "User-Agent": "mounting-yard-pwa/1.0",
-      },
-      cache: "no-store",
-    });
+    const redirects: string[] = [];
+    let currentUrl = url;
+    let res: Response | null = null;
+    for (let hop = 0; hop < 6; hop++) {
+      res = await fetch(currentUrl, {
+        method: "GET",
+        redirect: "manual",
+        headers: {
+          Accept: "text/html,application/xhtml+xml",
+          "User-Agent": "mounting-yard-pwa/1.0",
+        },
+        cache: "no-store",
+      });
+      if (res.status >= 300 && res.status < 400) {
+        const location = res.headers.get("location");
+        if (!location) break;
+        const nextUrl = new URL(location, currentUrl).toString();
+        redirects.push(`${res.status} ${currentUrl} -> ${nextUrl}`);
+        currentUrl = nextUrl;
+        continue;
+      }
+      break;
+    }
+    if (!res) {
+      return Response.json({ error: "Upstream fetch failed." }, { status: 502, headers: CORS_HEADERS });
+    }
     if (!res.ok) {
       return Response.json(
         { error: `Upstream returned ${res.status}.` },
@@ -56,6 +74,9 @@ export async function GET(request: Request) {
         ...CORS_HEADERS,
         "Content-Type": "text/html; charset=utf-8",
         "Cache-Control": "no-store",
+        "X-Resulted-Sp-Final-Url": currentUrl,
+        "X-Resulted-Sp-Redirects": redirects.join(" | "),
+        "X-Resulted-Sp-Status": String(res.status),
       },
     });
   } catch (error) {

@@ -308,8 +308,13 @@
     if (!race) return false;
     var okStatus = { Paying: 1, Closed: 1, Final: 1, Results: 1, Interim: 1 };
     if (!okStatus[race.raceStatus]) return false;
-    var finish = buildFinishMap(race.results);
-    return finish[1] && finish[2] && finish[3];
+    if (!race.results || race.results.length < 3) return false;
+    for (var i = 0; i < 3; i++) {
+      var sel = race.results[i];
+      var runnerNo = sel && sel[0];
+      if (!(typeof runnerNo === "number" && runnerNo > 0)) return false;
+    }
+    return true;
   }
 
   function parseTabRaceDetail(detail, raceNo) {

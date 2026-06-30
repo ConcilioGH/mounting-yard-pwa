@@ -16,7 +16,12 @@ import { buildPrimaryTabResultsUrl, resolvePrimaryTabResultsUrl } from "@/lib/re
 import {
   loadResultedSpStateForMeeting,
   saveResultedSpStateForMeeting,
+  getResultedSpStorageKey,
 } from "@/lib/resulted-sp/storage";
+import {
+  createResultedSpAttemptId,
+  logResultedSpImportAttempt,
+} from "@/lib/resulted-sp/diagnostics";
 import {
   DEFAULT_RESULTED_SP_POLL_CONFIG,
   type ResultedSpPollConfig,
@@ -96,9 +101,11 @@ function syncBiasFromImportedRace(
   raceNo: string,
   runners: ReturnType<typeof toResultedSpRunners>,
   parserSource: string,
-): void {
+): string {
   const biasLoad = loadRaceDayBiasStateForMeeting(meetingId);
-  if (!biasLoad.state.races.length) return;
+  if (!biasLoad.state.races.length) {
+    return "bias skipped: no bias rows for meeting";
+  }
 
   const parsedRace: ParsedRaceResults = {
     raceNo: normalizeRaceNo(raceNo),
@@ -110,17 +117,22 @@ function syncBiasFromImportedRace(
         sp: Number(r.officialSP),
       })),
   };
-  if (!parsedRace.results.length) return;
+  if (!parsedRace.results.length) {
+    return "bias skipped: no top-4 finishers with SP";
+  }
 
   const { entries, report } = applyResultsSpToBiasEntries([parsedRace], biasLoad.state.races, {
     overwriteExistingSp: false,
     parserUsed: `resulted-sp-poller:${parserSource}`,
   });
-  if (!report.spPopulated) return;
+  if (!report.spPopulated) {
+    return `bias skipped: spPopulated=0 unmatched=${report.unmatchedRaces.join(",")}`;
+  }
   saveRaceDayBiasStateForMeeting(meetingId, {
     ...biasLoad.state,
     races: entries,
   });
+  return `bias updated: ${report.spPopulated} SPs`;
 }
 
 async function exportResultedSpCsv(state: ResultedSpMeetingState, manifest: MeetingManifest): Promise<void> {
@@ -173,6 +185,7 @@ export async function importResultedSpForRace(options: {
     const importResult = await importRaceFromSources({
       manifest: options.manifest,
       raceNo,
+      meetingId,
     });
 
     if (!importResult.imported) {
@@ -197,6 +210,19 @@ export async function importResultedSpForRace(options: {
         },
       };
       saveResultedSpStateForMeeting(state);
+      logResultedSpImportAttempt({
+        attemptId: createResultedSpAttemptId(),
+        timestamp: nowIso,
+        meetingId,
+        raceNo,
+        source: "poller",
+        resolvedUrl: resultsUrl,
+        rowsWritten: 0,
+        storageKey: getResultedSpStorageKey(meetingId),
+        eventDispatched: true,
+        outcome: importResult.notReady ? "not_ready" : "error",
+        detail: importResult.lastError || "Official results not available yet.",
+      });
       return { ok: true, imported: false, state };
     }
 
@@ -223,8 +249,23 @@ export async function importResultedSpForRace(options: {
       },
     };
     saveResultedSpStateForMeeting(state);
-    syncBiasFromImportedRace(meetingId, raceNo, runners, source);
+    const biasReport = syncBiasFromImportedRace(meetingId, raceNo, runners, source);
     await exportResultedSpCsv(state, options.manifest);
+    logResultedSpImportAttempt({
+      attemptId: createResultedSpAttemptId(),
+      timestamp: importedAt,
+      meetingId,
+      raceNo,
+      source,
+      resolvedUrl: resultsUrl,
+      runnersParsed: runners.length,
+      spValuesParsed: runners.filter((r) => r.officialSP.trim()).length,
+      rowsWritten: runners.length,
+      storageKey: getResultedSpStorageKey(meetingId),
+      eventDispatched: true,
+      outcome: "imported",
+      detail: biasReport,
+    });
     return { ok: true, imported: true, state };
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);

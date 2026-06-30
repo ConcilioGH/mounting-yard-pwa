@@ -6,8 +6,13 @@ import {
   type TabJurisdiction,
 } from "@/lib/resulted-sp/tab-jurisdiction";
 import type { ParsedFullFieldRace, ParsedFullFieldRunner } from "@/lib/resulted-sp/parse-full-field";
-import { fetchTabApiJson } from "@/lib/resulted-sp/fetch-tab-api";
-import { buildTabMeetingRef, buildTabResultsMeetingUrl, type TabMeetingRef } from "@/lib/resulted-sp/tab-urls";
+import { fetchTabApiJson, fetchTabApiJsonWithMeta } from "@/lib/resulted-sp/fetch-tab-api";
+import {
+  createResultedSpAttemptId,
+  logResultedSpImportAttempt,
+  type ResultedSpImportAttemptLog,
+} from "@/lib/resulted-sp/diagnostics";
+import { buildTabMeetingRef, buildPrimaryTabResultsUrl, buildTabResultsMeetingUrl, type TabMeetingRef } from "@/lib/resulted-sp/tab-urls";
 
 type TabMeetingSummary = {
   meetingName: string;
@@ -91,8 +96,11 @@ export function isTabRaceOfficiallyResulted(race: TabRaceSummary | undefined): b
   if (!race) return false;
   const status = String(race.raceStatus ?? "").trim();
   if (!RESULTED_RACE_STATUSES.has(status)) return false;
-  const finishMap = buildFinishMap(race.results);
-  return finishMap.has(1) && finishMap.has(2) && finishMap.has(3);
+  if (!Array.isArray(race.results) || race.results.length < 3) return false;
+  const topThree = race.results.slice(0, 3).map((selection) =>
+    Array.isArray(selection) ? selection[0] : undefined,
+  );
+  return topThree.every((runnerNo) => typeof runnerNo === "number" && runnerNo > 0);
 }
 
 export function parseTabRaceDetail(
@@ -186,58 +194,135 @@ function tabResultsPageUrl(
   return buildTabResultsMeetingUrl(ref, raceNo);
 }
 
-async function fetchRaceDetail(
-  date: string,
-  jurisdiction: TabJurisdiction,
-  raceType: string,
-  venueMnemonic: string,
-  raceNo: string,
-): Promise<TabRaceDetail> {
-  const path = `racing/dates/${date}/meetings/${raceType}/${venueMnemonic}/races/${raceNo}`;
-  return fetchTabApiJson<TabRaceDetail>(path, jurisdiction);
-}
 
 export type TabRaceImportResult =
-  | { status: "imported"; parsed: ParsedFullFieldRace; meetingName: string; resultsPageUrl: string }
-  | { status: "not_ready"; resultsPageUrl: string }
-  | { status: "meeting_not_found" }
-  | { status: "error"; message: string };
+  | {
+      status: "imported";
+      parsed: ParsedFullFieldRace;
+      meetingName: string;
+      resultsPageUrl: string;
+      diagnostics: ResultedSpImportAttemptLog;
+    }
+  | { status: "not_ready"; resultsPageUrl: string; diagnostics: ResultedSpImportAttemptLog }
+  | { status: "meeting_not_found"; diagnostics: ResultedSpImportAttemptLog }
+  | { status: "error"; message: string; diagnostics: ResultedSpImportAttemptLog };
+
+function baseDiagnostics(options: {
+  meetingId: string;
+  raceNo: string;
+  resolvedUrl: string;
+}): ResultedSpImportAttemptLog {
+  return {
+    attemptId: createResultedSpAttemptId(),
+    timestamp: new Date().toISOString(),
+    meetingId: options.meetingId,
+    raceNo: options.raceNo,
+    source: "tab",
+    resolvedUrl: options.resolvedUrl,
+    outcome: "not_ready",
+  };
+}
+
+function countSpValues(parsed: ParsedFullFieldRace | null | undefined): number {
+  if (!parsed) return 0;
+  return parsed.runners.filter((r) => r.sp > 0).length;
+}
 
 export async function fetchTabRaceResults(options: {
   manifest: MeetingManifest;
   raceNo: string;
+  meetingId?: string;
 }): Promise<TabRaceImportResult> {
   const raceNo = normalizeRaceNo(options.raceNo);
   const jurisdiction = inferTabJurisdiction(options.manifest);
+  const meetingId = options.meetingId?.trim() || options.manifest.meetingId?.trim() || "";
+  const resolvedUrl = buildPrimaryTabResultsUrl(options.manifest, { raceNo });
+
+  let diagnostics = baseDiagnostics({ meetingId, raceNo, resolvedUrl: resolvedUrl || "tab-api" });
 
   try {
-    const meeting = await findThoroughbredMeeting(options.manifest, jurisdiction);
+    const meetingsPath = `racing/dates/${options.manifest.date?.trim() || "today"}/meetings`;
+    const meetingsFetch = await fetchTabApiJsonWithMeta<{ meetings?: TabMeetingSummary[] }>(
+      meetingsPath,
+      jurisdiction,
+    );
+    diagnostics = {
+      ...diagnostics,
+      resolvedUrl: meetingsFetch.meta.resolvedUrl,
+      httpStatus: meetingsFetch.meta.httpStatus,
+      responseLength: meetingsFetch.meta.responseLength,
+    };
+
+    let meeting = meetingsFetch.data.meetings?.find(
+      (m) => m.raceType === "R" && meetingMatchesManifest(m, options.manifest),
+    );
     if (!meeting) {
-      return { status: "meeting_not_found" };
+      const fallbackFetch = await fetchTabApiJsonWithMeta<{ meetings?: TabMeetingSummary[] }>(
+        "racing/dates/today/meetings",
+        jurisdiction,
+      );
+      meeting = fallbackFetch.data.meetings?.find(
+        (m) => m.raceType === "R" && meetingMatchesManifest(m, options.manifest),
+      );
+      diagnostics = {
+        ...diagnostics,
+        resolvedUrl: fallbackFetch.meta.resolvedUrl,
+        httpStatus: fallbackFetch.meta.httpStatus,
+        responseLength: fallbackFetch.meta.responseLength,
+      };
+    }
+
+    diagnostics.meetingMatched = Boolean(meeting);
+    if (!meeting) {
+      diagnostics.outcome = "error";
+      diagnostics.parseFailure = "TAB meeting not matched for track/date";
+      logResultedSpImportAttempt(diagnostics);
+      return { status: "meeting_not_found", diagnostics };
     }
 
     const resultsPageUrl = tabResultsPageUrl(meeting, options.manifest, jurisdiction, raceNo);
+    diagnostics.resolvedUrl = resultsPageUrl;
 
     const raceSummary = meeting.races?.find((r) => String(r.raceNumber) === raceNo);
+    diagnostics.raceMatched = Boolean(raceSummary);
     if (!raceSummary || !isTabRaceOfficiallyResulted(raceSummary)) {
-      return { status: "not_ready", resultsPageUrl };
+      diagnostics.outcome = "not_ready";
+      diagnostics.parseFailure = !raceSummary
+        ? "TAB race summary not found"
+        : `TAB race not officially resulted (status=${raceSummary.raceStatus ?? "unknown"})`;
+      logResultedSpImportAttempt(diagnostics);
+      return { status: "not_ready", resultsPageUrl, diagnostics };
     }
 
     const meetingDate = meeting.meetingDate || options.manifest.date?.trim() || "today";
-    const detail = await fetchRaceDetail(
-      meetingDate,
-      jurisdiction,
-      meeting.raceType || "R",
-      meeting.venueMnemonic,
-      raceNo,
-    );
-    const parsed = parseTabRaceDetail(detail, raceNo);
-    if (!parsed) return { status: "not_ready", resultsPageUrl };
-    return { status: "imported", parsed, meetingName: meeting.meetingName, resultsPageUrl };
-  } catch (error) {
-    return {
-      status: "error",
-      message: error instanceof Error ? error.message : String(error),
+    const detailPath = `racing/dates/${meetingDate}/meetings/${meeting.raceType || "R"}/${meeting.venueMnemonic}/races/${raceNo}`;
+    const detailFetch = await fetchTabApiJsonWithMeta<TabRaceDetail>(detailPath, jurisdiction);
+    diagnostics = {
+      ...diagnostics,
+      resolvedUrl: detailFetch.meta.resolvedUrl,
+      httpStatus: detailFetch.meta.httpStatus,
+      responseLength: detailFetch.meta.responseLength,
     };
+
+    const parsed = parseTabRaceDetail(detailFetch.data, raceNo);
+    diagnostics.runnersParsed = parsed?.runners.length ?? 0;
+    diagnostics.spValuesParsed = countSpValues(parsed);
+    if (!parsed) {
+      diagnostics.outcome = "not_ready";
+      diagnostics.parseFailure = "parseTabRaceDetail: fewer than 3 placed runners with official SP";
+      logResultedSpImportAttempt(diagnostics);
+      return { status: "not_ready", resultsPageUrl, diagnostics };
+    }
+
+    diagnostics.outcome = "imported";
+    diagnostics.detail = `TAB ${meeting.meetingName}`;
+    logResultedSpImportAttempt(diagnostics);
+    return { status: "imported", parsed, meetingName: meeting.meetingName, resultsPageUrl, diagnostics };
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    diagnostics.outcome = "error";
+    diagnostics.parseFailure = message;
+    logResultedSpImportAttempt(diagnostics);
+    return { status: "error", message, diagnostics };
   }
 }

@@ -17,9 +17,11 @@ import {
   isBiasStorageKey,
   loadRaceDayBiasStateForMeeting,
   logBiasStorageDebug,
+  RACE_DAY_BIAS_UPDATED_EVENT,
   removeLegacyBiasStorageKeys,
   saveRaceDayBiasState,
 } from "@/lib/race-day-bias/storage";
+import { RESULTED_SP_UPDATED_EVENT } from "@/lib/resulted-sp/types";
 import {
   loadMeetingManifest,
   MEETING_IMPORTED_EVENT,
@@ -165,6 +167,8 @@ export default function RaceDayBiasApp() {
     }
 
     window.addEventListener(MEETING_IMPORTED_EVENT, refresh);
+    window.addEventListener(RESULTED_SP_UPDATED_EVENT, refresh);
+    window.addEventListener(RACE_DAY_BIAS_UPDATED_EVENT, refresh);
     const onStorage = (event: StorageEvent) => {
       if (isBiasStorageKey(event.key) || event.key === MEETING_MANIFEST_STORAGE_KEY) {
         refresh();
@@ -175,6 +179,8 @@ export default function RaceDayBiasApp() {
       cancelled = true;
       window.clearTimeout(safetyTimer);
       window.removeEventListener(MEETING_IMPORTED_EVENT, refresh);
+      window.removeEventListener(RESULTED_SP_UPDATED_EVENT, refresh);
+      window.removeEventListener(RACE_DAY_BIAS_UPDATED_EVENT, refresh);
       window.removeEventListener("storage", onStorage);
     };
   }, []);

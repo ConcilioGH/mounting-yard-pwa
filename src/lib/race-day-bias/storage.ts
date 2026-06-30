@@ -32,6 +32,8 @@ export type BiasLoadResult = {
   loadedExisting: boolean;
 };
 
+export const RACE_DAY_BIAS_UPDATED_EVENT = "mounting-yard-bias-updated";
+
 export function deriveMeetingId(options: {
   date: string;
   trackSlug: string;
@@ -250,6 +252,13 @@ export function saveRaceDayBiasStateForMeeting(meetingId: string, state: RaceDay
 
   localStorage.setItem(biasKey, JSON.stringify(payload));
   setActiveBiasMeetingId(id);
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(
+      new CustomEvent(RACE_DAY_BIAS_UPDATED_EVENT, {
+        detail: { meetingId: id },
+      }),
+    );
+  }
 }
 
 /** Save to the currently active meeting (from manifest pointer). */
