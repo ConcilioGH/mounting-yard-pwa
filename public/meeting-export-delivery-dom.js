@@ -249,6 +249,9 @@
     options = options || {};
     var track = resolveExportTrack(manifest, options.fallbackTrack);
     var date = resolveExportDate(manifest);
+    if (kind === "resulted-sp") {
+      return track + "_" + date + "_resulted_sp.csv";
+    }
     return track + "_" + date + "_" + kind + ".csv";
   }
 

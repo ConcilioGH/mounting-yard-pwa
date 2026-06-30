@@ -1,0 +1,69 @@
+race_no,runner_no,horse,warning_type,detail
+1,1,Arakoola,missing_trainer,Trainer is empty
+1,1,Arakoola,scratched_runner,Runner marked scratched
+1,6,Star Of Indigo,missing_trainer,Trainer is empty
+1,6,Star Of Indigo,scratched_runner,Runner marked scratched
+2,1,Awarded Glory,missing_trainer,Trainer is empty
+2,1,Awarded Glory,scratched_runner,Runner marked scratched
+2,7,The Cavalier Kid,scratched_runner,Runner marked scratched
+2,8,Antonucci,scratched_runner,Runner marked scratched
+2,9,Cook My Goose,missing_trainer,Trainer is empty
+2,9,Cook My Goose,scratched_runner,Runner marked scratched
+2,11,La Regina,scratched_runner,Runner marked scratched
+3,7,Been There,missing_trainer,Trainer is empty
+3,7,Been There,scratched_runner,Runner marked scratched
+3,8,Dancing Tilda,scratched_runner,Runner marked scratched
+3,9,Kowloon Magnate,scratched_runner,Runner marked scratched
+3,10,Oakfield Mars,missing_trainer,Trainer is empty
+3,10,Oakfield Mars,scratched_runner,Runner marked scratched
+3,12,Miss Bugatti,scratched_runner,Runner marked scratched
+3,15,Cook My Goose,missing_trainer,Trainer is empty
+3,15,Cook My Goose,scratched_runner,Runner marked scratched
+3,16,Nikody's Casper,missing_trainer,Trainer is empty
+3,16,Nikody's Casper,scratched_runner,Runner marked scratched
+3,17,Juviance,scratched_runner,Runner marked scratched
+4,1,Counterpart ho,scratched_runner,Runner marked scratched
+4,2,Jason Darren,scratched_runner,Runner marked scratched
+4,4,The Comanche,scratched_runner,Runner marked scratched
+4,7,Moana Gold,scratched_runner,Runner marked scratched
+4,16,Think I'm In,missing_trainer,Trainer is empty
+4,16,Think I'm In,scratched_runner,Runner marked scratched
+5,13,Hardash,scratched_runner,Runner marked scratched
+5,1,Zou Big Boy,missing_trainer,Trainer is empty
+5,1,Zou Big Boy,scratched_runner,Runner marked scratched
+5,6,Dipierdomenico,scratched_runner,Runner marked scratched
+5,10,Thundering Falcon,scratched_runner,Runner marked scratched
+6,2,Ode So Much,scratched_runner,Runner marked scratched
+6,3,Sound And Vision,scratched_runner,Runner marked scratched
+6,4,The Manager,missing_trainer,Trainer is empty
+6,4,The Manager,scratched_runner,Runner marked scratched
+6,18,I'm Super,missing_trainer,Trainer is empty
+6,18,I'm Super,scratched_runner,Runner marked scratched
+7,1,Zoom Outcome,scratched_runner,Runner marked scratched
+7,6,Wanjina Rose,scratched_runner,Runner marked scratched
+7,7,Flying Shelly,missing_trainer,Trainer is empty
+7,7,Flying Shelly,scratched_runner,Runner marked scratched
+7,8,Aeternum,scratched_runner,Runner marked scratched
+7,11,Difensivo,missing_trainer,Trainer is empty
+7,11,Difensivo,scratched_runner,Runner marked scratched
+7,15,Bethsheba,missing_trainer,Trainer is empty
+7,15,Bethsheba,scratched_runner,Runner marked scratched
+7,16,Sneaky Rich,missing_trainer,Trainer is empty
+7,16,Sneaky Rich,scratched_runner,Runner marked scratched
+8,3,Executive Decision,scratched_runner,Runner marked scratched
+8,4,Golden Copper,scratched_runner,Runner marked scratched
+8,5,Shoutaboutit,scratched_runner,Runner marked scratched
+8,10,Whispering Rupert,missing_trainer,Trainer is empty
+8,10,Whispering Rupert,scratched_runner,Runner marked scratched
+8,11,Salma's Star,scratched_runner,Runner marked scratched
+8,13,Mane Character,scratched_runner,Runner marked scratched
+8,15,Ardonaugh,missing_trainer,Trainer is empty
+8,15,Ardonaugh,scratched_runner,Runner marked scratched
+8,16,Maximum Ride,missing_trainer,Trainer is empty
+8,16,Maximum Ride,scratched_runner,Runner marked scratched
+8,17,Nikody's Diego,missing_trainer,Trainer is empty
+8,17,Nikody's Diego,scratched_runner,Runner marked scratched
+8,18,Pride Of Lanka,missing_trainer,Trainer is empty
+8,18,Pride Of Lanka,scratched_runner,Runner marked scratched
+8,19,Rebel One,missing_trainer,Trainer is empty
+8,19,Rebel One,scratched_runner,Runner marked scratched

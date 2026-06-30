@@ -113,7 +113,8 @@ function resolveExportTrack(manifest: MeetingManifest | null, fallbackTrack?: st
 export type MeetingExportKind =
   | "mounting-yard-assessments"
   | "race-day-bias"
-  | "race-day-bias-summary";
+  | "race-day-bias-summary"
+  | "resulted-sp";
 
 export function buildMeetingExportFilename(
   kind: MeetingExportKind,
@@ -122,5 +123,8 @@ export function buildMeetingExportFilename(
 ): string {
   const track = resolveExportTrack(manifest, options?.fallbackTrack);
   const date = resolveExportDate(manifest);
+  if (kind === "resulted-sp") {
+    return `${track}_${date}_resulted_sp.csv`;
+  }
   return `${track}_${date}_${kind}.csv`;
 }

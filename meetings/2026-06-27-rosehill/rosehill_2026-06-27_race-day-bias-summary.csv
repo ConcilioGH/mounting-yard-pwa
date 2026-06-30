@@ -1,0 +1,27 @@
+meeting,category,group,wins,places,avg_sp,actual_share,expected_share,bias_score,finisher_count,heat_tier,trackside_tag,interpretation
+Rosehill Gardens · 2026-06-27,lane,Rail,8,26,15.76,84.4,77.3,7.1,34,,,
+Rosehill Gardens · 2026-06-27,lane,Running Line,2,3,6.76,14.7,18.3,-3.7,5,,,
+Rosehill Gardens · 2026-06-27,lane,3 Wide,0,1,3.80,0.9,4.4,-3.5,1,,,
+Rosehill Gardens · 2026-06-27,lane,4 Wide+,0,0,,0,0,0,0,,,
+Rosehill Gardens · 2026-06-27,position,Leader / Front Pair,4,4,10.99,26.7,21.3,5.4,8,,,
+Rosehill Gardens · 2026-06-27,position,On Pace,1,10,9.80,23.5,28,-4.5,11,,,
+Rosehill Gardens · 2026-06-27,position,Midfield,5,12,20.83,41.6,36.1,5.6,17,,,
+Rosehill Gardens · 2026-06-27,position,Backmarker,0,3,6.60,7.2,10.3,-3.1,3,,,
+Rosehill Gardens · 2026-06-27,position,Wide Forward,0,1,3.80,0.9,4.4,-3.5,1,,,
+Rosehill Gardens · 2026-06-27,position,Wide Midfield,0,0,,0,0,0,0,,,
+Rosehill Gardens · 2026-06-27,position,Wide Back,0,0,,0,0,0,0,,,
+Rosehill Gardens · 2026-06-27,composite,Rail Front,,,,40.2,39.3,0.9,15,neutral,,
+Rosehill Gardens · 2026-06-27,composite,Rail Midfield,,,,37,27.7,9.3,16,positive,,
+Rosehill Gardens · 2026-06-27,composite,Rail Back,,,,7.2,10.3,-3.1,3,neutral,,
+Rosehill Gardens · 2026-06-27,composite,Running Line Front,,,,10,10,0,4,neutral,,
+Rosehill Gardens · 2026-06-27,composite,Running Line Midfield,,,,4.7,8.3,-3.7,1,insufficient,,
+Rosehill Gardens · 2026-06-27,composite,Running Line Back,,,,0,0,0,0,insufficient,,
+Rosehill Gardens · 2026-06-27,composite,3 Wide Front,,,,0.9,4.4,-3.5,1,insufficient,,
+Rosehill Gardens · 2026-06-27,composite,3 Wide Midfield,,,,0,0,0,0,insufficient,,
+Rosehill Gardens · 2026-06-27,composite,3 Wide Back,,,,0,0,0,0,insufficient,,
+Rosehill Gardens · 2026-06-27,composite,4 Wide+ Front,,,,0,0,0,0,insufficient,,
+Rosehill Gardens · 2026-06-27,composite,4 Wide+ Midfield,,,,0,0,0,0,insufficient,,
+Rosehill Gardens · 2026-06-27,composite,4 Wide+ Back,,,,0,0,0,0,insufficient,,
+Rosehill Gardens · 2026-06-27,conclusion,RAIL MIDFIELD,,,,,,9.3,16,positive,POSITIVE,On the rail in midfield positions are outperforming market expectation.
+Rosehill Gardens · 2026-06-27,conclusion,RAIL FRONT,,,,,,0.9,15,neutral,NEUTRAL,Leaders on the rail are performing slightly above expectation.
+Rosehill Gardens · 2026-06-27,conclusion,RAIL BACK,,,,,,-3.1,3,neutral,NEUTRAL,On the rail from backmarker positions are underperforming market expectation.

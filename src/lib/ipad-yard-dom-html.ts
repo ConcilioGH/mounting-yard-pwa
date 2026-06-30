@@ -172,6 +172,45 @@ export function buildIpadYardDomHtml(): string {
     }
     .iy-countdown-normal { color: #f8fafc; }
     .iy-countdown-amber { color: #fbbf24; }
+    .iy-resulted-sp-panel { margin-top: 8px; }
+    .iy-resulted-sp {
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      background: #fff;
+      padding: 10px 12px;
+      font-size: 13px;
+    }
+    .iy-resulted-sp-head {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .iy-resulted-sp-list { list-style: none; margin: 0; padding: 0; }
+    .iy-resulted-sp-item {
+      display: -webkit-box;
+      display: flex;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 6px 0;
+      border-top: 1px solid #f1f5f9;
+    }
+    .iy-resulted-sp-item:first-child { border-top: 0; }
+    .iy-resulted-sp-label { font-weight: 600; color: #0f172a; }
+    .iy-resulted-sp-actions { display: -webkit-box; display: flex; gap: 4px; flex-wrap: wrap; }
+    .iy-resulted-sp-btn, .iy-resulted-sp-check-all {
+      font-size: 12px;
+      padding: 4px 8px;
+      border-radius: 8px;
+      border: 1px solid #cbd5e1;
+      background: #f8fafc;
+      color: #0f172a;
+    }
     .iy-countdown-red { color: #f87171; }
     .iy-countdown-complete {
       margin: 4px 0 0;
@@ -597,6 +636,7 @@ export function buildIpadYardDomHtml(): string {
         <p id="iy-countdown-time" class="iy-countdown-time iy-countdown-normal"></p>
       </div>
     </div>
+    <div id="iy-resulted-sp-panel" class="iy-resulted-sp-panel" aria-label="Resulted SP import status"></div>
     <div class="iy-toolbar">
       <div class="iy-toolbar-primary">
         <div class="iy-toolbar-slot">
@@ -749,6 +789,7 @@ export function buildIpadYardDomHtml(): string {
   </script>
   <script src="/yard-race-countdown-dom.js?v=${escapeHtml(APP_BUILD_VERSION)}"></script>
   <script src="/meeting-export-delivery-dom.js?v=${escapeHtml(APP_BUILD_VERSION)}"></script>
+  <script src="/resulted-sp-dom.js?v=${escapeHtml(APP_BUILD_VERSION)}"></script>
   <script src="/ipad-yard-dom.js?v=${escapeHtml(APP_BUILD_VERSION)}"></script>
 </body>
 </html>`;

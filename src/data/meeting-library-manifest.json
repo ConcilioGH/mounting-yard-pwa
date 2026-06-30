@@ -1,6 +1,16 @@
 {
-  "generatedAt": "2026-06-29T22:19:21.325Z",
+  "generatedAt": "2026-06-30T02:46:12.708Z",
   "meetings": [
+    {
+      "id": "meetings/2026-06-30-taree/taree_2026-06-30_master.csv",
+      "label": "2026-06-30 · Taree",
+      "date": "2026-06-30",
+      "track": "taree",
+      "trackLabel": "Taree",
+      "relativePath": "meetings/2026-06-30-taree/taree_2026-06-30_master.csv",
+      "fileName": "taree_2026-06-30_master.csv",
+      "modifiedAt": "2026-06-30T02:45:23.106Z"
+    },
     {
       "id": "meetings/2026-06-27-rosehill/rosehill_2026-06-27_master.csv",
       "label": "2026-06-27 · Rosehill",
@@ -9,7 +19,7 @@
       "trackLabel": "Rosehill",
       "relativePath": "meetings/2026-06-27-rosehill/rosehill_2026-06-27_master.csv",
       "fileName": "rosehill_2026-06-27_master.csv",
-      "modifiedAt": "2026-06-29T22:18:04.793Z"
+      "modifiedAt": "2026-06-29T22:20:47.136Z"
     },
     {
       "id": "meetings/2026-06-24-warwick-farm/warwick_farm_2026-06-24_master.csv",
@@ -324,7 +334,8 @@
       "meetings/2026-06-23-hawkesbury",
       "meetings/2026-06-24-warwick-farm",
       "meetings/2026-06-25-wyong",
-      "meetings/2026-06-27-rosehill"
+      "meetings/2026-06-27-rosehill",
+      "meetings/2026-06-30-taree"
     ],
     "masterCsvFiles": [
       "meetings/2026-05-13-kensington/kensington_2026-05-13_master.csv",
@@ -355,9 +366,10 @@
       "meetings/2026-06-20-randwick/randwick_2026-06-20_master.csv",
       "meetings/2026-06-23-hawkesbury/hawkesbury_2026-06-23_master.csv",
       "meetings/2026-06-24-warwick-farm/warwick_farm_2026-06-24_master.csv",
-      "meetings/2026-06-27-rosehill/rosehill_2026-06-27_master.csv"
+      "meetings/2026-06-27-rosehill/rosehill_2026-06-27_master.csv",
+      "meetings/2026-06-30-taree/taree_2026-06-30_master.csv"
     ],
-    "meetingsReturned": 29,
+    "meetingsReturned": 30,
     "foldersExcluded": [
       {
         "folder": "meetings/2026-05-20-warwick",

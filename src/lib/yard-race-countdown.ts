@@ -55,7 +55,7 @@ function parseClockTo24Hour(hours: number, minutes: number, meridiem?: string): 
   return hours;
 }
 
-function parseStartTimeToDate(title: string, meetingDate: string | undefined, now: Date): Date | null {
+export function parseStartTimeToDate(title: string, meetingDate: string | undefined, now: Date): Date | null {
   const token = parseStartTimeFromRaceTitle(title);
   if (!token) return null;
 

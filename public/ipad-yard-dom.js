@@ -44,6 +44,7 @@
     meetingLoadingPath: null,
     downloadedMeetingActive: false,
     countdownTimerId: null,
+    resultedSpPoller: null,
     activeMeetingId: "",
     activeMeetingKey: "",
     state: {
@@ -431,6 +432,42 @@
       this.normalizeSelection();
       this.saveActiveMeetingToStore();
       this.updateCountdownDisplay();
+      this.refreshResultedSpPoller(manifest);
+    },
+
+    refreshResultedSpPoller: function (manifest) {
+      var rsp = window.ResultedSpDom;
+      if (!rsp || !this.activeMeetingId || !this.races || !this.races.length) {
+        return;
+      }
+      var self = this;
+      if (this.resultedSpPoller && this.resultedSpPoller.stop) {
+        this.resultedSpPoller.stop();
+      }
+      var activeManifest = manifest || this.syncMeetingManifest() || {};
+      this.resultedSpPoller = rsp.startPoller({
+        meetingId: this.activeMeetingId,
+        manifest: activeManifest,
+        races: this.races,
+        onChange: function () {
+          self.renderResultedSpPanel();
+        },
+      });
+      this.renderResultedSpPanel();
+    },
+
+    renderResultedSpPanel: function () {
+      var rsp = window.ResultedSpDom;
+      var el = document.getElementById("iy-resulted-sp-panel");
+      if (!rsp || !el || !this.activeMeetingId || !this.races || !this.races.length) {
+        if (el) el.innerHTML = "";
+        return;
+      }
+      rsp.renderPanel(el, {
+        meetingId: this.activeMeetingId,
+        manifest: this.syncMeetingManifest() || {},
+        races: this.races,
+      });
     },
 
     migrateLegacyStorage: function () {
@@ -1926,6 +1963,7 @@
         "trainer",
         "jockey",
         "odds",
+        "official_sp",
         "positive_json",
         "negative_json",
         "gear_json",
@@ -1947,6 +1985,14 @@
           var key = this.makeKey(race.id, runner.no);
           var a = this.state.assessments[key];
           var totals = this.totals(a);
+          var officialSp = "";
+          if (window.ResultedSpDom && this.activeMeetingId) {
+            officialSp = window.ResultedSpDom.getOfficialSp(
+              this.activeMeetingId,
+              race.id.replace(/^R/i, ""),
+              runner.no,
+            );
+          }
           lines.push(
             [
               key,
@@ -1958,6 +2004,7 @@
               runner.trainer,
               runner.jockey,
               runner.odds,
+              officialSp,
               a ? JSON.stringify(a.positive || {}) : "",
               a ? JSON.stringify(a.negative || {}) : "",
               a ? JSON.stringify(a.gear || {}) : "",

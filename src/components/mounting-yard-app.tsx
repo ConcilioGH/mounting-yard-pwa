@@ -37,12 +37,15 @@ import {
   loadMeetingManifest,
   MEETING_IMPORTED_EVENT,
   MEETING_MANIFEST_STORAGE_KEY,
+  type MeetingManifest,
 } from "@/lib/meeting-coordination";
 import {
   ensureActiveMeetingSynced,
   racesMatchManifest,
 } from "@/lib/active-meeting-session";
 import { YardNextRaceCountdown } from "@/components/yard-next-race-countdown";
+import { ResultedSpStatusPanel } from "@/components/resulted-sp-status-panel";
+import { getOfficialSpForRunner, loadResultedSpStateForMeeting } from "@/lib/resulted-sp/storage";
 import { applyGearTileSelection, type GearTileCode } from "@/lib/gear";
 import type { Assessment, Race, Runner, WetBodyType, WetFeet } from "@/lib/types";
 import { wetIsSet, wetShorthand } from "@/lib/wet";
@@ -283,6 +286,7 @@ function MountingYardModernApp() {
   const [importError, setImportError] = useState<string | null>(null);
   const [meetingLabel, setMeetingLabel] = useState("");
   const [meetingDate, setMeetingDate] = useState("");
+  const [meetingManifest, setMeetingManifest] = useState<MeetingManifest | null>(null);
   const importRef = useRef<HTMLInputElement>(null);
   const dataRef = useRef<Record<string, Assessment>>({});
   const keyRef = useRef<string>("");
@@ -370,6 +374,7 @@ function MountingYardModernApp() {
       });
       setMeetingLabel(formatMeetingDisplayLabel(manifest));
       setMeetingDate(manifest?.date ?? "");
+      setMeetingManifest(manifest);
     };
 
     const loadPersistedData = async () => {
@@ -443,6 +448,7 @@ function MountingYardModernApp() {
         const manifest = loadMeetingManifest();
         setMeetingLabel(formatMeetingDisplayLabel(manifest));
         setMeetingDate(manifest?.date ?? "");
+        setMeetingManifest(manifest);
         if (shouldSkipIndexedDB()) return;
         const loadedRaces = await loadAllRaces();
         if (manifest && racesMatchManifest(loadedRaces, manifest)) {
@@ -636,7 +642,13 @@ function MountingYardModernApp() {
   const handleExport = () => {
     void (async () => {
       try {
-        const csv = buildAssessmentsExportCsv(races, data);
+        const spState = meetingManifest
+          ? loadResultedSpStateForMeeting(meetingManifest.meetingId)
+          : null;
+        const csv = buildAssessmentsExportCsv(races, data, (raceId, runnerNo) => {
+          const raceNo = raceId.replace(/^R/i, "");
+          return getOfficialSpForRunner(spState, raceNo, runnerNo);
+        });
         await deliverMeetingExport("mounting-yard-assessments", csv);
       } catch (e) {
         console.error(e);
@@ -665,6 +677,7 @@ function MountingYardModernApp() {
     const manifest = loadMeetingManifest();
     setMeetingLabel(formatMeetingDisplayLabel(manifest));
     setMeetingDate(manifest?.date ?? "");
+    setMeetingManifest(manifest);
   };
 
   const handleImportMeetingFolder = async () => {
@@ -752,6 +765,14 @@ function MountingYardModernApp() {
 
         {importError && (
           <div className="rounded-3xl border border-red-200 bg-red-50 px-4 py-3 text-base text-red-900">{importError}</div>
+        )}
+
+        {meetingManifest && races.length > 0 && (
+          <ResultedSpStatusPanel
+            meetingId={meetingManifest.meetingId}
+            manifest={meetingManifest}
+            races={races}
+          />
         )}
 
         {races.length > 1 &&

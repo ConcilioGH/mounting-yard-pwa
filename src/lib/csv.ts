@@ -317,6 +317,7 @@ function rowForAssessment(
   raceTitle: string,
   r: Runner | null,
   a: Assessment | undefined,
+  officialSp = "",
 ): string[] {
   const pos = a
     ? Object.values(a.positive).reduce((sum, v) => sum + Math.max(0, v ?? 0), 0)
@@ -334,6 +335,7 @@ function rowForAssessment(
     r?.trainer ?? "",
     r?.jockey ?? "",
     r?.odds ?? "",
+    officialSp,
     a ? JSON.stringify(a.positive) : "",
     a ? JSON.stringify(a.negative) : "",
     a ? JSON.stringify(a.gear) : "",
@@ -347,10 +349,13 @@ function rowForAssessment(
   ];
 }
 
+export type OfficialSpLookup = (raceId: string, runnerNo: number | string) => string;
+
 /** One row per runner in `races`, plus any orphan assessment keys not in that set. */
 export function buildAssessmentsExportCsv(
   races: Race[],
   assessments: Record<string, Assessment>,
+  officialSpLookup?: OfficialSpLookup,
 ): string {
   const headers = [
     "assessment_key",
@@ -362,6 +367,7 @@ export function buildAssessmentsExportCsv(
     "trainer",
     "jockey",
     "odds",
+    "official_sp",
     "positive_json",
     "negative_json",
     "gear_json",
@@ -382,14 +388,15 @@ export function buildAssessmentsExportCsv(
       const assessmentKey = makeKey(race.id, r.no);
       emitted.add(assessmentKey);
       const a = assessments[assessmentKey];
-      lines.push(rowForAssessment(assessmentKey, race.id, race.title, r, a));
+      const officialSp = officialSpLookup ? officialSpLookup(race.id, r.no) : "";
+      lines.push(rowForAssessment(assessmentKey, race.id, race.title, r, a, officialSp));
     }
   }
 
   for (const k of Object.keys(assessments).sort()) {
     if (emitted.has(k)) continue;
     const a = assessments[k];
-    lines.push(rowForAssessment(k, "", "", null, a));
+    lines.push(rowForAssessment(k, "", "", null, a, ""));
   }
 
   return Papa.unparse(lines);

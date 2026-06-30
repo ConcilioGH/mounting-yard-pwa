@@ -1,0 +1,80 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
+R1,Taree,1,12:10 pm Cafe Nosh Maiden Handicap,1000m,Maiden,Heavy 10,True,2,2,Bring It On Sal,Bring It On Sal,Bring It On Sal,4,Allan Kehoe,Jeff Kehoe,$31,NA,racenet
+R1,Taree,1,12:10 pm Cafe Nosh Maiden Handicap,1000m,Maiden,Heavy 10,True,3,3,Royal Ribbons,Royal Ribbons,Royal Ribbons,2,Paul Kelly,Kacie Adams,$5.5,NA,racenet
+R1,Taree,1,12:10 pm Cafe Nosh Maiden Handicap,1000m,Maiden,Heavy 10,True,4,4,That Piece,That Piece,That Piece,3,Rodney Bailey,Jessica Taylor,$4.6,NA,racenet
+R1,Taree,1,12:10 pm Cafe Nosh Maiden Handicap,1000m,Maiden,Heavy 10,True,5,5,Sideact,Sideact,Sideact,5,Robert Agnew,Olivia Dalton (a-2),$9.5,NA,racenet
+R1,Taree,1,12:10 pm Cafe Nosh Maiden Handicap,1000m,Maiden,Heavy 10,True,7,7,Gunna Reign,Gunna Reign,Gunna Reign,6,Dale Wagstaff,Liberty Smyth (a-2),$11,3.8,racenet
+R1,Taree,1,12:10 pm Cafe Nosh Maiden Handicap,1000m,Maiden,Heavy 10,True,8,8,Kasumi,Kasumi,Kasumi,1,Dale Wagstaff,Peter Graham (a0.5),$9.5,4.4,racenet
+R1,Taree,1,12:10 pm Cafe Nosh Maiden Handicap,1000m,Maiden,Heavy 10,True,9,9,Leuca,Leuca,Leuca,7,Allan Kehoe,Grant Buckley,$2.5,4.5,racenet
+R2,Taree,2,12:45 pm De Bortoli Country Boosted Maiden Plate,1250m,Maiden,Heavy 10,True,2,2,Expensive Icon,Expensive Icon,Expensive Icon,8,Paul Kelly,Kacie Adams,$3.1,5,racenet
+R2,Taree,2,12:45 pm De Bortoli Country Boosted Maiden Plate,1250m,Maiden,Heavy 10,True,3,3,Gallant Rush,Gallant Rush,Gallant Rush,7,Peter Cheers,Raymond Spokes,$41,6.6,racenet
+R2,Taree,2,12:45 pm De Bortoli Country Boosted Maiden Plate,1250m,Maiden,Heavy 10,True,4,4,Mortarman,Mortarman,Mortarman,10,Alicia Willick-mc Donald,Liberty Smyth (a-2),$67,6.3,racenet
+R2,Taree,2,12:45 pm De Bortoli Country Boosted Maiden Plate,1250m,Maiden,Heavy 10,True,5,5,My Nicconi Boy,My Nicconi Boy,My Nicconi Boy,5,Cecilia Reid,Mikayla Weir,$41,5.8,racenet
+R2,Taree,2,12:45 pm De Bortoli Country Boosted Maiden Plate,1250m,Maiden,Heavy 10,True,6,6,Nulkaba Star,Nulkaba Star,Nulkaba Star,11,Jeremy Sylvester,Shannen Llewellyn,$2.5,4.3,racenet
+R2,Taree,2,12:45 pm De Bortoli Country Boosted Maiden Plate,1250m,Maiden,Heavy 10,True,10,10,Fashion Spree,Fashion Spree,Fashion Spree,1,Terry Evans,Grant Buckley,$4,5.8,racenet
+R2,Taree,2,12:45 pm De Bortoli Country Boosted Maiden Plate,1250m,Maiden,Heavy 10,True,12,12,Sparkle Socks,Sparkle Socks,Sparkle Socks,4,Carlos Antonio,Jeff Kehoe,$51,1.7,racenet
+R2,Taree,2,12:45 pm De Bortoli Country Boosted Maiden Plate,1250m,Maiden,Heavy 10,True,13,13,Sunny Quarters,Sunny Quarters,Sunny Quarters,2,Matthew Robinson,Teighan Worsnop,$8.5,4,racenet
+R3,Taree,3,1:20 pm Tradies Day August 14 Maiden Handicap,1400m,Maiden,Heavy 10,True,1,1,Hold My Drink,Hold My Drink,Hold My Drink,5,Paul Snowden,Ben Looker,$2.9,2.4,racenet
+R3,Taree,3,1:20 pm Tradies Day August 14 Maiden Handicap,1400m,Maiden,Heavy 10,True,2,2,Montana Dream,Montana Dream,Montana Dream,4,Allan Kehoe,Jessica Taylor,$126,NA,racenet
+R3,Taree,3,1:20 pm Tradies Day August 14 Maiden Handicap,1400m,Maiden,Heavy 10,True,3,3,Firey Truth,Firey Truth,Firey Truth,3,Kris Lees,Aaron Bullock,$5.5,5.9,racenet
+R3,Taree,3,1:20 pm Tradies Day August 14 Maiden Handicap,1400m,Maiden,Heavy 10,True,4,4,Battle Scars,Battle Scars,Battle Scars,6,Alicia Willick-mc Donald,Kacie Adams,$81,8,racenet
+R3,Taree,3,1:20 pm Tradies Day August 14 Maiden Handicap,1400m,Maiden,Heavy 10,True,5,5,Oh My Oh My,Oh My Oh My,Oh My Oh My,15,Kris Lees,William Stanley,$8,8,racenet
+R3,Taree,3,1:20 pm Tradies Day August 14 Maiden Handicap,1400m,Maiden,Heavy 10,True,6,6,Zavino,Zavino,Zavino,10,Peter Cheers,Grady Spokes (a-2),$201,4.7,racenet
+R3,Taree,3,1:20 pm Tradies Day August 14 Maiden Handicap,1400m,Maiden,Heavy 10,True,11,11,Czech Her Out,Czech Her Out,Czech Her Out,8,Tracey Bartley,Shannen Llewellyn,$7,5.6,racenet
+R3,Taree,3,1:20 pm Tradies Day August 14 Maiden Handicap,1400m,Maiden,Heavy 10,True,13,13,Bollente Bella,Bollente Bella,Bollente Bella,11,Kris Lees,Andrew Gibbons,$3.25,3.3,racenet
+R3,Taree,3,1:20 pm Tradies Day August 14 Maiden Handicap,1400m,Maiden,Heavy 10,True,14,14,The Big Ticket,The Big Ticket,The Big Ticket,2,Tom Higgins,Leanne Boyd (a-2),$12,3.5,racenet
+R4,Taree,4,1:55 pm Functions @ Mvrc Class 1 & Maiden Plate,1600m,Maiden,Heavy 10,True,3,3,Send A Telegram,Send A Telegram,Send A Telegram,18,John Sprague,Aaron Bullock,$8.5,5.8,racenet
+R4,Taree,4,1:55 pm Functions @ Mvrc Class 1 & Maiden Plate,1600m,Maiden,Heavy 10,True,5,5,Walk Like A Man,Walk Like A Man,Walk Like A Man,13,Rebecca Dunn,Matthew Bennett,$19,3,racenet
+R4,Taree,4,1:55 pm Functions @ Mvrc Class 1 & Maiden Plate,1600m,Maiden,Heavy 10,True,6,6,Microgravity,Microgravity,Microgravity,14,Jason Deamer,Ben Looker,$2.45,5.9,racenet
+R4,Taree,4,1:55 pm Functions @ Mvrc Class 1 & Maiden Plate,1600m,Maiden,Heavy 10,True,8,8,Classic Two,Classic Two,Classic Two,6,Rodney Bailey,Jessica Taylor,$5.25,5.3,racenet
+R4,Taree,4,1:55 pm Functions @ Mvrc Class 1 & Maiden Plate,1600m,Maiden,Heavy 10,True,9,9,Clever Illusion,Clever Illusion,Clever Illusion,9,Peter Cheers,Raymond Spokes,$201,7.1,racenet
+R4,Taree,4,1:55 pm Functions @ Mvrc Class 1 & Maiden Plate,1600m,Maiden,Heavy 10,True,10,10,Titan Of Fury,Titan Of Fury,Titan Of Fury,12,Paul Perry,Donovan Dillon,$5,7.6,racenet
+R4,Taree,4,1:55 pm Functions @ Mvrc Class 1 & Maiden Plate,1600m,Maiden,Heavy 10,True,11,11,Bridego,Bridego,Bridego,3,Joel Wilkes,Shannen Llewellyn,$6.5,4,racenet
+R4,Taree,4,1:55 pm Functions @ Mvrc Class 1 & Maiden Plate,1600m,Maiden,Heavy 10,True,12,12,Juviance,Juviance,Juviance,15,Alicia Willick-mc Donald,Stephen Cummins,$201,8.2,racenet
+R4,Taree,4,1:55 pm Functions @ Mvrc Class 1 & Maiden Plate,1600m,Maiden,Heavy 10,True,13,13,Nikody's Casper,Nikody's Casper,Nikody's Casper,1,Peter Cheers,Liberty Smyth (a-2),$51,5.6,racenet
+R4,Taree,4,1:55 pm Functions @ Mvrc Class 1 & Maiden Plate,1600m,Maiden,Heavy 10,True,14,14,Rock'n On Uptown,Rock'n On Uptown,Rock'n On Uptown,4,Carlos Antonio,Jeff Kehoe,$126,9.2,racenet
+R4,Taree,4,1:55 pm Functions @ Mvrc Class 1 & Maiden Plate,1600m,Maiden,Heavy 10,True,15,15,Ultimate Reign,Ultimate Reign,Ultimate Reign,16,Annette Lee,Kacie Adams,$126,7.7,racenet
+R4,Taree,4,1:55 pm Functions @ Mvrc Class 1 & Maiden Plate,1600m,Maiden,Heavy 10,True,17,17,Autafinna,Autafinna,Autafinna,2,Patrick Cleave,Mikayla Weir,$16,NA,racenet
+R4,Taree,4,1:55 pm Functions @ Mvrc Class 1 & Maiden Plate,1600m,Maiden,Heavy 10,True,18,18,Hardash,Hardash,Hardash,11,Peter Cheers,Peter Graham,$201,7.7,racenet
+R5,Taree,5,2:35 pm Gloucester Cup July 9 Benchmark 58 Handicap,2000m,BM58,Heavy 10,True,2,2,Strobing,Strobing,Strobing,11,Tony Ball,Shannen Llewellyn,$8,3.8,racenet
+R5,Taree,5,2:35 pm Gloucester Cup July 9 Benchmark 58 Handicap,2000m,BM58,Heavy 10,True,3,3,Final Chapter,Final Chapter,Final Chapter,6,Cassandra Schmidt,Leanne Boyd (a-2),$23,7.2,racenet
+R5,Taree,5,2:35 pm Gloucester Cup July 9 Benchmark 58 Handicap,2000m,BM58,Heavy 10,True,4,4,Yorikiri,Yorikiri,Yorikiri,7,Paul Perry,Mikayla Weir,$4.4,6.8,racenet
+R5,Taree,5,2:35 pm Gloucester Cup July 9 Benchmark 58 Handicap,2000m,BM58,Heavy 10,True,5,5,Quick Buck,Quick Buck,Quick Buck,9,Grant Jobson,Matthew Bennett,$10,5.6,racenet
+R5,Taree,5,2:35 pm Gloucester Cup July 9 Benchmark 58 Handicap,2000m,BM58,Heavy 10,True,7,7,Nature Boy,Nature Boy,Nature Boy,3,Lea Selby,Izzy Neale (a-1.5),$7,2.1,racenet
+R5,Taree,5,2:35 pm Gloucester Cup July 9 Benchmark 58 Handicap,2000m,BM58,Heavy 10,True,8,8,Prince Is Game,Prince Is Game,Prince Is Game,2,Matthew Robinson,Anna Roper,$4,7.8,racenet
+R5,Taree,5,2:35 pm Gloucester Cup July 9 Benchmark 58 Handicap,2000m,BM58,Heavy 10,True,9,9,Maggie Sparkles,Maggie Sparkles,Maggie Sparkles,8,Paul Kelly,Liberty Smyth (a-2),$9,9.4,racenet
+R5,Taree,5,2:35 pm Gloucester Cup July 9 Benchmark 58 Handicap,2000m,BM58,Heavy 10,True,11,11,Argerich ho,Argerich ho,Argerich ho,4,Peter Cheers,Olivia Dalton (a-2),$17,5.1,racenet
+R5,Taree,5,2:35 pm Gloucester Cup July 9 Benchmark 58 Handicap,2000m,BM58,Heavy 10,True,12,12,Farraige,Farraige,Farraige,12,Dale Wagstaff,Peter Graham (a0.5),$6,7.7,racenet
+R6,Taree,6,3:10 pm Xxxx Gold Country Boosted Benchmark 58 Handicap,1400m,BM58,Heavy 10,True,1,1,Scotland,Scotland,Scotland,5,Karen Owen,Poppie Gorton (a-3),$19,6.7,racenet
+R6,Taree,6,3:10 pm Xxxx Gold Country Boosted Benchmark 58 Handicap,1400m,BM58,Heavy 10,True,5,5,Barcelona Express,Barcelona Express,Barcelona Express,9,David Matts,Aaron Bullock,$3.4,4.6,racenet
+R6,Taree,6,3:10 pm Xxxx Gold Country Boosted Benchmark 58 Handicap,1400m,BM58,Heavy 10,True,6,6,Mosgiel Daisy,Mosgiel Daisy,Mosgiel Daisy,15,Matthew Robinson,Ben Looker,$5,9,racenet
+R6,Taree,6,3:10 pm Xxxx Gold Country Boosted Benchmark 58 Handicap,1400m,BM58,Heavy 10,True,7,7,Spartan Steel,Spartan Steel,Spartan Steel,18,Jim Louizos,Matthew Bennett,$9.5,3.2,racenet
+R6,Taree,6,3:10 pm Xxxx Gold Country Boosted Benchmark 58 Handicap,1400m,BM58,Heavy 10,True,8,8,Faiza Star,Faiza Star,Faiza Star,17,Darren Treacy,Kacie Adams,$16,9.1,racenet
+R6,Taree,6,3:10 pm Xxxx Gold Country Boosted Benchmark 58 Handicap,1400m,BM58,Heavy 10,True,9,9,Miss Dee Reign,Miss Dee Reign,Miss Dee Reign,3,Jeremy Sylvester,Shannen Llewellyn,$4,3.1,racenet
+R6,Taree,6,3:10 pm Xxxx Gold Country Boosted Benchmark 58 Handicap,1400m,BM58,Heavy 10,True,10,10,Dam Impact,Dam Impact,Dam Impact,4,Grant Jobson,Grant Buckley,$18,7.4,racenet
+R6,Taree,6,3:10 pm Xxxx Gold Country Boosted Benchmark 58 Handicap,1400m,BM58,Heavy 10,True,11,11,Whatsthetimemrwolf,Whatsthetimemrwolf,Whatsthetimemrwolf,14,David Matts,Anna Roper,$18,5.5,racenet
+R6,Taree,6,3:10 pm Xxxx Gold Country Boosted Benchmark 58 Handicap,1400m,BM58,Heavy 10,True,12,12,Nikody's Binks,Nikody's Binks,Nikody's Binks,8,Peter Cheers,Raymond Spokes,$26,2.8,racenet
+R6,Taree,6,3:10 pm Xxxx Gold Country Boosted Benchmark 58 Handicap,1400m,BM58,Heavy 10,True,13,13,Discreet Lady,Discreet Lady,Discreet Lady,13,Tom Higgins,Grace Palmer (a-3),$41,8.9,racenet
+R6,Taree,6,3:10 pm Xxxx Gold Country Boosted Benchmark 58 Handicap,1400m,BM58,Heavy 10,True,14,14,Rivoli Star,Rivoli Star,Rivoli Star,7,Peter Graham,Peter Graham (a0.5),$14,8.3,racenet
+R6,Taree,6,3:10 pm Xxxx Gold Country Boosted Benchmark 58 Handicap,1400m,BM58,Heavy 10,True,15,15,Nikody's Diego,Nikody's Diego,Nikody's Diego,11,Peter Cheers,Stephen Cummins,$91,4.9,racenet
+R6,Taree,6,3:10 pm Xxxx Gold Country Boosted Benchmark 58 Handicap,1400m,BM58,Heavy 10,True,16,16,Rebel One,Rebel One,Rebel One,16,Matthew Robinson,Teighan Worsnop,$101,8.2,racenet
+R6,Taree,6,3:10 pm Xxxx Gold Country Boosted Benchmark 58 Handicap,1400m,BM58,Heavy 10,True,17,17,Golden Breeze,Golden Breeze,Golden Breeze,10,Margaret De Gonneville,Jeff Kehoe,$151,9,racenet
+R7,Taree,7,3:45 pm Sky International Benchmark 66 Handicap,1000m,BM66,Heavy 10,True,2,2,Debussy,Debussy,Debussy,7,Tony Ball,Aaron Bullock,$5,6.9,racenet
+R7,Taree,7,3:45 pm Sky International Benchmark 66 Handicap,1000m,BM66,Heavy 10,True,3,3,Telegraph,Telegraph,Telegraph,17,Tony Ball,Madeline Owen,$18,6.3,racenet
+R7,Taree,7,3:45 pm Sky International Benchmark 66 Handicap,1000m,BM66,Heavy 10,True,4,4,Cool Fizz,Cool Fizz,Cool Fizz,5,Brett Dodson,Grady Spokes (a-2),$6,2.2,racenet
+R7,Taree,7,3:45 pm Sky International Benchmark 66 Handicap,1000m,BM66,Heavy 10,True,5,5,Love Rat,Love Rat,Love Rat,1,Cathleen Rode,Olivia Dalton (a-2),$9.5,8,racenet
+R7,Taree,7,3:45 pm Sky International Benchmark 66 Handicap,1000m,BM66,Heavy 10,True,9,9,Altercation,Altercation,Altercation,8,Jason Deamer,Ben Looker,$3.9,6,racenet
+R7,Taree,7,3:45 pm Sky International Benchmark 66 Handicap,1000m,BM66,Heavy 10,True,10,10,The Piccolino,The Piccolino,The Piccolino,15,Paul Perry,Shannen Llewellyn,$4.8,2.9,racenet
+R7,Taree,7,3:45 pm Sky International Benchmark 66 Handicap,1000m,BM66,Heavy 10,True,12,12,Catchy Tunes,Catchy Tunes,Catchy Tunes,2,Gregory McFarlane,Jessica Taylor,$10,3.7,racenet
+R7,Taree,7,3:45 pm Sky International Benchmark 66 Handicap,1000m,BM66,Heavy 10,True,13,13,Cupid's Kiss,Cupid's Kiss,Cupid's Kiss,13,Jeremy Sylvester,Anna Weatherlake (a-3),$19,7.1,racenet
+R7,Taree,7,3:45 pm Sky International Benchmark 66 Handicap,1000m,BM66,Heavy 10,True,14,14,Magnolia Jewel,Magnolia Jewel,Magnolia Jewel,9,Tracey Bartley,Mikayla Weir,$13,2.1,racenet
+R7,Taree,7,3:45 pm Sky International Benchmark 66 Handicap,1000m,BM66,Heavy 10,True,17,17,Wine Time,Wine Time,Wine Time,4,Nicole Hudson,Jeff Kehoe,$81,3.2,racenet
+R8,Taree,8,4:20 pm Tab Venue Mode Benchmark 58 Handicap,1250m,BM58,Heavy 10,True,1,1,Highly Tempted,Highly Tempted,Highly Tempted,10,Tony Ball,Aaron Bullock,$4.4,6.4,racenet
+R8,Taree,8,4:20 pm Tab Venue Mode Benchmark 58 Handicap,1250m,BM58,Heavy 10,True,2,2,Manwe,Manwe,Manwe,9,Rebecca Dunn,Matthew Bennett,$26,4.1,racenet
+R8,Taree,8,4:20 pm Tab Venue Mode Benchmark 58 Handicap,1250m,BM58,Heavy 10,True,6,6,Smart Jazz,Smart Jazz,Smart Jazz,5,Jeremy Sylvester,Anna Weatherlake (a-3),$23,7.7,racenet
+R8,Taree,8,4:20 pm Tab Venue Mode Benchmark 58 Handicap,1250m,BM58,Heavy 10,True,7,7,Take The Jackpot,Take The Jackpot,Take The Jackpot,13,Barry Lawrence,Ben Looker,$10,3.1,racenet
+R8,Taree,8,4:20 pm Tab Venue Mode Benchmark 58 Handicap,1250m,BM58,Heavy 10,True,8,8,I'm Super,I'm Super,I'm Super,16,Paul Kelly,Liberty Smyth (a-2),$3.9,3,racenet
+R8,Taree,8,4:20 pm Tab Venue Mode Benchmark 58 Handicap,1250m,BM58,Heavy 10,True,9,9,Smashing Nova,Smashing Nova,Smashing Nova,3,Kris Lees,William Stanley,$4.8,3.5,racenet
+R8,Taree,8,4:20 pm Tab Venue Mode Benchmark 58 Handicap,1250m,BM58,Heavy 10,True,12,12,Too Darn Finesse,Too Darn Finesse,Too Darn Finesse,14,Kris Lees,Andrew Gibbons,$3.6,5,racenet
+R8,Taree,8,4:20 pm Tab Venue Mode Benchmark 58 Handicap,1250m,BM58,Heavy 10,True,14,14,Incantress,Incantress,Incantress,7,Steve Hodge,Mikayla Weir,$13,6.4,racenet
+R8,Taree,8,4:20 pm Tab Venue Mode Benchmark 58 Handicap,1250m,BM58,Heavy 10,True,20,20,Golden Galaxy,Golden Galaxy,Golden Galaxy,15,Margaret De Gonneville,Jeff Kehoe,$101,3.9,racenet
