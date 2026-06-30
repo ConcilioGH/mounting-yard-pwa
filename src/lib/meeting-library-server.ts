@@ -3,6 +3,7 @@ import { safeMeetingCsvRelativePath } from "@/lib/meeting-library-paths";
 
 export type {
   MeetingLibraryEntry,
+  MeetingLibraryFolderReport,
   MeetingLibraryManifestFile,
   MeetingLibraryResult,
   MeetingLibraryScan,

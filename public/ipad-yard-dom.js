@@ -9,7 +9,7 @@
   var MEETING_STORE_KEY = cfg.meetingStoreKey || "ipad-yard-meeting-store-v2";
   var RACES_KEY = cfg.racesKey || "ipad-yard-races-v1";
   var DOWNLOADED_MEETING_KEY = cfg.downloadedMeetingKey || "ipad-yard-downloaded-meeting-v1";
-  var LIBRARY_CACHE_KEY = "ipad-yard-library-cache-v2";
+  var LIBRARY_CACHE_KEY = "ipad-yard-library-cache-v3";
   var MANIFEST_KEY = cfg.manifestKey || "mounting-yard-meeting-manifest-v1";
   var LAST_MEETING_CSV_KEY = "mounting-yard-last-meeting-csv-v1";
   var LAST_MEETING_CSV_META_KEY = "mounting-yard-last-meeting-csv-meta-v1";
@@ -1295,10 +1295,27 @@
             throw new Error(data.error || "Invalid library response");
           }
           if (data.scan) {
+            console.log("[meeting-library] source:", data.scan.source || "unknown");
+            if (data.scan.generatedAt) {
+              console.log("[meeting-library] manifest generatedAt:", data.scan.generatedAt);
+            }
             console.log("[meeting-library] folders scanned:", data.scan.foldersScanned);
             console.log("[meeting-library] master CSV files found:", data.scan.masterCsvFiles);
             console.log("[meeting-library] folders excluded:", data.scan.foldersExcluded);
             console.log("[meeting-library] meetings returned:", data.scan.meetingsReturned);
+            if (data.scan.folderReports) {
+              console.log("[meeting-library] folder reports:", data.scan.folderReports);
+              var tareeReport = null;
+              for (var fr = 0; fr < data.scan.folderReports.length; fr++) {
+                if (/taree/i.test(data.scan.folderReports[fr].folder)) {
+                  tareeReport = data.scan.folderReports[fr];
+                  break;
+                }
+              }
+              if (tareeReport) {
+                console.log("[meeting-library] Taree folder report:", tareeReport);
+              }
+            }
             console.log(
               "[meeting-library] API meetings:",
               (data.meetings || []).map(function (m) {
