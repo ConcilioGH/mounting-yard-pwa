@@ -1,10 +1,30 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import manifestData from "@/data/meeting-library-manifest.json";
-import type { MeetingLibraryManifestFile, MeetingLibraryResult } from "@/lib/meeting-library-types";
+import type { MeetingLibraryEntry, MeetingLibraryManifestFile, MeetingLibraryResult } from "@/lib/meeting-library-types";
 import { safeMeetingCsvRelativePath } from "@/lib/meeting-library-paths";
+import { synthesizeFolderReportsFromManifest } from "@/lib/meeting-library-scan";
+import { deriveMeetingId } from "@/lib/race-day-bias/storage";
+import { parseMeetingFolderMeta } from "@/lib/meeting-export";
 
 const manifest = manifestData as MeetingLibraryManifestFile;
+
+function withMeetingIds(meetings: MeetingLibraryEntry[]): MeetingLibraryEntry[] {
+  return meetings.map((meeting) => {
+    if (meeting.meetingId?.trim()) return meeting;
+    const folder = meeting.relativePath.replace(/\/[^/]+$/, "");
+    const folderMeta = parseMeetingFolderMeta(folder);
+    return {
+      ...meeting,
+      meetingId:
+        deriveMeetingId({
+          date: meeting.date || folderMeta?.date || "",
+          trackSlug: meeting.track || folderMeta?.track || "",
+          meetingFolderPath: folder,
+        }) || "",
+    };
+  });
+}
 
 const allowedMasterPaths = new Set(
   manifest.meetings.map((meeting) => meeting.relativePath.replace(/\\/g, "/")),
@@ -12,13 +32,25 @@ const allowedMasterPaths = new Set(
 
 /** Production/Vercel: serve meetings from build-time manifest (no disk scan). */
 export async function listMeetingLibraryFromManifest(): Promise<MeetingLibraryResult> {
-  const meetings = manifest.meetings.slice().sort((a, b) => {
+  const meetings = withMeetingIds(manifest.meetings.slice()).sort((a, b) => {
     if (a.date !== b.date) return b.date.localeCompare(a.date);
     return b.modifiedAt.localeCompare(a.modifiedAt);
   });
 
+  const folderReports =
+    manifest.scan.folderReports?.length
+      ? manifest.scan.folderReports
+      : synthesizeFolderReportsFromManifest({
+          meetings,
+          foldersScanned: manifest.scan.foldersScanned,
+          foldersExcluded: manifest.scan.foldersExcluded,
+        });
+
   const scan = {
     ...manifest.scan,
+    source: "build-manifest" as const,
+    generatedAt: manifest.generatedAt,
+    folderReports,
     meetingsReturned: meetings.length,
     rootPath: manifest.scan.rootPath || "meeting-library-manifest",
   };
