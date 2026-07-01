@@ -1,0 +1,65 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
+R1,Kensington,1,12:50 pm Robrick Lodge Plate,1250m,Maiden,Heavy 9,+4m Entire,1,1,Adeleke,Adeleke,Adeleke,1,Kris Lees,Kerrin McEvoy,$7.5,NA,racenet
+R1,Kensington,1,12:50 pm Robrick Lodge Plate,1250m,Maiden,Heavy 9,+4m Entire,2,2,Castelbella,Castelbella,Castelbella,5,Gary Portelli,Alysha Collett,$8,4,racenet
+R1,Kensington,1,12:50 pm Robrick Lodge Plate,1250m,Maiden,Heavy 9,+4m Entire,3,3,Consulate,Consulate,Consulate,9,Chris Waller,Chad Schofield,$2.3,6.7,racenet
+R1,Kensington,1,12:50 pm Robrick Lodge Plate,1250m,Maiden,Heavy 9,+4m Entire,4,4,Hellflight,Hellflight,Hellflight,6,Richard & Will Freedman,Tom Sherry,$11,3,racenet
+R1,Kensington,1,12:50 pm Robrick Lodge Plate,1250m,Maiden,Heavy 9,+4m Entire,5,5,Ironblood Empress,Ironblood Empress,Ironblood Empress,3,Brad Widdup,Adam Hyeronimus (a1),$19,NA,racenet
+R1,Kensington,1,12:50 pm Robrick Lodge Plate,1250m,Maiden,Heavy 9,+4m Entire,8,8,Snitzel's Girl,Snitzel's Girl,Snitzel's Girl,8,Chris Waller,Tyler Schiller,$7,NA,racenet
+R1,Kensington,1,12:50 pm Robrick Lodge Plate,1250m,Maiden,Heavy 9,+4m Entire,9,9,Woodenbridge,Woodenbridge,Woodenbridge,7,Gerald Ryan & Sterling Alexiou,Dylan Gibbons,$4.4,3.7,racenet
+R2,Kensington,2,1:25 pm Tab Plate,1150m,Maiden,Heavy 9,+4m Entire,1,1,Creator Of World,Creator Of World,Creator Of World,3,Ross McConville,Anna Roper (a-2),$17,5,racenet
+R2,Kensington,2,1:25 pm Tab Plate,1150m,Maiden,Heavy 9,+4m Entire,2,2,Gondorff,Gondorff,Gondorff,11,Joseph Pride,Adam Hyeronimus,$27,10,racenet
+R2,Kensington,2,1:25 pm Tab Plate,1150m,Maiden,Heavy 9,+4m Entire,3,3,Pharland,Pharland,Pharland,5,Gerald Ryan & Sterling Alexiou,Kerrin McEvoy,$5.5,2,racenet
+R2,Kensington,2,1:25 pm Tab Plate,1150m,Maiden,Heavy 9,+4m Entire,4,4,Pierro Lad,Pierro Lad,Pierro Lad,1,Ciaron Maher,Braith Nock (a-1.5),$5,5.1,racenet
+R2,Kensington,2,1:25 pm Tab Plate,1150m,Maiden,Heavy 9,+4m Entire,5,5,Rapid Revenue,Rapid Revenue,Rapid Revenue,4,Bjorn Baker,Tim Clark,$13,NA,racenet
+R2,Kensington,2,1:25 pm Tab Plate,1150m,Maiden,Heavy 9,+4m Entire,6,6,Claudel,Claudel,Claudel,12,Chris Waller,Chad Schofield,$4.2,4.7,racenet
+R2,Kensington,2,1:25 pm Tab Plate,1150m,Maiden,Heavy 9,+4m Entire,8,8,Glissando,Glissando,Glissando,8,Chris Waller,Siena Grima (a-2),$13,NA,racenet
+R2,Kensington,2,1:25 pm Tab Plate,1150m,Maiden,Heavy 9,+4m Entire,9,9,Novel Attraction,Novel Attraction,Novel Attraction,2,Gary Crossley,William Stanley (a-3),$126,6.9,racenet
+R2,Kensington,2,1:25 pm Tab Plate,1150m,Maiden,Heavy 9,+4m Entire,10,10,Ready Forcocktails,Ready Forcocktails,Ready Forcocktails,7,"Michael, John & Wayne Hawkes",Tyler Schiller,$3.2,3.2,racenet
+R2,Kensington,2,1:25 pm Tab Plate,1150m,Maiden,Heavy 9,+4m Entire,11,11,Sorentina,Sorentina,Sorentina,9,Richard Litt,Tom Sherry,$23,4.4,racenet
+R3,Kensington,3,2:00 pm Asahi Super Dry Handicap,1550m,Handicap,Heavy 9,+4m Entire,3,3,Ballpark,Ballpark,Ballpark,4,Chris Waller,Tim Clark,$2.6,2.3,racenet
+R3,Kensington,3,2:00 pm Asahi Super Dry Handicap,1550m,Handicap,Heavy 9,+4m Entire,4,4,Barbray,Barbray,Barbray,7,Chris Waller,Tyler Schiller,$5.5,6.2,racenet
+R3,Kensington,3,2:00 pm Asahi Super Dry Handicap,1550m,Handicap,Heavy 9,+4m Entire,5,5,Sister Daae,Sister Daae,Sister Daae,11,Chris Waller,Kerrin McEvoy,$4,7,racenet
+R3,Kensington,3,2:00 pm Asahi Super Dry Handicap,1550m,Handicap,Heavy 9,+4m Entire,7,7,Cheval De Bois,Cheval De Bois,Cheval De Bois,9,Annabel & Rob Archibald,Braith Nock (a-1.5),$8,6.6,racenet
+R3,Kensington,3,2:00 pm Asahi Super Dry Handicap,1550m,Handicap,Heavy 9,+4m Entire,8,8,Remadosi,Remadosi,Remadosi,2,"Barbara Joseph, Paul & Matt Jones",Alysha Collett,$19,6.3,racenet
+R3,Kensington,3,2:00 pm Asahi Super Dry Handicap,1550m,Handicap,Heavy 9,+4m Entire,9,9,Shadashi,Shadashi,Shadashi,3,Edward Cummings,Adam Hyeronimus,$35,7.5,racenet
+R3,Kensington,3,2:00 pm Asahi Super Dry Handicap,1550m,Handicap,Heavy 9,+4m Entire,11,11,My Shareena,My Shareena,My Shareena,1,Bjorn Baker,Dylan Gibbons,$5.5,7.2,racenet
+R4,Kensington,4,2:35 pm Pkf Newcastle Handicap,1550m,Handicap,Heavy 9,+4m Entire,1,1,Pier Pressure,Pier Pressure,Pier Pressure,12,Kris Lees,William Stanley (a-3),$16,3.9,racenet
+R4,Kensington,4,2:35 pm Pkf Newcastle Handicap,1550m,Handicap,Heavy 9,+4m Entire,2,2,Kenmare Bay,Kenmare Bay,Kenmare Bay,11,Tom Charlton,Dylan Gibbons,$6.5,6.7,racenet
+R4,Kensington,4,2:35 pm Pkf Newcastle Handicap,1550m,Handicap,Heavy 9,+4m Entire,3,3,Claim The Crown,Claim The Crown,Claim The Crown,2,John Sargent,Claire Ramsbotham (a-3),$10,5.8,racenet
+R4,Kensington,4,2:35 pm Pkf Newcastle Handicap,1550m,Handicap,Heavy 9,+4m Entire,5,5,Hereward,Hereward,Hereward,7,Denim Wynen,Anna Roper (a-2),$6,2.1,racenet
+R4,Kensington,4,2:35 pm Pkf Newcastle Handicap,1550m,Handicap,Heavy 9,+4m Entire,6,6,John Dory,John Dory,John Dory,3,Chris Waller,Siena Grima (a-2),$3.6,5.1,racenet
+R4,Kensington,4,2:35 pm Pkf Newcastle Handicap,1550m,Handicap,Heavy 9,+4m Entire,7,7,Scalextrics,Scalextrics,Scalextrics,9,Matthew Smith,Kerrin McEvoy,$16,6.1,racenet
+R4,Kensington,4,2:35 pm Pkf Newcastle Handicap,1550m,Handicap,Heavy 9,+4m Entire,8,8,Tenderize,Tenderize,Tenderize,5,Gary Portelli,Alysha Collett,$16,4.1,racenet
+R4,Kensington,4,2:35 pm Pkf Newcastle Handicap,1550m,Handicap,Heavy 9,+4m Entire,9,9,Emballee,Emballee,Emballee,8,Chris Waller,Tyler Schiller,$6.75,6.6,racenet
+R4,Kensington,4,2:35 pm Pkf Newcastle Handicap,1550m,Handicap,Heavy 9,+4m Entire,10,10,Kirkuk,Kirkuk,Kirkuk,1,Jim & Greg Lee,Reece Jones,$6.5,7.8,racenet
+R4,Kensington,4,2:35 pm Pkf Newcastle Handicap,1550m,Handicap,Heavy 9,+4m Entire,11,11,Craft,Craft,Craft,10,Becky Byrne,Sairyn Fawke,$81,3.6,racenet
+R4,Kensington,4,2:35 pm Pkf Newcastle Handicap,1550m,Handicap,Heavy 9,+4m Entire,12,12,He's Godspeed,He's Godspeed,He's Godspeed,6,Brett Lazzarini,Teighan Worsnop,$51,5.8,racenet
+R5,Kensington,5,3:10 pm Pkf Sydney Handicap,1400m,Handicap,Heavy 9,+4m Entire,2,2,Conchiero,Conchiero,Conchiero,11,Gai Waterhouse & Adrian Bott,Zac Wadick (a-2),$4,2.2,racenet
+R5,Kensington,5,3:10 pm Pkf Sydney Handicap,1400m,Handicap,Heavy 9,+4m Entire,3,3,Iceman,Iceman,Iceman,2,Clarry Conners,Mollie Fitzgerald (a-3),$11,7.5,racenet
+R5,Kensington,5,3:10 pm Pkf Sydney Handicap,1400m,Handicap,Heavy 9,+4m Entire,4,4,Winston Hills,Winston Hills,Winston Hills,1,Matthew Smith,Siena Grima (a-2),$11,5.9,racenet
+R5,Kensington,5,3:10 pm Pkf Sydney Handicap,1400m,Handicap,Heavy 9,+4m Entire,5,5,Applaud,Applaud,Applaud,13,Peter Snowden,Mitch Stapleford (a-3),$12,7.1,racenet
+R5,Kensington,5,3:10 pm Pkf Sydney Handicap,1400m,Handicap,Heavy 9,+4m Entire,6,6,Bat Out Of Hell,Bat Out Of Hell,Bat Out Of Hell,8,Bjorn Baker,Dylan Gibbons,$12,4.3,racenet
+R5,Kensington,5,3:10 pm Pkf Sydney Handicap,1400m,Handicap,Heavy 9,+4m Entire,7,7,Miss Busslinger,Miss Busslinger,Miss Busslinger,7,Kris Lees,William Stanley (a-3),$9.5,6.4,racenet
+R5,Kensington,5,3:10 pm Pkf Sydney Handicap,1400m,Handicap,Heavy 9,+4m Entire,8,8,Perfect Picture,Perfect Picture,Perfect Picture,3,John Thompson,Kerrin McEvoy,$6,7.6,racenet
+R5,Kensington,5,3:10 pm Pkf Sydney Handicap,1400m,Handicap,Heavy 9,+4m Entire,9,9,Dashing Rupert,Dashing Rupert,Dashing Rupert,9,Annabel & Rob Archibald,Ashley Morgan,$14,6,racenet
+R5,Kensington,5,3:10 pm Pkf Sydney Handicap,1400m,Handicap,Heavy 9,+4m Entire,10,10,The Replicant,The Replicant,The Replicant,5,Joseph Pride,Adam Hyeronimus,$6.5,5.2,racenet
+R5,Kensington,5,3:10 pm Pkf Sydney Handicap,1400m,Handicap,Heavy 9,+4m Entire,11,11,Charleroi,Charleroi,Charleroi,10,Nacim Dilmi,Chad Schofield,$7.5,5.7,racenet
+R6,Kensington,6,3:45 pm Pkf Global Handicap,1250m,Handicap,Heavy 9,+4m Entire,1,1,Piperita,Piperita,Piperita,11,Nacim Dilmi,Olivia Chambers (a-3),$7,6.9,racenet
+R6,Kensington,6,3:45 pm Pkf Global Handicap,1250m,Handicap,Heavy 9,+4m Entire,2,2,Lull,Lull,Lull,9,Ciaron Maher,Shannen Llewellyn (a-3),$4.6,3.6,racenet
+R6,Kensington,6,3:45 pm Pkf Global Handicap,1250m,Handicap,Heavy 9,+4m Entire,4,4,Infusion,Infusion,Infusion,14,Peter Snowden,Braith Nock (a-1.5),$4.6,6.3,racenet
+R6,Kensington,6,3:45 pm Pkf Global Handicap,1250m,Handicap,Heavy 9,+4m Entire,5,5,Invisible Magic,Invisible Magic,Invisible Magic,13,Ciaron Maher,Siena Grima (a-2),$16,5.7,racenet
+R6,Kensington,6,3:45 pm Pkf Global Handicap,1250m,Handicap,Heavy 9,+4m Entire,7,7,Sapling,Sapling,Sapling,6,Nacim Dilmi,Anna Roper (a-2),$4.6,3.4,racenet
+R6,Kensington,6,3:45 pm Pkf Global Handicap,1250m,Handicap,Heavy 9,+4m Entire,8,8,Gamp,Gamp,Gamp,10,"Michael, John & Wayne Hawkes",Jay Ford,$23,2.8,racenet
+R6,Kensington,6,3:45 pm Pkf Global Handicap,1250m,Handicap,Heavy 9,+4m Entire,12,12,Maz Kanata,Maz Kanata,Maz Kanata,3,Jason Coyle,Mollie Fitzgerald (a-3),$9.5,5.8,racenet
+R6,Kensington,6,3:45 pm Pkf Global Handicap,1250m,Handicap,Heavy 9,+4m Entire,13,13,Zou Royal,Zou Royal,Zou Royal,12,Jarrod Austin,Alysha Collett,$11,1.7,racenet
+R6,Kensington,6,3:45 pm Pkf Global Handicap,1250m,Handicap,Heavy 9,+4m Entire,14,14,Fine Wine,Fine Wine,Fine Wine,5,Gary Portelli,Tyler Schiller,$17,4.3,racenet
+R6,Kensington,6,3:45 pm Pkf Global Handicap,1250m,Handicap,Heavy 9,+4m Entire,16,16,Miss Emma,Miss Emma,Miss Emma,7,Becky Byrne,Sairyn Fawke,$26,3.3,racenet
+R7,Kensington,7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,1000m,Handicap,Heavy 9,+4m Entire,1,1,Huon,Huon,Huon,5,Richard Litt,Mollie Fitzgerald (a-3),$4.6,4.5,racenet
+R7,Kensington,7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,1000m,Handicap,Heavy 9,+4m Entire,4,4,Sunday Tycoon,Sunday Tycoon,Sunday Tycoon,12,Clarry Conners,Keagan Latham,$14,5.2,racenet
+R7,Kensington,7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,1000m,Handicap,Heavy 9,+4m Entire,5,5,Be Quiet,Be Quiet,Be Quiet,14,Kim Waugh,Jay Ford,$7.5,4,racenet
+R7,Kensington,7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,1000m,Handicap,Heavy 9,+4m Entire,6,6,Massira,Massira,Massira,4,Matthew Dale,Adam Hyeronimus (a1),$5.5,5.3,racenet
+R7,Kensington,7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,1000m,Handicap,Heavy 9,+4m Entire,7,7,Oceans One,Oceans One,Oceans One,13,Sara Ryan,Alysha Collett,$11,3,racenet
+R7,Kensington,7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,1000m,Handicap,Heavy 9,+4m Entire,9,9,Dear Jewel,Dear Jewel,Dear Jewel,8,Joseph Pride,Tim Clark,$2.7,4.9,racenet
+R7,Kensington,7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,1000m,Handicap,Heavy 9,+4m Entire,10,10,Mountain Top,Mountain Top,Mountain Top,6,Dean Mirfin,Olivia Chambers (a-3),$27,3.4,racenet
+R7,Kensington,7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,1000m,Handicap,Heavy 9,+4m Entire,11,11,Smiling Prophet,Smiling Prophet,Smiling Prophet,1,Mark Minervini,Tyler Schiller,$13,6.2,racenet
+R7,Kensington,7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,1000m,Handicap,Heavy 9,+4m Entire,14,14,Vereeva,Vereeva,Vereeva,11,Brian Adams,Louise Day,$51,7.9,racenet

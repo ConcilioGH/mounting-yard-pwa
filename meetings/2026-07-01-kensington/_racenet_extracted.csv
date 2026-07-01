@@ -1,0 +1,89 @@
+race_no,race_name,start_time,distance,track,grade,going,rail,no,horse,horse_name,name,barrier,trainer,jockey,weight,odds,scratched
+1,12:50 pm Robrick Lodge Plate,12:50 pm,1250m,Kensington,,Heavy 9,+4m Entire,1,Adeleke,Adeleke,Adeleke,1,Kris Lees,Kerrin McEvoy,56kg,$7.5,false
+1,12:50 pm Robrick Lodge Plate,12:50 pm,1250m,Kensington,,Heavy 9,+4m Entire,2,Castelbella,Castelbella,Castelbella,5,Gary Portelli,Alysha Collett,56kg,$8,false
+1,12:50 pm Robrick Lodge Plate,12:50 pm,1250m,Kensington,,Heavy 9,+4m Entire,3,Consulate,Consulate,Consulate,9,Chris Waller,Chad Schofield,56kg,$2.3,false
+1,12:50 pm Robrick Lodge Plate,12:50 pm,1250m,Kensington,,Heavy 9,+4m Entire,4,Hellflight,Hellflight,Hellflight,6,Richard & Will Freedman,Tom Sherry,56kg,$11,false
+1,12:50 pm Robrick Lodge Plate,12:50 pm,1250m,Kensington,,Heavy 9,+4m Entire,5,Ironblood Empress,Ironblood Empress,Ironblood Empress,3,Brad Widdup,Adam Hyeronimus (a1),56kg,$19,false
+1,12:50 pm Robrick Lodge Plate,12:50 pm,1250m,Kensington,,Heavy 9,+4m Entire,8,Snitzel's Girl,Snitzel's Girl,Snitzel's Girl,8,Chris Waller,Tyler Schiller,56kg,$7,false
+1,12:50 pm Robrick Lodge Plate,12:50 pm,1250m,Kensington,,Heavy 9,+4m Entire,9,Woodenbridge,Woodenbridge,Woodenbridge,7,Gerald Ryan & Sterling Alexiou,Dylan Gibbons,56kg,$4.4,false
+1,12:50 pm Robrick Lodge Plate,12:50 pm,1250m,Kensington,,Heavy 9,+4m Entire,6,Lone Piper,Lone Piper,Lone Piper,2,Chris Waller,Tim Clark,56kg,SCR,true
+1,12:50 pm Robrick Lodge Plate,12:50 pm,1250m,Kensington,,Heavy 9,+4m Entire,7,Rocket Girl,Rocket Girl,Rocket Girl,4,Chris Waller,Siena Grima (a-2),56kg,SCR,true
+2,1:25 pm Tab Plate,1:25 pm,1150m,Kensington,,Heavy 9,+4m Entire,1,Creator Of World,Creator Of World,Creator Of World,3,Ross McConville,Anna Roper (a-2),57kg,$17,false
+2,1:25 pm Tab Plate,1:25 pm,1150m,Kensington,,Heavy 9,+4m Entire,2,Gondorff,Gondorff,Gondorff,11,Joseph Pride,Adam Hyeronimus,57kg,$27,false
+2,1:25 pm Tab Plate,1:25 pm,1150m,Kensington,,Heavy 9,+4m Entire,3,Pharland,Pharland,Pharland,5,Gerald Ryan & Sterling Alexiou,Kerrin McEvoy,57kg,$5.5,false
+2,1:25 pm Tab Plate,1:25 pm,1150m,Kensington,,Heavy 9,+4m Entire,4,Pierro Lad,Pierro Lad,Pierro Lad,1,Ciaron Maher,Braith Nock (a-1.5),57kg,$5,false
+2,1:25 pm Tab Plate,1:25 pm,1150m,Kensington,,Heavy 9,+4m Entire,5,Rapid Revenue,Rapid Revenue,Rapid Revenue,4,Bjorn Baker,Tim Clark,57kg,$13,false
+2,1:25 pm Tab Plate,1:25 pm,1150m,Kensington,,Heavy 9,+4m Entire,6,Claudel,Claudel,Claudel,12,Chris Waller,Chad Schofield,55kg,$4.2,false
+2,1:25 pm Tab Plate,1:25 pm,1150m,Kensington,,Heavy 9,+4m Entire,8,Glissando,Glissando,Glissando,8,Chris Waller,Siena Grima (a-2),55kg,$13,false
+2,1:25 pm Tab Plate,1:25 pm,1150m,Kensington,,Heavy 9,+4m Entire,9,Novel Attraction,Novel Attraction,Novel Attraction,2,Gary Crossley,William Stanley (a-3),55kg,$126,false
+2,1:25 pm Tab Plate,1:25 pm,1150m,Kensington,,Heavy 9,+4m Entire,10,Ready Forcocktails,Ready Forcocktails,Ready Forcocktails,7,"Michael, John & Wayne Hawkes",Tyler Schiller,55kg,$3.2,false
+2,1:25 pm Tab Plate,1:25 pm,1150m,Kensington,,Heavy 9,+4m Entire,11,Sorentina,Sorentina,Sorentina,9,Richard Litt,Tom Sherry,55kg,$23,false
+2,1:25 pm Tab Plate,1:25 pm,1150m,Kensington,,Heavy 9,+4m Entire,7,Cool Aza Breeze,Cool Aza Breeze,Cool Aza Breeze,10,Ciaron Maher,Zac Wadick (a-2),55kg,SCR,true
+2,1:25 pm Tab Plate,1:25 pm,1150m,Kensington,,Heavy 9,+4m Entire,12,Supido Secret,Supido Secret,Supido Secret,6,Paul Niceforo,Robyn Freeman,55kg,SCR,true
+3,2:00 pm Asahi Super Dry Handicap,2:00 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,3,Ballpark,Ballpark,Ballpark,4,Chris Waller,Tim Clark,60.5kg,$2.6,false
+3,2:00 pm Asahi Super Dry Handicap,2:00 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,4,Barbray,Barbray,Barbray,7,Chris Waller,Tyler Schiller,60.5kg,$5.5,false
+3,2:00 pm Asahi Super Dry Handicap,2:00 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,5,Sister Daae,Sister Daae,Sister Daae,11,Chris Waller,Kerrin McEvoy,59.5kg,$4,false
+3,2:00 pm Asahi Super Dry Handicap,2:00 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,7,Cheval De Bois,Cheval De Bois,Cheval De Bois,9,Annabel & Rob Archibald,Braith Nock (a-1.5),58.5kg,$8,false
+3,2:00 pm Asahi Super Dry Handicap,2:00 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,8,Remadosi,Remadosi,Remadosi,2,"Barbara Joseph, Paul & Matt Jones",Alysha Collett,58kg,$19,false
+3,2:00 pm Asahi Super Dry Handicap,2:00 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,9,Shadashi,Shadashi,Shadashi,3,Edward Cummings,Adam Hyeronimus,58kg,$35,false
+3,2:00 pm Asahi Super Dry Handicap,2:00 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,11,My Shareena,My Shareena,My Shareena,1,Bjorn Baker,Dylan Gibbons,57.5kg,$5.5,false
+3,2:00 pm Asahi Super Dry Handicap,2:00 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,1,Miss Chastain,Miss Chastain,Miss Chastain,8,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),61.5kg,SCR,true
+3,2:00 pm Asahi Super Dry Handicap,2:00 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,2,Prince Charge,Prince Charge,Prince Charge,5,Chris Waller,Siena Grima (a-2),61kg,SCR,true
+3,2:00 pm Asahi Super Dry Handicap,2:00 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,6,Real Baker,Real Baker,Real Baker,10,Bjorn Baker,Ashley Morgan,59kg,SCR,true
+3,2:00 pm Asahi Super Dry Handicap,2:00 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,10,Microgravity,Microgravity,Microgravity,6,Jason Deamer,William Stanley (a-3),57.5kg,SCR,true
+4,2:35 pm Pkf Newcastle Handicap,2:35 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,1,Pier Pressure,Pier Pressure,Pier Pressure,12,Kris Lees,William Stanley (a-3),61.5kg,$16,false
+4,2:35 pm Pkf Newcastle Handicap,2:35 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,2,Kenmare Bay,Kenmare Bay,Kenmare Bay,11,Tom Charlton,Dylan Gibbons,59.5kg,$6.5,false
+4,2:35 pm Pkf Newcastle Handicap,2:35 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,3,Claim The Crown,Claim The Crown,Claim The Crown,2,John Sargent,Claire Ramsbotham (a-3),59kg,$10,false
+4,2:35 pm Pkf Newcastle Handicap,2:35 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,5,Hereward,Hereward,Hereward,7,Denim Wynen,Anna Roper (a-2),59kg,$6,false
+4,2:35 pm Pkf Newcastle Handicap,2:35 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,6,John Dory,John Dory,John Dory,3,Chris Waller,Siena Grima (a-2),58kg,$3.6,false
+4,2:35 pm Pkf Newcastle Handicap,2:35 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,7,Scalextrics,Scalextrics,Scalextrics,9,Matthew Smith,Kerrin McEvoy,58kg,$16,false
+4,2:35 pm Pkf Newcastle Handicap,2:35 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,8,Tenderize,Tenderize,Tenderize,5,Gary Portelli,Alysha Collett,57.5kg,$16,false
+4,2:35 pm Pkf Newcastle Handicap,2:35 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,9,Emballee,Emballee,Emballee,8,Chris Waller,Tyler Schiller,55.5kg,$6.75,false
+4,2:35 pm Pkf Newcastle Handicap,2:35 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,10,Kirkuk,Kirkuk,Kirkuk,1,Jim & Greg Lee,Reece Jones,54kg,$6.5,false
+4,2:35 pm Pkf Newcastle Handicap,2:35 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,11,Craft,Craft,Craft,10,Becky Byrne,Sairyn Fawke,54kg,$81,false
+4,2:35 pm Pkf Newcastle Handicap,2:35 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,12,He's Godspeed,He's Godspeed,He's Godspeed,6,Brett Lazzarini,Teighan Worsnop,54kg,$51,false
+4,2:35 pm Pkf Newcastle Handicap,2:35 pm,1550m,Kensington,Handicap,Heavy 9,+4m Entire,4,Full Hao,Full Hao,Full Hao,4,Chris Waller,Adam Hyeronimus,59kg,SCR,true
+5,3:10 pm Pkf Sydney Handicap,3:10 pm,1400m,Kensington,Handicap,Heavy 9,+4m Entire,2,Conchiero,Conchiero,Conchiero,11,Gai Waterhouse & Adrian Bott,Zac Wadick (a-2),62kg,$4,false
+5,3:10 pm Pkf Sydney Handicap,3:10 pm,1400m,Kensington,Handicap,Heavy 9,+4m Entire,3,Iceman,Iceman,Iceman,2,Clarry Conners,Mollie Fitzgerald (a-3),61.5kg,$11,false
+5,3:10 pm Pkf Sydney Handicap,3:10 pm,1400m,Kensington,Handicap,Heavy 9,+4m Entire,4,Winston Hills,Winston Hills,Winston Hills,1,Matthew Smith,Siena Grima (a-2),61kg,$11,false
+5,3:10 pm Pkf Sydney Handicap,3:10 pm,1400m,Kensington,Handicap,Heavy 9,+4m Entire,5,Applaud,Applaud,Applaud,13,Peter Snowden,Mitch Stapleford (a-3),60.5kg,$12,false
+5,3:10 pm Pkf Sydney Handicap,3:10 pm,1400m,Kensington,Handicap,Heavy 9,+4m Entire,6,Bat Out Of Hell,Bat Out Of Hell,Bat Out Of Hell,8,Bjorn Baker,Dylan Gibbons,60.5kg,$12,false
+5,3:10 pm Pkf Sydney Handicap,3:10 pm,1400m,Kensington,Handicap,Heavy 9,+4m Entire,7,Miss Busslinger,Miss Busslinger,Miss Busslinger,7,Kris Lees,William Stanley (a-3),60kg,$9.5,false
+5,3:10 pm Pkf Sydney Handicap,3:10 pm,1400m,Kensington,Handicap,Heavy 9,+4m Entire,8,Perfect Picture,Perfect Picture,Perfect Picture,3,John Thompson,Kerrin McEvoy,59kg,$6,false
+5,3:10 pm Pkf Sydney Handicap,3:10 pm,1400m,Kensington,Handicap,Heavy 9,+4m Entire,9,Dashing Rupert,Dashing Rupert,Dashing Rupert,9,Annabel & Rob Archibald,Ashley Morgan,58.5kg,$14,false
+5,3:10 pm Pkf Sydney Handicap,3:10 pm,1400m,Kensington,Handicap,Heavy 9,+4m Entire,10,The Replicant,The Replicant,The Replicant,5,Joseph Pride,Adam Hyeronimus,58kg,$6.5,false
+5,3:10 pm Pkf Sydney Handicap,3:10 pm,1400m,Kensington,Handicap,Heavy 9,+4m Entire,11,Charleroi,Charleroi,Charleroi,10,Nacim Dilmi,Chad Schofield,57kg,$7.5,false
+5,3:10 pm Pkf Sydney Handicap,3:10 pm,1400m,Kensington,Handicap,Heavy 9,+4m Entire,1,Little Beginnings,Little Beginnings,Little Beginnings,14,Kris Lees,Shannen Llewellyn (a-3),62.5kg,SCR,true
+5,3:10 pm Pkf Sydney Handicap,3:10 pm,1400m,Kensington,Handicap,Heavy 9,+4m Entire,12,San Marino,San Marino,San Marino,6,,Garry Kirkup,55.5kg,SCR,true
+5,3:10 pm Pkf Sydney Handicap,3:10 pm,1400m,Kensington,Handicap,Heavy 9,+4m Entire,13,Peschiera,Peschiera,Peschiera,12,"Michael, John & Wayne Hawkes",Tyler Schiller,54kg,SCR,true
+5,3:10 pm Pkf Sydney Handicap,3:10 pm,1400m,Kensington,Handicap,Heavy 9,+4m Entire,14,Tenderize,Tenderize,Tenderize,4,,Gary Portelli,57.5kg,SCR,true
+6,3:45 pm Pkf Global Handicap,3:45 pm,1250m,Kensington,Handicap,Heavy 9,+4m Entire,1,Piperita,Piperita,Piperita,11,Nacim Dilmi,Olivia Chambers (a-3),63.5kg,$7,false
+6,3:45 pm Pkf Global Handicap,3:45 pm,1250m,Kensington,Handicap,Heavy 9,+4m Entire,2,Lull,Lull,Lull,9,Ciaron Maher,Shannen Llewellyn (a-3),62.5kg,$4.6,false
+6,3:45 pm Pkf Global Handicap,3:45 pm,1250m,Kensington,Handicap,Heavy 9,+4m Entire,4,Infusion,Infusion,Infusion,14,Peter Snowden,Braith Nock (a-1.5),61kg,$4.6,false
+6,3:45 pm Pkf Global Handicap,3:45 pm,1250m,Kensington,Handicap,Heavy 9,+4m Entire,5,Invisible Magic,Invisible Magic,Invisible Magic,13,Ciaron Maher,Siena Grima (a-2),60.5kg,$16,false
+6,3:45 pm Pkf Global Handicap,3:45 pm,1250m,Kensington,Handicap,Heavy 9,+4m Entire,7,Sapling,Sapling,Sapling,6,Nacim Dilmi,Anna Roper (a-2),59.5kg,$4.6,false
+6,3:45 pm Pkf Global Handicap,3:45 pm,1250m,Kensington,Handicap,Heavy 9,+4m Entire,8,Gamp,Gamp,Gamp,10,"Michael, John & Wayne Hawkes",Jay Ford,59kg,$23,false
+6,3:45 pm Pkf Global Handicap,3:45 pm,1250m,Kensington,Handicap,Heavy 9,+4m Entire,12,Maz Kanata,Maz Kanata,Maz Kanata,3,Jason Coyle,Mollie Fitzgerald (a-3),58kg,$9.5,false
+6,3:45 pm Pkf Global Handicap,3:45 pm,1250m,Kensington,Handicap,Heavy 9,+4m Entire,13,Zou Royal,Zou Royal,Zou Royal,12,Jarrod Austin,Alysha Collett,57.5kg,$11,false
+6,3:45 pm Pkf Global Handicap,3:45 pm,1250m,Kensington,Handicap,Heavy 9,+4m Entire,14,Fine Wine,Fine Wine,Fine Wine,5,Gary Portelli,Tyler Schiller,57kg,$17,false
+6,3:45 pm Pkf Global Handicap,3:45 pm,1250m,Kensington,Handicap,Heavy 9,+4m Entire,16,Miss Emma,Miss Emma,Miss Emma,7,Becky Byrne,Sairyn Fawke,54kg,$26,false
+6,3:45 pm Pkf Global Handicap,3:45 pm,1250m,Kensington,Handicap,Heavy 9,+4m Entire,3,Raskol,Raskol,Raskol,15,Peter Snowden,Kerrin McEvoy,61.5kg,SCR,true
+6,3:45 pm Pkf Global Handicap,3:45 pm,1250m,Kensington,Handicap,Heavy 9,+4m Entire,6,Anarita,Anarita,Anarita,4,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),59.5kg,SCR,true
+6,3:45 pm Pkf Global Handicap,3:45 pm,1250m,Kensington,Handicap,Heavy 9,+4m Entire,9,Jenni The Jet,Jenni The Jet,Jenni The Jet,8,Matthew Dale,Tim Clark,59kg,SCR,true
+6,3:45 pm Pkf Global Handicap,3:45 pm,1250m,Kensington,Handicap,Heavy 9,+4m Entire,10,Mind Ya Bizz,Mind Ya Bizz,Mind Ya Bizz,2,Brad Widdup,Tyler Schiller,59kg,SCR,true
+6,3:45 pm Pkf Global Handicap,3:45 pm,1250m,Kensington,Handicap,Heavy 9,+4m Entire,11,Pazyryk,Pazyryk,Pazyryk,1,Michael Freedman,Ashley Morgan,58.5kg,SCR,true
+6,3:45 pm Pkf Global Handicap,3:45 pm,1250m,Kensington,Handicap,Heavy 9,+4m Entire,15,Casino Shaw,Casino Shaw,Casino Shaw,16,,Shaun Coady,56.5kg,SCR,true
+7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,4:20 pm,1000m,Kensington,Handicap,Heavy 9,+4m Entire,1,Huon,Huon,Huon,5,Richard Litt,Mollie Fitzgerald (a-3),61kg,$4.6,false
+7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,4:20 pm,1000m,Kensington,Handicap,Heavy 9,+4m Entire,4,Sunday Tycoon,Sunday Tycoon,Sunday Tycoon,12,Clarry Conners,Keagan Latham,58kg,$14,false
+7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,4:20 pm,1000m,Kensington,Handicap,Heavy 9,+4m Entire,5,Be Quiet,Be Quiet,Be Quiet,14,Kim Waugh,Jay Ford,57kg,$7.5,false
+7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,4:20 pm,1000m,Kensington,Handicap,Heavy 9,+4m Entire,6,Massira,Massira,Massira,4,Matthew Dale,Adam Hyeronimus (a1),56kg,$5.5,false
+7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,4:20 pm,1000m,Kensington,Handicap,Heavy 9,+4m Entire,7,Oceans One,Oceans One,Oceans One,13,Sara Ryan,Alysha Collett,56kg,$11,false
+7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,4:20 pm,1000m,Kensington,Handicap,Heavy 9,+4m Entire,9,Dear Jewel,Dear Jewel,Dear Jewel,8,Joseph Pride,Tim Clark,55kg,$2.7,false
+7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,4:20 pm,1000m,Kensington,Handicap,Heavy 9,+4m Entire,10,Mountain Top,Mountain Top,Mountain Top,6,Dean Mirfin,Olivia Chambers (a-3),54kg,$27,false
+7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,4:20 pm,1000m,Kensington,Handicap,Heavy 9,+4m Entire,11,Smiling Prophet,Smiling Prophet,Smiling Prophet,1,Mark Minervini,Tyler Schiller,54kg,$13,false
+7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,4:20 pm,1000m,Kensington,Handicap,Heavy 9,+4m Entire,14,Vereeva,Vereeva,Vereeva,11,Brian Adams,Louise Day,54kg,$51,false
+7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,4:20 pm,1000m,Kensington,Handicap,Heavy 9,+4m Entire,2,Who Goes There,Who Goes There,Who Goes There,10,,Mark Mason,59.5kg,SCR,true
+7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,4:20 pm,1000m,Kensington,Handicap,Heavy 9,+4m Entire,3,Action King,Action King,Action King,7,Rob Potter,Siena Grima (a-2),59kg,SCR,true
+7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,4:20 pm,1000m,Kensington,Handicap,Heavy 9,+4m Entire,8,Still Alice,Still Alice,Still Alice,2,Lee & Cherie Curtis,Jeff Penza,55.5kg,SCR,true
+7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,4:20 pm,1000m,Kensington,Handicap,Heavy 9,+4m Entire,12,Debussy,Debussy,Debussy,9,Tony Ball,Shannen Llewellyn (a-3),54kg,SCR,true
+7,4:20 pm Hawaii Five Oh @ Vinery Stud Handicap,4:20 pm,1000m,Kensington,Handicap,Heavy 9,+4m Entire,13,Telegraph,Telegraph,Telegraph,3,Tony Ball,Madeline Owen,54kg,SCR,true

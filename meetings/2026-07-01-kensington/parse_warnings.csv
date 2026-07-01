@@ -1,0 +1,29 @@
+race_no,runner_no,horse,warning_type,detail
+1,6,Lone Piper,scratched_runner,Runner marked scratched
+1,7,Rocket Girl,scratched_runner,Runner marked scratched
+2,7,Cool Aza Breeze,scratched_runner,Runner marked scratched
+2,12,Supido Secret,scratched_runner,Runner marked scratched
+3,1,Miss Chastain,scratched_runner,Runner marked scratched
+3,2,Prince Charge,scratched_runner,Runner marked scratched
+3,6,Real Baker,scratched_runner,Runner marked scratched
+3,10,Microgravity,scratched_runner,Runner marked scratched
+4,4,Full Hao,scratched_runner,Runner marked scratched
+5,1,Little Beginnings,scratched_runner,Runner marked scratched
+5,12,San Marino,missing_trainer,Trainer is empty
+5,12,San Marino,scratched_runner,Runner marked scratched
+5,13,Peschiera,scratched_runner,Runner marked scratched
+5,14,Tenderize,missing_trainer,Trainer is empty
+5,14,Tenderize,scratched_runner,Runner marked scratched
+6,3,Raskol,scratched_runner,Runner marked scratched
+6,6,Anarita,scratched_runner,Runner marked scratched
+6,9,Jenni The Jet,scratched_runner,Runner marked scratched
+6,10,Mind Ya Bizz,scratched_runner,Runner marked scratched
+6,11,Pazyryk,scratched_runner,Runner marked scratched
+6,15,Casino Shaw,missing_trainer,Trainer is empty
+6,15,Casino Shaw,scratched_runner,Runner marked scratched
+7,2,Who Goes There,missing_trainer,Trainer is empty
+7,2,Who Goes There,scratched_runner,Runner marked scratched
+7,3,Action King,scratched_runner,Runner marked scratched
+7,8,Still Alice,scratched_runner,Runner marked scratched
+7,12,Debussy,scratched_runner,Runner marked scratched
+7,13,Telegraph,scratched_runner,Runner marked scratched
