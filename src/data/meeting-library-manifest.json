@@ -1,6 +1,17 @@
 {
-  "generatedAt": "2026-06-30T05:48:24.728Z",
+  "generatedAt": "2026-07-01T04:39:34.988Z",
   "meetings": [
+    {
+      "id": "meetings/2026-07-01-kensington/kensington_2026-07-01_master.csv",
+      "label": "2026-07-01 · Kensington",
+      "date": "2026-07-01",
+      "track": "kensington",
+      "trackLabel": "Kensington",
+      "relativePath": "meetings/2026-07-01-kensington/kensington_2026-07-01_master.csv",
+      "fileName": "kensington_2026-07-01_master.csv",
+      "modifiedAt": "2026-07-01T00:19:43.105Z",
+      "meetingId": "2026-07-01-kensington"
+    },
     {
       "id": "meetings/2026-06-30-taree/taree_2026-06-30_master.csv",
       "label": "2026-06-30 · Taree",
@@ -366,7 +377,8 @@
       "meetings/2026-06-24-warwick-farm",
       "meetings/2026-06-25-wyong",
       "meetings/2026-06-27-rosehill",
-      "meetings/2026-06-30-taree"
+      "meetings/2026-06-30-taree",
+      "meetings/2026-07-01-kensington"
     ],
     "folderReports": [
       {
@@ -833,6 +845,21 @@
         "includedInLibrary": true,
         "exclusionReason": null,
         "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-07-01-kensington",
+        "folderName": "2026-07-01-kensington",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "kensington_2026-07-01_master.csv"
+        ],
+        "parsedDate": "2026-07-01",
+        "parsedTrack": "kensington",
+        "meetingId": "2026-07-01-kensington",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
       }
     ],
     "masterCsvFiles": [
@@ -865,9 +892,10 @@
       "meetings/2026-06-23-hawkesbury/hawkesbury_2026-06-23_master.csv",
       "meetings/2026-06-24-warwick-farm/warwick_farm_2026-06-24_master.csv",
       "meetings/2026-06-27-rosehill/rosehill_2026-06-27_master.csv",
-      "meetings/2026-06-30-taree/taree_2026-06-30_master.csv"
+      "meetings/2026-06-30-taree/taree_2026-06-30_master.csv",
+      "meetings/2026-07-01-kensington/kensington_2026-07-01_master.csv"
     ],
-    "meetingsReturned": 30,
+    "meetingsReturned": 31,
     "foldersExcluded": [
       {
         "folder": "meetings/2026-05-20-warwick",

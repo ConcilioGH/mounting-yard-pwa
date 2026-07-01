@@ -17,11 +17,26 @@ export type StartupFailure = {
 const failures: StartupFailure[] = [];
 const failureListeners = new Set<() => void>();
 
+export function normalizeErrorMessage(error: unknown): string {
+  if (error instanceof Error) return error.message;
+  if (typeof error === "string") return error;
+  if (error instanceof Event) {
+    const target = error.target as { src?: string; href?: string; tagName?: string } | null;
+    const detail = target?.src || target?.href || target?.tagName || "";
+    return detail ? `Event: ${error.type} (${detail})` : `Event: ${error.type}`;
+  }
+  if (typeof error === "object" && error !== null && "message" in error) {
+    const message = (error as { message?: unknown }).message;
+    if (typeof message === "string" && message.trim()) return message;
+  }
+  return String(error);
+}
+
 function serializeError(error: unknown): { message: string; stack?: string } {
   if (error instanceof Error) {
     return { message: error.message, stack: error.stack };
   }
-  return { message: String(error) };
+  return { message: normalizeErrorMessage(error) };
 }
 
 export function logStartupStep(step: string, detail?: Record<string, unknown>): void {

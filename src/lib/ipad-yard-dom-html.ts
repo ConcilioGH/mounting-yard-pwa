@@ -189,7 +189,54 @@ export function buildIpadYardDomHtml(): string {
       justify-content: space-between;
       gap: 8px;
       margin-bottom: 8px;
+      flex-wrap: wrap;
     }
+    .iy-resulted-sp-head-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: flex-end;
+    }
+    .iy-resulted-sp-clear {
+      border-color: #fecaca;
+      background: #fff1f2;
+      color: #b91c1c;
+    }
+    .iy-rs-status {
+      display: inline-block;
+      margin-left: 4px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      vertical-align: middle;
+    }
+    .iy-rs-status-not_checked { background: #f1f5f9; color: #64748b; }
+    .iy-rs-status-not_resulted { background: #fef3c7; color: #92400e; }
+    .iy-rs-status-imported { background: #dcfce7; color: #166534; }
+    .iy-rs-status-blocked { background: #fee2e2; color: #b91c1c; }
+    .iy-rs-status-error { background: #fce7f3; color: #9d174d; }
+    .iy-rs-status-detail {
+      display: block;
+      margin-top: 2px;
+      font-size: 11px;
+      font-weight: 500;
+      color: #64748b;
+    }
+    .iy-race-rs-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      margin-left: 4px;
+      border-radius: 999px;
+      vertical-align: middle;
+    }
+    .iy-race-rs-not_checked { background: #94a3b8; }
+    .iy-race-rs-not_resulted { background: #f59e0b; }
+    .iy-race-rs-imported { background: #22c55e; }
+    .iy-race-rs-blocked { background: #ef4444; }
+    .iy-race-rs-error { background: #db2777; }
     .iy-resulted-sp-list { list-style: none; margin: 0; padding: 0; }
     .iy-resulted-sp-item {
       display: -webkit-box;
@@ -210,6 +257,64 @@ export function buildIpadYardDomHtml(): string {
       border: 1px solid #cbd5e1;
       background: #f8fafc;
       color: #0f172a;
+      cursor: pointer;
+      -webkit-tap-highlight-color: rgba(15, 23, 42, 0.1);
+    }
+    .iy-meeting-card-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 6px;
+    }
+    .iy-meeting-card-bar.iy-hidden { display: none !important; }
+    .iy-meeting-card-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .iy-meeting-card-badge-tab {
+      background: #dcfce7;
+      color: #166534;
+      border: 1px solid #86efac;
+    }
+    .iy-meeting-card-badge-csv {
+      background: #e0e7ff;
+      color: #3730a3;
+      border: 1px solid #a5b4fc;
+    }
+    .iy-meeting-card-meta {
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .iy-wir-warning {
+      margin: 0 0 8px;
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid #fcd34d;
+      background: #fffbeb;
+      color: #92400e;
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .iy-wir-warning.iy-hidden { display: none !important; }
+    .iy-resulted-sp-error {
+      display: none;
+      color: #b91c1c;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      padding: 6px 8px;
+      border-radius: 8px;
+      font-size: 12px;
+      margin-bottom: 6px;
+      line-height: 1.35;
     }
     .iy-countdown-red { color: #f87171; }
     .iy-countdown-complete {
@@ -320,8 +425,22 @@ export function buildIpadYardDomHtml(): string {
       background: #fff;
       cursor: pointer;
       text-align: center;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+    }
+    .iy-race-complete {
+      font-size: 10px;
+      font-weight: 700;
+      color: #475569;
+      background: #f1f5f9;
+      border-radius: 6px;
+      padding: 1px 5px;
+      line-height: 1.3;
     }
     .iy-race-active { background: #0f172a; color: #fff; border-color: #0f172a; }
+    .iy-race-active .iy-race-complete { color: #e2e8f0; background: rgba(255,255,255,0.15); }
     .iy-main {
       display: -webkit-box;
       display: flex;
@@ -561,6 +680,33 @@ export function buildIpadYardDomHtml(): string {
     .iy-meeting-card-sub { font-size: 11px; color: #64748b; margin-top: 3px; }
     .iy-meeting-active { border-color: #0f172a; background: #f1f5f9; }
     .iy-meeting-loading { opacity: 0.6; pointer-events: none; }
+    .iy-tab-venue-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin: 12px 0;
+    }
+    .iy-tab-venue-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .iy-tab-venue-input {
+      width: 100%;
+      min-height: 44px;
+      padding: 10px 12px;
+      border: 1px solid #cbd5e1;
+      border-radius: 10px;
+      font-size: 16px;
+      font-family: inherit;
+      text-transform: uppercase;
+    }
+    .iy-tab-meeting-msg {
+      min-height: 1.25rem;
+      margin: 0 0 8px;
+      font-size: 13px;
+      color: #b91c1c;
+    }
     .iy-library-empty {
       padding: 16px;
       border: 1px dashed #94a3b8;
@@ -610,6 +756,76 @@ export function buildIpadYardDomHtml(): string {
     }
     .iy-export-actions { display: flex; flex-wrap: wrap; gap: 6px; }
     .iy-export-actions .iy-toolbar-btn { flex: 1; min-width: 100px; }
+    .iy-backup-reminder {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 8px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid #fcd34d;
+      background: #fffbeb;
+      color: #92400e;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .iy-backup-reminder.iy-hidden { display: none !important; }
+    .iy-backup-reminder-text { flex: 1; min-width: 10rem; }
+    .iy-backup-reminder .iy-toolbar-btn {
+      min-height: 36px;
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+    .iy-meeting-health {
+      margin: 0 0 8px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid #e2e8f0;
+      background: #f8fafc;
+      font-size: 12px;
+      color: #334155;
+    }
+    .iy-meeting-health.iy-hidden { display: none !important; }
+    .iy-meeting-health-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 6px;
+    }
+    .iy-meeting-health-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 4px 12px;
+    }
+    .iy-meeting-health-row { display: flex; gap: 6px; min-width: 0; }
+    .iy-meeting-health-label { color: #64748b; flex: 0 0 auto; }
+    .iy-meeting-health-value {
+      font-weight: 700;
+      color: #0f172a;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .iy-meeting-health-value.iy-health-warn { color: #b45309; }
+    .iy-hide-scratched {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0 0 6px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #334155;
+    }
+    .iy-hide-scratched input {
+      width: 18px;
+      height: 18px;
+      margin: 0;
+    }
+    .iy-runner-scratched {
+      opacity: 0.55;
+      border-style: dashed !important;
+    }
   </style>
 </head>
 <body>
@@ -649,6 +865,9 @@ export function buildIpadYardDomHtml(): string {
           <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.exportAllAssessments()">Export</button>
         </div>
         <div class="iy-toolbar-slot">
+          <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.exportRaceReviewCsv()">Review CSV</button>
+        </div>
+        <div class="iy-toolbar-slot">
           <button type="button" id="iy-btn-save-to-laptop" class="iy-toolbar-btn iy-hidden" onclick="window.ipadYard.saveToLaptop()">Save to Laptop</button>
         </div>
         <div class="iy-toolbar-slot">
@@ -656,6 +875,8 @@ export function buildIpadYardDomHtml(): string {
           <div id="iy-package-menu" class="iy-toolbar-menu">
             <button type="button" class="iy-toolbar-menu-item" onclick="window.ipadYard.exportAssessmentPackage(); window.ipadYard.closeToolbarMenus()">Export package</button>
             <button type="button" class="iy-toolbar-menu-item" onclick="window.ipadYard.showAssessmentPackageImportPanel(); window.ipadYard.closeToolbarMenus()">Import package</button>
+            <button type="button" class="iy-toolbar-menu-item" onclick="window.ipadYard.exportMeetingBackup(); window.ipadYard.closeToolbarMenus()">Backup Meeting JSON</button>
+            <button type="button" class="iy-toolbar-menu-item" onclick="window.ipadYard.showMeetingBackupImportPanel(); window.ipadYard.closeToolbarMenus()">Restore Meeting Backup</button>
           </div>
         </div>
         <div class="iy-toolbar-slot">
@@ -667,14 +888,40 @@ export function buildIpadYardDomHtml(): string {
             <button type="button" id="iy-btn-import-folder" class="iy-toolbar-menu-item iy-hidden" onclick="window.ipadYard.importMeetingFolder(); window.ipadYard.closeToolbarMenus()">Import meeting folder</button>
             <button type="button" class="iy-toolbar-menu-item" onclick="window.ipadYard.exportAssessmentPackage(); window.ipadYard.closeToolbarMenus()">Export assessment package</button>
             <button type="button" class="iy-toolbar-menu-item" onclick="window.ipadYard.showAssessmentPackageImportPanel(); window.ipadYard.closeToolbarMenus()">Import assessment package</button>
+            <button type="button" class="iy-toolbar-menu-item" onclick="window.ipadYard.exportRaceReviewCsv(); window.ipadYard.closeToolbarMenus()">Export Race Review CSV</button>
+            <button type="button" class="iy-toolbar-menu-item" onclick="window.ipadYard.exportMeetingBackup(); window.ipadYard.closeToolbarMenus()">Backup Meeting JSON</button>
+            <button type="button" class="iy-toolbar-menu-item" onclick="window.ipadYard.showMeetingBackupImportPanel(); window.ipadYard.closeToolbarMenus()">Restore Meeting Backup</button>
+            <button type="button" class="iy-toolbar-menu-item" onclick="window.ipadYard.showTabMeetingPanel(); window.ipadYard.closeToolbarMenus()">Load Today TAB Meeting</button>
             <button type="button" class="iy-toolbar-menu-item" onclick="document.getElementById('iy-csv-input').click(); window.ipadYard.closeToolbarMenus()">Import CSV</button>
           </div>
         </div>
       </div>
       <input id="iy-csv-input" type="file" accept=".csv,text/csv" style="display:none" onchange="window.ipadYard.importCsv(this)">
       <input id="iy-assessment-package-file" type="file" accept=".json,application/json" style="display:none" onchange="window.ipadYard.importAssessmentPackageFile(this)">
+      <input id="iy-meeting-backup-file" type="file" accept=".json,application/json" style="display:none" onchange="window.ipadYard.importMeetingBackupFile(this)">
     </div>
     <p id="iy-import-msg" class="iy-msg"></p>
+    <div id="iy-backup-reminder-banner" class="iy-backup-reminder iy-hidden" role="status">
+      <span class="iy-backup-reminder-text">Backup recommended</span>
+      <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.exportMeetingBackup()">Backup now</button>
+      <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.dismissBackupReminder()">Dismiss</button>
+    </div>
+    <div id="iy-meeting-card-bar" class="iy-meeting-card-bar iy-hidden">
+      <span id="iy-meeting-card-badge" class="iy-meeting-card-badge"></span>
+      <span id="iy-meeting-card-meta" class="iy-meeting-card-meta"></span>
+    </div>
+    <p id="iy-wir-warning" class="iy-wir-warning iy-hidden">Speed map unavailable for this TAB-loaded card.</p>
+    <div id="iy-meeting-health" class="iy-meeting-health iy-hidden">
+      <div class="iy-meeting-health-title">Meeting Health</div>
+      <div class="iy-meeting-health-grid">
+        <div class="iy-meeting-health-row"><span class="iy-meeting-health-label">Meeting</span><span id="iy-health-meeting-id" class="iy-meeting-health-value">—</span></div>
+        <div class="iy-meeting-health-row"><span class="iy-meeting-health-label">Card</span><span id="iy-health-card-source" class="iy-meeting-health-value">—</span></div>
+        <div class="iy-meeting-health-row"><span class="iy-meeting-health-label">Assessed</span><span id="iy-health-assessment-count" class="iy-meeting-health-value">0</span></div>
+        <div class="iy-meeting-health-row"><span class="iy-meeting-health-label">Resulted</span><span id="iy-health-resulted-count" class="iy-meeting-health-value">0</span></div>
+        <div class="iy-meeting-health-row"><span class="iy-meeting-health-label">Last backup</span><span id="iy-health-last-backup" class="iy-meeting-health-value">Never</span></div>
+        <div class="iy-meeting-health-row"><span class="iy-meeting-health-label">Backup?</span><span id="iy-health-backup-recommended" class="iy-meeting-health-value">No</span></div>
+      </div>
+    </div>
     <div id="iy-race-tabs" class="iy-race-bar"></div>
   </div>
 
@@ -683,6 +930,7 @@ export function buildIpadYardDomHtml(): string {
     <p class="iy-library-sub">Meetings from repo <code>meetings/</code> (push to GitHub → deploy → tap Refresh). Each folder needs a <code>*_master.csv</code> file.</p>
     <div class="iy-toolbar" style="margin-bottom:8px;">
       <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.fetchLibrary({ bypassCache: true })">Refresh</button>
+      <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.showTabMeetingPanel()">Load Today TAB Meeting</button>
       <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.showAssess()">Back to Yard</button>
     </div>
     <p id="iy-library-msg" class="iy-msg"></p>
@@ -693,6 +941,10 @@ export function buildIpadYardDomHtml(): string {
   <div class="iy-main">
     <div class="iy-runners-col">
       <div class="iy-col-title">Runners</div>
+      <label class="iy-hide-scratched">
+        <input id="iy-hide-scratched-toggle" type="checkbox" onchange="window.ipadYard.toggleHideScratched()">
+        Hide scratched
+      </label>
       <div id="iy-race-title" class="iy-race-title"></div>
       <div id="iy-runners"></div>
     </div>
@@ -769,6 +1021,49 @@ export function buildIpadYardDomHtml(): string {
     </div>
   </div>
 
+  <div id="iy-tab-meeting-overlay" class="iy-export-overlay iy-hidden">
+    <div class="iy-export-panel">
+      <div class="iy-export-title">Load Today TAB Meeting</div>
+      <p class="iy-export-hint">Fetch today's live TAB race card so Resulted SP imports match the same meeting. Randwick Kensington = <strong>RKE</strong>.</p>
+      <div class="iy-tab-venue-field">
+        <label class="iy-tab-venue-label" for="iy-tab-venue-input">TAB venue code</label>
+        <input id="iy-tab-venue-input" class="iy-tab-venue-input" type="text" value="RKE" maxlength="8" autocapitalize="characters" autocomplete="off" placeholder="RKE">
+      </div>
+      <p id="iy-tab-meeting-msg" class="iy-tab-meeting-msg"></p>
+      <div class="iy-export-actions">
+        <button type="button" id="iy-tab-meeting-load-btn" class="iy-toolbar-btn" onclick="window.ipadYard.loadTodayTabMeeting()">Load meeting</button>
+        <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.closeTabMeetingPanel()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="iy-meeting-backup-export-overlay" class="iy-export-overlay iy-hidden">
+    <div class="iy-export-panel">
+      <div class="iy-export-title">Meeting Backup JSON</div>
+      <div id="iy-meeting-backup-export-filename" class="iy-export-filename"></div>
+      <p class="iy-export-hint">Copy this JSON and save to Files, AirDrop, or email. Includes assessments and Resulted SP.</p>
+      <textarea id="iy-meeting-backup-export-text" class="iy-export-text" readonly></textarea>
+      <div class="iy-export-actions">
+        <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.selectAllMeetingBackupExport()">Select All</button>
+        <button type="button" id="iy-meeting-backup-download-btn" class="iy-toolbar-btn iy-hidden" onclick="window.ipadYard.downloadMeetingBackupExport()">Download</button>
+        <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.closeMeetingBackupExportPanel()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="iy-meeting-backup-import-overlay" class="iy-export-overlay iy-hidden">
+    <div class="iy-export-panel">
+      <div class="iy-export-title">Restore Meeting Backup</div>
+      <p class="iy-export-hint">Paste a Meeting Backup JSON file. Restores one meeting by meetingId — assessments and Resulted SP for that meeting only.</p>
+      <textarea id="iy-meeting-backup-import-text" class="iy-export-text" placeholder="Paste meeting backup JSON here…"></textarea>
+      <div class="iy-export-actions">
+        <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.importMeetingBackupFromPanel()">Restore</button>
+        <button type="button" class="iy-toolbar-btn" onclick="document.getElementById('iy-meeting-backup-file').click()">Choose file</button>
+        <button type="button" class="iy-toolbar-btn" onclick="window.ipadYard.closeMeetingBackupImportPanel()">Cancel</button>
+      </div>
+    </div>
+  </div>
+
   <div id="iy-assessment-package-import-overlay" class="iy-export-overlay iy-hidden">
     <div class="iy-export-panel">
       <div class="iy-export-title">Import Assessment Package</div>
@@ -789,6 +1084,7 @@ export function buildIpadYardDomHtml(): string {
   </script>
   <script src="/yard-race-countdown-dom.js?v=${escapeHtml(APP_BUILD_VERSION)}"></script>
   <script src="/meeting-export-delivery-dom.js?v=${escapeHtml(APP_BUILD_VERSION)}"></script>
+  <script src="/tab-yard-meeting-dom.js?v=${escapeHtml(APP_BUILD_VERSION)}"></script>
   <script src="/resulted-sp-dom.js?v=${escapeHtml(APP_BUILD_VERSION)}"></script>
   <script src="/ipad-yard-dom.js?v=${escapeHtml(APP_BUILD_VERSION)}"></script>
 </body>

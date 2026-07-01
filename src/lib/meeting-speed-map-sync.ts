@@ -4,7 +4,8 @@ import {
   type RaceBucket,
   type SpeedMapRunner,
 } from "@/lib/speed-map";
-import { applyActiveBoardRacePlacement } from "@/lib/speed-map-placement-bridge";
+import { applyActiveBoardPlacementIfReady } from "@/lib/speed-map-placement-registry";
+import { normalizeErrorMessage } from "@/lib/startup-diagnostics";
 import { normalizeRaceNo } from "@/lib/meeting-coordination";
 import type { MeetingCsvParseResult } from "@/lib/csv";
 import {
@@ -110,7 +111,7 @@ export function placeRunnersWithActiveBoardEngine(
 
   if (!auto.length) return cloned;
 
-  const placedAuto = applyActiveBoardRacePlacement(
+  const placedAuto = applyActiveBoardPlacementIfReady(
     auto.map((r) => ({ ...r, manuallyPlaced: false })),
     raceNo,
   );
@@ -126,28 +127,33 @@ export function placeRunnersWithActiveBoardEngine(
 export function reconcileSpeedMapActivePlacement(
   session: SpeedMapSessionState,
 ): SpeedMapSessionState {
-  const raceMap: SpeedMapSessionState["raceMap"] = {};
+  try {
+    const raceMap: SpeedMapSessionState["raceMap"] = {};
 
-  for (const [raceNo, race] of Object.entries(session.raceMap)) {
-    if (!race?.runners?.length) {
-      raceMap[raceNo] = race;
-      continue;
+    for (const [raceNo, race] of Object.entries(session.raceMap)) {
+      if (!race?.runners?.length) {
+        raceMap[raceNo] = race;
+        continue;
+      }
+      const needsPlacement = race.placementEngine !== PLACEMENT_ENGINE;
+
+      if (!needsPlacement) {
+        raceMap[raceNo] = race;
+        continue;
+      }
+
+      raceMap[raceNo] = {
+        ...race,
+        placementEngine: PLACEMENT_ENGINE,
+        runners: placeRunnersWithActiveBoardEngine(race.runners, raceNo),
+      };
     }
-    const needsPlacement = race.placementEngine !== PLACEMENT_ENGINE;
 
-    if (!needsPlacement) {
-      raceMap[raceNo] = race;
-      continue;
-    }
-
-    raceMap[raceNo] = {
-      ...race,
-      placementEngine: PLACEMENT_ENGINE,
-      runners: placeRunnersWithActiveBoardEngine(race.runners, raceNo),
-    };
+    return { ...session, raceMap };
+  } catch (error) {
+    console.warn("[speed-map] reconcile failed:", normalizeErrorMessage(error));
+    return session;
   }
-
-  return { ...session, raceMap };
 }
 
 /**

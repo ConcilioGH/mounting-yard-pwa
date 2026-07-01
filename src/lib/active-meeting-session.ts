@@ -11,6 +11,7 @@ import {
   type MeetingManifest,
 } from "@/lib/meeting-coordination";
 import { reconcileSpeedMapActivePlacement } from "@/lib/meeting-speed-map-sync";
+import { normalizeErrorMessage } from "@/lib/startup-diagnostics";
 import {
   emptySpeedMapSession,
   loadSpeedMapFromStorage,
@@ -61,20 +62,34 @@ export function loadBiasStateForManifest(manifest: MeetingManifest | null): Race
   return loadRaceDayBiasStateForMeeting(manifest.meetingId).state;
 }
 
+export function safeReconcileSpeedMapSession(session: SpeedMapSessionState): SpeedMapSessionState {
+  try {
+    return reconcileSpeedMapActivePlacement(session);
+  } catch (error) {
+    console.warn("[speed-map] reconcile failed:", normalizeErrorMessage(error));
+    return session;
+  }
+}
+
 export function loadSpeedMapSessionForManifest(
   manifest: MeetingManifest | null,
 ): SpeedMapSessionState | null {
-  if (!manifest) {
-    const session = loadSpeedMapFromStorage();
-    return session ? reconcileSpeedMapActivePlacement(session) : null;
-  }
+  try {
+    if (!manifest) {
+      const session = loadSpeedMapFromStorage();
+      return session ? safeReconcileSpeedMapSession(session) : null;
+    }
 
-  const session = loadSpeedMapFromStorage();
-  if (!speedMapMatchesManifest(session, manifest)) {
+    const session = loadSpeedMapFromStorage();
+    if (!speedMapMatchesManifest(session, manifest)) {
+      return null;
+    }
+
+    return safeReconcileSpeedMapSession(session!);
+  } catch (error) {
+    console.warn("[speed-map] load session for manifest failed:", normalizeErrorMessage(error));
     return null;
   }
-
-  return reconcileSpeedMapActivePlacement(session!);
 }
 
 export function emptySpeedMapSessionForManifest(manifest: MeetingManifest): SpeedMapSessionState {
@@ -91,39 +106,59 @@ export function emptySpeedMapSessionForManifest(manifest: MeetingManifest): Spee
  * Keeps manifest, IndexedDB races, speed map, and bias aligned by meetingId.
  */
 export async function ensureActiveMeetingSynced(): Promise<MeetingManifest | null> {
-  const manifest = loadMeetingManifest();
-  if (!manifest) return null;
+  try {
+    const manifest = loadMeetingManifest();
+    if (!manifest) return null;
 
-  const [races, speedSession] = await Promise.all([
-    loadAllRaces(),
-    Promise.resolve(loadSpeedMapFromStorage()),
-  ]);
+    const [races, speedSession] = await Promise.all([
+      loadAllRaces(),
+      Promise.resolve(loadSpeedMapFromStorage()),
+    ]);
 
-  const racesOk = racesMatchManifest(races, manifest);
-  const speedOk = speedMapMatchesManifest(speedSession, manifest);
-  const biasOk = biasMatchesManifest(manifest);
+    const racesOk = racesMatchManifest(races, manifest);
+    const speedOk = speedMapMatchesManifest(speedSession, manifest);
+    const biasOk = biasMatchesManifest(manifest);
 
-  if (racesOk && speedOk && biasOk) {
-    reconcileBiasForManifest(manifest);
+    if (racesOk && speedOk && biasOk) {
+      try {
+        reconcileBiasForManifest(manifest);
+      } catch (error) {
+        console.warn("[speed-map] bias reconcile failed:", normalizeErrorMessage(error));
+      }
+      return manifest;
+    }
+
+    const cached = loadLastMeetingCsvImport();
+    if (cached?.text) {
+      try {
+        await importMeetingFromCsv(cached.text, {
+          ...cached.options,
+          meetingFolderPath: cached.options.meetingFolderPath || manifest.meetingFolderPath,
+        });
+        return loadMeetingManifest();
+      } catch (error) {
+        console.warn(
+          "[speed-map] cached meeting CSV re-import failed:",
+          normalizeErrorMessage(error),
+        );
+      }
+    }
+
+    if (!speedOk && speedSession) {
+      clearSpeedMapLocalStorage();
+    }
+    if (!biasOk) {
+      setActiveBiasMeetingId(manifest.meetingId);
+    }
+    try {
+      reconcileBiasForManifest(manifest);
+    } catch (error) {
+      console.warn("[speed-map] bias reconcile failed:", normalizeErrorMessage(error));
+    }
+
     return manifest;
-  }
-
-  const cached = loadLastMeetingCsvImport();
-  if (cached?.text) {
-    await importMeetingFromCsv(cached.text, {
-      ...cached.options,
-      meetingFolderPath: cached.options.meetingFolderPath || manifest.meetingFolderPath,
-    });
+  } catch (error) {
+    console.warn("[speed-map] ensureActiveMeetingSynced failed:", normalizeErrorMessage(error));
     return loadMeetingManifest();
   }
-
-  if (!speedOk && speedSession) {
-    clearSpeedMapLocalStorage();
-  }
-  if (!biasOk) {
-    setActiveBiasMeetingId(manifest.meetingId);
-  }
-  reconcileBiasForManifest(manifest);
-
-  return manifest;
 }

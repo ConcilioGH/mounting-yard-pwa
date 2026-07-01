@@ -1,0 +1,16 @@
+race_no,runner_no,horse,warning_type,detail
+1,11,Propane,scratched_runner,Runner marked scratched
+1,12,Zippy Lion,scratched_runner,Runner marked scratched
+2,1,Mega Pixel,scratched_runner,Runner marked scratched
+3,2,Negate,scratched_runner,Runner marked scratched
+3,7,Obsidian Dream,scratched_runner,Runner marked scratched
+3,8,Fit For A Prince,scratched_runner,Runner marked scratched
+4,3,Call Me Sassy,scratched_runner,Runner marked scratched
+4,10,Queen Bess,scratched_runner,Runner marked scratched
+5,5,Gemologist ho,scratched_runner,Runner marked scratched
+5,7,Angara,scratched_runner,Runner marked scratched
+6,11,Waveton,missing_trainer,Trainer is empty
+6,11,Waveton,scratched_runner,Runner marked scratched
+7,5,Mortlake,scratched_runner,Runner marked scratched
+7,7,Valentiago,missing_trainer,Trainer is empty
+7,7,Valentiago,scratched_runner,Runner marked scratched

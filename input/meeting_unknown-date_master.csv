@@ -1,0 +1,65 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
+R1,Wyong,1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1600m,Maiden,Good 4,True,1,1,Siccius,Siccius,Siccius,7,Kris Lees,William Stanley (a-2),$15,6,racenet
+R1,Wyong,1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1600m,Maiden,Good 4,True,2,2,Aurora Effect,Aurora Effect,Aurora Effect,5,Edward Cummings,Jason Collett,$1.4,5.2,racenet
+R1,Wyong,1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1600m,Maiden,Good 4,True,3,3,Going By Train,Going By Train,Going By Train,3,Denim Wynen,Mollie Fitzgerald (a-1.5),$61,11,racenet
+R1,Wyong,1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1600m,Maiden,Good 4,True,4,4,Pressiaire,Pressiaire,Pressiaire,2,Allan Kehoe,Jenny Duggan,$41,2.5,racenet
+R1,Wyong,1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1600m,Maiden,Good 4,True,5,5,Senza Rivali,Senza Rivali,Senza Rivali,6,Kristen Buchanan,Siena Grima (a-2),$23,9,racenet
+R1,Wyong,1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1600m,Maiden,Good 4,True,6,6,Belgrano,Belgrano,Belgrano,10,Darryll Kell,Chad Lever (a0.5),$26,4,racenet
+R1,Wyong,1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1600m,Maiden,Good 4,True,7,7,Burning Ambition,Burning Ambition,Burning Ambition,4,James Ponsonby,Mikayla Weir,$29,5,racenet
+R1,Wyong,1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1600m,Maiden,Good 4,True,8,8,Highland Lad,Highland Lad,Highland Lad,1,James Ponsonby,Winona Costin,$201,5.5,racenet
+R1,Wyong,1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1600m,Maiden,Good 4,True,9,9,Irulan,Irulan,Irulan,8,Jason Attard,Rachel King,$41,4.4,racenet
+R1,Wyong,1,12:40 pm Pre Training At Domeland Provincial Maiden Handicap,1600m,Maiden,Good 4,True,10,10,Powerful Annie,Powerful Annie,Powerful Annie,9,Kris Lees,Tim Clark,$6.5,8.2,racenet
+R2,Wyong,2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,1100m,Maiden,Good 4,True,2,2,Apparently,Apparently,Apparently,1,Nikki Pollock,Leeshelle Small (a-3),$201,4.8,racenet
+R2,Wyong,2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,1100m,Maiden,Good 4,True,3,3,Ask Di,Ask Di,Ask Di,8,Gerald Ryan & Sterling Alexiou,Chad Schofield,$23,3,racenet
+R2,Wyong,2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,1100m,Maiden,Good 4,True,4,4,Gamp,Gamp,Gamp,5,"Michael, John & Wayne Hawkes",Jay Ford,$7.5,1.5,racenet
+R2,Wyong,2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,1100m,Maiden,Good 4,True,5,5,Hidden Star,Hidden Star,Hidden Star,7,Mark Minervini,Mollie Fitzgerald (a-1.5),$19,7,racenet
+R2,Wyong,2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,1100m,Maiden,Good 4,True,6,6,Merini,Merini,Merini,6,Kris Lees,Jason Collett,$5.5,NA,racenet
+R2,Wyong,2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,1100m,Maiden,Good 4,True,7,7,Nicolosi,Nicolosi,Nicolosi,4,Gai Waterhouse & Adrian Bott,Tim Clark,$1.8,NA,racenet
+R2,Wyong,2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,1100m,Maiden,Good 4,True,8,8,Sorentina,Sorentina,Sorentina,10,Richard Litt,Tom Sherry,$26,7,racenet
+R2,Wyong,2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,1100m,Maiden,Good 4,True,9,9,Tidal Breeze,Tidal Breeze,Tidal Breeze,2,Nikki Pollock,Billy Cray,$201,NA,racenet
+R2,Wyong,2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,1100m,Maiden,Good 4,True,10,10,Weekend Market,Weekend Market,Weekend Market,9,Gary Portelli,Rachel King,$14,3.9,racenet
+R2,Wyong,2,1:20 pm Hilton & Marilyn Cope Appreciation Race Super Maiden Plate,1100m,Maiden,Good 4,True,11,11,Zsa Zsa,Zsa Zsa,Zsa Zsa,3,Sara Ryan,Ashley Morgan,$19,3.1,racenet
+R3,Wyong,3,2:00 pm The Frenchsforest Probus Club Inc. Maiden Handicap,1350m,Maiden,Good 4,True,1,1,Farset,Farset,Farset,2,Gai Waterhouse & Adrian Bott,Regan Bayliss,$2.1,1.9,racenet
+R3,Wyong,3,2:00 pm The Frenchsforest Probus Club Inc. Maiden Handicap,1350m,Maiden,Good 4,True,3,3,Nonno's Power,Nonno's Power,Nonno's Power,7,Joseph Pride,Rory Hutchings,$8,7.8,racenet
+R3,Wyong,3,2:00 pm The Frenchsforest Probus Club Inc. Maiden Handicap,1350m,Maiden,Good 4,True,4,4,Gemtiki,Gemtiki,Gemtiki,4,Mark Minervini,Mollie Fitzgerald (a-1.5),$51,5.8,racenet
+R3,Wyong,3,2:00 pm The Frenchsforest Probus Club Inc. Maiden Handicap,1350m,Maiden,Good 4,True,5,5,Satono Jasmine,Satono Jasmine,Satono Jasmine,5,Brad Widdup,Chad Schofield,$16,6,racenet
+R3,Wyong,3,2:00 pm The Frenchsforest Probus Club Inc. Maiden Handicap,1350m,Maiden,Good 4,True,6,6,Apiarist,Apiarist,Apiarist,6,Ciaron Maher,Tim Clark,$12,6,racenet
+R3,Wyong,3,2:00 pm The Frenchsforest Probus Club Inc. Maiden Handicap,1350m,Maiden,Good 4,True,9,9,Gong Girl,Gong Girl,Gong Girl,9,David Pfieffer,Rachel King,$3.5,4.1,racenet
+R4,Wyong,4,2:40 pm Mercure Kooindah Waters F&m Benchmark 64 Handicap,1350m,BM64,Good 4,True,1,1,Waku Waku,Waku Waku,Waku Waku,7,Annabel & Rob Archibald,Olivia Dalton (a-3),$3.4,6.1,racenet
+R4,Wyong,4,2:40 pm Mercure Kooindah Waters F&m Benchmark 64 Handicap,1350m,BM64,Good 4,True,2,2,Maquisa,Maquisa,Maquisa,3,Chris Waller,Siena Grima (a-2),$2.75,4.9,racenet
+R4,Wyong,4,2:40 pm Mercure Kooindah Waters F&m Benchmark 64 Handicap,1350m,BM64,Good 4,True,4,4,Rach,Rach,Rach,5,Chris Waller,Jason Collett,$4.6,3,racenet
+R4,Wyong,4,2:40 pm Mercure Kooindah Waters F&m Benchmark 64 Handicap,1350m,BM64,Good 4,True,5,5,Mane Character,Mane Character,Mane Character,1,Nacim Dilmi,Reece Jones,$10,6.7,racenet
+R4,Wyong,4,2:40 pm Mercure Kooindah Waters F&m Benchmark 64 Handicap,1350m,BM64,Good 4,True,6,6,Shoutaboutit,Shoutaboutit,Shoutaboutit,6,Kristen Buchanan,Jay Ford,$11,3.2,racenet
+R4,Wyong,4,2:40 pm Mercure Kooindah Waters F&m Benchmark 64 Handicap,1350m,BM64,Good 4,True,7,7,Grassburn,Grassburn,Grassburn,8,Matthew Robinson,Anna Roper,$19,5.3,racenet
+R4,Wyong,4,2:40 pm Mercure Kooindah Waters F&m Benchmark 64 Handicap,1350m,BM64,Good 4,True,8,8,Sunday Punch,Sunday Punch,Sunday Punch,10,Cheryl Grouse,Winona Costin,$91,6.1,racenet
+R4,Wyong,4,2:40 pm Mercure Kooindah Waters F&m Benchmark 64 Handicap,1350m,BM64,Good 4,True,9,9,Maggie Sparkles,Maggie Sparkles,Maggie Sparkles,2,Paul Kelly,Kacie Adams,$26,9.1,racenet
+R4,Wyong,4,2:40 pm Mercure Kooindah Waters F&m Benchmark 64 Handicap,1350m,BM64,Good 4,True,11,11,Steely Girl,Steely Girl,Steely Girl,4,Neil Godbolt,Jeff Penza,$21,4.3,racenet
+R5,Wyong,5,3:25 pm Spelling At Domeland Cg&e Benchmark 64 Handicap,1350m,BM64,Good 4,True,1,1,Skycatcher,Skycatcher,Skycatcher,2,Mick Price & Michael Kent Jnr,William Stanley (a-2),$2.6,2.7,racenet
+R5,Wyong,5,3:25 pm Spelling At Domeland Cg&e Benchmark 64 Handicap,1350m,BM64,Good 4,True,2,2,Botanist,Botanist,Botanist,6,Chris Waller,Siena Grima (a-2),$5.5,1.2,racenet
+R5,Wyong,5,3:25 pm Spelling At Domeland Cg&e Benchmark 64 Handicap,1350m,BM64,Good 4,True,3,3,A Pound Of Salt,A Pound Of Salt,A Pound Of Salt,3,Todd Howlett,Rory Hutchings,$23,8.3,racenet
+R5,Wyong,5,3:25 pm Spelling At Domeland Cg&e Benchmark 64 Handicap,1350m,BM64,Good 4,True,4,4,Written Gold,Written Gold,Written Gold,9,Gerald Ryan & Sterling Alexiou,Tom Sherry,$5.5,3.3,racenet
+R5,Wyong,5,3:25 pm Spelling At Domeland Cg&e Benchmark 64 Handicap,1350m,BM64,Good 4,True,6,6,Fierceness,Fierceness,Fierceness,1,Matthew Smith,Ashley Morgan,$10,5.5,racenet
+R5,Wyong,5,3:25 pm Spelling At Domeland Cg&e Benchmark 64 Handicap,1350m,BM64,Good 4,True,8,8,Toomuchinformation,Toomuchinformation,Toomuchinformation,4,Lyndall Olson,Anna Roper,$6,3.2,racenet
+R5,Wyong,5,3:25 pm Spelling At Domeland Cg&e Benchmark 64 Handicap,1350m,BM64,Good 4,True,9,9,Bonus Tempus,Bonus Tempus,Bonus Tempus,5,Brett Lazzarini,Jessica Taylor,$14,7.4,racenet
+R5,Wyong,5,3:25 pm Spelling At Domeland Cg&e Benchmark 64 Handicap,1350m,BM64,Good 4,True,10,10,He's Godspeed,He's Godspeed,He's Godspeed,8,Brett Lazzarini,Teighan Worsnop,$17,6,racenet
+R5,Wyong,5,3:25 pm Spelling At Domeland Cg&e Benchmark 64 Handicap,1350m,BM64,Good 4,True,11,11,Dreymon,Dreymon,Dreymon,10,Alan D Smith,Leeshelle Small (a-3),$46,7.1,racenet
+R6,Wyong,6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,1000m,BM64,Good 4,True,1,1,Desi Emperor,Desi Emperor,Desi Emperor,6,Tommy Wong,Jeff Penza,$41,2.6,racenet
+R6,Wyong,6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,1000m,BM64,Good 4,True,2,2,Bode Akuna,Bode Akuna,Bode Akuna,1,Jason Coyle,Jessica Taylor,$17,7,racenet
+R6,Wyong,6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,1000m,BM64,Good 4,True,3,3,Spartus,Spartus,Spartus,8,Fabio Martino,Siena Grima (a-2),$10,4.9,racenet
+R6,Wyong,6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,1000m,BM64,Good 4,True,4,4,Welcome Gypsy,Welcome Gypsy,Welcome Gypsy,5,John Thompson,Chad Schofield,$5.5,4.4,racenet
+R6,Wyong,6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,1000m,BM64,Good 4,True,5,5,Whil To Win,Whil To Win,Whil To Win,10,John Thompson,Rory Hutchings,$17,2.1,racenet
+R6,Wyong,6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,1000m,BM64,Good 4,True,6,6,Smiling Prophet,Smiling Prophet,Smiling Prophet,4,Mark Minervini,Mollie Fitzgerald (a-1.5),$17,6.1,racenet
+R6,Wyong,6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,1000m,BM64,Good 4,True,7,7,Sunday Tycoon,Sunday Tycoon,Sunday Tycoon,9,Clarry Conners,Deanne Panya,$9,4.7,racenet
+R6,Wyong,6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,1000m,BM64,Good 4,True,8,8,Like A Surgeon,Like A Surgeon,Like A Surgeon,3,Brad Widdup,Rachel King,$3.3,10,racenet
+R6,Wyong,6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,1000m,BM64,Good 4,True,9,9,Cool Blaze,Cool Blaze,Cool Blaze,2,Gary Portelli,Anna Roper,$9.5,3.5,racenet
+R6,Wyong,6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,1000m,BM64,Good 4,True,10,10,Altercation,Altercation,Altercation,12,Jason Deamer,Tim Clark,$9.5,5.4,racenet
+R6,Wyong,6,4:05 pm Pcm Catering & Coolroom Hire Midway Benchmark 64 Handicap,1000m,BM64,Good 4,True,12,12,Triple Yes,Triple Yes,Triple Yes,7,Edward Cummings,Jay Ford,$8,3.4,racenet
+R7,Wyong,7,4:40 pm Limitless Lodge Benchmark 64 Handicap,2100m,BM64,Good 4,True,1,1,Unavoidable,Unavoidable,Unavoidable,8,Matthew Smith,Siena Grima (a-2),$8,6,racenet
+R7,Wyong,7,4:40 pm Limitless Lodge Benchmark 64 Handicap,2100m,BM64,Good 4,True,2,2,Scottish Pearl,Scottish Pearl,Scottish Pearl,7,Annabel & Rob Archibald,Ashley Morgan,$13,3.9,racenet
+R7,Wyong,7,4:40 pm Limitless Lodge Benchmark 64 Handicap,2100m,BM64,Good 4,True,3,3,Grandini,Grandini,Grandini,3,Rodney Northam,Reece Jones,$4.2,7.5,racenet
+R7,Wyong,7,4:40 pm Limitless Lodge Benchmark 64 Handicap,2100m,BM64,Good 4,True,4,4,Monty Be Quick,Monty Be Quick,Monty Be Quick,9,Wayne Seelin,William Stanley (a-2),$17,3.4,racenet
+R7,Wyong,7,4:40 pm Limitless Lodge Benchmark 64 Handicap,2100m,BM64,Good 4,True,6,6,Sarapo,Sarapo,Sarapo,6,Chris Waller,Jason Collett,$2.2,6.7,racenet
+R7,Wyong,7,4:40 pm Limitless Lodge Benchmark 64 Handicap,2100m,BM64,Good 4,True,8,8,Will To Excel,Will To Excel,Will To Excel,4,James Ponsonby,Winona Costin,$20,7.8,racenet
+R7,Wyong,7,4:40 pm Limitless Lodge Benchmark 64 Handicap,2100m,BM64,Good 4,True,9,9,Mellencamp,Mellencamp,Mellencamp,5,Allan Boyle,Jenny Duggan,$29,3.9,racenet
+R7,Wyong,7,4:40 pm Limitless Lodge Benchmark 64 Handicap,2100m,BM64,Good 4,True,10,10,Ring Ahoy,Ring Ahoy,Ring Ahoy,1,David Hatch,Zac Wadick,$8,9.7,racenet
+R7,Wyong,7,4:40 pm Limitless Lodge Benchmark 64 Handicap,2100m,BM64,Good 4,True,11,11,Prince Is Game,Prince Is Game,Prince Is Game,2,Matthew Robinson,Anna Roper,$29,8.9,racenet

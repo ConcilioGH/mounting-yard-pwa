@@ -14,6 +14,10 @@
   var LAST_MEETING_CSV_KEY = "mounting-yard-last-meeting-csv-v1";
   var LAST_MEETING_CSV_META_KEY = "mounting-yard-last-meeting-csv-meta-v1";
   var MEETING_IMPORTED_EVENT = "mounting-yard-meeting-imported";
+  var BACKUP_REMINDER_KEY = "ipad-yard-backup-reminder-v1";
+  var LAST_BACKUP_KEY = "ipad-yard-last-backup-v1";
+  var BACKUP_ASSESSMENT_SAVE_THRESHOLD = 20;
+  var MEETING_BACKUP_KIND = "ipad-yard-meeting-backup";
   var GEAR_TILES = cfg.gearTiles || [];
   var WET_TILE = cfg.wetTile || { code: "WET", label: "Wet Suitability" };
   var WET_BODY_TYPES = cfg.wetBodyTypes || [];
@@ -45,6 +49,7 @@
     downloadedMeetingActive: false,
     countdownTimerId: null,
     resultedSpPoller: null,
+    backupReminderDismissedFor: "",
     activeMeetingId: "",
     activeMeetingKey: "",
     state: {
@@ -54,6 +59,11 @@
       assessments: {},
       meetingLabel: "",
       loadedMeetingPath: "",
+      meetingCardSource: "",
+      tabVenueCode: "",
+      meetingDate: "",
+      meetingVenue: "",
+      hideScratched: false,
     },
 
     setText: function (id, value) {
@@ -204,6 +214,167 @@
       return false;
     },
 
+    isRunnerScratched: function (runner) {
+      return !!(runner && runner.scratched);
+    },
+
+    getRaceActiveRunners: function (race) {
+      if (!race || !race.runners) return [];
+      var out = [];
+      for (var i = 0; i < race.runners.length; i++) {
+        if (!this.isRunnerScratched(race.runners[i])) out.push(race.runners[i]);
+      }
+      return out;
+    },
+
+    getVisibleRunners: function (race) {
+      if (!race || !race.runners) return [];
+      if (!this.state.hideScratched) return race.runners;
+      return this.getRaceActiveRunners(race);
+    },
+
+    defaultHideScratchedForSource: function (source) {
+      return source === "tab";
+    },
+
+    getRaceCompleteness: function (race) {
+      var active = this.getRaceActiveRunners(race);
+      var assessed = 0;
+      for (var i = 0; i < active.length; i++) {
+        var runner = active[i];
+        var key = this.makeKey(race.id, runner.no);
+        if (this.isRunnerReviewed(this.state.assessments[key])) assessed++;
+      }
+      return { assessed: assessed, total: active.length };
+    },
+
+    countMeetingAssessments: function () {
+      var count = 0;
+      if (!this.races) return 0;
+      for (var r = 0; r < this.races.length; r++) {
+        var race = this.races[r];
+        var active = this.getRaceActiveRunners(race);
+        for (var i = 0; i < active.length; i++) {
+          var key = this.makeKey(race.id, active[i].no);
+          if (this.isRunnerReviewed(this.state.assessments[key])) count++;
+        }
+      }
+      return count;
+    },
+
+    countResultedRaces: function () {
+      if (!this.races || !this.races.length || !this.activeMeetingId) return 0;
+      var count = 0;
+      for (var i = 0; i < this.races.length; i++) {
+        var status = this.getRaceResultsStatusLabel(this.races[i].id);
+        if (status && status.code === "imported") count++;
+      }
+      return count;
+    },
+
+    readLastBackupAt: function (meetingId) {
+      meetingId = String(meetingId || this.activeMeetingId || "").trim();
+      if (!meetingId) return "";
+      try {
+        var raw = localStorage.getItem(LAST_BACKUP_KEY);
+        if (!raw) return "";
+        var parsed = JSON.parse(raw);
+        return parsed && parsed[meetingId] ? String(parsed[meetingId]) : "";
+      } catch (e) {
+        return "";
+      }
+    },
+
+    recordLastBackupAt: function (meetingId) {
+      meetingId = String(meetingId || this.activeMeetingId || "").trim();
+      if (!meetingId) return;
+      try {
+        var map = {};
+        var raw = localStorage.getItem(LAST_BACKUP_KEY);
+        if (raw) map = JSON.parse(raw) || {};
+        map[meetingId] = new Date().toISOString();
+        localStorage.setItem(LAST_BACKUP_KEY, JSON.stringify(map));
+      } catch (e) {
+        /* ignore */
+      }
+    },
+
+    formatBackupTime: function (iso) {
+      if (!iso) return "Never";
+      try {
+        var d = new Date(iso);
+        if (isNaN(d.getTime())) return "Never";
+        return d.toLocaleString();
+      } catch (e) {
+        return "Never";
+      }
+    },
+
+    isBackupRecommended: function () {
+      var meetingId = String(this.activeMeetingId || "").trim();
+      if (!meetingId || !this.races || !this.races.length) return false;
+      if (this.backupReminderDismissedFor === meetingId) return false;
+      var state = this.readBackupReminderState();
+      if (state.meetingId !== meetingId) return false;
+      if (state.savesSinceBackup >= BACKUP_ASSESSMENT_SAVE_THRESHOLD) return true;
+      if (state.resultImportPending) return true;
+      return false;
+    },
+
+    getMeetingHealthSummary: function () {
+      var ctx = this.getMeetingExportContext();
+      return {
+        meetingId: ctx.meetingId || this.activeMeetingId || "—",
+        cardSource: ctx.meetingCardSource || "—",
+        assessmentCount: this.countMeetingAssessments(),
+        resultedRacesCount: this.countResultedRaces(),
+        lastBackupAt: this.readLastBackupAt(ctx.meetingId || this.activeMeetingId),
+        backupRecommended: this.isBackupRecommended(),
+      };
+    },
+
+    updateMeetingHealthPanel: function () {
+      if (typeof document === "undefined") return;
+      var panel = document.getElementById("iy-meeting-health");
+      if (!panel) return;
+      var hasRaces = this.races && this.races.length > 0;
+      if (!hasRaces) {
+        panel.classList.add("iy-hidden");
+        return;
+      }
+      panel.classList.remove("iy-hidden");
+      var health = this.getMeetingHealthSummary();
+      this.setText("iy-health-meeting-id", health.meetingId);
+      this.setText("iy-health-card-source", health.cardSource);
+      this.setText("iy-health-assessment-count", String(health.assessmentCount));
+      this.setText("iy-health-resulted-count", String(health.resultedRacesCount));
+      this.setText("iy-health-last-backup", this.formatBackupTime(health.lastBackupAt));
+      var backupEl = document.getElementById("iy-health-backup-recommended");
+      if (backupEl) {
+        backupEl.textContent = health.backupRecommended ? "Yes" : "No";
+        if (health.backupRecommended) backupEl.classList.add("iy-health-warn");
+        else backupEl.classList.remove("iy-health-warn");
+      }
+
+      var toggle = document.getElementById("iy-hide-scratched-toggle");
+      if (toggle && toggle.checked !== !!this.state.hideScratched) {
+        toggle.checked = !!this.state.hideScratched;
+      }
+    },
+
+    toggleHideScratched: function () {
+      this.bump();
+      var toggle = document.getElementById("iy-hide-scratched-toggle");
+      this.state.hideScratched = !!(toggle && toggle.checked);
+      this.normalizeSelection();
+      this.persist();
+      this.render();
+    },
+
+    setHideScratchedDefaultForSource: function (source) {
+      this.state.hideScratched = this.defaultHideScratchedForSource(source);
+    },
+
     markRunnerReviewed: function (key) {
       var assessment = this.ensureAssessment(key);
       assessment.reviewed = true;
@@ -326,19 +497,22 @@
       }
       if (!this.raceIdExists(this.state.selectedRaceId)) {
         this.state.selectedRaceId = this.races[0].id;
-        this.state.selectedRunnerNo = this.races[0].runners[0] ? this.races[0].runners[0].no : null;
-        return;
       }
       var race = this.getRace();
       if (!race || !race.runners || !race.runners.length) return;
+      var visible = this.getVisibleRunners(race);
+      if (!visible.length) {
+        this.state.selectedRunnerNo = race.runners[0].no;
+        return;
+      }
       var found = false;
-      for (var i = 0; i < race.runners.length; i++) {
-        if (race.runners[i].no === this.state.selectedRunnerNo) {
+      for (var i = 0; i < visible.length; i++) {
+        if (visible[i].no === this.state.selectedRunnerNo) {
           found = true;
           break;
         }
       }
-      if (!found) this.state.selectedRunnerNo = race.runners[0].no;
+      if (!found) this.state.selectedRunnerNo = visible[0].no;
     },
 
     saveActiveMeetingToStore: function () {
@@ -355,6 +529,11 @@
         selectedRunnerNo: this.state.selectedRunnerNo,
         meetingLabel: this.state.meetingLabel || "",
         loadedMeetingPath: this.state.loadedMeetingPath || "",
+        meetingCardSource: this.state.meetingCardSource || "",
+        tabVenueCode: this.state.tabVenueCode || "",
+        meetingDate: this.state.meetingDate || "",
+        meetingVenue: this.state.meetingVenue || "",
+        hideScratched: !!this.state.hideScratched,
         races: this.races || [],
         tapCount: this.state.tapCount || 0,
       };
@@ -427,6 +606,18 @@
         this.races = saved.races;
       }
 
+      if (options.hideScratched != null) {
+        this.state.hideScratched = !!options.hideScratched;
+      } else if (savedMatchesKey && saved && saved.hideScratched != null) {
+        this.state.hideScratched = !!saved.hideScratched;
+      } else if (!isDifferentMeeting && saved && saved.hideScratched != null) {
+        this.state.hideScratched = !!saved.hideScratched;
+      } else if (this.state.meetingCardSource) {
+        this.setHideScratchedDefaultForSource(this.state.meetingCardSource);
+      } else {
+        this.state.hideScratched = false;
+      }
+
       this.activeMeetingId = newMeetingId;
       this.activeMeetingKey = newMeetingKey;
       this.normalizeSelection();
@@ -451,12 +642,18 @@
         races: this.races,
         onChange: function () {
           self.renderResultedSpPanel();
+          self.updateMeetingHealthPanel();
+          self.bump();
+          if (window.ResultedSpDom && typeof console !== "undefined") {
+            console.log("[resulted-sp] rendered", { meetingId: self.activeMeetingId });
+          }
         },
       });
       this.renderResultedSpPanel();
     },
 
     renderResultedSpPanel: function () {
+      if (typeof document === "undefined") return;
       var rsp = window.ResultedSpDom;
       var el = document.getElementById("iy-resulted-sp-panel");
       if (!rsp || !el || !this.activeMeetingId || !this.races || !this.races.length) {
@@ -517,6 +714,460 @@
 
     persist: function () {
       this.saveActiveMeetingToStore();
+      this.noteAssessmentPersistForBackupReminder();
+    },
+
+    readBackupReminderState: function () {
+      try {
+        if (typeof sessionStorage === "undefined") {
+          return { meetingId: "", savesSinceBackup: 0, resultImportPending: false };
+        }
+        var raw = sessionStorage.getItem(BACKUP_REMINDER_KEY);
+        if (!raw) return { meetingId: "", savesSinceBackup: 0, resultImportPending: false };
+        var parsed = JSON.parse(raw);
+        return {
+          meetingId: String(parsed.meetingId || ""),
+          savesSinceBackup: Number(parsed.savesSinceBackup) || 0,
+          resultImportPending: !!parsed.resultImportPending,
+        };
+      } catch (e) {
+        return { meetingId: "", savesSinceBackup: 0, resultImportPending: false };
+      }
+    },
+
+    writeBackupReminderState: function (state) {
+      try {
+        if (typeof sessionStorage === "undefined") return;
+        sessionStorage.setItem(BACKUP_REMINDER_KEY, JSON.stringify(state || {}));
+      } catch (e) {
+        /* ignore */
+      }
+    },
+
+    resetBackupReminder: function (meetingId) {
+      meetingId = String(meetingId || this.activeMeetingId || "").trim();
+      this.backupReminderDismissedFor = "";
+      this.writeBackupReminderState({
+        meetingId: meetingId,
+        savesSinceBackup: 0,
+        resultImportPending: false,
+      });
+      this.hideBackupReminderBanner();
+      this.updateMeetingHealthPanel();
+    },
+
+    noteAssessmentPersistForBackupReminder: function () {
+      var meetingId = String(this.activeMeetingId || "").trim();
+      if (!meetingId || !this.races || !this.races.length) return;
+      if (this.backupReminderDismissedFor === meetingId) return;
+      var state = this.readBackupReminderState();
+      if (state.meetingId !== meetingId) {
+        state = { meetingId: meetingId, savesSinceBackup: 0, resultImportPending: false };
+      }
+      state.savesSinceBackup += 1;
+      this.writeBackupReminderState(state);
+      if (state.savesSinceBackup >= BACKUP_ASSESSMENT_SAVE_THRESHOLD) {
+        this.showBackupReminderBanner();
+      }
+      this.updateMeetingHealthPanel();
+    },
+
+    noteResultImportForBackupReminder: function (meetingId) {
+      meetingId = String(meetingId || this.activeMeetingId || "").trim();
+      if (!meetingId) return;
+      if (this.backupReminderDismissedFor === meetingId) return;
+      if (!window.ResultedSpDom || !window.ResultedSpDom.loadState) return;
+      var rsp = window.ResultedSpDom.loadState(meetingId);
+      var races = rsp && rsp.races ? rsp.races : {};
+      var hasImported = false;
+      for (var raceNo in races) {
+        if (!Object.prototype.hasOwnProperty.call(races, raceNo)) continue;
+        var raceState = races[raceNo];
+        if (raceState && raceState.guardPassed === true && raceState.status === "imported") {
+          hasImported = true;
+          break;
+        }
+      }
+      if (!hasImported) return;
+      var state = this.readBackupReminderState();
+      if (state.meetingId !== meetingId) {
+        state = { meetingId: meetingId, savesSinceBackup: 0, resultImportPending: false };
+      }
+      state.resultImportPending = true;
+      this.writeBackupReminderState(state);
+      this.showBackupReminderBanner();
+      this.updateMeetingHealthPanel();
+    },
+
+    showBackupReminderBanner: function () {
+      var banner = document.getElementById("iy-backup-reminder-banner");
+      if (banner) banner.classList.remove("iy-hidden");
+    },
+
+    hideBackupReminderBanner: function () {
+      var banner = document.getElementById("iy-backup-reminder-banner");
+      if (banner) banner.classList.add("iy-hidden");
+    },
+
+    dismissBackupReminder: function () {
+      this.bump();
+      var meetingId = String(this.activeMeetingId || "").trim();
+      if (meetingId) this.backupReminderDismissedFor = meetingId;
+      this.hideBackupReminderBanner();
+      this.updateMeetingHealthPanel();
+    },
+
+    isValidMeetingBackupPackage: function (pkg) {
+      if (!pkg || typeof pkg !== "object") return false;
+      if (pkg.kind !== MEETING_BACKUP_KIND) return false;
+      if (Number(pkg.version) !== 1) return false;
+      if (!String(pkg.meetingId || "").trim()) return false;
+      if (!Array.isArray(pkg.races) || !pkg.races.length) return false;
+      if (!pkg.state || typeof pkg.state !== "object") return false;
+      if (!pkg.state.assessments || typeof pkg.state.assessments !== "object") return false;
+      return true;
+    },
+
+    buildMeetingBackupPackage: function () {
+      if (!this.races || !this.races.length) {
+        throw new Error("Load a meeting first.");
+      }
+      var base = this.buildDownloadedMeetingPackage();
+      var meetingId = String(base.meetingId || "").trim();
+      if (!meetingId) {
+        throw new Error("Meeting ID missing — reload the meeting and try again.");
+      }
+      var delivery = window.MeetingExportDelivery;
+      var manifest = base.manifest || (delivery ? delivery.loadMeetingManifest() : null);
+      if (manifest && manifest.meetingId && String(manifest.meetingId) !== meetingId) {
+        throw new Error("Manifest meetingId does not match active meeting.");
+      }
+      var resultedSp = null;
+      if (window.ResultedSpDom && window.ResultedSpDom.loadState) {
+        resultedSp = window.ResultedSpDom.loadState(meetingId);
+      }
+      return {
+        kind: MEETING_BACKUP_KIND,
+        version: 1,
+        backupAt: new Date().toISOString(),
+        meetingId: meetingId,
+        manifest: manifest,
+        meetingPath: base.meetingPath || "",
+        meetingName: base.meetingName || "",
+        track: base.track || "",
+        date: base.date || "",
+        races: base.races,
+        state: base.state,
+        resultedSp: resultedSp,
+        metadata: {
+          meetingCardSource: this.state.meetingCardSource || "",
+          tabVenueCode: this.state.tabVenueCode || "",
+          meetingDate: this.state.meetingDate || "",
+          meetingVenue: this.state.meetingVenue || "",
+          build: cfg.build || "",
+        },
+      };
+    },
+
+    buildMeetingBackupFilename: function (pkg) {
+      pkg = pkg || {};
+      var meetingId = String(pkg.meetingId || "meeting").trim();
+      var stamp = String(pkg.backupAt || new Date().toISOString())
+        .replace(/[:.]/g, "-")
+        .slice(0, 19);
+      return meetingId + "-backup-" + stamp + ".json";
+    },
+
+    showMeetingBackupExportPanel: function (jsonText, filename) {
+      this.meetingBackupExportText = jsonText;
+      this.meetingBackupExportFilename = filename;
+      var overlay = document.getElementById("iy-meeting-backup-export-overlay");
+      var textarea = document.getElementById("iy-meeting-backup-export-text");
+      var filenameEl = document.getElementById("iy-meeting-backup-export-filename");
+      var downloadBtn = document.getElementById("iy-meeting-backup-download-btn");
+      if (filenameEl) filenameEl.textContent = filename;
+      if (textarea) textarea.value = jsonText;
+      if (overlay) overlay.classList.remove("iy-hidden");
+      if (downloadBtn) {
+        if (this.supportsFileDownload()) downloadBtn.classList.remove("iy-hidden");
+        else downloadBtn.classList.add("iy-hidden");
+      }
+    },
+
+    closeMeetingBackupExportPanel: function () {
+      var overlay = document.getElementById("iy-meeting-backup-export-overlay");
+      if (overlay) overlay.classList.add("iy-hidden");
+    },
+
+    selectAllMeetingBackupExport: function () {
+      this.bump();
+      var textarea = document.getElementById("iy-meeting-backup-export-text");
+      if (!textarea) return;
+      textarea.focus();
+      textarea.select();
+      try {
+        textarea.setSelectionRange(0, textarea.value.length);
+      } catch (e) {
+        /* ignore */
+      }
+    },
+
+    downloadMeetingBackupExport: function () {
+      if (!this.supportsFileDownload() || !this.meetingBackupExportText) return;
+      this.bump();
+      try {
+        var blob = new Blob([this.meetingBackupExportText], {
+          type: "application/json;charset=utf-8",
+        });
+        var url = URL.createObjectURL(blob);
+        var link = document.createElement("a");
+        link.href = url;
+        link.download = this.meetingBackupExportFilename || "meeting-backup.json";
+        link.rel = "noopener";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+      } catch (e) {
+        this.setImportMsg("Download failed: " + e.message);
+      }
+    },
+
+    exportMeetingBackup: function () {
+      this.bump();
+      var self = this;
+      try {
+        var pkg = self.buildMeetingBackupPackage();
+        var jsonText = JSON.stringify(pkg, null, 2);
+        var filename = self.buildMeetingBackupFilename(pkg);
+        self.recordLastBackupAt(pkg.meetingId);
+        self.resetBackupReminder(pkg.meetingId);
+        if (self.supportsFileDownload()) {
+          self.meetingBackupExportText = jsonText;
+          self.meetingBackupExportFilename = filename;
+          self.downloadMeetingBackupExport();
+          self.setImportMsg("Meeting backup saved — " + filename);
+          return;
+        }
+        self.showMeetingBackupExportPanel(jsonText, filename);
+        self.setImportMsg("Meeting backup ready — copy JSON below.");
+      } catch (e) {
+        self.setImportMsg("Backup failed: " + (e && e.message ? e.message : String(e)));
+      }
+    },
+
+    showMeetingBackupImportPanel: function () {
+      var overlay = document.getElementById("iy-meeting-backup-import-overlay");
+      var textarea = document.getElementById("iy-meeting-backup-import-text");
+      if (textarea) textarea.value = "";
+      if (overlay) overlay.classList.remove("iy-hidden");
+    },
+
+    closeMeetingBackupImportPanel: function () {
+      var overlay = document.getElementById("iy-meeting-backup-import-overlay");
+      if (overlay) overlay.classList.add("iy-hidden");
+    },
+
+    importMeetingBackupFromPanel: function () {
+      var textarea = document.getElementById("iy-meeting-backup-import-text");
+      if (!textarea || !String(textarea.value || "").trim()) {
+        this.setImportMsg("Paste meeting backup JSON first.");
+        return;
+      }
+      try {
+        var pkg = JSON.parse(textarea.value);
+        this.restoreMeetingBackup(pkg);
+        this.closeMeetingBackupImportPanel();
+      } catch (e) {
+        this.setImportMsg("Restore failed: " + (e && e.message ? e.message : String(e)));
+      }
+    },
+
+    importMeetingBackupFile: function (input) {
+      var file = input && input.files && input.files[0];
+      if (!file) return;
+      var self = this;
+      var reader = new FileReader();
+      reader.onload = function () {
+        try {
+          var pkg = JSON.parse(String(reader.result || ""));
+          self.restoreMeetingBackup(pkg);
+          input.value = "";
+          self.closeMeetingBackupImportPanel();
+        } catch (e) {
+          self.setImportMsg("Restore failed: " + e.message);
+        }
+      };
+      reader.onerror = function () {
+        self.setImportMsg("Could not read backup file.");
+      };
+      reader.readAsText(file);
+    },
+
+    applyMeetingBackupPackage: function (pkg) {
+      var meetingId = String(pkg.meetingId || "").trim();
+      if (!meetingId) throw new Error("Backup has no meetingId.");
+      if (pkg.manifest && pkg.manifest.meetingId && String(pkg.manifest.meetingId) !== meetingId) {
+        throw new Error("Backup manifest meetingId does not match backup meetingId.");
+      }
+
+      this.races = pkg.races;
+      var st = pkg.state || {};
+      this.state.meetingLabel = st.meetingLabel || pkg.meetingName || "";
+      this.state.loadedMeetingPath = st.loadedMeetingPath || pkg.meetingPath || "";
+      this.setMeetingCardMeta({
+        source: st.meetingCardSource || (pkg.metadata && pkg.metadata.meetingCardSource) || "",
+        tabVenueCode: st.tabVenueCode || (pkg.metadata && pkg.metadata.tabVenueCode) || "",
+        meetingDate: st.meetingDate || pkg.date || (pkg.metadata && pkg.metadata.meetingDate) || "",
+        meetingVenue: st.meetingVenue || pkg.track || (pkg.metadata && pkg.metadata.meetingVenue) || "",
+      });
+      if (st.hideScratched != null) {
+        this.state.hideScratched = !!st.hideScratched;
+      } else if (this.state.meetingCardSource) {
+        this.setHideScratchedDefaultForSource(this.state.meetingCardSource);
+      }
+
+      var delivery = window.MeetingExportDelivery;
+      if (pkg.manifest && delivery) {
+        delivery.saveMeetingManifest(pkg.manifest);
+      } else {
+        this.syncMeetingManifest({
+          meetingPath: this.state.loadedMeetingPath,
+          trackName: pkg.track || this.state.meetingVenue,
+          date: pkg.date || this.state.meetingDate,
+        });
+      }
+
+      var manifest = pkg.manifest || this.syncMeetingManifest() || {};
+      if (manifest.meetingId && String(manifest.meetingId) !== meetingId) {
+        throw new Error("Cannot restore: manifest meetingId does not match backup.");
+      }
+
+      var assessments = st.assessments || {};
+      var selectedRaceId =
+        st.selectedRaceId || (pkg.races[0] && pkg.races[0].id) || null;
+      var selectedRunnerNo =
+        st.selectedRunnerNo != null
+          ? st.selectedRunnerNo
+          : pkg.races[0] && pkg.races[0].runners && pkg.races[0].runners[0]
+            ? pkg.races[0].runners[0].no
+            : null;
+
+      this.activateMeetingSession(manifest, {
+        assessments: assessments,
+        keepRaces: true,
+        keepMeetingMeta: true,
+        selectedRaceId: selectedRaceId,
+        selectedRunnerNo: selectedRunnerNo,
+        meetingPath: this.state.loadedMeetingPath,
+        date: pkg.date || manifest.date || "",
+        trackName: pkg.track || manifest.trackName || "",
+      });
+      this.activeMeetingId = meetingId;
+
+      if (pkg.resultedSp && window.ResultedSpDom && window.ResultedSpDom.saveState) {
+        var rsp = pkg.resultedSp;
+        rsp.meetingId = meetingId;
+        window.ResultedSpDom.saveState(rsp);
+      }
+
+      this.persistRaces();
+      this.persist();
+      this.refreshResultedSpPoller(manifest);
+      this.updateMeetingMetaDisplay();
+      this.showAssess();
+      this.render();
+    },
+
+    restoreMeetingBackup: function (pkg, options) {
+      options = options || {};
+      if (!this.isValidMeetingBackupPackage(pkg)) {
+        throw new Error("Invalid meeting backup JSON.");
+      }
+      var backupMeetingId = String(pkg.meetingId).trim();
+      var activeId = String(this.activeMeetingId || "").trim();
+      if (!options.skipConfirm) {
+        var msg =
+          "Restore backup for " +
+          backupMeetingId +
+          "?\n\nLocal assessments and Resulted SP for this meeting will be replaced.";
+        if (activeId && activeId !== backupMeetingId) {
+          msg =
+            "Active meeting is " +
+            activeId +
+            " but backup is for " +
+            backupMeetingId +
+            ".\n\nRestore will load " +
+            backupMeetingId +
+            " and replace its local data.";
+        }
+        if (!window.confirm(msg)) return false;
+      }
+      this.applyMeetingBackupPackage(pkg);
+      this.resetBackupReminder(backupMeetingId);
+      this.setImportMsg("Restored meeting backup for " + backupMeetingId + ".");
+      return true;
+    },
+
+    clearMeetingLocalData: function (meetingId, options) {
+      options = options || {};
+      meetingId = String(meetingId || this.activeMeetingId || "").trim();
+      if (!meetingId) return;
+      if (
+        !options.skipConfirm &&
+        !window.confirm("Clear all local iPad data for " + meetingId + "?")
+      ) {
+        return;
+      }
+      try {
+        var store = this.readMeetingStore();
+        delete store.meetings[meetingId];
+        if (store.activeMeetingId === meetingId) {
+          store.activeMeetingId = "";
+          store.activeMeetingKey = "";
+        }
+        this.writeMeetingStore(store);
+      } catch (e) {
+        /* ignore */
+      }
+      if (window.ResultedSpDom && window.ResultedSpDom.clearMeetingResults) {
+        window.ResultedSpDom.clearMeetingResults(meetingId);
+      }
+      try {
+        var delivery = window.MeetingExportDelivery;
+        if (delivery) {
+          var manifest = delivery.loadMeetingManifest();
+          if (manifest && String(manifest.meetingId) === meetingId) {
+            localStorage.removeItem(MANIFEST_KEY);
+          }
+        }
+        if (this.activeMeetingId === meetingId) {
+          localStorage.removeItem(RACES_KEY);
+        }
+      } catch (e) {
+        /* ignore */
+      }
+      if (this.activeMeetingId === meetingId) {
+        this.activeMeetingId = "";
+        this.activeMeetingKey = "";
+        this.races = [];
+        this.resetSessionState();
+        this.state.meetingLabel = "";
+        this.state.loadedMeetingPath = "";
+        this.setMeetingCardMeta({
+          source: "",
+          tabVenueCode: "",
+          meetingDate: "",
+          meetingVenue: "",
+        });
+        this.state.selectedRaceId = null;
+        this.state.selectedRunnerNo = null;
+        if (this.resultedSpPoller && this.resultedSpPoller.stop) {
+          this.resultedSpPoller.stop();
+        }
+        this.renderResultedSpPanel();
+        this.updateMeetingMetaDisplay();
+      }
     },
 
     persistRaces: function () {
@@ -549,6 +1200,11 @@
           this.state.selectedRunnerNo = saved.selectedRunnerNo;
           this.state.meetingLabel = saved.meetingLabel || "";
           this.state.loadedMeetingPath = saved.loadedMeetingPath || "";
+          this.state.meetingCardSource = saved.meetingCardSource || "";
+          this.state.tabVenueCode = saved.tabVenueCode || "";
+          this.state.meetingDate = saved.meetingDate || "";
+          this.state.meetingVenue = saved.meetingVenue || "";
+          this.state.hideScratched = saved.hideScratched != null ? !!saved.hideScratched : false;
           if (saved.tapCount != null) this.state.tapCount = saved.tapCount;
           if (saved.races && saved.races.length) this.races = saved.races;
         }
@@ -583,6 +1239,148 @@
       var date = manifest.date || "";
       if (track && date) this.state.meetingLabel = track + " · " + date;
       else this.state.meetingLabel = track || date || this.state.meetingLabel;
+    },
+
+    setMeetingCardMeta: function (meta) {
+      meta = meta || {};
+      if (meta.source != null) this.state.meetingCardSource = String(meta.source || "");
+      if (meta.tabVenueCode != null) this.state.tabVenueCode = String(meta.tabVenueCode || "");
+      if (meta.meetingDate != null) this.state.meetingDate = String(meta.meetingDate || "");
+      if (meta.meetingVenue != null) this.state.meetingVenue = String(meta.meetingVenue || "");
+    },
+
+    getMeetingExportContext: function () {
+      var delivery = window.MeetingExportDelivery;
+      var manifest = this.syncMeetingManifest();
+      if (!manifest && delivery) manifest = delivery.loadMeetingManifest();
+      return {
+        meetingId: this.activeMeetingId || (manifest && manifest.meetingId) || "",
+        date: this.state.meetingDate || (manifest && manifest.date) || "",
+        venue:
+          this.state.meetingVenue ||
+          (manifest && manifest.trackName) ||
+          (manifest && manifest.trackSlug) ||
+          "",
+        meetingCardSource: this.state.meetingCardSource || "",
+        tabVenueCode: this.state.tabVenueCode || "",
+      };
+    },
+
+    normalizeRaceNoForExport: function (raceId) {
+      return String(raceId || "").replace(/^R/i, "");
+    },
+
+    getResultedSpGuardPassed: function (raceNo) {
+      if (!window.ResultedSpDom || !this.activeMeetingId) return "";
+      if (!window.ResultedSpDom.getRaceImportState) return "";
+      var st = window.ResultedSpDom.getRaceImportState(this.activeMeetingId, raceNo);
+      if (!st) return "";
+      if (st.guardPassed === true) return "true";
+      if (st.guardPassed === false) return "false";
+      return "";
+    },
+
+    getResultExportDiagnostics: function (raceNo) {
+      var empty = {
+        resultImportStatus: "",
+        resultImportedAt: "",
+        resultRunnerOverlapCount: "",
+        resultYardRunnerCount: "",
+        resultTabRunnerCount: "",
+        resultedSpGuardPassed: "",
+      };
+      if (!window.ResultedSpDom || !this.activeMeetingId || !window.ResultedSpDom.getRaceImportState) {
+        return empty;
+      }
+      var st = window.ResultedSpDom.getRaceImportState(this.activeMeetingId, raceNo);
+      if (!st) return empty;
+      var meta = st.guardMeta || {};
+      return {
+        resultImportStatus: st.resultImportStatus || st.status || "",
+        resultImportedAt: st.importedAt || (meta && meta.importedAt) || "",
+        resultRunnerOverlapCount:
+          meta.runnerOverlapCount != null ? String(meta.runnerOverlapCount) : "",
+        resultYardRunnerCount: meta.yardRunnerCount != null ? String(meta.yardRunnerCount) : "",
+        resultTabRunnerCount: meta.tabRunnerCount != null ? String(meta.tabRunnerCount) : "",
+        resultedSpGuardPassed: this.getResultedSpGuardPassed(raceNo),
+      };
+    },
+
+    getRaceResultsStatusLabel: function (raceId) {
+      if (!window.ResultedSpDom || !this.activeMeetingId || !window.ResultedSpDom.getRaceResultsStatus) {
+        return null;
+      }
+      return window.ResultedSpDom.getRaceResultsStatus(
+        this.activeMeetingId,
+        this.normalizeRaceNoForExport(raceId),
+      );
+    },
+
+    allRunnersWirUnavailable: function () {
+      if (!this.races || !this.races.length) return false;
+      var total = 0;
+      var naCount = 0;
+      for (var r = 0; r < this.races.length; r++) {
+        var runners = this.races[r].runners || [];
+        for (var u = 0; u < runners.length; u++) {
+          total++;
+          var wir = runners[u].w_ir;
+          if (wir == null || wir === "" || String(wir).toUpperCase() === "N/A") naCount++;
+        }
+      }
+      return total > 0 && naCount === total;
+    },
+
+    updateMeetingMetaDisplay: function () {
+      var bar = document.getElementById("iy-meeting-card-bar");
+      var badge = document.getElementById("iy-meeting-card-badge");
+      var metaEl = document.getElementById("iy-meeting-card-meta");
+      var wirWarn = document.getElementById("iy-wir-warning");
+      var hasRaces = this.races && this.races.length > 0;
+      var source = this.state.meetingCardSource || "";
+
+      if (bar) {
+        if (hasRaces && source) bar.classList.remove("iy-hidden");
+        else bar.classList.add("iy-hidden");
+      }
+
+      if (badge) {
+        if (!hasRaces || !source) {
+          badge.textContent = "";
+          badge.className = "iy-meeting-card-badge";
+        } else if (source === "tab") {
+          badge.textContent = "LIVE TAB CARD";
+          badge.className = "iy-meeting-card-badge iy-meeting-card-badge-tab";
+        } else {
+          badge.textContent = "CSV CARD";
+          badge.className = "iy-meeting-card-badge iy-meeting-card-badge-csv";
+        }
+      }
+
+      var ctx = this.getMeetingExportContext();
+      var date = ctx.date || "";
+      var venue = ctx.venue || "";
+      var venueCode = ctx.tabVenueCode || "";
+
+      if (metaEl) {
+        if (!hasRaces) {
+          metaEl.textContent = "";
+        } else {
+          var parts = [];
+          if (venueCode) parts.push(venueCode);
+          if (venue) parts.push(venue);
+          if (date) parts.push(date);
+          metaEl.textContent = parts.join(" · ");
+        }
+      }
+
+      if (wirWarn) {
+        if (source === "tab" && hasRaces && this.allRunnersWirUnavailable()) {
+          wirWarn.classList.remove("iy-hidden");
+        } else {
+          wirWarn.classList.add("iy-hidden");
+        }
+      }
     },
 
     getMeetingDate: function () {
@@ -829,6 +1627,7 @@
         else saveToLaptopBtn.classList.add("iy-hidden");
       }
       this.updateCountdownDisplay();
+      this.updateMeetingMetaDisplay();
     },
 
     canSaveToLaptop: function () {
@@ -869,6 +1668,11 @@
           assessments: this.state.assessments,
           meetingLabel: this.state.meetingLabel,
           loadedMeetingPath: this.state.loadedMeetingPath,
+          meetingCardSource: this.state.meetingCardSource,
+          tabVenueCode: this.state.tabVenueCode,
+          meetingDate: this.state.meetingDate,
+          meetingVenue: this.state.meetingVenue,
+          hideScratched: !!this.state.hideScratched,
         },
       };
     },
@@ -906,6 +1710,12 @@
       this.races = pkg.races;
       this.state.meetingLabel = pkg.meetingName || (pkg.state && pkg.state.meetingLabel) || "";
       this.state.loadedMeetingPath = pkg.meetingPath || (pkg.state && pkg.state.loadedMeetingPath) || "";
+      this.setMeetingCardMeta({
+        source: (pkg.state && pkg.state.meetingCardSource) || "downloaded",
+        tabVenueCode: (pkg.state && pkg.state.tabVenueCode) || "",
+        meetingDate: pkg.date || (pkg.state && pkg.state.meetingDate) || "",
+        meetingVenue: pkg.track || (pkg.state && pkg.state.meetingVenue) || "",
+      });
       this.syncMeetingManifest({
         meetingPath: this.state.loadedMeetingPath,
         trackName: pkg.track || this.state.meetingLabel,
@@ -980,6 +1790,7 @@
       else this.render();
       this.updateDownloadedBadge();
       this.updateMeetingToolbar();
+      this.updateMeetingMetaDisplay();
     },
 
     showDownloadPanel: function (pkg) {
@@ -1129,11 +1940,18 @@
       this.resetSessionState();
       this.state.meetingLabel = "";
       this.state.loadedMeetingPath = "";
+      this.setMeetingCardMeta({
+        source: "",
+        tabVenueCode: "",
+        meetingDate: "",
+        meetingVenue: "",
+      });
       this.state.selectedRaceId = null;
       this.state.selectedRunnerNo = null;
       this.updateDownloadedBadge();
       this.updateMeetingToolbar();
       this.setText("iy-meeting-label", "");
+      this.updateMeetingMetaDisplay();
       this.setImportMsg("");
       this.setLibraryMsg("Choose a meeting to start.");
       this.showLibrary();
@@ -1457,7 +2275,9 @@
       this.state.selectedRaceId = raceId;
       var race = this.getRace();
       if (race && race.runners && race.runners.length) {
-        this.state.selectedRunnerNo = race.runners[0].no;
+        var visible = this.getVisibleRunners(race);
+        if (visible.length) this.state.selectedRunnerNo = visible[0].no;
+        else this.state.selectedRunnerNo = race.runners[0].no;
       }
       this.persist();
       this.render();
@@ -1613,15 +2433,16 @@
       this.bump();
       this.gearPickerOpen = null;
       var race = this.getRace();
-      if (!race || !race.runners || !race.runners.length) return;
+      var runners = race ? this.getVisibleRunners(race) : [];
+      if (!runners.length) return;
       var idx = 0;
-      for (var i = 0; i < race.runners.length; i++) {
-        if (race.runners[i].no === this.state.selectedRunnerNo) {
+      for (var i = 0; i < runners.length; i++) {
+        if (runners[i].no === this.state.selectedRunnerNo) {
           idx = i;
           break;
         }
       }
-      var next = race.runners[(idx + 1) % race.runners.length];
+      var next = runners[(idx + 1) % runners.length];
       this.state.selectedRunnerNo = next.no;
       this.markRunnerReviewed(this.makeKey(race.id, next.no));
       this.persist();
@@ -1632,16 +2453,17 @@
       this.bump();
       this.gearPickerOpen = null;
       var race = this.getRace();
-      if (!race || !race.runners || !race.runners.length) return;
+      var runners = race ? this.getVisibleRunners(race) : [];
+      if (!runners.length) return;
       var idx = 0;
-      for (var i = 0; i < race.runners.length; i++) {
-        if (race.runners[i].no === this.state.selectedRunnerNo) {
+      for (var i = 0; i < runners.length; i++) {
+        if (runners[i].no === this.state.selectedRunnerNo) {
           idx = i;
           break;
         }
       }
-      var len = race.runners.length;
-      var prev = race.runners[(idx - 1 + len) % len];
+      var len = runners.length;
+      var prev = runners[(idx - 1 + len) % len];
       this.state.selectedRunnerNo = prev.no;
       this.markRunnerReviewed(this.makeKey(race.id, prev.no));
       this.persist();
@@ -1688,6 +2510,26 @@
       for (var i = 0; i < this.races.length; i++) {
         var race = this.races[i];
         var active = race.id === this.state.selectedRaceId ? " iy-race-active" : "";
+        var rsDot = "";
+        var rsStatus = this.getRaceResultsStatusLabel(race.id);
+        if (rsStatus && rsStatus.code) {
+          rsDot =
+            '<span class="iy-race-rs-dot iy-race-rs-' +
+            rsStatus.code +
+            '" title="' +
+            escapeAttr(rsStatus.label) +
+            '"></span>';
+        }
+        var complete = this.getRaceCompleteness(race);
+        var completeBadge = "";
+        if (complete.total > 0) {
+          completeBadge =
+            '<span class="iy-race-complete" title="Assessed / active runners">' +
+            complete.assessed +
+            "/" +
+            complete.total +
+            "</span>";
+        }
         html +=
           '<button type="button" class="iy-race-tab' +
           active +
@@ -1695,6 +2537,8 @@
           escapeAttr(race.id) +
           "')\">" +
           escapeHtml(race.id) +
+          completeBadge +
+          rsDot +
           "</button>";
       }
       return html;
@@ -1704,15 +2548,34 @@
       var race = this.getRace();
       if (!race) return "";
       var html = "";
-      for (var i = 0; i < race.runners.length; i++) {
-        var runner = race.runners[i];
+      var runners = this.getVisibleRunners(race);
+      for (var i = 0; i < runners.length; i++) {
+        var runner = runners[i];
         var rkey = this.makeKey(race.id, runner.no);
         var assessment = this.state.assessments[rkey];
         var meta = this.runnerTileMeta(assessment);
+        var resultLine = "";
+        if (window.ResultedSpDom && this.activeMeetingId && window.ResultedSpDom.getRunnerResult) {
+          var result = window.ResultedSpDom.getRunnerResult(
+            this.activeMeetingId,
+            race.id.replace(/^R/i, ""),
+            runner.no,
+            runner.horse,
+          );
+          if (result && (result.finishPosition || result.sp)) {
+            var parts = [];
+            if (result.finishPosition) parts.push("Fin " + result.finishPosition);
+            if (result.sp) parts.push("SP " + result.sp);
+            if (result.margin) parts.push("Marg " + result.margin);
+            resultLine = parts.join(" · ");
+          }
+        }
         var active = runner.no === this.state.selectedRunnerNo ? " iy-runner-active" : "";
+        var scratchedCls = this.isRunnerScratched(runner) ? " iy-runner-scratched" : "";
         html +=
           '<button type="button" class="iy-runner-tile ' +
           meta.scoreClass +
+          scratchedCls +
           active +
           '" onclick="window.ipadYard.selectRunner(' +
           runner.no +
@@ -1723,6 +2586,9 @@
           " " +
           escapeHtml(runner.horse) +
           "</span>";
+        if (resultLine) {
+          html += '<span class="iy-runner-netline">' + escapeHtml(resultLine) + "</span>";
+        }
         if (meta.netLine) {
           html += '<span class="iy-runner-netline">' + escapeHtml(meta.netLine) + "</span>";
         }
@@ -1897,6 +2763,8 @@
       var currentKey = race && runner ? this.makeKey(race.id, runner.no) : null;
 
       this.setText("iy-meeting-label", this.state.meetingLabel || "");
+      this.updateMeetingMetaDisplay();
+      this.updateMeetingHealthPanel();
 
       var raceTabs = document.getElementById("iy-race-tabs");
       if (raceTabs) raceTabs.innerHTML = this.buildRaceTabs();
@@ -1969,18 +2837,237 @@
       }
     },
 
+    buildCategoryFactorKeys: function (group) {
+      if (!group) return { positives: [], negatives: [] };
+      if (group.kind === "sweat") {
+        return {
+          positives: [cfg.sweatPosKey || "Clean+"],
+          negatives: ["BH-", "K-", "N-", "BS-"],
+        };
+      }
+      return {
+        positives: group.positives ? group.positives.slice() : [],
+        negatives: group.negatives ? group.negatives.slice() : [],
+      };
+    },
+
+    buildCategoryFactorJson: function (assessment, group) {
+      if (!assessment || !group) return "";
+      var keys = this.buildCategoryFactorKeys(group);
+      var pos = {};
+      var neg = {};
+      var has = false;
+      var i;
+      var k;
+      var v;
+      for (i = 0; i < keys.positives.length; i++) {
+        k = keys.positives[i];
+        v = assessment.positive && assessment.positive[k];
+        if (v > 0) {
+          pos[k] = v;
+          has = true;
+        }
+      }
+      for (i = 0; i < keys.negatives.length; i++) {
+        k = keys.negatives[i];
+        v = assessment.negative && assessment.negative[k];
+        if (v < 0) {
+          neg[k] = v;
+          has = true;
+        }
+      }
+      if (!has) return "";
+      return JSON.stringify({ positive: pos, negative: neg });
+    },
+
+    buildCategoryJsonByName: function (assessment, title) {
+      var target = String(title || "").toUpperCase();
+      for (var g = 0; g < this.factorGroups.length; g++) {
+        var group = this.factorGroups[g];
+        if (group.kind === "sweat" && target === "SWEAT") {
+          return this.buildCategoryFactorJson(assessment, group);
+        }
+        if (group.kind === "rows" && String(group.title || "").toUpperCase() === target) {
+          return this.buildCategoryFactorJson(assessment, group);
+        }
+      }
+      return "";
+    },
+
+    buildPhysicalCategoryJson: function (assessment) {
+      if (!assessment) return "";
+      var gear = assessment.gear || {};
+      var wet = assessment.wet || {};
+      var hasGear = false;
+      var gearKeys = Object.keys(gear);
+      for (var i = 0; i < gearKeys.length; i++) {
+        if (gear[gearKeys[i]] && gear[gearKeys[i]].length) {
+          hasGear = true;
+          break;
+        }
+      }
+      var hasWet = Boolean((wet.bodyType && String(wet.bodyType).trim()) || (wet.feet && String(wet.feet).trim()));
+      if (!hasGear && !hasWet) return "";
+      return JSON.stringify({ gear: gear, wet: wet });
+    },
+
+    buildGearOnlyJson: function (assessment) {
+      if (!assessment || !assessment.gear) return "";
+      var gear = assessment.gear;
+      var keys = Object.keys(gear);
+      var has = false;
+      for (var i = 0; i < keys.length; i++) {
+        if (gear[keys[i]] && gear[keys[i]].length) {
+          has = true;
+          break;
+        }
+      }
+      if (!has) return "";
+      return JSON.stringify(gear);
+    },
+
+    getRunnerResultForReviewExport: function (raceNo, runner) {
+      var empty = { finishPosition: "", sp: "", margin: "" };
+      if (!window.ResultedSpDom || !this.activeMeetingId || !window.ResultedSpDom.getRaceImportState) {
+        return empty;
+      }
+      var st = window.ResultedSpDom.getRaceImportState(this.activeMeetingId, raceNo);
+      if (!st || st.guardPassed !== true || st.resultImportStatus !== "imported") {
+        return empty;
+      }
+      if (!window.ResultedSpDom.getRunnerResult) return empty;
+      var result = window.ResultedSpDom.getRunnerResult(
+        this.activeMeetingId,
+        raceNo,
+        runner.no,
+        runner.horse,
+      );
+      if (!result) return empty;
+      return {
+        finishPosition:
+          result.finishPosition === "" || result.finishPosition == null
+            ? ""
+            : String(result.finishPosition),
+        sp: result.sp || "",
+        margin: result.margin || "",
+      };
+    },
+
+    buildRaceReviewCsvText: function () {
+      var headers = [
+        "meetingId",
+        "date",
+        "venue",
+        "meeting_card_source",
+        "tab_venue_code",
+        "raceNo",
+        "runnerNo",
+        "runnerName",
+        "scratched",
+        "w_ir",
+        "finish_position",
+        "sp",
+        "margin",
+        "result_import_status",
+        "resulted_sp_guard_passed",
+        "total_positive",
+        "total_negative",
+        "net",
+        "physical_json",
+        "sweat_json",
+        "coat_json",
+        "muscle_json",
+        "behaviour_json",
+        "walk_json",
+        "condition_json",
+        "gear_json",
+        "notes",
+      ];
+      var lines = [headers.join(",")];
+      var self = this;
+      var ctx = this.getMeetingExportContext();
+
+      for (var r = 0; r < this.races.length; r++) {
+        var race = this.races[r];
+        var raceNo = this.normalizeRaceNoForExport(race.id);
+        var resultDiag = this.getResultExportDiagnostics(raceNo);
+        for (var u = 0; u < race.runners.length; u++) {
+          var runner = race.runners[u];
+          var key = this.makeKey(race.id, runner.no);
+          var a = this.state.assessments[key] || null;
+          var totals = a ? this.totals(a) : null;
+          var results = this.getRunnerResultForReviewExport(raceNo, runner);
+          lines.push(
+            [
+              ctx.meetingId,
+              ctx.date,
+              ctx.venue,
+              ctx.meetingCardSource,
+              ctx.tabVenueCode,
+              raceNo,
+              runner.no,
+              runner.horse,
+              runner.scratched ? "1" : "0",
+              runner.w_ir != null && runner.w_ir !== "" ? runner.w_ir : "N/A",
+              results.finishPosition,
+              results.sp,
+              results.margin,
+              resultDiag.resultImportStatus,
+              resultDiag.resultedSpGuardPassed,
+              totals ? totals.pos : "",
+              totals ? totals.neg : "",
+              totals ? totals.net : "",
+              self.buildPhysicalCategoryJson(a),
+              self.buildCategoryJsonByName(a, "SWEAT"),
+              self.buildCategoryJsonByName(a, "COAT"),
+              self.buildCategoryJsonByName(a, "MUSCLE"),
+              self.buildCategoryJsonByName(a, "BEHAVIOUR"),
+              self.buildCategoryJsonByName(a, "WALK"),
+              self.buildCategoryJsonByName(a, "CONDITION"),
+              self.buildGearOnlyJson(a),
+              a ? a.notes || "" : "",
+            ]
+              .map(function (v) {
+                return self.csvEscape(v);
+              })
+              .join(","),
+          );
+        }
+      }
+
+      return lines.join("\n");
+    },
+
     buildExportCsvText: function () {
       var headers = [
-        "assessment_key",
+        "meetingId",
+        "date",
+        "venue",
+        "meeting_card_source",
+        "tab_venue_code",
+        "raceNo",
         "race_id",
         "race_title",
+        "runnerNo",
         "runner_no",
+        "runnerName",
         "horse",
         "barrier",
+        "w_ir",
+        "scratched",
         "trainer",
         "jockey",
         "odds",
         "official_sp",
+        "finish_position",
+        "sp",
+        "margin",
+        "resulted_sp_guard_passed",
+        "result_import_status",
+        "result_imported_at",
+        "result_runner_overlap_count",
+        "result_yard_runner_count",
+        "result_tab_runner_count",
         "positive_json",
         "negative_json",
         "gear_json",
@@ -1991,37 +3078,83 @@
         "total_negative",
         "net",
         "updated_at",
+        "assessment_key",
       ];
       var lines = [headers.join(",")];
       var self = this;
+      var ctx = this.getMeetingExportContext();
 
       for (var r = 0; r < this.races.length; r++) {
         var race = this.races[r];
+        var raceNo = this.normalizeRaceNoForExport(race.id);
+        var guardPassed = this.getResultedSpGuardPassed(raceNo);
+        var resultDiag = this.getResultExportDiagnostics(raceNo);
         for (var u = 0; u < race.runners.length; u++) {
           var runner = race.runners[u];
           var key = this.makeKey(race.id, runner.no);
           var a = this.state.assessments[key];
           var totals = this.totals(a);
           var officialSp = "";
+          var finishPosition = "";
+          var sp = "";
+          var margin = "";
           if (window.ResultedSpDom && this.activeMeetingId) {
-            officialSp = window.ResultedSpDom.getOfficialSp(
-              this.activeMeetingId,
-              race.id.replace(/^R/i, ""),
-              runner.no,
-            );
+            if (window.ResultedSpDom.getRunnerResult) {
+              var result = window.ResultedSpDom.getRunnerResult(
+                this.activeMeetingId,
+                raceNo,
+                runner.no,
+                runner.horse,
+              );
+              if (result) {
+                officialSp = result.sp || "";
+                sp = result.sp || "";
+                finishPosition =
+                  result.finishPosition === "" || result.finishPosition == null
+                    ? ""
+                    : String(result.finishPosition);
+                margin = result.margin || "";
+              }
+            } else {
+              officialSp = window.ResultedSpDom.getOfficialSp(
+                this.activeMeetingId,
+                raceNo,
+                runner.no,
+                runner.horse,
+              );
+              sp = officialSp;
+            }
           }
           lines.push(
             [
-              key,
+              ctx.meetingId,
+              ctx.date,
+              ctx.venue,
+              ctx.meetingCardSource,
+              ctx.tabVenueCode,
+              raceNo,
               race.id,
               race.title,
               runner.no,
+              runner.no,
+              runner.horse,
               runner.horse,
               runner.br,
+              runner.w_ir != null && runner.w_ir !== "" ? runner.w_ir : "N/A",
+              runner.scratched ? "1" : "0",
               runner.trainer,
               runner.jockey,
               runner.odds,
               officialSp,
+              finishPosition,
+              sp,
+              margin,
+              guardPassed,
+              resultDiag.resultImportStatus,
+              resultDiag.resultImportedAt,
+              resultDiag.resultRunnerOverlapCount,
+              resultDiag.resultYardRunnerCount,
+              resultDiag.resultTabRunnerCount,
               a ? JSON.stringify(a.positive || {}) : "",
               a ? JSON.stringify(a.negative || {}) : "",
               a ? JSON.stringify(a.gear || {}) : "",
@@ -2032,6 +3165,7 @@
               totals.neg,
               totals.net,
               a && a.updatedAt ? a.updatedAt : "",
+              key,
             ]
               .map(function (v) {
                 return self.csvEscape(v);
@@ -2270,6 +3404,88 @@
       }
 
       self.setImportMsg("Exporting…");
+      runFolderExport(manifest, null)
+        .then(function (result) {
+          if (exportSucceeded(result)) {
+            showFolderExportSuccess();
+            return null;
+          }
+          if (!delivery.supportsDirectoryPicker()) {
+            showCsvFallbackPanel();
+            return null;
+          }
+          return delivery.prepareFolderForExport(manifest).then(function (prepared) {
+            return runFolderExport(prepared.manifest, prepared.handle);
+          });
+        })
+        .then(function (retryResult) {
+          if (!retryResult) return;
+          if (exportSucceeded(retryResult)) {
+            showFolderExportSuccess();
+            return;
+          }
+          showCsvFallbackPanel();
+        })
+        .catch(function (e) {
+          if (e && e.name === "AbortError") {
+            self.setImportMsg("Export cancelled.");
+            return;
+          }
+          self.setImportMsg("Export failed: " + (e && e.message ? e.message : String(e)));
+        });
+    },
+
+    exportRaceReviewCsv: function () {
+      this.bump();
+      var self = this;
+      var delivery = window.MeetingExportDelivery;
+      if (!delivery) {
+        self.setImportMsg("Export module not loaded.");
+        return;
+      }
+      if (!self.races || !self.races.length) {
+        self.setImportMsg("Load a meeting first.");
+        return;
+      }
+      var manifest = self.syncMeetingManifest();
+      if (!manifest) {
+        manifest = delivery.loadMeetingManifest();
+      }
+      if (!manifest) {
+        self.setImportMsg("Meeting manifest missing — reload the meeting and try again.");
+        return;
+      }
+      var csvText = self.buildRaceReviewCsvText();
+      var filename = delivery.buildMeetingExportFilename("race-review", manifest);
+
+      if (delivery.needsInPageExportFallback()) {
+        self.showExportPanel(csvText, filename);
+        self.setImportMsg("Race Review CSV ready — copy below.");
+        return;
+      }
+
+      function exportSucceeded(result) {
+        return result && (result.method === "directory" || result.method === "api");
+      }
+
+      function showFolderExportSuccess() {
+        self.setImportMsg("Race Review CSV exported to meeting folder");
+      }
+
+      function showCsvFallbackPanel() {
+        self.showExportPanel(csvText, filename);
+        self.setImportMsg("Race Review CSV ready — copy below.");
+      }
+
+      function runFolderExport(activeManifest, handle) {
+        return delivery.deliverMeetingExport("race-review", csvText, {
+          manifest: activeManifest,
+          directoryHandle: handle || null,
+          folderExportOnly: true,
+        });
+      }
+
+      self.setImportMsg("Exporting Race Review CSV…");
       runFolderExport(manifest, null)
         .then(function (result) {
           if (exportSucceeded(result)) {
@@ -2677,6 +3893,120 @@
       reader.readAsText(file);
     },
 
+    showTabMeetingPanel: function () {
+      this.closeToolbarMenus();
+      var overlay = document.getElementById("iy-tab-meeting-overlay");
+      var input = document.getElementById("iy-tab-venue-input");
+      var msg = document.getElementById("iy-tab-meeting-msg");
+      if (msg) msg.textContent = "";
+      if (input && !String(input.value || "").trim()) input.value = "RKE";
+      if (overlay) overlay.classList.remove("iy-hidden");
+    },
+
+    closeTabMeetingPanel: function () {
+      var overlay = document.getElementById("iy-tab-meeting-overlay");
+      if (overlay) overlay.classList.add("iy-hidden");
+    },
+
+    loadTodayTabMeeting: function () {
+      var self = this;
+      var input = document.getElementById("iy-tab-venue-input");
+      var msg = document.getElementById("iy-tab-meeting-msg");
+      var btn = document.getElementById("iy-tab-meeting-load-btn");
+      var code = input ? input.value : "RKE";
+      if (!window.TabYardMeeting || !window.TabYardMeeting.loadTodayTabMeeting) {
+        if (msg) msg.textContent = "TAB meeting loader is not available.";
+        return;
+      }
+      if (!this.isOnline()) {
+        if (msg) msg.textContent = "Offline — connect to load today's TAB meeting.";
+        return;
+      }
+      if (msg) {
+        msg.textContent = "Loading TAB meeting " + String(code).trim().toUpperCase() + "…";
+      }
+      if (btn) btn.disabled = true;
+      window.TabYardMeeting.loadTodayTabMeeting(code, { jurisdiction: "NSW" })
+        .then(function (payload) {
+          self.closeTabMeetingPanel();
+          self.applyTabMeeting(payload);
+        })
+        .catch(function (err) {
+          if (msg) msg.textContent = err && err.message ? err.message : String(err);
+        })
+        .finally(function () {
+          if (btn) btn.disabled = false;
+        });
+    },
+
+    applyTabMeeting: function (payload) {
+      if (!payload || !payload.races || !payload.races.length) {
+        throw new Error("No races to load from TAB.");
+      }
+      var meta = payload.meta || {};
+      this.races = payload.races;
+      this.state.meetingLabel = meta.meetingLabel || "TAB meeting";
+      this.state.loadedMeetingPath = meta.meetingFolderPath || "";
+      this.setMeetingCardMeta({
+        source: "tab",
+        tabVenueCode: meta.venue || "",
+        meetingDate: meta.date || "",
+        meetingVenue: meta.trackName || "",
+      });
+      this.setHideScratchedDefaultForSource("tab");
+      var syncedManifest = this.syncMeetingManifest({
+        meetingPath: meta.meetingFolderPath || "",
+        meetingLabel: meta.meetingLabel || "",
+        trackName: meta.trackName || "",
+        date: meta.date || "",
+      });
+      if (syncedManifest && syncedManifest.meetingLabel) {
+        this.state.meetingLabel = syncedManifest.meetingLabel;
+      }
+      if (!syncedManifest) {
+        throw new Error("Could not sync meeting manifest from TAB card.");
+      }
+      this.activateMeetingSession(syncedManifest, {
+        keepRaces: true,
+        keepMeetingMeta: true,
+        meetingPath: meta.meetingFolderPath || "",
+        date: meta.date || "",
+        trackName: meta.trackName || "",
+        selectedRaceId: payload.races[0].id,
+        selectedRunnerNo: payload.races[0].runners[0] ? payload.races[0].runners[0].no : null,
+      });
+      var csvText =
+        window.TabYardMeeting && window.TabYardMeeting.buildMeetingCsvFromTab
+          ? window.TabYardMeeting.buildMeetingCsvFromTab(payload)
+          : "";
+      if (csvText) {
+        this.cacheDesktopMeetingCsv(csvText, {
+          fileName: (meta.meetingId || "tab-meeting") + "_master.csv",
+          importPath: meta.meetingFolderPath || "",
+          meetingFolderPath: meta.meetingFolderPath || "",
+          trackName: meta.trackName || "",
+          date: meta.date || "",
+        });
+      }
+      this.persistRaces();
+      this.persist();
+      this.notifyDesktopMeetingImported();
+      this.startCountdownTimer();
+      this.showAssess();
+      this.setImportMsg(
+        "Loaded TAB " +
+          (meta.venue || "") +
+          " — " +
+          payload.races.length +
+          " races (" +
+          (meta.date || "today") +
+          ").",
+      );
+      this.updateMeetingToolbar();
+      this.updateMeetingMetaDisplay();
+      this.bump();
+    },
+
     applyMeetingCsv: function (text, fileName, options) {
       options = options || {};
       var lines = text.replace(/^\uFEFF/, "").split(/\r?\n/).filter(function (l) {
@@ -2754,6 +4084,15 @@
       if (syncedManifest && syncedManifest.meetingLabel) {
         this.state.meetingLabel = syncedManifest.meetingLabel;
       }
+      this.setMeetingCardMeta({
+        source: options.meetingCardSource || (options.meetingPath ? "library" : "csv"),
+        tabVenueCode: "",
+        meetingDate: (syncedManifest && syncedManifest.date) || options.date || "",
+        meetingVenue:
+          (syncedManifest && syncedManifest.trackName) ||
+          options.trackName ||
+          "",
+      });
       if (syncedManifest) {
         this.activateMeetingSession(syncedManifest, {
           keepRaces: true,
@@ -2798,6 +4137,7 @@
       else this.render();
       this.setImportMsg("Loaded " + races.length + " races (saved locally on iPad).");
       this.updateMeetingToolbar();
+      this.updateMeetingMetaDisplay();
       this.bump();
     },
 
@@ -2806,6 +4146,13 @@
       this.loadPersisted();
       this.loadRaces();
       this.loadManifestLabel();
+      if (!this.state.meetingCardSource && this.races && this.races.length) {
+        if (this.state.tabVenueCode) {
+          this.state.meetingCardSource = "tab";
+        } else if (this.state.loadedMeetingPath) {
+          this.state.meetingCardSource = "library";
+        }
+      }
       if (!this.state.selectedRaceId && this.races.length) {
         this.state.selectedRaceId = this.races[0].id;
         this.state.selectedRunnerNo = this.races[0].runners[0]
@@ -2813,6 +4160,14 @@
           : null;
       }
       this.initNetworkListeners();
+      if (window.ResultedSpDom && window.ResultedSpDom.UPDATED_EVENT) {
+        var self = this;
+        window.addEventListener(window.ResultedSpDom.UPDATED_EVENT, function (ev) {
+          self.bump();
+          var detail = ev && ev.detail ? ev.detail : {};
+          self.noteResultImportForBackupReminder(detail.meetingId || self.activeMeetingId);
+        });
+      }
       var downloaded = this.readDownloadedMeetingPackage();
       if (downloaded) {
         try {
@@ -2841,6 +4196,7 @@
       }
       this.updateDownloadedBadge();
       this.updateMeetingToolbar();
+      this.updateMeetingMetaDisplay();
       this.startCountdownTimer();
     },
   };

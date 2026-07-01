@@ -43,6 +43,7 @@ import { getTileLeftNorm, VISUAL_COLUMNS } from "@/lib/wirTrackScale";
 import { cn } from "@/lib/utils";
 import { safeStructuredClone } from "@/lib/safe-clone";
 import { logLoadingState } from "@/lib/startup-diagnostics";
+import { registerActiveBoardPlacement } from "@/lib/speed-map-placement-registry";
 
 type RaceMapEntry = RaceMapStateEntry;
 const WIR_TRACK_TEMPLATE = `repeat(${VISUAL_COLUMNS}, minmax(0, 1fr))`;
@@ -2756,6 +2757,8 @@ export function applyActiveBoardRacePlacement(runners: SpeedMapRunner[], raceNo?
 
   return positioned;
 }
+
+registerActiveBoardPlacement(applyActiveBoardRacePlacement);
 
 const lastPlacementCountsByRace = new Map<string, { input: number; output: number }>();
 
