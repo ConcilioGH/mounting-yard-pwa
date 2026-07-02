@@ -1,0 +1,29 @@
+race_no,runner_no,horse,warning_type,detail
+1,2,The Diplomat,scratched_runner,Runner marked scratched
+1,6,Jabal Shada,scratched_runner,Runner marked scratched
+2,1,Creator Of World,scratched_runner,Runner marked scratched
+3,8,Atossa,missing_trainer,Trainer is empty
+3,8,Atossa,scratched_runner,Runner marked scratched
+4,4,Orange Tsunami,scratched_runner,Runner marked scratched
+4,9,Claudel,scratched_runner,Runner marked scratched
+4,10,Kumbaya,scratched_runner,Runner marked scratched
+4,14,Snitzel Miss,scratched_runner,Runner marked scratched
+4,15,My Country Boy,missing_trainer,Trainer is empty
+4,15,My Country Boy,scratched_runner,Runner marked scratched
+4,16,Final Spirit,missing_trainer,Trainer is empty
+4,16,Final Spirit,scratched_runner,Runner marked scratched
+4,19,Torpedo Ted,scratched_runner,Runner marked scratched
+5,8,Excuseme Mrofficer,missing_trainer,Trainer is empty
+5,8,Excuseme Mrofficer,scratched_runner,Runner marked scratched
+7,4,Cheval De Bois,scratched_runner,Runner marked scratched
+7,5,My Shareena,scratched_runner,Runner marked scratched
+7,8,Italus,scratched_runner,Runner marked scratched
+7,9,Otono,scratched_runner,Runner marked scratched
+8,2,Century Song,scratched_runner,Runner marked scratched
+8,11,Gail Jeanette,scratched_runner,Runner marked scratched
+8,12,Extrio,scratched_runner,Runner marked scratched
+8,14,Mountain Top,missing_trainer,Trainer is empty
+8,14,Mountain Top,scratched_runner,Runner marked scratched
+8,16,Tides Turning,missing_trainer,Trainer is empty
+8,16,Tides Turning,scratched_runner,Runner marked scratched
+8,17,Lady Shenanigans,scratched_runner,Runner marked scratched
