@@ -151,8 +151,12 @@
 
   function saveMeetingManifest(manifest) {
     if (typeof localStorage === "undefined") return;
-    localStorage.setItem(MANIFEST_KEY, JSON.stringify(manifest));
-    syncSharedMeetingPointers(manifest);
+    try {
+      localStorage.setItem(MANIFEST_KEY, JSON.stringify(manifest));
+      syncSharedMeetingPointers(manifest);
+    } catch (e) {
+      /* QuotaExceeded / private mode — do not block iPad Yard boot */
+    }
   }
 
   function openMeetingDirDB() {
