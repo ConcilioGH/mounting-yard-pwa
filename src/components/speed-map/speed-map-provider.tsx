@@ -68,11 +68,23 @@ export function SpeedMapProvider({ children }: { children: ReactNode }) {
       const manifest = loadMeetingManifest();
       const loaded = loadSpeedMapSessionForManifest(manifest);
       if (loaded) {
-        setSession(safeReconcileSpeedMapSession(loaded));
+        const next = safeReconcileSpeedMapSession(loaded);
+        setSession(next);
+        console.log("[meeting-sync] speedmap active meeting", {
+          meetingId: next.meetingId || manifest?.meetingId || null,
+          manifestMeetingId: manifest?.meetingId ?? null,
+          raceCount: next.raceOrder?.length ?? 0,
+        });
         return;
       }
       if (manifest) {
-        setSession(emptySpeedMapSessionForManifest(manifest));
+        const empty = emptySpeedMapSessionForManifest(manifest);
+        setSession(empty);
+        console.log("[meeting-sync] speedmap active meeting", {
+          meetingId: empty.meetingId || manifest.meetingId,
+          manifestMeetingId: manifest.meetingId,
+          raceCount: 0,
+        });
         return;
       }
       setSession(emptySpeedMapSession());

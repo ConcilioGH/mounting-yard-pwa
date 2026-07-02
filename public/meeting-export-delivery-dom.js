@@ -6,6 +6,8 @@
   if (window.MeetingExportDelivery) return;
 
   var MANIFEST_KEY = "mounting-yard-meeting-manifest-v1";
+  var BIAS_ACTIVE_MEETING_KEY = "bias:active-meeting-id";
+  var RACES_MEETING_ID_KEY = "mounting-yard-races-meeting-id-v1";
   var DB_NAME = "mounting-yard-meeting-dir";
   var DB_VERSION = 1;
   var STORE = "handles";
@@ -136,9 +138,21 @@
     }
   }
 
+  function isStableMeetingId(meetingId) {
+    return /^\d{4}-\d{2}-\d{2}-[a-z0-9-]+$/i.test(String(meetingId || "").trim());
+  }
+
+  function syncSharedMeetingPointers(manifest) {
+    if (!manifest || !isStableMeetingId(manifest.meetingId)) return;
+    if (typeof localStorage === "undefined") return;
+    localStorage.setItem(BIAS_ACTIVE_MEETING_KEY, String(manifest.meetingId).trim());
+    localStorage.setItem(RACES_MEETING_ID_KEY, String(manifest.meetingId).trim());
+  }
+
   function saveMeetingManifest(manifest) {
     if (typeof localStorage === "undefined") return;
     localStorage.setItem(MANIFEST_KEY, JSON.stringify(manifest));
+    syncSharedMeetingPointers(manifest);
   }
 
   function openMeetingDirDB() {

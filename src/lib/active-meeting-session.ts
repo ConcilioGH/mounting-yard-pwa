@@ -1,12 +1,11 @@
 import { loadAllRaces } from "@/lib/db";
 import {
-  buildMeetingKey,
   formatMeetingDisplayLabel,
   importMeetingFromCsv,
   loadLastMeetingCsvImport,
   loadMeetingManifest,
   loadRacesMeetingId,
-  raceNosFromMountingYardRaces,
+  saveRacesMeetingId,
   syncRaceDayBiasOnMeetingImport,
   type MeetingManifest,
 } from "@/lib/meeting-coordination";
@@ -29,8 +28,17 @@ import type { Race } from "@/lib/types";
 export function racesMatchManifest(races: Race[], manifest: MeetingManifest): boolean {
   if (!races.length) return false;
   const storedMeetingId = loadRacesMeetingId();
-  if (!storedMeetingId || storedMeetingId !== manifest.meetingId) return false;
-  return buildMeetingKey(raceNosFromMountingYardRaces(races)) === manifest.meetingKey;
+  return Boolean(storedMeetingId && storedMeetingId === manifest.meetingId);
+}
+
+export function isStableMeetingId(meetingId: string): boolean {
+  return /^\d{4}-\d{2}-\d{2}-[a-z0-9-]+$/i.test(meetingId.trim());
+}
+
+export function syncMeetingPointersFromManifest(manifest: MeetingManifest): void {
+  if (!isStableMeetingId(manifest.meetingId)) return;
+  setActiveBiasMeetingId(manifest.meetingId);
+  saveRacesMeetingId(manifest.meetingId);
 }
 
 export function speedMapMatchesManifest(
@@ -109,6 +117,8 @@ export async function ensureActiveMeetingSynced(): Promise<MeetingManifest | nul
   try {
     const manifest = loadMeetingManifest();
     if (!manifest) return null;
+
+    syncMeetingPointersFromManifest(manifest);
 
     const [races, speedSession] = await Promise.all([
       loadAllRaces(),

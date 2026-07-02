@@ -1501,6 +1501,17 @@
     notifyDesktopMeetingImported: function () {
       if (typeof window === "undefined" || !window.dispatchEvent) return;
       try {
+        var manifest =
+          window.MeetingExportDelivery && window.MeetingExportDelivery.loadMeetingManifest
+            ? window.MeetingExportDelivery.loadMeetingManifest()
+            : null;
+        if (manifest && manifest.meetingId) {
+          console.log("[meeting-sync] ipad active meeting", {
+            meetingId: this.activeMeetingId || manifest.meetingId,
+            manifestMeetingId: manifest.meetingId,
+            cardSource: this.state.meetingCardSource || "",
+          });
+        }
         window.dispatchEvent(new CustomEvent(MEETING_IMPORTED_EVENT));
       } catch (e) {
         /* ignore */
@@ -4138,6 +4149,7 @@
       this.setImportMsg("Loaded " + races.length + " races (saved locally on iPad).");
       this.updateMeetingToolbar();
       this.updateMeetingMetaDisplay();
+      this.updateMeetingHealthPanel();
       this.bump();
     },
 
@@ -4197,6 +4209,16 @@
       this.updateDownloadedBadge();
       this.updateMeetingToolbar();
       this.updateMeetingMetaDisplay();
+      if (this.races && this.races.length) {
+        var bootManifest = this.syncMeetingManifest();
+        if (bootManifest && bootManifest.meetingId) {
+          console.log("[meeting-sync] ipad active meeting", {
+            meetingId: this.activeMeetingId || bootManifest.meetingId,
+            manifestMeetingId: bootManifest.meetingId,
+            cardSource: this.state.meetingCardSource || "",
+          });
+        }
+      }
       this.startCountdownTimer();
     },
   };

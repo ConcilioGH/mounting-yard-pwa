@@ -170,8 +170,8 @@ export function syncSpeedMapOnMeetingImport(
       : null;
   const reuseExisting =
     existing &&
-    (!existing.meetingId || existing.meetingId === options.meetingId) &&
-    existing.meetingKey === options.meetingKey;
+    Boolean(options.meetingId) &&
+    existing.meetingId === options.meetingId;
   const preserved = reuseExisting ? existing : null;
   const meetingMeta = {
     track: parsed.meta.trackName,

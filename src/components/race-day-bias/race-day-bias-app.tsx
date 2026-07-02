@@ -19,7 +19,7 @@ import {
   logBiasStorageDebug,
   RACE_DAY_BIAS_UPDATED_EVENT,
   removeLegacyBiasStorageKeys,
-  saveRaceDayBiasState,
+  saveRaceDayBiasStateForMeeting,
 } from "@/lib/race-day-bias/storage";
 import { RESULTED_SP_UPDATED_EVENT } from "@/lib/resulted-sp/types";
 import {
@@ -99,13 +99,21 @@ export default function RaceDayBiasApp() {
   const [fieldSizeByRaceNo, setFieldSizeByRaceNo] = useState<Record<string, number>>({});
   const stateRef = useRef(state);
   stateRef.current = state;
+  const biasHydratedRef = useRef(false);
   const spInputRef = useRef<HTMLInputElement>(null);
   const codeInputRef = useRef<HTMLInputElement>(null);
 
   const persist = useDebouncedCallback(() => {
+    if (!biasHydratedRef.current) return;
+    const manifest = loadMeetingManifest();
+    if (!manifest?.meetingId) return;
     setSaveState("saving");
     try {
-      saveRaceDayBiasState(stateRef.current);
+      saveRaceDayBiasStateForMeeting(manifest.meetingId, stateRef.current);
+      console.log("[meeting-sync] bias saved", {
+        meetingId: manifest.meetingId,
+        rows: stateRef.current.races.length,
+      });
       setSaveState("saved");
     } catch {
       setSaveState("idle");
@@ -135,7 +143,11 @@ export default function RaceDayBiasApp() {
           hasManifest: Boolean(manifest),
           meetingId: manifest?.meetingId ?? null,
         });
+        console.log("[meeting-sync] bias active meeting", {
+          meetingId: manifest?.meetingId ?? null,
+        });
         if (!manifest?.meetingId) {
+          biasHydratedRef.current = false;
           if (!cancelled) {
             setState({ meetingLabel: "", races: [], updatedAt: new Date().toISOString() });
           }
@@ -144,7 +156,15 @@ export default function RaceDayBiasApp() {
         const loaded = loadBiasStateForManifest(manifest);
         const { biasKey, loadedExisting, meetingId } = loadRaceDayBiasStateForMeeting(manifest.meetingId);
         logBiasStorageDebug(meetingId, biasKey, loadedExisting, loaded.races.length);
-        if (!cancelled) setState(loaded);
+        console.log("[meeting-sync] bias loaded", {
+          meetingId,
+          rows: loaded.races.length,
+          loadedExisting,
+        });
+        if (!cancelled) {
+          setState(loaded);
+          biasHydratedRef.current = true;
+        }
       } catch (error) {
         reportStartupFailure("race-day-bias-state-load", error);
       }
