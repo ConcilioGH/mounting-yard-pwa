@@ -17,7 +17,6 @@ import {
   isBiasStorageKey,
   loadRaceDayBiasStateForMeeting,
   logBiasStorageDebug,
-  RACE_DAY_BIAS_UPDATED_EVENT,
   removeLegacyBiasStorageKeys,
   saveRaceDayBiasStateForMeeting,
 } from "@/lib/race-day-bias/storage";
@@ -90,7 +89,7 @@ export default function RaceDayBiasApp() {
     races: [],
     updatedAt: new Date().toISOString(),
   }));
-  const [saveState, setSaveState] = useState<"idle" | "saving" | "saved">("idle");
+  const [saveState, setSaveState] = useState<"idle" | "saving" | "saved" | "error">("idle");
   const [editingCell, setEditingCell] = useState<CellKey | null>(null);
   const [draft, setDraft] = useState<FinisherSlot>({ positionCode: "", sp: "" });
   const [editorStep, setEditorStep] = useState<"code" | "sp" | "combined">("code");
@@ -108,15 +107,20 @@ export default function RaceDayBiasApp() {
     const manifest = loadMeetingManifest();
     if (!manifest?.meetingId) return;
     setSaveState("saving");
+    console.log("[bias-debug] save start", {
+      meetingId: manifest.meetingId,
+      rows: stateRef.current.races.length,
+    });
     try {
       saveRaceDayBiasStateForMeeting(manifest.meetingId, stateRef.current);
-      console.log("[meeting-sync] bias saved", {
+      console.log("[bias-debug] save success", {
         meetingId: manifest.meetingId,
         rows: stateRef.current.races.length,
       });
       setSaveState("saved");
-    } catch {
-      setSaveState("idle");
+    } catch (error) {
+      console.warn("[bias-debug] save failed", error);
+      setSaveState("error");
     }
   }, 350);
 
@@ -136,14 +140,15 @@ export default function RaceDayBiasApp() {
     const refreshBiasState = async () => {
       try {
         removeLegacyBiasStorageKeys();
+        console.log("[bias-debug] hydrate start");
         logStartupStep("meeting-load:start");
         await ensureActiveMeetingSynced();
         const manifest = loadMeetingManifest();
-        logStartupStep("meeting-load:end", {
-          hasManifest: Boolean(manifest),
+        console.log("[bias-debug] active meetingId", {
           meetingId: manifest?.meetingId ?? null,
         });
-        console.log("[meeting-sync] bias active meeting", {
+        logStartupStep("meeting-load:end", {
+          hasManifest: Boolean(manifest),
           meetingId: manifest?.meetingId ?? null,
         });
         if (!manifest?.meetingId) {
@@ -156,10 +161,11 @@ export default function RaceDayBiasApp() {
         const loaded = loadBiasStateForManifest(manifest);
         const { biasKey, loadedExisting, meetingId } = loadRaceDayBiasStateForMeeting(manifest.meetingId);
         logBiasStorageDebug(meetingId, biasKey, loadedExisting, loaded.races.length);
-        console.log("[meeting-sync] bias loaded", {
+        console.log("[bias-debug] hydrate loaded", {
           meetingId,
-          rows: loaded.races.length,
+          biasKey,
           loadedExisting,
+          rows: loaded.races.length,
         });
         if (!cancelled) {
           setState(loaded);
@@ -171,6 +177,7 @@ export default function RaceDayBiasApp() {
     };
 
     const refresh = () => {
+      console.log("[bias-debug] reload state");
       void refreshBiasState();
       void refreshFieldSizes();
     };
@@ -188,7 +195,10 @@ export default function RaceDayBiasApp() {
 
     window.addEventListener(MEETING_IMPORTED_EVENT, refresh);
     window.addEventListener(RESULTED_SP_UPDATED_EVENT, refresh);
-    window.addEventListener(RACE_DAY_BIAS_UPDATED_EVENT, refresh);
+    // NOTE: intentionally not listening to RACE_DAY_BIAS_UPDATED_EVENT here.
+    // That event is dispatched by our own saveRaceDayBiasStateForMeeting, so
+    // reacting to it created a save -> reload -> setState loop that clobbered
+    // freshly typed input. Cross-tab bias changes still arrive via "storage".
     const onStorage = (event: StorageEvent) => {
       if (isBiasStorageKey(event.key) || event.key === MEETING_MANIFEST_STORAGE_KEY) {
         refresh();
@@ -200,7 +210,6 @@ export default function RaceDayBiasApp() {
       window.clearTimeout(safetyTimer);
       window.removeEventListener(MEETING_IMPORTED_EVENT, refresh);
       window.removeEventListener(RESULTED_SP_UPDATED_EVENT, refresh);
-      window.removeEventListener(RACE_DAY_BIAS_UPDATED_EVENT, refresh);
       window.removeEventListener("storage", onStorage);
     };
   }, []);
@@ -229,6 +238,12 @@ export default function RaceDayBiasApp() {
       positionCode: sanitizePositionCodeInput(slot.positionCode),
       sp: sanitizeSpInput(slot.sp),
     };
+    console.log("[bias-debug] input changed", {
+      raceNo,
+      field,
+      positionCode: next.positionCode,
+      sp: next.sp,
+    });
     setState((prev) => ({
       ...prev,
       races: prev.races.map((race) => {
@@ -346,6 +361,12 @@ export default function RaceDayBiasApp() {
         )}
         {saveState === "saving" && <p className="mt-2 text-xs text-slate-500">Saving…</p>}
         {saveState === "saved" && <p className="mt-2 text-xs text-emerald-400/90">Saved locally</p>}
+        {saveState === "error" && (
+          <p className="mt-2 rounded-lg border border-red-500/50 bg-red-950/60 px-3 py-2 text-sm font-semibold text-red-200">
+            Could not save bias input — device storage may be full. Free up space or export before
+            entering more, or this input may be lost.
+          </p>
+        )}
       </header>
 
       {showImportPrompt ? (
