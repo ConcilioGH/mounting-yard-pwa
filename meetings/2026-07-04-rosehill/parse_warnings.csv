@@ -1,0 +1,60 @@
+race_no,runner_no,horse,warning_type,detail
+1,1,Norton Road,missing_trainer,Trainer is empty
+1,1,Norton Road,scratched_runner,Runner marked scratched
+1,3,Formal,scratched_runner,Runner marked scratched
+1,9,President,missing_trainer,Trainer is empty
+1,9,President,scratched_runner,Runner marked scratched
+1,10,Attractiveness,scratched_runner,Runner marked scratched
+1,16,Maz Kanata,missing_trainer,Trainer is empty
+1,16,Maz Kanata,scratched_runner,Runner marked scratched
+2,5,Occult,scratched_runner,Runner marked scratched
+2,6,Too Hot To Torque,scratched_runner,Runner marked scratched
+2,7,Vinolass,scratched_runner,Runner marked scratched
+2,11,Jenni The Jet,missing_trainer,Trainer is empty
+2,11,Jenni The Jet,scratched_runner,Runner marked scratched
+2,18,Rollo,scratched_runner,Runner marked scratched
+2,22,She Within,scratched_runner,Runner marked scratched
+3,4,Defensemen,scratched_runner,Runner marked scratched
+3,6,Joint Venture,scratched_runner,Runner marked scratched
+3,7,Letters Patent,missing_trainer,Trainer is empty
+3,7,Letters Patent,scratched_runner,Runner marked scratched
+3,8,Regal Profit,scratched_runner,Runner marked scratched
+3,9,Fearless Win,missing_trainer,Trainer is empty
+3,9,Fearless Win,scratched_runner,Runner marked scratched
+3,10,Half Pipe,scratched_runner,Runner marked scratched
+3,12,Resolutely,scratched_runner,Runner marked scratched
+3,13,Iced Fury,scratched_runner,Runner marked scratched
+4,4,Island Dec,scratched_runner,Runner marked scratched
+4,6,Detain,scratched_runner,Runner marked scratched
+4,8,Nullarbor Jane,missing_trainer,Trainer is empty
+4,8,Nullarbor Jane,scratched_runner,Runner marked scratched
+5,1,Just Too Fly,missing_trainer,Trainer is empty
+5,1,Just Too Fly,scratched_runner,Runner marked scratched
+5,2,Cheeky Smirk,scratched_runner,Runner marked scratched
+5,6,Pimlico,scratched_runner,Runner marked scratched
+5,10,Nandina,scratched_runner,Runner marked scratched
+5,12,Arapawa,scratched_runner,Runner marked scratched
+6,4,Harry Got Styles,scratched_runner,Runner marked scratched
+7,8,Kapakiri,scratched_runner,Runner marked scratched
+7,11,Lennox,scratched_runner,Runner marked scratched
+7,19,Fioprospero,missing_trainer,Trainer is empty
+7,19,Fioprospero,scratched_runner,Runner marked scratched
+8,13,Big Red Tequila,missing_trainer,Trainer is empty
+8,13,Big Red Tequila,scratched_runner,Runner marked scratched
+8,14,Barbaric Lad,scratched_runner,Runner marked scratched
+9,9,Xidaki,missing_trainer,Trainer is empty
+9,9,Xidaki,scratched_runner,Runner marked scratched
+9,10,Williamsburg,scratched_runner,Runner marked scratched
+9,12,Poison Chalice,scratched_runner,Runner marked scratched
+10,6,Green Shadows,scratched_runner,Runner marked scratched
+10,8,Cheeky Smirk,scratched_runner,Runner marked scratched
+10,9,Tarzing,scratched_runner,Runner marked scratched
+10,10,Warrior For Peace,scratched_runner,Runner marked scratched
+10,12,Crossbow,scratched_runner,Runner marked scratched
+10,16,Brigidine Gal,scratched_runner,Runner marked scratched
+10,17,Acheson,scratched_runner,Runner marked scratched
+10,18,Hello Captain,scratched_runner,Runner marked scratched
+10,19,Pimlico,missing_trainer,Trainer is empty
+10,19,Pimlico,scratched_runner,Runner marked scratched
+10,20,Viewpoint,missing_trainer,Trainer is empty
+10,20,Viewpoint,scratched_runner,Runner marked scratched

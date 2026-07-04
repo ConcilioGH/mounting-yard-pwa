@@ -1,0 +1,113 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
+R1,Rosehill Gardens,1,11:05 am Midway Handicap,1200m,Handicap,Soft 7,+1m Entire,2,2,The Extreme Cat,The Extreme Cat,The Extreme Cat,9,Nathan Doyle,Tim Clark,$16,6.6,racenet
+R1,Rosehill Gardens,1,11:05 am Midway Handicap,1200m,Handicap,Soft 7,+1m Entire,4,4,Harlex,Harlex,Harlex,3,Paul Perry,Siena Grima (a-2),$17,3.2,racenet
+R1,Rosehill Gardens,1,11:05 am Midway Handicap,1200m,Handicap,Soft 7,+1m Entire,5,5,Island Dec,Island Dec,Island Dec,4,Robert & Luke Price,Adam Hyeronimus,$3.1,8,racenet
+R1,Rosehill Gardens,1,11:05 am Midway Handicap,1200m,Handicap,Soft 7,+1m Entire,6,6,Zounaka,Zounaka,Zounaka,7,John Thompson William,Stanley A3 (a-3),$5.5,3,racenet
+R1,Rosehill Gardens,1,11:05 am Midway Handicap,1200m,Handicap,Soft 7,+1m Entire,7,7,Motoscafo,Motoscafo,Motoscafo,5,John Thompson,Kerrin McEvoy,$51,8,racenet
+R1,Rosehill Gardens,1,11:05 am Midway Handicap,1200m,Handicap,Soft 7,+1m Entire,8,8,Xpresso,Xpresso,Xpresso,10,Marc Chevalier,Tyler Schiller,$23,5.1,racenet
+R1,Rosehill Gardens,1,11:05 am Midway Handicap,1200m,Handicap,Soft 7,+1m Entire,11,11,Myriad,Myriad,Myriad,6,Nathan Doyle,Tom Sherry,$11,5.5,racenet
+R1,Rosehill Gardens,1,11:05 am Midway Handicap,1200m,Handicap,Soft 7,+1m Entire,12,12,Against The Law,Against The Law,Against The Law,8,Bryce Heys,Mollie Fitzgerald (a-3),$10,5.8,racenet
+R1,Rosehill Gardens,1,11:05 am Midway Handicap,1200m,Handicap,Soft 7,+1m Entire,13,13,Nullarbor Jane,Nullarbor Jane,Nullarbor Jane,2,John Sargent,Anna Roper (a-2),$6,2,racenet
+R1,Rosehill Gardens,1,11:05 am Midway Handicap,1200m,Handicap,Soft 7,+1m Entire,14,14,Last Druid,Last Druid,Last Druid,1,Tracey Bartley,Alysha Collett,$23,5.4,racenet
+R1,Rosehill Gardens,1,11:05 am Midway Handicap,1200m,Handicap,Soft 7,+1m Entire,15,15,Apache Breeze,Apache Breeze,Apache Breeze,11,Wayne Seelin,Reece Jones,$21,7.5,racenet
+R2,Rosehill Gardens,2,11:40 am Tab Highway Handicap,1200m,Handicap,Soft 7,+1m Entire,1,1,Kreon,Kreon,Kreon,20,Danny Williams,Anna Roper (a-2),$26,6.4,racenet
+R2,Rosehill Gardens,2,11:40 am Tab Highway Handicap,1200m,Handicap,Soft 7,+1m Entire,2,2,Neeson,Neeson,Neeson,12,Danielle Seib,Pierre Boudvillain,$9,2.3,racenet
+R2,Rosehill Gardens,2,11:40 am Tab Highway Handicap,1200m,Handicap,Soft 7,+1m Entire,3,3,It's A Tata,It's A Tata,It's A Tata,2,Brett Robb,Izzy Neale (a-3),$23,4.1,racenet
+R2,Rosehill Gardens,2,11:40 am Tab Highway Handicap,1200m,Handicap,Soft 7,+1m Entire,4,4,Nimble Star,Nimble Star,Nimble Star,18,Brett Robb,Alysha Collett,$19,6.3,racenet
+R2,Rosehill Gardens,2,11:40 am Tab Highway Handicap,1200m,Handicap,Soft 7,+1m Entire,8,8,Calypso Rocket,Calypso Rocket,Calypso Rocket,1,Marc Quinn,Aaron Bullock (a0.5),$6.5,8.6,racenet
+R2,Rosehill Gardens,2,11:40 am Tab Highway Handicap,1200m,Handicap,Soft 7,+1m Entire,9,9,Martini Mumma,Martini Mumma,Martini Mumma,3,Matthew Dale,Mollie Fitzgerald (a-3),$7,5.4,racenet
+R2,Rosehill Gardens,2,11:40 am Tab Highway Handicap,1200m,Handicap,Soft 7,+1m Entire,10,10,King Of Dragons,King Of Dragons,King Of Dragons,21,Matthew Dale,Adam Hyeronimus,$14,4.1,racenet
+R2,Rosehill Gardens,2,11:40 am Tab Highway Handicap,1200m,Handicap,Soft 7,+1m Entire,12,12,Nirmata,Nirmata,Nirmata,14,Craig Martin,Siena Grima (a-2),$20,4.4,racenet
+R2,Rosehill Gardens,2,11:40 am Tab Highway Handicap,1200m,Handicap,Soft 7,+1m Entire,13,13,Indi Springs,Indi Springs,Indi Springs,19,Mack Griffith,Braith Nock (a-1.5),$6.5,1.8,racenet
+R2,Rosehill Gardens,2,11:40 am Tab Highway Handicap,1200m,Handicap,Soft 7,+1m Entire,14,14,Polymer,Polymer,Polymer,9,Paul Snowden,Kerrin McEvoy,$6.75,4.4,racenet
+R2,Rosehill Gardens,2,11:40 am Tab Highway Handicap,1200m,Handicap,Soft 7,+1m Entire,15,15,Dubbo Boy,Dubbo Boy,Dubbo Boy,16,Danny Williams,Tyler Schiller,$41,4.3,racenet
+R2,Rosehill Gardens,2,11:40 am Tab Highway Handicap,1200m,Handicap,Soft 7,+1m Entire,16,16,Kendalia,Kendalia,Kendalia,17,Matthew Dale,Tim Clark (a0.5),$11,7.2,racenet
+R2,Rosehill Gardens,2,11:40 am Tab Highway Handicap,1200m,Handicap,Soft 7,+1m Entire,17,17,Zahdi,Zahdi,Zahdi,6,Gayna Williams,Reece Jones,$101,7.5,racenet
+R2,Rosehill Gardens,2,11:40 am Tab Highway Handicap,1200m,Handicap,Soft 7,+1m Entire,19,19,La Mer Bleue,La Mer Bleue,La Mer Bleue,8,Allan McRae Teaghan,Martin A3 (a-3),$126,3.9,racenet
+R2,Rosehill Gardens,2,11:40 am Tab Highway Handicap,1200m,Handicap,Soft 7,+1m Entire,20,20,Extrio,Extrio,Extrio,5,Luke Pepper,Keagan Latham (a0.5),$19,5.8,racenet
+R2,Rosehill Gardens,2,11:40 am Tab Highway Handicap,1200m,Handicap,Soft 7,+1m Entire,21,21,Sir Lunchalots,Sir Lunchalots,Sir Lunchalots,11,Anthony Warren,Jay Ford,$201,2.1,racenet
+R3,Rosehill Gardens,3,12:15 pm Thank You Atc Members Handicap,1100m,Handicap,Soft 7,+1m Entire,1,1,Omolong,Omolong,Omolong,9,Chris Waller,Siena Grima (a-2),$2.1,7,racenet
+R3,Rosehill Gardens,3,12:15 pm Thank You Atc Members Handicap,1100m,Handicap,Soft 7,+1m Entire,2,2,Seeiaye,Seeiaye,Seeiaye,15,Peter Snowden,Adam Hyeronimus,$9.5,7.7,racenet
+R3,Rosehill Gardens,3,12:15 pm Thank You Atc Members Handicap,1100m,Handicap,Soft 7,+1m Entire,3,3,Satin Summer,Satin Summer,Satin Summer,3,Michael Freedman,Tim Clark,$5.5,3.7,racenet
+R3,Rosehill Gardens,3,12:15 pm Thank You Atc Members Handicap,1100m,Handicap,Soft 7,+1m Entire,5,5,Gatineau,Gatineau,Gatineau,10,"Michael, John & Wayne Hawkes",Tyler Schiller,$11,NA,racenet
+R3,Rosehill Gardens,3,12:15 pm Thank You Atc Members Handicap,1100m,Handicap,Soft 7,+1m Entire,11,11,Predation,Predation,Predation,1,Edward O'Rourke,Tom Sherry,$23,8,racenet
+R3,Rosehill Gardens,3,12:15 pm Thank You Atc Members Handicap,1100m,Handicap,Soft 7,+1m Entire,14,14,Kotor,Kotor,Kotor,8,Bjorn Baker,Kerrin McEvoy,$4.8,NA,racenet
+R3,Rosehill Gardens,3,12:15 pm Thank You Atc Members Handicap,1100m,Handicap,Soft 7,+1m Entire,15,15,Sweet Leaf,Sweet Leaf,Sweet Leaf,2,Brett & Georgie Cavanough,Braith Nock (a-1.5),$16,1.7,racenet
+R3,Rosehill Gardens,3,12:15 pm Thank You Atc Members Handicap,1100m,Handicap,Soft 7,+1m Entire,16,16,Truly Graphic,Truly Graphic,Truly Graphic,5,Tony Ball,Madeline Owen,$201,7,racenet
+R4,Rosehill Gardens,4,12:50 pm Hitotsu At Arrowfield Handicap,1100m,Handicap,Soft 7,+1m Entire,1,1,Big Red Tequila,Big Red Tequila,Big Red Tequila,5,Joseph Pride,Adam Hyeronimus,$1.65,6.9,racenet
+R4,Rosehill Gardens,4,12:50 pm Hitotsu At Arrowfield Handicap,1100m,Handicap,Soft 7,+1m Entire,2,2,Jellicious,Jellicious,Jellicious,6,Chris Waller,Siena Grima (a-2),$6,3.6,racenet
+R4,Rosehill Gardens,4,12:50 pm Hitotsu At Arrowfield Handicap,1100m,Handicap,Soft 7,+1m Entire,3,3,Winning Proposal,Winning Proposal,Winning Proposal,1,John Thompson William,Stanley A3 (a-3),$16,5.5,racenet
+R4,Rosehill Gardens,4,12:50 pm Hitotsu At Arrowfield Handicap,1100m,Handicap,Soft 7,+1m Entire,5,5,Useapin,Useapin,Useapin,2,Chris Waller,Kerrin McEvoy,$8,6.9,racenet
+R4,Rosehill Gardens,4,12:50 pm Hitotsu At Arrowfield Handicap,1100m,Handicap,Soft 7,+1m Entire,7,7,West Of Dalby,West Of Dalby,West Of Dalby,9,Matthew Dale,Tim Clark,$23,6.2,racenet
+R4,Rosehill Gardens,4,12:50 pm Hitotsu At Arrowfield Handicap,1100m,Handicap,Soft 7,+1m Entire,9,9,Gail Jeanette,Gail Jeanette,Gail Jeanette,4,Angus Stewart,Reece Jones,$19,2,racenet
+R4,Rosehill Gardens,4,12:50 pm Hitotsu At Arrowfield Handicap,1100m,Handicap,Soft 7,+1m Entire,10,10,She Within,She Within,She Within,3,Danny Williams,Winona Costin,$12,8.3,racenet
+R4,Rosehill Gardens,4,12:50 pm Hitotsu At Arrowfield Handicap,1100m,Handicap,Soft 7,+1m Entire,11,11,Silver Serenade,Silver Serenade,Silver Serenade,7,Danny Williams,Mollie Fitzgerald (a-3),$51,4.2,racenet
+R5,Rosehill Gardens,5,1:25 pm Find Your Stakes Winner @ The Chase Handicap,1300m,Handicap,Soft 7,+1m Entire,3,3,Crossbow,Crossbow,Crossbow,12,Chris Waller,Adam Hyeronimus,$14,6.4,racenet
+R5,Rosehill Gardens,5,1:25 pm Find Your Stakes Winner @ The Chase Handicap,1300m,Handicap,Soft 7,+1m Entire,4,4,Hello Captain,Hello Captain,Hello Captain,7,Chris Waller,Siena Grima (a-2),$1.7,5.5,racenet
+R5,Rosehill Gardens,5,1:25 pm Find Your Stakes Winner @ The Chase Handicap,1300m,Handicap,Soft 7,+1m Entire,5,5,Sequista,Sequista,Sequista,8,Gerald Ryan & Sterling Alexiou,Braith Nock (a-1.5),$8.5,7.3,racenet
+R5,Rosehill Gardens,5,1:25 pm Find Your Stakes Winner @ The Chase Handicap,1300m,Handicap,Soft 7,+1m Entire,7,7,Viewpoint,Viewpoint,Viewpoint,11,Nacim Dilmi,Alysha Collett,$81,2.9,racenet
+R5,Rosehill Gardens,5,1:25 pm Find Your Stakes Winner @ The Chase Handicap,1300m,Handicap,Soft 7,+1m Entire,8,8,Attractiveness,Attractiveness,Attractiveness,9,Richard & Will Freedman,Keagan Latham,$7.5,3.7,racenet
+R5,Rosehill Gardens,5,1:25 pm Find Your Stakes Winner @ The Chase Handicap,1300m,Handicap,Soft 7,+1m Entire,9,9,Gorgeous,Gorgeous,Gorgeous,3,David Pfieffer,Tim Clark,$5.5,7.9,racenet
+R5,Rosehill Gardens,5,1:25 pm Find Your Stakes Winner @ The Chase Handicap,1300m,Handicap,Soft 7,+1m Entire,11,11,Alphard,Alphard,Alphard,4,Chris Waller,Tyler Schiller,$29,2.4,racenet
+R6,Rosehill Gardens,6,2:00 pm Kia Ora Bloodlines To Headlines Handicap,1100m,Handicap,Soft 7,+1m Entire,1,1,Tristate,Tristate,Tristate,9,Edward Cummings,Mollie Fitzgerald (a-3),$126,3.3,racenet
+R6,Rosehill Gardens,6,2:00 pm Kia Ora Bloodlines To Headlines Handicap,1100m,Handicap,Soft 7,+1m Entire,2,2,Just Too Fly,Just Too Fly,Just Too Fly,7,Chris Waller,Siena Grima (a-2),$10,5.2,racenet
+R6,Rosehill Gardens,6,2:00 pm Kia Ora Bloodlines To Headlines Handicap,1100m,Handicap,Soft 7,+1m Entire,3,3,Shropshire Lad,Shropshire Lad,Shropshire Lad,5,Rodney Northam,Reece Jones,$10,8.1,racenet
+R6,Rosehill Gardens,6,2:00 pm Kia Ora Bloodlines To Headlines Handicap,1100m,Handicap,Soft 7,+1m Entire,5,5,Polyglot,Polyglot,Polyglot,6,Michael Freedman,Tim Clark,$3,5.9,racenet
+R6,Rosehill Gardens,6,2:00 pm Kia Ora Bloodlines To Headlines Handicap,1100m,Handicap,Soft 7,+1m Entire,6,6,Teylu,Teylu,Teylu,1,Gratz Vella,Pierre Boudvillain,$16,2.4,racenet
+R6,Rosehill Gardens,6,2:00 pm Kia Ora Bloodlines To Headlines Handicap,1100m,Handicap,Soft 7,+1m Entire,7,7,Columbia Blue,Columbia Blue,Columbia Blue,12,Joseph Pride,Tom Sherry,$4.8,5.1,racenet
+R6,Rosehill Gardens,6,2:00 pm Kia Ora Bloodlines To Headlines Handicap,1100m,Handicap,Soft 7,+1m Entire,8,8,Aleppo Pine,Aleppo Pine,Aleppo Pine,10,Richard Litt,Kerrin McEvoy,$7.5,5.3,racenet
+R6,Rosehill Gardens,6,2:00 pm Kia Ora Bloodlines To Headlines Handicap,1100m,Handicap,Soft 7,+1m Entire,9,9,Formal,Formal,Formal,4,Nathan Doyle,Braith Nock (a-1.5),$8.5,2.9,racenet
+R6,Rosehill Gardens,6,2:00 pm Kia Ora Bloodlines To Headlines Handicap,1100m,Handicap,Soft 7,+1m Entire,10,10,Century Song,Century Song,Century Song,3,Robert & Luke Price,Tyler Schiller,$13,5.8,racenet
+R6,Rosehill Gardens,6,2:00 pm Kia Ora Bloodlines To Headlines Handicap,1100m,Handicap,Soft 7,+1m Entire,11,11,Chemtrail,Chemtrail,Chemtrail,11,Danny Williams,Alysha Collett,$41,3,racenet
+R6,Rosehill Gardens,6,2:00 pm Kia Ora Bloodlines To Headlines Handicap,1100m,Handicap,Soft 7,+1m Entire,12,12,Sneaky Pee Cee,Sneaky Pee Cee,Sneaky Pee Cee,2,Danny Williams,Winona Costin,$81,3.3,racenet
+R7,Rosehill Gardens,7,2:35 pm Tab Handicap,2000m,Handicap,Soft 7,+1m Entire,1,1,Lincoln Rocks,Lincoln Rocks,Lincoln Rocks,6,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),$31,8,racenet
+R7,Rosehill Gardens,7,2:35 pm Tab Handicap,2000m,Handicap,Soft 7,+1m Entire,2,2,Stylebender,Stylebender,Stylebender,2,Kristen Buchanan,Keagan Latham,$101,5,racenet
+R7,Rosehill Gardens,7,2:35 pm Tab Handicap,2000m,Handicap,Soft 7,+1m Entire,3,3,Golden Century,Golden Century,Golden Century,8,Chris Waller,Siena Grima (a-2),$10,7.8,racenet
+R7,Rosehill Gardens,7,2:35 pm Tab Handicap,2000m,Handicap,Soft 7,+1m Entire,4,4,Anythink Goes,Anythink Goes,Anythink Goes,7,Matthew Smith,Alysha Collett,$23,6.5,racenet
+R7,Rosehill Gardens,7,2:35 pm Tab Handicap,2000m,Handicap,Soft 7,+1m Entire,5,5,Mo Chroi,Mo Chroi,Mo Chroi,13,Gai Waterhouse & Adrian Bott,Tim Clark,$5,1,racenet
+R7,Rosehill Gardens,7,2:35 pm Tab Handicap,2000m,Handicap,Soft 7,+1m Entire,6,6,Shangri La Impact,Shangri La Impact,Shangri La Impact,16,Tom Charlton,Adam Hyeronimus (a0.5),$11,2.4,racenet
+R7,Rosehill Gardens,7,2:35 pm Tab Handicap,2000m,Handicap,Soft 7,+1m Entire,7,7,Sting In The Tail,Sting In The Tail,Sting In The Tail,18,Chris Waller,Jay Ford,$51,7.2,racenet
+R7,Rosehill Gardens,7,2:35 pm Tab Handicap,2000m,Handicap,Soft 7,+1m Entire,9,9,Black Babylon,Black Babylon,Black Babylon,9,Annabel & Rob Archibald,Tom Sherry,$23,6.6,racenet
+R7,Rosehill Gardens,7,2:35 pm Tab Handicap,2000m,Handicap,Soft 7,+1m Entire,10,10,Cormac,Cormac,Cormac,12,Annabel & Rob Archibald,Zac Wadick (a-2),$31,3,racenet
+R7,Rosehill Gardens,7,2:35 pm Tab Handicap,2000m,Handicap,Soft 7,+1m Entire,12,12,Nasebah,Nasebah,Nasebah,14,Chris Waller,Kerrin McEvoy,$4.8,6.5,racenet
+R7,Rosehill Gardens,7,2:35 pm Tab Handicap,2000m,Handicap,Soft 7,+1m Entire,13,13,Engine Of War,Engine Of War,Engine Of War,5,Mick Price & Michael Kent Jnr,Anna Roper (a-2),$6.5,7.7,racenet
+R7,Rosehill Gardens,7,2:35 pm Tab Handicap,2000m,Handicap,Soft 7,+1m Entire,14,14,I Park,I Park,I Park,3,Lauren Brennan,Winona Costin,$101,NA,racenet
+R7,Rosehill Gardens,7,2:35 pm Tab Handicap,2000m,Handicap,Soft 7,+1m Entire,15,15,Laspirit Deeler,Laspirit Deeler,Laspirit Deeler,4,Lee & Cherie Curtis William,Stanley A3 (a-3),$101,7.1,racenet
+R7,Rosehill Gardens,7,2:35 pm Tab Handicap,2000m,Handicap,Soft 7,+1m Entire,16,16,Fay's Angels,Fay's Angels,Fay's Angels,1,Karen Owen,Madeline Owen,$81,6.5,racenet
+R7,Rosehill Gardens,7,2:35 pm Tab Handicap,2000m,Handicap,Soft 7,+1m Entire,17,17,Le Troisir,Le Troisir,Le Troisir,10,Chris Waller,Tyler Schiller,$7,7,racenet
+R7,Rosehill Gardens,7,2:35 pm Tab Handicap,2000m,Handicap,Soft 7,+1m Entire,18,18,Hammoon Heroine,Hammoon Heroine,Hammoon Heroine,17,Matthew Smith,Reece Jones,$31,4.4,racenet
+R7,Rosehill Gardens,7,2:35 pm Tab Handicap,2000m,Handicap,Soft 7,+1m Entire,20,20,Velaris,Velaris,Velaris,15,Chris Waller,Adam Farragher,$29,5.2,racenet
+R8,Rosehill Gardens,8,3:15 pm Ranvet Handicap,1200m,Handicap,Soft 7,+1m Entire,1,1,Bold Mac,Bold Mac,Bold Mac,12,Richard Collett Rebecca,Bronett Prag (a-3),$101,7.8,racenet
+R8,Rosehill Gardens,8,3:15 pm Ranvet Handicap,1200m,Handicap,Soft 7,+1m Entire,2,2,Romeo's Choice,Romeo's Choice,Romeo's Choice,13,Richard Litt,Siena Grima (a-2),$19,4.6,racenet
+R8,Rosehill Gardens,8,3:15 pm Ranvet Handicap,1200m,Handicap,Soft 7,+1m Entire,3,3,Celui,Celui,Celui,1,Richard & Will Freedman William,Stanley A3 (a-3),$20,3.8,racenet
+R8,Rosehill Gardens,8,3:15 pm Ranvet Handicap,1200m,Handicap,Soft 7,+1m Entire,4,4,Dark Glitter,Dark Glitter,Dark Glitter,9,Mike Van Gestel,Anna Roper (a-2),$19,8.3,racenet
+R8,Rosehill Gardens,8,3:15 pm Ranvet Handicap,1200m,Handicap,Soft 7,+1m Entire,5,5,Eye Of The Fire,Eye Of The Fire,Eye Of The Fire,6,Annabel & Rob Archibald,Braith Nock (a-1.5),$7.5,4.3,racenet
+R8,Rosehill Gardens,8,3:15 pm Ranvet Handicap,1200m,Handicap,Soft 7,+1m Entire,6,6,Gatsby's,Gatsby's,Gatsby's,8,Joseph Pride,Adam Hyeronimus,$7.5,7.2,racenet
+R8,Rosehill Gardens,8,3:15 pm Ranvet Handicap,1200m,Handicap,Soft 7,+1m Entire,7,7,Midnight Opal,Midnight Opal,Midnight Opal,5,Nathan Doyle,Kerrin McEvoy,$8,5,racenet
+R8,Rosehill Gardens,8,3:15 pm Ranvet Handicap,1200m,Handicap,Soft 7,+1m Entire,8,8,Rock Empire,Rock Empire,Rock Empire,11,Ciaron Maher,Adam Farragher,$41,3.6,racenet
+R8,Rosehill Gardens,8,3:15 pm Ranvet Handicap,1200m,Handicap,Soft 7,+1m Entire,9,9,Bandi's Boy,Bandi's Boy,Bandi's Boy,3,Danny Williams,Jay Ford,$26,7.3,racenet
+R8,Rosehill Gardens,8,3:15 pm Ranvet Handicap,1200m,Handicap,Soft 7,+1m Entire,10,10,Dollar Magic,Dollar Magic,Dollar Magic,10,Sara Ryan,Reece Jones,$16,3.7,racenet
+R8,Rosehill Gardens,8,3:15 pm Ranvet Handicap,1200m,Handicap,Soft 7,+1m Entire,11,11,Memoria,Memoria,Memoria,4,Kris Lees,Tyler Schiller,$23,2.4,racenet
+R8,Rosehill Gardens,8,3:15 pm Ranvet Handicap,1200m,Handicap,Soft 7,+1m Entire,12,12,Smashing Time,Smashing Time,Smashing Time,2,Robert & Luke Price,Mollie Fitzgerald (a-3),$2.25,3.4,racenet
+R9,Rosehill Gardens,9,3:50 pm Schweppes Winter Stakes,1400m,Open Quality 3yo+ NA,Soft 7,+1m Entire,1,1,General Salute,General Salute,General Salute,1,Gerald Ryan & Sterling Alexiou,Tim Clark,$7,6.1,racenet
+R9,Rosehill Gardens,9,3:50 pm Schweppes Winter Stakes,1400m,Open Quality 3yo+ NA,Soft 7,+1m Entire,2,2,Amor Victorious,Amor Victorious,Amor Victorious,6,Bjorn Baker,Tom Sherry,$41,1.5,racenet
+R9,Rosehill Gardens,9,3:50 pm Schweppes Winter Stakes,1400m,Open Quality 3yo+ NA,Soft 7,+1m Entire,3,3,Accredited,Accredited,Accredited,7,Joseph Pride,Aaron Bullock (a0.5),$13,3.7,racenet
+R9,Rosehill Gardens,9,3:50 pm Schweppes Winter Stakes,1400m,Open Quality 3yo+ NA,Soft 7,+1m Entire,4,4,Midnight Dynamite,Midnight Dynamite,Midnight Dynamite,11,Bjorn Baker,Kerrin McEvoy,$4,2.8,racenet
+R9,Rosehill Gardens,9,3:50 pm Schweppes Winter Stakes,1400m,Open Quality 3yo+ NA,Soft 7,+1m Entire,5,5,Cool Jakey,Cool Jakey,Cool Jakey,12,Joseph Pride,Adam Hyeronimus (a0.5),$9.5,2.2,racenet
+R9,Rosehill Gardens,9,3:50 pm Schweppes Winter Stakes,1400m,Open Quality 3yo+ NA,Soft 7,+1m Entire,6,6,Mchale,Mchale,Mchale,2,Chris Waller,Alysha Collett,$12,10,racenet
+R9,Rosehill Gardens,9,3:50 pm Schweppes Winter Stakes,1400m,Open Quality 3yo+ NA,Soft 7,+1m Entire,7,7,Whinchat,Whinchat,Whinchat,8,David Pfieffer,Jay Ford,$8,2.5,racenet
+R9,Rosehill Gardens,9,3:50 pm Schweppes Winter Stakes,1400m,Open Quality 3yo+ NA,Soft 7,+1m Entire,8,8,Matusalem,Matusalem,Matusalem,14,Chris Waller,Reece Jones,$151,8.6,racenet
+R9,Rosehill Gardens,9,3:50 pm Schweppes Winter Stakes,1400m,Open Quality 3yo+ NA,Soft 7,+1m Entire,11,11,Mighty Ulysses,Mighty Ulysses,Mighty Ulysses,9,Annabel & Rob Archibald,Adam Farragher,$101,7.3,racenet
+R9,Rosehill Gardens,9,3:50 pm Schweppes Winter Stakes,1400m,Open Quality 3yo+ NA,Soft 7,+1m Entire,13,13,Pippie Beach,Pippie Beach,Pippie Beach,3,Chris Waller,Siena Grima,$15,7.3,racenet
+R9,Rosehill Gardens,9,3:50 pm Schweppes Winter Stakes,1400m,Open Quality 3yo+ NA,Soft 7,+1m Entire,14,14,Thunderlips,Thunderlips,Thunderlips,5,Bjorn Baker,Winona Costin,$91,4.3,racenet
+R9,Rosehill Gardens,9,3:50 pm Schweppes Winter Stakes,1400m,Open Quality 3yo+ NA,Soft 7,+1m Entire,15,15,Glorious Moments,Glorious Moments,Glorious Moments,4,Jim & Greg Lee,Tyler Schiller,$3.3,5.6,racenet
+R10,Rosehill Gardens,10,4:30 pm Petaluma Handicap,1400m,Handicap,Soft 7,+1m Entire,1,1,Sir Artie,Sir Artie,Sir Artie,18,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),$21,6.7,racenet
+R10,Rosehill Gardens,10,4:30 pm Petaluma Handicap,1400m,Handicap,Soft 7,+1m Entire,2,2,Felix Majestic,Felix Majestic,Felix Majestic,16,Gary Nickson,Winona Costin,$26,4.1,racenet
+R10,Rosehill Gardens,10,4:30 pm Petaluma Handicap,1400m,Handicap,Soft 7,+1m Entire,3,3,Montpellier,Montpellier,Montpellier,15,Annabel & Rob Archibald,Braith Nock (a-1.5),$7.5,5.4,racenet
+R10,Rosehill Gardens,10,4:30 pm Petaluma Handicap,1400m,Handicap,Soft 7,+1m Entire,4,4,Puntin,Puntin,Puntin,13,Bjorn Baker,Tom Sherry,$7,2.7,racenet
+R10,Rosehill Gardens,10,4:30 pm Petaluma Handicap,1400m,Handicap,Soft 7,+1m Entire,5,5,Supermassive,Supermassive,Supermassive,3,Gai Waterhouse & Adrian Bott,Tim Clark,$2.5,2,racenet
+R10,Rosehill Gardens,10,4:30 pm Petaluma Handicap,1400m,Handicap,Soft 7,+1m Entire,7,7,High Blue Sea,High Blue Sea,High Blue Sea,14,Gerald Ryan & Sterling Alexiou,Keagan Latham,$19,5.4,racenet
+R10,Rosehill Gardens,10,4:30 pm Petaluma Handicap,1400m,Handicap,Soft 7,+1m Entire,11,11,Interjection,Interjection,Interjection,12,Tom Charlton,Anna Roper (a-2),$27,7.5,racenet
+R10,Rosehill Gardens,10,4:30 pm Petaluma Handicap,1400m,Handicap,Soft 7,+1m Entire,13,13,Invader Zim,Invader Zim,Invader Zim,7,Chris Waller,Kerrin McEvoy,$7.5,6.4,racenet
+R10,Rosehill Gardens,10,4:30 pm Petaluma Handicap,1400m,Handicap,Soft 7,+1m Entire,14,14,Frontex,Frontex,Frontex,8,"Michael, John & Wayne Hawkes",Tyler Schiller,$21,4.1,racenet
+R10,Rosehill Gardens,10,4:30 pm Petaluma Handicap,1400m,Handicap,Soft 7,+1m Entire,15,15,Silvanito,Silvanito,Silvanito,2,Nathan Doyle,Alysha Collett,$6,6.6,racenet
