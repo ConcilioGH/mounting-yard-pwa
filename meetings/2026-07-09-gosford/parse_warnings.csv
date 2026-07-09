@@ -1,0 +1,35 @@
+race_no,runner_no,horse,warning_type,detail
+1,1,Audaciously Frank,scratched_runner,Runner marked scratched
+1,3,Ridgeback,missing_trainer,Trainer is empty
+1,3,Ridgeback,scratched_runner,Runner marked scratched
+1,7,Liyah's Girl,scratched_runner,Runner marked scratched
+2,1,Iniesta,scratched_runner,Runner marked scratched
+2,9,Loud And Clear,scratched_runner,Runner marked scratched
+2,10,Stronghold,scratched_runner,Runner marked scratched
+2,11,Words Of Fire,missing_trainer,Trainer is empty
+2,11,Words Of Fire,scratched_runner,Runner marked scratched
+3,3,Denial,scratched_runner,Runner marked scratched
+3,4,Point Score,scratched_runner,Runner marked scratched
+4,2,Absolutist,scratched_runner,Runner marked scratched
+4,3,Avon Calling,missing_trainer,Trainer is empty
+4,3,Avon Calling,scratched_runner,Runner marked scratched
+4,4,Ateba,scratched_runner,Runner marked scratched
+4,10,Warm Front,scratched_runner,Runner marked scratched
+4,12,Words Of Fire,missing_trainer,Trainer is empty
+4,12,Words Of Fire,scratched_runner,Runner marked scratched
+5,4,Eastern Beauty,missing_trainer,Trainer is empty
+5,4,Eastern Beauty,scratched_runner,Runner marked scratched
+5,1,Ancestral,scratched_runner,Runner marked scratched
+5,2,Appin Opal,scratched_runner,Runner marked scratched
+5,8,Wiltshire Lass,scratched_runner,Runner marked scratched
+5,9,Written Redemption,scratched_runner,Runner marked scratched
+5,10,Bonvoy,scratched_runner,Runner marked scratched
+5,11,Stay Spending,scratched_runner,Runner marked scratched
+6,5,Serinda,scratched_runner,Runner marked scratched
+6,8,Sapphire Kiss,missing_trainer,Trainer is empty
+6,8,Sapphire Kiss,scratched_runner,Runner marked scratched
+7,2,Rose Of Fenway,scratched_runner,Runner marked scratched
+7,7,Whispering Rupert,scratched_runner,Runner marked scratched
+7,9,All Too Sneaky,scratched_runner,Runner marked scratched
+7,10,Maramoti,missing_trainer,Trainer is empty
+7,10,Maramoti,scratched_runner,Runner marked scratched

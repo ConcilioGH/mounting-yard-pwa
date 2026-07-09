@@ -1,0 +1,44 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
+R1,Gosford,1,12:55 pm Eagles Plumbing Plus Super Maiden Plate,1600m,Maiden,Heavy 10,+4m Entire,2,2,In And Away,In And Away,In And Away,6,Tony Ball,Madeline Owen,$41,7.1,racenet
+R1,Gosford,1,12:55 pm Eagles Plumbing Plus Super Maiden Plate,1600m,Maiden,Heavy 10,+4m Entire,4,4,Rouladen,Rouladen,Rouladen,2,Mitchell Beer & George Carpenter Jean,Van Overmeire,$2.9,4,racenet
+R1,Gosford,1,12:55 pm Eagles Plumbing Plus Super Maiden Plate,1600m,Maiden,Heavy 10,+4m Entire,5,5,Royal And Ready,Royal And Ready,Royal And Ready,1,Matthew Smith,Zac Lloyd,$2.4,4,racenet
+R1,Gosford,1,12:55 pm Eagles Plumbing Plus Super Maiden Plate,1600m,Maiden,Heavy 10,+4m Entire,6,6,Landmark Lady,Landmark Lady,Landmark Lady,8,Theresa Bateup,Jessica Taylor,$26,5.8,racenet
+R1,Gosford,1,12:55 pm Eagles Plumbing Plus Super Maiden Plate,1600m,Maiden,Heavy 10,+4m Entire,8,8,Mr Bohemian,Mr Bohemian,Mr Bohemian,3,Annabel & Rob Archibald,Alysha Collett,$2.6,3.7,racenet
+R2,Gosford,2,1:35 pm The Entrance Leagues Club Cg&e Maiden Plate,1100m,Maiden,Heavy 10,+4m Entire,2,2,Kalim,Kalim,Kalim,5,Jim & Greg Lee,Reece Jones,$17,1,racenet
+R2,Gosford,2,1:35 pm The Entrance Leagues Club Cg&e Maiden Plate,1100m,Maiden,Heavy 10,+4m Entire,3,3,Noble Pride,Noble Pride,Noble Pride,3,Joseph Pride,Jay Ford,$5.75,5,racenet
+R2,Gosford,2,1:35 pm The Entrance Leagues Club Cg&e Maiden Plate,1100m,Maiden,Heavy 10,+4m Entire,4,4,Touching Hans,Touching Hans,Touching Hans,7,Matthew Smith,Tyler Schiller,$18,9.3,racenet
+R2,Gosford,2,1:35 pm The Entrance Leagues Club Cg&e Maiden Plate,1100m,Maiden,Heavy 10,+4m Entire,5,5,World Wide,World Wide,World Wide,1,John Sargent,Molly Bourke,$4.4,1.5,racenet
+R2,Gosford,2,1:35 pm The Entrance Leagues Club Cg&e Maiden Plate,1100m,Maiden,Heavy 10,+4m Entire,6,6,Buccaneering,Buccaneering,Buccaneering,2,Joseph Pride,Sam Clipperton,$16,NA,racenet
+R2,Gosford,2,1:35 pm The Entrance Leagues Club Cg&e Maiden Plate,1100m,Maiden,Heavy 10,+4m Entire,7,7,King Of The Top,King Of The Top,King Of The Top,6,Gerald Ryan & Sterling Alexiou,Kerrin McEvoy,$2.9,8,racenet
+R2,Gosford,2,1:35 pm The Entrance Leagues Club Cg&e Maiden Plate,1100m,Maiden,Heavy 10,+4m Entire,8,8,Lighthorseman,Lighthorseman,Lighthorseman,4,Michael Freedman,Andrew Adkins,$3.4,NA,racenet
+R3,Gosford,3,2:10 pm Brisbane Waters Glass Cg&e Benchmark 64 Handicap,1100m,BM64,Heavy 10,+4m Entire,1,1,Tartaglia,Tartaglia,Tartaglia,6,Paul Snowden,Kerrin McEvoy,$5.5,6.8,racenet
+R3,Gosford,3,2:10 pm Brisbane Waters Glass Cg&e Benchmark 64 Handicap,1100m,BM64,Heavy 10,+4m Entire,2,2,Herman Said,Herman Said,Herman Said,7,Kris Lees,Tyler Schiller,$5,2.8,racenet
+R3,Gosford,3,2:10 pm Brisbane Waters Glass Cg&e Benchmark 64 Handicap,1100m,BM64,Heavy 10,+4m Entire,5,5,Remember Jack,Remember Jack,Remember Jack,1,Annabel & Rob Archibald Heavelon Van,Der Hoven,$1.8,7.9,racenet
+R3,Gosford,3,2:10 pm Brisbane Waters Glass Cg&e Benchmark 64 Handicap,1100m,BM64,Heavy 10,+4m Entire,6,6,The Piccolino,The Piccolino,The Piccolino,4,Paul Perry,Shannen Llewellyn (a-2),$7.5,2.9,racenet
+R3,Gosford,3,2:10 pm Brisbane Waters Glass Cg&e Benchmark 64 Handicap,1100m,BM64,Heavy 10,+4m Entire,7,7,Senshi,Senshi,Senshi,8,Paul Perry,Donovan Dillon,$11,5.6,racenet
+R3,Gosford,3,2:10 pm Brisbane Waters Glass Cg&e Benchmark 64 Handicap,1100m,BM64,Heavy 10,+4m Entire,8,8,Whispering Rupert,Whispering Rupert,Whispering Rupert,3,Gregory McFarlane,Leeshelle Small (a-3),$26,3.8,racenet
+R4,Gosford,4,2:45 pm Brown Commercial Building Provincial Maiden Handicap,1000m,Maiden,Heavy 10,+4m Entire,1,1,Gold Earth,Gold Earth,Gold Earth,5,Tommy Wong,Louis Beuzelin,$11,2.7,racenet
+R4,Gosford,4,2:45 pm Brown Commercial Building Provincial Maiden Handicap,1000m,Maiden,Heavy 10,+4m Entire,5,5,No Limits,No Limits,No Limits,6,Kris Lees,Tyler Schiller,$2.35,NA,racenet
+R4,Gosford,4,2:45 pm Brown Commercial Building Provincial Maiden Handicap,1000m,Maiden,Heavy 10,+4m Entire,6,6,Public Safety,Public Safety,Public Safety,11,Blake Ryan,Jay Ford,$8,NA,racenet
+R4,Gosford,4,2:45 pm Brown Commercial Building Provincial Maiden Handicap,1000m,Maiden,Heavy 10,+4m Entire,7,7,Madam Zoffa,Madam Zoffa,Madam Zoffa,3,Neil Ward,Olivia Chambers (a-2),$34,NA,racenet
+R4,Gosford,4,2:45 pm Brown Commercial Building Provincial Maiden Handicap,1000m,Maiden,Heavy 10,+4m Entire,8,8,Sammy The Bull,Sammy The Bull,Sammy The Bull,7,Tanya Randell,Siena Grima (a-2),$26,5.5,racenet
+R4,Gosford,4,2:45 pm Brown Commercial Building Provincial Maiden Handicap,1000m,Maiden,Heavy 10,+4m Entire,9,9,Skyrise,Skyrise,Skyrise,9,Kim Waugh,Alysha Collett,$2.9,NA,racenet
+R4,Gosford,4,2:45 pm Brown Commercial Building Provincial Maiden Handicap,1000m,Maiden,Heavy 10,+4m Entire,11,11,Eastern Beauty,Eastern Beauty,Eastern Beauty,4,Brad Widdup,Kerrin McEvoy,$6.5,8.3,racenet
+R5,Gosford,5,3:20 pm The Settlers Tavern F&m Maiden Plate,1100m,Maiden,Heavy 10,+4m Entire,3,3,Avon Calling,Avon Calling,Avon Calling,1,Brad Widdup,Leeshelle Small (a-3),$8.5,3.8,racenet
+R5,Gosford,5,3:20 pm The Settlers Tavern F&m Maiden Plate,1100m,Maiden,Heavy 10,+4m Entire,5,5,Kiss Of Gold,Kiss Of Gold,Kiss Of Gold,5,Matthew Smith,Claire Ramsbotham (a-3),$8.5,5.3,racenet
+R5,Gosford,5,3:20 pm The Settlers Tavern F&m Maiden Plate,1100m,Maiden,Heavy 10,+4m Entire,6,6,Pure Sin,Pure Sin,Pure Sin,6,Brad Widdup,Christian Reith,$61,NA,racenet
+R5,Gosford,5,3:20 pm The Settlers Tavern F&m Maiden Plate,1100m,Maiden,Heavy 10,+4m Entire,7,7,Rising Revolution,Rising Revolution,Rising Revolution,13,Gerald Ryan & Sterling Alexiou,Sam Clipperton,$5.5,2.2,racenet
+R5,Gosford,5,3:20 pm The Settlers Tavern F&m Maiden Plate,1100m,Maiden,Heavy 10,+4m Entire,12,12,Tigroni,Tigroni,Tigroni,7,Tom Charlton,Zac Lloyd,$1.45,2.9,racenet
+R5,Gosford,5,3:20 pm The Settlers Tavern F&m Maiden Plate,1100m,Maiden,Heavy 10,+4m Entire,13,13,Ask Di,Ask Di,Ask Di,8,Gerald Ryan & Sterling Alexiou,Keagan Latham,$12,4.5,racenet
+R6,Gosford,6,3:55 pm Coastal Air Conditioning F&m Benchmark 64 Handicap,1100m,BM64,Heavy 10,+4m Entire,1,1,Grinzinger Pod,Grinzinger Pod,Grinzinger Pod,6,James Harding,Leeshelle Small (a-3),$4.6,6.9,racenet
+R6,Gosford,6,3:55 pm Coastal Air Conditioning F&m Benchmark 64 Handicap,1100m,BM64,Heavy 10,+4m Entire,2,2,Rockin' Millie,Rockin' Millie,Rockin' Millie,7,Adam Duggan,Siena Grima (a-2),$11,4.1,racenet
+R6,Gosford,6,3:55 pm Coastal Air Conditioning F&m Benchmark 64 Handicap,1100m,BM64,Heavy 10,+4m Entire,3,3,Pazyryk,Pazyryk,Pazyryk,2,Michael Freedman,Keagan Latham,$3,4.8,racenet
+R6,Gosford,6,3:55 pm Coastal Air Conditioning F&m Benchmark 64 Handicap,1100m,BM64,Heavy 10,+4m Entire,4,4,Issy's Star ho,Issy's Star ho,Issy's Star ho,8,Kris Lees,Tyler Schiller,$6.5,4.3,racenet
+R6,Gosford,6,3:55 pm Coastal Air Conditioning F&m Benchmark 64 Handicap,1100m,BM64,Heavy 10,+4m Entire,6,6,Altercation,Altercation,Altercation,3,Jason Deamer,Zac Lloyd,$3.8,6.1,racenet
+R6,Gosford,6,3:55 pm Coastal Air Conditioning F&m Benchmark 64 Handicap,1100m,BM64,Heavy 10,+4m Entire,7,7,Powerful Tune,Powerful Tune,Powerful Tune,1,Kris Lees,Shannen Llewellyn (a-2),$7.5,2.3,racenet
+R7,Gosford,7,4:35 pm Neville Glover- Parramatta Leagues Club Midway Class 1 Handicap,1200m,Class 1,Heavy 10,+4m Entire,1,1,Iron Fury,Iron Fury,Iron Fury,3,Nathan Doyle,Tyler Schiller,$3.5,3.8,racenet
+R7,Gosford,7,4:35 pm Neville Glover- Parramatta Leagues Club Midway Class 1 Handicap,1200m,Class 1,Heavy 10,+4m Entire,3,3,Luma Light,Luma Light,Luma Light,7,Anthony Mountney Rebecca,Bronett Prag (a-3),$11,3,racenet
+R7,Gosford,7,4:35 pm Neville Glover- Parramatta Leagues Club Midway Class 1 Handicap,1200m,Class 1,Heavy 10,+4m Entire,4,4,I Am Brave,I Am Brave,I Am Brave,9,Richard & Will Freedman,Zac Lloyd,$2.3,7.1,racenet
+R7,Gosford,7,4:35 pm Neville Glover- Parramatta Leagues Club Midway Class 1 Handicap,1200m,Class 1,Heavy 10,+4m Entire,5,5,Serinda,Serinda,Serinda,4,Blake Ryan,Jay Ford,$6.25,5.1,racenet
+R7,Gosford,7,4:35 pm Neville Glover- Parramatta Leagues Club Midway Class 1 Handicap,1200m,Class 1,Heavy 10,+4m Entire,6,6,Gaelic Gem,Gaelic Gem,Gaelic Gem,1,Tracey Bartley,Alysha Collett,$5.75,2.8,racenet
+R7,Gosford,7,4:35 pm Neville Glover- Parramatta Leagues Club Midway Class 1 Handicap,1200m,Class 1,Heavy 10,+4m Entire,8,8,Valentino Prince,Valentino Prince,Valentino Prince,2,Paul Perry,Donovan Dillon,$16,6,racenet
