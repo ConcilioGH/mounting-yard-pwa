@@ -1,0 +1,99 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
+R1,Randwick,1,11:10 am Elite Sand And Soil Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",2,2,Rumdabar,Rumdabar,Rumdabar,8,Kris Lees,Aaron Bullock (a1),$3.3,6,racenet
+R1,Randwick,1,11:10 am Elite Sand And Soil Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",3,3,Defensemen,Defensemen,Defensemen,1,Chris Waller,Zac Lloyd,$4.4,8.5,racenet
+R1,Randwick,1,11:10 am Elite Sand And Soil Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",4,4,Rebel Shield,Rebel Shield,Rebel Shield,10,Gary Portelli,Alysha Collett,$5.75,6,racenet
+R1,Randwick,1,11:10 am Elite Sand And Soil Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",5,5,Gold Globe,Gold Globe,Gold Globe,5,David Payne,Tyler Schiller,$17,5.1,racenet
+R1,Randwick,1,11:10 am Elite Sand And Soil Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",6,6,Columbo,Columbo,Columbo,4,Gregory Hickman,Andrew Calder,$34,6,racenet
+R1,Randwick,1,11:10 am Elite Sand And Soil Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",7,7,Ultimate Warrior,Ultimate Warrior,Ultimate Warrior,2,Michael Freedman,Andrew Adkins,$13,1.7,racenet
+R1,Randwick,1,11:10 am Elite Sand And Soil Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",8,8,Honniball Drive,Honniball Drive,Honniball Drive,11,Brett & Georgie Cavanough,Jett Newman (a-3),$11,4.5,racenet
+R1,Randwick,1,11:10 am Elite Sand And Soil Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",9,9,Dea,Dea,Dea,9,David Payne,Reece Jones,$35,NA,racenet
+R1,Randwick,1,11:10 am Elite Sand And Soil Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",10,10,Woodenbridge,Woodenbridge,Woodenbridge,3,Gerald Ryan & Sterling Alexiou,Siena Grima (a-2),$9,4.8,racenet
+R1,Randwick,1,11:10 am Elite Sand And Soil Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",11,11,Circus Queen,Circus Queen,Circus Queen,6,Peter Snowden,Rachel King,$10,7,racenet
+R2,Randwick,2,11:45 am Tab Highway Plate,1600m,Class 3,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",1,1,Moon Sweeper,Moon Sweeper,Moon Sweeper,5,Matthew Dunn,Jett Newman (a-3),$1.6,6.7,racenet
+R2,Randwick,2,11:45 am Tab Highway Plate,1600m,Class 3,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",2,2,Concoction,Concoction,Concoction,7,Stirling Osland,Mollie Fitzgerald (a-3),$8,7.6,racenet
+R2,Randwick,2,11:45 am Tab Highway Plate,1600m,Class 3,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",3,3,Release Point,Release Point,Release Point,12,Rodney Northam,Aaron Bullock,$23,7.4,racenet
+R2,Randwick,2,11:45 am Tab Highway Plate,1600m,Class 3,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",4,4,Demi God,Demi God,Demi God,11,Michael Travers,Molly Bourke (a-1.5),$34,6.5,racenet
+R2,Randwick,2,11:45 am Tab Highway Plate,1600m,Class 3,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",5,5,Steel Blaze,Steel Blaze,Steel Blaze,19,Brett Lazzarini,Teighan Worsnop,$34,7.7,racenet
+R2,Randwick,2,11:45 am Tab Highway Plate,1600m,Class 3,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",6,6,Dunstall The Gun,Dunstall The Gun,Dunstall The Gun,16,Brett & Georgie Cavanough,Kerrin McEvoy,$27,8,racenet
+R2,Randwick,2,11:45 am Tab Highway Plate,1600m,Class 3,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",7,7,Red Rags To Bulls,Red Rags To Bulls,Red Rags To Bulls,13,Jeremy Gask,Siena Grima (a-2),$6,10.5,racenet
+R2,Randwick,2,11:45 am Tab Highway Plate,1600m,Class 3,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",8,8,Saintly Sands,Saintly Sands,Saintly Sands,3,Rodney Northam,Reece Jones,$14,9.6,racenet
+R2,Randwick,2,11:45 am Tab Highway Plate,1600m,Class 3,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",11,11,Spurline,Spurline,Spurline,1,Tom Wilson,Zac Wadick (a-2),$81,8,racenet
+R2,Randwick,2,11:45 am Tab Highway Plate,1600m,Class 3,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",15,15,Party It Down,Party It Down,Party It Down,15,Paul Facoory,Sairyn Fawke,$101,7.2,racenet
+R2,Randwick,2,11:45 am Tab Highway Plate,1600m,Class 3,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",16,16,Leovanni,Leovanni,Leovanni,4,Cameron Crockett,Alysha Collett,$23,8.4,racenet
+R2,Randwick,2,11:45 am Tab Highway Plate,1600m,Class 3,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",19,19,Airliner,Airliner,Airliner,9,Terry Robinson,Pierre Boudvillain,$81,8,racenet
+R3,Randwick,3,12:20 pm Midway Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",3,3,Perfect Justice,Perfect Justice,Perfect Justice,11,John Sargent,Siena Grima (a-2),$3.6,6,racenet
+R3,Randwick,3,12:20 pm Midway Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",5,5,Forecaster,Forecaster,Forecaster,2,Paul Perry,Rachel King,$4.2,2.6,racenet
+R3,Randwick,3,12:20 pm Midway Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",6,6,Dr Evil,Dr Evil,Dr Evil,8,John Steinmetz,Deanne Panya,$19,8.3,racenet
+R3,Randwick,3,12:20 pm Midway Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",7,7,Murphilly,Murphilly,Murphilly,1,Kylie Gavenlock,Grant Buckley,$7.5,6.2,racenet
+R3,Randwick,3,12:20 pm Midway Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",9,9,Rush Attack,Rush Attack,Rush Attack,10,Nathan Doyle,Tyler Schiller,$18,5.5,racenet
+R3,Randwick,3,12:20 pm Midway Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",11,11,So Rebellious,So Rebellious,So Rebellious,3,Gary Portelli,Andrew Adkins,$13,6.1,racenet
+R3,Randwick,3,12:20 pm Midway Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",12,12,Tom Cruising,Tom Cruising,Tom Cruising,12,Kerry Parker,Alysha Collett,$41,6.9,racenet
+R3,Randwick,3,12:20 pm Midway Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",15,15,Unreal Expectation,Unreal Expectation,Unreal Expectation,4,Tara & Philippe Vigouroux,Mollie Fitzgerald (a-3),$11,4.8,racenet
+R3,Randwick,3,12:20 pm Midway Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",16,16,Diamond Model,Diamond Model,Diamond Model,9,Sara Ryan,Anna Roper (a-2),$16,4.4,racenet
+R3,Randwick,3,12:20 pm Midway Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",17,17,The Mona Lisa,The Mona Lisa,The Mona Lisa,14,Paul & Martha Cave,Andrew Calder,$5.75,5.2,racenet
+R4,Randwick,4,12:55 pm Cactus Imaging Handicap,1100m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",1,1,Benevac,Benevac,Benevac,2,Ciaron Maher,Siena Grima (a-2),$2.25,3.9,racenet
+R4,Randwick,4,12:55 pm Cactus Imaging Handicap,1100m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",4,4,Zoufame,Zoufame,Zoufame,4,Bjorn Baker,Kerrin McEvoy,$2.4,5.8,racenet
+R4,Randwick,4,12:55 pm Cactus Imaging Handicap,1100m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",5,5,Escargoes,Escargoes,Escargoes,5,Brad Widdup,Tyler Schiller,$7.5,5.7,racenet
+R4,Randwick,4,12:55 pm Cactus Imaging Handicap,1100m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",6,6,Ernaux,Ernaux,Ernaux,3,Chris Waller,Zac Lloyd,$9,6,racenet
+R4,Randwick,4,12:55 pm Cactus Imaging Handicap,1100m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",8,8,Point Score,Point Score,Point Score,1,Amanda Turner,Andrew Calder,$23,5.8,racenet
+R5,Randwick,5,1:30 pm Asahi Super Dry Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",1,1,Sacrify,Sacrify,Sacrify,1,Annabel & Rob Archibald,Aaron Bullock,$6,4.2,racenet
+R5,Randwick,5,1:30 pm Asahi Super Dry Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",2,2,Amplify,Amplify,Amplify,10,Ciaron Maher,Chad Schofield,$13,7.2,racenet
+R5,Randwick,5,1:30 pm Asahi Super Dry Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",3,3,Tambeloa,Tambeloa,Tambeloa,4,Kristen Buchanan,Mollie Fitzgerald (a-3),$5,5,racenet
+R5,Randwick,5,1:30 pm Asahi Super Dry Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",4,4,Existential,Existential,Existential,11,Chris Waller,Siena Grima (a-2),$8.5,4.2,racenet
+R5,Randwick,5,1:30 pm Asahi Super Dry Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",5,5,All Kinds Of Folk,All Kinds Of Folk,All Kinds Of Folk,5,Todd Pollard,Kerrin McEvoy,$4.8,7.8,racenet
+R5,Randwick,5,1:30 pm Asahi Super Dry Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",7,7,Celebrity,Celebrity,Celebrity,7,Bjorn Baker,Rachel King,$12,5.3,racenet
+R5,Randwick,5,1:30 pm Asahi Super Dry Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",8,8,Deal N' Dash,Deal N' Dash,Deal N' Dash,6,Bjorn Baker,Andrew Adkins,$14,7.6,racenet
+R5,Randwick,5,1:30 pm Asahi Super Dry Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",9,9,Horizons,Horizons,Horizons,8,Richard & Will Freedman,Alysha Collett,$7.5,4.8,racenet
+R5,Randwick,5,1:30 pm Asahi Super Dry Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",10,10,The Iron Star,The Iron Star,The Iron Star,3,Marc Chevalier,Tyler Schiller,$15,6.8,racenet
+R5,Randwick,5,1:30 pm Asahi Super Dry Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",11,11,Ivy Legend,Ivy Legend,Ivy Legend,2,Chris Waller,Reece Jones,$21,4.8,racenet
+R6,Randwick,6,2:05 pm Kieran Moore Handicap,1000m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",1,1,Power Of The Brave,Power Of The Brave,Power Of The Brave,8,Kris Lees,Shannen Llewellyn (a-3),$6,3.3,racenet
+R6,Randwick,6,2:05 pm Kieran Moore Handicap,1000m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",3,3,Petticoat,Petticoat,Petticoat,3,Brett Dodson,Mollie Fitzgerald (a-3),$3.4,2.5,racenet
+R6,Randwick,6,2:05 pm Kieran Moore Handicap,1000m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",4,4,Prima Bella,Prima Bella,Prima Bella,4,Matthew Smith,Kerrin McEvoy,$3.8,3.8,racenet
+R6,Randwick,6,2:05 pm Kieran Moore Handicap,1000m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",7,7,Zouripper,Zouripper,Zouripper,5,Joseph Pride,Reece Jones,$4.8,7.3,racenet
+R6,Randwick,6,2:05 pm Kieran Moore Handicap,1000m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",9,9,Sociable,Sociable,Sociable,2,Ciaron Maher,Siena Grima (a-2),$6,5.4,racenet
+R6,Randwick,6,2:05 pm Kieran Moore Handicap,1000m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",10,10,Indefensible,Indefensible,Indefensible,6,Joseph Pride,Alysha Collett,$16,7,racenet
+R6,Randwick,6,2:05 pm Kieran Moore Handicap,1000m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",11,11,Mountain Top,Mountain Top,Mountain Top,7,Dean Mirfin,Winona Costin,$151,3.3,racenet
+R7,Randwick,7,2:40 pm Precise Air Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",1,1,Williamsburg,Williamsburg,Williamsburg,7,Brett & Georgie Cavanough,Jett Newman (a-3),$14,5.9,racenet
+R7,Randwick,7,2:40 pm Precise Air Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",2,2,Mighty Ulysses,Mighty Ulysses,Mighty Ulysses,6,Annabel & Rob Archibald,Adam Farragher,$35,7.5,racenet
+R7,Randwick,7,2:40 pm Precise Air Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",3,3,Elliptical,Elliptical,Elliptical,8,Chris Waller,Andrew Adkins,$19,8.3,racenet
+R7,Randwick,7,2:40 pm Precise Air Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",4,4,Tazima,Tazima,Tazima,10,Chris Waller,Siena Grima (a-2),$4.2,6.3,racenet
+R7,Randwick,7,2:40 pm Precise Air Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",6,6,Rotagilla,Rotagilla,Rotagilla,4,Chris Waller,Kerrin McEvoy,$7,6.6,racenet
+R7,Randwick,7,2:40 pm Precise Air Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",7,7,Sky Lab,Sky Lab,Sky Lab,15,Paul Perry,Aaron Bullock,$91,9.5,racenet
+R7,Randwick,7,2:40 pm Precise Air Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",8,8,Time Quest,Time Quest,Time Quest,13,Matthew Smith,Winona Costin,$71,10.2,racenet
+R7,Randwick,7,2:40 pm Precise Air Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",9,9,Boniface,Boniface,Boniface,14,Mick Price & Michael Kent Jnr,Tyler Schiller,$6.5,6.8,racenet
+R7,Randwick,7,2:40 pm Precise Air Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",10,10,Luskaire,Luskaire,Luskaire,9,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),$8,4.2,racenet
+R7,Randwick,7,2:40 pm Precise Air Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",11,11,Sly,Sly,Sly,1,Gai Waterhouse & Adrian Bott,Rachel King,$6,5.7,racenet
+R7,Randwick,7,2:40 pm Precise Air Handicap,1800m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",12,12,Anythink Goes,Anythink Goes,Anythink Goes,2,Matthew Smith,Alysha Collett,$6.5,6.4,racenet
+R8,Randwick,8,3:20 pm Robrick Lodge Eremein Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",1,1,Until Valhalla,Until Valhalla,Until Valhalla,10,Ciaron Maher,Shannen Llewellyn (a-3),$9.5,5.8,racenet
+R8,Randwick,8,3:20 pm Robrick Lodge Eremein Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",2,2,The Creator,The Creator,The Creator,1,Mick Price & Michael Kent Jnr,Anna Roper (a-2),$9.5,4.5,racenet
+R8,Randwick,8,3:20 pm Robrick Lodge Eremein Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",3,3,Cold Brew,Cold Brew,Cold Brew,7,Richard & Will Freedman,Chad Schofield,$5,3,racenet
+R8,Randwick,8,3:20 pm Robrick Lodge Eremein Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",5,5,Bravissima,Bravissima,Bravissima,4,Matthew Dale,Mollie Fitzgerald (a-3),$15,4.8,racenet
+R8,Randwick,8,3:20 pm Robrick Lodge Eremein Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",7,7,Zouna,Zouna,Zouna,16,Tom Charlton,Kerrin McEvoy,$21,7.9,racenet
+R8,Randwick,8,3:20 pm Robrick Lodge Eremein Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",8,8,Seven's,Seven's,Seven's,11,Annabel & Rob Archibald,Sam Clipperton,$6,5.7,racenet
+R8,Randwick,8,3:20 pm Robrick Lodge Eremein Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",9,9,Conchiero,Conchiero,Conchiero,13,Gai Waterhouse & Adrian Bott,Rachel King,$6.5,2,racenet
+R8,Randwick,8,3:20 pm Robrick Lodge Eremein Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",10,10,Who Ever Thought,Who Ever Thought,Who Ever Thought,12,Jeremy Gask,Pierre Boudvillain,$126,3.6,racenet
+R8,Randwick,8,3:20 pm Robrick Lodge Eremein Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",11,11,Concordia Wind,Concordia Wind,Concordia Wind,9,Chris Waller,Siena Grima (a-2),$5.5,6.5,racenet
+R8,Randwick,8,3:20 pm Robrick Lodge Eremein Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",13,13,I've Bean Tryin',I've Bean Tryin',I've Bean Tryin',2,Matthew Kelley,Alysha Collett,$16,7.9,racenet
+R8,Randwick,8,3:20 pm Robrick Lodge Eremein Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",15,15,Chassagne,Chassagne,Chassagne,3,Todd Pollard,Reece Jones,$51,8,racenet
+R8,Randwick,8,3:20 pm Robrick Lodge Eremein Handicap,1600m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",16,16,Sirius Legend,Sirius Legend,Sirius Legend,15,Les Bridge,Tyler Schiller,$18,5.9,racenet
+R9,Randwick,9,4:00 pm Toyota Forklifts Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",1,1,Poison Chalice,Poison Chalice,Poison Chalice,11,Joseph Pride,Chad Schofield,$16,6.2,racenet
+R9,Randwick,9,4:00 pm Toyota Forklifts Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",2,2,Lugh,Lugh,Lugh,10,Ciaron Maher,Siena Grima (a-2),$5,3.3,racenet
+R9,Randwick,9,4:00 pm Toyota Forklifts Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",3,3,Thunderlips,Thunderlips,Thunderlips,8,Bjorn Baker,Rachel King,$5.25,4.4,racenet
+R9,Randwick,9,4:00 pm Toyota Forklifts Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",4,4,Kintyre,Kintyre,Kintyre,4,Gary Portelli,Anna Roper (a-2),$35,5.1,racenet
+R9,Randwick,9,4:00 pm Toyota Forklifts Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",6,6,Astero,Astero,Astero,1,Matthew Smith,Jett Newman (a-3),$34,5.9,racenet
+R9,Randwick,9,4:00 pm Toyota Forklifts Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",9,9,Emirate,Emirate,Emirate,6,Chris Waller,Reece Jones,$5.5,8.2,racenet
+R9,Randwick,9,4:00 pm Toyota Forklifts Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",10,10,Mickey's Medal,Mickey's Medal,Mickey's Medal,16,Annabel & Rob Archibald,Sam Clipperton,$19,6.1,racenet
+R9,Randwick,9,4:00 pm Toyota Forklifts Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",11,11,Watcha Matey,Watcha Matey,Watcha Matey,5,Chris Waller,Andrew Adkins,$12,NA,racenet
+R9,Randwick,9,4:00 pm Toyota Forklifts Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",12,12,Imposant,Imposant,Imposant,12,Kris Lees,Aaron Bullock (a1),$26,8.5,racenet
+R9,Randwick,9,4:00 pm Toyota Forklifts Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",13,13,Narbold,Narbold,Narbold,9,Chris Waller,Tyler Schiller,$7.5,6.7,racenet
+R9,Randwick,9,4:00 pm Toyota Forklifts Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",14,14,It's A Knockout,It's A Knockout,It's A Knockout,14,Ciaron Maher,Zac Lloyd,$6.25,5.8,racenet
+R10,Randwick,10,4:35 pm Tab Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",2,2,Swiftie Harriet,Swiftie Harriet,Swiftie Harriet,7,Travis Doudle,Anna Roper (a-2),$5,6.6,racenet
+R10,Randwick,10,4:35 pm Tab Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",3,3,Aye Aye Captain,Aye Aye Captain,Aye Aye Captain,1,Les Bridge,Kerrin McEvoy,$4.4,6.2,racenet
+R10,Randwick,10,4:35 pm Tab Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",5,5,Super Nui,Super Nui,Super Nui,9,Ron Quinton,Louise Day,$8.5,5,racenet
+R10,Randwick,10,4:35 pm Tab Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",6,6,Aroha Stone,Aroha Stone,Aroha Stone,12,Nathan Doyle,Shannen Llewellyn (a-3),$26,4.9,racenet
+R10,Randwick,10,4:35 pm Tab Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",7,7,Brigidine Gal,Brigidine Gal,Brigidine Gal,2,Brett & Georgie Cavanough,Winona Costin,$21,7.6,racenet
+R10,Randwick,10,4:35 pm Tab Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",10,10,Hurry Miss,Hurry Miss,Hurry Miss,10,Matthew Dale,Siena Grima (a-2),$9,8,racenet
+R10,Randwick,10,4:35 pm Tab Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",11,11,Miss Kim Kar,Miss Kim Kar,Miss Kim Kar,13,Bjorn Baker,Rachel King,$9.5,8.3,racenet
+R10,Randwick,10,4:35 pm Tab Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",12,12,Pierata's Gem,Pierata's Gem,Pierata's Gem,3,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),$8,5.7,racenet
+R10,Randwick,10,4:35 pm Tab Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",13,13,Miss Emma,Miss Emma,Miss Emma,14,Becky Byrne,Sairyn Fawke,$35,3.2,racenet
+R10,Randwick,10,4:35 pm Tab Handicap,1400m,Handicap,Heavy 9,"+9m 1000m-W/Post, +8m Remainder",14,14,Nandina,Nandina,Nandina,6,Chris Waller,Zac Lloyd,$5.5,6.5,racenet

@@ -10,7 +10,6 @@ import {
   gearTiles,
   racedayCompactGroups,
   SWEAT_LEGEND,
-  SWEAT_NEG_ROW,
   SWEAT_POS_KEY,
   WET_BODY_TYPES,
   WET_FEET,
@@ -73,6 +72,9 @@ import {
   type YardDomBridgeHandlers,
 } from "@/lib/ios12-yard-dom-bridge";
 import YardLegacyIOS12 from "@/components/yard-legacy-ios12";
+
+/** SWEAT negative row display order (layout only). */
+const SWEAT_NEG_DISPLAY_ORDER = ["BS-", "BH-", "K-", "N-"] as const;
 
 function isPositiveAssessmentFactor(factor: string): boolean {
   return factor === SWEAT_POS_KEY || factor.endsWith("+");
@@ -947,7 +949,7 @@ function MountingYardModernApp() {
                           </AssessmentControl>
                         </div>
                         <div className="grid grid-cols-4 gap-1.5">
-                          {SWEAT_NEG_ROW.map((key) => (
+                          {SWEAT_NEG_DISPLAY_ORDER.map((key) => (
                             <AssessmentControl
                               key={key}
                               className={cn(compactFactorBtn)}

@@ -588,6 +588,8 @@ export function buildIpadYardDomHtml(): string {
       letter-spacing: 0.02em;
     }
     .iy-factor-grid { display: grid; gap: 3px; }
+    .iy-sweat-layout { display: flex; flex-direction: column; gap: 3px; }
+    .iy-cols-1 { grid-template-columns: 1fr; }
     .iy-cols-2 { grid-template-columns: repeat(2, 1fr); }
     .iy-cols-3 { grid-template-columns: repeat(3, 1fr); }
     .iy-cols-4 { grid-template-columns: repeat(4, 1fr); }

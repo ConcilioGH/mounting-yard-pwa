@@ -1,0 +1,49 @@
+race_no,runner_no,horse,warning_type,detail
+1,1,Audit,scratched_runner,Runner marked scratched
+2,9,Holy Hell,scratched_runner,Runner marked scratched
+2,10,Shezain,scratched_runner,Runner marked scratched
+2,12,Hammett,scratched_runner,Runner marked scratched
+2,13,Hurry Miss,missing_trainer,Trainer is empty
+2,13,Hurry Miss,scratched_runner,Runner marked scratched
+2,14,Maples,scratched_runner,Runner marked scratched
+2,17,Caledonian,scratched_runner,Runner marked scratched
+2,18,King Soleil,missing_trainer,Trainer is empty
+2,18,King Soleil,scratched_runner,Runner marked scratched
+3,1,Cold Brew,scratched_runner,Runner marked scratched
+3,2,Iceman,scratched_runner,Runner marked scratched
+3,4,Swift Legend,scratched_runner,Runner marked scratched
+3,8,Free And Fast,scratched_runner,Runner marked scratched
+3,10,All Star,scratched_runner,Runner marked scratched
+3,13,Highborn Harry,missing_trainer,Trainer is empty
+3,13,Highborn Harry,scratched_runner,Runner marked scratched
+3,14,Just Shane,scratched_runner,Runner marked scratched
+3,18,Horizons,scratched_runner,Runner marked scratched
+4,2,Albany Road,scratched_runner,Runner marked scratched
+4,3,Sir Les,scratched_runner,Runner marked scratched
+4,7,Jarrito,scratched_runner,Runner marked scratched
+5,6,Dubai Watch,scratched_runner,Runner marked scratched
+6,2,Luna Cat,scratched_runner,Runner marked scratched
+6,5,Engine Room,scratched_runner,Runner marked scratched
+6,6,Benevac,scratched_runner,Runner marked scratched
+6,8,Rantan,scratched_runner,Runner marked scratched
+7,5,Les Vampires,scratched_runner,Runner marked scratched
+7,13,Tazaral,scratched_runner,Runner marked scratched
+7,14,Lennox,scratched_runner,Runner marked scratched
+7,15,Sacrify,scratched_runner,Runner marked scratched
+8,4,Supernima,scratched_runner,Runner marked scratched
+8,6,Margot's Deel,scratched_runner,Runner marked scratched
+8,12,The Mona Lisa,scratched_runner,Runner marked scratched
+8,14,Danish Fortune,scratched_runner,Runner marked scratched
+8,17,Hurry Miss,missing_trainer,Trainer is empty
+8,17,Hurry Miss,scratched_runner,Runner marked scratched
+9,5,Fortune,scratched_runner,Runner marked scratched
+9,7,Roadcone,scratched_runner,Runner marked scratched
+9,8,Coco Jamboo,scratched_runner,Runner marked scratched
+9,15,Substantial,scratched_runner,Runner marked scratched
+9,16,Until Valhalla,missing_trainer,Trainer is empty
+9,16,Until Valhalla,scratched_runner,Runner marked scratched
+10,1,Margot's Deel,scratched_runner,Runner marked scratched
+10,4,Bella Corazon,scratched_runner,Runner marked scratched
+10,8,Full Hao,scratched_runner,Runner marked scratched
+10,9,Dupli Kate,scratched_runner,Runner marked scratched
+10,15,Concordia Wind,scratched_runner,Runner marked scratched

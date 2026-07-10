@@ -2731,12 +2731,16 @@
         var group = this.factorGroups[g];
         html += '<div class="iy-group"><div class="iy-group-title">' + escapeHtml(group.title) + "</div>";
         if (group.kind === "sweat") {
-          html += '<div class="iy-factor-grid iy-cols-4">';
+          html += '<div class="iy-sweat-layout">';
+          html += '<div class="iy-factor-grid iy-cols-1">';
           html += this.factorButton(cfg.sweatPosKey || "Clean+", assessment);
-          var negRow = ["BH-", "K-", "N-", "BS-"];
+          html += "</div>";
+          html += '<div class="iy-factor-grid iy-cols-4">';
+          var negRow = ["BS-", "BH-", "K-", "N-"];
           for (var n = 0; n < negRow.length; n++) {
             html += this.factorButton(negRow[n], assessment);
           }
+          html += "</div>";
           html += "</div>";
           if (cfg.sweatLegend) {
             html += '<p class="iy-legend">' + escapeHtml(cfg.sweatLegend) + "</p>";
