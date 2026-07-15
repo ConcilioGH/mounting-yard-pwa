@@ -1,0 +1,26 @@
+race_no,runner_no,horse,warning_type,detail
+1,4,Courthezon,scratched_runner,Runner marked scratched
+1,11,Stronghold,scratched_runner,Runner marked scratched
+1,12,Zensen,missing_trainer,Trainer is empty
+1,12,Zensen,scratched_runner,Runner marked scratched
+2,8,Leonessa,scratched_runner,Runner marked scratched
+2,13,Sequinned,scratched_runner,Runner marked scratched
+2,15,Strollin' By,missing_trainer,Trainer is empty
+2,15,Strollin' By,scratched_runner,Runner marked scratched
+2,16,Bascilica Babe,missing_trainer,Trainer is empty
+2,16,Bascilica Babe,scratched_runner,Runner marked scratched
+3,4,Clanwilliam,scratched_runner,Runner marked scratched
+3,6,Artgirl,scratched_runner,Runner marked scratched
+3,7,Fimiston,scratched_runner,Runner marked scratched
+3,8,Glissando,scratched_runner,Runner marked scratched
+5,6,Glastonbury Girl,scratched_runner,Runner marked scratched
+5,10,Polo,missing_trainer,Trainer is empty
+5,10,Polo,scratched_runner,Runner marked scratched
+6,9,Let's Go Again ho,scratched_runner,Runner marked scratched
+6,11,Bode Akuna,missing_trainer,Trainer is empty
+6,11,Bode Akuna,scratched_runner,Runner marked scratched
+6,12,Smiling Prophet,scratched_runner,Runner marked scratched
+7,4,Winston Hills,scratched_runner,Runner marked scratched
+7,8,Champagne Hero,scratched_runner,Runner marked scratched
+7,14,Tanglewood Jimmy,missing_trainer,Trainer is empty
+7,14,Tanglewood Jimmy,scratched_runner,Runner marked scratched
