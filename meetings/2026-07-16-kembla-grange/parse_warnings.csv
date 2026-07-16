@@ -1,0 +1,4 @@
+race_no,runner_no,horse,warning_type,detail
+3,6,Heeza Steve,missing_jockey,Jockey is empty
+4,13,Quadria,missing_jockey,Jockey is empty
+6,13,Tod,missing_jockey,Jockey is empty
