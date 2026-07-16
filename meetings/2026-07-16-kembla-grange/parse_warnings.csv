@@ -1,4 +1,28 @@
 race_no,runner_no,horse,warning_type,detail
+1,1,Alpha Sort,scratched_runner,Runner marked scratched
+1,2,Jammed,scratched_runner,Runner marked scratched
+1,3,Saturday Party,scratched_runner,Runner marked scratched
+1,5,Viva Macaco,scratched_runner,Runner marked scratched
+1,8,Bascilica Babe,scratched_runner,Runner marked scratched
+1,14,Yankallila Bronc,scratched_runner,Runner marked scratched
+2,1,Peace Bird,scratched_runner,Runner marked scratched
+2,2,Creator Of World,scratched_runner,Runner marked scratched
+2,8,Last Tour,scratched_runner,Runner marked scratched
+2,9,Nambi Ghima,scratched_runner,Runner marked scratched
+3,1,Blazing Statement,scratched_runner,Runner marked scratched
 3,6,Heeza Steve,missing_jockey,Jockey is empty
+3,6,Heeza Steve,scratched_runner,Runner marked scratched
 4,13,Quadria,missing_jockey,Jockey is empty
+4,13,Quadria,scratched_runner,Runner marked scratched
+5,8,De Joker,scratched_runner,Runner marked scratched
+5,9,Royaltown,scratched_runner,Runner marked scratched
+6,2,Cheval De Bois,scratched_runner,Runner marked scratched
+6,5,Dynast King,scratched_runner,Runner marked scratched
+6,6,Feazabeel,scratched_runner,Runner marked scratched
 6,13,Tod,missing_jockey,Jockey is empty
+6,13,Tod,scratched_runner,Runner marked scratched
+7,3,Fangela,scratched_runner,Runner marked scratched
+7,4,Gambler,scratched_runner,Runner marked scratched
+7,5,Heuristic,scratched_runner,Runner marked scratched
+7,6,Honey Perfume,scratched_runner,Runner marked scratched
+8,8,River Pat,scratched_runner,Runner marked scratched
