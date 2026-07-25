@@ -64,6 +64,8 @@ const COLLISION_PAD_X = 6;
 const COLLISION_PAD_Y = 4;
 /** Visual-only nudge cap within a tactical column (px). */
 const VISUAL_NUDGE_MAX_PX = 28;
+/** Minimum normalized y change after clamp to count as movement. */
+const DOWN_MOVE_Y_EPS = 1e-12;
 
 const EMPTY_RUNNER_FLAGS: RunnerFlags = {
   favourite: false,
@@ -773,11 +775,17 @@ function applyFurthestLegalRailYInBarrierOrder(
     for (const mate of context) {
       if (mate.id === runner.id) continue;
       if (barrierSortKey(mate.barrier) >= barrierSortKey(runner.barrier)) continue;
+      let guard = 0;
+      const maxGuard = maxDownwardMoveIterations();
       while (
+        guard < maxGuard &&
         bestY >= mate.y - CROSSING_Y_TOL_NORM &&
         higherBarrierWronglyInsideLowerAtY(runner, bestY, mate)
       ) {
-        bestY = Math.max(minPlacementYNorm(), bestY - stepNorm);
+        const nextY = Math.max(minPlacementYNorm(), bestY - stepNorm);
+        if (nextY >= bestY - DOWN_MOVE_Y_EPS) break;
+        bestY = nextY;
+        guard += 1;
       }
     }
 
@@ -1242,19 +1250,66 @@ function finalRailReclaimBlockedAtY(tile: PlacedTile, candidateY: number, placed
   return false;
 }
 
-function tryMovePlacedTileDownPx(
+function maxDownwardMoveIterations() {
+  const boardH = getSpeedMapTile().boardHeightPx;
+  if (!Number.isFinite(boardH) || boardH <= 0) return 1;
+  // 1px steps: one full board height plus a small safety margin.
+  return Math.ceil(boardH) + 64;
+}
+
+/**
+ * Move a placed tile toward the rail by deltaPx when the clamped destination is clear.
+ * Returns false when the move is illegal, non-finite, or produces no meaningful y change
+ * (e.g. already at the board lower boundary where yNormFromAnchorPx clamps).
+ */
+export function tryMovePlacedTileDownPx(
   tile: PlacedTile,
   deltaPx: number,
   placed: PlacedTile[],
   blockedAtY: (tile: PlacedTile, candidateY: number, placed: PlacedTile[]) => boolean,
 ) {
   const boardH = getSpeedMapTile().boardHeightPx;
+  if (!Number.isFinite(boardH) || boardH <= 0) return false;
+  if (!Number.isFinite(tile.y) || !Number.isFinite(deltaPx)) return false;
+
   const nextAnchorPx = tile.y * boardH + deltaPx;
-  const candidateY = nextAnchorPx / boardH;
+  if (!Number.isFinite(nextAnchorPx)) return false;
+
+  // Evaluate collisions against the clamped position that would actually be applied.
+  const candidateY = yNormFromAnchorPx(nextAnchorPx);
+  if (!Number.isFinite(candidateY)) return false;
+  if (Math.abs(candidateY - tile.y) <= DOWN_MOVE_Y_EPS) return false;
   if (blockedAtY(tile, candidateY, placed)) return false;
-  tile.y = yNormFromAnchorPx(nextAnchorPx);
+
+  tile.y = candidateY;
   syncPlacedTileGeometry(tile);
   return true;
+}
+
+/** Test helper — build a minimal placed tile for movement regression tests. */
+export function createPlacedTileForTest(
+  partial: Partial<PlacedTile> & Pick<PlacedTile, "runnerId" | "x" | "y">,
+): PlacedTile {
+  const tile: PlacedTile = {
+    runnerId: partial.runnerId,
+    x: partial.x,
+    y: partial.y,
+    tacticalY: partial.tacticalY ?? partial.y,
+    originalY: partial.originalY ?? partial.y,
+    rect: partial.rect ?? tileRectNormFromPlacement(partial.x, partial.y),
+    barrier: partial.barrier ?? 1,
+    wIr: partial.wIr ?? 5,
+    lane: partial.lane ?? 0,
+    no: partial.no ?? 1,
+  };
+  syncPlacedTileGeometry(tile);
+  return tile;
+}
+
+export function alwaysClearBlockedAtYForTest(
+  ..._args: [PlacedTile, number, PlacedTile[]]
+) {
+  return false;
 }
 
 function syncPlacedTileLane(tile: PlacedTile, maxLane: number) {
@@ -1266,9 +1321,14 @@ const railPrioritySortKey = (a: PlacedTile, b: PlacedTile) =>
 
 function applyRailPriorityCompressionPass(placed: PlacedTile[]) {
   const order = [...placed].sort(railPrioritySortKey);
+  const maxSteps = maxDownwardMoveIterations();
   for (const tile of order) {
-    while (tryMovePlacedTileDownPx(tile, 1, placed, railCompressionBlockedAtY)) {
-      // tactical compression — crossing + rail only
+    let steps = 0;
+    while (
+      steps < maxSteps &&
+      tryMovePlacedTileDownPx(tile, 1, placed, railCompressionBlockedAtY)
+    ) {
+      steps += 1;
     }
   }
 }
@@ -1299,12 +1359,22 @@ function enforceBarrierDepthViolations(placed: PlacedTile[], maxLane: number) {
 
         const targetOutsideY = low.y - laneSep;
 
-        while (higherBarrierInsideLowerViolation(high, low)) {
+        let repairSteps = 0;
+        const maxRepairSteps = maxDownwardMoveIterations();
+        while (
+          repairSteps < maxRepairSteps &&
+          higherBarrierInsideLowerViolation(high, low)
+        ) {
+          repairSteps += 1;
           let moved = false;
+          let upSteps = 0;
+          const maxSteps = maxDownwardMoveIterations();
           while (
+            upSteps < maxSteps &&
             high.y > targetOutsideY + CROSSING_Y_TOL_NORM &&
             tryMovePlacedTileUpPxChecked(high, 1, placed)
           ) {
+            upSteps += 1;
             moved = true;
             changed = true;
           }
@@ -1333,10 +1403,16 @@ function enforceBarrierDepthViolations(placed: PlacedTile[], maxLane: number) {
 function applyFinalRailReclaim(placed: PlacedTile[], maxLane: number) {
   const order = [...placed].sort(railPrioritySortKey);
   const maxPasses = Math.max(6, placed.length * 2);
+  const maxSteps = maxDownwardMoveIterations();
   for (let pass = 0; pass < maxPasses; pass += 1) {
     let anyMoved = false;
     for (const tile of order) {
-      while (tryMovePlacedTileDownPx(tile, 1, placed, finalRailReclaimBlockedAtY)) {
+      let steps = 0;
+      while (
+        steps < maxSteps &&
+        tryMovePlacedTileDownPx(tile, 1, placed, finalRailReclaimBlockedAtY)
+      ) {
+        steps += 1;
         anyMoved = true;
       }
       syncPlacedTileLane(tile, maxLane);
@@ -1349,7 +1425,12 @@ function applyFinalRailReclaim(placed: PlacedTile[], maxLane: number) {
   for (let pass = 0; pass < maxPasses; pass += 1) {
     let anyMoved = false;
     for (const tile of order) {
-      while (tryMovePlacedTileDownPx(tile, 1, placed, finalRailReclaimBlockedAtY)) {
+      let steps = 0;
+      while (
+        steps < maxSteps &&
+        tryMovePlacedTileDownPx(tile, 1, placed, finalRailReclaimBlockedAtY)
+      ) {
+        steps += 1;
         anyMoved = true;
       }
       syncPlacedTileLane(tile, maxLane);

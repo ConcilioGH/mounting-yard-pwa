@@ -10,6 +10,9 @@
     "build": "npx tsx scripts/generate-meeting-library-manifest.mts && next build",
     "start": "next start",
     "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test": "npx tsx scripts/test-speed-map-placement.mts",
+    "test:speed-map": "npx tsx scripts/test-speed-map-placement.mts",
     "create-master-csv": "node scripts/create-master-csv.js",
     "build-meeting-csv": "node scripts/create-master-csv.js"
   },
