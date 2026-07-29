@@ -1,0 +1,80 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,weather,penetrometer,track_information,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
+R1,Illawarra Grange,1,12:35 pm Radical Media Maiden Handicap,1200m,Maiden,Good 4,+0.5m Entire,Fine,,,1,1,Written Doll,Written Doll,Written Doll,3,David Pfieffer,Rachel King,$1.95,3.7,racenet
+R1,Illawarra Grange,1,12:35 pm Radical Media Maiden Handicap,1200m,Maiden,Good 4,+0.5m Entire,Fine,,,2,2,Anthropoid,Anthropoid,Anthropoid,4,Brad Widdup,Kerrin McEvoy,$11,4.3,racenet
+R1,Illawarra Grange,1,12:35 pm Radical Media Maiden Handicap,1200m,Maiden,Good 4,+0.5m Entire,Fine,,,4,4,Lego Master,Lego Master,Lego Master,2,Bjorn Baker,Dylan Gibbons,$7,2.6,racenet
+R1,Illawarra Grange,1,12:35 pm Radical Media Maiden Handicap,1200m,Maiden,Good 4,+0.5m Entire,Fine,,,5,5,Real Mccoy,Real Mccoy,Real Mccoy,6,Joseph Pride,Andrew Adkins,$51,8,racenet
+R1,Illawarra Grange,1,12:35 pm Radical Media Maiden Handicap,1200m,Maiden,Good 4,+0.5m Entire,Fine,,,6,6,Albert Palais,Albert Palais,Albert Palais,7,Clarry Conners,Zac Lloyd,$3.8,5,racenet
+R1,Illawarra Grange,1,12:35 pm Radical Media Maiden Handicap,1200m,Maiden,Good 4,+0.5m Entire,Fine,,,7,7,Andarna,Andarna,Andarna,5,Robert & Luke Price,Tommy Berry (a0.5),$8.5,5.7,racenet
+R1,Illawarra Grange,1,12:35 pm Radical Media Maiden Handicap,1200m,Maiden,Good 4,+0.5m Entire,Fine,,,8,8,Dame Dividend,Dame Dividend,Dame Dividend,1,Matthew Smith,Jay Ford,$15,6.2,racenet
+R2,Illawarra Grange,2,1:10 pm Nsw Jockeys Association Midway Maiden Handicap,1300m,Maiden,Good 4,+0.5m Entire,Fine,,,1,1,Clanwilliam,Clanwilliam,Clanwilliam,3,David Payne,Chad Schofield,$1.45,5,racenet
+R2,Illawarra Grange,2,1:10 pm Nsw Jockeys Association Midway Maiden Handicap,1300m,Maiden,Good 4,+0.5m Entire,Fine,,,2,2,Coral Cove,Coral Cove,Coral Cove,5,Theresa Bateup,Jessica Taylor,$14,4,racenet
+R2,Illawarra Grange,2,1:10 pm Nsw Jockeys Association Midway Maiden Handicap,1300m,Maiden,Good 4,+0.5m Entire,Fine,,,5,5,The Agent,The Agent,The Agent,2,Amanda Turner,Mollie Fitzgerald,$31,2,racenet
+R2,Illawarra Grange,2,1:10 pm Nsw Jockeys Association Midway Maiden Handicap,1300m,Maiden,Good 4,+0.5m Entire,Fine,,,6,6,Gosh Almighty,Gosh Almighty,Gosh Almighty,6,Gary Portelli,Andrew Adkins,$10,NA,racenet
+R2,Illawarra Grange,2,1:10 pm Nsw Jockeys Association Midway Maiden Handicap,1300m,Maiden,Good 4,+0.5m Entire,Fine,,,8,8,Celestial Grace,Celestial Grace,Celestial Grace,4,Gary Portelli,Siena Grima (a-2),$5,6,racenet
+R2,Illawarra Grange,2,1:10 pm Nsw Jockeys Association Midway Maiden Handicap,1300m,Maiden,Good 4,+0.5m Entire,Fine,,,9,9,Cool Ledger,Cool Ledger,Cool Ledger,7,Gary Portelli,Regan Bayliss,$8,9,racenet
+R2,Illawarra Grange,2,1:10 pm Nsw Jockeys Association Midway Maiden Handicap,1300m,Maiden,Good 4,+0.5m Entire,Fine,,,10,10,Fulmina's Legacy,Fulmina's Legacy,Fulmina's Legacy,1,Robert & Luke Price,Jett Newman (a-2),$26,5.5,racenet
+R3,Illawarra Grange,3,1:45 pm Jockeys Celebration Day 3yo Maiden Plate,1150m,Maiden,Good 4,+0.5m Entire,Fine,,,1,1,Bellagio Beach,Bellagio Beach,Bellagio Beach,10,Amanda Turner,Reece Jones,$126,1,racenet
+R3,Illawarra Grange,3,1:45 pm Jockeys Celebration Day 3yo Maiden Plate,1150m,Maiden,Good 4,+0.5m Entire,Fine,,,2,2,Cap D'ail,Cap D'ail,Cap D'ail,11,Diane Poidevin Laine,Olivia Chambers (a-2),$126,6,racenet
+R3,Illawarra Grange,3,1:45 pm Jockeys Celebration Day 3yo Maiden Plate,1150m,Maiden,Good 4,+0.5m Entire,Fine,,,3,3,Isawyou,Isawyou,Isawyou,2,David Pfieffer,Alysha Collett,$1.55,5,racenet
+R3,Illawarra Grange,3,1:45 pm Jockeys Celebration Day 3yo Maiden Plate,1150m,Maiden,Good 4,+0.5m Entire,Fine,,,4,4,Konigstein,Konigstein,Konigstein,3,Chris Waller,Siena Grima (a-2),$31,NA,racenet
+R3,Illawarra Grange,3,1:45 pm Jockeys Celebration Day 3yo Maiden Plate,1150m,Maiden,Good 4,+0.5m Entire,Fine,,,6,6,Pariah Time,Pariah Time,Pariah Time,7,Mitchell Beer & George Carpenter Jean,Van Overmeire,$14,2.9,racenet
+R3,Illawarra Grange,3,1:45 pm Jockeys Celebration Day 3yo Maiden Plate,1150m,Maiden,Good 4,+0.5m Entire,Fine,,,7,7,Zousari,Zousari,Zousari,1,Jason Coyle,Regan Bayliss,$15,6.4,racenet
+R3,Illawarra Grange,3,1:45 pm Jockeys Celebration Day 3yo Maiden Plate,1150m,Maiden,Good 4,+0.5m Entire,Fine,,,8,8,Appin Opal,Appin Opal,Appin Opal,4,David Pfieffer,Jay Ford,$9,5.6,racenet
+R3,Illawarra Grange,3,1:45 pm Jockeys Celebration Day 3yo Maiden Plate,1150m,Maiden,Good 4,+0.5m Entire,Fine,,,9,9,Avon Calling,Avon Calling,Avon Calling,6,Brad Widdup,Kerrin McEvoy,$7,4.3,racenet
+R3,Illawarra Grange,3,1:45 pm Jockeys Celebration Day 3yo Maiden Plate,1150m,Maiden,Good 4,+0.5m Entire,Fine,,,10,10,Idyllic Star,Idyllic Star,Idyllic Star,9,Steve Englebrecht,Deanne Panya,$151,NA,racenet
+R3,Illawarra Grange,3,1:45 pm Jockeys Celebration Day 3yo Maiden Plate,1150m,Maiden,Good 4,+0.5m Entire,Fine,,,11,11,Kiss Of Gold,Kiss Of Gold,Kiss Of Gold,5,Matthew Smith,Tyler Schiller,$7.5,4.8,racenet
+R3,Illawarra Grange,3,1:45 pm Jockeys Celebration Day 3yo Maiden Plate,1150m,Maiden,Good 4,+0.5m Entire,Fine,,,12,12,Viva Viva,Viva Viva,Viva Viva,8,Amanda Turner,Winona Costin,$151,5.8,racenet
+R4,Illawarra Grange,4,2:20 pm Equimillion Super Maiden Plate,1450m,Maiden,Good 4,+0.5m Entire,Fine,,,3,3,Creator Of World,Creator Of World,Creator Of World,2,Ross McConville,Zac Lloyd,$2.6,5.8,racenet
+R4,Illawarra Grange,4,2:20 pm Equimillion Super Maiden Plate,1450m,Maiden,Good 4,+0.5m Entire,Fine,,,5,5,Leon Ruben,Leon Ruben,Leon Ruben,9,Diane Poidevin Laine,Jeff Penza,$15,7.5,racenet
+R4,Illawarra Grange,4,2:20 pm Equimillion Super Maiden Plate,1450m,Maiden,Good 4,+0.5m Entire,Fine,,,6,6,Take A Day Off,Take A Day Off,Take A Day Off,3,Paul & Martha Cave,Lee Magorrian,$26,2.7,racenet
+R4,Illawarra Grange,4,2:20 pm Equimillion Super Maiden Plate,1450m,Maiden,Good 4,+0.5m Entire,Fine,,,7,7,Enchanted Rose,Enchanted Rose,Enchanted Rose,8,Kerry Parker,Brock Ryan,$81,7,racenet
+R4,Illawarra Grange,4,2:20 pm Equimillion Super Maiden Plate,1450m,Maiden,Good 4,+0.5m Entire,Fine,,,8,8,Overshadow,Overshadow,Overshadow,4,"Michael, John & Wayne Hawkes",Tyler Schiller,$3.5,5.8,racenet
+R4,Illawarra Grange,4,2:20 pm Equimillion Super Maiden Plate,1450m,Maiden,Good 4,+0.5m Entire,Fine,,,9,9,She Can Salsa,She Can Salsa,She Can Salsa,6,Edward O'Rourke,Rachel King,$6.5,6.3,racenet
+R4,Illawarra Grange,4,2:20 pm Equimillion Super Maiden Plate,1450m,Maiden,Good 4,+0.5m Entire,Fine,,,10,10,Supido Secret,Supido Secret,Supido Secret,1,Paul Niceforo,Ms Molly Bourke (a0/51.5kg),$51,5.7,racenet
+R4,Illawarra Grange,4,2:20 pm Equimillion Super Maiden Plate,1450m,Maiden,Good 4,+0.5m Entire,Fine,,,11,11,Divine Heights,Divine Heights,Divine Heights,5,David Payne,Olivia Chambers (a-2),$3.9,3,racenet
+R4,Illawarra Grange,4,2:20 pm Equimillion Super Maiden Plate,1450m,Maiden,Good 4,+0.5m Entire,Fine,,,12,12,Mr Peasant,Mr Peasant,Mr Peasant,7,Paul Murray Jean,Van Overmeire,$34,4.6,racenet
+R5,Illawarra Grange,5,2:55 pm Fos Media Class 1 Handicap,1450m,Class 1,Good 4,+0.5m Entire,Fine,,,1,1,Agraffe Rocket,Agraffe Rocket,Agraffe Rocket,3,Kris Lees,Adam Hyeronimus,$2.8,6.4,racenet
+R5,Illawarra Grange,5,2:55 pm Fos Media Class 1 Handicap,1450m,Class 1,Good 4,+0.5m Entire,Fine,,,2,2,Cobra Club,Cobra Club,Cobra Club,7,Gai Waterhouse & Adrian Bott,Regan Bayliss,$4.5,2.7,racenet
+R5,Illawarra Grange,5,2:55 pm Fos Media Class 1 Handicap,1450m,Class 1,Good 4,+0.5m Entire,Fine,,,3,3,One Run Won,One Run Won,One Run Won,8,John Sargent,Donovan Dillon,$9.5,3.4,racenet
+R5,Illawarra Grange,5,2:55 pm Fos Media Class 1 Handicap,1450m,Class 1,Good 4,+0.5m Entire,Fine,,,4,4,Skirmish,Skirmish,Skirmish,4,Kerry Parker,Jay Ford,$11,5.5,racenet
+R5,Illawarra Grange,5,2:55 pm Fos Media Class 1 Handicap,1450m,Class 1,Good 4,+0.5m Entire,Fine,,,5,5,Zougotme,Zougotme,Zougotme,6,Robert & Luke Price Jean,Van Overmeire,$16,4.4,racenet
+R5,Illawarra Grange,5,2:55 pm Fos Media Class 1 Handicap,1450m,Class 1,Good 4,+0.5m Entire,Fine,,,6,6,Ouragan,Ouragan,Ouragan,1,Paul & Martha Cave,Andrew Calder,$4.2,5.6,racenet
+R5,Illawarra Grange,5,2:55 pm Fos Media Class 1 Handicap,1450m,Class 1,Good 4,+0.5m Entire,Fine,,,7,7,Procean,Procean,Procean,5,Chris Waller,Tommy Berry,$11,8,racenet
+R5,Illawarra Grange,5,2:55 pm Fos Media Class 1 Handicap,1450m,Class 1,Good 4,+0.5m Entire,Fine,,,10,10,Simply Nutbush,Simply Nutbush,Simply Nutbush,2,Jarrod Austin,Jessica Taylor,$17,5.9,racenet
+R6,Illawarra Grange,6,3:35 pm Pacific Plan Management Class 1 Handicap,1150m,Class 1,Good 4,+0.5m Entire,Fine,,,1,1,Capture Me,Capture Me,Capture Me,2,Joseph Pride,Chad Schofield,$1.4,2.8,racenet
+R6,Illawarra Grange,6,3:35 pm Pacific Plan Management Class 1 Handicap,1150m,Class 1,Good 4,+0.5m Entire,Fine,,,2,2,Dubai Adventure,Dubai Adventure,Dubai Adventure,3,Mitchell Beer & George Carpenter Jean,Van Overmeire,$6.5,6,racenet
+R6,Illawarra Grange,6,3:35 pm Pacific Plan Management Class 1 Handicap,1150m,Class 1,Good 4,+0.5m Entire,Fine,,,5,5,Hard Jakka,Hard Jakka,Hard Jakka,7,Kristen Buchanan,Tyler Schiller,$16,4.9,racenet
+R6,Illawarra Grange,6,3:35 pm Pacific Plan Management Class 1 Handicap,1150m,Class 1,Good 4,+0.5m Entire,Fine,,,6,6,August Rush,August Rush,August Rush,6,Donna Grisedale,Jon Grisedale,$12,1.8,racenet
+R6,Illawarra Grange,6,3:35 pm Pacific Plan Management Class 1 Handicap,1150m,Class 1,Good 4,+0.5m Entire,Fine,,,7,7,Nafanua,Nafanua,Nafanua,5,Bjorn Baker,Kerrin McEvoy,$7,1.5,racenet
+R6,Illawarra Grange,6,3:35 pm Pacific Plan Management Class 1 Handicap,1150m,Class 1,Good 4,+0.5m Entire,Fine,,,8,8,Ballyhoo,Ballyhoo,Ballyhoo,4,Craig Carmody,Olivia Chambers (a-2),$26,2.3,racenet
+R6,Illawarra Grange,6,3:35 pm Pacific Plan Management Class 1 Handicap,1150m,Class 1,Good 4,+0.5m Entire,Fine,,,9,9,Vantante,Vantante,Vantante,1,Paul Murray,Louise Day,$151,4.6,racenet
+R6,Illawarra Grange,6,3:35 pm Pacific Plan Management Class 1 Handicap,1150m,Class 1,Good 4,+0.5m Entire,Fine,,,10,10,Li'l Grug,Li'l Grug,Li'l Grug,8,Diane Poidevin Laine,Jeff Penza,$41,3.7,racenet
+R6,Illawarra Grange,6,3:35 pm Pacific Plan Management Class 1 Handicap,1150m,Class 1,Good 4,+0.5m Entire,Fine,,,12,12,Piedi Veloci,Piedi Veloci,Piedi Veloci,9,Donna Grisedale,Brock Ryan,$81,8.1,racenet
+R7,Illawarra Grange,7,4:10 pm Lexy Get Well Provincial Benchmark 68 Handicap,1200m,BM68,Good 4,+0.5m Entire,Fine,,,1,1,Cryptonic,Cryptonic,Cryptonic,10,Jason Attard,Mitch Stapleford (a-1.5),$9.5,5.3,racenet
+R7,Illawarra Grange,7,4:10 pm Lexy Get Well Provincial Benchmark 68 Handicap,1200m,BM68,Good 4,+0.5m Entire,Fine,,,3,3,Gooloo Bucky,Gooloo Bucky,Gooloo Bucky,12,Paul Murray,Chad Lever,$23,5.3,racenet
+R7,Illawarra Grange,7,4:10 pm Lexy Get Well Provincial Benchmark 68 Handicap,1200m,BM68,Good 4,+0.5m Entire,Fine,,,4,4,Heuristic,Heuristic,Heuristic,7,Mitchell Beer & George Carpenter,Siena Grima (a-2),$4.4,5.6,racenet
+R7,Illawarra Grange,7,4:10 pm Lexy Get Well Provincial Benchmark 68 Handicap,1200m,BM68,Good 4,+0.5m Entire,Fine,,,5,5,Powder Man,Powder Man,Powder Man,6,Donna Grisedale,Jon Grisedale,$7,8.6,racenet
+R7,Illawarra Grange,7,4:10 pm Lexy Get Well Provincial Benchmark 68 Handicap,1200m,BM68,Good 4,+0.5m Entire,Fine,,,6,6,Sneaky Choice,Sneaky Choice,Sneaky Choice,5,Brad Widdup,Tommy Berry,$4.6,7.3,racenet
+R7,Illawarra Grange,7,4:10 pm Lexy Get Well Provincial Benchmark 68 Handicap,1200m,BM68,Good 4,+0.5m Entire,Fine,,,7,7,Denial,Denial,Denial,8,Mitchell Beer & George Carpenter,Dylan Gibbons,$12,6.5,racenet
+R7,Illawarra Grange,7,4:10 pm Lexy Get Well Provincial Benchmark 68 Handicap,1200m,BM68,Good 4,+0.5m Entire,Fine,,,8,8,Donwon,Donwon,Donwon,2,Ross McConville,Brock Ryan,$12,4.6,racenet
+R7,Illawarra Grange,7,4:10 pm Lexy Get Well Provincial Benchmark 68 Handicap,1200m,BM68,Good 4,+0.5m Entire,Fine,,,9,9,Broadway Follies,Broadway Follies,Broadway Follies,3,Kristen Buchanan,Olivia Chambers (a-2),$11,6.4,racenet
+R7,Illawarra Grange,7,4:10 pm Lexy Get Well Provincial Benchmark 68 Handicap,1200m,BM68,Good 4,+0.5m Entire,Fine,,,10,10,Monte Maximus,Monte Maximus,Monte Maximus,11,Robert & Luke Price Jean,Van Overmeire,$11,8.1,racenet
+R7,Illawarra Grange,7,4:10 pm Lexy Get Well Provincial Benchmark 68 Handicap,1200m,BM68,Good 4,+0.5m Entire,Fine,,,11,11,Starinion,Starinion,Starinion,1,Steven Sampson Rebecca,Bronett Prag (a-3),$12,4.3,racenet
+R7,Illawarra Grange,7,4:10 pm Lexy Get Well Provincial Benchmark 68 Handicap,1200m,BM68,Good 4,+0.5m Entire,Fine,,,12,12,Hammering Away,Hammering Away,Hammering Away,9,Diane Poidevin Laine,Jeff Penza,$81,6.9,racenet
+R7,Illawarra Grange,7,4:10 pm Lexy Get Well Provincial Benchmark 68 Handicap,1200m,BM68,Good 4,+0.5m Entire,Fine,,,13,13,Listins Lass,Listins Lass,Listins Lass,13,John Cooper,Reece Jones,$31,6.4,racenet
+R7,Illawarra Grange,7,4:10 pm Lexy Get Well Provincial Benchmark 68 Handicap,1200m,BM68,Good 4,+0.5m Entire,Fine,,,14,14,Change The Date,Change The Date,Change The Date,4,Donna Grisedale,Poppie Gorton (a-3),$31,3,racenet
+R8,Illawarra Grange,8,4:45 pm Colourite Painting Benchmark 64 Handicap,1400m,BM64,Good 4,+0.5m Entire,Fine,,,1,1,Etched In Time,Etched In Time,Etched In Time,13,Richard & Will Freedman,Chad Schofield,$31,4.4,racenet
+R8,Illawarra Grange,8,4:45 pm Colourite Painting Benchmark 64 Handicap,1400m,BM64,Good 4,+0.5m Entire,Fine,,,2,2,Glounthaune,Glounthaune,Glounthaune,5,Gregory Hickman,Tyler Schiller,$21,5.8,racenet
+R8,Illawarra Grange,8,4:45 pm Colourite Painting Benchmark 64 Handicap,1400m,BM64,Good 4,+0.5m Entire,Fine,,,3,3,Three Arrows,Three Arrows,Three Arrows,9,John O'Shea & Tom Charlton,Zac Lloyd,$3.1,4.8,racenet
+R8,Illawarra Grange,8,4:45 pm Colourite Painting Benchmark 64 Handicap,1400m,BM64,Good 4,+0.5m Entire,Fine,,,4,4,Fiftyfivechevy,Fiftyfivechevy,Fiftyfivechevy,8,Mitchell Beer & George Carpenter,Dylan Gibbons,$3.7,5,racenet
+R8,Illawarra Grange,8,4:45 pm Colourite Painting Benchmark 64 Handicap,1400m,BM64,Good 4,+0.5m Entire,Fine,,,6,6,Stallone,Stallone,Stallone,3,Bjorn Baker,Kerrin McEvoy,$7,2.8,racenet
+R8,Illawarra Grange,8,4:45 pm Colourite Painting Benchmark 64 Handicap,1400m,BM64,Good 4,+0.5m Entire,Fine,,,7,7,Point Score ho,Point Score ho,Point Score ho,14,Amanda Turner,Andrew Calder,$16,5.5,racenet
+R8,Illawarra Grange,8,4:45 pm Colourite Painting Benchmark 64 Handicap,1400m,BM64,Good 4,+0.5m Entire,Fine,,,8,8,Sizzler,Sizzler,Sizzler,15,Craig Carmody,Chad Lever,$71,5.3,racenet
+R8,Illawarra Grange,8,4:45 pm Colourite Painting Benchmark 64 Handicap,1400m,BM64,Good 4,+0.5m Entire,Fine,,,9,9,All Machiavellian,All Machiavellian,All Machiavellian,12,Robert & Luke Price Jean,Van Overmeire,$13,7.8,racenet
+R8,Illawarra Grange,8,4:45 pm Colourite Painting Benchmark 64 Handicap,1400m,BM64,Good 4,+0.5m Entire,Fine,,,10,10,Channelling,Channelling,Channelling,10,Edward O'Rourke,Rachel King,$27,4.2,racenet
+R8,Illawarra Grange,8,4:45 pm Colourite Painting Benchmark 64 Handicap,1400m,BM64,Good 4,+0.5m Entire,Fine,,,11,11,Peschiera,Peschiera,Peschiera,1,"Michael, John & Wayne Hawkes",Ashley Morgan,$6,2.8,racenet
+R8,Illawarra Grange,8,4:45 pm Colourite Painting Benchmark 64 Handicap,1400m,BM64,Good 4,+0.5m Entire,Fine,,,12,12,Mah Ali,Mah Ali,Mah Ali,11,Diane Poidevin Laine,Brock Ryan,$34,6.1,racenet
+R8,Illawarra Grange,8,4:45 pm Colourite Painting Benchmark 64 Handicap,1400m,BM64,Good 4,+0.5m Entire,Fine,,,13,13,Pearler,Pearler,Pearler,6,Gary Nickson,Winona Costin,$71,4.5,racenet
+R8,Illawarra Grange,8,4:45 pm Colourite Painting Benchmark 64 Handicap,1400m,BM64,Good 4,+0.5m Entire,Fine,,,14,14,La Bella Bondi,La Bella Bondi,La Bella Bondi,7,Diane Poidevin Laine,Jon Grisedale,$126,6.5,racenet
+R8,Illawarra Grange,8,4:45 pm Colourite Painting Benchmark 64 Handicap,1400m,BM64,Good 4,+0.5m Entire,Fine,,,15,15,Zielle,Zielle,Zielle,2,Gary Nickson,Molly Bourke,$81,8.3,racenet
+R8,Illawarra Grange,8,4:45 pm Colourite Painting Benchmark 64 Handicap,1400m,BM64,Good 4,+0.5m Entire,Fine,,,16,16,Beauer,Beauer,Beauer,4,Paul Murray,Louise Day,$81,3.4,racenet
