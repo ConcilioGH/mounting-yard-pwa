@@ -1,0 +1,69 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,weather,penetrometer,track_information,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
+R1,Hawkesbury,1,12:45 pm Mollie Fitzgerald 2025-2026 Hrc Champion Apprentice Provincial Maiden Handicap,1500m,Maiden,Soft 6,True,Fine,5.59,,1,1,Coral Cove,Coral Cove,Coral Cove,2,Theresa Bateup,Jessica Taylor,$3.8,4.5,racenet
+R1,Hawkesbury,1,12:45 pm Mollie Fitzgerald 2025-2026 Hrc Champion Apprentice Provincial Maiden Handicap,1500m,Maiden,Soft 6,True,Fine,5.59,,2,2,Mr Reiby,Mr Reiby,Mr Reiby,5,Theresa Bateup,Amy McLucas,$7,3.7,racenet
+R1,Hawkesbury,1,12:45 pm Mollie Fitzgerald 2025-2026 Hrc Champion Apprentice Provincial Maiden Handicap,1500m,Maiden,Soft 6,True,Fine,5.59,,3,3,Copartner Pegasus,Copartner Pegasus,Copartner Pegasus,4,Stephen O'Halloran,Keagan Latham,$2.3,2.6,racenet
+R1,Hawkesbury,1,12:45 pm Mollie Fitzgerald 2025-2026 Hrc Champion Apprentice Provincial Maiden Handicap,1500m,Maiden,Soft 6,True,Fine,5.59,,4,4,Fletcher,Fletcher,Fletcher,8,Kris Lees,Shannen Llewellyn (a-2),$11,5,racenet
+R1,Hawkesbury,1,12:45 pm Mollie Fitzgerald 2025-2026 Hrc Champion Apprentice Provincial Maiden Handicap,1500m,Maiden,Soft 6,True,Fine,5.59,,5,5,Atossa,Atossa,Atossa,3,Theresa Bateup,Brock Ryan,$151,8.3,racenet
+R1,Hawkesbury,1,12:45 pm Mollie Fitzgerald 2025-2026 Hrc Champion Apprentice Provincial Maiden Handicap,1500m,Maiden,Soft 6,True,Fine,5.59,,6,6,Cape Douglas,Cape Douglas,Cape Douglas,1,Marc Chevalier,Tyler Schiller,$4.2,4.7,racenet
+R1,Hawkesbury,1,12:45 pm Mollie Fitzgerald 2025-2026 Hrc Champion Apprentice Provincial Maiden Handicap,1500m,Maiden,Soft 6,True,Fine,5.59,,7,7,Frosted Amour,Frosted Amour,Frosted Amour,7,Theresa Bateup,Molly Bourke,$61,5.4,racenet
+R1,Hawkesbury,1,12:45 pm Mollie Fitzgerald 2025-2026 Hrc Champion Apprentice Provincial Maiden Handicap,1500m,Maiden,Soft 6,True,Fine,5.59,,8,8,Red Deer,Red Deer,Red Deer,6,Sara Ryan,Alysha Collett,$21,6.4,racenet
+R2,Hawkesbury,2,1:20 pm Micway Midway Class 1 Handicap,1100m,Class 1,Soft 6,True,Fine,5.59,,2,2,Royal Corporal,Royal Corporal,Royal Corporal,1,Richard Litt,Tom Sherry,$8,5.7,racenet
+R2,Hawkesbury,2,1:20 pm Micway Midway Class 1 Handicap,1100m,Class 1,Soft 6,True,Fine,5.59,,3,3,Turf Fever,Turf Fever,Turf Fever,2,Damien Lane,Keagan Latham,$4,2.8,racenet
+R2,Hawkesbury,2,1:20 pm Micway Midway Class 1 Handicap,1100m,Class 1,Soft 6,True,Fine,5.59,,4,4,Classic Pocket,Classic Pocket,Classic Pocket,4,Rodney Bailey,Reece Jones,$5.5,5.9,racenet
+R2,Hawkesbury,2,1:20 pm Micway Midway Class 1 Handicap,1100m,Class 1,Soft 6,True,Fine,5.59,,5,5,Master Zous,Master Zous,Master Zous,3,Sara Ryan,Tim Clark,$4.8,2.4,racenet
+R2,Hawkesbury,2,1:20 pm Micway Midway Class 1 Handicap,1100m,Class 1,Soft 6,True,Fine,5.59,,6,6,Parthenon,Parthenon,Parthenon,6,Kylie Gavenlock,Olivia Chambers (a-2),$2.3,1,racenet
+R2,Hawkesbury,2,1:20 pm Micway Midway Class 1 Handicap,1100m,Class 1,Soft 6,True,Fine,5.59,,7,7,Cante Libre,Cante Libre,Cante Libre,5,Richard Nutman,Grant Buckley,$35,5.1,racenet
+R3,Hawkesbury,3,1:55 pm Darrin Voss Memorial Benchmark 64 Handicap,1800m,BM64,Soft 6,True,Fine,5.59,,1,1,The Stars Align,The Stars Align,The Stars Align,5,Anthony Mountney Jean,Van Overmeire,$8,6.4,racenet
+R3,Hawkesbury,3,1:55 pm Darrin Voss Memorial Benchmark 64 Handicap,1800m,BM64,Soft 6,True,Fine,5.59,,2,2,My Charm,My Charm,My Charm,7,Chris Waller,James McDonald,$3.7,8.7,racenet
+R3,Hawkesbury,3,1:55 pm Darrin Voss Memorial Benchmark 64 Handicap,1800m,BM64,Soft 6,True,Fine,5.59,,3,3,Highborn Harry,Highborn Harry,Highborn Harry,1,David Payne,Chad Schofield,$2.6,8.5,racenet
+R3,Hawkesbury,3,1:55 pm Darrin Voss Memorial Benchmark 64 Handicap,1800m,BM64,Soft 6,True,Fine,5.59,,4,4,Ivy Legend,Ivy Legend,Ivy Legend,3,Chris Waller,Tommy Berry,$5,4.5,racenet
+R3,Hawkesbury,3,1:55 pm Darrin Voss Memorial Benchmark 64 Handicap,1800m,BM64,Soft 6,True,Fine,5.59,,5,5,Binkou,Binkou,Binkou,2,Garry Frazer,Grant Buckley,$11,9,racenet
+R3,Hawkesbury,3,1:55 pm Darrin Voss Memorial Benchmark 64 Handicap,1800m,BM64,Soft 6,True,Fine,5.59,,6,6,Johnny Smash,Johnny Smash,Johnny Smash,4,Mike Van Gestel,Reece Jones,$8.5,6.3,racenet
+R3,Hawkesbury,3,1:55 pm Darrin Voss Memorial Benchmark 64 Handicap,1800m,BM64,Soft 6,True,Fine,5.59,,7,7,Cha Cha Cha,Cha Cha Cha,Cha Cha Cha,8,Craig Carmody,Winona Costin,$35,1.9,racenet
+R3,Hawkesbury,3,1:55 pm Darrin Voss Memorial Benchmark 64 Handicap,1800m,BM64,Soft 6,True,Fine,5.59,,8,8,Rita's Pearl,Rita's Pearl,Rita's Pearl,6,Dale Wagstaff,Adam Farragher,$101,5.9,racenet
+R4,Hawkesbury,4,2:35 pm Happy Retirement Adam Carney Maiden Plate,1300m,Maiden,Soft 6,True,Fine,5.59,,1,1,Sparkling Fire,Sparkling Fire,Sparkling Fire,7,David Pfieffer,Tommy Berry,$2.15,1.3,racenet
+R4,Hawkesbury,4,2:35 pm Happy Retirement Adam Carney Maiden Plate,1300m,Maiden,Soft 6,True,Fine,5.59,,2,2,The Agent,The Agent,The Agent,2,Amanda Turner,Mollie Fitzgerald,$8.5,1.5,racenet
+R4,Hawkesbury,4,2:35 pm Happy Retirement Adam Carney Maiden Plate,1300m,Maiden,Soft 6,True,Fine,5.59,,5,5,Lucky Monkey,Lucky Monkey,Lucky Monkey,1,Karen Outtrim,Robyn Freeman,$101,6,racenet
+R4,Hawkesbury,4,2:35 pm Happy Retirement Adam Carney Maiden Plate,1300m,Maiden,Soft 6,True,Fine,5.59,,6,6,Spud Gun,Spud Gun,Spud Gun,4,Jack Pilkington,Chad Schofield,$34,5.3,racenet
+R4,Hawkesbury,4,2:35 pm Happy Retirement Adam Carney Maiden Plate,1300m,Maiden,Soft 6,True,Fine,5.59,,7,7,Tahurangi,Tahurangi,Tahurangi,3,Robert Pearse,Reece Jones,$15,5.7,racenet
+R4,Hawkesbury,4,2:35 pm Happy Retirement Adam Carney Maiden Plate,1300m,Maiden,Soft 6,True,Fine,5.59,,8,8,Esquire,Esquire,Esquire,5,Gerald Ryan & Sterling Alexiou,Tim Clark,$3.3,6,racenet
+R4,Hawkesbury,4,2:35 pm Happy Retirement Adam Carney Maiden Plate,1300m,Maiden,Soft 6,True,Fine,5.59,,11,11,Triple Seven,Triple Seven,Triple Seven,8,Terry Croft,Kerrin McEvoy,$16,7,racenet
+R4,Hawkesbury,4,2:35 pm Happy Retirement Adam Carney Maiden Plate,1300m,Maiden,Soft 6,True,Fine,5.59,,12,12,Roebuck Plane,Roebuck Plane,Roebuck Plane,6,Gai Waterhouse & Adrian Bott,Rachel King,$5,5,racenet
+R5,Hawkesbury,5,3:10 pm Tommy Berry 2025-2026 Hrc Champion Jockey 3yo Maiden Handicap,1000m,Maiden,Soft 6,True,Fine,5.59,,2,2,Rattle The Stars,Rattle The Stars,Rattle The Stars,7,Anthony Warren,Brodie Loy,$17,NA,racenet
+R5,Hawkesbury,5,3:10 pm Tommy Berry 2025-2026 Hrc Champion Jockey 3yo Maiden Handicap,1000m,Maiden,Soft 6,True,Fine,5.59,,3,3,Yenisei,Yenisei,Yenisei,4,Gary Portelli,Alysha Collett,$3.5,NA,racenet
+R5,Hawkesbury,5,3:10 pm Tommy Berry 2025-2026 Hrc Champion Jockey 3yo Maiden Handicap,1000m,Maiden,Soft 6,True,Fine,5.59,,4,4,Lava Flow,Lava Flow,Lava Flow,1,Bjorn Baker,Chad Schofield,$3.5,2,racenet
+R5,Hawkesbury,5,3:10 pm Tommy Berry 2025-2026 Hrc Champion Jockey 3yo Maiden Handicap,1000m,Maiden,Soft 6,True,Fine,5.59,,5,5,Espresso Rose,Espresso Rose,Espresso Rose,2,Gary Nickson,Molly Bourke,$20,NA,racenet
+R5,Hawkesbury,5,3:10 pm Tommy Berry 2025-2026 Hrc Champion Jockey 3yo Maiden Handicap,1000m,Maiden,Soft 6,True,Fine,5.59,,7,7,Kiowa,Kiowa,Kiowa,5,Gerald Ryan & Sterling Alexiou,Kerrin McEvoy,$8.5,NA,racenet
+R5,Hawkesbury,5,3:10 pm Tommy Berry 2025-2026 Hrc Champion Jockey 3yo Maiden Handicap,1000m,Maiden,Soft 6,True,Fine,5.59,,8,8,Living On A Prayer,Living On A Prayer,Living On A Prayer,3,Joseph Pride,Jay Ford,$12,NA,racenet
+R5,Hawkesbury,5,3:10 pm Tommy Berry 2025-2026 Hrc Champion Jockey 3yo Maiden Handicap,1000m,Maiden,Soft 6,True,Fine,5.59,,9,9,Moscow Maid,Moscow Maid,Moscow Maid,8,"Michael, John & Wayne Hawkes",Tyler Schiller,$4.6,6,racenet
+R5,Hawkesbury,5,3:10 pm Tommy Berry 2025-2026 Hrc Champion Jockey 3yo Maiden Handicap,1000m,Maiden,Soft 6,True,Fine,5.59,,10,10,Bascilica Babe,Bascilica Babe,Bascilica Babe,6,Sara Ryan,Ms Siena Grima (a1.5/52kg),$6,5.8,racenet
+R6,Hawkesbury,6,3:50 pm Peter Smith Memorial Super Maiden Plate,1100m,Maiden,Soft 6,True,Fine,5.59,,1,1,Pharland,Pharland,Pharland,2,Gerald Ryan & Sterling Alexiou,Kerrin McEvoy,$8,1.3,racenet
+R6,Hawkesbury,6,3:50 pm Peter Smith Memorial Super Maiden Plate,1100m,Maiden,Soft 6,True,Fine,5.59,,3,3,Tempestuous,Tempestuous,Tempestuous,6,Gai Waterhouse & Adrian Bott,Tim Clark,$3.25,3,racenet
+R6,Hawkesbury,6,3:50 pm Peter Smith Memorial Super Maiden Plate,1100m,Maiden,Soft 6,True,Fine,5.59,,4,4,Written Doll,Written Doll,Written Doll,3,David Pfieffer,Rachel King,$5,2.3,racenet
+R6,Hawkesbury,6,3:50 pm Peter Smith Memorial Super Maiden Plate,1100m,Maiden,Soft 6,True,Fine,5.59,,5,5,Moon Flash,Moon Flash,Moon Flash,8,David Payne,Ashley Morgan,$23,4.9,racenet
+R6,Hawkesbury,6,3:50 pm Peter Smith Memorial Super Maiden Plate,1100m,Maiden,Soft 6,True,Fine,5.59,,6,6,Dragon Blood,Dragon Blood,Dragon Blood,5,Annabel & Rob Archibald,Tom Sherry,$10,NA,racenet
+R6,Hawkesbury,6,3:50 pm Peter Smith Memorial Super Maiden Plate,1100m,Maiden,Soft 6,True,Fine,5.59,,8,8,Harrybegood,Harrybegood,Harrybegood,4,Kris Lees,James McDonald,$3,6.7,racenet
+R6,Hawkesbury,6,3:50 pm Peter Smith Memorial Super Maiden Plate,1100m,Maiden,Soft 6,True,Fine,5.59,,10,10,Quaver,Quaver,Quaver,1,Joseph Pride,Regan Bayliss,$11,NA,racenet
+R6,Hawkesbury,6,3:50 pm Peter Smith Memorial Super Maiden Plate,1100m,Maiden,Soft 6,True,Fine,5.59,,11,11,Residential,Residential,Residential,9,Jack Pilkington,Reece Jones,$41,NA,racenet
+R6,Hawkesbury,6,3:50 pm Peter Smith Memorial Super Maiden Plate,1100m,Maiden,Soft 6,True,Fine,5.59,,14,14,Velvet Sky,Velvet Sky,Velvet Sky,7,Terry Croft,Siena Grima (a-1.5),$41,NA,racenet
+R7,Hawkesbury,7,4:25 pm Pioneer Services Rowley Mile [Listed Race],1600m,Listed,Soft 6,True,Fine,5.59,,1,1,Soul Of Spain,Soul Of Spain,Soul Of Spain,4,Chris Waller,James McDonald,$6.5,6.9,racenet
+R7,Hawkesbury,7,4:25 pm Pioneer Services Rowley Mile [Listed Race],1600m,Listed,Soft 6,True,Fine,5.59,,2,2,Punch Lane,Punch Lane,Punch Lane,12,Anthony & Sam Freedman,Tim Clark,$5,3.4,racenet
+R7,Hawkesbury,7,4:25 pm Pioneer Services Rowley Mile [Listed Race],1600m,Listed,Soft 6,True,Fine,5.59,,3,3,Valiant King,Valiant King,Valiant King,1,Chris Waller,Nash Rawiller (a0.5),$19,10.9,racenet
+R7,Hawkesbury,7,4:25 pm Pioneer Services Rowley Mile [Listed Race],1600m,Listed,Soft 6,True,Fine,5.59,,4,4,Nellie Leylax,Nellie Leylax,Nellie Leylax,6,Annabel & Rob Archibald,Chad Schofield,$10,3.5,racenet
+R7,Hawkesbury,7,4:25 pm Pioneer Services Rowley Mile [Listed Race],1600m,Listed,Soft 6,True,Fine,5.59,,5,5,Juja Kibo,Juja Kibo,Juja Kibo,10,Ciaron Maher,Sam Clipperton,$11,4.7,racenet
+R7,Hawkesbury,7,4:25 pm Pioneer Services Rowley Mile [Listed Race],1600m,Listed,Soft 6,True,Fine,5.59,,6,6,Mr Monaco,Mr Monaco,Mr Monaco,7,Ciaron Maher,Regan Bayliss,$10,5.2,racenet
+R7,Hawkesbury,7,4:25 pm Pioneer Services Rowley Mile [Listed Race],1600m,Listed,Soft 6,True,Fine,5.59,,7,7,Democracy Manifest,Democracy Manifest,Democracy Manifest,2,Chris Waller,Kerrin McEvoy,$23,10,racenet
+R7,Hawkesbury,7,4:25 pm Pioneer Services Rowley Mile [Listed Race],1600m,Listed,Soft 6,True,Fine,5.59,,8,8,Bold Mac,Bold Mac,Bold Mac,9,Richard Collett,Alysha Collett,$34,8.1,racenet
+R7,Hawkesbury,7,4:25 pm Pioneer Services Rowley Mile [Listed Race],1600m,Listed,Soft 6,True,Fine,5.59,,9,9,Star Vega,Star Vega,Star Vega,8,Anthony & Sam Freedman,Tyler Schiller,$34,8.7,racenet
+R7,Hawkesbury,7,4:25 pm Pioneer Services Rowley Mile [Listed Race],1600m,Listed,Soft 6,True,Fine,5.59,,11,11,It's A Knockout,It's A Knockout,It's A Knockout,5,Ciaron Maher,Dylan Gibbons,$5,5.7,racenet
+R7,Hawkesbury,7,4:25 pm Pioneer Services Rowley Mile [Listed Race],1600m,Listed,Soft 6,True,Fine,5.59,,12,12,Narbold,Narbold,Narbold,11,Chris Waller,Tommy Berry (a0.5),$4.4,7.2,racenet
+R7,Hawkesbury,7,4:25 pm Pioneer Services Rowley Mile [Listed Race],1600m,Listed,Soft 6,True,Fine,5.59,,13,13,San Marino,San Marino,San Marino,3,Becky Byrne,Sairyn Fawke,$201,4.6,racenet
+R8,Hawkesbury,8,5:00 pm Brad Widdup 2025-2026 Hrc Champion Local Trainer Benchmark 64 Handicap,1300m,BM64,Soft 6,True,Fine,5.59,,1,1,Dashing Rupert,Dashing Rupert,Dashing Rupert,8,Annabel & Rob Archibald,Siena Grima (a-1.5),$7.5,5.5,racenet
+R8,Hawkesbury,8,5:00 pm Brad Widdup 2025-2026 Hrc Champion Local Trainer Benchmark 64 Handicap,1300m,BM64,Soft 6,True,Fine,5.59,,3,3,Gus The Great,Gus The Great,Gus The Great,7,Joseph Pride,Chad Schofield,$4.2,3.5,racenet
+R8,Hawkesbury,8,5:00 pm Brad Widdup 2025-2026 Hrc Champion Local Trainer Benchmark 64 Handicap,1300m,BM64,Soft 6,True,Fine,5.59,,5,5,Serpico,Serpico,Serpico,4,David Payne,Ashley Morgan,$10,7.7,racenet
+R8,Hawkesbury,8,5:00 pm Brad Widdup 2025-2026 Hrc Champion Local Trainer Benchmark 64 Handicap,1300m,BM64,Soft 6,True,Fine,5.59,,6,6,Tellurium,Tellurium,Tellurium,6,Richard Litt,Tom Sherry,$11,8.4,racenet
+R8,Hawkesbury,8,5:00 pm Brad Widdup 2025-2026 Hrc Champion Local Trainer Benchmark 64 Handicap,1300m,BM64,Soft 6,True,Fine,5.59,,7,7,Ausbred Hed'n'tail,Ausbred Hed'n'tail,Ausbred Hed'n'tail,5,Brad Widdup,Tommy Berry,$5.5,6.5,racenet
+R8,Hawkesbury,8,5:00 pm Brad Widdup 2025-2026 Hrc Champion Local Trainer Benchmark 64 Handicap,1300m,BM64,Soft 6,True,Fine,5.59,,10,10,Lady Shenanigans,Lady Shenanigans,Lady Shenanigans,3,Mitchell & Desiree Kearney,Olivia Chambers (a-2),$31,3.8,racenet
+R8,Hawkesbury,8,5:00 pm Brad Widdup 2025-2026 Hrc Champion Local Trainer Benchmark 64 Handicap,1300m,BM64,Soft 6,True,Fine,5.59,,13,13,Ciao Bella Mia,Ciao Bella Mia,Ciao Bella Mia,2,Anthony Mountney,Robyn Freeman,$10,5,racenet
+R8,Hawkesbury,8,5:00 pm Brad Widdup 2025-2026 Hrc Champion Local Trainer Benchmark 64 Handicap,1300m,BM64,Soft 6,True,Fine,5.59,,16,16,Showmara,Showmara,Showmara,9,Alexandre Lemarie,Keagan Latham,$51,5.7,racenet
+R8,Hawkesbury,8,5:00 pm Brad Widdup 2025-2026 Hrc Champion Local Trainer Benchmark 64 Handicap,1300m,BM64,Soft 6,True,Fine,5.59,,18,18,Kwirky Smile,Kwirky Smile,Kwirky Smile,1,Bjorn Baker,Rachel King,$2.7,6.9,racenet
