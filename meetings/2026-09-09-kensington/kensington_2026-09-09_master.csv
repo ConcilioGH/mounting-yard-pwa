@@ -1,0 +1,71 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,weather,penetrometer,track_information,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
+R1,Kensington,1,1:35 pm Tropicus @ Vinery Stud Plate,1800m,Maiden,Soft 5,+2m Entire,,,,1,1,Gentle Giant,Gentle Giant,Gentle Giant,1,Gai Waterhouse & Adrian Bott,Adam Hyeronimus,$4.2,1,racenet
+R1,Kensington,1,1:35 pm Tropicus @ Vinery Stud Plate,1800m,Maiden,Soft 5,+2m Entire,,,,2,2,Leon Ruben,Leon Ruben,Leon Ruben,2,Diane Poidevin Laine,Jeff Penza,$9.5,7.7,racenet
+R1,Kensington,1,1:35 pm Tropicus @ Vinery Stud Plate,1800m,Maiden,Soft 5,+2m Entire,,,,3,3,Robbed By Rob,Robbed By Rob,Robbed By Rob,7,Sara Ryan,Grant Buckley,$51,6.7,racenet
+R1,Kensington,1,1:35 pm Tropicus @ Vinery Stud Plate,1800m,Maiden,Soft 5,+2m Entire,,,,4,4,Rouladen,Rouladen,Rouladen,4,Mitchell Beer & George Carpenter,Siena Grima (a-2),$9,3.6,racenet
+R1,Kensington,1,1:35 pm Tropicus @ Vinery Stud Plate,1800m,Maiden,Soft 5,+2m Entire,,,,5,5,Wizard's Star,Wizard's Star,Wizard's Star,5,Edward Cummings,Braith Nock (a-1.5),$16,6.7,racenet
+R1,Kensington,1,1:35 pm Tropicus @ Vinery Stud Plate,1800m,Maiden,Soft 5,+2m Entire,,,,6,6,Heliconia,Heliconia,Heliconia,8,Kerry Parker,Andrew Adkins,$26,4.5,racenet
+R1,Kensington,1,1:35 pm Tropicus @ Vinery Stud Plate,1800m,Maiden,Soft 5,+2m Entire,,,,7,7,My Cartouche,My Cartouche,My Cartouche,3,Craig Carmody,Olivia Chambers (a-3),$14,5.4,racenet
+R1,Kensington,1,1:35 pm Tropicus @ Vinery Stud Plate,1800m,Maiden,Soft 5,+2m Entire,,,,8,8,Presumptuous Gal,Presumptuous Gal,Presumptuous Gal,6,David Pfieffer,Alysha Collett,$18,6.6,racenet
+R1,Kensington,1,1:35 pm Tropicus @ Vinery Stud Plate,1800m,Maiden,Soft 5,+2m Entire,,,,9,9,Royal Princess,Royal Princess,Royal Princess,10,Scott Singleton,Mitch Stapleford (a-3),$8,2.4,racenet
+R1,Kensington,1,1:35 pm Tropicus @ Vinery Stud Plate,1800m,Maiden,Soft 5,+2m Entire,,,,10,10,Stitzer,Stitzer,Stitzer,11,John O'Shea & Tom Charlton,Zac Lloyd,$2.5,9,racenet
+R1,Kensington,1,1:35 pm Tropicus @ Vinery Stud Plate,1800m,Maiden,Soft 5,+2m Entire,,,,11,11,Bastianini,Bastianini,Bastianini,9,David Hatch,Zac Wadick (a-2),$151,10.7,racenet
+R2,Kensington,2,2:10 pm Inglis Xtra Bonus Handicap,1550m,Handicap,Soft 5,+2m Entire,,,,1,1,Caviar,Caviar,Caviar,4,Gai Waterhouse & Adrian Bott,Adam Hyeronimus,$5,2.3,racenet
+R2,Kensington,2,2:10 pm Inglis Xtra Bonus Handicap,1550m,Handicap,Soft 5,+2m Entire,,,,2,2,Unhinged,Unhinged,Unhinged,3,Chris Waller,James McDonald,$3.9,2.8,racenet
+R2,Kensington,2,2:10 pm Inglis Xtra Bonus Handicap,1550m,Handicap,Soft 5,+2m Entire,,,,3,3,Cotoletta Cut,Cotoletta Cut,Cotoletta Cut,8,Chris Waller,Tommy Berry,$15,2,racenet
+R2,Kensington,2,2:10 pm Inglis Xtra Bonus Handicap,1550m,Handicap,Soft 5,+2m Entire,,,,4,4,Wonka,Wonka,Wonka,5,Chris Waller,Jason Collett,$4.2,3.2,racenet
+R2,Kensington,2,2:10 pm Inglis Xtra Bonus Handicap,1550m,Handicap,Soft 5,+2m Entire,,,,5,5,Power Broker,Power Broker,Power Broker,6,,Edward O'Rourke,$27,9,racenet
+R2,Kensington,2,2:10 pm Inglis Xtra Bonus Handicap,1550m,Handicap,Soft 5,+2m Entire,,,,6,6,True Tone,True Tone,True Tone,9,Chris Waller,Siena Grima (a-2),$6.75,11,racenet
+R2,Kensington,2,2:10 pm Inglis Xtra Bonus Handicap,1550m,Handicap,Soft 5,+2m Entire,,,,7,7,Over The Mountain,Over The Mountain,Over The Mountain,7,John O'Shea & Tom Charlton,Dylan Gibbons,$26,6,racenet
+R2,Kensington,2,2:10 pm Inglis Xtra Bonus Handicap,1550m,Handicap,Soft 5,+2m Entire,,,,8,8,Bechers,Bechers,Bechers,1,"Michael, John & Wayne Hawkes",Tyler Schiller,$5,7,racenet
+R2,Kensington,2,2:10 pm Inglis Xtra Bonus Handicap,1550m,Handicap,Soft 5,+2m Entire,,,,9,9,Zoudeadly,Zoudeadly,Zoudeadly,2,Jason Warren,Kerrin McEvoy,$26,8.7,racenet
+R3,Kensington,3,2:45 pm Racing And Sports Plate,1150m,Maiden,Soft 5,+2m Entire,,,,1,1,Bound For Pattaya,Bound For Pattaya,Bound For Pattaya,6,Con Karakatsanis,Andrew Adkins,$151,8,racenet
+R3,Kensington,3,2:45 pm Racing And Sports Plate,1150m,Maiden,Soft 5,+2m Entire,,,,2,2,Naval Fleet,Naval Fleet,Naval Fleet,1,"Michael, John & Wayne Hawkes",Tyler Schiller,$26,NA,racenet
+R3,Kensington,3,2:45 pm Racing And Sports Plate,1150m,Maiden,Soft 5,+2m Entire,,,,3,3,Threads,Threads,Threads,4,Ciaron Maher,Nash Rawiller,$8,5.2,racenet
+R3,Kensington,3,2:45 pm Racing And Sports Plate,1150m,Maiden,Soft 5,+2m Entire,,,,4,4,Darn You,Darn You,Darn You,9,Peter Snowden,Sam Clipperton (a0.5),$19,9,racenet
+R3,Kensington,3,2:45 pm Racing And Sports Plate,1150m,Maiden,Soft 5,+2m Entire,,,,5,5,Fiaba,Fiaba,Fiaba,8,Chris Waller,James McDonald (a0.5),$4.8,NA,racenet
+R3,Kensington,3,2:45 pm Racing And Sports Plate,1150m,Maiden,Soft 5,+2m Entire,,,,6,6,I Am Justice,I Am Justice,I Am Justice,5,Ciaron Maher,Chad Schofield,$14,6,racenet
+R3,Kensington,3,2:45 pm Racing And Sports Plate,1150m,Maiden,Soft 5,+2m Entire,,,,7,7,Low Key,Low Key,Low Key,2,Gai Waterhouse & Adrian Bott,Tim Clark,$1.85,4,racenet
+R3,Kensington,3,2:45 pm Racing And Sports Plate,1150m,Maiden,Soft 5,+2m Entire,,,,8,8,Movie Star,Movie Star,Movie Star,7,Chris Waller,Tommy Berry,$16,4.3,racenet
+R3,Kensington,3,2:45 pm Racing And Sports Plate,1150m,Maiden,Soft 5,+2m Entire,,,,9,9,Rocks Or Diamonds,Rocks Or Diamonds,Rocks Or Diamonds,3,John Sargent,Jason Collett,$10,NA,racenet
+R4,Kensington,4,3:20 pm Tab Handicap,1800m,Handicap,Soft 5,+2m Entire,,,,1,1,Funchal,Funchal,Funchal,3,Mick Price & Michael Kent Jnr,Chad Schofield,$13,8,racenet
+R4,Kensington,4,3:20 pm Tab Handicap,1800m,Handicap,Soft 5,+2m Entire,,,,2,2,Mazis,Mazis,Mazis,4,Annabel & Rob Archibald,Braith Nock (a-1.5),$5.5,6.6,racenet
+R4,Kensington,4,3:20 pm Tab Handicap,1800m,Handicap,Soft 5,+2m Entire,,,,3,3,Pierro Lad,Pierro Lad,Pierro Lad,1,Ciaron Maher,Keagan Latham,$6,4.3,racenet
+R4,Kensington,4,3:20 pm Tab Handicap,1800m,Handicap,Soft 5,+2m Entire,,,,5,5,Columbus,Columbus,Columbus,8,Les Bridge,James McDonald,$2.5,4,racenet
+R4,Kensington,4,3:20 pm Tab Handicap,1800m,Handicap,Soft 5,+2m Entire,,,,6,6,My Charm,My Charm,My Charm,7,Chris Waller,Tommy Berry,$13,8.3,racenet
+R4,Kensington,4,3:20 pm Tab Handicap,1800m,Handicap,Soft 5,+2m Entire,,,,7,7,Fay's Angels,Fay's Angels,Fay's Angels,9,,Karen Owen,$26,6.1,racenet
+R4,Kensington,4,3:20 pm Tab Handicap,1800m,Handicap,Soft 5,+2m Entire,,,,8,8,Andron,Andron,Andron,6,"Michael, John & Wayne Hawkes",Dylan Gibbons,$13,6.3,racenet
+R4,Kensington,4,3:20 pm Tab Handicap,1800m,Handicap,Soft 5,+2m Entire,,,,9,9,Behtar,Behtar,Behtar,5,Nick Olive,Coriah Keatings (a-3),$46,5.4,racenet
+R4,Kensington,4,3:20 pm Tab Handicap,1800m,Handicap,Soft 5,+2m Entire,,,,10,10,Supreme Sovereign,Supreme Sovereign,Supreme Sovereign,2,Chris Waller,Zac Lloyd,$7,8,racenet
+R5,Kensington,5,3:55 pm Irresistible Pools And Spas Handicap,1550m,Handicap,Soft 5,+2m Entire,,,,1,1,Nkosi,Nkosi,Nkosi,6,Ciaron Maher,Shannen Llewellyn (a-3),$20,1.6,racenet
+R5,Kensington,5,3:55 pm Irresistible Pools And Spas Handicap,1550m,Handicap,Soft 5,+2m Entire,,,,2,2,Deep Pleasure,Deep Pleasure,Deep Pleasure,2,Mick Price & Michael Kent Jnr,Zac Lloyd,$2.1,4,racenet
+R5,Kensington,5,3:55 pm Irresistible Pools And Spas Handicap,1550m,Handicap,Soft 5,+2m Entire,,,,3,3,Koolibah,Koolibah,Koolibah,8,Chris Waller,James McDonald,$6,7.5,racenet
+R5,Kensington,5,3:55 pm Irresistible Pools And Spas Handicap,1550m,Handicap,Soft 5,+2m Entire,,,,4,4,Zamborghini,Zamborghini,Zamborghini,7,David Hatch,Zac Wadick (a-2),$35,6.7,racenet
+R5,Kensington,5,3:55 pm Irresistible Pools And Spas Handicap,1550m,Handicap,Soft 5,+2m Entire,,,,5,5,Stallone,Stallone,Stallone,9,Bjorn Baker,Kerrin McEvoy,$13,2.6,racenet
+R5,Kensington,5,3:55 pm Irresistible Pools And Spas Handicap,1550m,Handicap,Soft 5,+2m Entire,,,,6,6,Pierata's Gem,Pierata's Gem,Pierata's Gem,3,Annabel & Rob Archibald,Tommy Berry,$5,5.1,racenet
+R5,Kensington,5,3:55 pm Irresistible Pools And Spas Handicap,1550m,Handicap,Soft 5,+2m Entire,,,,7,7,King Of Dragons,King Of Dragons,King Of Dragons,10,Matthew Dale,Rachel King,$20,3.9,racenet
+R5,Kensington,5,3:55 pm Irresistible Pools And Spas Handicap,1550m,Handicap,Soft 5,+2m Entire,,,,8,8,Waku Waku,Waku Waku,Waku Waku,5,Annabel & Rob Archibald,Braith Nock (a-1.5),$19,7.7,racenet
+R5,Kensington,5,3:55 pm Irresistible Pools And Spas Handicap,1550m,Handicap,Soft 5,+2m Entire,,,,9,9,Aura,Aura,Aura,4,"Michael, John & Wayne Hawkes",Dylan Gibbons,$10,6.3,racenet
+R5,Kensington,5,3:55 pm Irresistible Pools And Spas Handicap,1550m,Handicap,Soft 5,+2m Entire,,,,10,10,Darn Cute,Darn Cute,Darn Cute,1,Craig Carmody,Winona Costin,$35,2.5,racenet
+R6,Kensington,6,4:30 pm Hyland Race Colours Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,1,1,Titanium Miss,Titanium Miss,Titanium Miss,2,Tracey Bartley,Shannen Llewellyn (a-3),$27,3.9,racenet
+R6,Kensington,6,4:30 pm Hyland Race Colours Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,2,2,Zip On By,Zip On By,Zip On By,8,Kylie Gavenlock,Mollie Fitzgerald (a-3),$51,6,racenet
+R6,Kensington,6,4:30 pm Hyland Race Colours Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,3,3,Kirribilli,Kirribilli,Kirribilli,1,Bjorn Baker,Rachel King,$16,8.2,racenet
+R6,Kensington,6,4:30 pm Hyland Race Colours Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,4,4,Cafe Au Lait,Cafe Au Lait,Cafe Au Lait,7,Chris Waller,James McDonald,$4.6,4.4,racenet
+R6,Kensington,6,4:30 pm Hyland Race Colours Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,5,5,De Armas,De Armas,De Armas,10,Chris Waller,Siena Grima (a-2),$19,NA,racenet
+R6,Kensington,6,4:30 pm Hyland Race Colours Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,6,6,Live,Live,Live,5,Peter Snowden,Tim Clark,$12,7.8,racenet
+R6,Kensington,6,4:30 pm Hyland Race Colours Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,7,7,Regal Problem,Regal Problem,Regal Problem,6,Joseph Pride,Tyler Schiller,$2.5,5.7,racenet
+R6,Kensington,6,4:30 pm Hyland Race Colours Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,8,8,Varuni,Varuni,Varuni,3,Annabel & Rob Archibald,Dylan Gibbons,$11,5,racenet
+R6,Kensington,6,4:30 pm Hyland Race Colours Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,10,10,Uncertain Glory,Uncertain Glory,Uncertain Glory,9,Michael Freedman,Tommy Berry,$6.5,5.8,racenet
+R6,Kensington,6,4:30 pm Hyland Race Colours Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,11,11,Sphere,Sphere,Sphere,4,Chris Waller,Zac Lloyd,$11,3.3,racenet
+R7,Kensington,7,5:05 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,1,1,Verbil,Verbil,Verbil,4,Annabel & Rob Archibald,Mollie Fitzgerald (a-3),$21,4.4,racenet
+R7,Kensington,7,5:05 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,2,2,Hanau,Hanau,Hanau,9,Mark Minervini,William Stanley (a-2),$35,7.5,racenet
+R7,Kensington,7,5:05 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,3,3,Tough Guy,Tough Guy,Tough Guy,2,Melissa Dennett,Siena Grima (a-2),$8.5,5.8,racenet
+R7,Kensington,7,5:05 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,4,4,Unstopabull,Unstopabull,Unstopabull,5,Chris Waller,Nash Rawiller,$11,7.4,racenet
+R7,Kensington,7,5:05 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,5,5,Rivendell,Rivendell,Rivendell,6,Peter Snowden,James McDonald,$4.8,5,racenet
+R7,Kensington,7,5:05 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,6,6,Harry's Evidence,Harry's Evidence,Harry's Evidence,7,Gerald Ryan & Sterling Alexiou,Chad Schofield,$10,4.6,racenet
+R7,Kensington,7,5:05 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,7,7,Komodo Dragon,Komodo Dragon,Komodo Dragon,10,John O'Shea & Tom Charlton,Zac Lloyd,$3.4,4.8,racenet
+R7,Kensington,7,5:05 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,8,8,Better Late,Better Late,Better Late,3,Nathan Doyle,Ashley Morgan,$6,2.3,racenet
+R7,Kensington,7,5:05 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,9,9,Royal Corporal,Royal Corporal,Royal Corporal,11,Richard Litt,Jason Collett,$35,5.7,racenet
+R7,Kensington,7,5:05 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,10,10,Siragusa,Siragusa,Siragusa,1,Annabel & Rob Archibald,Tom Sherry,$8,4.5,racenet
+R7,Kensington,7,5:05 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,11,11,Demmo Dermy,Demmo Dermy,Demmo Dermy,12,Edward Cummings,Braith Nock (a-1.5),$41,4.5,racenet
+R7,Kensington,7,5:05 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 5,+2m Entire,,,,12,12,A Pound Of Salt,A Pound Of Salt,A Pound Of Salt,8,Todd Howlett,Tyler Schiller,$71,8.2,racenet
