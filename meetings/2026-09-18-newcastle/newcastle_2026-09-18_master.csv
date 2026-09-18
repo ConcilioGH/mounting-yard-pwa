@@ -1,0 +1,85 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,weather,penetrometer,track_information,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
+R1,Newcastle,1,1:00 pm Bass Floor Class 1 & Maiden Plate,1850m,Maiden,Good 4,True,Fine,,,1,1,Don's Party,Don's Party,Don's Party,6,Paul & Martha Cave,Andrew Calder,$6.25,7.3,racenet
+R1,Newcastle,1,1:00 pm Bass Floor Class 1 & Maiden Plate,1850m,Maiden,Good 4,True,Fine,,,2,2,Legs Power,Legs Power,Legs Power,7,Andrew MacDonald,Mikayla Weir,$81,4.9,racenet
+R1,Newcastle,1,1:00 pm Bass Floor Class 1 & Maiden Plate,1850m,Maiden,Good 4,True,Fine,,,3,3,Sonic Bender,Sonic Bender,Sonic Bender,1,Chris Waller,Siena Grima (a-1.5),$9.5,9,racenet
+R1,Newcastle,1,1:00 pm Bass Floor Class 1 & Maiden Plate,1850m,Maiden,Good 4,True,Fine,,,4,4,Tacitly,Tacitly,Tacitly,11,Annabel & Rob Archibald,Chad Schofield,$3.2,5.3,racenet
+R1,Newcastle,1,1:00 pm Bass Floor Class 1 & Maiden Plate,1850m,Maiden,Good 4,True,Fine,,,5,5,Think Itz You,Think Itz You,Think Itz You,8,Chris Waller,Tommy Berry,$3,5.3,racenet
+R1,Newcastle,1,1:00 pm Bass Floor Class 1 & Maiden Plate,1850m,Maiden,Good 4,True,Fine,,,6,6,Meritage,Meritage,Meritage,10,Bryce Heys,Lee Magorrian,$29,7.6,racenet
+R1,Newcastle,1,1:00 pm Bass Floor Class 1 & Maiden Plate,1850m,Maiden,Good 4,True,Fine,,,8,8,Ocean Predator,Ocean Predator,Ocean Predator,3,Gai Waterhouse & Adrian Bott,Tim Clark,$12,2.3,racenet
+R1,Newcastle,1,1:00 pm Bass Floor Class 1 & Maiden Plate,1850m,Maiden,Good 4,True,Fine,,,9,9,Wizard's Star,Wizard's Star,Wizard's Star,9,Edward Cummings,Ben Thompson,$15,6.7,racenet
+R1,Newcastle,1,1:00 pm Bass Floor Class 1 & Maiden Plate,1850m,Maiden,Good 4,True,Fine,,,10,10,Crispy Leaves,Crispy Leaves,Crispy Leaves,4,Mark Minervini,Dylan Gibbons,$29,7.5,racenet
+R1,Newcastle,1,1:00 pm Bass Floor Class 1 & Maiden Plate,1850m,Maiden,Good 4,True,Fine,,,11,11,Presumptuous Gal,Presumptuous Gal,Presumptuous Gal,5,David Pfieffer,Alysha Collett,$26,6.9,racenet
+R1,Newcastle,1,1:00 pm Bass Floor Class 1 & Maiden Plate,1850m,Maiden,Good 4,True,Fine,,,12,12,What She's Having,What She's Having,What She's Having,2,Matthew Smith,Jason Collett,$15,5.4,racenet
+R2,Newcastle,2,1:35 pm Rarity Wholesale Cg&e Maiden Handicap,1400m,Maiden,Good 4,True,Fine,,,1,1,Federalist,Federalist,Federalist,1,"Michael, John & Wayne Hawkes",Tyler Schiller,$1.55,8.3,racenet
+R2,Newcastle,2,1:35 pm Rarity Wholesale Cg&e Maiden Handicap,1400m,Maiden,Good 4,True,Fine,,,2,2,Nomadic,Nomadic,Nomadic,8,John Thompson,Chad Schofield,$6.5,8.9,racenet
+R2,Newcastle,2,1:35 pm Rarity Wholesale Cg&e Maiden Handicap,1400m,Maiden,Good 4,True,Fine,,,3,3,Frankie's Boy,Frankie's Boy,Frankie's Boy,7,Gai Waterhouse & Adrian Bott,Tim Clark,$12,5.3,racenet
+R2,Newcastle,2,1:35 pm Rarity Wholesale Cg&e Maiden Handicap,1400m,Maiden,Good 4,True,Fine,,,4,4,River Jordan,River Jordan,River Jordan,3,Nacim Dilmi,Christian Reith,$14,3.7,racenet
+R2,Newcastle,2,1:35 pm Rarity Wholesale Cg&e Maiden Handicap,1400m,Maiden,Good 4,True,Fine,,,5,5,Tiger Turf,Tiger Turf,Tiger Turf,2,Gary Portelli,Alysha Collett,$15,4,racenet
+R2,Newcastle,2,1:35 pm Rarity Wholesale Cg&e Maiden Handicap,1400m,Maiden,Good 4,True,Fine,,,6,6,Lord Wootton,Lord Wootton,Lord Wootton,4,Annabel & Rob Archibald,Tom Sherry,$17,NA,racenet
+R2,Newcastle,2,1:35 pm Rarity Wholesale Cg&e Maiden Handicap,1400m,Maiden,Good 4,True,Fine,,,7,7,Lafite,Lafite,Lafite,5,Chris Waller,Tommy Berry,$8.5,6.7,racenet
+R2,Newcastle,2,1:35 pm Rarity Wholesale Cg&e Maiden Handicap,1400m,Maiden,Good 4,True,Fine,,,8,8,Riga,Riga,Riga,9,Nacim Dilmi,Shannen Llewellyn (a-2),$34,2.3,racenet
+R2,Newcastle,2,1:35 pm Rarity Wholesale Cg&e Maiden Handicap,1400m,Maiden,Good 4,True,Fine,,,9,9,Tightrope Walker,Tightrope Walker,Tightrope Walker,6,Denim Wynen,Lee Magorrian (a1),$151,8,racenet
+R3,Newcastle,3,2:10 pm Prosperity Advisers F&m Maiden Handicap,1400m,Maiden,Good 4,True,Fine,,,2,2,Made In Italy,Made In Italy,Made In Italy,3,Matthew Smith,Kerrin McEvoy,$10,5.2,racenet
+R3,Newcastle,3,2:10 pm Prosperity Advisers F&m Maiden Handicap,1400m,Maiden,Good 4,True,Fine,,,3,3,Satin Serenade,Satin Serenade,Satin Serenade,1,Chris Waller,Tommy Berry,$2.2,3.3,racenet
+R3,Newcastle,3,2:10 pm Prosperity Advisers F&m Maiden Handicap,1400m,Maiden,Good 4,True,Fine,,,6,6,Waiheke Rose,Waiheke Rose,Waiheke Rose,6,Gai Waterhouse & Adrian Bott,Tim Clark,$1.9,4,racenet
+R3,Newcastle,3,2:10 pm Prosperity Advisers F&m Maiden Handicap,1400m,Maiden,Good 4,True,Fine,,,7,7,Golden Princess,Golden Princess,Golden Princess,8,Mark Minervini,Lee Magorrian,$51,8.7,racenet
+R3,Newcastle,3,2:10 pm Prosperity Advisers F&m Maiden Handicap,1400m,Maiden,Good 4,True,Fine,,,8,8,Memorise,Memorise,Memorise,7,Michael Freedman,Keagan Latham,$17,3,racenet
+R3,Newcastle,3,2:10 pm Prosperity Advisers F&m Maiden Handicap,1400m,Maiden,Good 4,True,Fine,,,10,10,Queen Of Thinking,Queen Of Thinking,Queen Of Thinking,2,Kris Lees,Dylan Gibbons,$61,NA,racenet
+R3,Newcastle,3,2:10 pm Prosperity Advisers F&m Maiden Handicap,1400m,Maiden,Good 4,True,Fine,,,11,11,Your Colour,Your Colour,Your Colour,4,Chris Waller,Jason Collett,$18,8.8,racenet
+R3,Newcastle,3,2:10 pm Prosperity Advisers F&m Maiden Handicap,1400m,Maiden,Good 4,True,Fine,,,14,14,Valiant Dreamer,Valiant Dreamer,Valiant Dreamer,5,Matthew Smith,Tyler Schiller,$81,8.2,racenet
+R4,Newcastle,4,2:50 pm New Era Technology Hurricane Handicap - Benchmark 72,900m,BM72,Good 4,True,Fine,,,1,1,Generous Harry,Generous Harry,Generous Harry,6,Ron Quinton,Jason Collett,$4,2.2,racenet
+R4,Newcastle,4,2:50 pm New Era Technology Hurricane Handicap - Benchmark 72,900m,BM72,Good 4,True,Fine,,,2,2,Spartus,Spartus,Spartus,7,Fabio Martino,Zac Lloyd,$4.4,6.3,racenet
+R4,Newcastle,4,2:50 pm New Era Technology Hurricane Handicap - Benchmark 72,900m,BM72,Good 4,True,Fine,,,3,3,Melanite,Melanite,Melanite,8,John Thompson,Kerrin McEvoy,$6.75,3.9,racenet
+R4,Newcastle,4,2:50 pm New Era Technology Hurricane Handicap - Benchmark 72,900m,BM72,Good 4,True,Fine,,,4,4,Sea Admiral,Sea Admiral,Sea Admiral,1,John Thompson,Alysha Collett,$14,4.3,racenet
+R4,Newcastle,4,2:50 pm New Era Technology Hurricane Handicap - Benchmark 72,900m,BM72,Good 4,True,Fine,,,5,5,Pride To Follow,Pride To Follow,Pride To Follow,11,Brett & Georgie Cavanough,Ashley Morgan,$14,5.5,racenet
+R4,Newcastle,4,2:50 pm New Era Technology Hurricane Handicap - Benchmark 72,900m,BM72,Good 4,True,Fine,,,6,6,Not Written Off,Not Written Off,Not Written Off,2,Cameron Crockett,Ms Liberty Smyth (a3/52kg),$16,2.7,racenet
+R4,Newcastle,4,2:50 pm New Era Technology Hurricane Handicap - Benchmark 72,900m,BM72,Good 4,True,Fine,,,7,7,Who Goes There,Who Goes There,Who Goes There,4,Mark Mason,Reece Jones,$31,3.1,racenet
+R4,Newcastle,4,2:50 pm New Era Technology Hurricane Handicap - Benchmark 72,900m,BM72,Good 4,True,Fine,,,8,8,Hellcibell,Hellcibell,Hellcibell,12,Brett & Georgie Cavanough,Mitchell Bell,$23,3.2,racenet
+R4,Newcastle,4,2:50 pm New Era Technology Hurricane Handicap - Benchmark 72,900m,BM72,Good 4,True,Fine,,,9,9,Miss Trentino,Miss Trentino,Miss Trentino,3,Bjorn Baker,Tommy Berry,$4.6,2.4,racenet
+R4,Newcastle,4,2:50 pm New Era Technology Hurricane Handicap - Benchmark 72,900m,BM72,Good 4,True,Fine,,,10,10,Abuse Of Power,Abuse Of Power,Abuse Of Power,9,John Sharah,Molly Bourke,$35,4.9,racenet
+R4,Newcastle,4,2:50 pm New Era Technology Hurricane Handicap - Benchmark 72,900m,BM72,Good 4,True,Fine,,,11,11,Steel Knight,Steel Knight,Steel Knight,10,Annabel & Rob Archibald,Chad Schofield,$16,5.4,racenet
+R4,Newcastle,4,2:50 pm New Era Technology Hurricane Handicap - Benchmark 72,900m,BM72,Good 4,True,Fine,,,14,14,Debussy,Debussy,Debussy,5,Tony Ball,Braith Nock,$81,7,racenet
+R5,Newcastle,5,3:25 pm Nzb Tibbie Stakes,1400m,Open Set Weight With Penalties 3yo+ Fillies & Mares,Good 4,True,Fine,,,1,1,Infancy,Infancy,Infancy,12,Kris Lees,Dylan Gibbons,$10,9.9,racenet
+R5,Newcastle,5,3:25 pm Nzb Tibbie Stakes,1400m,Open Set Weight With Penalties 3yo+ Fillies & Mares,Good 4,True,Fine,,,2,2,Churchill's Choice,Churchill's Choice,Churchill's Choice,10,Nathan Doyle,Regan Bayliss,$7,9.9,racenet
+R5,Newcastle,5,3:25 pm Nzb Tibbie Stakes,1400m,Open Set Weight With Penalties 3yo+ Fillies & Mares,Good 4,True,Fine,,,3,3,Oh Diamond Lil,Oh Diamond Lil,Oh Diamond Lil,1,David Pfieffer,Tommy Berry,$4.4,2,racenet
+R5,Newcastle,5,3:25 pm Nzb Tibbie Stakes,1400m,Open Set Weight With Penalties 3yo+ Fillies & Mares,Good 4,True,Fine,,,4,4,Snitzel Dancer,Snitzel Dancer,Snitzel Dancer,3,Gerald Ryan & Sterling Alexiou,Kerrin McEvoy,$11,7.7,racenet
+R5,Newcastle,5,3:25 pm Nzb Tibbie Stakes,1400m,Open Set Weight With Penalties 3yo+ Fillies & Mares,Good 4,True,Fine,,,5,5,Perfumist,Perfumist,Perfumist,6,Bjorn Baker,Rachel King,$5,2.2,racenet
+R5,Newcastle,5,3:25 pm Nzb Tibbie Stakes,1400m,Open Set Weight With Penalties 3yo+ Fillies & Mares,Good 4,True,Fine,,,6,6,Polymnia,Polymnia,Polymnia,5,John O'Shea & Tom Charlton,Zac Lloyd,$7,8.6,racenet
+R5,Newcastle,5,3:25 pm Nzb Tibbie Stakes,1400m,Open Set Weight With Penalties 3yo+ Fillies & Mares,Good 4,True,Fine,,,7,7,Mrs Maree,Mrs Maree,Mrs Maree,14,Clarry Conners,Jason Collett,$26,1.4,racenet
+R5,Newcastle,5,3:25 pm Nzb Tibbie Stakes,1400m,Open Set Weight With Penalties 3yo+ Fillies & Mares,Good 4,True,Fine,,,8,8,Just Glamourous,Just Glamourous,Just Glamourous,9,Joseph Pride,Sam Clipperton (a0.5),$12,2.7,racenet
+R5,Newcastle,5,3:25 pm Nzb Tibbie Stakes,1400m,Open Set Weight With Penalties 3yo+ Fillies & Mares,Good 4,True,Fine,,,9,9,Bird Whistle,Bird Whistle,Bird Whistle,13,Brett & Georgie Cavanough,Mitchell Bell,$26,2.2,racenet
+R5,Newcastle,5,3:25 pm Nzb Tibbie Stakes,1400m,Open Set Weight With Penalties 3yo+ Fillies & Mares,Good 4,True,Fine,,,10,10,Mareth,Mareth,Mareth,2,Michael Freedman,Tim Clark,$9,6.1,racenet
+R5,Newcastle,5,3:25 pm Nzb Tibbie Stakes,1400m,Open Set Weight With Penalties 3yo+ Fillies & Mares,Good 4,True,Fine,,,11,11,Titanium Miss,Titanium Miss,Titanium Miss,7,Tracey Bartley,Shannen Llewellyn,$71,3.8,racenet
+R5,Newcastle,5,3:25 pm Nzb Tibbie Stakes,1400m,Open Set Weight With Penalties 3yo+ Fillies & Mares,Good 4,True,Fine,,,12,12,Smiling Prophet,Smiling Prophet,Smiling Prophet,8,Mark Minervini,Rory Hutchings (a1),$151,6.2,racenet
+R5,Newcastle,5,3:25 pm Nzb Tibbie Stakes,1400m,Open Set Weight With Penalties 3yo+ Fillies & Mares,Good 4,True,Fine,,,13,13,Nova Centauri,Nova Centauri,Nova Centauri,4,Rodney Northam,Reece Jones,$126,7.8,racenet
+R5,Newcastle,5,3:25 pm Nzb Tibbie Stakes,1400m,Open Set Weight With Penalties 3yo+ Fillies & Mares,Good 4,True,Fine,,,14,14,Empress Tsarina,Empress Tsarina,Empress Tsarina,11,Todd Howlett,Mikayla Weir,$201,5.2,racenet
+R6,Newcastle,6,4:05 pm Sharp Office Newcastle Gold Cup,2300m,Handicap,Good 4,True,Fine,,,1,1,Changingoftheguard,Changingoftheguard,Changingoftheguard,5,Kris Lees,Tim Clark,$12,2.9,racenet
+R6,Newcastle,6,4:05 pm Sharp Office Newcastle Gold Cup,2300m,Handicap,Good 4,True,Fine,,,3,3,Bella Montagna,Bella Montagna,Bella Montagna,3,Gai Waterhouse & Adrian Bott,Regan Bayliss,$6.5,6.6,racenet
+R6,Newcastle,6,4:05 pm Sharp Office Newcastle Gold Cup,2300m,Handicap,Good 4,True,Fine,,,4,4,Age Of Sail,Age Of Sail,Age Of Sail,7,Kris Lees,Tom Sherry,$26,6.9,racenet
+R6,Newcastle,6,4:05 pm Sharp Office Newcastle Gold Cup,2300m,Handicap,Good 4,True,Fine,,,5,5,Elliptical,Elliptical,Elliptical,2,Chris Waller,Kerrin McEvoy,$10,7.6,racenet
+R6,Newcastle,6,4:05 pm Sharp Office Newcastle Gold Cup,2300m,Handicap,Good 4,True,Fine,,,6,6,Aethelwulf,Aethelwulf,Aethelwulf,4,Matthew Smith,Zac Lloyd,$1.3,4,racenet
+R6,Newcastle,6,4:05 pm Sharp Office Newcastle Gold Cup,2300m,Handicap,Good 4,True,Fine,,,7,7,Amplify,Amplify,Amplify,6,Ciaron Maher,Dylan Gibbons,$19,6.6,racenet
+R6,Newcastle,6,4:05 pm Sharp Office Newcastle Gold Cup,2300m,Handicap,Good 4,True,Fine,,,8,8,Steel Blaze,Steel Blaze,Steel Blaze,1,Brett Lazzarini,Reece Jones,$101,7.6,racenet
+R7,Newcastle,7,4:40 pm Newcastle Car And Truck Rental Big Dance Eligibility Cameron Handicap,1500m,Handicap,Good 4,True,Fine,,,1,1,Tavi Time,Tavi Time,Tavi Time,10,Kris Lees,Jason Collett,$19,9.1,racenet
+R7,Newcastle,7,4:40 pm Newcastle Car And Truck Rental Big Dance Eligibility Cameron Handicap,1500m,Handicap,Good 4,True,Fine,,,2,2,Vivy Air,Vivy Air,Vivy Air,9,Ciaron Maher,Reece Jones,$17,8.1,racenet
+R7,Newcastle,7,4:40 pm Newcastle Car And Truck Rental Big Dance Eligibility Cameron Handicap,1500m,Handicap,Good 4,True,Fine,,,3,3,Hellsing,Hellsing,Hellsing,3,Annabel & Rob Archibald,Tom Sherry,$17,3.7,racenet
+R7,Newcastle,7,4:40 pm Newcastle Car And Truck Rental Big Dance Eligibility Cameron Handicap,1500m,Handicap,Good 4,True,Fine,,,6,6,El Castello,El Castello,El Castello,2,John Thompson,Chad Schofield,$27,4.7,racenet
+R7,Newcastle,7,4:40 pm Newcastle Car And Truck Rental Big Dance Eligibility Cameron Handicap,1500m,Handicap,Good 4,True,Fine,,,8,8,Fully Lit,Fully Lit,Fully Lit,7,Gai Waterhouse & Adrian Bott,Regan Bayliss,$8.5,2.8,racenet
+R7,Newcastle,7,4:40 pm Newcastle Car And Truck Rental Big Dance Eligibility Cameron Handicap,1500m,Handicap,Good 4,True,Fine,,,9,9,I'mintowin,I'mintowin,I'mintowin,6,Ciaron Maher,Sam Clipperton (a0.5),$7,3.5,racenet
+R7,Newcastle,7,4:40 pm Newcastle Car And Truck Rental Big Dance Eligibility Cameron Handicap,1500m,Handicap,Good 4,True,Fine,,,11,11,Golden Cross,Golden Cross,Golden Cross,4,Bryan Dais,Ben Thompson,$18,7.9,racenet
+R7,Newcastle,7,4:40 pm Newcastle Car And Truck Rental Big Dance Eligibility Cameron Handicap,1500m,Handicap,Good 4,True,Fine,,,12,12,Mr Miller,Mr Miller,Mr Miller,8,Chris Waller,Tommy Berry,$1.6,3.2,racenet
+R7,Newcastle,7,4:40 pm Newcastle Car And Truck Rental Big Dance Eligibility Cameron Handicap,1500m,Handicap,Good 4,True,Fine,,,13,13,Matias,Matias,Matias,5,Gerald Ryan & Sterling Alexiou,Kerrin McEvoy,$15,7.3,racenet
+R7,Newcastle,7,4:40 pm Newcastle Car And Truck Rental Big Dance Eligibility Cameron Handicap,1500m,Handicap,Good 4,True,Fine,,,14,14,Tainui,Tainui,Tainui,1,Geoff O'Brien,Adrian Layt,$151,4.6,racenet
+R8,Newcastle,8,5:20 pm Lees Racing 5yo&up Benchmark 64 Handicap,1500m,BM64,Good 4,True,Fine,,,1,1,Northern Eyes,Northern Eyes,Northern Eyes,9,Kim Waugh,Izzy Neale (a-3),$8,3.4,racenet
+R8,Newcastle,8,5:20 pm Lees Racing 5yo&up Benchmark 64 Handicap,1500m,BM64,Good 4,True,Fine,,,3,3,Hollywood Gold,Hollywood Gold,Hollywood Gold,2,Peter Mills,Shannen Llewellyn (a-2),$9,5.2,racenet
+R8,Newcastle,8,5:20 pm Lees Racing 5yo&up Benchmark 64 Handicap,1500m,BM64,Good 4,True,Fine,,,4,4,Shamedy,Shamedy,Shamedy,4,Todd Payne,Jason Collett,$7,5.9,racenet
+R8,Newcastle,8,5:20 pm Lees Racing 5yo&up Benchmark 64 Handicap,1500m,BM64,Good 4,True,Fine,,,5,5,Red Rags To Bulls,Red Rags To Bulls,Red Rags To Bulls,12,Jeremy Gask,Siena Grima (a-1.5),$3.3,9.6,racenet
+R8,Newcastle,8,5:20 pm Lees Racing 5yo&up Benchmark 64 Handicap,1500m,BM64,Good 4,True,Fine,,,6,6,Rothrock,Rothrock,Rothrock,8,Paul Perry,William Stanley (a-1.5),$26,4.3,racenet
+R8,Newcastle,8,5:20 pm Lees Racing 5yo&up Benchmark 64 Handicap,1500m,BM64,Good 4,True,Fine,,,7,7,Sharp Shock,Sharp Shock,Sharp Shock,13,Rodney Northam,Leeshelle Small (a-3),$23,9.9,racenet
+R8,Newcastle,8,5:20 pm Lees Racing 5yo&up Benchmark 64 Handicap,1500m,BM64,Good 4,True,Fine,,,8,8,Motoscafo,Motoscafo,Motoscafo,5,John Thompson,Kerrin McEvoy,$6,7.8,racenet
+R8,Newcastle,8,5:20 pm Lees Racing 5yo&up Benchmark 64 Handicap,1500m,BM64,Good 4,True,Fine,,,10,10,In Society,In Society,In Society,1,Bryan Dais,Ben Thompson,$13,7.7,racenet
+R8,Newcastle,8,5:20 pm Lees Racing 5yo&up Benchmark 64 Handicap,1500m,BM64,Good 4,True,Fine,,,11,11,Magicon,Magicon,Magicon,3,Tracey Bartley,Mitchell Bell,$26,5.3,racenet
+R8,Newcastle,8,5:20 pm Lees Racing 5yo&up Benchmark 64 Handicap,1500m,BM64,Good 4,True,Fine,,,13,13,Off The Scale,Off The Scale,Off The Scale,10,Lou Mary Deon,Le Roux (a-3),$23,5.1,racenet
+R8,Newcastle,8,5:20 pm Lees Racing 5yo&up Benchmark 64 Handicap,1500m,BM64,Good 4,True,Fine,,,14,14,Jacenza,Jacenza,Jacenza,7,Rodney Northam,Tyler Schiller,$16,4.6,racenet
+R8,Newcastle,8,5:20 pm Lees Racing 5yo&up Benchmark 64 Handicap,1500m,BM64,Good 4,True,Fine,,,15,15,Uncle Harry,Uncle Harry,Uncle Harry,11,Paul Perry,Chad Schofield,$12,6.7,racenet
+R8,Newcastle,8,5:20 pm Lees Racing 5yo&up Benchmark 64 Handicap,1500m,BM64,Good 4,True,Fine,,,16,16,Dance Dance Dance,Dance Dance Dance,Dance Dance Dance,6,Darren Treacy,Kacie Adams (a1),$81,9.2,racenet
