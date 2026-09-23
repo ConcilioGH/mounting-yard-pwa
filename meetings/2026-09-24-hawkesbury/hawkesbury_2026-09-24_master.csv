@@ -1,0 +1,58 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,weather,penetrometer,track_information,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
+R1,Hawkesbury,1,1:40 pm Hrc Motel Super Maiden Plate,1000m,Maiden,Good 4,True,Overcast,5.12,,1,1,Chumpakidd,Chumpakidd,Chumpakidd,6,Con Karakatsanis,Tom Sherry,$8,5,racenet
+R1,Hawkesbury,1,1:40 pm Hrc Motel Super Maiden Plate,1000m,Maiden,Good 4,True,Overcast,5.12,,2,2,Lions Eyes,Lions Eyes,Lions Eyes,7,Bryce Heys,Mollie Fitzgerald,$7.5,NA,racenet
+R1,Hawkesbury,1,1:40 pm Hrc Motel Super Maiden Plate,1000m,Maiden,Good 4,True,Overcast,5.12,,3,3,Shanghai Sprint,Shanghai Sprint,Shanghai Sprint,1,Tommy Wong,Matt Kirk (a-4),$71,7,racenet
+R1,Hawkesbury,1,1:40 pm Hrc Motel Super Maiden Plate,1000m,Maiden,Good 4,True,Overcast,5.12,,4,4,Artemex,Artemex,Artemex,5,Ciaron Maher,Zac Lloyd,$2.4,5.5,racenet
+R1,Hawkesbury,1,1:40 pm Hrc Motel Super Maiden Plate,1000m,Maiden,Good 4,True,Overcast,5.12,,6,6,De Grawin Queen,De Grawin Queen,De Grawin Queen,4,Keith Dryden & Libby Snowden Jean,Van Overmeire,$8,6,racenet
+R1,Hawkesbury,1,1:40 pm Hrc Motel Super Maiden Plate,1000m,Maiden,Good 4,True,Overcast,5.12,,7,7,Laughing Moons,Laughing Moons,Laughing Moons,2,Joseph Pride,Chad Schofield (a0.5),$6,NA,racenet
+R1,Hawkesbury,1,1:40 pm Hrc Motel Super Maiden Plate,1000m,Maiden,Good 4,True,Overcast,5.12,,8,8,Red Affairs,Red Affairs,Red Affairs,3,Sara Ryan,Regan Bayliss,$3.75,NA,racenet
+R2,Hawkesbury,2,2:20 pm Evergreen Turf Provincial Maiden Handicap,1300m,Maiden,Good 4,True,Overcast,5.12,,1,1,Hungry,Hungry,Hungry,6,Sara Ryan,Regan Bayliss,$3.6,NA,racenet
+R2,Hawkesbury,2,2:20 pm Evergreen Turf Provincial Maiden Handicap,1300m,Maiden,Good 4,True,Overcast,5.12,,2,2,Lion Hunt,Lion Hunt,Lion Hunt,2,Brad Widdup,Zac Lloyd,$1.8,6,racenet
+R2,Hawkesbury,2,2:20 pm Evergreen Turf Provincial Maiden Handicap,1300m,Maiden,Good 4,True,Overcast,5.12,,3,3,Roquetas De Mar,Roquetas De Mar,Roquetas De Mar,7,Kevin May,Grant Buckley,$11,NA,racenet
+R2,Hawkesbury,2,2:20 pm Evergreen Turf Provincial Maiden Handicap,1300m,Maiden,Good 4,True,Overcast,5.12,,4,4,Axhro,Axhro,Axhro,1,Mitchell & Desiree Kearney,Jeff Penza,$21,5.7,racenet
+R2,Hawkesbury,2,2:20 pm Evergreen Turf Provincial Maiden Handicap,1300m,Maiden,Good 4,True,Overcast,5.12,,5,5,Banner Banner,Banner Banner,Banner Banner,3,Tommy Wong,Reece Jones,$17,5.4,racenet
+R2,Hawkesbury,2,2:20 pm Evergreen Turf Provincial Maiden Handicap,1300m,Maiden,Good 4,True,Overcast,5.12,,6,6,Bascilica Babe,Bascilica Babe,Bascilica Babe,8,Sara Ryan,Rory Hutchings,$9.5,4.3,racenet
+R2,Hawkesbury,2,2:20 pm Evergreen Turf Provincial Maiden Handicap,1300m,Maiden,Good 4,True,Overcast,5.12,,7,7,Can You Not,Can You Not,Can You Not,9,Claire Lever,Winona Costin,$101,9,racenet
+R2,Hawkesbury,2,2:20 pm Evergreen Turf Provincial Maiden Handicap,1300m,Maiden,Good 4,True,Overcast,5.12,,8,8,Circus Girl,Circus Girl,Circus Girl,4,Karen Outtrim,Jay Ford,$101,7,racenet
+R2,Hawkesbury,2,2:20 pm Evergreen Turf Provincial Maiden Handicap,1300m,Maiden,Good 4,True,Overcast,5.12,,10,10,Hope To Fly,Hope To Fly,Hope To Fly,5,Damien Lane,Mitchell Bell,$19,5.7,racenet
+R2,Hawkesbury,2,2:20 pm Evergreen Turf Provincial Maiden Handicap,1300m,Maiden,Good 4,True,Overcast,5.12,,11,11,Spud Gun,Spud Gun,Spud Gun,10,Jack Pilkington,Louise Day,$35,6.3,racenet
+R3,Hawkesbury,3,2:55 pm Clarendon Tavern Maiden Plate,1500m,Maiden,Good 4,True,Overcast,5.12,,3,3,In Circles,In Circles,In Circles,8,Joseph Pride,Regan Bayliss,$8,2.5,racenet
+R3,Hawkesbury,3,2:55 pm Clarendon Tavern Maiden Plate,1500m,Maiden,Good 4,True,Overcast,5.12,,4,4,Supido Secret,Supido Secret,Supido Secret,3,Paul Niceforo,Molly Bourke,$126,7.2,racenet
+R3,Hawkesbury,3,2:55 pm Clarendon Tavern Maiden Plate,1500m,Maiden,Good 4,True,Overcast,5.12,,5,5,Hillbilly Elegy,Hillbilly Elegy,Hillbilly Elegy,7,"Michael, John & Wayne Hawkes",Tyler Schiller,$13,2,racenet
+R3,Hawkesbury,3,2:55 pm Clarendon Tavern Maiden Plate,1500m,Maiden,Good 4,True,Overcast,5.12,,8,8,Residential,Residential,Residential,1,Jack Pilkington,Louise Day,$41,8.3,racenet
+R3,Hawkesbury,3,2:55 pm Clarendon Tavern Maiden Plate,1500m,Maiden,Good 4,True,Overcast,5.12,,10,10,True Tone,True Tone,True Tone,2,Chris Waller,James McDonald,$1.55,8.3,racenet
+R3,Hawkesbury,3,2:55 pm Clarendon Tavern Maiden Plate,1500m,Maiden,Good 4,True,Overcast,5.12,,11,11,Castelique,Castelique,Castelique,6,Chris Waller,Zac Lloyd,$11,5.7,racenet
+R3,Hawkesbury,3,2:55 pm Clarendon Tavern Maiden Plate,1500m,Maiden,Good 4,True,Overcast,5.12,,12,12,Farcolo,Farcolo,Farcolo,4,Gary Portelli,Reece Jones,$31,8.1,racenet
+R3,Hawkesbury,3,2:55 pm Clarendon Tavern Maiden Plate,1500m,Maiden,Good 4,True,Overcast,5.12,,13,13,Moonlit Wings,Moonlit Wings,Moonlit Wings,5,Gai Waterhouse & Adrian Bott,Rachel King,$4.4,4.7,racenet
+R4,Hawkesbury,4,3:35 pm Book Your Christmas Raceday Now Midway Class 1 Handicap,1500m,Class 1,Good 4,True,Overcast,5.12,,2,2,Broadway Street,Broadway Street,Broadway Street,2,Kerry Parker,Chad Schofield,$2.5,6.9,racenet
+R4,Hawkesbury,4,3:35 pm Book Your Christmas Raceday Now Midway Class 1 Handicap,1500m,Class 1,Good 4,True,Overcast,5.12,,3,3,Dubai Adventure,Dubai Adventure,Dubai Adventure,7,Mitchell Beer & George Carpenter Jean,Van Overmeire,$8,7.8,racenet
+R4,Hawkesbury,4,3:35 pm Book Your Christmas Raceday Now Midway Class 1 Handicap,1500m,Class 1,Good 4,True,Overcast,5.12,,4,4,Ribble Lace,Ribble Lace,Ribble Lace,5,Denim Wynen,Reece Jones,$7,2.8,racenet
+R4,Hawkesbury,4,3:35 pm Book Your Christmas Raceday Now Midway Class 1 Handicap,1500m,Class 1,Good 4,True,Overcast,5.12,,5,5,The Prospect,The Prospect,The Prospect,3,Nacim Dilmi,Tommy Berry,$7,5.4,racenet
+R4,Hawkesbury,4,3:35 pm Book Your Christmas Raceday Now Midway Class 1 Handicap,1500m,Class 1,Good 4,True,Overcast,5.12,,6,6,Ouragan,Ouragan,Ouragan,6,Paul & Martha Cave,Jason Collett,$3.4,4.6,racenet
+R4,Hawkesbury,4,3:35 pm Book Your Christmas Raceday Now Midway Class 1 Handicap,1500m,Class 1,Good 4,True,Overcast,5.12,,7,7,Hussy La Vista,Hussy La Vista,Hussy La Vista,1,Theresa Bateup,Jessica Taylor,$13,5.3,racenet
+R4,Hawkesbury,4,3:35 pm Book Your Christmas Raceday Now Midway Class 1 Handicap,1500m,Class 1,Good 4,True,Overcast,5.12,,10,10,Magenta Shores,Magenta Shores,Magenta Shores,4,Mitchell & Desiree Kearney,Jeff Penza,$61,4,racenet
+R5,Hawkesbury,5,4:10 pm De Bortoli Wines Benchmark 64 Handicap,1800m,BM64,Good 4,True,Overcast,5.12,,1,1,Oakfield Alaska,Oakfield Alaska,Oakfield Alaska,7,Scott Singleton,Mikayla Weir,$5.5,7.9,racenet
+R5,Hawkesbury,5,4:10 pm De Bortoli Wines Benchmark 64 Handicap,1800m,BM64,Good 4,True,Overcast,5.12,,2,2,Valentiago,Valentiago,Valentiago,2,Peter Snowden,Tom Sherry,$4.6,3.7,racenet
+R5,Hawkesbury,5,4:10 pm De Bortoli Wines Benchmark 64 Handicap,1800m,BM64,Good 4,True,Overcast,5.12,,3,3,Grunge,Grunge,Grunge,5,Marc Chevalier,Tyler Schiller,$7.5,1,racenet
+R5,Hawkesbury,5,4:10 pm De Bortoli Wines Benchmark 64 Handicap,1800m,BM64,Good 4,True,Overcast,5.12,,4,4,Andron,Andron,Andron,1,"Michael, John & Wayne Hawkes",Dylan Gibbons,$4.4,5.5,racenet
+R5,Hawkesbury,5,4:10 pm De Bortoli Wines Benchmark 64 Handicap,1800m,BM64,Good 4,True,Overcast,5.12,,5,5,Prefer Diamonds,Prefer Diamonds,Prefer Diamonds,8,Jason Attard,Winona Costin,$5.5,4.8,racenet
+R5,Hawkesbury,5,4:10 pm De Bortoli Wines Benchmark 64 Handicap,1800m,BM64,Good 4,True,Overcast,5.12,,6,6,Kirkuk,Kirkuk,Kirkuk,6,Jim & Greg Lee,Regan Bayliss,$6.5,7.5,racenet
+R5,Hawkesbury,5,4:10 pm De Bortoli Wines Benchmark 64 Handicap,1800m,BM64,Good 4,True,Overcast,5.12,,7,7,Binkou,Binkou,Binkou,4,Garry Frazer,Grant Buckley,$8,8.9,racenet
+R5,Hawkesbury,5,4:10 pm De Bortoli Wines Benchmark 64 Handicap,1800m,BM64,Good 4,True,Overcast,5.12,,8,8,Beauer,Beauer,Beauer,3,Paul Murray Jean,Van Overmeire,$41,4.3,racenet
+R6,Hawkesbury,6,4:50 pm Ladies Day 7 November Conditional Benchmark 68 Handicap,1400m,BM68,Good 4,True,Overcast,5.12,,1,1,General,General,General,8,Paul Perry,Regan Bayliss,$20,,racenet
+R6,Hawkesbury,6,4:50 pm Ladies Day 7 November Conditional Benchmark 68 Handicap,1400m,BM68,Good 4,True,Overcast,5.12,,2,2,Prince Of Sorts,Prince Of Sorts,Prince Of Sorts,5,Allan Kehoe,Shannen Llewellyn (a-2),$5.5,4.1,racenet
+R6,Hawkesbury,6,4:50 pm Ladies Day 7 November Conditional Benchmark 68 Handicap,1400m,BM68,Good 4,True,Overcast,5.12,,3,3,Equilibrist,Equilibrist,Equilibrist,7,Kerry Parker,Lee Magorrian,$8.5,7.8,racenet
+R6,Hawkesbury,6,4:50 pm Ladies Day 7 November Conditional Benchmark 68 Handicap,1400m,BM68,Good 4,True,Overcast,5.12,,5,5,Ausbred Hed'n'tail,Ausbred Hed'n'tail,Ausbred Hed'n'tail,6,Brad Widdup,Tommy Berry,$2.4,3.8,racenet
+R6,Hawkesbury,6,4:50 pm Ladies Day 7 November Conditional Benchmark 68 Handicap,1400m,BM68,Good 4,True,Overcast,5.12,,6,6,Belleistic Kids,Belleistic Kids,Belleistic Kids,1,"Barbara Joseph, Paul & Matt Jones",Mollie Fitzgerald,$10,4.2,racenet
+R6,Hawkesbury,6,4:50 pm Ladies Day 7 November Conditional Benchmark 68 Handicap,1400m,BM68,Good 4,True,Overcast,5.12,,7,7,Tavolo,Tavolo,Tavolo,2,Rob Potter,Damon Budler,$8.5,6.6,racenet
+R6,Hawkesbury,6,4:50 pm Ladies Day 7 November Conditional Benchmark 68 Handicap,1400m,BM68,Good 4,True,Overcast,5.12,,8,8,Yes Siree,Yes Siree,Yes Siree,3,Claire Lever,Winona Costin,$9,5.4,racenet
+R6,Hawkesbury,6,4:50 pm Ladies Day 7 November Conditional Benchmark 68 Handicap,1400m,BM68,Good 4,True,Overcast,5.12,,10,10,Blow In,Blow In,Blow In,4,Rob Potter,Dylan Gibbons,$8.5,7.5,racenet
+R7,Hawkesbury,7,5:25 pm Thank You Digby Nuthall Benchmark 64 Handicap,1100m,BM64,Good 4,True,Overcast,5.12,,1,1,I Am Adonis,I Am Adonis,I Am Adonis,3,"Michael, John & Wayne Hawkes",Tyler Schiller,$2.6,3,racenet
+R7,Hawkesbury,7,5:25 pm Thank You Digby Nuthall Benchmark 64 Handicap,1100m,BM64,Good 4,True,Overcast,5.12,,4,4,Edge Of Midnight,Edge Of Midnight,Edge Of Midnight,5,Paul Perry,Reece Jones,$61,6.6,racenet
+R7,Hawkesbury,7,5:25 pm Thank You Digby Nuthall Benchmark 64 Handicap,1100m,BM64,Good 4,True,Overcast,5.12,,6,6,Portico,Portico,Portico,9,Michael Freedman,Tommy Berry,$6.5,5.6,racenet
+R7,Hawkesbury,7,5:25 pm Thank You Digby Nuthall Benchmark 64 Handicap,1100m,BM64,Good 4,True,Overcast,5.12,,7,7,The Biv,The Biv,The Biv,8,Brad Widdup,Chad Schofield,$11,4.4,racenet
+R7,Hawkesbury,7,5:25 pm Thank You Digby Nuthall Benchmark 64 Handicap,1100m,BM64,Good 4,True,Overcast,5.12,,8,8,Fleet Flyer,Fleet Flyer,Fleet Flyer,2,Ron Quinton,Louise Day,$5.5,3.1,racenet
+R7,Hawkesbury,7,5:25 pm Thank You Digby Nuthall Benchmark 64 Handicap,1100m,BM64,Good 4,True,Overcast,5.12,,9,9,Flight Of Power,Flight Of Power,Flight Of Power,4,Bjorn Baker,Jason Collett,$3.2,3.7,racenet
+R7,Hawkesbury,7,5:25 pm Thank You Digby Nuthall Benchmark 64 Handicap,1100m,BM64,Good 4,True,Overcast,5.12,,10,10,Our Noble Boy,Our Noble Boy,Our Noble Boy,7,Robert & Luke Price Jean,Van Overmeire,$12,7.2,racenet
+R7,Hawkesbury,7,5:25 pm Thank You Digby Nuthall Benchmark 64 Handicap,1100m,BM64,Good 4,True,Overcast,5.12,,11,11,Lady Shenanigans,Lady Shenanigans,Lady Shenanigans,1,Mitchell & Desiree Kearney,Leeshelle Small (a-3),$81,3.8,racenet
+R7,Hawkesbury,7,5:25 pm Thank You Digby Nuthall Benchmark 64 Handicap,1100m,BM64,Good 4,True,Overcast,5.12,,14,14,Dodi,Dodi,Dodi,6,Mick Attard,Jeff Penza,$151,6.8,racenet
