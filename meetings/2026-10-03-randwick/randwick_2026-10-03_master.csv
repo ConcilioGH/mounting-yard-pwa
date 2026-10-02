@@ -1,0 +1,125 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,weather,penetrometer,track_information,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
+R1,Randwick,1,12:05 pm Midway Handicap,1800m,Handicap,Soft 5,True,,,,1,1,Columbus,Columbus,Columbus,5,Les Bridge,James McDonald,$3,4.8,racenet
+R1,Randwick,1,12:05 pm Midway Handicap,1800m,Handicap,Soft 5,True,,,,2,2,Doradus,Doradus,Doradus,2,John Thompson,Nash Rawiller,$3.7,2.2,racenet
+R1,Randwick,1,12:05 pm Midway Handicap,1800m,Handicap,Soft 5,True,,,,4,4,Iceford,Iceford,Iceford,6,Mitchell Beer & George Carpenter,Dylan Gibbons,$19,4.3,racenet
+R1,Randwick,1,12:05 pm Midway Handicap,1800m,Handicap,Soft 5,True,,,,5,5,All Star,All Star,All Star,4,Fabio Martino,Tommy Berry,$7.5,6.1,racenet
+R1,Randwick,1,12:05 pm Midway Handicap,1800m,Handicap,Soft 5,True,,,,6,6,Northern Eyes,Northern Eyes,Northern Eyes,10,Kim Waugh,Jay Ford,$41,3.1,racenet
+R1,Randwick,1,12:05 pm Midway Handicap,1800m,Handicap,Soft 5,True,,,,7,7,Agita,Agita,Agita,9,David Payne,Tom Sherry,$21,7.8,racenet
+R1,Randwick,1,12:05 pm Midway Handicap,1800m,Handicap,Soft 5,True,,,,8,8,Philatelic,Philatelic,Philatelic,1,Richard Litt,Zac Lloyd,$8,5,racenet
+R1,Randwick,1,12:05 pm Midway Handicap,1800m,Handicap,Soft 5,True,,,,9,9,So Rebellious,So Rebellious,So Rebellious,12,Gary Portelli,Andrew Adkins,$26,7.1,racenet
+R1,Randwick,1,12:05 pm Midway Handicap,1800m,Handicap,Soft 5,True,,,,10,10,Cabbucio,Cabbucio,Cabbucio,8,Joseph Ible,Coriah Keatings (a-3),$12,5.4,racenet
+R1,Randwick,1,12:05 pm Midway Handicap,1800m,Handicap,Soft 5,True,,,,11,11,Serpico,Serpico,Serpico,11,David Payne,Ashley Morgan,$23,7.6,racenet
+R1,Randwick,1,12:05 pm Midway Handicap,1800m,Handicap,Soft 5,True,,,,12,12,Prefer Diamonds,Prefer Diamonds,Prefer Diamonds,3,Jason Attard,Winona Costin,$41,4.9,racenet
+R1,Randwick,1,12:05 pm Midway Handicap,1800m,Handicap,Soft 5,True,,,,13,13,Gemtiki,Gemtiki,Gemtiki,7,Shaun Harvey,Reece Jones,$71,6.7,racenet
+R2,Randwick,2,12:40 pm Arrowfield Breeders' Plate,1000m,Open Set Weight 2yo Colts & Geldings,Soft 5,True,,,,1,1,Capitano,Capitano,Capitano,5,Michael Freedman,Zac Lloyd,$2.25,8,racenet
+R2,Randwick,2,12:40 pm Arrowfield Breeders' Plate,1000m,Open Set Weight 2yo Colts & Geldings,Soft 5,True,,,,2,2,Chasing Archer,Chasing Archer,Chasing Archer,7,Gary Nickson,Winona Costin,$41,NA,racenet
+R2,Randwick,2,12:40 pm Arrowfield Breeders' Plate,1000m,Open Set Weight 2yo Colts & Geldings,Soft 5,True,,,,3,3,Comino,Comino,Comino,6,John Thompson,Chad Schofield,$71,NA,racenet
+R2,Randwick,2,12:40 pm Arrowfield Breeders' Plate,1000m,Open Set Weight 2yo Colts & Geldings,Soft 5,True,,,,5,5,Flying Houdini,Flying Houdini,Flying Houdini,2,Gai Waterhouse & Adrian Bott,Regan Bayliss,$6.5,NA,racenet
+R2,Randwick,2,12:40 pm Arrowfield Breeders' Plate,1000m,Open Set Weight 2yo Colts & Geldings,Soft 5,True,,,,6,6,Lead The Charge,Lead The Charge,Lead The Charge,8,John Sargent,Molly Bourke,$21,NA,racenet
+R2,Randwick,2,12:40 pm Arrowfield Breeders' Plate,1000m,Open Set Weight 2yo Colts & Geldings,Soft 5,True,,,,7,7,Lucky Eighteen,Lucky Eighteen,Lucky Eighteen,1,John Thompson,Braith Nock,$34,NA,racenet
+R2,Randwick,2,12:40 pm Arrowfield Breeders' Plate,1000m,Open Set Weight 2yo Colts & Geldings,Soft 5,True,,,,8,8,Nonu,Nonu,Nonu,3,Bjorn Baker,Jason Collett,$2.4,NA,racenet
+R2,Randwick,2,12:40 pm Arrowfield Breeders' Plate,1000m,Open Set Weight 2yo Colts & Geldings,Soft 5,True,,,,10,10,Stasis,Stasis,Stasis,4,Gai Waterhouse & Adrian Bott,Adam Hyeronimus,$12,NA,racenet
+R3,Randwick,3,1:15 pm Keeneland Gimcrack Stakes,1000m,Open Set Weight 2yo Fillies,Soft 5,True,,,,1,1,Aniston,Aniston,Aniston,4,Terry Croft,Sam Clipperton,$41,NA,racenet
+R3,Randwick,3,1:15 pm Keeneland Gimcrack Stakes,1000m,Open Set Weight 2yo Fillies,Soft 5,True,,,,2,2,Bourbon Beat,Bourbon Beat,Bourbon Beat,10,Gai Waterhouse & Adrian Bott,Tim Clark,$10,NA,racenet
+R3,Randwick,3,1:15 pm Keeneland Gimcrack Stakes,1000m,Open Set Weight 2yo Fillies,Soft 5,True,,,,3,3,Enfield,Enfield,Enfield,5,John Thompson,Nash Rawiller (a0.5),$14,NA,racenet
+R3,Randwick,3,1:15 pm Keeneland Gimcrack Stakes,1000m,Open Set Weight 2yo Fillies,Soft 5,True,,,,5,5,Farnans Sweetheart,Farnans Sweetheart,Farnans Sweetheart,6,Sara Ryan,Alysha Collett,$61,NA,racenet
+R3,Randwick,3,1:15 pm Keeneland Gimcrack Stakes,1000m,Open Set Weight 2yo Fillies,Soft 5,True,,,,6,6,I'm Admired,I'm Admired,I'm Admired,12,Shaun Harvey,Reece Jones,$81,NA,racenet
+R3,Randwick,3,1:15 pm Keeneland Gimcrack Stakes,1000m,Open Set Weight 2yo Fillies,Soft 5,True,,,,7,7,Outback Affair,Outback Affair,Outback Affair,7,Gai Waterhouse & Adrian Bott,Regan Bayliss,$18,NA,racenet
+R3,Randwick,3,1:15 pm Keeneland Gimcrack Stakes,1000m,Open Set Weight 2yo Fillies,Soft 5,True,,,,8,8,Provata,Provata,Provata,2,John O'Shea & Tom Charlton,Zac Lloyd,$6,NA,racenet
+R3,Randwick,3,1:15 pm Keeneland Gimcrack Stakes,1000m,Open Set Weight 2yo Fillies,Soft 5,True,,,,9,9,Rhythm,Rhythm,Rhythm,11,Bjorn Baker,Jason Collett,$18,NA,racenet
+R3,Randwick,3,1:15 pm Keeneland Gimcrack Stakes,1000m,Open Set Weight 2yo Fillies,Soft 5,True,,,,10,10,Runaway Diva,Runaway Diva,Runaway Diva,8,Gai Waterhouse & Adrian Bott,Rachel King,$9,NA,racenet
+R3,Randwick,3,1:15 pm Keeneland Gimcrack Stakes,1000m,Open Set Weight 2yo Fillies,Soft 5,True,,,,11,11,She's Supreme,She's Supreme,She's Supreme,1,Marc & Mitchell Conners,Kerrin McEvoy,$9,NA,racenet
+R3,Randwick,3,1:15 pm Keeneland Gimcrack Stakes,1000m,Open Set Weight 2yo Fillies,Soft 5,True,,,,12,12,Shezablaze,Shezablaze,Shezablaze,9,Peter Snowden,Andrew Adkins,$3.4,NA,racenet
+R3,Randwick,3,1:15 pm Keeneland Gimcrack Stakes,1000m,Open Set Weight 2yo Fillies,Soft 5,True,,,,13,13,Shraddha,Shraddha,Shraddha,3,Michael Freedman,Tommy Berry,$6,NA,racenet
+R4,Randwick,4,1:50 pm Cornerstone Risk Group Dulcify Stakes,1600m,Open Set Weight 3yo NA,Soft 5,True,,,,1,1,Genesis Runner,Genesis Runner,Genesis Runner,4,Richard & Will Freedman,Chad Schofield,$1.9,5,racenet
+R4,Randwick,4,1:50 pm Cornerstone Risk Group Dulcify Stakes,1600m,Open Set Weight 3yo NA,Soft 5,True,,,,2,2,Savagram,Savagram,Savagram,8,Gai Waterhouse & Adrian Bott,Tim Clark,$6.5,2.2,racenet
+R4,Randwick,4,1:50 pm Cornerstone Risk Group Dulcify Stakes,1600m,Open Set Weight 3yo NA,Soft 5,True,,,,4,4,Wonka,Wonka,Wonka,3,Chris Waller,James McDonald,$5,3.1,racenet
+R4,Randwick,4,1:50 pm Cornerstone Risk Group Dulcify Stakes,1600m,Open Set Weight 3yo NA,Soft 5,True,,,,5,5,Hozumi,Hozumi,Hozumi,7,Chris Waller,Tommy Berry,$8,9,racenet
+R4,Randwick,4,1:50 pm Cornerstone Risk Group Dulcify Stakes,1600m,Open Set Weight 3yo NA,Soft 5,True,,,,7,7,Power Broker,Power Broker,Power Broker,6,Edward O'Rourke,Kerrin McEvoy,$14,5,racenet
+R4,Randwick,4,1:50 pm Cornerstone Risk Group Dulcify Stakes,1600m,Open Set Weight 3yo NA,Soft 5,True,,,,8,8,Leopard Shark,Leopard Shark,Leopard Shark,1,Clayton Douglas,Rachel King,$81,6.8,racenet
+R4,Randwick,4,1:50 pm Cornerstone Risk Group Dulcify Stakes,1600m,Open Set Weight 3yo NA,Soft 5,True,,,,9,9,Crown Of Fire,Crown Of Fire,Crown Of Fire,2,Ciaron Maher,Regan Bayliss,$18,6.7,racenet
+R4,Randwick,4,1:50 pm Cornerstone Risk Group Dulcify Stakes,1600m,Open Set Weight 3yo NA,Soft 5,True,,,,10,10,Your Colour,Your Colour,Your Colour,5,Chris Waller,Jason Collett,$23,6.5,racenet
+R5,Randwick,5,2:25 pm United Resource Management Handicap,1600m,Handicap,Soft 5,True,,,,1,1,Punch Lane,Punch Lane,Punch Lane,5,Anthony & Sam Freedman Deon,Le Roux (a-3),$31,3.2,racenet
+R5,Randwick,5,2:25 pm United Resource Management Handicap,1600m,Handicap,Soft 5,True,,,,2,2,I'mintowin,I'mintowin,I'mintowin,13,,Ciaron Maher,$14,3.4,racenet
+R5,Randwick,5,2:25 pm United Resource Management Handicap,1600m,Handicap,Soft 5,True,,,,3,3,Loch Eagle,Loch Eagle,Loch Eagle,7,Kris Lees,Chad Schofield,$126,10.4,racenet
+R5,Randwick,5,2:25 pm United Resource Management Handicap,1600m,Handicap,Soft 5,True,,,,4,4,Palmetto,Palmetto,Palmetto,14,John Sargent,Alysha Collett,$71,4.6,racenet
+R5,Randwick,5,2:25 pm United Resource Management Handicap,1600m,Handicap,Soft 5,True,,,,5,5,Zaphod,Zaphod,Zaphod,4,Kris Lees,Jason Collett,$41,4,racenet
+R5,Randwick,5,2:25 pm United Resource Management Handicap,1600m,Handicap,Soft 5,True,,,,6,6,You Wahng,You Wahng,You Wahng,16,Kris Lees,William Stanley (a-2),$151,8.1,racenet
+R5,Randwick,5,2:25 pm United Resource Management Handicap,1600m,Handicap,Soft 5,True,,,,7,7,Mighty Ulysses,Mighty Ulysses,Mighty Ulysses,12,Annabel & Rob Archibald,Tom Sherry,$81,7.1,racenet
+R5,Randwick,5,2:25 pm United Resource Management Handicap,1600m,Handicap,Soft 5,True,,,,8,8,Imperialist ho,Imperialist ho,Imperialist ho,11,Chris Waller,Tim Clark,$91,,racenet
+R5,Randwick,5,2:25 pm United Resource Management Handicap,1600m,Handicap,Soft 5,True,,,,9,9,The Mona Lisa,The Mona Lisa,The Mona Lisa,10,Paul & Martha Cave,Andrew Calder,$11,5,racenet
+R5,Randwick,5,2:25 pm United Resource Management Handicap,1600m,Handicap,Soft 5,True,,,,10,10,Knobelas,Knobelas,Knobelas,1,Mick Price & Michael Kent Jnr,Tommy Berry,$7,4.4,racenet
+R5,Randwick,5,2:25 pm United Resource Management Handicap,1600m,Handicap,Soft 5,True,,,,11,11,Rock Empire,Rock Empire,Rock Empire,6,Ciaron Maher,Adam Hyeronimus,$23,5.7,racenet
+R5,Randwick,5,2:25 pm United Resource Management Handicap,1600m,Handicap,Soft 5,True,,,,12,12,Polymnia,Polymnia,Polymnia,9,John O'Shea & Tom Charlton,Zac Lloyd,$8,8.6,racenet
+R5,Randwick,5,2:25 pm United Resource Management Handicap,1600m,Handicap,Soft 5,True,,,,13,13,Hooligan Tommy,Hooligan Tommy,Hooligan Tommy,8,John Sargent,Mollie Fitzgerald (a-2),$81,8.3,racenet
+R5,Randwick,5,2:25 pm United Resource Management Handicap,1600m,Handicap,Soft 5,True,,,,14,14,Jamberoo,Jamberoo,Jamberoo,17,John O'Shea & Tom Charlton,Dylan Gibbons,$71,2.5,racenet
+R5,Randwick,5,2:25 pm United Resource Management Handicap,1600m,Handicap,Soft 5,True,,,,16,16,Unleeshing,Unleeshing,Unleeshing,2,Bjorn Baker,Rachel King,$1.95,6.5,racenet
+R5,Randwick,5,2:25 pm United Resource Management Handicap,1600m,Handicap,Soft 5,True,,,,17,17,Soverato,Soverato,Soverato,15,Chris Waller,Andrew Adkins,$34,6.4,racenet
+R5,Randwick,5,2:25 pm United Resource Management Handicap,1600m,Handicap,Soft 5,True,,,,18,18,Chispa,Chispa,Chispa,3,Chris Waller,Siena Grima (a-2),$26,8.7,racenet
+R6,Randwick,6,3:00 pm Darley Flight Stakes,1600m,Open Set Weight 3yo Fillies,Soft 5,True,,,,1,1,Bangkok Hottie,Bangkok Hottie,Bangkok Hottie,3,David Payne,Kerrin McEvoy,$3.4,4.2,racenet
+R6,Randwick,6,3:00 pm Darley Flight Stakes,1600m,Open Set Weight 3yo Fillies,Soft 5,True,,,,2,2,Striking Alibi,Striking Alibi,Striking Alibi,2,Chris Waller,James McDonald,$2.6,5.4,racenet
+R6,Randwick,6,3:00 pm Darley Flight Stakes,1600m,Open Set Weight 3yo Fillies,Soft 5,True,,,,3,3,Global Goal,Global Goal,Global Goal,5,John Sargent,Dylan Gibbons,$3.3,7.2,racenet
+R6,Randwick,6,3:00 pm Darley Flight Stakes,1600m,Open Set Weight 3yo Fillies,Soft 5,True,,,,4,4,Queen's Gamble,Queen's Gamble,Queen's Gamble,7,Matthew Smith,Tommy Berry,$14,6.8,racenet
+R6,Randwick,6,3:00 pm Darley Flight Stakes,1600m,Open Set Weight 3yo Fillies,Soft 5,True,,,,5,5,De Armas,De Armas,De Armas,1,Chris Waller,Zac Lloyd,$15,9,racenet
+R6,Randwick,6,3:00 pm Darley Flight Stakes,1600m,Open Set Weight 3yo Fillies,Soft 5,True,,,,6,6,Sumac,Sumac,Sumac,6,Lee & Cherie Curtis,Jason Collett,$81,8.1,racenet
+R6,Randwick,6,3:00 pm Darley Flight Stakes,1600m,Open Set Weight 3yo Fillies,Soft 5,True,,,,7,7,Parisest Magic,Parisest Magic,Parisest Magic,4,Alexandre Lemarie,Rachel King,$201,8.2,racenet
+R7,Randwick,7,3:35 pm Asahi Super Dry Metropolitan,2400m,Handicap,Soft 5,True,,,,1,1,The Euphrates,The Euphrates,The Euphrates,1,Gai Waterhouse & Adrian Bott,Tim Clark,$4.6,1.3,racenet
+R7,Randwick,7,3:35 pm Asahi Super Dry Metropolitan,2400m,Handicap,Soft 5,True,,,,2,2,Soul Of Spain,Soul Of Spain,Soul Of Spain,5,Chris Waller,James McDonald,$9.5,6.4,racenet
+R7,Randwick,7,3:35 pm Asahi Super Dry Metropolitan,2400m,Handicap,Soft 5,True,,,,3,3,Deakin,Deakin,Deakin,2,Phillip & Tommy Stokes,Kerrin McEvoy,$14,6.6,racenet
+R7,Randwick,7,3:35 pm Asahi Super Dry Metropolitan,2400m,Handicap,Soft 5,True,,,,4,4,Green Spaces,Green Spaces,Green Spaces,7,Bjorn Baker,Rachel King,$11,6.3,racenet
+R7,Randwick,7,3:35 pm Asahi Super Dry Metropolitan,2400m,Handicap,Soft 5,True,,,,5,5,Juja Kibo,Juja Kibo,Juja Kibo,4,Ciaron Maher,Sam Clipperton,$8.5,4.6,racenet
+R7,Randwick,7,3:35 pm Asahi Super Dry Metropolitan,2400m,Handicap,Soft 5,True,,,,7,7,Aethelwulf,Aethelwulf,Aethelwulf,3,Matthew Smith,Zac Lloyd,$2.3,3.7,racenet
+R7,Randwick,7,3:35 pm Asahi Super Dry Metropolitan,2400m,Handicap,Soft 5,True,,,,8,8,Thebudgiesmugla,Thebudgiesmugla,Thebudgiesmugla,9,Bjorn Baker,Dylan Gibbons,$21,4.6,racenet
+R7,Randwick,7,3:35 pm Asahi Super Dry Metropolitan,2400m,Handicap,Soft 5,True,,,,10,10,Athabascan,Athabascan,Athabascan,6,John O'Shea & Tom Charlton,Jason Collett,$151,8.2,racenet
+R7,Randwick,7,3:35 pm Asahi Super Dry Metropolitan,2400m,Handicap,Soft 5,True,,,,12,12,Pinhole,Pinhole,Pinhole,10,Chris Waller,Tyler Schiller,$11,8.7,racenet
+R7,Randwick,7,3:35 pm Asahi Super Dry Metropolitan,2400m,Handicap,Soft 5,True,,,,13,13,Steel Blaze,Steel Blaze,Steel Blaze,8,Brett Lazzarini,Reece Jones,$151,7.5,racenet
+R8,Randwick,8,4:10 pm Tab Epsom,1600m,Handicap,Soft 5,True,,,,1,1,Ceolwulf,Ceolwulf,Ceolwulf,7,Joseph Pride,Chad Schofield,$13,6.9,racenet
+R8,Randwick,8,4:10 pm Tab Epsom,1600m,Handicap,Soft 5,True,,,,2,2,Tom Kitten,Tom Kitten,Tom Kitten,4,Anthony & Sam Freedman,Adam Hyeronimus,$34,7.4,racenet
+R8,Randwick,8,4:10 pm Tab Epsom,1600m,Handicap,Soft 5,True,,,,3,3,Autumn Boy,Autumn Boy,Autumn Boy,1,Chris Waller,James McDonald,$3.9,5.9,racenet
+R8,Randwick,8,4:10 pm Tab Epsom,1600m,Handicap,Soft 5,True,,,,4,4,Idle Flyer,Idle Flyer,Idle Flyer,17,Matthew Smith,Jason Collett,$21,5.2,racenet
+R8,Randwick,8,4:10 pm Tab Epsom,1600m,Handicap,Soft 5,True,,,,5,5,Lady Shenandoah,Lady Shenandoah,Lady Shenandoah,15,Chris Waller,Tommy Berry,$15,5.2,racenet
+R8,Randwick,8,4:10 pm Tab Epsom,1600m,Handicap,Soft 5,True,,,,6,6,Well Written,Well Written,Well Written,3,Stephen Marsh,Zac Lloyd,$4.8,NA,racenet
+R8,Randwick,8,4:10 pm Tab Epsom,1600m,Handicap,Soft 5,True,,,,7,7,Militarize,Militarize,Militarize,18,Chris Waller,Tim Clark,$71,7.6,racenet
+R8,Randwick,8,4:10 pm Tab Epsom,1600m,Handicap,Soft 5,True,,,,8,8,Attica,Attica,Attica,6,Joseph Pride,Kerrin McEvoy,$6,6.3,racenet
+R8,Randwick,8,4:10 pm Tab Epsom,1600m,Handicap,Soft 5,True,,,,9,9,Vivy Air,Vivy Air,Vivy Air,9,Ciaron Maher,Reece Jones,$91,8.2,racenet
+R8,Randwick,8,4:10 pm Tab Epsom,1600m,Handicap,Soft 5,True,,,,10,10,Fully Lit,Fully Lit,Fully Lit,8,Gai Waterhouse & Adrian Bott,Winona Costin,$29,2.6,racenet
+R8,Randwick,8,4:10 pm Tab Epsom,1600m,Handicap,Soft 5,True,,,,12,12,Perfumist,Perfumist,Perfumist,16,Bjorn Baker,Rachel King,$19,2.2,racenet
+R8,Randwick,8,4:10 pm Tab Epsom,1600m,Handicap,Soft 5,True,,,,13,13,Matcha Latte,Matcha Latte,Matcha Latte,14,Nacim Dilmi,Robbie Dolan,$81,3.3,racenet
+R8,Randwick,8,4:10 pm Tab Epsom,1600m,Handicap,Soft 5,True,,,,14,14,Panova,Panova,Panova,13,Chris Waller,Alysha Collett,$81,8.8,racenet
+R8,Randwick,8,4:10 pm Tab Epsom,1600m,Handicap,Soft 5,True,,,,15,15,Plymouth,Plymouth,Plymouth,11,"Ben, Will & Jd Hayes",Jackson Radley,$126,5.9,racenet
+R8,Randwick,8,4:10 pm Tab Epsom,1600m,Handicap,Soft 5,True,,,,16,16,God's Window,God's Window,God's Window,12,Chris Waller,Siena Grima,$41,9,racenet
+R8,Randwick,8,4:10 pm Tab Epsom,1600m,Handicap,Soft 5,True,,,,17,17,Declichy Boulevard,Declichy Boulevard,Declichy Boulevard,2,Chris Waller,Andrew Adkins,$23,7.5,racenet
+R8,Randwick,8,4:10 pm Tab Epsom,1600m,Handicap,Soft 5,True,,,,18,18,Encap,Encap,Encap,10,Gary Portelli,Mollie Fitzgerald,$101,9.3,racenet
+R8,Randwick,8,4:10 pm Tab Epsom,1600m,Handicap,Soft 5,True,,,,19,19,Mr Miller,Mr Miller,Mr Miller,5,Chris Waller,Tyler Schiller,$13,4.6,racenet
+R9,Randwick,9,4:45 pm Precise Air Premiere Stakes,1200m,Open Weight For Age 3yo+ NA,Soft 5,True,,,,1,1,Mazu,Mazu,Mazu,13,Joseph Pride,Rachel King,$26,3.1,racenet
+R9,Randwick,9,4:45 pm Precise Air Premiere Stakes,1200m,Open Weight For Age 3yo+ NA,Soft 5,True,,,,2,2,Caballus,Caballus,Caballus,7,Bjorn Baker,Jason Collett,$13,5.5,racenet
+R9,Randwick,9,4:45 pm Precise Air Premiere Stakes,1200m,Open Weight For Age 3yo+ NA,Soft 5,True,,,,3,3,Headwall,Headwall,Headwall,2,Matthew Smith,Kerrin McEvoy,$11,9.3,racenet
+R9,Randwick,9,4:45 pm Precise Air Premiere Stakes,1200m,Open Weight For Age 3yo+ NA,Soft 5,True,,,,4,4,Ninja,Ninja,Ninja,14,Michael Freedman,Tommy Berry,$14,5.2,racenet
+R9,Randwick,9,4:45 pm Precise Air Premiere Stakes,1200m,Open Weight For Age 3yo+ NA,Soft 5,True,,,,5,5,King Of Sparta,King Of Sparta,King Of Sparta,4,Peter Snowden,Alysha Collett,$151,7.9,racenet
+R9,Randwick,9,4:45 pm Precise Air Premiere Stakes,1200m,Open Weight For Age 3yo+ NA,Soft 5,True,,,,6,6,King Of Roseau,King Of Roseau,King Of Roseau,9,Peter Snowden,Tom Sherry,$61,8.7,racenet
+R9,Randwick,9,4:45 pm Precise Air Premiere Stakes,1200m,Open Weight For Age 3yo+ NA,Soft 5,True,,,,7,7,King's Secret,King's Secret,King's Secret,5,Joseph Pride,Andrew Adkins,$31,5.2,racenet
+R9,Randwick,9,4:45 pm Precise Air Premiere Stakes,1200m,Open Weight For Age 3yo+ NA,Soft 5,True,,,,8,8,Grafterburners,Grafterburners,Grafterburners,8,Kelly Schweida,Adam Hyeronimus,$41,4.1,racenet
+R9,Randwick,9,4:45 pm Precise Air Premiere Stakes,1200m,Open Weight For Age 3yo+ NA,Soft 5,True,,,,9,9,Golden Straand,Golden Straand,Golden Straand,15,Matthew Smith,Tyler Schiller,$51,6.3,racenet
+R9,Randwick,9,4:45 pm Precise Air Premiere Stakes,1200m,Open Weight For Age 3yo+ NA,Soft 5,True,,,,10,10,Tempted,Tempted,Tempted,11,Ciaron Maher,Chad Schofield,$1.65,6.6,racenet
+R9,Randwick,9,4:45 pm Precise Air Premiere Stakes,1200m,Open Weight For Age 3yo+ NA,Soft 5,True,,,,11,11,Generosity,Generosity,Generosity,12,Chris Waller,James McDonald,$41,7.3,racenet
+R9,Randwick,9,4:45 pm Precise Air Premiere Stakes,1200m,Open Weight For Age 3yo+ NA,Soft 5,True,,,,12,12,Marhoona,Marhoona,Marhoona,10,Michael Freedman,Zac Lloyd,$21,2.6,racenet
+R9,Randwick,9,4:45 pm Precise Air Premiere Stakes,1200m,Open Weight For Age 3yo+ NA,Soft 5,True,,,,13,13,Savvy Hallie,Savvy Hallie,Savvy Hallie,6,Brad Widdup,Nash Rawiller,$20,2.3,racenet
+R9,Randwick,9,4:45 pm Precise Air Premiere Stakes,1200m,Open Weight For Age 3yo+ NA,Soft 5,True,,,,14,14,Weeping Woman,Weeping Woman,Weeping Woman,1,Joseph Pride,Regan Bayliss,$41,2,racenet
+R9,Randwick,9,4:45 pm Precise Air Premiere Stakes,1200m,Open Weight For Age 3yo+ NA,Soft 5,True,,,,15,15,Plaintiff,Plaintiff,Plaintiff,3,Peter Snowden,Tim Clark,$23,8.6,racenet
+R10,Randwick,10,5:25 pm Tab One Pool Handicap,1200m,Handicap,Soft 5,True,,,,1,1,Disneck,Disneck,Disneck,10,Bjorn Baker,Amber Riddell (a-3),$41,8.4,racenet
+R10,Randwick,10,5:25 pm Tab One Pool Handicap,1200m,Handicap,Soft 5,True,,,,2,2,Wanaruah,Wanaruah,Wanaruah,2,Brett & Georgie Cavanough,William Stanley (a-2),$15,3.4,racenet
+R10,Randwick,10,5:25 pm Tab One Pool Handicap,1200m,Handicap,Soft 5,True,,,,3,3,Signor Tortoni,Signor Tortoni,Signor Tortoni,16,Ron Quinton,Jason Collett,$13,4.1,racenet
+R10,Randwick,10,5:25 pm Tab One Pool Handicap,1200m,Handicap,Soft 5,True,,,,4,4,Beskar,Beskar,Beskar,4,Anthony & Sam Freedman,James McDonald,$6.25,2.8,racenet
+R10,Randwick,10,5:25 pm Tab One Pool Handicap,1200m,Handicap,Soft 5,True,,,,5,5,Captain Furai,Captain Furai,Captain Furai,9,Chris Waller,Siena Grima (a-2),$41,4.6,racenet
+R10,Randwick,10,5:25 pm Tab One Pool Handicap,1200m,Handicap,Soft 5,True,,,,6,6,Estremo,Estremo,Estremo,12,Chris Waller,Nash Rawiller,$17,6.6,racenet
+R10,Randwick,10,5:25 pm Tab One Pool Handicap,1200m,Handicap,Soft 5,True,,,,7,7,Navy Pilot,Navy Pilot,Navy Pilot,11,Ciaron Maher,Adam Hyeronimus,$19,8.1,racenet
+R10,Randwick,10,5:25 pm Tab One Pool Handicap,1200m,Handicap,Soft 5,True,,,,8,8,Rivellino,Rivellino,Rivellino,15,Kris Lees,Tim Clark,$23,7.2,racenet
+R10,Randwick,10,5:25 pm Tab One Pool Handicap,1200m,Handicap,Soft 5,True,,,,9,9,Getafix,Getafix,Getafix,14,John O'Shea & Tom Charlton,Chad Schofield,$151,8.7,racenet
+R10,Randwick,10,5:25 pm Tab One Pool Handicap,1200m,Handicap,Soft 5,True,,,,10,10,Platinum Pantheon,Platinum Pantheon,Platinum Pantheon,13,Lisa Latta,Zac Lloyd,$10,11.3,racenet
+R10,Randwick,10,5:25 pm Tab One Pool Handicap,1200m,Handicap,Soft 5,True,,,,12,12,Carbonados,Carbonados,Carbonados,8,"Ben, Will & Jd Hayes",Jackson Radley (a-2),$126,4.8,racenet
+R10,Randwick,10,5:25 pm Tab One Pool Handicap,1200m,Handicap,Soft 5,True,,,,13,13,Theblade,Theblade,Theblade,5,"Michael, John & Wayne Hawkes",Tyler Schiller,$4.4,2.5,racenet
+R10,Randwick,10,5:25 pm Tab One Pool Handicap,1200m,Handicap,Soft 5,True,,,,14,14,Nepo Baby,Nepo Baby,Nepo Baby,1,Annabel & Rob Archibald,Tom Sherry,$10,4.4,racenet
+R10,Randwick,10,5:25 pm Tab One Pool Handicap,1200m,Handicap,Soft 5,True,,,,17,17,Uzziah,Uzziah,Uzziah,6,Scott Aspery,Molly Bourke (a-1.5),$101,2.9,racenet
+R10,Randwick,10,5:25 pm Tab One Pool Handicap,1200m,Handicap,Soft 5,True,,,,18,18,Surf's Up,Surf's Up,Surf's Up,3,Chris Waller,Kerrin McEvoy,$9.5,7.2,racenet
+R10,Randwick,10,5:25 pm Tab One Pool Handicap,1200m,Handicap,Soft 5,True,,,,19,19,Il Passero,Il Passero,Il Passero,17,Richard Litt,Rachel King,$31,6.2,racenet
+R10,Randwick,10,5:25 pm Tab One Pool Handicap,1200m,Handicap,Soft 5,True,,,,20,20,Amazing Eagle,Amazing Eagle,Amazing Eagle,7,Bjorn Baker,Dylan Gibbons,$13,6.4,racenet
