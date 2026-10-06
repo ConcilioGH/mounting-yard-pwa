@@ -1,0 +1,75 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,weather,penetrometer,track_information,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
+R1,Kensington,1,2:20 pm Catanach's Jewellers Plate,1400m,Maiden,Soft 7,True,,,,2,2,Love Story,Love Story,Love Story,6,Gai Waterhouse & Adrian Bott,Adam Hyeronimus,$1.65,1,racenet
+R1,Kensington,1,2:20 pm Catanach's Jewellers Plate,1400m,Maiden,Soft 7,True,,,,3,3,Not So Casual,Not So Casual,Not So Casual,2,John Sargent,Siena Grima (a-2),$201,7.6,racenet
+R1,Kensington,1,2:20 pm Catanach's Jewellers Plate,1400m,Maiden,Soft 7,True,,,,4,4,Iminastate,Iminastate,Iminastate,1,Richard & Will Freedman,Chad Schofield,$23,6.1,racenet
+R1,Kensington,1,2:20 pm Catanach's Jewellers Plate,1400m,Maiden,Soft 7,True,,,,5,5,Iommi,Iommi,Iommi,3,Chris Waller,Sam Clipperton,$9,4.6,racenet
+R1,Kensington,1,2:20 pm Catanach's Jewellers Plate,1400m,Maiden,Soft 7,True,,,,6,6,Klocke,Klocke,Klocke,4,Chris Waller,James McDonald,$4.2,3.7,racenet
+R1,Kensington,1,2:20 pm Catanach's Jewellers Plate,1400m,Maiden,Soft 7,True,,,,7,7,Stellar Cipher,Stellar Cipher,Stellar Cipher,9,Chris Waller,Tyler Schiller,$101,5.6,racenet
+R1,Kensington,1,2:20 pm Catanach's Jewellers Plate,1400m,Maiden,Soft 7,True,,,,8,8,The Roaring Sun,The Roaring Sun,The Roaring Sun,10,Chris Waller,Tommy Berry,$14,10,racenet
+R1,Kensington,1,2:20 pm Catanach's Jewellers Plate,1400m,Maiden,Soft 7,True,,,,9,9,Belladiana,Belladiana,Belladiana,7,John Sargent,Alysha Collett,$27,NA,racenet
+R1,Kensington,1,2:20 pm Catanach's Jewellers Plate,1400m,Maiden,Soft 7,True,,,,10,10,Memorise,Memorise,Memorise,5,Michael Freedman,Tim Clark,$34,2.3,racenet
+R1,Kensington,1,2:20 pm Catanach's Jewellers Plate,1400m,Maiden,Soft 7,True,,,,11,11,Seminal,Seminal,Seminal,11,John O'Shea & Tom Charlton,Zac Lloyd,$21,4,racenet
+R1,Kensington,1,2:20 pm Catanach's Jewellers Plate,1400m,Maiden,Soft 7,True,,,,12,12,Sonho Dourado,Sonho Dourado,Sonho Dourado,8,John Sargent,Dylan Gibbons,$201,6,racenet
+R2,Kensington,2,2:55 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 7,True,,,,1,1,Phillip Island,Phillip Island,Phillip Island,13,Mick Price & Michael Kent Jnr,Anna Roper (a-1.5),$10,2.7,racenet
+R2,Kensington,2,2:55 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 7,True,,,,2,2,Our Huntress,Our Huntress,Our Huntress,9,Matthew Kelley,Coriah Keatings (a-3),$35,2.7,racenet
+R2,Kensington,2,2:55 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 7,True,,,,3,3,Chappy,Chappy,Chappy,11,Chris Waller,Nash Rawiller,$13,NA,racenet
+R2,Kensington,2,2:55 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 7,True,,,,4,4,Punxsutawney Phil,Punxsutawney Phil,Punxsutawney Phil,5,John O'Shea & Tom Charlton,Zac Lloyd,$2.4,3.7,racenet
+R2,Kensington,2,2:55 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 7,True,,,,5,5,Blitzgal,Blitzgal,Blitzgal,6,Chris Waller,James McDonald,$6,5.4,racenet
+R2,Kensington,2,2:55 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 7,True,,,,6,6,Steel Knight,Steel Knight,Steel Knight,12,Annabel & Rob Archibald,Mollie Fitzgerald (a-2),$34,6.2,racenet
+R2,Kensington,2,2:55 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 7,True,,,,7,7,Sky Deck,Sky Deck,Sky Deck,2,Peter Snowden,Chad Schofield,$11,3.8,racenet
+R2,Kensington,2,2:55 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 7,True,,,,8,8,Portico,Portico,Portico,8,Michael Freedman,Tommy Berry,$10,4.9,racenet
+R2,Kensington,2,2:55 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 7,True,,,,9,9,Rumdabar,Rumdabar,Rumdabar,10,Kris Lees,Kerrin McEvoy,$8,5,racenet
+R2,Kensington,2,2:55 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 7,True,,,,10,10,The Thorncaster,The Thorncaster,The Thorncaster,3,Ciaron Maher,Sam Clipperton,$10,5.4,racenet
+R2,Kensington,2,2:55 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 7,True,,,,11,11,Sphere,Sphere,Sphere,1,Chris Waller,Siena Grima (a-2),$13,2.9,racenet
+R2,Kensington,2,2:55 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 7,True,,,,12,12,Good'n'you,Good'n'you,Good'n'you,7,Gerald Ryan &,Sterling Alexiou,$16,4.4,racenet
+R2,Kensington,2,2:55 pm Asahi Super Dry Handicap,1250m,Handicap,Soft 7,True,,,,13,13,Aladdin's Girl,Aladdin's Girl,Aladdin's Girl,4,,Chris Waller,$26,7.4,racenet
+R3,Kensington,3,3:30 pm Myracehorse Handicap,1400m,Handicap,Soft 7,True,,,,1,1,Transcend,Transcend,Transcend,9,Michael Freedman,Tommy Berry,$8.5,5,racenet
+R3,Kensington,3,3:30 pm Myracehorse Handicap,1400m,Handicap,Soft 7,True,,,,2,2,Beside The Ocean,Beside The Ocean,Beside The Ocean,8,Chris Waller,James McDonald,$6,8.5,racenet
+R3,Kensington,3,3:30 pm Myracehorse Handicap,1400m,Handicap,Soft 7,True,,,,3,3,Alabama Fox,Alabama Fox,Alabama Fox,1,Annabel & Rob Archibald,Zac Lloyd,$2.6,4.6,racenet
+R3,Kensington,3,3:30 pm Myracehorse Handicap,1400m,Handicap,Soft 7,True,,,,4,4,Burj,Burj,Burj,3,Peter Snowden,Tom Sherry,$71,2.7,racenet
+R3,Kensington,3,3:30 pm Myracehorse Handicap,1400m,Handicap,Soft 7,True,,,,5,5,Maluku,Maluku,Maluku,4,Joseph Pride,Adam Hyeronimus,$6,5.7,racenet
+R3,Kensington,3,3:30 pm Myracehorse Handicap,1400m,Handicap,Soft 7,True,,,,6,6,Superfabulistic,Superfabulistic,Superfabulistic,7,Gai Waterhouse & Adrian Bott,Rachel King,$7.5,2.4,racenet
+R3,Kensington,3,3:30 pm Myracehorse Handicap,1400m,Handicap,Soft 7,True,,,,7,7,Bondi Blossom,Bondi Blossom,Bondi Blossom,2,Brad Widdup,Chad Schofield,$71,3.7,racenet
+R3,Kensington,3,3:30 pm Myracehorse Handicap,1400m,Handicap,Soft 7,True,,,,8,8,Cafe Au Lait,Cafe Au Lait,Cafe Au Lait,5,Chris Waller,Kerrin McEvoy,$26,4.4,racenet
+R3,Kensington,3,3:30 pm Myracehorse Handicap,1400m,Handicap,Soft 7,True,,,,9,9,Sing Your Song,Sing Your Song,Sing Your Song,6,Chris Waller,Siena Grima (a-2),$6,3.8,racenet
+R4,Kensington,4,4:05 pm Hyland Race Colours Handicap,1800m,Handicap,Soft 7,True,,,,1,1,Botanical Boy,Botanical Boy,Botanical Boy,10,Anthony & Sam Freedman,Adam Hyeronimus,$5,6.8,racenet
+R4,Kensington,4,4:05 pm Hyland Race Colours Handicap,1800m,Handicap,Soft 7,True,,,,2,2,Knights Armour,Knights Armour,Knights Armour,1,Ross Lavis Rebecca,Bronett Prag (a-3),$41,7.2,racenet
+R4,Kensington,4,4:05 pm Hyland Race Colours Handicap,1800m,Handicap,Soft 7,True,,,,3,3,Furious,Furious,Furious,8,"Michael, John & Wayne Hawkes",Dylan Gibbons,$14,8.8,racenet
+R4,Kensington,4,4:05 pm Hyland Race Colours Handicap,1800m,Handicap,Soft 7,True,,,,4,4,Leica Storm,Leica Storm,Leica Storm,6,Matthew Smith,Zac Lloyd,$4.8,3.3,racenet
+R4,Kensington,4,4:05 pm Hyland Race Colours Handicap,1800m,Handicap,Soft 7,True,,,,5,5,Great Idea,Great Idea,Great Idea,7,Nacim Dilmi,Nash Rawiller,$4,7.8,racenet
+R4,Kensington,4,4:05 pm Hyland Race Colours Handicap,1800m,Handicap,Soft 7,True,,,,6,6,Standard Deviation,Standard Deviation,Standard Deviation,4,Chris Waller,James McDonald,$3.75,4.2,racenet
+R4,Kensington,4,4:05 pm Hyland Race Colours Handicap,1800m,Handicap,Soft 7,True,,,,7,7,Sneaky Choice,Sneaky Choice,Sneaky Choice,2,Brad Widdup,Tommy Berry,$9,7.3,racenet
+R4,Kensington,4,4:05 pm Hyland Race Colours Handicap,1800m,Handicap,Soft 7,True,,,,8,8,Dolce Dior,Dolce Dior,Dolce Dior,5,Peter Snowden,Anna Roper (a-1.5),$41,3.6,racenet
+R4,Kensington,4,4:05 pm Hyland Race Colours Handicap,1800m,Handicap,Soft 7,True,,,,9,9,Off The Scale,Off The Scale,Off The Scale,9,Lou Mary,Braith Nock (a-1.5),$46,4.6,racenet
+R4,Kensington,4,4:05 pm Hyland Race Colours Handicap,1800m,Handicap,Soft 7,True,,,,10,10,Ivy Legend,Ivy Legend,Ivy Legend,3,Les Bridge,Tyler Schiller,$35,4.6,racenet
+R5,Kensington,5,4:40 pm Ranvet Handicap,1250m,Handicap,Soft 7,True,,,,1,1,Monte Kate,Monte Kate,Monte Kate,8,Robert & Luke Price,Mollie Fitzgerald (a-2),$6.5,3.4,racenet
+R5,Kensington,5,4:40 pm Ranvet Handicap,1250m,Handicap,Soft 7,True,,,,2,2,Uzziah,Uzziah,Uzziah,1,Scott Aspery,Anna Roper (a-1.5),$15,2.9,racenet
+R5,Kensington,5,4:40 pm Ranvet Handicap,1250m,Handicap,Soft 7,True,,,,3,3,Man Of Worth,Man Of Worth,Man Of Worth,10,Chris Waller,James McDonald,$4.2,4.4,racenet
+R5,Kensington,5,4:40 pm Ranvet Handicap,1250m,Handicap,Soft 7,True,,,,4,4,Tristate,Tristate,Tristate,7,Edward Cummings,Adam Hyeronimus,$21,3.2,racenet
+R5,Kensington,5,4:40 pm Ranvet Handicap,1250m,Handicap,Soft 7,True,,,,5,5,Lightning Glory,Lightning Glory,Lightning Glory,5,Nathan Doyle,Ashley Morgan,$4,1.7,racenet
+R5,Kensington,5,4:40 pm Ranvet Handicap,1250m,Handicap,Soft 7,True,,,,6,6,Money Team,Money Team,Money Team,3,Brad Widdup,Zac Lloyd,$14,6.2,racenet
+R5,Kensington,5,4:40 pm Ranvet Handicap,1250m,Handicap,Soft 7,True,,,,7,7,Super Norwest,Super Norwest,Super Norwest,9,Matthew Dale,Coriah Keatings (a-3),$14,4.1,racenet
+R5,Kensington,5,4:40 pm Ranvet Handicap,1250m,Handicap,Soft 7,True,,,,8,8,Scillato,Scillato,Scillato,2,Matthew Smith,Tommy Berry,$4.2,5.4,racenet
+R5,Kensington,5,4:40 pm Ranvet Handicap,1250m,Handicap,Soft 7,True,,,,9,9,Atmospheric Rock,Atmospheric Rock,Atmospheric Rock,4,Danny Williams,Dale Cole (a-3),$34,10.2,racenet
+R5,Kensington,5,4:40 pm Ranvet Handicap,1250m,Handicap,Soft 7,True,,,,10,10,Who But Roo,Who But Roo,Who But Roo,6,,Becky Byrne,$23,3.5,racenet
+R6,Kensington,6,5:15 pm Exceedance @ Vinery Stud Handicap,1400m,Handicap,Soft 7,True,,,,1,1,Anythink Goes,Anythink Goes,Anythink Goes,3,Matthew Smith,Mollie Fitzgerald (a-2),$12,6.3,racenet
+R6,Kensington,6,5:15 pm Exceedance @ Vinery Stud Handicap,1400m,Handicap,Soft 7,True,,,,2,2,True To Form,True To Form,True To Form,5,Kris Lees,James McDonald,$4.4,3.2,racenet
+R6,Kensington,6,5:15 pm Exceedance @ Vinery Stud Handicap,1400m,Handicap,Soft 7,True,,,,3,3,Felix Majestic,Felix Majestic,Felix Majestic,6,Gary Nickson,Nash Rawiller,$3.2,3.4,racenet
+R6,Kensington,6,5:15 pm Exceedance @ Vinery Stud Handicap,1400m,Handicap,Soft 7,True,,,,4,4,Octa De Lago,Octa De Lago,Octa De Lago,2,Richard Litt,Dylan Gibbons,$3.9,8.2,racenet
+R6,Kensington,6,5:15 pm Exceedance @ Vinery Stud Handicap,1400m,Handicap,Soft 7,True,,,,5,5,Hanau,Hanau,Hanau,7,Mark Minervini,Tommy Berry,$14,7.6,racenet
+R6,Kensington,6,5:15 pm Exceedance @ Vinery Stud Handicap,1400m,Handicap,Soft 7,True,,,,6,6,Agent Zero,Agent Zero,Agent Zero,1,Ciaron Maher,Siena Grima (a-2),$13,3.2,racenet
+R6,Kensington,6,5:15 pm Exceedance @ Vinery Stud Handicap,1400m,Handicap,Soft 7,True,,,,7,7,Flying From Above,Flying From Above,Flying From Above,8,Edward Cummings,Adam Hyeronimus,$14,4.1,racenet
+R6,Kensington,6,5:15 pm Exceedance @ Vinery Stud Handicap,1400m,Handicap,Soft 7,True,,,,8,8,Satness,Satness,Satness,4,Robert & Luke Price Jean,Van Overmeire,$35,2.5,racenet
+R6,Kensington,6,5:15 pm Exceedance @ Vinery Stud Handicap,1400m,Handicap,Soft 7,True,,,,9,9,Associate,Associate,Associate,9,Danielle Seib,Tyler Schiller,$34,8.2,racenet
+R7,Kensington,7,5:50 pm Tab Handicap,1250m,Handicap,Soft 7,True,,,,1,1,Reflect,Reflect,Reflect,2,Joseph Pride,Chad Schofield,$8,5.1,racenet
+R7,Kensington,7,5:50 pm Tab Handicap,1250m,Handicap,Soft 7,True,,,,2,2,Scenic Point,Scenic Point,Scenic Point,6,Joseph Pride,Adam Hyeronimus,$2.75,6,racenet
+R7,Kensington,7,5:50 pm Tab Handicap,1250m,Handicap,Soft 7,True,,,,3,3,Island Dec,Island Dec,Island Dec,5,Robert & Luke Price,Tommy Berry,$8,7.7,racenet
+R7,Kensington,7,5:50 pm Tab Handicap,1250m,Handicap,Soft 7,True,,,,4,4,Shotgun Bella,Shotgun Bella,Shotgun Bella,7,Nathan Doyle,Regan Bayliss,$6,3.6,racenet
+R7,Kensington,7,5:50 pm Tab Handicap,1250m,Handicap,Soft 7,True,,,,5,5,Chix,Chix,Chix,4,John O'Shea & Tom Charlton,Anna Roper (a-1.5),$7.5,2.8,racenet
+R7,Kensington,7,5:50 pm Tab Handicap,1250m,Handicap,Soft 7,True,,,,6,6,Found The Gold,Found The Gold,Found The Gold,12,Ron Quinton,Kerrin McEvoy,$9.5,6.8,racenet
+R7,Kensington,7,5:50 pm Tab Handicap,1250m,Handicap,Soft 7,True,,,,7,7,Piperita,Piperita,Piperita,9,Nacim Dilmi,Alysha Collett,$35,7.6,racenet
+R7,Kensington,7,5:50 pm Tab Handicap,1250m,Handicap,Soft 7,True,,,,8,8,Blue Monday,Blue Monday,Blue Monday,1,Mitchell Beer & George Carpenter Jean,Van Overmeire,$11,7.9,racenet
+R7,Kensington,7,5:50 pm Tab Handicap,1250m,Handicap,Soft 7,True,,,,9,9,Aladdin's Girl,Aladdin's Girl,Aladdin's Girl,11,Chris Waller,Siena Grima (a-2),$18,7.4,racenet
+R7,Kensington,7,5:50 pm Tab Handicap,1250m,Handicap,Soft 7,True,,,,10,10,Miss Emma,Miss Emma,Miss Emma,8,,Becky Byrne,$51,2.8,racenet
+R7,Kensington,7,5:50 pm Tab Handicap,1250m,Handicap,Soft 7,True,,,,11,11,Our Huntress,Our Huntress,Our Huntress,3,Matthew Kelley,Coriah Keatings (a-3),$20,2.7,racenet
+R7,Kensington,7,5:50 pm Tab Handicap,1250m,Handicap,Soft 7,True,,,,12,12,Blitzgal,Blitzgal,Blitzgal,10,Chris Waller,James McDonald,$6,5.4,racenet
