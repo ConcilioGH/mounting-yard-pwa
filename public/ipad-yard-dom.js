@@ -623,48 +623,6 @@
       this.normalizeSelection();
       this.saveActiveMeetingToStore();
       this.updateCountdownDisplay();
-      this.refreshResultedSpPoller(manifest);
-    },
-
-    refreshResultedSpPoller: function (manifest) {
-      var rsp = window.ResultedSpDom;
-      if (!rsp || !this.activeMeetingId || !this.races || !this.races.length) {
-        return;
-      }
-      var self = this;
-      if (this.resultedSpPoller && this.resultedSpPoller.stop) {
-        this.resultedSpPoller.stop();
-      }
-      var activeManifest = manifest || this.syncMeetingManifest() || {};
-      this.resultedSpPoller = rsp.startPoller({
-        meetingId: this.activeMeetingId,
-        manifest: activeManifest,
-        races: this.races,
-        onChange: function () {
-          self.renderResultedSpPanel();
-          self.updateMeetingHealthPanel();
-          self.bump();
-          if (window.ResultedSpDom && typeof console !== "undefined") {
-            console.log("[resulted-sp] rendered", { meetingId: self.activeMeetingId });
-          }
-        },
-      });
-      this.renderResultedSpPanel();
-    },
-
-    renderResultedSpPanel: function () {
-      if (typeof document === "undefined") return;
-      var rsp = window.ResultedSpDom;
-      var el = document.getElementById("iy-resulted-sp-panel");
-      if (!rsp || !el || !this.activeMeetingId || !this.races || !this.races.length) {
-        if (el) el.innerHTML = "";
-        return;
-      }
-      rsp.renderPanel(el, {
-        meetingId: this.activeMeetingId,
-        manifest: this.syncMeetingManifest() || {},
-        races: this.races,
-      });
     },
 
     migrateLegacyStorage: function () {
@@ -1073,7 +1031,6 @@
 
       this.persistRaces();
       this.persist();
-      this.refreshResultedSpPoller(manifest);
       this.updateMeetingMetaDisplay();
       this.showAssess();
       this.render();
@@ -1165,7 +1122,6 @@
         if (this.resultedSpPoller && this.resultedSpPoller.stop) {
           this.resultedSpPoller.stop();
         }
-        this.renderResultedSpPanel();
         this.updateMeetingMetaDisplay();
       }
     },

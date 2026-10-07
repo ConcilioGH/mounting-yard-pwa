@@ -11,6 +11,7 @@ import { buildBiasDetailCsv, buildBiasSummaryCsv } from "@/lib/race-day-bias/exp
 import { buildRaceFieldSizeMap } from "@/lib/race-day-bias/field-size";
 import { deliverMeetingExport } from "@/lib/meeting-export-delivery";
 import { loadAllRaces } from "@/lib/db";
+import { DEFAULT_RACES } from "@/lib/constants";
 import { sanitizePositionCodeInput } from "@/lib/race-day-bias/lane";
 import { parseSp, sanitizeSpInput } from "@/lib/race-day-bias/sp";
 import {
@@ -21,6 +22,7 @@ import {
   saveRaceDayBiasStateForMeeting,
 } from "@/lib/race-day-bias/storage";
 import { RESULTED_SP_UPDATED_EVENT } from "@/lib/resulted-sp/types";
+import { loadActiveIpadYardRaces } from "@/lib/resulted-sp/active-races";
 import {
   loadMeetingManifest,
   MEETING_IMPORTED_EVENT,
@@ -41,6 +43,9 @@ import {
   STARTUP_GATE_TIMEOUT_MS,
 } from "@/lib/startup-diagnostics";
 import { ResultsSpImportPanel } from "@/components/race-day-bias/results-sp-import-panel";
+import { ResultedSpStatusPanel } from "@/components/resulted-sp-status-panel";
+import type { MeetingManifest } from "@/lib/meeting-coordination";
+import type { Race } from "@/lib/types";
 import {
   BiasConclusionPanel,
   CompositeBiasMatrixPanel,
@@ -96,6 +101,8 @@ export default function RaceDayBiasApp() {
   const [spImportOpen, setSpImportOpen] = useState(false);
   const [spImportReport, setSpImportReport] = useState<ApplyResultsSpReport | null>(null);
   const [fieldSizeByRaceNo, setFieldSizeByRaceNo] = useState<Record<string, number>>({});
+  const [activeManifest, setActiveManifest] = useState<MeetingManifest | null>(null);
+  const [meetingRaces, setMeetingRaces] = useState<Race[]>([]);
   const stateRef = useRef(state);
   stateRef.current = state;
   const biasHydratedRef = useRef(false);
@@ -130,8 +137,21 @@ export default function RaceDayBiasApp() {
 
     const refreshFieldSizes = async () => {
       try {
-        const races = await loadAllRaces();
-        if (!cancelled) setFieldSizeByRaceNo(buildRaceFieldSizeMap(races));
+        const manifest = loadMeetingManifest();
+        const ipadRaces = manifest?.meetingId
+          ? loadActiveIpadYardRaces(manifest.meetingId)
+          : [];
+        const indexedRaces = ipadRaces.length > 0 ? [] : await loadAllRaces();
+        const races =
+          ipadRaces.length > 0
+            ? ipadRaces
+            : indexedRaces.length > 0
+              ? indexedRaces
+              : DEFAULT_RACES;
+        if (!cancelled) {
+          setMeetingRaces(races);
+          setFieldSizeByRaceNo(buildRaceFieldSizeMap(races));
+        }
       } catch (error) {
         reportStartupFailure("race-day-bias-field-sizes", error);
       }
@@ -154,6 +174,7 @@ export default function RaceDayBiasApp() {
         if (!manifest?.meetingId) {
           biasHydratedRef.current = false;
           if (!cancelled) {
+            setActiveManifest(null);
             setState({ meetingLabel: "", races: [], updatedAt: new Date().toISOString() });
           }
           return;
@@ -168,6 +189,11 @@ export default function RaceDayBiasApp() {
           rows: loaded.races.length,
         });
         if (!cancelled) {
+          setActiveManifest((previous) =>
+            previous?.meetingId === manifest.meetingId && previous.importedAt === manifest.importedAt
+              ? previous
+              : manifest,
+          );
           setState(loaded);
           biasHydratedRef.current = true;
         }
@@ -194,7 +220,7 @@ export default function RaceDayBiasApp() {
     }
 
     window.addEventListener(MEETING_IMPORTED_EVENT, refresh);
-    window.addEventListener(RESULTED_SP_UPDATED_EVENT, refresh);
+    window.addEventListener(RESULTED_SP_UPDATED_EVENT, refreshBiasState);
     // NOTE: intentionally not listening to RACE_DAY_BIAS_UPDATED_EVENT here.
     // That event is dispatched by our own saveRaceDayBiasStateForMeeting, so
     // reacting to it created a save -> reload -> setState loop that clobbered
@@ -209,7 +235,7 @@ export default function RaceDayBiasApp() {
       cancelled = true;
       window.clearTimeout(safetyTimer);
       window.removeEventListener(MEETING_IMPORTED_EVENT, refresh);
-      window.removeEventListener(RESULTED_SP_UPDATED_EVENT, refresh);
+      window.removeEventListener(RESULTED_SP_UPDATED_EVENT, refreshBiasState);
       window.removeEventListener("storage", onStorage);
     };
   }, []);
@@ -368,6 +394,16 @@ export default function RaceDayBiasApp() {
           </p>
         )}
       </header>
+
+      {!showImportPrompt && activeManifest && meetingRaces.length > 0 && (
+        <ResultedSpStatusPanel
+          meetingId={activeManifest.meetingId}
+          manifest={activeManifest}
+          races={meetingRaces}
+          compact
+          appearance="dark"
+        />
+      )}
 
       {showImportPrompt ? (
         <p className="rounded-2xl border border-dashed border-slate-700 bg-slate-950/60 px-4 py-8 text-center text-base text-slate-400">

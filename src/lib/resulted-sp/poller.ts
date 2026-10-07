@@ -12,7 +12,7 @@ import type { Race } from "@/lib/types";
 import { buildResultedSpCsv } from "@/lib/resulted-sp/export";
 import { toResultedSpRunners } from "@/lib/resulted-sp/match-runners";
 import { importRaceFromSources } from "@/lib/resulted-sp/sources";
-import { buildPrimaryTabResultsUrl, resolvePrimaryTabResultsUrl } from "@/lib/resulted-sp/urls";
+import { buildPrimaryTabResultsUrl, buildRacingNswResultsUrl } from "@/lib/resulted-sp/urls";
 import {
   loadResultedSpStateForMeeting,
   saveResultedSpStateForMeeting,
@@ -163,12 +163,11 @@ export async function importResultedSpForRace(options: {
     return { ok: true, imported: false, state };
   }
 
-  const tabUrl =
-    (await resolvePrimaryTabResultsUrl(options.manifest, raceNo)) ??
-    buildPrimaryTabResultsUrl(options.manifest);
+  const tabUrl = buildPrimaryTabResultsUrl(options.manifest);
+  const primaryResultsUrl = buildRacingNswResultsUrl(options.manifest) || tabUrl;
   state = {
     ...state,
-    resultsUrl: tabUrl,
+    resultsUrl: primaryResultsUrl,
     races: {
       ...state.races,
       [raceNo]: {
@@ -190,7 +189,7 @@ export async function importResultedSpForRace(options: {
 
     if (!importResult.imported) {
       const nowIso = new Date().toISOString();
-      const resultsUrl = importResult.tabResultsUrl || tabUrl;
+      const resultsUrl = importResult.resultsUrl || tabUrl;
       state = loadResultedSpStateForMeeting(meetingId);
       state = {
         ...state,
@@ -229,7 +228,7 @@ export async function importResultedSpForRace(options: {
     const race = options.races.find((r) => normalizeRaceNoFromId(r.id) === raceNo);
     const importedAt = new Date().toISOString();
     const source = importResult.source;
-    const resultsUrl = importResult.tabResultsUrl || tabUrl;
+    const resultsUrl = importResult.resultsUrl || tabUrl;
     const runners = toResultedSpRunners(importResult.parsed, race, source, importedAt);
     state = loadResultedSpStateForMeeting(meetingId);
     state = {

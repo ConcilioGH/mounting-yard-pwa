@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import type { MeetingManifest } from "@/lib/meeting-coordination";
 import type { Race } from "@/lib/types";
 import {
@@ -46,6 +47,7 @@ type ResultedSpStatusPanelProps = {
   manifest: MeetingManifest;
   races: Race[];
   compact?: boolean;
+  appearance?: "light" | "dark";
 };
 
 export function ResultedSpStatusPanel({
@@ -53,6 +55,7 @@ export function ResultedSpStatusPanel({
   manifest,
   races,
   compact = false,
+  appearance = "light",
 }: ResultedSpStatusPanelProps) {
   const [state, setState] = useState<ResultedSpMeetingState>(() =>
     loadResultedSpStateForMeeting(meetingId),
@@ -110,18 +113,21 @@ export function ResultedSpStatusPanel({
   if (!schedule.length) return null;
 
   const now = new Date();
+  const dark = appearance === "dark";
 
   return (
     <section
-      className={
-        compact
-          ? "rounded-lg border border-slate-200 bg-white p-3 text-sm shadow-sm"
-          : "rounded-xl border border-slate-200 bg-white p-4 shadow-sm"
-      }
+      className={cn(
+        compact ? "rounded-lg p-3 text-sm shadow-sm" : "rounded-xl p-4 shadow-sm",
+        dark ? "border border-slate-800 bg-slate-950/90 text-slate-200" : "border border-slate-200 bg-white",
+      )}
       aria-label="Resulted SP import status"
     >
       <div className="mb-2 flex items-center justify-between gap-2">
-        <h3 className="font-semibold text-slate-900">Resulted SP</h3>
+        <div>
+          <h3 className={cn("font-semibold", dark ? "text-slate-100" : "text-slate-900")}>Resulted SP</h3>
+          {dark && <p className="text-xs text-slate-400">Automatically fills empty SP fields below.</p>}
+        </div>
         <Button
           type="button"
           variant="outline"
@@ -141,9 +147,12 @@ export function ResultedSpStatusPanel({
           return (
             <li
               key={entry.raceNo}
-              className="flex flex-wrap items-center justify-between gap-2 rounded-md bg-slate-50 px-2 py-1.5"
+              className={cn(
+                "flex flex-wrap items-center justify-between gap-2 rounded-md px-2 py-1.5",
+                dark ? "bg-slate-900" : "bg-slate-50",
+              )}
             >
-              <span className="font-medium text-slate-800">
+              <span className={cn("font-medium", dark ? "text-slate-200" : "text-slate-800")}>
                 {entry.raceLabel} {label}
               </span>
               <span className="flex flex-wrap gap-1">

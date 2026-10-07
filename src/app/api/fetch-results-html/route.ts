@@ -2,6 +2,7 @@ const ALLOWED_HOSTS = new Set([
   "www.racenet.com.au",
   "racenet.com.au",
   "racing.racingnsw.com.au",
+  "mdata.racingnsw.com.au",
   "www.racingnsw.com.au",
   "www.tab.com.au",
   "tab.com.au",

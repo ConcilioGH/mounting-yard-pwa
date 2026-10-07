@@ -66,6 +66,11 @@ function parseFullFieldFromTableRows(doc: Document, targetRaceNo?: string): Pars
     const headerMatch = raceHeaderRe.exec(caption);
     if (headerMatch) currentRaceNo = normalizeRaceNo(headerMatch[1]!);
 
+    // Racing NSW wraps each race table in #bobcontent{raceNo} and does not use captions.
+    const racingNswContainer = table.closest<HTMLElement>("[id^='bobcontent']");
+    const racingNswRaceMatch = /^bobcontent(\d+)$/i.exec(racingNswContainer?.id ?? "");
+    if (racingNswRaceMatch) currentRaceNo = normalizeRaceNo(racingNswRaceMatch[1]!);
+
     const rows = [...table.querySelectorAll("tr")];
     if (rows.length < 2) continue;
 
@@ -73,7 +78,7 @@ function parseFullFieldFromTableRows(doc: Document, targetRaceNo?: string): Pars
       (c.textContent ?? "").toLowerCase().replace(/\s+/g, " "),
     );
     const placeIdx = headerCells.findIndex(
-      (h) => /^(pl|pos|position|place|fin)$/.test(h) || h.includes("pos") || h.includes("pl"),
+      (h) => /^(pl|pos|position|place|fin|finish)$/.test(h) || h.includes("pos") || h.includes("pl"),
     );
     const spIdx = headerCells.findIndex(
       (h) => h.includes("sp") || h.includes("start") || h.includes("price") || h === "$",
@@ -81,7 +86,9 @@ function parseFullFieldFromTableRows(doc: Document, targetRaceNo?: string): Pars
     const nameIdx = headerCells.findIndex(
       (h) => h.includes("horse") || h.includes("runner") || h === "name" || h.includes("selection"),
     );
-    const marginIdx = headerCells.findIndex((h) => h.includes("margin") || h.includes("beaten") || h === "marg");
+    const marginIdx = headerCells.findIndex(
+      (h) => h.includes("margin") || h.includes("beaten") || h.startsWith("marg"),
+    );
 
     if (placeIdx < 0 || spIdx < 0) continue;
 

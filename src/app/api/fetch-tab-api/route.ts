@@ -1,4 +1,5 @@
 const TAB_API_BASE = "https://api.beta.tab.com.au/v1/tab-info-service/";
+const TAB_API_TIMEOUT_MS = 8_000;
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
@@ -29,6 +30,8 @@ export async function GET(request: Request) {
   }
 
   const url = `${TAB_API_BASE}${path}?jurisdiction=${encodeURIComponent(jurisdiction)}`;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), TAB_API_TIMEOUT_MS);
   try {
     const res = await fetch(url, {
       method: "GET",
@@ -37,6 +40,7 @@ export async function GET(request: Request) {
         "User-Agent": "mounting-yard-pwa/1.0",
       },
       cache: "no-store",
+      signal: controller.signal,
     });
     if (!res.ok) {
       return Response.json(
@@ -57,8 +61,16 @@ export async function GET(request: Request) {
       },
     });
   } catch (error) {
+    if (controller.signal.aborted) {
+      return Response.json(
+        { error: `TAB API timed out after ${TAB_API_TIMEOUT_MS}ms.` },
+        { status: 504, headers: CORS_HEADERS },
+      );
+    }
     const message = error instanceof Error ? error.message : String(error);
     return Response.json({ error: message }, { status: 502, headers: CORS_HEADERS });
+  } finally {
+    clearTimeout(timeout);
   }
 }
 

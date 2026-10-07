@@ -854,7 +854,6 @@ export function buildIpadYardDomHtml(): string {
         <p id="iy-countdown-time" class="iy-countdown-time iy-countdown-normal"></p>
       </div>
     </div>
-    <div id="iy-resulted-sp-panel" class="iy-resulted-sp-panel" aria-label="Resulted SP import status"></div>
     <div class="iy-toolbar">
       <div class="iy-toolbar-primary">
         <div class="iy-toolbar-slot">
