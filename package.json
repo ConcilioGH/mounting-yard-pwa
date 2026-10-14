@@ -13,6 +13,7 @@
     "typecheck": "tsc --noEmit",
     "test": "npx tsx scripts/test-speed-map-placement.mts",
     "test:speed-map": "npx tsx scripts/test-speed-map-placement.mts",
+    "test:speed-map-import": "npx tsx scripts/test-speed-map-import-readiness.mts",
     "test:racingnsw": "node scripts/test-racingnsw-fixture.mts",
     "test:resulted-sp-placement": "node scripts/test-resulted-sp-bias-placement.mts",
     "test:resulted-sp-active-races": "node scripts/test-resulted-sp-active-races.mts",

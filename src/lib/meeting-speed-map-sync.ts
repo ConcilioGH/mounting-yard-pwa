@@ -4,7 +4,10 @@ import {
   type RaceBucket,
   type SpeedMapRunner,
 } from "@/lib/speed-map";
-import { applyActiveBoardPlacementIfReady } from "@/lib/speed-map-placement-registry";
+import {
+  applyActiveBoardPlacementIfReady,
+  getActiveBoardPlacement,
+} from "@/lib/speed-map-placement-registry";
 import { normalizeErrorMessage } from "@/lib/startup-diagnostics";
 import { normalizeRaceNo } from "@/lib/meeting-coordination";
 import type { MeetingCsvParseResult } from "@/lib/csv";
@@ -16,7 +19,7 @@ import {
 } from "@/lib/speed-map-persistence";
 import { safeStructuredClone } from "@/lib/safe-clone";
 
-const PLACEMENT_ENGINE = "active-board-v32";
+const PLACEMENT_ENGINE = "active-board-v33";
 
 function runnerId(raceNo: string, no: number, horse: string, index: number): string {
   const slug = horse.toLowerCase().replace(/[^a-z0-9]+/g, "-");
@@ -128,6 +131,11 @@ export function reconcileSpeedMapActivePlacement(
   session: SpeedMapSessionState,
 ): SpeedMapSessionState {
   try {
+    // Meeting imports can run on /yard before the Speed Map bundle has loaded.
+    // Do not mark zero-coordinate input as placed until the board engine exists;
+    // the provider will retry reconciliation when /speed-map is opened.
+    if (!getActiveBoardPlacement()) return session;
+
     const raceMap: SpeedMapSessionState["raceMap"] = {};
 
     for (const [raceNo, race] of Object.entries(session.raceMap)) {
@@ -181,6 +189,7 @@ export function syncSpeedMapOnMeetingImport(
 
   const map: SpeedMapSessionState["raceMap"] = {};
   const order: string[] = [];
+  const placementReady = Boolean(getActiveBoardPlacement());
 
   for (const race of parsed.speedMapRaces) {
     const raceNo = normalizeRaceNo(race.raceNo);
@@ -211,7 +220,7 @@ export function syncSpeedMapOnMeetingImport(
 
     map[raceNo] = {
       ...raceMapEntryFromBucket(bucket, placed, meetingMeta),
-      placementEngine: PLACEMENT_ENGINE,
+      ...(placementReady ? { placementEngine: PLACEMENT_ENGINE } : {}),
       importDebug: {
         csvRowCountForRace: race.runners.length,
         scratchedCountForRace: 0,
