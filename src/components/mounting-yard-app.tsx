@@ -43,7 +43,6 @@ import {
   racesMatchManifest,
 } from "@/lib/active-meeting-session";
 import { YardNextRaceCountdown } from "@/components/yard-next-race-countdown";
-import { ResultedSpStatusPanel } from "@/components/resulted-sp-status-panel";
 import { getOfficialSpForRunner, loadResultedSpStateForMeeting } from "@/lib/resulted-sp/storage";
 import { applyGearTileSelection, type GearTileCode } from "@/lib/gear";
 import type { Assessment, Race, Runner, WetBodyType, WetFeet } from "@/lib/types";
@@ -767,14 +766,6 @@ function MountingYardModernApp() {
 
         {importError && (
           <div className="rounded-3xl border border-red-200 bg-red-50 px-4 py-3 text-base text-red-900">{importError}</div>
-        )}
-
-        {meetingManifest && races.length > 0 && (
-          <ResultedSpStatusPanel
-            meetingId={meetingManifest.meetingId}
-            manifest={meetingManifest}
-            races={races}
-          />
         )}
 
         {races.length > 1 &&

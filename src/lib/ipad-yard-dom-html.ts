@@ -835,7 +835,7 @@ export function buildIpadYardDomHtml(): string {
     <div class="iy-app-nav-inner">
       <a href="/" class="iy-app-nav-brand">Mounting Yard</a>
       <div class="iy-app-nav-links">
-        <a href="/ipad-yard-dom" class="iy-app-nav-link iy-app-nav-active">Yard</a>
+        <a href="/yard" class="iy-app-nav-link">Yard</a>
         <a href="/speed-map" class="iy-app-nav-link">Speed Map</a>
         <a href="/bias" class="iy-app-nav-link">Bias</a>
       </div>

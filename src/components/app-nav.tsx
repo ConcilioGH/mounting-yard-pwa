@@ -8,7 +8,7 @@ import { resetAppData } from "@/lib/reset-local-data";
 import { cn } from "@/lib/utils";
 
 const NAV_ITEMS = [
-  { href: "/ipad-yard-dom", label: "Yard" },
+  { href: "/yard", label: "Yard" },
   { href: "/speed-map", label: "Speed Map" },
   { href: "/bias", label: "Bias" },
 ] as const;

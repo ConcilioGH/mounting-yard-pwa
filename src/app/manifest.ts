@@ -7,7 +7,7 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: "MYard",
     description: "Mounting yard assessments — offline-first on iPad.",
     lang: "en",
-    start_url: "/",
+    start_url: "/yard",
     scope: "/",
     display: "standalone",
     display_override: ["standalone", "fullscreen"],
