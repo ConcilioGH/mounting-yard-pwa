@@ -79,6 +79,56 @@ export function safeReconcileSpeedMapSession(session: SpeedMapSessionState): Spe
   }
 }
 
+function activeMeetingLibraryPath(
+  manifest: MeetingManifest,
+  cached: ReturnType<typeof loadLastMeetingCsvImport>,
+): string {
+  const folder = (cached?.options.meetingFolderPath || manifest.meetingFolderPath || "")
+    .trim()
+    .replace(/\\/g, "/")
+    .replace(/\/$/, "");
+  const fileName = cached?.options.fileName?.trim() || "";
+  if (!/^meetings\/[a-z0-9/_-]+$/i.test(folder)) return "";
+  if (!/^[a-z0-9_-]+_\d{4}-\d{2}-\d{2}_master\.csv$/i.test(fileName)) return "";
+  return `${folder}/${fileName}`;
+}
+
+/** Replace a stale same-meeting local import when its published master CSV changes. */
+async function refreshActiveMeetingCsv(manifest: MeetingManifest): Promise<boolean> {
+  if (typeof window === "undefined" || typeof fetch === "undefined" || !navigator.onLine) {
+    return false;
+  }
+
+  const cached = loadLastMeetingCsvImport();
+  const relativePath = activeMeetingLibraryPath(manifest, cached);
+  if (!cached?.text || !relativePath) return false;
+
+  try {
+    const response = await fetch(
+      `/api/meeting-library?path=${encodeURIComponent(relativePath)}&revision=${Date.now()}`,
+      { cache: "no-store" },
+    );
+    if (!response.ok) return false;
+    const latestText = await response.text();
+    if (!latestText.trim() || latestText === cached.text) return false;
+
+    await importMeetingFromCsv(latestText, {
+      ...cached.options,
+      importPath: relativePath,
+      meetingFolderPath: cached.options.meetingFolderPath || manifest.meetingFolderPath,
+    });
+    console.log("[meeting-sync] refreshed published CSV revision", {
+      meetingId: manifest.meetingId,
+      relativePath,
+    });
+    return true;
+  } catch (error) {
+    // Offline and transient deployment/network failures must keep the saved meeting usable.
+    console.warn("[meeting-sync] published CSV refresh skipped:", normalizeErrorMessage(error));
+    return false;
+  }
+}
+
 export function loadSpeedMapSessionForManifest(
   manifest: MeetingManifest | null,
 ): SpeedMapSessionState | null {
@@ -117,6 +167,10 @@ export async function ensureActiveMeetingSynced(): Promise<MeetingManifest | nul
   try {
     const manifest = loadMeetingManifest();
     if (!manifest) return null;
+
+    if (await refreshActiveMeetingCsv(manifest)) {
+      return loadMeetingManifest();
+    }
 
     syncMeetingPointersFromManifest(manifest);
 
