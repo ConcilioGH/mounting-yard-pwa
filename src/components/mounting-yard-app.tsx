@@ -38,6 +38,7 @@ import {
   MEETING_MANIFEST_STORAGE_KEY,
   type MeetingManifest,
 } from "@/lib/meeting-coordination";
+import type { MeetingLibraryEntry } from "@/lib/meeting-library-types";
 import {
   ensureActiveMeetingSynced,
   racesMatchManifest,
@@ -288,6 +289,11 @@ function MountingYardModernApp() {
   const [meetingLabel, setMeetingLabel] = useState("");
   const [meetingDate, setMeetingDate] = useState("");
   const [meetingManifest, setMeetingManifest] = useState<MeetingManifest | null>(null);
+  const [meetingSelectorOpen, setMeetingSelectorOpen] = useState(false);
+  const [meetingLibrary, setMeetingLibrary] = useState<MeetingLibraryEntry[]>([]);
+  const [meetingLibraryLoading, setMeetingLibraryLoading] = useState(false);
+  const [meetingLibraryError, setMeetingLibraryError] = useState<string | null>(null);
+  const [meetingLoadingPath, setMeetingLoadingPath] = useState<string | null>(null);
   const importRef = useRef<HTMLInputElement>(null);
   const dataRef = useRef<Record<string, Assessment>>({});
   const keyRef = useRef<string>("");
@@ -719,6 +725,58 @@ function MountingYardModernApp() {
     }
   };
 
+  const refreshMeetingLibrary = async () => {
+    setMeetingLibraryLoading(true);
+    setMeetingLibraryError(null);
+    try {
+      const response = await fetch(`/api/meeting-library?refresh=${Date.now()}`, { cache: "no-store" });
+      const payload = (await response.json()) as {
+        ok?: boolean;
+        meetings?: MeetingLibraryEntry[];
+        error?: string;
+      };
+      if (!response.ok || !payload.ok || !Array.isArray(payload.meetings)) {
+        throw new Error(payload.error || "Meeting list is unavailable.");
+      }
+      setMeetingLibrary(payload.meetings);
+    } catch (error) {
+      setMeetingLibraryError(error instanceof Error ? error.message : "Meeting list is unavailable.");
+    } finally {
+      setMeetingLibraryLoading(false);
+    }
+  };
+
+  const openMeetingSelector = () => {
+    setMeetingSelectorOpen(true);
+    void refreshMeetingLibrary();
+  };
+
+  const loadLibraryMeeting = async (meeting: MeetingLibraryEntry) => {
+    setMeetingLoadingPath(meeting.relativePath);
+    setMeetingLibraryError(null);
+    try {
+      const response = await fetch(
+        `/api/meeting-library?path=${encodeURIComponent(meeting.relativePath)}&refresh=${Date.now()}`,
+        { cache: "no-store" },
+      );
+      if (!response.ok) throw new Error("That meeting could not be loaded.");
+      const text = await response.text();
+      const folderPath = meeting.relativePath.includes("/")
+        ? meeting.relativePath.slice(0, meeting.relativePath.lastIndexOf("/"))
+        : undefined;
+      await runMeetingImport(text, {
+        fileName: meeting.fileName,
+        importPath: meeting.relativePath,
+        meetingFolderPath: folderPath,
+      });
+      setMeetingSelectorOpen(false);
+    } catch (error) {
+      setMeetingLibraryError(error instanceof Error ? error.message : "That meeting could not be loaded.");
+    } finally {
+      setMeetingLoadingPath(null);
+    }
+  };
+
   const raceTabCols = Math.min(Math.max(races.length, 2), 8);
 
   return (
@@ -764,8 +822,93 @@ function MountingYardModernApp() {
           </div>
         </header>
 
+        <YardButton
+          className="w-full rounded-2xl text-lg"
+          onClick={openMeetingSelector}
+        >
+          Meetings
+        </YardButton>
+
         {importError && (
           <div className="rounded-3xl border border-red-200 bg-red-50 px-4 py-3 text-base text-red-900">{importError}</div>
+        )}
+
+        {meetingSelectorOpen && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/60 p-4"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="meeting-selector-title"
+            onMouseDown={(event) => {
+              if (event.target === event.currentTarget) setMeetingSelectorOpen(false);
+            }}
+          >
+            <section className="flex max-h-[85dvh] w-full max-w-2xl flex-col overflow-hidden rounded-3xl bg-white shadow-2xl">
+              <div className="flex items-center justify-between gap-3 border-b border-slate-200 p-5">
+                <div>
+                  <h2 id="meeting-selector-title" className="text-2xl font-bold">Select meeting</h2>
+                  <p className="mt-1 text-base text-slate-600">Choose a published meeting to load into Yard.</p>
+                </div>
+                <YardButton variant="outline" className="rounded-2xl" onClick={() => setMeetingSelectorOpen(false)}>
+                  Close
+                </YardButton>
+              </div>
+              <div className="flex items-center justify-between gap-3 border-b border-slate-200 px-5 py-3">
+                <span className="text-sm font-medium text-slate-600">
+                  {meetingLibraryLoading ? "Checking meetings…" : `${meetingLibrary.length} meetings available`}
+                </span>
+                <YardButton
+                  variant="outline"
+                  className="rounded-2xl"
+                  disabled={meetingLibraryLoading || meetingLoadingPath !== null}
+                  onClick={() => void refreshMeetingLibrary()}
+                >
+                  Refresh
+                </YardButton>
+              </div>
+              <div className="overflow-y-auto p-3">
+                {meetingLibraryError && (
+                  <div className="mb-3 rounded-2xl border border-red-200 bg-red-50 px-4 py-3 text-red-900">
+                    {meetingLibraryError}
+                  </div>
+                )}
+                {!meetingLibraryLoading && meetingLibrary.length === 0 && !meetingLibraryError && (
+                  <p className="p-4 text-center text-slate-600">No published meetings are available.</p>
+                )}
+                <div className="grid gap-2">
+                  {meetingLibrary.map((meeting) => {
+                    const current = meeting.meetingId === meetingManifest?.meetingId;
+                    const loading = meetingLoadingPath === meeting.relativePath;
+                    return (
+                      <button
+                        key={meeting.id}
+                        type="button"
+                        disabled={meetingLoadingPath !== null}
+                        className={cn(
+                          "min-h-[64px] rounded-2xl border px-4 py-3 text-left transition-colors",
+                          current
+                            ? "border-cyan-500 bg-cyan-50"
+                            : "border-slate-200 bg-white hover:bg-slate-50",
+                          meetingLoadingPath !== null && !loading && "opacity-50",
+                        )}
+                        onClick={() => void loadLibraryMeeting(meeting)}
+                      >
+                        <span className="flex items-center justify-between gap-3">
+                          <span>
+                            <span className="block text-lg font-semibold text-slate-900">{meeting.trackLabel}</span>
+                            <span className="block text-sm text-slate-600">{meeting.date}</span>
+                          </span>
+                          <span className="text-sm font-bold text-cyan-700">
+                            {loading ? "Loading…" : current ? "Current" : "Select"}
+                          </span>
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </section>
+          </div>
         )}
 
         {races.length > 1 &&
