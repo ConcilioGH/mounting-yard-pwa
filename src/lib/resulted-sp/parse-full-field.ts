@@ -63,7 +63,13 @@ function parseFullFieldFromTableRows(doc: Document, targetRaceNo?: string): Pars
 
   for (const table of tables) {
     const caption = table.querySelector("caption")?.textContent ?? "";
-    const headerMatch = raceHeaderRe.exec(caption);
+    const racingNswAnchor = table.querySelector<HTMLElement>("a.race-title-anchor[name^='Race']");
+    const tableRaceHeader = [
+      caption,
+      racingNswAnchor?.getAttribute("name") ?? "",
+      racingNswAnchor?.textContent ?? "",
+    ].join(" ");
+    const headerMatch = raceHeaderRe.exec(tableRaceHeader);
     if (headerMatch) currentRaceNo = normalizeRaceNo(headerMatch[1]!);
 
     // Racing NSW wraps each race table in #bobcontent{raceNo} and does not use captions.
