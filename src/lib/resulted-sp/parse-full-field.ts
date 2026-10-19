@@ -41,6 +41,17 @@ function resultStatusFromCell(raw: string): string {
   return "resulted";
 }
 
+function isSameResultRunner(
+  runner: ParsedFullFieldRunner,
+  finishPosition: number,
+  horseName: string,
+): boolean {
+  return (
+    runner.finishPosition === finishPosition &&
+    runner.horseName.trim().toLowerCase() === horseName.trim().toLowerCase()
+  );
+}
+
 function parseMarginFromCells(cells: string[]): string {
   for (const cell of cells) {
     const text = String(cell ?? "").trim();
@@ -127,7 +138,7 @@ function parseFullFieldFromTableRows(doc: Document, targetRaceNo?: string): Pars
 
       if (!byRace.has(raceNo)) byRace.set(raceNo, []);
       const bucket = byRace.get(raceNo)!;
-      const existing = bucket.find((r) => r.finishPosition === place);
+      const existing = bucket.find((r) => isSameResultRunner(r, place, horseName));
       const entry: ParsedFullFieldRunner = {
         finishPosition: place,
         horseName,
@@ -206,7 +217,7 @@ function parseFullFieldFromJson(html: string, targetRaceNo?: string): ParsedFull
 
     if (!byRace.has(raceNo)) byRace.set(raceNo, []);
     const bucket = byRace.get(raceNo)!;
-    if (!bucket.some((r) => r.finishPosition === finishPosition)) {
+    if (!bucket.some((r) => isSameResultRunner(r, finishPosition, horseName))) {
       bucket.push({
         finishPosition,
         horseName,
@@ -239,7 +250,7 @@ export function parseFullFieldResultsFromHtml(html: string, targetRaceNo?: strin
     if (!merged.has(raceNo)) merged.set(raceNo, []);
     const bucket = merged.get(raceNo)!;
     for (const runner of race.runners) {
-      if (!bucket.some((r) => r.finishPosition === runner.finishPosition)) {
+      if (!bucket.some((r) => isSameResultRunner(r, runner.finishPosition, runner.horseName))) {
         bucket.push(runner);
       }
     }
