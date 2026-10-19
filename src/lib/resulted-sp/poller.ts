@@ -116,9 +116,13 @@ function syncBiasFromImportedRace(
   const parsedRace: ParsedRaceResults = {
     raceNo: normalizeRaceNo(raceNo),
     results: runners
-      .filter((r) => typeof r.finishPosition === "number" && r.finishPosition >= 1 && r.finishPosition <= 4)
-      .map((r) => ({
-        finishPosition: r.finishPosition as 1 | 2 | 3 | 4,
+      .filter((r) => typeof r.finishPosition === "number" && r.finishPosition >= 1)
+      .sort((a, b) => Number(a.finishPosition) - Number(b.finishPosition))
+      .slice(0, 4)
+      .map((r, index) => ({
+        // Bias rows represent the first four horses home. With a dead heat the
+        // official positions may be 1,2,2,4, so map them to grid slots 1–4.
+        finishPosition: (index + 1) as 1 | 2 | 3 | 4,
         horseName: r.horse,
         sp: Number(r.officialSP),
       })),
