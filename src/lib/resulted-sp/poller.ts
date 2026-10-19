@@ -424,23 +424,25 @@ export function startResultedSpPoller(options: {
           return raceState?.status !== "failed";
         });
 
-    await Promise.all(
-      targets.map(async (raceNo) => {
-        if (inFlight.has(raceNo)) return;
-        inFlight.add(raceNo);
-        try {
-          await importResultedSpForRace({
-            meetingId: options.meetingId,
-            manifest: options.manifest,
-            races: options.races,
-            raceNo,
-          });
-        } finally {
-          inFlight.delete(raceNo);
-          notify();
-        }
-      }),
-    );
+    // Keep storage writes ordered. Each successful import reads and rewrites the
+    // shared Bias state; concurrent races can otherwise overwrite one another.
+    // Slow upstreams are bounded by the fetch proxy timeout, so ordered imports
+    // no longer allow one request to hang the remainder of the meeting forever.
+    for (const raceNo of targets) {
+      if (inFlight.has(raceNo)) continue;
+      inFlight.add(raceNo);
+      try {
+        await importResultedSpForRace({
+          meetingId: options.meetingId,
+          manifest: options.manifest,
+          races: options.races,
+          raceNo,
+        });
+      } finally {
+        inFlight.delete(raceNo);
+        notify();
+      }
+    }
     if (!force) ticking = false;
   };
 
