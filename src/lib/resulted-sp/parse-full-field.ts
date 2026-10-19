@@ -256,5 +256,7 @@ export function parseFullFieldResultsFromHtml(html: string, targetRaceNo?: strin
 export function isRaceOfficiallyResulted(parsed: ParsedFullFieldRace | undefined): boolean {
   if (!parsed || parsed.runners.length < 3) return false;
   const positions = new Set(parsed.runners.map((r) => r.finishPosition));
-  return positions.has(1) && positions.has(2) && positions.has(3);
+  // Dead heats can produce 1,2,2,4 or 1,1,3 rather than a literal 1,2,3.
+  // Three priced finishers including a winner confirms the published result.
+  return positions.has(1);
 }

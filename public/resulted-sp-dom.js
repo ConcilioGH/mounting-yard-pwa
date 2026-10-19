@@ -377,14 +377,10 @@
   function isRaceResulted(parsed) {
     if (!parsed || !parsed.runners || parsed.runners.length < 3) return false;
     var has1 = false;
-    var has2 = false;
-    var has3 = false;
     for (var i = 0; i < parsed.runners.length; i++) {
       if (parsed.runners[i].finishPosition === 1) has1 = true;
-      if (parsed.runners[i].finishPosition === 2) has2 = true;
-      if (parsed.runners[i].finishPosition === 3) has3 = true;
     }
-    return has1 && has2 && has3;
+    return has1;
   }
 
   function inferTabJurisdiction(manifest) {

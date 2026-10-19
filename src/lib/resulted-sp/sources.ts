@@ -98,7 +98,7 @@ export async function importRaceFromSources(options: {
             ? "meeting date or normalized track name did not match"
             : !parsed
               ? "race table not published yet"
-              : "fewer than 1st, 2nd and 3rd confirmed with SP",
+              : "fewer than three priced finishers (including a winner)",
         },
       );
     } catch (error) {
