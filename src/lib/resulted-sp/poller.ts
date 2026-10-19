@@ -424,21 +424,23 @@ export function startResultedSpPoller(options: {
           return raceState?.status !== "failed";
         });
 
-    for (const raceNo of targets) {
-      if (inFlight.has(raceNo)) continue;
-      inFlight.add(raceNo);
-      try {
-        await importResultedSpForRace({
-          meetingId: options.meetingId,
-          manifest: options.manifest,
-          races: options.races,
-          raceNo,
-        });
-      } finally {
-        inFlight.delete(raceNo);
-        notify();
-      }
-    }
+    await Promise.all(
+      targets.map(async (raceNo) => {
+        if (inFlight.has(raceNo)) return;
+        inFlight.add(raceNo);
+        try {
+          await importResultedSpForRace({
+            meetingId: options.meetingId,
+            manifest: options.manifest,
+            races: options.races,
+            raceNo,
+          });
+        } finally {
+          inFlight.delete(raceNo);
+          notify();
+        }
+      }),
+    );
     if (!force) ticking = false;
   };
 

@@ -24,6 +24,8 @@ const CORS_HEADERS = {
   "Access-Control-Allow-Headers": "Content-Type",
 };
 
+const UPSTREAM_TIMEOUT_MS = 12_000;
+
 /** Server-side fetch for official results HTML (Racenet, Racing NSW, TAB). */
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
@@ -40,6 +42,7 @@ export async function GET(request: Request) {
       res = await fetch(currentUrl, {
         method: "GET",
         redirect: "manual",
+        signal: AbortSignal.timeout(UPSTREAM_TIMEOUT_MS),
         headers: {
           Accept: "text/html,application/xhtml+xml",
           "User-Agent": "mounting-yard-pwa/1.0",
@@ -81,7 +84,12 @@ export async function GET(request: Request) {
       },
     });
   } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
+    const message =
+      error instanceof Error && error.name === "TimeoutError"
+        ? `Upstream results page timed out after ${UPSTREAM_TIMEOUT_MS / 1000} seconds.`
+        : error instanceof Error
+          ? error.message
+          : String(error);
     return Response.json({ error: message }, { status: 502, headers: CORS_HEADERS });
   }
 }
