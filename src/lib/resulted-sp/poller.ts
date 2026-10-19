@@ -12,7 +12,12 @@ import type { Race } from "@/lib/types";
 import { buildResultedSpCsv } from "@/lib/resulted-sp/export";
 import { toResultedSpRunners } from "@/lib/resulted-sp/match-runners";
 import { importRaceFromSources } from "@/lib/resulted-sp/sources";
-import { buildPrimaryTabResultsUrl, buildRacingNswResultsUrl } from "@/lib/resulted-sp/urls";
+import {
+  buildPrimaryTabResultsUrl,
+  buildRacingComResultsUrl,
+  buildRacingNswResultsUrl,
+  isVictorianMeeting,
+} from "@/lib/resulted-sp/urls";
 import {
   loadResultedSpStateForMeeting,
   saveResultedSpStateForMeeting,
@@ -24,6 +29,7 @@ import {
 } from "@/lib/resulted-sp/diagnostics";
 import {
   DEFAULT_RESULTED_SP_POLL_CONFIG,
+  RESULTED_SP_UPDATED_EVENT,
   type ResultedSpPollConfig,
   type ResultedSpRaceStatus,
   type ResultedSpMeetingState,
@@ -164,7 +170,9 @@ export async function importResultedSpForRace(options: {
   }
 
   const tabUrl = buildPrimaryTabResultsUrl(options.manifest);
-  const primaryResultsUrl = buildRacingNswResultsUrl(options.manifest) || tabUrl;
+  const primaryResultsUrl = isVictorianMeeting(options.manifest)
+    ? buildRacingComResultsUrl(options.manifest, raceNo) || tabUrl
+    : buildRacingNswResultsUrl(options.manifest) || tabUrl;
   state = {
     ...state,
     resultsUrl: primaryResultsUrl,
@@ -249,6 +257,14 @@ export async function importResultedSpForRace(options: {
     };
     saveResultedSpStateForMeeting(state);
     const biasReport = syncBiasFromImportedRace(meetingId, raceNo, runners, source);
+    // The first resulted-SP event fires when the result rows are saved, before
+    // Bias storage is updated. Notify once more after the SP copy so an open
+    // Bias screen reloads the populated cells rather than retaining blanks.
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(
+        new CustomEvent(RESULTED_SP_UPDATED_EVENT, { detail: { meetingId } }),
+      );
+    }
     await exportResultedSpCsv(state, options.manifest);
     logResultedSpImportAttempt({
       attemptId: createResultedSpAttemptId(),
@@ -389,9 +405,9 @@ export function startResultedSpPoller(options: {
     }
   };
 
-  const pollTick = async (onlyRaceNo?: string) => {
-    if (stopped || ticking) return;
-    ticking = true;
+  const pollTick = async (onlyRaceNo?: string, force = false) => {
+    if (stopped || (ticking && !force)) return;
+    if (!force) ticking = true;
     const now = new Date();
     refreshLateStatuses(now);
     notify();
@@ -399,7 +415,14 @@ export function startResultedSpPoller(options: {
     const sched = schedule();
     const targets = onlyRaceNo
       ? [normalizeRaceNo(onlyRaceNo)]
-      : sched.map((r) => r.raceNo).filter((raceNo) => shouldPollRace(raceNo, now));
+      : sched.map((entry) => entry.raceNo).filter((raceNo) => {
+          if (!force) return shouldPollRace(raceNo, now);
+          const entry = sched.find((candidate) => candidate.raceNo === raceNo);
+          const raceState = loadResultedSpStateForMeeting(options.meetingId).races[raceNo];
+          if (!entry || now.getTime() < entry.startTime.getTime()) return false;
+          if (raceState?.status === "imported" && raceState.runners.length > 0) return false;
+          return raceState?.status !== "failed";
+        });
 
     for (const raceNo of targets) {
       if (inFlight.has(raceNo)) continue;
@@ -416,7 +439,7 @@ export function startResultedSpPoller(options: {
         notify();
       }
     }
-    ticking = false;
+    if (!force) ticking = false;
   };
 
   const uiTimer = window.setInterval(() => {
@@ -437,7 +460,7 @@ export function startResultedSpPoller(options: {
       window.clearInterval(pollTimer);
     },
     checkNow: async (raceNo) => {
-      await pollTick(raceNo);
+      await pollTick(raceNo, true);
     },
     importRaceNow: (raceNo) =>
       importResultedSpForRace({

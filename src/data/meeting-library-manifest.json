@@ -1,6 +1,523 @@
 {
-  "generatedAt": "2026-07-02T03:52:20.464Z",
+  "generatedAt": "2026-10-17T04:45:46.916Z",
   "meetings": [
+    {
+      "id": "meetings/2026-10-17-caulfield/caulfield_2026-10-17_master.csv",
+      "label": "2026-10-17 · Caulfield",
+      "date": "2026-10-17",
+      "track": "caulfield",
+      "trackLabel": "Caulfield",
+      "relativePath": "meetings/2026-10-17-caulfield/caulfield_2026-10-17_master.csv",
+      "fileName": "caulfield_2026-10-17_master.csv",
+      "modifiedAt": "2026-10-17T02:08:28.308Z",
+      "meetingId": "2026-10-17-caulfield"
+    },
+    {
+      "id": "meetings/2026-10-17-randwick/randwick_2026-10-17_master.csv",
+      "label": "2026-10-17 · Randwick",
+      "date": "2026-10-17",
+      "track": "randwick",
+      "trackLabel": "Randwick",
+      "relativePath": "meetings/2026-10-17-randwick/randwick_2026-10-17_master.csv",
+      "fileName": "randwick_2026-10-17_master.csv",
+      "modifiedAt": "2026-10-16T21:00:20.892Z",
+      "meetingId": "2026-10-17-randwick"
+    },
+    {
+      "id": "meetings/2026-10-15-hawkesbury/hawkesbury_2026-10-15_master.csv",
+      "label": "2026-10-15 · Hawkesbury",
+      "date": "2026-10-15",
+      "track": "hawkesbury",
+      "trackLabel": "Hawkesbury",
+      "relativePath": "meetings/2026-10-15-hawkesbury/hawkesbury_2026-10-15_master.csv",
+      "fileName": "hawkesbury_2026-10-15_master.csv",
+      "modifiedAt": "2026-10-14T23:01:25.892Z",
+      "meetingId": "2026-10-15-hawkesbury"
+    },
+    {
+      "id": "meetings/2026-10-14-rosehill-gardens/rosehill_gardens_2026-10-14_master.csv",
+      "label": "2026-10-14 · Rosehill Gardens",
+      "date": "2026-10-14",
+      "track": "rosehill-gardens",
+      "trackLabel": "Rosehill Gardens",
+      "relativePath": "meetings/2026-10-14-rosehill-gardens/rosehill_gardens_2026-10-14_master.csv",
+      "fileName": "rosehill_gardens_2026-10-14_master.csv",
+      "modifiedAt": "2026-10-14T02:30:24.537Z",
+      "meetingId": "2026-10-14-rosehill-gardens"
+    },
+    {
+      "id": "meetings/2026-10-10-rosehill-gardens/rosehill_gardens_2026-10-10_master.csv",
+      "label": "2026-10-10 · Rosehill Gardens",
+      "date": "2026-10-10",
+      "track": "rosehill-gardens",
+      "trackLabel": "Rosehill Gardens",
+      "relativePath": "meetings/2026-10-10-rosehill-gardens/rosehill_gardens_2026-10-10_master.csv",
+      "fileName": "rosehill_gardens_2026-10-10_master.csv",
+      "modifiedAt": "2026-10-09T23:10:41.952Z",
+      "meetingId": "2026-10-10-rosehill-gardens"
+    },
+    {
+      "id": "meetings/2026-10-08-hawkesbury/hawkesbury_2026-10-08_master.csv",
+      "label": "2026-10-08 · Hawkesbury",
+      "date": "2026-10-08",
+      "track": "hawkesbury",
+      "trackLabel": "Hawkesbury",
+      "relativePath": "meetings/2026-10-08-hawkesbury/hawkesbury_2026-10-08_master.csv",
+      "fileName": "hawkesbury_2026-10-08_master.csv",
+      "modifiedAt": "2026-10-07T21:11:58.973Z",
+      "meetingId": "2026-10-08-hawkesbury"
+    },
+    {
+      "id": "meetings/2026-10-07-kensington/kensington_2026-10-07_master.csv",
+      "label": "2026-10-07 · Kensington",
+      "date": "2026-10-07",
+      "track": "kensington",
+      "trackLabel": "Kensington",
+      "relativePath": "meetings/2026-10-07-kensington/kensington_2026-10-07_master.csv",
+      "fileName": "kensington_2026-10-07_master.csv",
+      "modifiedAt": "2026-10-07T03:44:09.253Z",
+      "meetingId": "2026-10-07-kensington"
+    },
+    {
+      "id": "meetings/2026-10-06-newcastle/newcastle_2026-10-06_master.csv",
+      "label": "2026-10-06 · Newcastle",
+      "date": "2026-10-06",
+      "track": "newcastle",
+      "trackLabel": "Newcastle",
+      "relativePath": "meetings/2026-10-06-newcastle/newcastle_2026-10-06_master.csv",
+      "fileName": "newcastle_2026-10-06_master.csv",
+      "modifiedAt": "2026-10-05T21:53:17.177Z",
+      "meetingId": "2026-10-06-newcastle"
+    },
+    {
+      "id": "meetings/2026-10-05-warwick-farm/warwick_farm_2026-10-05_master.csv",
+      "label": "2026-10-05 · Warwick Farm",
+      "date": "2026-10-05",
+      "track": "warwick-farm",
+      "trackLabel": "Warwick Farm",
+      "relativePath": "meetings/2026-10-05-warwick-farm/warwick_farm_2026-10-05_master.csv",
+      "fileName": "warwick_farm_2026-10-05_master.csv",
+      "modifiedAt": "2026-10-04T23:21:28.508Z",
+      "meetingId": "2026-10-05-warwick-farm"
+    },
+    {
+      "id": "meetings/2026-10-03-randwick/randwick_2026-10-03_master.csv",
+      "label": "2026-10-03 · Randwick",
+      "date": "2026-10-03",
+      "track": "randwick",
+      "trackLabel": "Randwick",
+      "relativePath": "meetings/2026-10-03-randwick/randwick_2026-10-03_master.csv",
+      "fileName": "randwick_2026-10-03_master.csv",
+      "modifiedAt": "2026-10-02T22:00:17.045Z",
+      "meetingId": "2026-10-03-randwick"
+    },
+    {
+      "id": "meetings/2026-10-01-illawarra-grange/illawarra_grange_2026-10-01_master.csv",
+      "label": "2026-10-01 · Illawarra Grange",
+      "date": "2026-10-01",
+      "track": "illawarra-grange",
+      "trackLabel": "Illawarra Grange",
+      "relativePath": "meetings/2026-10-01-illawarra-grange/illawarra_grange_2026-10-01_master.csv",
+      "fileName": "illawarra_grange_2026-10-01_master.csv",
+      "modifiedAt": "2026-09-30T23:15:59.142Z",
+      "meetingId": "2026-10-01-illawarra-grange"
+    },
+    {
+      "id": "meetings/2026-09-30-rosehill-gardens/rosehill_gardens_2026-09-30_master.csv",
+      "label": "2026-09-30 · Rosehill Gardens",
+      "date": "2026-09-30",
+      "track": "rosehill-gardens",
+      "trackLabel": "Rosehill Gardens",
+      "relativePath": "meetings/2026-09-30-rosehill-gardens/rosehill_gardens_2026-09-30_master.csv",
+      "fileName": "rosehill_gardens_2026-09-30_master.csv",
+      "modifiedAt": "2026-09-30T02:20:56.107Z",
+      "meetingId": "2026-09-30-rosehill-gardens"
+    },
+    {
+      "id": "meetings/2026-09-26-rosehill-gardens/rosehill_gardens_2026-09-26_master.csv",
+      "label": "2026-09-26 · Rosehill Gardens",
+      "date": "2026-09-26",
+      "track": "rosehill-gardens",
+      "trackLabel": "Rosehill Gardens",
+      "relativePath": "meetings/2026-09-26-rosehill-gardens/rosehill_gardens_2026-09-26_master.csv",
+      "fileName": "rosehill_gardens_2026-09-26_master.csv",
+      "modifiedAt": "2026-09-25T10:00:18.256Z",
+      "meetingId": "2026-09-26-rosehill-gardens"
+    },
+    {
+      "id": "meetings/2026-09-24-hawkesbury/hawkesbury_2026-09-24_master.csv",
+      "label": "2026-09-24 · Hawkesbury",
+      "date": "2026-09-24",
+      "track": "hawkesbury",
+      "trackLabel": "Hawkesbury",
+      "relativePath": "meetings/2026-09-24-hawkesbury/hawkesbury_2026-09-24_master.csv",
+      "fileName": "hawkesbury_2026-09-24_master.csv",
+      "modifiedAt": "2026-09-23T22:14:12.709Z",
+      "meetingId": "2026-09-24-hawkesbury"
+    },
+    {
+      "id": "meetings/2026-09-23-warwick-farm/warwick_farm_2026-09-23_master.csv",
+      "label": "2026-09-23 · Warwick Farm",
+      "date": "2026-09-23",
+      "track": "warwick-farm",
+      "trackLabel": "Warwick Farm",
+      "relativePath": "meetings/2026-09-23-warwick-farm/warwick_farm_2026-09-23_master.csv",
+      "fileName": "warwick_farm_2026-09-23_master.csv",
+      "modifiedAt": "2026-09-22T22:42:33.534Z",
+      "meetingId": "2026-09-23-warwick-farm"
+    },
+    {
+      "id": "meetings/2026-09-21-narromine/narromine_2026-09-21_master.csv",
+      "label": "2026-09-21 · Narromine",
+      "date": "2026-09-21",
+      "track": "narromine",
+      "trackLabel": "Narromine",
+      "relativePath": "meetings/2026-09-21-narromine/narromine_2026-09-21_master.csv",
+      "fileName": "narromine_2026-09-21_master.csv",
+      "modifiedAt": "2026-09-21T01:05:40.441Z",
+      "meetingId": "2026-09-21-narromine"
+    },
+    {
+      "id": "meetings/2026-09-21-grafton/grafton_2026-09-21_master.csv",
+      "label": "2026-09-21 · Grafton",
+      "date": "2026-09-21",
+      "track": "grafton",
+      "trackLabel": "Grafton",
+      "relativePath": "meetings/2026-09-21-grafton/grafton_2026-09-21_master.csv",
+      "fileName": "grafton_2026-09-21_master.csv",
+      "modifiedAt": "2026-09-20T23:11:47.676Z",
+      "meetingId": "2026-09-21-grafton"
+    },
+    {
+      "id": "meetings/2026-09-19-randwick/randwick_2026-09-19_master.csv",
+      "label": "2026-09-19 · Randwick",
+      "date": "2026-09-19",
+      "track": "randwick",
+      "trackLabel": "Randwick",
+      "relativePath": "meetings/2026-09-19-randwick/randwick_2026-09-19_master.csv",
+      "fileName": "randwick_2026-09-19_master.csv",
+      "modifiedAt": "2026-09-19T01:38:22.477Z",
+      "meetingId": "2026-09-19-randwick"
+    },
+    {
+      "id": "meetings/2026-09-18-newcastle/newcastle_2026-09-18_master.csv",
+      "label": "2026-09-18 · Newcastle",
+      "date": "2026-09-18",
+      "track": "newcastle",
+      "trackLabel": "Newcastle",
+      "relativePath": "meetings/2026-09-18-newcastle/newcastle_2026-09-18_master.csv",
+      "fileName": "newcastle_2026-09-18_master.csv",
+      "modifiedAt": "2026-09-18T01:20:15.134Z",
+      "meetingId": "2026-09-18-newcastle"
+    },
+    {
+      "id": "meetings/2026-09-16-canterbury/canterbury_2026-09-16_master.csv",
+      "label": "2026-09-16 · Canterbury",
+      "date": "2026-09-16",
+      "track": "canterbury",
+      "trackLabel": "Canterbury",
+      "relativePath": "meetings/2026-09-16-canterbury/canterbury_2026-09-16_master.csv",
+      "fileName": "canterbury_2026-09-16_master.csv",
+      "modifiedAt": "2026-09-15T22:00:44.213Z",
+      "meetingId": "2026-09-16-canterbury"
+    },
+    {
+      "id": "meetings/2026-09-12-rosehill-gardens/rosehill_gardens_2026-09-12_master.csv",
+      "label": "2026-09-12 · Rosehill Gardens",
+      "date": "2026-09-12",
+      "track": "rosehill-gardens",
+      "trackLabel": "Rosehill Gardens",
+      "relativePath": "meetings/2026-09-12-rosehill-gardens/rosehill_gardens_2026-09-12_master.csv",
+      "fileName": "rosehill_gardens_2026-09-12_master.csv",
+      "modifiedAt": "2026-09-12T04:25:44.051Z",
+      "meetingId": "2026-09-12-rosehill-gardens"
+    },
+    {
+      "id": "meetings/2026-09-10-hawkesbury/hawkesbury_2026-09-10_master.csv",
+      "label": "2026-09-10 · Hawkesbury",
+      "date": "2026-09-10",
+      "track": "hawkesbury",
+      "trackLabel": "Hawkesbury",
+      "relativePath": "meetings/2026-09-10-hawkesbury/hawkesbury_2026-09-10_master.csv",
+      "fileName": "hawkesbury_2026-09-10_master.csv",
+      "modifiedAt": "2026-09-09T22:00:17.951Z",
+      "meetingId": "2026-09-10-hawkesbury"
+    },
+    {
+      "id": "meetings/2026-09-09-kensington/kensington_2026-09-09_master.csv",
+      "label": "2026-09-09 · Kensington",
+      "date": "2026-09-09",
+      "track": "kensington",
+      "trackLabel": "Kensington",
+      "relativePath": "meetings/2026-09-09-kensington/kensington_2026-09-09_master.csv",
+      "fileName": "kensington_2026-09-09_master.csv",
+      "modifiedAt": "2026-09-08T22:00:27.128Z",
+      "meetingId": "2026-09-09-kensington"
+    },
+    {
+      "id": "meetings/2026-09-05-randwick/randwick_2026-09-05_master.csv",
+      "label": "2026-09-05 · Randwick",
+      "date": "2026-09-05",
+      "track": "randwick",
+      "trackLabel": "Randwick",
+      "relativePath": "meetings/2026-09-05-randwick/randwick_2026-09-05_master.csv",
+      "fileName": "randwick_2026-09-05_master.csv",
+      "modifiedAt": "2026-09-05T01:46:46.901Z",
+      "meetingId": "2026-09-05-randwick"
+    },
+    {
+      "id": "meetings/2026-09-04-wyong/wyong_2026-09-04_master.csv",
+      "label": "2026-09-04 · Wyong",
+      "date": "2026-09-04",
+      "track": "wyong",
+      "trackLabel": "Wyong",
+      "relativePath": "meetings/2026-09-04-wyong/wyong_2026-09-04_master.csv",
+      "fileName": "wyong_2026-09-04_master.csv",
+      "modifiedAt": "2026-09-04T03:22:32.391Z",
+      "meetingId": "2026-09-04-wyong"
+    },
+    {
+      "id": "meetings/2026-09-02-warwick-farm/warwick_farm_2026-09-02_master.csv",
+      "label": "2026-09-02 · Warwick Farm",
+      "date": "2026-09-02",
+      "track": "warwick-farm",
+      "trackLabel": "Warwick Farm",
+      "relativePath": "meetings/2026-09-02-warwick-farm/warwick_farm_2026-09-02_master.csv",
+      "fileName": "warwick_farm_2026-09-02_master.csv",
+      "modifiedAt": "2026-09-02T02:32:05.045Z",
+      "meetingId": "2026-09-02-warwick-farm"
+    },
+    {
+      "id": "meetings/2026-08-29-rosehill-gardens/rosehill_gardens_2026-08-29_master.csv",
+      "label": "2026-08-29 · Rosehill Gardens",
+      "date": "2026-08-29",
+      "track": "rosehill-gardens",
+      "trackLabel": "Rosehill Gardens",
+      "relativePath": "meetings/2026-08-29-rosehill-gardens/rosehill_gardens_2026-08-29_master.csv",
+      "fileName": "rosehill_gardens_2026-08-29_master.csv",
+      "modifiedAt": "2026-08-29T02:26:36.778Z",
+      "meetingId": "2026-08-29-rosehill-gardens"
+    },
+    {
+      "id": "meetings/2026-08-26-canterbury/canterbury_2026-08-26_master.csv",
+      "label": "2026-08-26 · Canterbury",
+      "date": "2026-08-26",
+      "track": "canterbury",
+      "trackLabel": "Canterbury",
+      "relativePath": "meetings/2026-08-26-canterbury/canterbury_2026-08-26_master.csv",
+      "fileName": "canterbury_2026-08-26_master.csv",
+      "modifiedAt": "2026-08-25T23:25:50.837Z",
+      "meetingId": "2026-08-26-canterbury"
+    },
+    {
+      "id": "meetings/2026-08-22-randwick/randwick_2026-08-22_master.csv",
+      "label": "2026-08-22 · Randwick",
+      "date": "2026-08-22",
+      "track": "randwick",
+      "trackLabel": "Randwick",
+      "relativePath": "meetings/2026-08-22-randwick/randwick_2026-08-22_master.csv",
+      "fileName": "randwick_2026-08-22_master.csv",
+      "modifiedAt": "2026-08-21T22:11:09.147Z",
+      "meetingId": "2026-08-22-randwick"
+    },
+    {
+      "id": "meetings/2026-08-20-hawkesbury/hawkesbury_2026-08-20_master.csv",
+      "label": "2026-08-20 · Hawkesbury",
+      "date": "2026-08-20",
+      "track": "hawkesbury",
+      "trackLabel": "Hawkesbury",
+      "relativePath": "meetings/2026-08-20-hawkesbury/hawkesbury_2026-08-20_master.csv",
+      "fileName": "hawkesbury_2026-08-20_master.csv",
+      "modifiedAt": "2026-08-19T22:00:21.232Z",
+      "meetingId": "2026-08-20-hawkesbury"
+    },
+    {
+      "id": "meetings/2026-08-19-warwick-farm/warwick_farm_2026-08-19_master.csv",
+      "label": "2026-08-19 · Warwick Farm",
+      "date": "2026-08-19",
+      "track": "warwick-farm",
+      "trackLabel": "Warwick Farm",
+      "relativePath": "meetings/2026-08-19-warwick-farm/warwick_farm_2026-08-19_master.csv",
+      "fileName": "warwick_farm_2026-08-19_master.csv",
+      "modifiedAt": "2026-08-19T01:37:22.149Z",
+      "meetingId": "2026-08-19-warwick-farm"
+    },
+    {
+      "id": "meetings/2026-08-15-rosehill-gardens/rosehill_gardens_2026-08-15_master.csv",
+      "label": "2026-08-15 · Rosehill Gardens",
+      "date": "2026-08-15",
+      "track": "rosehill-gardens",
+      "trackLabel": "Rosehill Gardens",
+      "relativePath": "meetings/2026-08-15-rosehill-gardens/rosehill_gardens_2026-08-15_master.csv",
+      "fileName": "rosehill_gardens_2026-08-15_master.csv",
+      "modifiedAt": "2026-08-15T00:29:26.281Z",
+      "meetingId": "2026-08-15-rosehill-gardens"
+    },
+    {
+      "id": "meetings/2026-08-12-canterbury/canterbury_2026-08-12_master.csv",
+      "label": "2026-08-12 · Canterbury",
+      "date": "2026-08-12",
+      "track": "canterbury",
+      "trackLabel": "Canterbury",
+      "relativePath": "meetings/2026-08-12-canterbury/canterbury_2026-08-12_master.csv",
+      "fileName": "canterbury_2026-08-12_master.csv",
+      "modifiedAt": "2026-08-12T02:53:58.862Z",
+      "meetingId": "2026-08-12-canterbury"
+    },
+    {
+      "id": "meetings/2026-08-11-hawkesbury/hawkesbury_2026-08-11_master.csv",
+      "label": "2026-08-11 · Hawkesbury",
+      "date": "2026-08-11",
+      "track": "hawkesbury",
+      "trackLabel": "Hawkesbury",
+      "relativePath": "meetings/2026-08-11-hawkesbury/hawkesbury_2026-08-11_master.csv",
+      "fileName": "hawkesbury_2026-08-11_master.csv",
+      "modifiedAt": "2026-08-11T03:18:26.623Z",
+      "meetingId": "2026-08-11-hawkesbury"
+    },
+    {
+      "id": "meetings/2026-08-08-randwick/randwick_2026-08-08_master.csv",
+      "label": "2026-08-08 · Randwick",
+      "date": "2026-08-08",
+      "track": "randwick",
+      "trackLabel": "Randwick",
+      "relativePath": "meetings/2026-08-08-randwick/randwick_2026-08-08_master.csv",
+      "fileName": "randwick_2026-08-08_master.csv",
+      "modifiedAt": "2026-08-08T01:40:10.541Z",
+      "meetingId": "2026-08-08-randwick"
+    },
+    {
+      "id": "meetings/2026-08-01-rosehill-gardens/rosehill_gardens_2026-08-01_master.csv",
+      "label": "2026-08-01 · Rosehill Gardens",
+      "date": "2026-08-01",
+      "track": "rosehill-gardens",
+      "trackLabel": "Rosehill Gardens",
+      "relativePath": "meetings/2026-08-01-rosehill-gardens/rosehill_gardens_2026-08-01_master.csv",
+      "fileName": "rosehill_gardens_2026-08-01_master.csv",
+      "modifiedAt": "2026-08-04T11:36:15.216Z",
+      "meetingId": "2026-08-01-rosehill-gardens"
+    },
+    {
+      "id": "meetings/2026-07-30-illawarra-grange/illawarra_grange_2026-07-30_master.csv",
+      "label": "2026-07-30 · Illawarra Grange",
+      "date": "2026-07-30",
+      "track": "illawarra-grange",
+      "trackLabel": "Illawarra Grange",
+      "relativePath": "meetings/2026-07-30-illawarra-grange/illawarra_grange_2026-07-30_master.csv",
+      "fileName": "illawarra_grange_2026-07-30_master.csv",
+      "modifiedAt": "2026-07-29T22:55:57.298Z",
+      "meetingId": "2026-07-30-illawarra-grange"
+    },
+    {
+      "id": "meetings/2026-07-29-kensington/kensington_2026-07-29_master.csv",
+      "label": "2026-07-29 · Kensington",
+      "date": "2026-07-29",
+      "track": "kensington",
+      "trackLabel": "Kensington",
+      "relativePath": "meetings/2026-07-29-kensington/kensington_2026-07-29_master.csv",
+      "fileName": "kensington_2026-07-29_master.csv",
+      "modifiedAt": "2026-07-28T22:32:28.176Z",
+      "meetingId": "2026-07-29-kensington"
+    },
+    {
+      "id": "meetings/2026-07-28-bathurst/bathurst_2026-07-28_master.csv",
+      "label": "2026-07-28 · Bathurst",
+      "date": "2026-07-28",
+      "track": "bathurst",
+      "trackLabel": "Bathurst",
+      "relativePath": "meetings/2026-07-28-bathurst/bathurst_2026-07-28_master.csv",
+      "fileName": "bathurst_2026-07-28_master.csv",
+      "modifiedAt": "2026-07-28T02:10:15.688Z",
+      "meetingId": "2026-07-28-bathurst"
+    },
+    {
+      "id": "meetings/2026-07-25-randwick/randwick_2026-07-25_master.csv",
+      "label": "2026-07-25 · Randwick",
+      "date": "2026-07-25",
+      "track": "randwick",
+      "trackLabel": "Randwick",
+      "relativePath": "meetings/2026-07-25-randwick/randwick_2026-07-25_master.csv",
+      "fileName": "randwick_2026-07-25_master.csv",
+      "modifiedAt": "2026-07-24T22:19:38.600Z",
+      "meetingId": "2026-07-25-randwick"
+    },
+    {
+      "id": "meetings/2026-07-22-canterbury/canterbury_2026-07-22_master.csv",
+      "label": "2026-07-22 · Canterbury",
+      "date": "2026-07-22",
+      "track": "canterbury",
+      "trackLabel": "Canterbury",
+      "relativePath": "meetings/2026-07-22-canterbury/canterbury_2026-07-22_master.csv",
+      "fileName": "canterbury_2026-07-22_master.csv",
+      "modifiedAt": "2026-07-21T23:38:38.738Z",
+      "meetingId": "2026-07-22-canterbury"
+    },
+    {
+      "id": "meetings/2026-07-18-rosehill-gardens/rosehill_gardens_2026-07-18_master.csv",
+      "label": "2026-07-18 · Rosehill Gardens",
+      "date": "2026-07-18",
+      "track": "rosehill-gardens",
+      "trackLabel": "Rosehill Gardens",
+      "relativePath": "meetings/2026-07-18-rosehill-gardens/rosehill_gardens_2026-07-18_master.csv",
+      "fileName": "rosehill_gardens_2026-07-18_master.csv",
+      "modifiedAt": "2026-07-18T00:51:10.349Z",
+      "meetingId": "2026-07-18-rosehill-gardens"
+    },
+    {
+      "id": "meetings/2026-07-16-kembla-grange/kembla_grange_2026-07-16_master.csv",
+      "label": "2026-07-16 · Kembla Grange",
+      "date": "2026-07-16",
+      "track": "kembla-grange",
+      "trackLabel": "Kembla Grange",
+      "relativePath": "meetings/2026-07-16-kembla-grange/kembla_grange_2026-07-16_master.csv",
+      "fileName": "kembla_grange_2026-07-16_master.csv",
+      "modifiedAt": "2026-07-16T02:18:47.464Z",
+      "meetingId": "2026-07-16-kembla-grange"
+    },
+    {
+      "id": "meetings/2026-07-15-warwick-farm/warwick_farm_2026-07-15_master.csv",
+      "label": "2026-07-15 · Warwick Farm",
+      "date": "2026-07-15",
+      "track": "warwick-farm",
+      "trackLabel": "Warwick Farm",
+      "relativePath": "meetings/2026-07-15-warwick-farm/warwick_farm_2026-07-15_master.csv",
+      "fileName": "warwick_farm_2026-07-15_master.csv",
+      "modifiedAt": "2026-07-15T00:59:29.385Z",
+      "meetingId": "2026-07-15-warwick-farm"
+    },
+    {
+      "id": "meetings/2026-07-11-randwick/randwick_2026-07-11_master.csv",
+      "label": "2026-07-11 · Randwick",
+      "date": "2026-07-11",
+      "track": "randwick",
+      "trackLabel": "Randwick",
+      "relativePath": "meetings/2026-07-11-randwick/randwick_2026-07-11_master.csv",
+      "fileName": "randwick_2026-07-11_master.csv",
+      "modifiedAt": "2026-07-10T23:23:02.627Z",
+      "meetingId": "2026-07-11-randwick"
+    },
+    {
+      "id": "meetings/2026-07-09-gosford/gosford_2026-07-09_master.csv",
+      "label": "2026-07-09 · Gosford",
+      "date": "2026-07-09",
+      "track": "gosford",
+      "trackLabel": "Gosford",
+      "relativePath": "meetings/2026-07-09-gosford/gosford_2026-07-09_master.csv",
+      "fileName": "gosford_2026-07-09_master.csv",
+      "modifiedAt": "2026-07-09T02:02:55.416Z",
+      "meetingId": "2026-07-09-gosford"
+    },
+    {
+      "id": "meetings/2026-07-04-rosehill/rosehill_2026-07-04_master.csv",
+      "label": "2026-07-04 · Rosehill",
+      "date": "2026-07-04",
+      "track": "rosehill",
+      "trackLabel": "Rosehill",
+      "relativePath": "meetings/2026-07-04-rosehill/rosehill_2026-07-04_master.csv",
+      "fileName": "rosehill_2026-07-04_master.csv",
+      "modifiedAt": "2026-07-04T01:27:06.630Z",
+      "meetingId": "2026-07-04-rosehill"
+    },
     {
       "id": "meetings/2026-07-02-hawkesbury/hawkesbury_2026-07-02_master.csv",
       "label": "2026-07-02 · Hawkesbury",
@@ -390,7 +907,62 @@
       "meetings/2026-06-27-rosehill",
       "meetings/2026-06-30-taree",
       "meetings/2026-07-01-kensington",
-      "meetings/2026-07-02-hawkesbury"
+      "meetings/2026-07-02-hawkesbury",
+      "meetings/2026-07-04-rosehill",
+      "meetings/2026-07-09-gosford",
+      "meetings/2026-07-11-randwick",
+      "meetings/2026-07-15-warwick-farm",
+      "meetings/2026-07-16-kembla-grange",
+      "meetings/2026-07-18-rosehill-gardens",
+      "meetings/2026-07-22-canterbury",
+      "meetings/2026-07-23-wyong",
+      "meetings/2026-07-25-randwick",
+      "meetings/2026-07-28-bathurst",
+      "meetings/2026-07-29-kensington",
+      "meetings/2026-07-30-illawarra-grange",
+      "meetings/2026-07-30-kembla-grange",
+      "meetings/2026-07-6-kembla-grange",
+      "meetings/2026-08-01-rosehill-gardens",
+      "meetings/2026-08-05-canterbury",
+      "meetings/2026-08-06-gosford",
+      "meetings/2026-08-08-randwick",
+      "meetings/2026-08-11-hawkesbury",
+      "meetings/2026-08-12-canterbury",
+      "meetings/2026-08-13-newcastle",
+      "meetings/2026-08-15-rosehill-gardens",
+      "meetings/2026-08-19-warwick-farm",
+      "meetings/2026-08-20-hawkesbury",
+      "meetings/2026-08-22-randwick",
+      "meetings/2026-08-26-canterbury",
+      "meetings/2026-08-29-rosehill-gardens",
+      "meetings/2026-09-02-warwick-farm",
+      "meetings/2026-09-04-wyong",
+      "meetings/2026-09-05-randwick",
+      "meetings/2026-09-09-kensington",
+      "meetings/2026-09-10-hawkesbury",
+      "meetings/2026-09-12-rosehill-gardens",
+      "meetings/2026-09-16-canterbury",
+      "meetings/2026-09-17-illawarra-grange",
+      "meetings/2026-09-18-newcastle",
+      "meetings/2026-09-19-randwick",
+      "meetings/2026-09-21-grafton",
+      "meetings/2026-09-21-narromine",
+      "meetings/2026-09-23-warwick-farm",
+      "meetings/2026-09-24-hawkesbury",
+      "meetings/2026-09-26-rosehill-gardens",
+      "meetings/2026-09-30-rosehill-gardens",
+      "meetings/2026-10-01-illawarra-grange",
+      "meetings/2026-10-03-randwick",
+      "meetings/2026-10-05-warwick-farm",
+      "meetings/2026-10-06-newcastle",
+      "meetings/2026-10-07-kensington",
+      "meetings/2026-10-08-hawkesbury",
+      "meetings/2026-10-10-rosehill-gardens",
+      "meetings/2026-10-14-rosehill-gardens",
+      "meetings/2026-10-15-hawkesbury",
+      "meetings/2026-10-17-caulfield",
+      "meetings/2026-10-17-randwick",
+      "meetings/logs"
     ],
     "folderReports": [
       {
@@ -887,6 +1459,815 @@
         "includedInLibrary": true,
         "exclusionReason": null,
         "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-07-04-rosehill",
+        "folderName": "2026-07-04-rosehill",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "rosehill_2026-07-04_master.csv"
+        ],
+        "parsedDate": "2026-07-04",
+        "parsedTrack": "rosehill",
+        "meetingId": "2026-07-04-rosehill",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-07-09-gosford",
+        "folderName": "2026-07-09-gosford",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "gosford_2026-07-09_master.csv"
+        ],
+        "parsedDate": "2026-07-09",
+        "parsedTrack": "gosford",
+        "meetingId": "2026-07-09-gosford",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-07-11-randwick",
+        "folderName": "2026-07-11-randwick",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "randwick_2026-07-11_master.csv"
+        ],
+        "parsedDate": "2026-07-11",
+        "parsedTrack": "randwick",
+        "meetingId": "2026-07-11-randwick",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-07-15-warwick-farm",
+        "folderName": "2026-07-15-warwick-farm",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "warwick_farm_2026-07-15_master.csv"
+        ],
+        "parsedDate": "2026-07-15",
+        "parsedTrack": "warwick-farm",
+        "meetingId": "2026-07-15-warwick-farm",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-07-16-kembla-grange",
+        "folderName": "2026-07-16-kembla-grange",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "kembla_grange_2026-07-16_master.csv"
+        ],
+        "parsedDate": "2026-07-16",
+        "parsedTrack": "kembla-grange",
+        "meetingId": "2026-07-16-kembla-grange",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-07-18-rosehill-gardens",
+        "folderName": "2026-07-18-rosehill-gardens",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "rosehill_gardens_2026-07-18_master.csv"
+        ],
+        "parsedDate": "2026-07-18",
+        "parsedTrack": "rosehill-gardens",
+        "meetingId": "2026-07-18-rosehill-gardens",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-07-22-canterbury",
+        "folderName": "2026-07-22-canterbury",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "canterbury_2026-07-22_master.csv"
+        ],
+        "parsedDate": "2026-07-22",
+        "parsedTrack": "canterbury",
+        "meetingId": "2026-07-22-canterbury",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-07-23-wyong",
+        "folderName": "2026-07-23-wyong",
+        "masterCsvFound": false,
+        "masterCsvCount": 0,
+        "masterCsvFilenames": [],
+        "parsedDate": "",
+        "parsedTrack": "",
+        "meetingId": "",
+        "includedInLibrary": false,
+        "exclusionReason": "no *_master.csv file in folder",
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-07-25-randwick",
+        "folderName": "2026-07-25-randwick",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "randwick_2026-07-25_master.csv"
+        ],
+        "parsedDate": "2026-07-25",
+        "parsedTrack": "randwick",
+        "meetingId": "2026-07-25-randwick",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-07-28-bathurst",
+        "folderName": "2026-07-28-bathurst",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "bathurst_2026-07-28_master.csv"
+        ],
+        "parsedDate": "2026-07-28",
+        "parsedTrack": "bathurst",
+        "meetingId": "2026-07-28-bathurst",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-07-29-kensington",
+        "folderName": "2026-07-29-kensington",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "kensington_2026-07-29_master.csv"
+        ],
+        "parsedDate": "2026-07-29",
+        "parsedTrack": "kensington",
+        "meetingId": "2026-07-29-kensington",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-07-30-illawarra-grange",
+        "folderName": "2026-07-30-illawarra-grange",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "illawarra_grange_2026-07-30_master.csv"
+        ],
+        "parsedDate": "2026-07-30",
+        "parsedTrack": "illawarra-grange",
+        "meetingId": "2026-07-30-illawarra-grange",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-07-30-kembla-grange",
+        "folderName": "2026-07-30-kembla-grange",
+        "masterCsvFound": false,
+        "masterCsvCount": 0,
+        "masterCsvFilenames": [],
+        "parsedDate": "",
+        "parsedTrack": "",
+        "meetingId": "",
+        "includedInLibrary": false,
+        "exclusionReason": "no *_master.csv file in folder",
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-07-6-kembla-grange",
+        "folderName": "2026-07-6-kembla-grange",
+        "masterCsvFound": false,
+        "masterCsvCount": 0,
+        "masterCsvFilenames": [],
+        "parsedDate": "",
+        "parsedTrack": "",
+        "meetingId": "",
+        "includedInLibrary": false,
+        "exclusionReason": "no *_master.csv file in folder",
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-08-01-rosehill-gardens",
+        "folderName": "2026-08-01-rosehill-gardens",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "rosehill_gardens_2026-08-01_master.csv"
+        ],
+        "parsedDate": "2026-08-01",
+        "parsedTrack": "rosehill-gardens",
+        "meetingId": "2026-08-01-rosehill-gardens",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-08-05-canterbury",
+        "folderName": "2026-08-05-canterbury",
+        "masterCsvFound": false,
+        "masterCsvCount": 0,
+        "masterCsvFilenames": [],
+        "parsedDate": "",
+        "parsedTrack": "",
+        "meetingId": "",
+        "includedInLibrary": false,
+        "exclusionReason": "no *_master.csv file in folder",
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-08-06-gosford",
+        "folderName": "2026-08-06-gosford",
+        "masterCsvFound": false,
+        "masterCsvCount": 0,
+        "masterCsvFilenames": [],
+        "parsedDate": "",
+        "parsedTrack": "",
+        "meetingId": "",
+        "includedInLibrary": false,
+        "exclusionReason": "no *_master.csv file in folder",
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-08-08-randwick",
+        "folderName": "2026-08-08-randwick",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "randwick_2026-08-08_master.csv"
+        ],
+        "parsedDate": "2026-08-08",
+        "parsedTrack": "randwick",
+        "meetingId": "2026-08-08-randwick",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-08-11-hawkesbury",
+        "folderName": "2026-08-11-hawkesbury",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "hawkesbury_2026-08-11_master.csv"
+        ],
+        "parsedDate": "2026-08-11",
+        "parsedTrack": "hawkesbury",
+        "meetingId": "2026-08-11-hawkesbury",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-08-12-canterbury",
+        "folderName": "2026-08-12-canterbury",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "canterbury_2026-08-12_master.csv"
+        ],
+        "parsedDate": "2026-08-12",
+        "parsedTrack": "canterbury",
+        "meetingId": "2026-08-12-canterbury",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-08-13-newcastle",
+        "folderName": "2026-08-13-newcastle",
+        "masterCsvFound": false,
+        "masterCsvCount": 0,
+        "masterCsvFilenames": [],
+        "parsedDate": "",
+        "parsedTrack": "",
+        "meetingId": "",
+        "includedInLibrary": false,
+        "exclusionReason": "no *_master.csv file in folder",
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-08-15-rosehill-gardens",
+        "folderName": "2026-08-15-rosehill-gardens",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "rosehill_gardens_2026-08-15_master.csv"
+        ],
+        "parsedDate": "2026-08-15",
+        "parsedTrack": "rosehill-gardens",
+        "meetingId": "2026-08-15-rosehill-gardens",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-08-19-warwick-farm",
+        "folderName": "2026-08-19-warwick-farm",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "warwick_farm_2026-08-19_master.csv"
+        ],
+        "parsedDate": "2026-08-19",
+        "parsedTrack": "warwick-farm",
+        "meetingId": "2026-08-19-warwick-farm",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-08-20-hawkesbury",
+        "folderName": "2026-08-20-hawkesbury",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "hawkesbury_2026-08-20_master.csv"
+        ],
+        "parsedDate": "2026-08-20",
+        "parsedTrack": "hawkesbury",
+        "meetingId": "2026-08-20-hawkesbury",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-08-22-randwick",
+        "folderName": "2026-08-22-randwick",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "randwick_2026-08-22_master.csv"
+        ],
+        "parsedDate": "2026-08-22",
+        "parsedTrack": "randwick",
+        "meetingId": "2026-08-22-randwick",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-08-26-canterbury",
+        "folderName": "2026-08-26-canterbury",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "canterbury_2026-08-26_master.csv"
+        ],
+        "parsedDate": "2026-08-26",
+        "parsedTrack": "canterbury",
+        "meetingId": "2026-08-26-canterbury",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-08-29-rosehill-gardens",
+        "folderName": "2026-08-29-rosehill-gardens",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "rosehill_gardens_2026-08-29_master.csv"
+        ],
+        "parsedDate": "2026-08-29",
+        "parsedTrack": "rosehill-gardens",
+        "meetingId": "2026-08-29-rosehill-gardens",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-09-02-warwick-farm",
+        "folderName": "2026-09-02-warwick-farm",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "warwick_farm_2026-09-02_master.csv"
+        ],
+        "parsedDate": "2026-09-02",
+        "parsedTrack": "warwick-farm",
+        "meetingId": "2026-09-02-warwick-farm",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-09-04-wyong",
+        "folderName": "2026-09-04-wyong",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "wyong_2026-09-04_master.csv"
+        ],
+        "parsedDate": "2026-09-04",
+        "parsedTrack": "wyong",
+        "meetingId": "2026-09-04-wyong",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-09-05-randwick",
+        "folderName": "2026-09-05-randwick",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "randwick_2026-09-05_master.csv"
+        ],
+        "parsedDate": "2026-09-05",
+        "parsedTrack": "randwick",
+        "meetingId": "2026-09-05-randwick",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-09-09-kensington",
+        "folderName": "2026-09-09-kensington",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "kensington_2026-09-09_master.csv"
+        ],
+        "parsedDate": "2026-09-09",
+        "parsedTrack": "kensington",
+        "meetingId": "2026-09-09-kensington",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-09-10-hawkesbury",
+        "folderName": "2026-09-10-hawkesbury",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "hawkesbury_2026-09-10_master.csv"
+        ],
+        "parsedDate": "2026-09-10",
+        "parsedTrack": "hawkesbury",
+        "meetingId": "2026-09-10-hawkesbury",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-09-12-rosehill-gardens",
+        "folderName": "2026-09-12-rosehill-gardens",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "rosehill_gardens_2026-09-12_master.csv"
+        ],
+        "parsedDate": "2026-09-12",
+        "parsedTrack": "rosehill-gardens",
+        "meetingId": "2026-09-12-rosehill-gardens",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-09-16-canterbury",
+        "folderName": "2026-09-16-canterbury",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "canterbury_2026-09-16_master.csv"
+        ],
+        "parsedDate": "2026-09-16",
+        "parsedTrack": "canterbury",
+        "meetingId": "2026-09-16-canterbury",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-09-17-illawarra-grange",
+        "folderName": "2026-09-17-illawarra-grange",
+        "masterCsvFound": false,
+        "masterCsvCount": 0,
+        "masterCsvFilenames": [],
+        "parsedDate": "",
+        "parsedTrack": "",
+        "meetingId": "",
+        "includedInLibrary": false,
+        "exclusionReason": "no *_master.csv file in folder",
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-09-18-newcastle",
+        "folderName": "2026-09-18-newcastle",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "newcastle_2026-09-18_master.csv"
+        ],
+        "parsedDate": "2026-09-18",
+        "parsedTrack": "newcastle",
+        "meetingId": "2026-09-18-newcastle",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-09-19-randwick",
+        "folderName": "2026-09-19-randwick",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "randwick_2026-09-19_master.csv"
+        ],
+        "parsedDate": "2026-09-19",
+        "parsedTrack": "randwick",
+        "meetingId": "2026-09-19-randwick",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-09-21-grafton",
+        "folderName": "2026-09-21-grafton",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "grafton_2026-09-21_master.csv"
+        ],
+        "parsedDate": "2026-09-21",
+        "parsedTrack": "grafton",
+        "meetingId": "2026-09-21-grafton",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-09-21-narromine",
+        "folderName": "2026-09-21-narromine",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "narromine_2026-09-21_master.csv"
+        ],
+        "parsedDate": "2026-09-21",
+        "parsedTrack": "narromine",
+        "meetingId": "2026-09-21-narromine",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-09-23-warwick-farm",
+        "folderName": "2026-09-23-warwick-farm",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "warwick_farm_2026-09-23_master.csv"
+        ],
+        "parsedDate": "2026-09-23",
+        "parsedTrack": "warwick-farm",
+        "meetingId": "2026-09-23-warwick-farm",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-09-24-hawkesbury",
+        "folderName": "2026-09-24-hawkesbury",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "hawkesbury_2026-09-24_master.csv"
+        ],
+        "parsedDate": "2026-09-24",
+        "parsedTrack": "hawkesbury",
+        "meetingId": "2026-09-24-hawkesbury",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-09-26-rosehill-gardens",
+        "folderName": "2026-09-26-rosehill-gardens",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "rosehill_gardens_2026-09-26_master.csv"
+        ],
+        "parsedDate": "2026-09-26",
+        "parsedTrack": "rosehill-gardens",
+        "meetingId": "2026-09-26-rosehill-gardens",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-09-30-rosehill-gardens",
+        "folderName": "2026-09-30-rosehill-gardens",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "rosehill_gardens_2026-09-30_master.csv"
+        ],
+        "parsedDate": "2026-09-30",
+        "parsedTrack": "rosehill-gardens",
+        "meetingId": "2026-09-30-rosehill-gardens",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-10-01-illawarra-grange",
+        "folderName": "2026-10-01-illawarra-grange",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "illawarra_grange_2026-10-01_master.csv"
+        ],
+        "parsedDate": "2026-10-01",
+        "parsedTrack": "illawarra-grange",
+        "meetingId": "2026-10-01-illawarra-grange",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-10-03-randwick",
+        "folderName": "2026-10-03-randwick",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "randwick_2026-10-03_master.csv"
+        ],
+        "parsedDate": "2026-10-03",
+        "parsedTrack": "randwick",
+        "meetingId": "2026-10-03-randwick",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-10-05-warwick-farm",
+        "folderName": "2026-10-05-warwick-farm",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "warwick_farm_2026-10-05_master.csv"
+        ],
+        "parsedDate": "2026-10-05",
+        "parsedTrack": "warwick-farm",
+        "meetingId": "2026-10-05-warwick-farm",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-10-06-newcastle",
+        "folderName": "2026-10-06-newcastle",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "newcastle_2026-10-06_master.csv"
+        ],
+        "parsedDate": "2026-10-06",
+        "parsedTrack": "newcastle",
+        "meetingId": "2026-10-06-newcastle",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-10-07-kensington",
+        "folderName": "2026-10-07-kensington",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "kensington_2026-10-07_master.csv"
+        ],
+        "parsedDate": "2026-10-07",
+        "parsedTrack": "kensington",
+        "meetingId": "2026-10-07-kensington",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-10-08-hawkesbury",
+        "folderName": "2026-10-08-hawkesbury",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "hawkesbury_2026-10-08_master.csv"
+        ],
+        "parsedDate": "2026-10-08",
+        "parsedTrack": "hawkesbury",
+        "meetingId": "2026-10-08-hawkesbury",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-10-10-rosehill-gardens",
+        "folderName": "2026-10-10-rosehill-gardens",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "rosehill_gardens_2026-10-10_master.csv"
+        ],
+        "parsedDate": "2026-10-10",
+        "parsedTrack": "rosehill-gardens",
+        "meetingId": "2026-10-10-rosehill-gardens",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-10-14-rosehill-gardens",
+        "folderName": "2026-10-14-rosehill-gardens",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "rosehill_gardens_2026-10-14_master.csv"
+        ],
+        "parsedDate": "2026-10-14",
+        "parsedTrack": "rosehill-gardens",
+        "meetingId": "2026-10-14-rosehill-gardens",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-10-15-hawkesbury",
+        "folderName": "2026-10-15-hawkesbury",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "hawkesbury_2026-10-15_master.csv"
+        ],
+        "parsedDate": "2026-10-15",
+        "parsedTrack": "hawkesbury",
+        "meetingId": "2026-10-15-hawkesbury",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-10-17-caulfield",
+        "folderName": "2026-10-17-caulfield",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "caulfield_2026-10-17_master.csv"
+        ],
+        "parsedDate": "2026-10-17",
+        "parsedTrack": "caulfield",
+        "meetingId": "2026-10-17-caulfield",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/2026-10-17-randwick",
+        "folderName": "2026-10-17-randwick",
+        "masterCsvFound": true,
+        "masterCsvCount": 1,
+        "masterCsvFilenames": [
+          "randwick_2026-10-17_master.csv"
+        ],
+        "parsedDate": "2026-10-17",
+        "parsedTrack": "randwick",
+        "meetingId": "2026-10-17-randwick",
+        "includedInLibrary": true,
+        "exclusionReason": null,
+        "parseErrors": []
+      },
+      {
+        "folder": "meetings/logs",
+        "folderName": "logs",
+        "masterCsvFound": false,
+        "masterCsvCount": 0,
+        "masterCsvFilenames": [],
+        "parsedDate": "",
+        "parsedTrack": "",
+        "meetingId": "",
+        "includedInLibrary": false,
+        "exclusionReason": "no *_master.csv file in folder",
+        "parseErrors": []
       }
     ],
     "masterCsvFiles": [
@@ -921,9 +2302,56 @@
       "meetings/2026-06-27-rosehill/rosehill_2026-06-27_master.csv",
       "meetings/2026-06-30-taree/taree_2026-06-30_master.csv",
       "meetings/2026-07-01-kensington/kensington_2026-07-01_master.csv",
-      "meetings/2026-07-02-hawkesbury/hawkesbury_2026-07-02_master.csv"
+      "meetings/2026-07-02-hawkesbury/hawkesbury_2026-07-02_master.csv",
+      "meetings/2026-07-04-rosehill/rosehill_2026-07-04_master.csv",
+      "meetings/2026-07-09-gosford/gosford_2026-07-09_master.csv",
+      "meetings/2026-07-11-randwick/randwick_2026-07-11_master.csv",
+      "meetings/2026-07-15-warwick-farm/warwick_farm_2026-07-15_master.csv",
+      "meetings/2026-07-16-kembla-grange/kembla_grange_2026-07-16_master.csv",
+      "meetings/2026-07-18-rosehill-gardens/rosehill_gardens_2026-07-18_master.csv",
+      "meetings/2026-07-22-canterbury/canterbury_2026-07-22_master.csv",
+      "meetings/2026-07-25-randwick/randwick_2026-07-25_master.csv",
+      "meetings/2026-07-28-bathurst/bathurst_2026-07-28_master.csv",
+      "meetings/2026-07-29-kensington/kensington_2026-07-29_master.csv",
+      "meetings/2026-07-30-illawarra-grange/illawarra_grange_2026-07-30_master.csv",
+      "meetings/2026-08-01-rosehill-gardens/rosehill_gardens_2026-08-01_master.csv",
+      "meetings/2026-08-08-randwick/randwick_2026-08-08_master.csv",
+      "meetings/2026-08-11-hawkesbury/hawkesbury_2026-08-11_master.csv",
+      "meetings/2026-08-12-canterbury/canterbury_2026-08-12_master.csv",
+      "meetings/2026-08-15-rosehill-gardens/rosehill_gardens_2026-08-15_master.csv",
+      "meetings/2026-08-19-warwick-farm/warwick_farm_2026-08-19_master.csv",
+      "meetings/2026-08-20-hawkesbury/hawkesbury_2026-08-20_master.csv",
+      "meetings/2026-08-22-randwick/randwick_2026-08-22_master.csv",
+      "meetings/2026-08-26-canterbury/canterbury_2026-08-26_master.csv",
+      "meetings/2026-08-29-rosehill-gardens/rosehill_gardens_2026-08-29_master.csv",
+      "meetings/2026-09-02-warwick-farm/warwick_farm_2026-09-02_master.csv",
+      "meetings/2026-09-04-wyong/wyong_2026-09-04_master.csv",
+      "meetings/2026-09-05-randwick/randwick_2026-09-05_master.csv",
+      "meetings/2026-09-09-kensington/kensington_2026-09-09_master.csv",
+      "meetings/2026-09-10-hawkesbury/hawkesbury_2026-09-10_master.csv",
+      "meetings/2026-09-12-rosehill-gardens/rosehill_gardens_2026-09-12_master.csv",
+      "meetings/2026-09-16-canterbury/canterbury_2026-09-16_master.csv",
+      "meetings/2026-09-18-newcastle/newcastle_2026-09-18_master.csv",
+      "meetings/2026-09-19-randwick/randwick_2026-09-19_master.csv",
+      "meetings/2026-09-21-grafton/grafton_2026-09-21_master.csv",
+      "meetings/2026-09-21-narromine/narromine_2026-09-21_master.csv",
+      "meetings/2026-09-23-warwick-farm/warwick_farm_2026-09-23_master.csv",
+      "meetings/2026-09-24-hawkesbury/hawkesbury_2026-09-24_master.csv",
+      "meetings/2026-09-26-rosehill-gardens/rosehill_gardens_2026-09-26_master.csv",
+      "meetings/2026-09-30-rosehill-gardens/rosehill_gardens_2026-09-30_master.csv",
+      "meetings/2026-10-01-illawarra-grange/illawarra_grange_2026-10-01_master.csv",
+      "meetings/2026-10-03-randwick/randwick_2026-10-03_master.csv",
+      "meetings/2026-10-05-warwick-farm/warwick_farm_2026-10-05_master.csv",
+      "meetings/2026-10-06-newcastle/newcastle_2026-10-06_master.csv",
+      "meetings/2026-10-07-kensington/kensington_2026-10-07_master.csv",
+      "meetings/2026-10-08-hawkesbury/hawkesbury_2026-10-08_master.csv",
+      "meetings/2026-10-10-rosehill-gardens/rosehill_gardens_2026-10-10_master.csv",
+      "meetings/2026-10-14-rosehill-gardens/rosehill_gardens_2026-10-14_master.csv",
+      "meetings/2026-10-15-hawkesbury/hawkesbury_2026-10-15_master.csv",
+      "meetings/2026-10-17-caulfield/caulfield_2026-10-17_master.csv",
+      "meetings/2026-10-17-randwick/randwick_2026-10-17_master.csv"
     ],
-    "meetingsReturned": 32,
+    "meetingsReturned": 79,
     "foldersExcluded": [
       {
         "folder": "meetings/2026-05-20-warwick",
@@ -931,6 +2359,38 @@
       },
       {
         "folder": "meetings/2026-06-25-wyong",
+        "reason": "no *_master.csv file in folder"
+      },
+      {
+        "folder": "meetings/2026-07-23-wyong",
+        "reason": "no *_master.csv file in folder"
+      },
+      {
+        "folder": "meetings/2026-07-30-kembla-grange",
+        "reason": "no *_master.csv file in folder"
+      },
+      {
+        "folder": "meetings/2026-07-6-kembla-grange",
+        "reason": "no *_master.csv file in folder"
+      },
+      {
+        "folder": "meetings/2026-08-05-canterbury",
+        "reason": "no *_master.csv file in folder"
+      },
+      {
+        "folder": "meetings/2026-08-06-gosford",
+        "reason": "no *_master.csv file in folder"
+      },
+      {
+        "folder": "meetings/2026-08-13-newcastle",
+        "reason": "no *_master.csv file in folder"
+      },
+      {
+        "folder": "meetings/2026-09-17-illawarra-grange",
+        "reason": "no *_master.csv file in folder"
+      },
+      {
+        "folder": "meetings/logs",
         "reason": "no *_master.csv file in folder"
       }
     ]

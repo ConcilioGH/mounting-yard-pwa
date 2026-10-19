@@ -245,6 +245,24 @@ export default function RaceDayBiasApp() {
   }, [state, persist]);
 
   useEffect(() => {
+    const flushCurrentBias = () => {
+      if (!biasHydratedRef.current) return;
+      const manifest = loadMeetingManifest();
+      if (!manifest?.meetingId) return;
+      try {
+        saveRaceDayBiasStateForMeeting(manifest.meetingId, stateRef.current);
+      } catch (error) {
+        console.warn("[bias-debug] page-exit save failed", error);
+      }
+    };
+    window.addEventListener("pagehide", flushCurrentBias);
+    return () => {
+      flushCurrentBias();
+      window.removeEventListener("pagehide", flushCurrentBias);
+    };
+  }, []);
+
+  useEffect(() => {
     if (editorStep === "sp") {
       spInputRef.current?.focus();
     } else if (editorStep === "code" || editorStep === "combined") {
@@ -270,13 +288,30 @@ export default function RaceDayBiasApp() {
       positionCode: next.positionCode,
       sp: next.sp,
     });
-    setState((prev) => ({
-      ...prev,
-      races: prev.races.map((race) => {
+    const nextState: RaceDayBiasState = {
+      ...stateRef.current,
+      races: stateRef.current.races.map((race) => {
         if (race.raceNo !== raceNo) return race;
         return { ...race, [field]: next };
       }),
-    }));
+    };
+    stateRef.current = nextState;
+    setState(nextState);
+
+    // A cell edit is user-entered race-day data. Commit it immediately so a
+    // route change, app suspension, or live resulted-SP refresh cannot beat
+    // the general autosave debounce and restore the previous value.
+    const manifest = loadMeetingManifest();
+    if (biasHydratedRef.current && manifest?.meetingId) {
+      try {
+        setSaveState("saving");
+        saveRaceDayBiasStateForMeeting(manifest.meetingId, nextState);
+        setSaveState("saved");
+      } catch (error) {
+        console.warn("[bias-debug] immediate cell save failed", error);
+        setSaveState("error");
+      }
+    }
   };
 
   const openCell = (raceNo: string, field: PositionField) => {
@@ -295,7 +330,15 @@ export default function RaceDayBiasApp() {
   };
 
   const handleCodeNext = () => {
-    setDraft((prev) => ({ ...prev, positionCode: sanitizePositionCodeInput(prev.positionCode) }));
+    const normalizedDraft = {
+      ...draft,
+      positionCode: sanitizePositionCodeInput(draft.positionCode),
+    };
+    setDraft(normalizedDraft);
+    if (editingCell) {
+      // POS is complete at this point; it must not depend on SP being entered.
+      saveCell(editingCell.raceNo, editingCell.field, normalizedDraft);
+    }
     setEditorStep("sp");
   };
 

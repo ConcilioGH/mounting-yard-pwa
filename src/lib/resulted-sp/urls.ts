@@ -3,7 +3,18 @@ import type { MeetingManifest } from "@/lib/meeting-coordination";
 import { resolveTabMeetingRef } from "@/lib/resulted-sp/tab-api";
 import { buildPrimaryTabResultsUrl as buildTabResultsUrl } from "@/lib/resulted-sp/tab-urls";
 
-export type ResultedSpSource = "tab" | "racingnsw" | "racenet";
+export type ResultedSpSource = "tab" | "racingcom" | "racingnsw" | "racenet";
+
+const VICTORIAN_TRACKS = new Set([
+  "ararat", "avoca", "ballarat", "balnarring", "benalla", "bendigo", "bet365-park-kilmore",
+  "bet365-park-wodonga", "bairnsdale", "caulfield", "caulfield-heath", "colac", "cranbourne",
+  "donald", "echuca", "flemington", "geelong", "hamilton", "hanging-rock", "horsham",
+  "kerang", "kilmore", "kyabram", "kyneton", "manangatang", "moe", "moonee-valley",
+  "mornington", "mortlake", "murtoa", "pakenham", "pakenham-synthetic",
+  "penshurst", "sandown", "sandown-hillside", "sandown-lakeside", "sale", "seymour",
+  "st-arnaud", "stawell", "swan-hill", "terang", "tatura", "towong", "wangaratta",
+  "warracknabeal", "warrnambool", "werribee", "wodonga", "wycheproof", "yarra-valley",
+]);
 
 const RACING_NSW_VENUE_ALIASES: Record<string, string> = {
   "illawarra-grange": "Kembla Grange",
@@ -23,6 +34,24 @@ function titleCaseTrack(value: string): string {
     .replace(/[-_]+/g, " ")
     .replace(/\s+/g, " ")
     .replace(/\b\w/g, (letter) => letter.toUpperCase());
+}
+
+export function isVictorianMeeting(
+  manifest: Pick<MeetingManifest, "trackName" | "trackSlug">,
+): boolean {
+  const slug = sanitizeMeetingSlug(manifest.trackSlug || manifest.trackName || "");
+  return VICTORIAN_TRACKS.has(slug);
+}
+
+export function buildRacingComResultsUrl(
+  manifest: Pick<MeetingManifest, "trackName" | "trackSlug" | "date">,
+  raceNo?: string,
+): string {
+  const track = sanitizeMeetingSlug(manifest.trackSlug || manifest.trackName || "");
+  const date = String(manifest.date ?? "").trim();
+  if (!track || !/^\d{4}-\d{2}-\d{2}$/.test(date)) return "";
+  const base = `https://www.racing.com/form/${date}/${track}`;
+  return raceNo ? `${base}/race/${encodeURIComponent(raceNo)}/results` : base;
 }
 
 export function resolveRacingNswVenue(
@@ -91,11 +120,11 @@ export async function resolvePrimaryTabResultsUrl(
 
 export function fallbackHtmlSources(
   manifest: MeetingManifest,
-): Array<{ source: Exclude<ResultedSpSource, "tab">; url: string }> {
-  const sources: Array<{ source: Exclude<ResultedSpSource, "tab">; url: string }> = [];
+): Array<{ source: Exclude<ResultedSpSource, "tab" | "racingcom">; url: string }> {
+  const sources: Array<{ source: Exclude<ResultedSpSource, "tab" | "racingcom">; url: string }> = [];
   const nsw = buildRacingNswResultsUrl(manifest);
   const racenet = buildRacenetResultsUrl(manifest);
-  if (nsw) sources.push({ source: "racingnsw", url: nsw });
+  if (nsw && !isVictorianMeeting(manifest)) sources.push({ source: "racingnsw", url: nsw });
   if (racenet) sources.push({ source: "racenet", url: racenet });
   return sources;
 }

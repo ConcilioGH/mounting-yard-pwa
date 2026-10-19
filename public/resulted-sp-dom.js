@@ -477,6 +477,62 @@
     return "https://racing.racingnsw.com.au/racing/Results/All/" + track + "/" + date;
   }
 
+  var VICTORIAN_TRACKS = {
+    ararat: 1, avoca: 1, ballarat: 1, balnarring: 1, benalla: 1, bendigo: 1, bairnsdale: 1,
+    caulfield: 1, "caulfield-heath": 1, colac: 1, cranbourne: 1, donald: 1, echuca: 1,
+    flemington: 1, geelong: 1, hamilton: 1, "hanging-rock": 1, horsham: 1, kerang: 1,
+    kilmore: 1, kyabram: 1, kyneton: 1, manangatang: 1, moe: 1, "moonee-valley": 1,
+    mornington: 1, mortlake: 1, murtoa: 1, pakenham: 1, "pakenham-synthetic": 1,
+    penshurst: 1, sale: 1, sandown: 1, "sandown-hillside": 1, "sandown-lakeside": 1,
+    seymour: 1, "st-arnaud": 1, stawell: 1, "swan-hill": 1, tatura: 1, terang: 1,
+    towong: 1, wangaratta: 1, warracknabeal: 1, warrnambool: 1, werribee: 1,
+    wodonga: 1, wycheproof: 1, "yarra-valley": 1
+  };
+
+  function meetingTrackSlug(manifest) {
+    return String((manifest && (manifest.trackSlug || manifest.trackName)) || "")
+      .trim().toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  }
+
+  function isVictorianMeeting(manifest) {
+    return !!VICTORIAN_TRACKS[meetingTrackSlug(manifest)];
+  }
+
+  function buildRacingComUrl(manifest, raceNo) {
+    var track = meetingTrackSlug(manifest);
+    var date = String((manifest && manifest.date) || "");
+    if (!track || !date) return "";
+    return "https://www.racing.com/form/" + date + "/" + track + "/race/" + encodeURIComponent(raceNo) + "/results";
+  }
+
+  function fetchRacingComRaceResults(manifest, raceNo) {
+    var apiUrl = "/api/fetch-racing-com-results?track=" + encodeURIComponent(meetingTrackSlug(manifest)) +
+      "&date=" + encodeURIComponent((manifest && manifest.date) || "") +
+      "&raceNo=" + encodeURIComponent(raceNo);
+    return fetch(apiUrl, { method: "GET", credentials: "same-origin", headers: { Accept: "application/json" } })
+      .then(function (res) {
+        return res.json().catch(function () { return {}; }).then(function (data) {
+          if (!res.ok) throw new Error((data && data.error) || "Racing.com failed (" + res.status + ")");
+          var entries = (data && data.race && data.race.formRaceEntries) || [];
+          var runners = [];
+          for (var i = 0; i < entries.length; i++) {
+            var entry = entries[i] || {};
+            if (entry.scratched) continue;
+            var horseName = String(entry.horseName || "").trim();
+            var finishPosition = Number(entry.finish);
+            var sp = parseDecimalSp(entry.startingPrice);
+            if (!horseName || !(finishPosition >= 1) || !(sp > 0)) continue;
+            runners.push({ finishPosition: finishPosition, horseName: horseName, sp: sp,
+              margin: String(entry.margin || ""), resultStatus: "resulted" });
+          }
+          var parsed = { raceNo: String(raceNo), runners: runners };
+          return isRaceResulted(parsed)
+            ? { status: "imported", parsed: parsed, source: "racingcom", resultsPageUrl: buildRacingComUrl(manifest, raceNo) }
+            : { status: "not_ready", resultsPageUrl: buildRacingComUrl(manifest, raceNo) };
+        });
+      });
+  }
+
   function buildRacenetUrl(manifest) {
     if (!manifest) return "";
     var track = String(manifest.trackSlug || manifest.trackName || "meeting")
@@ -698,7 +754,18 @@
   }
 
   function importRaceFromSources(manifest, raceNo) {
-    return fetchTabRaceResults(manifest, raceNo)
+    var primary = isVictorianMeeting(manifest)
+      ? fetchRacingComRaceResults(manifest, raceNo)
+      : Promise.resolve({ status: "skip" });
+    return primary.catch(function (err) {
+      return { status: "error", message: err && err.message ? err.message : String(err) };
+    }).then(function (racingComResult) {
+      if (racingComResult.status === "imported") {
+        return { imported: true, parsed: racingComResult.parsed, source: "racingcom",
+          tabResultsUrl: racingComResult.resultsPageUrl, tabMeeting: null };
+      }
+      return fetchTabRaceResults(manifest, raceNo);
+    })
       .catch(function (err) {
         return { status: "error", message: err && err.message ? err.message : String(err) };
       })
@@ -716,7 +783,7 @@
           return { imported: false, notReady: true, tabResultsUrl: tabResult.resultsPageUrl };
         }
         var fallbacks = [
-          { source: "racingnsw", url: buildRacingNswUrl(manifest) },
+          { source: "racingnsw", url: isVictorianMeeting(manifest) ? "" : buildRacingNswUrl(manifest) },
           { source: "racenet", url: buildRacenetUrl(manifest) },
         ];
         var chain = Promise.resolve({ imported: false, notReady: false, lastError: tabResult.message || "TAB unavailable" });

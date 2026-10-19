@@ -1,6 +1,8 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { listMeetingLibraryFromDisk } from "../src/lib/meeting-library-disk.ts";
+// Dynamic import keeps this build helper compatible with both the CommonJS
+// package default and newer Node/tsx ESM interop behaviour.
+const { listMeetingLibraryFromDisk } = await import("../src/lib/meeting-library-disk.ts");
 
 const outDir = path.join(process.cwd(), "src", "data");
 const outFile = path.join(outDir, "meeting-library-manifest.json");

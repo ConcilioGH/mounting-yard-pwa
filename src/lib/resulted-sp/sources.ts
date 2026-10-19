@@ -12,9 +12,12 @@ import {
   type ParsedFullFieldRace,
 } from "@/lib/resulted-sp/parse-full-field";
 import { fetchTabRaceResults } from "@/lib/resulted-sp/tab-api";
+import { fetchRacingComRaceResults } from "@/lib/resulted-sp/racing-com";
 import {
+  buildRacingComResultsUrl,
   buildRacenetResultsUrl,
   buildRacingNswResultsUrl,
+  isVictorianMeeting,
   racingNswMeetingMatchesHtml,
   type ResultedSpSource,
 } from "@/lib/resulted-sp/urls";
@@ -56,7 +59,7 @@ export async function importRaceFromSources(options: {
   let lastResultsUrl = "";
 
   const tryHtmlSource = async (
-    source: Exclude<ResultedSpSource, "tab">,
+    source: Exclude<ResultedSpSource, "tab" | "racingcom">,
     url: string,
   ): Promise<ParsedFullFieldRace | null> => {
     if (!url) return null;
@@ -110,8 +113,34 @@ export async function importRaceFromSources(options: {
     return null;
   };
 
+  if (isVictorianMeeting(options.manifest)) {
+    const racingComUrl = buildRacingComResultsUrl(options.manifest, raceNo);
+    lastResultsUrl = racingComUrl;
+    const racingComResult = await fetchRacingComRaceResults(options.manifest, raceNo);
+    if (racingComResult.status === "imported") {
+      logResultedSpImportAttempt({
+        attemptId: createResultedSpAttemptId(),
+        timestamp: new Date().toISOString(),
+        meetingId,
+        raceNo,
+        source: "racingcom",
+        resolvedUrl: racingComUrl,
+        raceMatched: true,
+        runnersParsed: racingComResult.parsed.runners.length,
+        spValuesParsed: racingComResult.parsed.runners.filter((runner) => runner.sp > 0).length,
+        outcome: "imported",
+        detail: "Racing.com official GraphQL results",
+      });
+      return { imported: true, parsed: racingComResult.parsed, source: "racingcom", resultsUrl: racingComUrl };
+    }
+    if (racingComResult.status === "not_ready") sawNotReady = true;
+    if (racingComResult.status === "error") lastError = racingComResult.message;
+  }
+
   // Racing NSW is the primary source for the NSW meeting library.
-  const racingNswUrl = buildRacingNswResultsUrl(options.manifest);
+  const racingNswUrl = isVictorianMeeting(options.manifest)
+    ? ""
+    : buildRacingNswResultsUrl(options.manifest);
   const racingNswParsed = await tryHtmlSource("racingnsw", racingNswUrl);
   if (racingNswParsed) {
     return { imported: true, parsed: racingNswParsed, source: "racingnsw", resultsUrl: racingNswUrl };
