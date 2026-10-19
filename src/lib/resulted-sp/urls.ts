@@ -79,7 +79,7 @@ export function buildRacingNswResultsUrl(
 ): string {
   const key = buildRacingNswMeetingKey(manifest);
   if (!key) return "";
-  return `https://mdata.racingnsw.com.au/FreeFields/Results.aspx?Key=${encodeURIComponent(key)}`;
+  return `https://racing.racingnsw.com.au/FreeFields/Results.aspx?Key=${encodeURIComponent(key)}`;
 }
 
 export function racingNswMeetingMatchesHtml(
