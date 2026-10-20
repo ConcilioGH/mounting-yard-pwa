@@ -1,83 +1,68 @@
 race_id,track,race_no,race_title,distance,grade,going,rail,weather,penetrometer,track_information,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
-R1,Warwick Farm,1,2:15 pm Tab Plate,1300m,Maiden,Soft 5,+3m Entire,,,,1,1,Social Graces,Social Graces,Social Graces,8,Gai Waterhouse & Adrian Bott,Tim Clark,$5,NA,racenet
-R1,Warwick Farm,1,2:15 pm Tab Plate,1300m,Maiden,Soft 5,+3m Entire,,,,2,2,Supido Secret,Supido Secret,Supido Secret,5,Paul Niceforo,Molly Bourke (a-1.5),$151,7.3,racenet
-R1,Warwick Farm,1,2:15 pm Tab Plate,1300m,Maiden,Soft 5,+3m Entire,,,,3,3,All Over Harry,All Over Harry,All Over Harry,2,Anthony & Sam Freedman,Zac Lloyd,$4.8,3.7,racenet
-R1,Warwick Farm,1,2:15 pm Tab Plate,1300m,Maiden,Soft 5,+3m Entire,,,,5,5,Horologist,Horologist,Horologist,3,Chris Waller,James McDonald,$1.8,5.3,racenet
-R1,Warwick Farm,1,2:15 pm Tab Plate,1300m,Maiden,Soft 5,+3m Entire,,,,6,6,Swagger,Swagger,Swagger,1,Amanda Turner,Reece Jones,$201,6.5,racenet
-R1,Warwick Farm,1,2:15 pm Tab Plate,1300m,Maiden,Soft 5,+3m Entire,,,,7,7,Zahav,Zahav,Zahav,6,Ciaron Maher,Braith Nock (a-1.5),$11,3,racenet
-R1,Warwick Farm,1,2:15 pm Tab Plate,1300m,Maiden,Soft 5,+3m Entire,,,,8,8,Belle Chanteuse,Belle Chanteuse,Belle Chanteuse,4,Brad Widdup,Rachel King,$15,6,racenet
-R1,Warwick Farm,1,2:15 pm Tab Plate,1300m,Maiden,Soft 5,+3m Entire,,,,9,9,Explosive Express,Explosive Express,Explosive Express,7,Chris Waller,Tommy Berry,$13,8,racenet
-R2,Warwick Farm,2,2:50 pm Precise Air Handicap,1400m,Handicap,Soft 5,+3m Entire,,,,1,1,Donatello,Donatello,Donatello,2,Chris Waller,Nash Rawiller,$6.5,5.9,racenet
-R2,Warwick Farm,2,2:50 pm Precise Air Handicap,1400m,Handicap,Soft 5,+3m Entire,,,,2,2,Our Emperor,Our Emperor,Our Emperor,3,Gai Waterhouse & Adrian Bott,Tim Clark,$3.5,2.3,racenet
-R2,Warwick Farm,2,2:50 pm Precise Air Handicap,1400m,Handicap,Soft 5,+3m Entire,,,,3,3,Prince Of Verona,Prince Of Verona,Prince Of Verona,6,Annabel & Rob Archibald,Zac Lloyd,$9.5,7,racenet
-R2,Warwick Farm,2,2:50 pm Precise Air Handicap,1400m,Handicap,Soft 5,+3m Entire,,,,4,4,Aladdin's Girl,Aladdin's Girl,Aladdin's Girl,1,Chris Waller,Jason Collett,$12,6.9,racenet
-R2,Warwick Farm,2,2:50 pm Precise Air Handicap,1400m,Handicap,Soft 5,+3m Entire,,,,5,5,Dignifying,Dignifying,Dignifying,4,Gai Waterhouse & Adrian Bott,Regan Bayliss,$5,1,racenet
-R2,Warwick Farm,2,2:50 pm Precise Air Handicap,1400m,Handicap,Soft 5,+3m Entire,,,,6,6,Rumdabar,Rumdabar,Rumdabar,5,Kris Lees,James McDonald (a0.5),$4.2,5.8,racenet
-R2,Warwick Farm,2,2:50 pm Precise Air Handicap,1400m,Handicap,Soft 5,+3m Entire,,,,7,7,Devil Wings,Devil Wings,Devil Wings,7,"Michael, John & Wayne Hawkes",Tommy Berry (a0.5),$8,1,racenet
-R2,Warwick Farm,2,2:50 pm Precise Air Handicap,1400m,Handicap,Soft 5,+3m Entire,,,,8,8,Elstead,Elstead,Elstead,8,Chris Waller,Siena Grima (a-2),$26,9.7,racenet
-R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Soft 5,+3m Entire,,,,1,1,Knights Armour,Knights Armour,Knights Armour,1,Ross Lavis Rebecca,Bronett Prag (a-3),$26,7.1,racenet
-R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Soft 5,+3m Entire,,,,2,2,Hallowed Halls,Hallowed Halls,Hallowed Halls,4,Chris Waller,James McDonald,$6,6.8,racenet
-R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Soft 5,+3m Entire,,,,3,3,Zonkstar,Zonkstar,Zonkstar,2,Matthew Smith,Zac Lloyd,$4.6,4.7,racenet
-R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Soft 5,+3m Entire,,,,4,4,Lugarno,Lugarno,Lugarno,12,John Thompson,Reece Jones,$13,3.3,racenet
-R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Soft 5,+3m Entire,,,,5,5,Off The Scale,Off The Scale,Off The Scale,10,Lou Mary,Braith Nock (a-1.5),$19,5,racenet
-R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Soft 5,+3m Entire,,,,6,6,Rileycat,Rileycat,Rileycat,9,Pat Murphy,Rachel King,$35,7.7,racenet
-R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Soft 5,+3m Entire,,,,7,7,War Ribbon,War Ribbon,War Ribbon,7,David Payne,Ashley Morgan,$18,5.8,racenet
-R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Soft 5,+3m Entire,,,,8,8,Blenheim Girl,Blenheim Girl,Blenheim Girl,3,Chris Waller,Siena Grima (a-2),$4.6,7.7,racenet
-R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Soft 5,+3m Entire,,,,9,9,All Gucci,All Gucci,All Gucci,11,Ron Leemon,Andrew Calder,$35,8.5,racenet
-R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Soft 5,+3m Entire,,,,10,10,Backhander,Backhander,Backhander,8,Annabel & Rob Archibald,Mollie Fitzgerald (a-2),$34,4.3,racenet
-R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Soft 5,+3m Entire,,,,11,11,Marsabit,Marsabit,Marsabit,6,Danny Williams,Winona Costin,$67,7.3,racenet
-R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Soft 5,+3m Entire,,,,12,12,Botanical Boy,Botanical Boy,Botanical Boy,5,Anthony & Sam Freedman,Tommy Berry,$3,6.8,racenet
-R4,Warwick Farm,4,4:00 pm Ole Kirk @ Vinery Stud Handicap,1000m,Handicap,Soft 5,+3m Entire,,,,1,1,Spartus,Spartus,Spartus,9,Fabio Martino,Siena Grima (a-2),$16,6.2,racenet
-R4,Warwick Farm,4,4:00 pm Ole Kirk @ Vinery Stud Handicap,1000m,Handicap,Soft 5,+3m Entire,,,,2,2,Winning Revolution,Winning Revolution,Winning Revolution,1,Garry Kirkup,Amber Riddell (a-3),$61,8.1,racenet
-R4,Warwick Farm,4,4:00 pm Ole Kirk @ Vinery Stud Handicap,1000m,Handicap,Soft 5,+3m Entire,,,,3,3,Teylu,Teylu,Teylu,5,Gratz Vella,Pierre Boudvillain,$16,2.5,racenet
-R4,Warwick Farm,4,4:00 pm Ole Kirk @ Vinery Stud Handicap,1000m,Handicap,Soft 5,+3m Entire,,,,5,5,One Destiny,One Destiny,One Destiny,8,Scott Collings Rebecca,Bronett Prag (a-3),$51,3.9,racenet
-R4,Warwick Farm,4,4:00 pm Ole Kirk @ Vinery Stud Handicap,1000m,Handicap,Soft 5,+3m Entire,,,,7,7,Valilee,Valilee,Valilee,7,Jake Hull,Shannen Llewellyn (a-3),$8,1.2,racenet
-R4,Warwick Farm,4,4:00 pm Ole Kirk @ Vinery Stud Handicap,1000m,Handicap,Soft 5,+3m Entire,,,,8,8,Horseshoe Hill,Horseshoe Hill,Horseshoe Hill,3,Bjorn Baker,Jason Collett,$3.5,5.6,racenet
-R4,Warwick Farm,4,4:00 pm Ole Kirk @ Vinery Stud Handicap,1000m,Handicap,Soft 5,+3m Entire,,,,9,9,She's My Ex,She's My Ex,She's My Ex,10,Mick Price & Michael Kent Jnr,Zac Lloyd,$11,2.3,racenet
-R4,Warwick Farm,4,4:00 pm Ole Kirk @ Vinery Stud Handicap,1000m,Handicap,Soft 5,+3m Entire,,,,10,10,Confidentiality,Confidentiality,Confidentiality,4,Joseph Pride,Nash Rawiller,$4.2,6.2,racenet
-R4,Warwick Farm,4,4:00 pm Ole Kirk @ Vinery Stud Handicap,1000m,Handicap,Soft 5,+3m Entire,,,,11,11,Bruce I Am,Bruce I Am,Bruce I Am,2,Joseph Pride,Chad Schofield,$3.5,4,racenet
-R4,Warwick Farm,4,4:00 pm Ole Kirk @ Vinery Stud Handicap,1000m,Handicap,Soft 5,+3m Entire,,,,12,12,Triple Yes,Triple Yes,Triple Yes,6,Liam Ruddy,Mollie Fitzgerald (a-2),$46,3.1,racenet
-R5,Warwick Farm,5,4:35 pm Schweppes Handicap,1400m,Handicap,Soft 5,+3m Entire,,,,1,1,Uzziah,Uzziah,Uzziah,7,Scott Aspery,Molly Bourke (a-1.5),$10,2.9,racenet
-R5,Warwick Farm,5,4:35 pm Schweppes Handicap,1400m,Handicap,Soft 5,+3m Entire,,,,2,2,Money Team,Money Team,Money Team,2,Brad Widdup,Dylan Gibbons,$10,6.1,racenet
-R5,Warwick Farm,5,4:35 pm Schweppes Handicap,1400m,Handicap,Soft 5,+3m Entire,,,,3,3,Elson Boy,Elson Boy,Elson Boy,5,Dar Lunn,William Stanley (a-2),$10,2.1,racenet
-R5,Warwick Farm,5,4:35 pm Schweppes Handicap,1400m,Handicap,Soft 5,+3m Entire,,,,4,4,Verbil,Verbil,Verbil,1,Annabel & Rob Archibald,Tom Sherry,$10,4.7,racenet
-R5,Warwick Farm,5,4:35 pm Schweppes Handicap,1400m,Handicap,Soft 5,+3m Entire,,,,7,7,Amreekiyah,Amreekiyah,Amreekiyah,8,Peter Snowden,Chad Schofield,$3.5,6.4,racenet
-R5,Warwick Farm,5,4:35 pm Schweppes Handicap,1400m,Handicap,Soft 5,+3m Entire,,,,8,8,Miss Hades,Miss Hades,Miss Hades,6,Gary Portelli,Jason Collett,$16,3.8,racenet
-R5,Warwick Farm,5,4:35 pm Schweppes Handicap,1400m,Handicap,Soft 5,+3m Entire,,,,9,9,Probability Theory,Probability Theory,Probability Theory,4,Nacim Dilmi,Rachel King,$2.1,3.5,racenet
-R5,Warwick Farm,5,4:35 pm Schweppes Handicap,1400m,Handicap,Soft 5,+3m Entire,,,,10,10,Djapana,Djapana,Djapana,3,Clarry Conners,Siena Grima (a-2),$81,8.7,racenet
-R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Soft 5,+3m Entire,,,,1,1,Storm Season,Storm Season,Storm Season,7,Mick Price & Michael Kent Jnr,Dylan Gibbons,$5.5,4.8,racenet
-R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Soft 5,+3m Entire,,,,2,2,Superfabulistic,Superfabulistic,Superfabulistic,5,Gai Waterhouse & Adrian Bott,Rachel King,$3.3,2.1,racenet
-R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Soft 5,+3m Entire,,,,3,3,Zenmaster,Zenmaster,Zenmaster,2,Craig Carmody,Olivia Chambers (a-3),$81,3.1,racenet
-R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Soft 5,+3m Entire,,,,4,4,Doradus,Doradus,Doradus,6,John Thompson,Zac Lloyd,$12,2.1,racenet
-R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Soft 5,+3m Entire,,,,5,5,Furious,Furious,Furious,10,"Michael, John & Wayne Hawkes",Sam Clipperton,$51,8.1,racenet
-R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Soft 5,+3m Entire,,,,6,6,Dubai Warrior,Dubai Warrior,Dubai Warrior,1,Matthew Smith,Ashley Morgan,$35,3.3,racenet
-R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Soft 5,+3m Entire,,,,7,7,Great Idea,Great Idea,Great Idea,16,Nacim Dilmi,Nash Rawiller,$10,6.6,racenet
-R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Soft 5,+3m Entire,,,,8,8,Without Peer,Without Peer,Without Peer,15,Ciaron Maher,Chad Schofield,$14,4.2,racenet
-R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Soft 5,+3m Entire,,,,10,10,Miles Of Glory,Miles Of Glory,Miles Of Glory,8,Michael Freedman,Tommy Berry,$17,6.4,racenet
-R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Soft 5,+3m Entire,,,,11,11,Standard Deviation,Standard Deviation,Standard Deviation,3,Chris Waller,James McDonald,$8.5,4.6,racenet
-R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Soft 5,+3m Entire,,,,12,12,Kirribilli,Kirribilli,Kirribilli,13,Bjorn Baker,Amber Riddell (a-3),$14,8.5,racenet
-R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Soft 5,+3m Entire,,,,13,13,Chief Of War,Chief Of War,Chief Of War,12,Heath Maclean,Pierre Boudvillain,$35,6.3,racenet
-R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Soft 5,+3m Entire,,,,15,15,Aura,Aura,Aura,4,"Michael, John & Wayne Hawkes",Tyler Schiller,$21,6.2,racenet
-R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Soft 5,+3m Entire,,,,16,16,Pappa Blue,Pappa Blue,Pappa Blue,11,Annabel & Rob Archibald,Tom Sherry,$27,5.9,racenet
-R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Soft 5,+3m Entire,,,,17,17,Unbridled Storm,Unbridled Storm,Unbridled Storm,14,,Chris Waller,$17,7.1,racenet
-R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Soft 5,+3m Entire,,,,18,18,Donatello,Donatello,Donatello,9,,Chris Waller,$13,5.9,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,1,1,I Am Carrot,I Am Carrot,I Am Carrot,5,Nacim Dilmi,Jason Collett,$11,2.9,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,2,2,Nitro,Nitro,Nitro,3,Peter Snowden,Chad Schofield,$7,8,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,3,3,Scillato,Scillato,Scillato,2,Matthew Smith,Tommy Berry,$12,5.3,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,4,4,Street Artist,Street Artist,Street Artist,4,Anthony & Sam Freedman,Zac Lloyd,$7,7.4,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,5,5,Regal Problem,Regal Problem,Regal Problem,12,Joseph Pride,Nash Rawiller,$9,5.5,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,6,6,Youre Not The King,Youre Not The King,Youre Not The King,10,Bjorn Baker,Rachel King,$3.8,2.5,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,7,7,Sir Franklin,Sir Franklin,Sir Franklin,8,Lauren Davies,Keagan Latham,$34,3.6,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,8,8,Beneath The Rock,Beneath The Rock,Beneath The Rock,17,Kris Lees,James McDonald,$3.8,3.2,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,9,9,Reflect,Reflect,Reflect,13,Joseph Pride,Regan Bayliss,$31,5.1,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,10,10,Bryant,Bryant,Bryant,6,Ron Quinton,Sam Clipperton,$81,6.2,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,11,11,Silencio Porfavor,Silencio Porfavor,Silencio Porfavor,19,Matthew Smith,Amber Riddell (a-3),$81,4.7,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,12,12,Zale,Zale,Zale,15,Gary Nickson,Winona Costin,$101,2.6,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,13,13,Extra Heights,Extra Heights,Extra Heights,14,Peter Snowden,Andrew Adkins,$81,5,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,15,15,My Phar Lady,My Phar Lady,My Phar Lady,11,Richard & Will Freedman,Ashley Morgan,$101,6.5,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,16,16,Atmospheric Rock,Atmospheric Rock,Atmospheric Rock,9,Danny Williams,Dale Cole (a-3),$101,10.2,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,17,17,Gooloo Bucky,Gooloo Bucky,Gooloo Bucky,1,Paul Murray,Chad Lever,$126,5.4,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,18,18,Jaguar Paw,Jaguar Paw,Jaguar Paw,20,Matthew Smith,Tyler Schiller,$21,3.8,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,19,19,Probability Theory,Probability Theory,Probability Theory,18,Nacim Dilmi,Rachel King,$18,3.5,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,20,20,Our Emperor,Our Emperor,Our Emperor,16,Gai Waterhouse &,Adrian Bott,$20,2.3,racenet
-R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Soft 5,+3m Entire,,,,21,21,Dignifying,Dignifying,Dignifying,7,Gai Waterhouse &,Adrian Bott,$14,1,racenet
+R1,Warwick Farm,1,2:15 pm Tab Plate,1300m,Maiden,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",1,1,Social Graces,Social Graces,Social Graces,8,Gai Waterhouse & Adrian Bott,Tim Clark,$5.5,NA,racenet
+R1,Warwick Farm,1,2:15 pm Tab Plate,1300m,Maiden,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",2,2,Supido Secret,Supido Secret,Supido Secret,5,Paul Niceforo,Molly Bourke (a-1.5),$151,7.3,racenet
+R1,Warwick Farm,1,2:15 pm Tab Plate,1300m,Maiden,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",3,3,All Over Harry,All Over Harry,All Over Harry,2,Anthony & Sam Freedman,Zac Lloyd,$4.8,3.7,racenet
+R1,Warwick Farm,1,2:15 pm Tab Plate,1300m,Maiden,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",5,5,Horologist,Horologist,Horologist,3,Chris Waller,James McDonald,$1.75,5.3,racenet
+R1,Warwick Farm,1,2:15 pm Tab Plate,1300m,Maiden,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",6,6,Swagger,Swagger,Swagger,1,Amanda Turner,Reece Jones,$201,6.5,racenet
+R1,Warwick Farm,1,2:15 pm Tab Plate,1300m,Maiden,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",7,7,Zahav,Zahav,Zahav,6,Ciaron Maher,Braith Nock (a-1.5),$11,3,racenet
+R1,Warwick Farm,1,2:15 pm Tab Plate,1300m,Maiden,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",8,8,Belle Chanteuse,Belle Chanteuse,Belle Chanteuse,4,Brad Widdup,Rachel King,$14,6,racenet
+R1,Warwick Farm,1,2:15 pm Tab Plate,1300m,Maiden,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",9,9,Explosive Express,Explosive Express,Explosive Express,7,Chris Waller,Tommy Berry,$12,8,racenet
+R2,Warwick Farm,2,2:50 pm Precise Air Handicap,1400m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",1,1,Donatello,Donatello,Donatello,2,Chris Waller,Nash Rawiller,$7,5.9,racenet
+R2,Warwick Farm,2,2:50 pm Precise Air Handicap,1400m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",3,3,Prince Of Verona,Prince Of Verona,Prince Of Verona,5,Annabel & Rob Archibald,Zac Lloyd,$9,7,racenet
+R2,Warwick Farm,2,2:50 pm Precise Air Handicap,1400m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",4,4,Aladdin's Girl,Aladdin's Girl,Aladdin's Girl,1,Chris Waller,Jason Collett,$12,6.9,racenet
+R2,Warwick Farm,2,2:50 pm Precise Air Handicap,1400m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",5,5,Dignifying,Dignifying,Dignifying,3,Gai Waterhouse & Adrian Bott,Regan Bayliss,$5,1,racenet
+R2,Warwick Farm,2,2:50 pm Precise Air Handicap,1400m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",6,6,Rumdabar,Rumdabar,Rumdabar,4,Kris Lees,James McDonald (a0.5),$4,5.8,racenet
+R2,Warwick Farm,2,2:50 pm Precise Air Handicap,1400m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",7,7,Devil Wings,Devil Wings,Devil Wings,6,"Michael, John & Wayne Hawkes",Tommy Berry (a0.5),$7.5,1,racenet
+R2,Warwick Farm,2,2:50 pm Precise Air Handicap,1400m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",8,8,Elstead,Elstead,Elstead,7,Chris Waller,Siena Grima (a-2),$26,9.7,racenet
+R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",1,1,Knights Armour,Knights Armour,Knights Armour,1,Ross Lavis Rebecca,Bronett Prag (a-3),$16,7.1,racenet
+R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",2,2,Hallowed Halls,Hallowed Halls,Hallowed Halls,4,Chris Waller,James McDonald,$4.4,6.8,racenet
+R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",3,3,Zonkstar,Zonkstar,Zonkstar,2,Matthew Smith,Zac Lloyd,$3.9,4.7,racenet
+R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",4,4,Lugarno,Lugarno,Lugarno,10,John Thompson,Reece Jones,$10,3.3,racenet
+R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",5,5,Off The Scale,Off The Scale,Off The Scale,8,Lou Mary,Braith Nock (a-1.5),$14,5,racenet
+R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",6,6,Rileycat,Rileycat,Rileycat,7,Pat Murphy,Rachel King,$21,7.7,racenet
+R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",7,7,War Ribbon,War Ribbon,War Ribbon,6,David Payne,Ashley Morgan,$11,5.8,racenet
+R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",8,8,Blenheim Girl,Blenheim Girl,Blenheim Girl,3,Chris Waller,Siena Grima (a-2),$3.6,7.7,racenet
+R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",9,9,All Gucci,All Gucci,All Gucci,9,Ron Leemon,Andrew Calder,$23,8.5,racenet
+R3,Warwick Farm,3,3:25 pm Toyota Forklifts Handicap,2130m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",11,11,Marsabit,Marsabit,Marsabit,5,Danny Williams,Winona Costin,$35,7.3,racenet
+R4,Warwick Farm,4,4:00 pm Ole Kirk @ Vinery Stud Handicap,1000m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",1,1,Spartus,Spartus,Spartus,8,Fabio Martino,Siena Grima (a-2),$16,6.2,racenet
+R4,Warwick Farm,4,4:00 pm Ole Kirk @ Vinery Stud Handicap,1000m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",2,2,Winning Revolution,Winning Revolution,Winning Revolution,1,Garry Kirkup,Amber Riddell (a-3),$51,8.1,racenet
+R4,Warwick Farm,4,4:00 pm Ole Kirk @ Vinery Stud Handicap,1000m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",5,5,One Destiny,One Destiny,One Destiny,7,Scott Collings Rebecca,Bronett Prag (a-3),$46,3.9,racenet
+R4,Warwick Farm,4,4:00 pm Ole Kirk @ Vinery Stud Handicap,1000m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",7,7,Valilee,Valilee,Valilee,6,Jake Hull,Shannen Llewellyn (a-3),$7.5,1.2,racenet
+R4,Warwick Farm,4,4:00 pm Ole Kirk @ Vinery Stud Handicap,1000m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",8,8,Horseshoe Hill,Horseshoe Hill,Horseshoe Hill,3,Bjorn Baker,Jason Collett,$3.3,5.6,racenet
+R4,Warwick Farm,4,4:00 pm Ole Kirk @ Vinery Stud Handicap,1000m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",9,9,She's My Ex,She's My Ex,She's My Ex,9,Mick Price & Michael Kent Jnr,Zac Lloyd,$10,2.3,racenet
+R4,Warwick Farm,4,4:00 pm Ole Kirk @ Vinery Stud Handicap,1000m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",10,10,Confidentiality,Confidentiality,Confidentiality,4,Joseph Pride,Nash Rawiller,$3.7,6.2,racenet
+R4,Warwick Farm,4,4:00 pm Ole Kirk @ Vinery Stud Handicap,1000m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",11,11,Bruce I Am,Bruce I Am,Bruce I Am,2,Joseph Pride,Chad Schofield,$3.4,4,racenet
+R4,Warwick Farm,4,4:00 pm Ole Kirk @ Vinery Stud Handicap,1000m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",12,12,Triple Yes,Triple Yes,Triple Yes,5,Liam Ruddy,Mollie Fitzgerald (a-2),$41,3.1,racenet
+R5,Warwick Farm,5,4:35 pm Schweppes Handicap,1400m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",1,1,Uzziah,Uzziah,Uzziah,7,Scott Aspery,Molly Bourke (a-1.5),$13,2.9,racenet
+R5,Warwick Farm,5,4:35 pm Schweppes Handicap,1400m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",2,2,Money Team,Money Team,Money Team,2,Brad Widdup,Dylan Gibbons,$12,6.1,racenet
+R5,Warwick Farm,5,4:35 pm Schweppes Handicap,1400m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",3,3,Elson Boy,Elson Boy,Elson Boy,5,Dar Lunn,William Stanley (a-2),$12,2.1,racenet
+R5,Warwick Farm,5,4:35 pm Schweppes Handicap,1400m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",4,4,Verbil,Verbil,Verbil,1,Annabel & Rob Archibald,Tom Sherry,$12,4.7,racenet
+R5,Warwick Farm,5,4:35 pm Schweppes Handicap,1400m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",7,7,Amreekiyah,Amreekiyah,Amreekiyah,8,Peter Snowden,Chad Schofield,$3.8,6.4,racenet
+R5,Warwick Farm,5,4:35 pm Schweppes Handicap,1400m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",8,8,Miss Hades,Miss Hades,Miss Hades,6,Gary Portelli,Jason Collett,$18,3.8,racenet
+R5,Warwick Farm,5,4:35 pm Schweppes Handicap,1400m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",9,9,Probability Theory,Probability Theory,Probability Theory,4,Nacim Dilmi,Rachel King,$1.85,3.5,racenet
+R5,Warwick Farm,5,4:35 pm Schweppes Handicap,1400m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",10,10,Djapana,Djapana,Djapana,3,Clarry Conners,Siena Grima (a-2),$81,8.7,racenet
+R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",1,1,Storm Season,Storm Season,Storm Season,7,Mick Price & Michael Kent Jnr,Dylan Gibbons,$5.5,4.8,racenet
+R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",2,2,Superfabulistic,Superfabulistic,Superfabulistic,5,Gai Waterhouse & Adrian Bott,Rachel King,$3.1,2.1,racenet
+R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",3,3,Zenmaster,Zenmaster,Zenmaster,2,Craig Carmody,Olivia Chambers (a-3),$71,3.1,racenet
+R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",4,4,Doradus,Doradus,Doradus,6,John Thompson,Zac Lloyd,$12,2.1,racenet
+R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",5,5,Furious,Furious,Furious,9,"Michael, John & Wayne Hawkes",Sam Clipperton,$41,8.1,racenet
+R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",6,6,Dubai Warrior,Dubai Warrior,Dubai Warrior,1,Matthew Smith,Ashley Morgan,$34,3.3,racenet
+R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",7,7,Great Idea,Great Idea,Great Idea,14,Nacim Dilmi,Nash Rawiller,$9,6.6,racenet
+R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",8,8,Without Peer,Without Peer,Without Peer,13,Ciaron Maher,Chad Schofield,$14,4.2,racenet
+R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",10,10,Miles Of Glory,Miles Of Glory,Miles Of Glory,8,Michael Freedman,Tommy Berry,$16,6.4,racenet
+R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",11,11,Standard Deviation,Standard Deviation,Standard Deviation,3,Chris Waller,James McDonald,$8,4.6,racenet
+R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",12,12,Kirribilli,Kirribilli,Kirribilli,12,Bjorn Baker,Amber Riddell (a-3),$13,8.5,racenet
+R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",13,13,Chief Of War,Chief Of War,Chief Of War,11,Heath Maclean,Pierre Boudvillain,$31,6.3,racenet
+R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",15,15,Aura,Aura,Aura,4,"Michael, John & Wayne Hawkes",Tyler Schiller,$19,6.2,racenet
+R6,Warwick Farm,6,5:10 pm Irresistible Pools And Spas Handicap,1600m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",16,16,Pappa Blue,Pappa Blue,Pappa Blue,10,Annabel & Rob Archibald,Tom Sherry,$27,5.9,racenet
+R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",1,1,I Am Carrot,I Am Carrot,I Am Carrot,5,Nacim Dilmi,Jason Collett,$10,2.9,racenet
+R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",2,2,Nitro,Nitro,Nitro,3,Peter Snowden,Chad Schofield,$8,8,racenet
+R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",3,3,Scillato,Scillato,Scillato,2,Matthew Smith,Tommy Berry,$10,5.3,racenet
+R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",4,4,Street Artist,Street Artist,Street Artist,4,Anthony & Sam Freedman,Zac Lloyd,$6.5,7.4,racenet
+R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",5,5,Regal Problem,Regal Problem,Regal Problem,9,Joseph Pride,Nash Rawiller,$7.5,5.5,racenet
+R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",6,6,Youre Not The King,Youre Not The King,Youre Not The King,8,Bjorn Baker,Rachel King,$3.8,2.5,racenet
+R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",7,7,Sir Franklin,Sir Franklin,Sir Franklin,7,Lauren Davies,Keagan Latham,$27,3.6,racenet
+R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",8,8,Beneath The Rock,Beneath The Rock,Beneath The Rock,11,Kris Lees,James McDonald,$3.8,3.2,racenet
+R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",10,10,Bryant,Bryant,Bryant,6,Ron Quinton,Sam Clipperton,$61,6.2,racenet
+R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",12,12,Zale,Zale,Zale,10,Gary Nickson,Winona Costin,$91,2.6,racenet
+R7,Warwick Farm,7,5:45 pm Asahi Super Dry Handicap,1300m,Handicap,Good 4,+3m Entire,Fine,4.97,"Going Stick - 9.4, Shear 10.4",17,17,Gooloo Bucky,Gooloo Bucky,Gooloo Bucky,1,Paul Murray,Chad Lever,$101,5.4,racenet
