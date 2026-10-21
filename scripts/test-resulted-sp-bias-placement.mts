@@ -22,5 +22,11 @@ assert.match(biasApp, /appearance="dark"/);
 assert.match(statusPanel, /startResultedSpPoller/);
 assert.match(poller, /overwriteExistingSp:\s*false/);
 assert.match(poller, /syncBiasFromImportedRace/);
+assert.match(poller, /cached result reused/);
+assert.match(
+  poller,
+  /existing\?\.status === "imported"[\s\S]*syncBiasFromImportedRace\(meetingId, raceNo, existing\.runners/,
+);
+assert.match(poller, /syncCachedImportsToBias\(\);[\s\S]*void pollTick\(\)/);
 
 console.log("Resulted SP Bias-page placement contract passed.");

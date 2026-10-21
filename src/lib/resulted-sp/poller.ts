@@ -170,6 +170,33 @@ export async function importResultedSpForRace(options: {
   let state = loadResultedSpStateForMeeting(meetingId);
   const existing = state.races[raceNo];
   if (existing?.status === "imported" && existing.runners.length > 0 && !options.force) {
+    // A result can already be cached from an earlier page/session while the
+    // Bias rows were not yet available. Re-apply that cached result on every
+    // normal poll so an early race (most commonly R1) cannot remain blank
+    // while later races, imported after Bias was opened, populate correctly.
+    // applyResultsSpToBiasEntries keeps existing user-entered SP values intact.
+    const source = existing.source || existing.runners[0]?.source || "cached";
+    const biasReport = syncBiasFromImportedRace(meetingId, raceNo, existing.runners, source);
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(
+        new CustomEvent(RESULTED_SP_UPDATED_EVENT, { detail: { meetingId } }),
+      );
+    }
+    logResultedSpImportAttempt({
+      attemptId: createResultedSpAttemptId(),
+      timestamp: new Date().toISOString(),
+      meetingId,
+      raceNo,
+      source,
+      resolvedUrl: state.resultsUrl || "",
+      runnersParsed: existing.runners.length,
+      spValuesParsed: existing.runners.filter((runner) => runner.officialSP.trim()).length,
+      rowsWritten: 0,
+      storageKey: getResultedSpStorageKey(meetingId),
+      eventDispatched: true,
+      outcome: "imported",
+      detail: `cached result reused; ${biasReport}`,
+    });
     return { ok: true, imported: false, state };
   }
 
@@ -367,6 +394,24 @@ export function startResultedSpPoller(options: {
 
   const schedule = () => buildResultedSpSchedule(options.races, options.manifest.date);
 
+  const syncCachedImportsToBias = () => {
+    const cachedState = loadResultedSpStateForMeeting(options.meetingId);
+    let foundCachedImport = false;
+    for (const [raceNo, raceState] of Object.entries(cachedState.races)) {
+      if (raceState.status !== "imported" || !raceState.runners.length) continue;
+      foundCachedImport = true;
+      const source = raceState.source || raceState.runners[0]?.source || "cached";
+      syncBiasFromImportedRace(options.meetingId, raceNo, raceState.runners, source);
+    }
+    if (foundCachedImport && typeof window !== "undefined") {
+      window.dispatchEvent(
+        new CustomEvent(RESULTED_SP_UPDATED_EVENT, {
+          detail: { meetingId: options.meetingId },
+        }),
+      );
+    }
+  };
+
   const shouldPollRace = (raceNo: string, now: Date): boolean => {
     const state = loadResultedSpStateForMeeting(options.meetingId);
     const raceState = state.races[raceNo];
@@ -459,6 +504,10 @@ export function startResultedSpPoller(options: {
     void pollTick();
   }, config.pollIntervalMs);
 
+  // Repair Bias from any results cached before this page/session was ready.
+  // This runs once at startup; normal polling continues to skip imported races.
+  syncCachedImportsToBias();
+  notify();
   void pollTick();
 
   return {
