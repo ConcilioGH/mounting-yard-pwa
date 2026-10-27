@@ -11,20 +11,22 @@ import { buildBiasDetailCsv, buildBiasSummaryCsv } from "@/lib/race-day-bias/exp
 import { buildRaceFieldSizeMap } from "@/lib/race-day-bias/field-size";
 import { deliverMeetingExport } from "@/lib/meeting-export-delivery";
 import { loadAllRaces } from "@/lib/db";
-import { DEFAULT_RACES } from "@/lib/constants";
 import { sanitizePositionCodeInput } from "@/lib/race-day-bias/lane";
 import { parseSp, sanitizeSpInput } from "@/lib/race-day-bias/sp";
 import {
+  createEmptyBiasRaceEntry,
   isBiasStorageKey,
   loadRaceDayBiasStateForMeeting,
   logBiasStorageDebug,
   removeLegacyBiasStorageKeys,
   saveRaceDayBiasStateForMeeting,
 } from "@/lib/race-day-bias/storage";
+import { loadResultedSpStateForMeeting } from "@/lib/resulted-sp/storage";
 import { RESULTED_SP_UPDATED_EVENT } from "@/lib/resulted-sp/types";
-import { loadActiveIpadYardRaces } from "@/lib/resulted-sp/active-races";
+import { loadActiveIpadYardRaces, reconcileMeetingRaces } from "@/lib/resulted-sp/active-races";
 import {
   loadMeetingManifest,
+  loadRacesMeetingId,
   MEETING_IMPORTED_EVENT,
   MEETING_MANIFEST_STORAGE_KEY,
 } from "@/lib/meeting-coordination";
@@ -141,15 +143,25 @@ export default function RaceDayBiasApp() {
         const ipadRaces = manifest?.meetingId
           ? loadActiveIpadYardRaces(manifest.meetingId)
           : [];
-        const indexedRaces = ipadRaces.length > 0 ? [] : await loadAllRaces();
-        const races =
-          ipadRaces.length > 0
-            ? ipadRaces
-            : indexedRaces.length > 0
-              ? indexedRaces
-              : DEFAULT_RACES;
+        const indexedRaces = manifest?.meetingId === loadRacesMeetingId() ? await loadAllRaces() : [];
+        const savedBias = manifest?.meetingId
+          ? loadRaceDayBiasStateForMeeting(manifest.meetingId).state.races : [];
+        const savedSpRaceNos = manifest?.meetingId
+          ? Object.keys(loadResultedSpStateForMeeting(manifest.meetingId).races) : [];
+        const races = reconcileMeetingRaces(
+          [...(manifest?.raceNos ?? []), ...savedBias.map((race) => race.raceNo), ...savedSpRaceNos],
+          indexedRaces, ipadRaces,
+        );
         if (!cancelled) {
           setMeetingRaces(races);
+          setState((current) => {
+            const existing = new Map(current.races.map((race) => [race.raceNo, race]));
+            const merged = races.map((race) => {
+              const no = race.id.replace(/^R/i, "");
+              return existing.get(no) ?? createEmptyBiasRaceEntry(no);
+            });
+            return { ...current, races: merged };
+          });
           setFieldSizeByRaceNo(buildRaceFieldSizeMap(races));
         }
       } catch (error) {
@@ -204,8 +216,7 @@ export default function RaceDayBiasApp() {
 
     const refresh = () => {
       console.log("[bias-debug] reload state");
-      void refreshBiasState();
-      void refreshFieldSizes();
+      void refreshBiasState().then(refreshFieldSizes);
     };
 
     const safetyTimer = window.setTimeout(() => {

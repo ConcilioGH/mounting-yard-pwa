@@ -39,8 +39,22 @@ export type RaceScheduleEntry = {
   raceNo: string;
   raceLabel: string;
   title: string;
-  startTime: Date;
+  startTime: Date | null;
 };
+
+function hasCompleteBiasPrices(
+  runners: ReturnType<typeof toResultedSpRunners>,
+  expectedRunnerCount = 4,
+): boolean {
+  const requiredPrices = Math.min(4, Math.max(1, expectedRunnerCount));
+  const pricedFinishers = runners.filter(
+    (runner) =>
+      typeof runner.finishPosition === "number" &&
+      runner.finishPosition >= 1 &&
+      Number.parseFloat(runner.officialSP) > 0,
+  );
+  return pricedFinishers.length >= requiredPrices;
+}
 
 function normalizeRaceNoFromId(id: string): string {
   const trimmed = String(id ?? "").trim();
@@ -58,7 +72,6 @@ export function buildResultedSpSchedule(
     .sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }))
     .map((race) => {
       const startTime = parseStartTimeToDate(race.title, meetingDate, now);
-      if (!startTime) return null;
       const raceNo = normalizeRaceNoFromId(race.id);
       return {
         raceNo,
@@ -84,14 +97,14 @@ export function computeDisplayRaceStatus(
 
   const index = schedule.findIndex((r) => r.raceNo === raceNo);
   const entry = schedule[index];
-  if (!entry) return "waiting";
+  if (!entry?.startTime) return "waiting";
 
   const eligibleAt = entry.startTime.getTime() + config.startDelayMs;
   if (now.getTime() < eligibleAt) return "waiting";
 
   const nextRace = schedule[index + 1];
   if (
-    nextRace &&
+    nextRace?.startTime &&
     now.getTime() >= nextRace.startTime.getTime() &&
     raceState?.status !== "imported"
   ) {
@@ -169,7 +182,13 @@ export async function importResultedSpForRace(options: {
   const raceNo = normalizeRaceNo(options.raceNo);
   let state = loadResultedSpStateForMeeting(meetingId);
   const existing = state.races[raceNo];
-  if (existing?.status === "imported" && existing.runners.length > 0 && !options.force) {
+  const race = options.races.find((candidate) => normalizeRaceNoFromId(candidate.id) === raceNo);
+  if (
+    existing?.status === "imported" &&
+    existing.runners.length > 0 &&
+    hasCompleteBiasPrices(existing.runners, race?.runners.length) &&
+    !options.force
+  ) {
     // A result can already be cached from an earlier page/session while the
     // Bias rows were not yet available. Re-apply that cached result on every
     // normal poll so an early race (most commonly R1) cannot remain blank
@@ -264,7 +283,6 @@ export async function importResultedSpForRace(options: {
       return { ok: true, imported: false, state };
     }
 
-    const race = options.races.find((r) => normalizeRaceNoFromId(r.id) === raceNo);
     const importedAt = new Date().toISOString();
     const source = importResult.source;
     const resultsUrl = importResult.resultsUrl || tabUrl;
@@ -415,11 +433,18 @@ export function startResultedSpPoller(options: {
   const shouldPollRace = (raceNo: string, now: Date): boolean => {
     const state = loadResultedSpStateForMeeting(options.meetingId);
     const raceState = state.races[raceNo];
-    if (raceState?.status === "imported" && raceState.runners.length > 0) return false;
+    const race = options.races.find((candidate) => normalizeRaceNoFromId(candidate.id) === raceNo);
+    if (
+      raceState?.status === "imported" &&
+      raceState.runners.length > 0 &&
+      hasCompleteBiasPrices(raceState.runners, race?.runners.length)
+    ) {
+      return false;
+    }
     if (raceState?.status === "failed") return false;
 
     const entry = schedule().find((r) => r.raceNo === raceNo);
-    if (!entry) return false;
+    if (!entry?.startTime) return false;
     if (now.getTime() < entry.startTime.getTime()) return false;
     if (now.getTime() < entry.startTime.getTime() + config.startDelayMs) return false;
 
@@ -438,7 +463,7 @@ export function startResultedSpPoller(options: {
       const raceState = races[raceNo];
       if (raceState?.status === "imported") continue;
       const next = sched[i + 1];
-      if (next && now.getTime() >= next.startTime.getTime() && raceState?.status !== "failed") {
+      if (next?.startTime && now.getTime() >= next.startTime.getTime() && raceState?.status !== "failed") {
         if (raceState?.status !== "late") {
           races[raceNo] = {
             ...(raceState ?? { runners: [] }),
@@ -468,8 +493,18 @@ export function startResultedSpPoller(options: {
           if (!force) return shouldPollRace(raceNo, now);
           const entry = sched.find((candidate) => candidate.raceNo === raceNo);
           const raceState = loadResultedSpStateForMeeting(options.meetingId).races[raceNo];
-          if (!entry || now.getTime() < entry.startTime.getTime()) return false;
-          if (raceState?.status === "imported" && raceState.runners.length > 0) return false;
+          if (!entry) return false;
+          if (entry.startTime && now.getTime() < entry.startTime.getTime()) return false;
+          const race = options.races.find(
+            (candidate) => normalizeRaceNoFromId(candidate.id) === raceNo,
+          );
+          if (
+            raceState?.status === "imported" &&
+            raceState.runners.length > 0 &&
+            hasCompleteBiasPrices(raceState.runners, race?.runners.length)
+          ) {
+            return false;
+          }
           return raceState?.status !== "failed";
         });
 

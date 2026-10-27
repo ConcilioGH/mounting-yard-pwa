@@ -74,7 +74,12 @@ const result = await importResultedSpForRace({
     sourceFileName: "warwick_farm_2026-10-21_master.csv",
     sourceKind: "csv",
   },
-  races: [],
+  // A complete three-runner field; a missing card requires four priced finishers.
+  races: [{ id: "R1", title: "1:00 pm Race 1", runners: [
+    { no: 7, horse: "Zahav", br: 1, trainer: "", jockey: "", odds: "" },
+    { no: 1, horse: "Social Graces", br: 2, trainer: "", jockey: "", odds: "" },
+    { no: 8, horse: "Belle Chanteuse", br: 3, trainer: "", jockey: "", odds: "" },
+  ] }],
   raceNo: "1",
 });
 

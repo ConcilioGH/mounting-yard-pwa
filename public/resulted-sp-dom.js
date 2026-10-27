@@ -857,7 +857,6 @@
     for (var i = 0; i < sorted.length; i++) {
       var race = sorted[i];
       var start = parseStartTimeToDate(race.title, meetingDate, now);
-      if (!start) continue;
       var raceNo = normalizeRaceNo(race.id);
       schedule.push({
         raceNo: raceNo,
@@ -1252,9 +1251,9 @@
     }
     if (index < 0) return "waiting";
     var entry = schedule[index];
-    if (now.getTime() < entry.startTime.getTime() + START_DELAY_MS) return "waiting";
+    if (!entry.startTime || now.getTime() < entry.startTime.getTime() + START_DELAY_MS) return "waiting";
     var next = schedule[index + 1];
-    if (next && now.getTime() >= next.startTime.getTime() && raceState && raceState.status !== "imported") {
+    if (next && next.startTime && now.getTime() >= next.startTime.getTime() && raceState && raceState.status !== "imported") {
       return "late";
     }
     return raceState && raceState.status === "late" ? "late" : "checking";
@@ -1329,7 +1328,7 @@
         var raceState = state.races[raceNo];
         if (raceState && raceState.status === "imported") continue;
         var next = schedule[i + 1];
-        if (next && now.getTime() >= next.startTime.getTime()) {
+        if (next && next.startTime && now.getTime() >= next.startTime.getTime()) {
           if (!raceState || raceState.status !== "late") {
             state.races[raceNo] = {
               status: "late",
@@ -1353,7 +1352,7 @@
         if (schedule[i].raceNo === raceNo) entry = schedule[i];
       }
       if (!entry) return false;
-      if (now.getTime() < entry.startTime.getTime() + START_DELAY_MS) return false;
+      if (!entry.startTime || now.getTime() < entry.startTime.getTime() + START_DELAY_MS) return false;
       var last = raceState && raceState.lastCheckedAt ? Date.parse(raceState.lastCheckedAt) : 0;
       if (last && now.getTime() - last < POLL_INTERVAL_MS) return false;
       return true;

@@ -1,7 +1,6 @@
 import type { Race, Runner } from "@/lib/types";
 
 const IPAD_YARD_MEETING_STORE_KEY = "ipad-yard-meeting-store-v2";
-const IPAD_YARD_RACES_KEY = "ipad-yard-races-v1";
 
 function normalizeRunner(value: unknown): Runner | null {
   if (!value || typeof value !== "object") return null;
@@ -41,12 +40,8 @@ export function parseIpadYardMeetingStoreRaces(raw: string, meetingId: string): 
       meetings?: Record<string, { races?: unknown[] }>;
     };
     if (store.version !== 2 || !store.meetings) return [];
-    // Older iPad imports sometimes generated a manifest id after the meeting store
-    // had already chosen its key. Prefer an exact match, otherwise use the store's
-    // explicitly active card; never select an arbitrary saved meeting.
-    const selectedMeetingId = store.meetings[meetingId]
-      ? meetingId
-      : String(store.activeMeetingId ?? "").trim();
+    // Only the requested meeting may contribute races.
+    const selectedMeetingId = store.meetings[meetingId] ? meetingId : "";
     if (!selectedMeetingId) return [];
     const races = store.meetings[selectedMeetingId]?.races;
     if (!Array.isArray(races)) return [];
@@ -76,8 +71,28 @@ export function loadActiveIpadYardRaces(meetingId: string): Race[] {
       meetingId,
     );
     if (meetingRaces.length > 0) return meetingRaces;
-    return parseIpadYardLegacyRaces(localStorage.getItem(IPAD_YARD_RACES_KEY) ?? "");
+    // Unscoped legacy data cannot safely be attributed to this meeting.
+    return [];
   } catch {
     return [];
   }
+}
+
+/** Reconcile only cards already scoped to the same meeting; never use array length as a race number. */
+export function reconcileMeetingRaces(raceNos: string[], ...cards: Race[][]): Race[] {
+  const byNo = new Map<string, Race>();
+  const normalize = (id: string) => String(Number(id.replace(/^R/i, "")));
+  for (const card of cards) {
+    for (const race of card) {
+      const no = normalize(race.id);
+      if (/^[1-9]\d*$/.test(no) && !byNo.has(no)) byNo.set(no, race);
+    }
+  }
+  for (const id of raceNos) {
+    const no = normalize(id);
+    if (/^[1-9]\d*$/.test(no) && !byNo.has(no)) {
+      byNo.set(no, { id: `R${no}`, title: `Race ${no}`, runners: [] });
+    }
+  }
+  return [...byNo.values()].sort((a, b) => a.id.localeCompare(b.id, undefined, { numeric: true }));
 }

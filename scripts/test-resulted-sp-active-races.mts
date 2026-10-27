@@ -25,7 +25,7 @@ const races = parseIpadYardMeetingStoreRaces(raw, meetingId);
 assert.equal(races.length, 1);
 assert.equal(races[0]?.title, "11:25 am Midway Handicap");
 assert.equal(races[0]?.runners[0]?.horse, "Attractiveness (NZ)");
-assert.equal(parseIpadYardMeetingStoreRaces(raw, "2026-08-02-other").length, 1);
+assert.equal(parseIpadYardMeetingStoreRaces(raw, "2026-08-02-other").length, 0);
 
 const inactiveStore = JSON.stringify({ version: 2, activeMeetingId: "", meetings: {} });
 assert.deepEqual(parseIpadYardMeetingStoreRaces(inactiveStore, meetingId), []);

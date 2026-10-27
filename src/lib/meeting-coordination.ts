@@ -206,7 +206,7 @@ export function syncRaceDayBiasOnMeetingImport(
   options?: SyncRaceDayBiasOptions,
 ): RaceDayBiasState {
   const id = meetingId.trim();
-  const normalizedRaceNos = raceNos.map(normalizeRaceNo).filter(Boolean);
+  const normalizedRaceNos = [...new Set(raceNos.map(normalizeRaceNo).filter(Boolean))];
 
   if (!id || normalizedRaceNos.length === 0) {
     return createDefaultBiasState();
@@ -219,6 +219,11 @@ export function syncRaceDayBiasOnMeetingImport(
     existing.races.map((race) => [normalizeRaceNo(race.raceNo), race] as const),
   );
 
+  // A partial/stale card must never delete saved races, SPs or lane observations.
+  for (const raceNo of byNo.keys()) {
+    if (!normalizedRaceNos.includes(raceNo)) normalizedRaceNos.push(raceNo);
+  }
+  normalizedRaceNos.sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
   const races: RaceBiasEntry[] = normalizedRaceNos.map(
     (raceNo) => byNo.get(raceNo) ?? createEmptyBiasRaceEntry(raceNo),
   );
