@@ -1,111 +1,111 @@
 race_id,track,race_no,race_title,distance,grade,going,rail,weather,penetrometer,track_information,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
-R1,Newcastle,1,CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,1,1,Bronze Lion,Bronze Lion,Bronze Lion,1,Kris Lees,Tim Clark,,NA,racenet
-R1,Newcastle,1,CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,2,2,Choice Temptation,Choice Temptation,Choice Temptation,2,Mick Price & Michael Kent (Jnr),Tom Sherry,,NA,racenet
-R1,Newcastle,1,CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,3,3,Fast Feather,Fast Feather,Fast Feather,11,Geoff Allendorf,Louis Beuzelin,,NA,racenet
-R1,Newcastle,1,CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,4,4,Heli Jinglong,Heli Jinglong,Heli Jinglong,5,Tommy Wong,Ms Winona Costin,,1,racenet
-R1,Newcastle,1,CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,5,5,Toytown,Toytown,Toytown,7,Brad Widdup,Nash Rawiller,,NA,racenet
-R1,Newcastle,1,CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,6,6,Acrozina,Acrozina,Acrozina,8,Fabio Martino,Reece Jones,,NA,racenet
-R1,Newcastle,1,CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,7,7,Freeflow,Freeflow,Freeflow,10,Ciaron Maher,Adam Farragher,,3.5,racenet
-R1,Newcastle,1,CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,8,8,Golden Hall,Golden Hall,Golden Hall,4,Ciaron Maher,Braith Nock (a1.5/53kg),,NA,racenet
-R1,Newcastle,1,CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,9,9,Inside Perfection,Inside Perfection,Inside Perfection,6,Kris Lees,Tyler Schiller,,NA,racenet
-R1,Newcastle,1,CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,10,10,Lucky Lakota,Lucky Lakota,Lucky Lakota,3,Ciaron Maher,Dylan Gibbons,,NA,racenet
-R1,Newcastle,1,CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,11,11,Stellar Ami,Stellar Ami,Stellar Ami,9,Gai Waterhouse & Adrian Bott,Regan Bayliss,,NA,racenet
-R2,Newcastle,2,NZB ALF KNEEBONE TRANS-TASMAN TROPHY BENCHMARK 88 HANDICAP,1850,BM88,Soft 5,True,Overcast,,,1,1,Rock Empire,Rock Empire,Rock Empire,2,Ciaron Maher,Nash Rawiller,,5.5,racenet
-R2,Newcastle,2,NZB ALF KNEEBONE TRANS-TASMAN TROPHY BENCHMARK 88 HANDICAP,1850,BM88,Soft 5,True,Overcast,,,2,2,Fortune,Fortune,Fortune,8,Annabel & Rob Archibald,Jason Collett,,6,racenet
-R2,Newcastle,2,NZB ALF KNEEBONE TRANS-TASMAN TROPHY BENCHMARK 88 HANDICAP,1850,BM88,Soft 5,True,Overcast,,,3,3,Agent Zero,Agent Zero,Agent Zero,4,Ciaron Maher,Tim Clark,,3.4,racenet
-R2,Newcastle,2,NZB ALF KNEEBONE TRANS-TASMAN TROPHY BENCHMARK 88 HANDICAP,1850,BM88,Soft 5,True,Overcast,,,5,5,Stylebender,Stylebender,Stylebender,7,Kristen Buchanan,Ms Mollie Fitzgerald (a2/50kg),,5.4,racenet
-R2,Newcastle,2,NZB ALF KNEEBONE TRANS-TASMAN TROPHY BENCHMARK 88 HANDICAP,1850,BM88,Soft 5,True,Overcast,,,6,6,C’mon Flyer,C’mon Flyer,C’mon Flyer,1,Robert & Luke Price,Tyler Schiller,,5.8,racenet
-R2,Newcastle,2,NZB ALF KNEEBONE TRANS-TASMAN TROPHY BENCHMARK 88 HANDICAP,1850,BM88,Soft 5,True,Overcast,,,8,8,Super Helpful,Super Helpful,Super Helpful,6,"Barbara Joseph, Paul & Matt Jones",Reece Jones,,6.9,racenet
-R3,Newcastle,3,TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,1,1,Think Like Paddy,Think Like Paddy,Think Like Paddy,12,Matthew Dunn,Nash Rawiller,,5.5,racenet
-R3,Newcastle,3,TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,2,2,Condone,Condone,Condone,11,Mack Griffith,Andrew Adkins,,5.7,racenet
-R3,Newcastle,3,TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,3,3,Creative Righteous,Creative Righteous,Creative Righteous,4,Peter Cheers,William Stanley (a2/54kg),,5.1,racenet
-R3,Newcastle,3,TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,4,4,Olympian,Olympian,Olympian,18,Paul Messara & Leah Gavranich,Aaron Bullock,,7.9,racenet
-R3,Newcastle,3,TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,5,5,Samurai,Samurai,Samurai,5,Brett & Georgie Cavanough,Ms Shannen Llewellyn (a3/54kg),,6.1,racenet
-R3,Newcastle,3,TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,6,6,Think I Do,Think I Do,Think I Do,7,"Barbara Joseph, Paul & Matt Jones",Ms Alysha Collett,,4.4,racenet
-R3,Newcastle,3,TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,8,8,Vltava,Vltava,Vltava,20,Joel Wilkes,Luke Rolls,,7.2,racenet
-R3,Newcastle,3,TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,9,9,Imelda,Imelda,Imelda,13,Paul Messara & Leah Gavranich,Braith Nock (a1.5/53kg),,4.5,racenet
-R3,Newcastle,3,TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,10,10,Airhawk,Airhawk,Airhawk,3,Ethan Ensby,Dylan Gibbons,,7.2,racenet
-R3,Newcastle,3,TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,11,11,Santatime,Santatime,Santatime,16,Glen Milligan,Zac Wadick,,8.9,racenet
-R3,Newcastle,3,TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,12,12,Costa Del Sol,Costa Del Sol,Costa Del Sol,22,Paul Messara & Leah Gavranich,Tim Clark,,3.3,racenet
-R3,Newcastle,3,TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,13,13,Currumbin Alley,Currumbin Alley,Currumbin Alley,17,Brett & Georgie Cavanough,Ms Mollie Fitzgerald (a2/50kg),,2.8,racenet
-R3,Newcastle,3,TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,14,14,Always A Rainbow,Always A Rainbow,Always A Rainbow,1,Stirling Osland,Tom Sherry,,4.9,racenet
-R3,Newcastle,3,TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,15,15,Snowy,Snowy,Snowy,9,"Barbara Joseph, Paul & Matt Jones",Ms Siena Grima (a2/51kg),,4.7,racenet
-R3,Newcastle,3,TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,16,16,Street Force,Street Force,Street Force,8,Scott Singleton,Ms Mikayla Weir,,8.9,racenet
-R3,Newcastle,3,TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,17,17,Mr Chips,Mr Chips,Mr Chips,15,Troy O'Neile,Ms Jenny Duggan,,6.5,racenet
-R4,Newcastle,4,EXPRESS GLASS MIDWAY HANDICAP,1600,BM72,Soft 5,True,Overcast,,,3,3,Caltsar,Caltsar,Caltsar,11,Nathan Doyle,Braith Nock (a1.5/53kg),,7.4,racenet
-R4,Newcastle,4,EXPRESS GLASS MIDWAY HANDICAP,1600,BM72,Soft 5,True,Overcast,,,5,5,Mornington Pier,Mornington Pier,Mornington Pier,9,Nathan Doyle,Ms Alysha Collett,,7.7,racenet
-R4,Newcastle,4,EXPRESS GLASS MIDWAY HANDICAP,1600,BM72,Soft 5,True,Overcast,,,6,6,Zenmaster,Zenmaster,Zenmaster,7,Craig Carmody,Ms Mollie Fitzgerald (a2/50kg),,3.4,racenet
-R4,Newcastle,4,EXPRESS GLASS MIDWAY HANDICAP,1600,BM72,Soft 5,True,Overcast,,,7,7,Hellfire Express,Hellfire Express,Hellfire Express,4,Nathan Doyle,William Stanley (a2/54kg),,3.9,racenet
-R4,Newcastle,4,EXPRESS GLASS MIDWAY HANDICAP,1600,BM72,Soft 5,True,Overcast,,,8,8,Cosmic Avenger,Cosmic Avenger,Cosmic Avenger,1,John Sargent,Tommy Berry,,4.5,racenet
-R4,Newcastle,4,EXPRESS GLASS MIDWAY HANDICAP,1600,BM72,Soft 5,True,Overcast,,,9,9,Change My Address,Change My Address,Change My Address,6,John Sargent,Jason Collett,,8.2,racenet
-R4,Newcastle,4,EXPRESS GLASS MIDWAY HANDICAP,1600,BM72,Soft 5,True,Overcast,,,10,10,Cabbucio,Cabbucio,Cabbucio,5,Joseph Ible,Andrew Adkins,,5.2,racenet
-R4,Newcastle,4,EXPRESS GLASS MIDWAY HANDICAP,1600,BM72,Soft 5,True,Overcast,,,11,11,Djapana,Djapana,Djapana,3,Clarry Conners,Ms Siena Grima (a2/51kg),,8.7,racenet
-R4,Newcastle,4,EXPRESS GLASS MIDWAY HANDICAP,1600,BM72,Soft 5,True,Overcast,,,12,12,Philipsburg,Philipsburg,Philipsburg,8,James Ponsonby,Ms Winona Costin,,8.5,racenet
-R5,Newcastle,5,AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,1,1,Uzziah,Uzziah,Uzziah,11,Albert O'Hearn,Ms Molly Bourke,,3.5,racenet
-R5,Newcastle,5,AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,2,2,Sacrify,Sacrify,Sacrify,10,Annabel & Rob Archibald,Ms Mollie Fitzgerald (a2/50kg),,4.2,racenet
-R5,Newcastle,5,AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,3,3,Amreekiyah,Amreekiyah,Amreekiyah,9,Peter Snowden,Aaron Bullock,,6.5,racenet
-R5,Newcastle,5,AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,4,4,Spicy Lu,Spicy Lu,Spicy Lu,5,Nick Olive,Ms Coriah Keatings (a3/51kg),,3.1,racenet
-R5,Newcastle,5,AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,5,5,Cuban Cigar,Cuban Cigar,Cuban Cigar,7,Tracey Bartley,Jason Collett,,7.6,racenet
-R5,Newcastle,5,AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,6,6,Spaceballs,Spaceballs,Spaceballs,3,Jason Deamer,Tim Clark,,6.3,racenet
-R5,Newcastle,5,AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,8,8,Arapawa,Arapawa,Arapawa,12,Brett & Georgie Cavanough,Ms Alysha Collett,,3.9,racenet
-R5,Newcastle,5,AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,9,9,Hammoon Sensation,Hammoon Sensation,Hammoon Sensation,2,Rodney Northam,Reece Jones,,4,racenet
-R5,Newcastle,5,AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,12,12,Poisen Point,Poisen Point,Poisen Point,6,Brett Robb,Ms Siena Grima (a2/51kg),,9.3,racenet
-R5,Newcastle,5,AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,13,13,Green Run,Green Run,Green Run,4,Dar Lunn,William Stanley (a2/54kg),,7.8,racenet
-R6,Newcastle,6,MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,1,1,Chix,Chix,Chix,7,John O'Shea & Tom Charlton,Ms Anna Roper (a1.5/53kg),,2.9,racenet
-R6,Newcastle,6,MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,2,2,Miss Spacegirl,Miss Spacegirl,Miss Spacegirl,5,Richard & Will Freedman,William Stanley (a2/54kg),,7,racenet
-R6,Newcastle,6,MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,3,3,Ertijaaj,Ertijaaj,Ertijaaj,1,Chris Waller,Ms Siena Grima (a2/51kg),,4,racenet
-R6,Newcastle,6,MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,4,4,Placid Pearl,Placid Pearl,Placid Pearl,15,Matthew Smith,Ms Winona Costin,,6.1,racenet
-R6,Newcastle,6,MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,6,6,Regal Problem,Regal Problem,Regal Problem,4,Joseph Pride,Nash Rawiller,,5.4,racenet
-R6,Newcastle,6,MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,7,7,Beside The Ocean,Beside The Ocean,Beside The Ocean,8,Chris Waller,Tommy Berry,,8.4,racenet
-R6,Newcastle,6,MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,10,10,Nova Centauri,Nova Centauri,Nova Centauri,2,Rodney Northam,Ms Mikayla Weir,,6.7,racenet
-R6,Newcastle,6,MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,12,12,Upwardly Mobile,Upwardly Mobile,Upwardly Mobile,13,Rodney Northam,Reece Jones,,8.4,racenet
-R6,Newcastle,6,MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,13,13,Cando Attitude,Cando Attitude,Cando Attitude,6,"Barbara Joseph, Paul & Matt Jones",Ms Alysha Collett,,5.8,racenet
-R6,Newcastle,6,MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,14,14,Live,Live,Live,10,Peter Snowden,Tyler Schiller,,6.9,racenet
-R7,Newcastle,7,NZB 3YO SPRING STAKES,1600,Open Set Weight 3yo NA,Soft 5,True,Overcast,,,1,1,Kickup Rocky,Kickup Rocky,Kickup Rocky,4,Desleigh Forster,Daniel Moor,,7.4,racenet
-R7,Newcastle,7,NZB 3YO SPRING STAKES,1600,Open Set Weight 3yo NA,Soft 5,True,Overcast,,,2,2,Prince Of Verona,Prince Of Verona,Prince Of Verona,8,Annabel & Rob Archibald,Nash Rawiller,,4,racenet
-R7,Newcastle,7,NZB 3YO SPRING STAKES,1600,Open Set Weight 3yo NA,Soft 5,True,Overcast,,,3,3,Horologist,Horologist,Horologist,7,Chris Waller,Tommy Berry,,5.2,racenet
-R7,Newcastle,7,NZB 3YO SPRING STAKES,1600,Open Set Weight 3yo NA,Soft 5,True,Overcast,,,4,4,Zahav,Zahav,Zahav,5,Ciaron Maher,Braith Nock (a),,1.7,racenet
-R7,Newcastle,7,NZB 3YO SPRING STAKES,1600,Open Set Weight 3yo NA,Soft 5,True,Overcast,,,6,6,Iminastate,Iminastate,Iminastate,1,Richard & Will Freedman,Tim Clark,,4.9,racenet
-R7,Newcastle,7,NZB 3YO SPRING STAKES,1600,Open Set Weight 3yo NA,Soft 5,True,Overcast,,,8,8,Tiger Turf,Tiger Turf,Tiger Turf,2,Gary Portelli,Ms Alysha Collett,,5.7,racenet
-R7,Newcastle,7,NZB 3YO SPRING STAKES,1600,Open Set Weight 3yo NA,Soft 5,True,Overcast,,,9,9,Katoto,Katoto,Katoto,3,Chris Waller,Tyler Schiller,,6.3,racenet
-R8,Newcastle,8,THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,2,2,General Salute,General Salute,General Salute,10,Gerald Ryan & Sterling Alexiou,Tim Clark,,6.1,racenet
-R8,Newcastle,8,THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,3,3,King Of Roseau,King Of Roseau,King Of Roseau,16,Peter Snowden,Tom Sherry,,9,racenet
-R8,Newcastle,8,THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,4,4,Coal Crusher,Coal Crusher,Coal Crusher,19,Joseph Pride,Andrew Adkins,,2.6,racenet
-R8,Newcastle,8,THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,5,5,War Eternal,War Eternal,War Eternal,22,Bjorn Baker,Tommy Berry,,5.8,racenet
-R8,Newcastle,8,THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,6,6,Sweynesday,Sweynesday,Sweynesday,6,Annabel & Rob Archibald,Ms Alysha Collett,,12.1,racenet
-R8,Newcastle,8,THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,7,7,Infancy,Infancy,Infancy,5,Kris Lees,Jason Collett,,9.9,racenet
-R8,Newcastle,8,THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,9,9,Accredited,Accredited,Accredited,1,Joseph Pride,Regan Bayliss,,3.8,racenet
-R8,Newcastle,8,THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,10,10,Chidiac,Chidiac,Chidiac,2,Brett & Georgie Cavanough,Braith Nock (a),,7.4,racenet
-R8,Newcastle,8,THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,11,11,Disneck,Disneck,Disneck,4,Bjorn Baker,Reece Jones,,9.5,racenet
-R8,Newcastle,8,THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,12,12,Brave One,Brave One,Brave One,8,"Michael, John & Wayne Hawkes",Dylan Gibbons,,5.8,racenet
-R8,Newcastle,8,THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,13,13,Brudenell,Brudenell,Brudenell,14,Kris Lees,Tyler Schiller,,4.4,racenet
-R8,Newcastle,8,THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,14,14,Signor Tortoni,Signor Tortoni,Signor Tortoni,13,Ron Quinton,Ms Siena Grima (a),,4.8,racenet
-R8,Newcastle,8,THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,15,15,Golden Straand,Golden Straand,Golden Straand,20,Matthew Smith,Adam Farragher,,5.2,racenet
-R8,Newcastle,8,THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,16,16,Lord Of Biscay,Lord Of Biscay,Lord Of Biscay,3,Kris Lees,Daniel Moor,,7,racenet
-R8,Newcastle,8,THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,17,17,She’s An Artist,She’s An Artist,She’s An Artist,11,Ciaron Maher,"Ms Mollie Fitzgerald (a), (late alt)",,5.1,racenet
-R8,Newcastle,8,THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,18,18,Point And Shoot,Point And Shoot,Point And Shoot,18,Bjorn Baker,Ms Winona Costin (late alt),,10,racenet
-R9,Newcastle,9,NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,1,1,Campaldino,Campaldino,Campaldino,6,Gai Waterhouse & Adrian Bott,Tim Clark,,3.7,racenet
-R9,Newcastle,9,NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,2,2,Fawkner Park,Fawkner Park,Fawkner Park,5,Declan Maher,Nash Rawiller,,8.3,racenet
-R9,Newcastle,9,NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,3,3,Doctor Askar,Doctor Askar,Doctor Askar,11,Chris Waller,Tommy Berry,,9.5,racenet
-R9,Newcastle,9,NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,4,4,Ring Ahoy,Ring Ahoy,Ring Ahoy,7,David Hatch,Zac Wadick,,9.2,racenet
-R9,Newcastle,9,NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,5,5,Zuleika,Zuleika,Zuleika,10,Todd Pollard,Ms Alysha Collett,,7,racenet
-R9,Newcastle,9,NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,6,6,Don Diego De Vega,Don Diego De Vega,Don Diego De Vega,3,Annabel & Rob Archibald,Braith Nock (a),,5.6,racenet
-R9,Newcastle,9,NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,7,7,Bestower,Bestower,Bestower,9,Kris Lees,Tyler Schiller,,8.6,racenet
-R9,Newcastle,9,NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,8,8,Savvy Spy,Savvy Spy,Savvy Spy,4,Gai Waterhouse & Adrian Bott,Louis Beuzelin,,4.9,racenet
-R9,Newcastle,9,NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,9,9,Steel Blaze,Steel Blaze,Steel Blaze,2,Brett Lazzarini,Reece Jones,,7.4,racenet
-R9,Newcastle,9,NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,10,10,Mr Fabulous,Mr Fabulous,Mr Fabulous,8,Theresa Bateup,Ms Siena Grima (a),,6.6,racenet
-R10,Newcastle,10,REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,1,1,Kerguelen,Kerguelen,Kerguelen,11,Joseph Pride,Aaron Bullock,,7.3,racenet
-R10,Newcastle,10,REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,2,2,Whinchat,Whinchat,Whinchat,16,David Pfieffer,Tommy Berry,,2.3,racenet
-R10,Newcastle,10,REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,3,3,Just Party,Just Party,Just Party,3,Gerald Ryan & Sterling Alexiou,Jason Collett,,7.5,racenet
-R10,Newcastle,10,REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,5,5,Navy Pilot,Navy Pilot,Navy Pilot,15,Ciaron Maher,Ms Shannen Llewellyn (a3/54kg),,8.1,racenet
-R10,Newcastle,10,REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,6,6,Dark Glitter,Dark Glitter,Dark Glitter,22,Mike Van Gestel,Ms Anna Roper (a1.5/53kg),,8.1,racenet
-R10,Newcastle,10,REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,7,7,Shangri La Boy,Shangri La Boy,Shangri La Boy,2,Gai Waterhouse & Adrian Bott,Louis Beuzelin,,1.2,racenet
-R10,Newcastle,10,REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,8,8,Well Timed,Well Timed,Well Timed,7,Kerry Parker,Nash Rawiller,,6.7,racenet
-R10,Newcastle,10,REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,9,9,Phearson,Phearson,Phearson,19,Sara Ryan,Ms Alysha Collett,,6,racenet
-R10,Newcastle,10,REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,10,10,Theblade,Theblade,Theblade,4,"Michael, John & Wayne Hawkes",Tyler Schiller,,4.1,racenet
-R10,Newcastle,10,REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,11,11,Glorious Moments,Glorious Moments,Glorious Moments,6,Jim & Greg Lee,Regan Bayliss,,5.9,racenet
-R10,Newcastle,10,REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,12,12,Hillier,Hillier,Hillier,13,Annabel & Rob Archibald,Tom Sherry,,5.9,racenet
-R10,Newcastle,10,REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,13,13,Rotagilla,Rotagilla,Rotagilla,12,Gai Waterhouse & Adrian Bott,Tim Clark,,6.5,racenet
-R10,Newcastle,10,REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,15,15,Eagle Express,Eagle Express,Eagle Express,1,Chris Waller,Ms Siena Grima (a2/51kg),,5.5,racenet
-R10,Newcastle,10,REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,17,17,Charcoals,Charcoals,Charcoals,18,Anthony & Sam Freedman,Dylan Gibbons,,8.3,racenet
-R10,Newcastle,10,REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,20,20,Lightning Glory,Lightning Glory,Lightning Glory,8,Nathan Doyle,William Stanley (a2/54kg),,2.9,racenet
+R1,Newcastle,1,12:35PM CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,1,1,Bronze Lion,Bronze Lion,Bronze Lion,1,Kris Lees,Tim Clark,,NA,racenet
+R1,Newcastle,1,12:35PM CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,2,2,Choice Temptation,Choice Temptation,Choice Temptation,2,Mick Price & Michael Kent (Jnr),Tom Sherry,,NA,racenet
+R1,Newcastle,1,12:35PM CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,3,3,Fast Feather,Fast Feather,Fast Feather,11,Geoff Allendorf,Louis Beuzelin,,NA,racenet
+R1,Newcastle,1,12:35PM CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,4,4,Heli Jinglong,Heli Jinglong,Heli Jinglong,5,Tommy Wong,Ms Winona Costin,,1,racenet
+R1,Newcastle,1,12:35PM CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,5,5,Toytown,Toytown,Toytown,7,Brad Widdup,Nash Rawiller,,NA,racenet
+R1,Newcastle,1,12:35PM CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,6,6,Acrozina,Acrozina,Acrozina,8,Fabio Martino,Reece Jones,,NA,racenet
+R1,Newcastle,1,12:35PM CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,7,7,Freeflow,Freeflow,Freeflow,10,Ciaron Maher,Adam Farragher,,3.5,racenet
+R1,Newcastle,1,12:35PM CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,8,8,Golden Hall,Golden Hall,Golden Hall,4,Ciaron Maher,Braith Nock (a1.5/53kg),,NA,racenet
+R1,Newcastle,1,12:35PM CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,9,9,Inside Perfection,Inside Perfection,Inside Perfection,6,Kris Lees,Tyler Schiller,,NA,racenet
+R1,Newcastle,1,12:35PM CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,10,10,Lucky Lakota,Lucky Lakota,Lucky Lakota,3,Ciaron Maher,Dylan Gibbons,,NA,racenet
+R1,Newcastle,1,12:35PM CLEANAWAY MAX LEES CLASSIC,900,Open Set Weight With Penalties 2yo NA,Soft 5,True,Overcast,,,11,11,Stellar Ami,Stellar Ami,Stellar Ami,9,Gai Waterhouse & Adrian Bott,Regan Bayliss,,NA,racenet
+R2,Newcastle,2,1:10PM NZB ALF KNEEBONE TRANS-TASMAN TROPHY BENCHMARK 88 HANDICAP,1850,BM88,Soft 5,True,Overcast,,,1,1,Rock Empire,Rock Empire,Rock Empire,2,Ciaron Maher,Nash Rawiller,,5.5,racenet
+R2,Newcastle,2,1:10PM NZB ALF KNEEBONE TRANS-TASMAN TROPHY BENCHMARK 88 HANDICAP,1850,BM88,Soft 5,True,Overcast,,,2,2,Fortune,Fortune,Fortune,8,Annabel & Rob Archibald,Jason Collett,,6,racenet
+R2,Newcastle,2,1:10PM NZB ALF KNEEBONE TRANS-TASMAN TROPHY BENCHMARK 88 HANDICAP,1850,BM88,Soft 5,True,Overcast,,,3,3,Agent Zero,Agent Zero,Agent Zero,4,Ciaron Maher,Tim Clark,,3.4,racenet
+R2,Newcastle,2,1:10PM NZB ALF KNEEBONE TRANS-TASMAN TROPHY BENCHMARK 88 HANDICAP,1850,BM88,Soft 5,True,Overcast,,,5,5,Stylebender,Stylebender,Stylebender,7,Kristen Buchanan,Ms Mollie Fitzgerald (a2/50kg),,5.4,racenet
+R2,Newcastle,2,1:10PM NZB ALF KNEEBONE TRANS-TASMAN TROPHY BENCHMARK 88 HANDICAP,1850,BM88,Soft 5,True,Overcast,,,6,6,C’mon Flyer,C’mon Flyer,C’mon Flyer,1,Robert & Luke Price,Tyler Schiller,,5.8,racenet
+R2,Newcastle,2,1:10PM NZB ALF KNEEBONE TRANS-TASMAN TROPHY BENCHMARK 88 HANDICAP,1850,BM88,Soft 5,True,Overcast,,,8,8,Super Helpful,Super Helpful,Super Helpful,6,"Barbara Joseph, Paul & Matt Jones",Reece Jones,,6.9,racenet
+R3,Newcastle,3,1:45PM TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,1,1,Think Like Paddy,Think Like Paddy,Think Like Paddy,12,Matthew Dunn,Nash Rawiller,,5.5,racenet
+R3,Newcastle,3,1:45PM TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,2,2,Condone,Condone,Condone,11,Mack Griffith,Andrew Adkins,,5.7,racenet
+R3,Newcastle,3,1:45PM TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,3,3,Creative Righteous,Creative Righteous,Creative Righteous,4,Peter Cheers,William Stanley (a2/54kg),,5.1,racenet
+R3,Newcastle,3,1:45PM TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,4,4,Olympian,Olympian,Olympian,18,Paul Messara & Leah Gavranich,Aaron Bullock,,7.9,racenet
+R3,Newcastle,3,1:45PM TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,5,5,Samurai,Samurai,Samurai,5,Brett & Georgie Cavanough,Ms Shannen Llewellyn (a3/54kg),,6.1,racenet
+R3,Newcastle,3,1:45PM TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,6,6,Think I Do,Think I Do,Think I Do,7,"Barbara Joseph, Paul & Matt Jones",Ms Alysha Collett,,4.4,racenet
+R3,Newcastle,3,1:45PM TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,8,8,Vltava,Vltava,Vltava,20,Joel Wilkes,Luke Rolls,,7.2,racenet
+R3,Newcastle,3,1:45PM TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,9,9,Imelda,Imelda,Imelda,13,Paul Messara & Leah Gavranich,Braith Nock (a1.5/53kg),,4.5,racenet
+R3,Newcastle,3,1:45PM TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,10,10,Airhawk,Airhawk,Airhawk,3,Ethan Ensby,Dylan Gibbons,,7.2,racenet
+R3,Newcastle,3,1:45PM TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,11,11,Santatime,Santatime,Santatime,16,Glen Milligan,Zac Wadick,,8.9,racenet
+R3,Newcastle,3,1:45PM TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,12,12,Costa Del Sol,Costa Del Sol,Costa Del Sol,22,Paul Messara & Leah Gavranich,Tim Clark,,3.3,racenet
+R3,Newcastle,3,1:45PM TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,13,13,Currumbin Alley,Currumbin Alley,Currumbin Alley,17,Brett & Georgie Cavanough,Ms Mollie Fitzgerald (a2/50kg),,2.8,racenet
+R3,Newcastle,3,1:45PM TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,14,14,Always A Rainbow,Always A Rainbow,Always A Rainbow,1,Stirling Osland,Tom Sherry,,4.9,racenet
+R3,Newcastle,3,1:45PM TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,15,15,Snowy,Snowy,Snowy,9,"Barbara Joseph, Paul & Matt Jones",Ms Siena Grima (a2/51kg),,4.7,racenet
+R3,Newcastle,3,1:45PM TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,16,16,Street Force,Street Force,Street Force,8,Scott Singleton,Ms Mikayla Weir,,8.9,racenet
+R3,Newcastle,3,1:45PM TAB HIGHWAY HANDICAP,1600,Class 3,Soft 5,True,Overcast,,,17,17,Mr Chips,Mr Chips,Mr Chips,15,Troy O'Neile,Ms Jenny Duggan,,6.5,racenet
+R4,Newcastle,4,2:20PM EXPRESS GLASS MIDWAY HANDICAP,1600,BM72,Soft 5,True,Overcast,,,3,3,Caltsar,Caltsar,Caltsar,11,Nathan Doyle,Braith Nock (a1.5/53kg),,7.4,racenet
+R4,Newcastle,4,2:20PM EXPRESS GLASS MIDWAY HANDICAP,1600,BM72,Soft 5,True,Overcast,,,5,5,Mornington Pier,Mornington Pier,Mornington Pier,9,Nathan Doyle,Ms Alysha Collett,,7.7,racenet
+R4,Newcastle,4,2:20PM EXPRESS GLASS MIDWAY HANDICAP,1600,BM72,Soft 5,True,Overcast,,,6,6,Zenmaster,Zenmaster,Zenmaster,7,Craig Carmody,Ms Mollie Fitzgerald (a2/50kg),,3.4,racenet
+R4,Newcastle,4,2:20PM EXPRESS GLASS MIDWAY HANDICAP,1600,BM72,Soft 5,True,Overcast,,,7,7,Hellfire Express,Hellfire Express,Hellfire Express,4,Nathan Doyle,William Stanley (a2/54kg),,3.9,racenet
+R4,Newcastle,4,2:20PM EXPRESS GLASS MIDWAY HANDICAP,1600,BM72,Soft 5,True,Overcast,,,8,8,Cosmic Avenger,Cosmic Avenger,Cosmic Avenger,1,John Sargent,Tommy Berry,,4.5,racenet
+R4,Newcastle,4,2:20PM EXPRESS GLASS MIDWAY HANDICAP,1600,BM72,Soft 5,True,Overcast,,,9,9,Change My Address,Change My Address,Change My Address,6,John Sargent,Jason Collett,,8.2,racenet
+R4,Newcastle,4,2:20PM EXPRESS GLASS MIDWAY HANDICAP,1600,BM72,Soft 5,True,Overcast,,,10,10,Cabbucio,Cabbucio,Cabbucio,5,Joseph Ible,Andrew Adkins,,5.2,racenet
+R4,Newcastle,4,2:20PM EXPRESS GLASS MIDWAY HANDICAP,1600,BM72,Soft 5,True,Overcast,,,11,11,Djapana,Djapana,Djapana,3,Clarry Conners,Ms Siena Grima (a2/51kg),,8.7,racenet
+R4,Newcastle,4,2:20PM EXPRESS GLASS MIDWAY HANDICAP,1600,BM72,Soft 5,True,Overcast,,,12,12,Philipsburg,Philipsburg,Philipsburg,8,James Ponsonby,Ms Winona Costin,,8.5,racenet
+R5,Newcastle,5,2:55PM AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,1,1,Uzziah,Uzziah,Uzziah,11,Albert O'Hearn,Ms Molly Bourke,,3.5,racenet
+R5,Newcastle,5,2:55PM AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,2,2,Sacrify,Sacrify,Sacrify,10,Annabel & Rob Archibald,Ms Mollie Fitzgerald (a2/50kg),,4.2,racenet
+R5,Newcastle,5,2:55PM AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,3,3,Amreekiyah,Amreekiyah,Amreekiyah,9,Peter Snowden,Aaron Bullock,,6.5,racenet
+R5,Newcastle,5,2:55PM AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,4,4,Spicy Lu,Spicy Lu,Spicy Lu,5,Nick Olive,Ms Coriah Keatings (a3/51kg),,3.1,racenet
+R5,Newcastle,5,2:55PM AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,5,5,Cuban Cigar,Cuban Cigar,Cuban Cigar,7,Tracey Bartley,Jason Collett,,7.6,racenet
+R5,Newcastle,5,2:55PM AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,6,6,Spaceballs,Spaceballs,Spaceballs,3,Jason Deamer,Tim Clark,,6.3,racenet
+R5,Newcastle,5,2:55PM AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,8,8,Arapawa,Arapawa,Arapawa,12,Brett & Georgie Cavanough,Ms Alysha Collett,,3.9,racenet
+R5,Newcastle,5,2:55PM AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,9,9,Hammoon Sensation,Hammoon Sensation,Hammoon Sensation,2,Rodney Northam,Reece Jones,,4,racenet
+R5,Newcastle,5,2:55PM AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,12,12,Poisen Point,Poisen Point,Poisen Point,6,Brett Robb,Ms Siena Grima (a2/51kg),,9.3,racenet
+R5,Newcastle,5,2:55PM AUSURE INSURANCE - ROSE DAVIES LEGEND MILE BENCHMARK 78 HANDICAP,1600,BM78,Soft 5,True,Overcast,,,13,13,Green Run,Green Run,Green Run,4,Dar Lunn,William Stanley (a2/54kg),,7.8,racenet
+R6,Newcastle,6,3:30PM MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,1,1,Chix,Chix,Chix,7,John O'Shea & Tom Charlton,Ms Anna Roper (a1.5/53kg),,2.9,racenet
+R6,Newcastle,6,3:30PM MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,2,2,Miss Spacegirl,Miss Spacegirl,Miss Spacegirl,5,Richard & Will Freedman,William Stanley (a2/54kg),,7,racenet
+R6,Newcastle,6,3:30PM MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,3,3,Ertijaaj,Ertijaaj,Ertijaaj,1,Chris Waller,Ms Siena Grima (a2/51kg),,4,racenet
+R6,Newcastle,6,3:30PM MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,4,4,Placid Pearl,Placid Pearl,Placid Pearl,15,Matthew Smith,Ms Winona Costin,,6.1,racenet
+R6,Newcastle,6,3:30PM MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,6,6,Regal Problem,Regal Problem,Regal Problem,4,Joseph Pride,Nash Rawiller,,5.4,racenet
+R6,Newcastle,6,3:30PM MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,7,7,Beside The Ocean,Beside The Ocean,Beside The Ocean,8,Chris Waller,Tommy Berry,,8.4,racenet
+R6,Newcastle,6,3:30PM MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,10,10,Nova Centauri,Nova Centauri,Nova Centauri,2,Rodney Northam,Ms Mikayla Weir,,6.7,racenet
+R6,Newcastle,6,3:30PM MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,12,12,Upwardly Mobile,Upwardly Mobile,Upwardly Mobile,13,Rodney Northam,Reece Jones,,8.4,racenet
+R6,Newcastle,6,3:30PM MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,13,13,Cando Attitude,Cando Attitude,Cando Attitude,6,"Barbara Joseph, Paul & Matt Jones",Ms Alysha Collett,,5.8,racenet
+R6,Newcastle,6,3:30PM MCGRATH - IZZY'S GIFT F&M BENCHMARK 78 HANDICAP,1400,BM78,Soft 5,True,Overcast,,,14,14,Live,Live,Live,10,Peter Snowden,Tyler Schiller,,6.9,racenet
+R7,Newcastle,7,4:05PM NZB 3YO SPRING STAKES,1600,Open Set Weight 3yo NA,Soft 5,True,Overcast,,,1,1,Kickup Rocky,Kickup Rocky,Kickup Rocky,4,Desleigh Forster,Daniel Moor,,7.4,racenet
+R7,Newcastle,7,4:05PM NZB 3YO SPRING STAKES,1600,Open Set Weight 3yo NA,Soft 5,True,Overcast,,,2,2,Prince Of Verona,Prince Of Verona,Prince Of Verona,8,Annabel & Rob Archibald,Nash Rawiller,,4,racenet
+R7,Newcastle,7,4:05PM NZB 3YO SPRING STAKES,1600,Open Set Weight 3yo NA,Soft 5,True,Overcast,,,3,3,Horologist,Horologist,Horologist,7,Chris Waller,Tommy Berry,,5.2,racenet
+R7,Newcastle,7,4:05PM NZB 3YO SPRING STAKES,1600,Open Set Weight 3yo NA,Soft 5,True,Overcast,,,4,4,Zahav,Zahav,Zahav,5,Ciaron Maher,Braith Nock (a),,1.7,racenet
+R7,Newcastle,7,4:05PM NZB 3YO SPRING STAKES,1600,Open Set Weight 3yo NA,Soft 5,True,Overcast,,,6,6,Iminastate,Iminastate,Iminastate,1,Richard & Will Freedman,Tim Clark,,4.9,racenet
+R7,Newcastle,7,4:05PM NZB 3YO SPRING STAKES,1600,Open Set Weight 3yo NA,Soft 5,True,Overcast,,,8,8,Tiger Turf,Tiger Turf,Tiger Turf,2,Gary Portelli,Ms Alysha Collett,,5.7,racenet
+R7,Newcastle,7,4:05PM NZB 3YO SPRING STAKES,1600,Open Set Weight 3yo NA,Soft 5,True,Overcast,,,9,9,Katoto,Katoto,Katoto,3,Chris Waller,Tyler Schiller,,6.3,racenet
+R8,Newcastle,8,4:45PM THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,2,2,General Salute,General Salute,General Salute,10,Gerald Ryan & Sterling Alexiou,Tim Clark,,6.1,racenet
+R8,Newcastle,8,4:45PM THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,3,3,King Of Roseau,King Of Roseau,King Of Roseau,16,Peter Snowden,Tom Sherry,,9,racenet
+R8,Newcastle,8,4:45PM THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,4,4,Coal Crusher,Coal Crusher,Coal Crusher,19,Joseph Pride,Andrew Adkins,,2.6,racenet
+R8,Newcastle,8,4:45PM THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,5,5,War Eternal,War Eternal,War Eternal,22,Bjorn Baker,Tommy Berry,,5.8,racenet
+R8,Newcastle,8,4:45PM THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,6,6,Sweynesday,Sweynesday,Sweynesday,6,Annabel & Rob Archibald,Ms Alysha Collett,,12.1,racenet
+R8,Newcastle,8,4:45PM THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,7,7,Infancy,Infancy,Infancy,5,Kris Lees,Jason Collett,,9.9,racenet
+R8,Newcastle,8,4:45PM THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,9,9,Accredited,Accredited,Accredited,1,Joseph Pride,Regan Bayliss,,3.8,racenet
+R8,Newcastle,8,4:45PM THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,10,10,Chidiac,Chidiac,Chidiac,2,Brett & Georgie Cavanough,Braith Nock (a),,7.4,racenet
+R8,Newcastle,8,4:45PM THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,11,11,Disneck,Disneck,Disneck,4,Bjorn Baker,Reece Jones,,9.5,racenet
+R8,Newcastle,8,4:45PM THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,12,12,Brave One,Brave One,Brave One,8,"Michael, John & Wayne Hawkes",Dylan Gibbons,,5.8,racenet
+R8,Newcastle,8,4:45PM THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,13,13,Brudenell,Brudenell,Brudenell,14,Kris Lees,Tyler Schiller,,4.4,racenet
+R8,Newcastle,8,4:45PM THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,14,14,Signor Tortoni,Signor Tortoni,Signor Tortoni,13,Ron Quinton,Ms Siena Grima (a),,4.8,racenet
+R8,Newcastle,8,4:45PM THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,15,15,Golden Straand,Golden Straand,Golden Straand,20,Matthew Smith,Adam Farragher,,5.2,racenet
+R8,Newcastle,8,4:45PM THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,16,16,Lord Of Biscay,Lord Of Biscay,Lord Of Biscay,3,Kris Lees,Daniel Moor,,7,racenet
+R8,Newcastle,8,4:45PM THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,17,17,She’s An Artist,She’s An Artist,She’s An Artist,11,Ciaron Maher,"Ms Mollie Fitzgerald (a), (late alt)",,5.1,racenet
+R8,Newcastle,8,4:45PM THE NEWCASTLE HERALD HUNTER,1300,Open Quality 3yo+ NA,Soft 5,True,Overcast,,,18,18,Point And Shoot,Point And Shoot,Point And Shoot,18,Bjorn Baker,Ms Winona Costin (late alt),,10,racenet
+R9,Newcastle,9,5:20PM NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,1,1,Campaldino,Campaldino,Campaldino,6,Gai Waterhouse & Adrian Bott,Tim Clark,,3.7,racenet
+R9,Newcastle,9,5:20PM NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,2,2,Fawkner Park,Fawkner Park,Fawkner Park,5,Declan Maher,Nash Rawiller,,8.3,racenet
+R9,Newcastle,9,5:20PM NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,3,3,Doctor Askar,Doctor Askar,Doctor Askar,11,Chris Waller,Tommy Berry,,9.5,racenet
+R9,Newcastle,9,5:20PM NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,4,4,Ring Ahoy,Ring Ahoy,Ring Ahoy,7,David Hatch,Zac Wadick,,9.2,racenet
+R9,Newcastle,9,5:20PM NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,5,5,Zuleika,Zuleika,Zuleika,10,Todd Pollard,Ms Alysha Collett,,7,racenet
+R9,Newcastle,9,5:20PM NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,6,6,Don Diego De Vega,Don Diego De Vega,Don Diego De Vega,3,Annabel & Rob Archibald,Braith Nock (a),,5.6,racenet
+R9,Newcastle,9,5:20PM NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,7,7,Bestower,Bestower,Bestower,9,Kris Lees,Tyler Schiller,,8.6,racenet
+R9,Newcastle,9,5:20PM NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,8,8,Savvy Spy,Savvy Spy,Savvy Spy,4,Gai Waterhouse & Adrian Bott,Louis Beuzelin,,4.9,racenet
+R9,Newcastle,9,5:20PM NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,9,9,Steel Blaze,Steel Blaze,Steel Blaze,2,Brett Lazzarini,Reece Jones,,7.4,racenet
+R9,Newcastle,9,5:20PM NJC THE BEAUFORD,2300,Handicap,Soft 5,True,Overcast,,,10,10,Mr Fabulous,Mr Fabulous,Mr Fabulous,8,Theresa Bateup,Ms Siena Grima (a),,6.6,racenet
+R10,Newcastle,10,5:55PM REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,1,1,Kerguelen,Kerguelen,Kerguelen,11,Joseph Pride,Aaron Bullock,,7.3,racenet
+R10,Newcastle,10,5:55PM REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,2,2,Whinchat,Whinchat,Whinchat,16,David Pfieffer,Tommy Berry,,2.3,racenet
+R10,Newcastle,10,5:55PM REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,3,3,Just Party,Just Party,Just Party,3,Gerald Ryan & Sterling Alexiou,Jason Collett,,7.5,racenet
+R10,Newcastle,10,5:55PM REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,5,5,Navy Pilot,Navy Pilot,Navy Pilot,15,Ciaron Maher,Ms Shannen Llewellyn (a3/54kg),,8.1,racenet
+R10,Newcastle,10,5:55PM REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,6,6,Dark Glitter,Dark Glitter,Dark Glitter,22,Mike Van Gestel,Ms Anna Roper (a1.5/53kg),,8.1,racenet
+R10,Newcastle,10,5:55PM REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,7,7,Shangri La Boy,Shangri La Boy,Shangri La Boy,2,Gai Waterhouse & Adrian Bott,Louis Beuzelin,,1.2,racenet
+R10,Newcastle,10,5:55PM REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,8,8,Well Timed,Well Timed,Well Timed,7,Kerry Parker,Nash Rawiller,,6.7,racenet
+R10,Newcastle,10,5:55PM REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,9,9,Phearson,Phearson,Phearson,19,Sara Ryan,Ms Alysha Collett,,6,racenet
+R10,Newcastle,10,5:55PM REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,10,10,Theblade,Theblade,Theblade,4,"Michael, John & Wayne Hawkes",Tyler Schiller,,4.1,racenet
+R10,Newcastle,10,5:55PM REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,11,11,Glorious Moments,Glorious Moments,Glorious Moments,6,Jim & Greg Lee,Regan Bayliss,,5.9,racenet
+R10,Newcastle,10,5:55PM REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,12,12,Hillier,Hillier,Hillier,13,Annabel & Rob Archibald,Tom Sherry,,5.9,racenet
+R10,Newcastle,10,5:55PM REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,13,13,Rotagilla,Rotagilla,Rotagilla,12,Gai Waterhouse & Adrian Bott,Tim Clark,,6.5,racenet
+R10,Newcastle,10,5:55PM REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,15,15,Eagle Express,Eagle Express,Eagle Express,1,Chris Waller,Ms Siena Grima (a2/51kg),,5.5,racenet
+R10,Newcastle,10,5:55PM REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,17,17,Charcoals,Charcoals,Charcoals,18,Anthony & Sam Freedman,Dylan Gibbons,,8.3,racenet
+R10,Newcastle,10,5:55PM REWARD HOSPITALITY THE SUGARLOAF BENCHMARK 94 HANDICAP,1300,BM94,Soft 5,True,Overcast,,,20,20,Lightning Glory,Lightning Glory,Lightning Glory,8,Nathan Doyle,William Stanley (a2/54kg),,2.9,racenet

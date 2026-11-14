@@ -213,7 +213,11 @@ function meetingMetaFromRacenetRows(rows) {
 }
 
 function resolveRaceFields(racenetRow, spMeta, meetingMeta, folderTrack) {
-  const raceTitle = String(racenetRow.race_name || "").trim();
+  const baseRaceTitle = String(racenetRow.race_name || "").trim();
+  const startTime = String(racenetRow.start_time || "").trim();
+  const raceTitle = startTime && !/\b\d{1,2}:\d{2}\s*(?:am|pm)?\b/i.test(baseRaceTitle)
+    ? `${startTime} ${baseRaceTitle}`.trim()
+    : baseRaceTitle;
   const distance = firstNonEmpty(
     racenetRow.distance,
     spMeta?.distance,
