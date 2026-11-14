@@ -473,7 +473,10 @@ function mergeRows(fieldRows, speedproxyRows, spMetaByRace, meetingMeta, folderT
   for (const row of fieldRows) {
     const raceNo = String(row.race_no || "").trim();
     const horseClean = cleanFieldHorseName(String(row.horse || "").trim(), source);
-    const runnerNo = String(row.no || "").trim().replace(/^0+/, "") || "0";
+    // The app schema requires a numeric runner_no. Racing Australia appends
+    // "e" to emergencies (for example 18e), while the official saddlecloth
+    // number and Speedproxy identity remain 18.
+    const runnerNo = String(row.no || "").trim().replace(/[eE]$/, "").replace(/^0+/, "") || "0";
     const numberedCandidate = speedByRunnerKey.get(runnerKey(raceNo, runnerNo));
     let sp = numberedCandidate && sameHorse(numberedCandidate.horse, horseClean)
       ? numberedCandidate
@@ -625,7 +628,7 @@ function countByRace(rows, raceField, runnerField) {
     const bucket = map.get(raceNo);
     bucket.count += 1;
     if (runnerField) {
-      const rn = String(row[runnerField] || "").trim().replace(/^0+/, "") || "0";
+      const rn = String(row[runnerField] || "").trim().replace(/[eE]$/, "").replace(/^0+/, "") || "0";
       bucket.runners.push(rn);
     }
   }
