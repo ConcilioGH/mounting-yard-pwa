@@ -3,6 +3,7 @@
 
 const fs = require("node:fs");
 const path = require("node:path");
+const os = require("node:os");
 const { spawnSync } = require("node:child_process");
 const Papa = require("papaparse");
 
@@ -15,6 +16,9 @@ const OUTPUT_COLUMNS = [
   "grade",
   "going",
   "rail",
+  "weather",
+  "penetrometer",
+  "track_information",
   "runner_no",
   "no",
   "horse",
@@ -68,7 +72,11 @@ function cleanRacenetHorseName(horse) {
     const m = s.match(/^(.+?)\s+([A-Za-z]+)$/);
     if (!m) break;
     const right = m[2];
-    if (!/^[A-Za-z]+$/.test(right) || ![...right].every((c) => LEGEND_SUFFIX_CHARS.has(c.toLowerCase()))) {
+    // Racenet legend markers are lower-case. Preserve genuine horse-name words
+    // such as "DO" and "SHOOT", which happen to use only legend letters.
+    if (right !== right.toLowerCase()
+      || !/^[a-z]+$/.test(right)
+      || ![...right].every((c) => LEGEND_SUFFIX_CHARS.has(c))) {
       break;
     }
     if (right.length === 2 && right.toLowerCase() === "ho") {
@@ -283,7 +291,8 @@ function parseSpeedproxyHtml(htmlPath) {
 
 function runnerKey(raceNo, runnerNo) {
   const r = String(raceNo || "").trim();
-  const n = String(runnerNo || "").trim().replace(/^0+/, "") || "0";
+  // Racing Australia marks emergencies as 18e while Speedproxy uses 18.
+  const n = String(runnerNo || "").trim().replace(/[eE]$/, "").replace(/^0+/, "") || "0";
   return `${r}::${n}`;
 }
 
@@ -291,6 +300,12 @@ function normalizeHorseNameForMatch(horse) {
   return String(horse || "")
     .toUpperCase()
     .replace(/[^A-Z0-9]+/g, "");
+}
+
+function sameHorse(a, b) {
+  const left = normalizeHorseNameForMatch(a);
+  const right = normalizeHorseNameForMatch(b);
+  return Boolean(left && right && left === right);
 }
 
 function horseMatchKey(raceNo, horse) {
@@ -388,9 +403,18 @@ function writeValidationCsv(filePath, fields, rows) {
   fs.writeFileSync(filePath, csv, "utf8");
 }
 
-function resolveFieldPdfSource(targetFolder) {
+function resolveFieldPdfSource(targetFolder, options = {}) {
   const racenetPath = path.join(targetFolder, "racenet.pdf");
   const risaPath = path.join(targetFolder, "risa.pdf");
+  const existingRacenetCsv = path.join(targetFolder, "_racenet_extracted.csv");
+  if (options.useExistingFieldCsv && fs.existsSync(existingRacenetCsv)) {
+    return {
+      source: "racenet",
+      pdfPath: racenetPath,
+      extractedCsvName: "_racenet_extracted.csv",
+      useExistingFieldCsv: true,
+    };
+  }
   if (fs.existsSync(racenetPath)) {
     return { source: "racenet", pdfPath: racenetPath, extractedCsvName: "_racenet_extracted.csv" };
   }
@@ -402,10 +426,24 @@ function resolveFieldPdfSource(targetFolder) {
 
 function extractFieldRows(root, pdfSource) {
   const extractedCsvPath = path.join(path.dirname(pdfSource.pdfPath), pdfSource.extractedCsvName);
+  if (pdfSource.useExistingFieldCsv) {
+    return parseCsvFile(extractedCsvPath);
+  }
   const scriptName = pdfSource.source === "risa" ? "scripts/parse_risa_pdf.py" : "scripts/pdf_to_csv.py";
-  const pyRun = spawnSync("python", [scriptName, pdfSource.pdfPath, "-o", extractedCsvPath], {
+  const bundledPython = path.join(
+    os.homedir(),
+    ".cache/codex-runtimes/codex-primary-runtime/dependencies/python/python.exe",
+  );
+  const pythonExe = process.env.RACE_PYTHON || (fs.existsSync(bundledPython) ? bundledPython : "python");
+  const sitePackages = path.join(root, "race-file-processor/.venv/Lib/site-packages");
+  const childEnv = { ...process.env };
+  if (fs.existsSync(sitePackages)) {
+    childEnv.PYTHONPATH = [sitePackages, childEnv.PYTHONPATH].filter(Boolean).join(path.delimiter);
+  }
+  const pyRun = spawnSync(pythonExe, [scriptName, pdfSource.pdfPath, "-o", extractedCsvPath], {
     cwd: root,
     encoding: "utf8",
+    env: childEnv,
   });
   if (pyRun.status !== 0) {
     const stderr = pyRun.stderr?.trim();
@@ -436,7 +474,10 @@ function mergeRows(fieldRows, speedproxyRows, spMetaByRace, meetingMeta, folderT
     const raceNo = String(row.race_no || "").trim();
     const horseClean = cleanFieldHorseName(String(row.horse || "").trim(), source);
     const runnerNo = String(row.no || "").trim().replace(/^0+/, "") || "0";
-    let sp = speedByRunnerKey.get(runnerKey(raceNo, runnerNo));
+    const numberedCandidate = speedByRunnerKey.get(runnerKey(raceNo, runnerNo));
+    let sp = numberedCandidate && sameHorse(numberedCandidate.horse, horseClean)
+      ? numberedCandidate
+      : speedByHorseKey.get(horseMatchKey(raceNo, horseClean));
     if (!sp && (matchByHorse || source === "risa")) {
       sp = speedByHorseKey.get(horseMatchKey(raceNo, horseClean));
     }
@@ -461,6 +502,9 @@ function mergeRows(fieldRows, speedproxyRows, spMetaByRace, meetingMeta, folderT
       grade: fields.grade,
       going: fields.going,
       rail: fields.rail,
+      weather: String(row.weather || "").trim(),
+      penetrometer: String(row.penetrometer || "").trim(),
+      track_information: String(row.track_information || "").trim(),
       runner_no: runnerNo,
       no: runnerNo,
       horse: horseClean,
@@ -505,6 +549,69 @@ function mergeRows(fieldRows, speedproxyRows, spMetaByRace, meetingMeta, folderT
   }
 
   return { merged, missingWir, unmatchedSpeedproxy };
+}
+
+function validateSpeedproxyMeeting(fieldRows, speedproxyRows, spMetaByRace) {
+  const distancesCompatible = (fieldDistance, proxyDistance) => {
+    if (fieldDistance === proxyDistance) return true;
+    const fieldMetres = Number.parseInt(fieldDistance, 10);
+    const proxyMetres = Number.parseInt(proxyDistance, 10);
+    return Number.isFinite(fieldMetres) && Number.isFinite(proxyMetres)
+      && Math.abs(fieldMetres - proxyMetres) <= 25;
+  };
+  const fieldRaceMeta = new Map();
+  for (const row of fieldRows) {
+    const raceNo = String(row.race_no || "").trim();
+    const distance = String(row.distance || "").trim().toLowerCase();
+    if (raceNo && distance && !fieldRaceMeta.has(raceNo)) fieldRaceMeta.set(raceNo, distance);
+  }
+
+  const distanceErrors = [];
+  for (const [raceNo, expected] of fieldRaceMeta) {
+    const actual = String(spMetaByRace.get(raceNo)?.distance || "").trim().toLowerCase();
+    if (!actual || !distancesCompatible(expected, actual)) {
+      distanceErrors.push(`R${raceNo}: field ${expected || "unknown"}, speedproxy ${actual || "missing"}`);
+    }
+  }
+  if (distanceErrors.length) {
+    throw new Error(`Speedproxy race-distance validation failed: ${distanceErrors.join("; ")}`);
+  }
+
+  const proxyHorseKeys = new Set(
+    speedproxyRows.map((row) => horseMatchKey(row.race_no, row.horse)),
+  );
+  // Coverage is field identity only. A matched horse with blank w_ir is valid
+  // (for example, a first starter or an entire debutant race).
+  const totals = new Map();
+  let matched = 0;
+  let withWir = 0;
+  for (const row of fieldRows) {
+    const raceNo = String(row.race_no || "").trim();
+    if (!totals.has(raceNo)) totals.set(raceNo, { total: 0, matched: 0 });
+    const bucket = totals.get(raceNo);
+    bucket.total += 1;
+    const horse = cleanFieldHorseName(String(row.horse || "").trim(), "racenet");
+    if (proxyHorseKeys.has(horseMatchKey(raceNo, horse))) {
+      bucket.matched += 1;
+      matched += 1;
+      const speedRow = speedproxyRows.find(
+        (candidate) => horseMatchKey(candidate.race_no, candidate.horse) === horseMatchKey(raceNo, horse),
+      );
+      if (String(speedRow?.w_ir || "").trim()) withWir += 1;
+    }
+  }
+
+  const overallCoverage = fieldRows.length ? matched / fieldRows.length : 0;
+  const weakRaces = [...totals.entries()]
+    .filter(([, count]) => count.matched / count.total < 0.5)
+    .map(([raceNo, count]) => `R${raceNo} ${count.matched}/${count.total}`);
+  if (overallCoverage < 0.75 || weakRaces.length) {
+    throw new Error(
+      `Speedproxy field-identity validation failed: ${matched}/${fieldRows.length} horses present ` +
+      `(${(overallCoverage * 100).toFixed(1)}%); weak races: ${weakRaces.join(", ") || "none"}`,
+    );
+  }
+  return { matched, total: fieldRows.length, withWir, overallCoverage };
 }
 
 function countByRace(rows, raceField, runnerField) {
@@ -582,6 +689,82 @@ function printRaceMetadataSummary(mergedRows) {
   }
 }
 
+/**
+ * Compress live barrier numbers after scratchings. Example: if barriers 2 and
+ * 5 are withdrawn, original barrier 7 becomes live barrier 5.
+ */
+function adjustBarriersForScratchings(allRows, activeRows) {
+  const scratchedByRace = new Map();
+  for (const row of allRows) {
+    if (String(row.scratched || "").toLowerCase() !== "true") continue;
+    const barrier = Number.parseInt(String(row.barrier || ""), 10);
+    if (!Number.isFinite(barrier) || barrier < 1) continue;
+    const raceNo = String(row.race_no || "").trim();
+    if (!scratchedByRace.has(raceNo)) scratchedByRace.set(raceNo, []);
+    scratchedByRace.get(raceNo).push(barrier);
+  }
+  return activeRows.map((row) => {
+    const original = Number.parseInt(String(row.barrier || ""), 10);
+    if (!Number.isFinite(original) || original < 1) return row;
+    const withdrawnInside = (scratchedByRace.get(String(row.race_no || "").trim()) || [])
+      .filter((barrier) => barrier < original).length;
+    return { ...row, barrier: String(original - withdrawnInside) };
+  });
+}
+
+function applyOfficialScratchings(targetFolder, fieldRows) {
+  const officialPath = path.join(targetFolder, "official-scratchings.json");
+  if (!fs.existsSync(officialPath)) return fieldRows;
+  const official = JSON.parse(fs.readFileSync(officialPath, "utf8"));
+  if (!Array.isArray(official.scratchings)) {
+    throw new Error(`Invalid official scratchings file: ${officialPath}`);
+  }
+  const scratchedKeys = new Set(
+    official.scratchings.map((item) =>
+      `${String(item.raceNo || "").trim()}|${String(item.runnerNo || "").replace(/^0+/, "") || "0"}`,
+    ),
+  );
+  const lateRiders = new Map(
+    (Array.isArray(official.lateRiders) ? official.lateRiders : []).map((item) => [
+      `${String(item.raceNo || "").trim()}|${String(item.runnerNo || "").replace(/^0+/, "") || "0"}`,
+      String(item.rider || "").trim(),
+    ]),
+  );
+  const applied = fieldRows.map((row) => ({
+    ...row,
+    scratched: scratchedKeys.has(
+      `${String(row.race_no || "").trim()}|${String(row.no || "").replace(/^0+/, "") || "0"}`,
+    ) ? "true" : "false",
+    going: String(official.trackRating || row.going || "").trim(),
+    rail: String(official.rail || row.rail || "").trim(),
+    weather: String(official.weather || "").trim(),
+    penetrometer: String(official.penetrometer || "").trim(),
+    track_information: String(official.trackInformation || "").trim(),
+    jockey: lateRiders.get(
+      `${String(row.race_no || "").trim()}|${String(row.no || "").replace(/^0+/, "") || "0"}`,
+    ) || row.jockey,
+  }));
+  const matched = applied.filter((row) => String(row.scratched).toLowerCase() === "true").length;
+  if (matched !== scratchedKeys.size) {
+    const officialStarterCount = Number.parseInt(String(official.totalStarters || ""), 10);
+    const preScratchedField = matched === 0
+      && Number.isFinite(officialStarterCount)
+      && fieldRows.length === officialStarterCount;
+    if (preScratchedField) {
+      console.log(
+        `official fields already exclude ${scratchedKeys.size} scratchings; `
+        + `${officialStarterCount} starters retained`,
+      );
+      return applied;
+    }
+    throw new Error(
+      `Official scratchings did not match the Racenet field: expected ${scratchedKeys.size}, matched ${matched}`,
+    );
+  }
+  console.log(`official Racing Australia scratchings applied: ${matched}`);
+  return applied;
+}
+
 function main() {
   const root = process.cwd();
   const folderArg = process.argv[2];
@@ -594,18 +777,28 @@ function main() {
   const warningsPath = path.join(targetFolder, "parse_warnings.csv");
   const unmatchedPath = path.join(targetFolder, "unmatched_speedproxy.csv");
 
-  const pdfSource = resolveFieldPdfSource(targetFolder);
+  const useExistingFieldCsv = process.argv.includes("--use-existing-field-csv");
+  const pdfSource = resolveFieldPdfSource(targetFolder, { useExistingFieldCsv });
   if (!fs.existsSync(htmlPath)) {
     throw new Error(`Missing input HTML: ${htmlPath}`);
   }
 
-  const rawFieldRows = extractFieldRows(root, pdfSource);
+  const extractedFieldRows = extractFieldRows(root, pdfSource);
+  const rawFieldRows = applyOfficialScratchings(targetFolder, extractedFieldRows);
   const parseWarnings = collectFieldParseWarnings(rawFieldRows);
-  const fieldRows = rawFieldRows.filter((r) => String(r.scratched || "").toLowerCase() !== "true");
+  const activeFieldRows = rawFieldRows.filter(
+    (r) => String(r.scratched || "").toLowerCase() !== "true",
+  );
+  const fieldRows = adjustBarriersForScratchings(rawFieldRows, activeFieldRows);
   const speedproxyHtml = fs.readFileSync(htmlPath, "utf8");
   const spMetaByRace = parseSpeedproxyRaceMeta(speedproxyHtml);
   const meetingMeta = meetingMetaFromRacenetRows(fieldRows);
   const speedproxyRows = parseSpeedproxyHtml(htmlPath);
+  const coverage = validateSpeedproxyMeeting(fieldRows, speedproxyRows, spMetaByRace);
+  console.log(
+    `speedproxy identity coverage: ${coverage.matched}/${coverage.total} ` +
+    `(${(coverage.overallCoverage * 100).toFixed(1)}%); numeric w_ir: ${coverage.withWir}/${coverage.total}`,
+  );
   const { merged, missingWir, unmatchedSpeedproxy } = mergeRows(
     fieldRows,
     speedproxyRows,
@@ -657,9 +850,18 @@ function main() {
   console.log(`output file path: ${outputPath}`);
 }
 
-try {
-  main();
-} catch (error) {
-  console.error(`[ERROR] ${error instanceof Error ? error.message : String(error)}`);
-  process.exit(1);
+if (require.main === module) {
+  try {
+    main();
+  } catch (error) {
+    console.error(`[ERROR] ${error instanceof Error ? error.message : String(error)}`);
+    process.exit(1);
+  }
 }
+
+module.exports = {
+  mergeRows,
+  normalizeHorseNameForMatch,
+  parseSpeedproxyRaceMeta,
+  validateSpeedproxyMeeting,
+};
