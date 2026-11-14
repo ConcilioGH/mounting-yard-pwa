@@ -17,6 +17,8 @@ const VICTORIAN_TRACKS = new Set([
 ]);
 
 const RACING_NSW_VENUE_ALIASES: Record<string, string> = {
+  canterbury: "Canterbury Park",
+  "canterbury-park": "Canterbury Park",
   "illawarra-grange": "Kembla Grange",
   "kembla-grange": "Kembla Grange",
   kensington: "Kensington",
