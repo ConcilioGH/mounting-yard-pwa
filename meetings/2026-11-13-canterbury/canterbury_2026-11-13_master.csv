@@ -1,56 +1,56 @@
-"race_id","track","race_no","race_title","distance","grade","going","rail","weather","penetrometer","track_information","runner_no","no","horse","horse_name","name","barrier","trainer","jockey","odds","w_ir","source"
-"R1","Canterbury","1","SCHWEPPES HANDICAP","1100","Maiden","Good 4","+2m Entire","Overcast","4.99","","1","1","BELLA TATIANA","BELLA TATIANA","BELLA TATIANA","2","Mick Price & Michael Kent (Jnr)","Tom Sherry","$4.80","NA","racenet"
-"R1","Canterbury","1","SCHWEPPES HANDICAP","1100","Maiden","Good 4","+2m Entire","Overcast","4.99","","2","2","FROM ME TO YOU","FROM ME TO YOU","FROM ME TO YOU","5","Gai Waterhouse & Adrian Bott","Tim Clark","$4.20","NA","racenet"
-"R1","Canterbury","1","SCHWEPPES HANDICAP","1100","Maiden","Good 4","+2m Entire","Overcast","4.99","","3","3","POSH POMMERY","POSH POMMERY","POSH POMMERY","4","Chris Waller","Kerrin McEvoy","$16","7","racenet"
-"R1","Canterbury","1","SCHWEPPES HANDICAP","1100","Maiden","Good 4","+2m Entire","Overcast","4.99","","4","4","WATER CITY","WATER CITY","WATER CITY","1","Ciaron Maher","James McDonald","$1.65","7.3","racenet"
-"R1","Canterbury","1","SCHWEPPES HANDICAP","1100","Maiden","Good 4","+2m Entire","Overcast","4.99","","5","5","MISS GAMBIT","MISS GAMBIT","MISS GAMBIT","6","Bryce Heys","Nash Rawiller","$21","3","racenet"
-"R1","Canterbury","1","SCHWEPPES HANDICAP","1100","Maiden","Good 4","+2m Entire","Overcast","4.99","","7","7","SHE’SAGOGO","SHE’SAGOGO","SHE’SAGOGO","7","Gerald Ryan & Sterling Alexiou","Andrew Adkins","$51","5","racenet"
-"R2","Canterbury","2","PICCOLO ME HANDICAP","1250","Maiden","Good 4","+2m Entire","Overcast","4.99","","1","1","DARN LUCKY","DARN LUCKY","DARN LUCKY","5","Brad Widdup","Regan Bayliss","$7.50","5","racenet"
-"R2","Canterbury","2","PICCOLO ME HANDICAP","1250","Maiden","Good 4","+2m Entire","Overcast","4.99","","2","2","NOVEMBER GOLD","NOVEMBER GOLD","NOVEMBER GOLD","9","Matthew Smith","Nash Rawiller","$9.50","NA","racenet"
-"R2","Canterbury","2","PICCOLO ME HANDICAP","1250","Maiden","Good 4","+2m Entire","Overcast","4.99","","3","3","THREE PROPHETS","THREE PROPHETS","THREE PROPHETS","2","Ciaron Maher","Sam Clipperton","$4.80","NA","racenet"
-"R2","Canterbury","2","PICCOLO ME HANDICAP","1250","Maiden","Good 4","+2m Entire","Overcast","4.99","","5","5","GERROA","GERROA","GERROA","6","Chris Waller","Tommy Berry","$11","6","racenet"
-"R2","Canterbury","2","PICCOLO ME HANDICAP","1250","Maiden","Good 4","+2m Entire","Overcast","4.99","","6","6","THREESOME","THREESOME","THREESOME","7","Peter Snowden","Kerrin McEvoy","$6","4.5","racenet"
-"R2","Canterbury","2","PICCOLO ME HANDICAP","1250","Maiden","Good 4","+2m Entire","Overcast","4.99","","7","7","DIVINE OFFERING","DIVINE OFFERING","DIVINE OFFERING","1","Peter Snowden","Tom Sherry","$5","6.5","racenet"
-"R2","Canterbury","2","PICCOLO ME HANDICAP","1250","Maiden","Good 4","+2m Entire","Overcast","4.99","","8","8","ESTEEMED","ESTEEMED","ESTEEMED","3","Chris Waller","James McDonald","$3.10","NA","racenet"
-"R2","Canterbury","2","PICCOLO ME HANDICAP","1250","Maiden","Good 4","+2m Entire","Overcast","4.99","","9","9","JAMMED","JAMMED","JAMMED","4","Graham Brown","Ms Beany Panya","$151","4.5","racenet"
-"R3","Canterbury","3","OOSHMAN PLATE","1550","Maiden","Good 4","+2m Entire","Overcast","4.99","","1","1","CHARLIE HUSTLE","CHARLIE HUSTLE","CHARLIE HUSTLE","6","Con Karakatsanis","Ms Siena Grima (a2/51kg)","$41","6","racenet"
-"R3","Canterbury","3","OOSHMAN PLATE","1550","Maiden","Good 4","+2m Entire","Overcast","4.99","","2","2","MARKOS PORT","MARKOS PORT","MARKOS PORT","7","Gai Waterhouse & Adrian Bott","Regan Bayliss","$4.40","3.1","racenet"
-"R3","Canterbury","3","OOSHMAN PLATE","1550","Maiden","Good 4","+2m Entire","Overcast","4.99","","5","5","AIDA","AIDA","AIDA","2","Michael, John & Wayne Hawkes","Tyler Schiller","$4.60","7.6","racenet"
-"R3","Canterbury","3","OOSHMAN PLATE","1550","Maiden","Good 4","+2m Entire","Overcast","4.99","","6","6","ALMAAZ","ALMAAZ","ALMAAZ","9","Chris Waller","Tommy Berry","$15","7.3","racenet"
-"R3","Canterbury","3","OOSHMAN PLATE","1550","Maiden","Good 4","+2m Entire","Overcast","4.99","","7","7","ARANTU","ARANTU","ARANTU","8","Jason Deamer","Tim Clark","$7.50","8","racenet"
-"R3","Canterbury","3","OOSHMAN PLATE","1550","Maiden","Good 4","+2m Entire","Overcast","4.99","","8","8","LIGULARIA","LIGULARIA","LIGULARIA","3","Joseph Pride","Kerrin McEvoy","$3.80","3.8","racenet"
-"R3","Canterbury","3","OOSHMAN PLATE","1550","Maiden","Good 4","+2m Entire","Overcast","4.99","","11","11","SNITZEL’S GIRL","SNITZEL’S GIRL","SNITZEL’S GIRL","10","Chris Waller","James McDonald","$3.50","5.3","racenet"
-"R4","Canterbury","4","CHAR'D CHARCOAL CHICKEN HANDICAP","1900","BM72","Good 4","+2m Entire","Overcast","4.99","","1","1","COSMIC LAD","COSMIC LAD","COSMIC LAD","1","Mitchell Beer & George Carpenter","Tommy Berry","$4.20","7","racenet"
-"R4","Canterbury","4","CHAR'D CHARCOAL CHICKEN HANDICAP","1900","BM72","Good 4","+2m Entire","Overcast","4.99","","3","3","KOOLIBAH","KOOLIBAH","KOOLIBAH","8","Chris Waller","James McDonald","$1.70","6.8","racenet"
-"R4","Canterbury","4","CHAR'D CHARCOAL CHICKEN HANDICAP","1900","BM72","Good 4","+2m Entire","Overcast","4.99","","4","4","MALBORK CASTLE","MALBORK CASTLE","MALBORK CASTLE","6","Richard Litt","Nash Rawiller","$7","6","racenet"
-"R4","Canterbury","4","CHAR'D CHARCOAL CHICKEN HANDICAP","1900","BM72","Good 4","+2m Entire","Overcast","4.99","","5","5","BEARINGS","BEARINGS","BEARINGS","5","John Sargent","Ms Siena Grima (a2/51kg)","$7","8.2","racenet"
-"R4","Canterbury","4","CHAR'D CHARCOAL CHICKEN HANDICAP","1900","BM72","Good 4","+2m Entire","Overcast","4.99","","7","7","MY CARTOUCHE","MY CARTOUCHE","MY CARTOUCHE","3","Craig Carmody","Ms Winona Costin","$21","5.1","racenet"
-"R5","Canterbury","5","SUPER NASH BROS HANDICAP","1550","BM72","Good 4","+2m Entire","Overcast","4.99","","1","1","LUSKAIRE","LUSKAIRE","LUSKAIRE","9","Annabel & Rob Archibald","Ms Mollie Fitzgerald (a2/50kg)","$8.50","4","racenet"
-"R5","Canterbury","5","SUPER NASH BROS HANDICAP","1550","BM72","Good 4","+2m Entire","Overcast","4.99","","2","2","VALOROUS POWER","VALOROUS POWER","VALOROUS POWER","6","Kris Lees","Tim Clark","$4","6.2","racenet"
-"R5","Canterbury","5","SUPER NASH BROS HANDICAP","1550","BM72","Good 4","+2m Entire","Overcast","4.99","","3","3","MISS HADES","MISS HADES","MISS HADES","1","Gary Portelli","James McDonald","$4.40","3.9","racenet"
-"R5","Canterbury","5","SUPER NASH BROS HANDICAP","1550","BM72","Good 4","+2m Entire","Overcast","4.99","","4","4","SATNESS","SATNESS","SATNESS","2","Robert & Luke Price","Tommy Berry","$4.60","2.5","racenet"
-"R5","Canterbury","5","SUPER NASH BROS HANDICAP","1550","BM72","Good 4","+2m Entire","Overcast","4.99","","5","5","BELLEISTIC KIDS","BELLEISTIC KIDS","BELLEISTIC KIDS","4","Barbara Joseph, Paul & Matt Jones","Ms Siena Grima (a2/51kg)","$9.50","3.9","racenet"
-"R5","Canterbury","5","SUPER NASH BROS HANDICAP","1550","BM72","Good 4","+2m Entire","Overcast","4.99","","8","8","ME ME","ME ME","ME ME","3","Robert & Luke Price","Tyler Schiller","$4","7.2","racenet"
-"R6","Canterbury","6","KERBSIDE HANDICAP","1100","BM78","Good 4","+2m Entire","Overcast","4.99","","1","1","HEZDARNHOTTOO","HEZDARNHOTTOO","HEZDARNHOTTOO","3","Bjorn Baker","Tommy Berry","$2.60","3.7","racenet"
-"R6","Canterbury","6","KERBSIDE HANDICAP","1100","BM78","Good 4","+2m Entire","Overcast","4.99","","2","2","POWER OF THE BRAVE","POWER OF THE BRAVE","POWER OF THE BRAVE","7","Kris Lees","William Stanley (a2/54kg)","$8.50","3.9","racenet"
-"R6","Canterbury","6","KERBSIDE HANDICAP","1100","BM78","Good 4","+2m Entire","Overcast","4.99","","3","3","ROYAL COMMODORE","ROYAL COMMODORE","ROYAL COMMODORE","1","Matthew Dunn","Nash Rawiller","$4","3.7","racenet"
-"R6","Canterbury","6","KERBSIDE HANDICAP","1100","BM78","Good 4","+2m Entire","Overcast","4.99","","4","4","JUST AWESOME","JUST AWESOME","JUST AWESOME","4","Blake Ryan","Ms Leeshelle Small (a3/51kg)","$3.40","1.5","racenet"
-"R6","Canterbury","6","KERBSIDE HANDICAP","1100","BM78","Good 4","+2m Entire","Overcast","4.99","","5","5","ACTION KING","ACTION KING","ACTION KING","6","Rob Potter","Damon Budler","$10","5.5","racenet"
-"R6","Canterbury","6","KERBSIDE HANDICAP","1100","BM78","Good 4","+2m Entire","Overcast","4.99","","7","7","DONWON","DONWON","DONWON","10","Robert & Luke Price","Ms Alysha Collett","$35","4.8","racenet"
-"R6","Canterbury","6","KERBSIDE HANDICAP","1100","BM78","Good 4","+2m Entire","Overcast","4.99","","8","8","DIS IS HEAVEN","DIS IS HEAVEN","DIS IS HEAVEN","2","Colt Prosser","Andrew Adkins","$71","5.7","racenet"
-"R6","Canterbury","6","KERBSIDE HANDICAP","1100","BM78","Good 4","+2m Entire","Overcast","4.99","","10","10","BOOM BREAK","BOOM BREAK","BOOM BREAK","9","Donna Grisedale","Jon Grisedale","$101","2.2","racenet"
-"R7","Canterbury","7","KIA EVENING STAR","1250","BM72","Good 4","+2m Entire","Overcast","4.99","","1","1","SHELSTEIN","SHELSTEIN","SHELSTEIN","8","Annabel & Rob Archibald","Nash Rawiller","$7.50","4.7","racenet"
-"R7","Canterbury","7","KIA EVENING STAR","1250","BM72","Good 4","+2m Entire","Overcast","4.99","","3","3","EARL OF BANTRY","EARL OF BANTRY","EARL OF BANTRY","4","Ciaron Maher","Ms Shannen Llewellyn (a3/54kg)","$13","4.1","racenet"
-"R7","Canterbury","7","KIA EVENING STAR","1250","BM72","Good 4","+2m Entire","Overcast","4.99","","6","6","MONTE VEEBEE","MONTE VEEBEE","MONTE VEEBEE","1","Robert & Luke Price","James McDonald","$1.75","3","racenet"
-"R7","Canterbury","7","KIA EVENING STAR","1250","BM72","Good 4","+2m Entire","Overcast","4.99","","7","7","AGAINST THE LAW","AGAINST THE LAW","AGAINST THE LAW","10","Mitchell Beer & George Carpenter","Dylan Gibbons","$8.50","5.7","racenet"
-"R7","Canterbury","7","KIA EVENING STAR","1250","BM72","Good 4","+2m Entire","Overcast","4.99","","8","8","ZOUCRATIC","ZOUCRATIC","ZOUCRATIC","7","Todd Howlett","Ms Alysha Collett","$11","4.1","racenet"
-"R7","Canterbury","7","KIA EVENING STAR","1250","BM72","Good 4","+2m Entire","Overcast","4.99","","9","9","EASIEST CHOICE","EASIEST CHOICE","EASIEST CHOICE","12","Matthew Dale","Tommy Berry","$7","2.9","racenet"
-"R7","Canterbury","7","KIA EVENING STAR","1250","BM72","Good 4","+2m Entire","Overcast","4.99","","10","10","NOVEMBER AIR","NOVEMBER AIR","NOVEMBER AIR","6","Jason Deamer","Ms Siena Grima (a2/51kg)","$35","2.8","racenet"
-"R7","Canterbury","7","KIA EVENING STAR","1250","BM72","Good 4","+2m Entire","Overcast","4.99","","11","11","UP TO MISCHIEF","UP TO MISCHIEF","UP TO MISCHIEF","5","Jason Deamer","Andrew Adkins","$29","5.9","racenet"
-"R8","Canterbury","8","METRO PETROLEUM HANDICAP","1250","BM72","Good 4","+2m Entire","Overcast","4.99","","2","2","BENEATH THE ROCK","BENEATH THE ROCK","BENEATH THE ROCK","1","Kris Lees","William Stanley (a2/54kg)","$1.90","2.7","racenet"
-"R8","Canterbury","8","METRO PETROLEUM HANDICAP","1250","BM72","Good 4","+2m Entire","Overcast","4.99","","3","3","KUJENGA","KUJENGA","KUJENGA","7","Annabel & Rob Archibald","James McDonald","$3.70","6.6","racenet"
-"R8","Canterbury","8","METRO PETROLEUM HANDICAP","1250","BM72","Good 4","+2m Entire","Overcast","4.99","","4","4","HELLABELLA","HELLABELLA","HELLABELLA","9","Gai Waterhouse & Adrian Bott","Regan Bayliss","$7","1.4","racenet"
-"R8","Canterbury","8","METRO PETROLEUM HANDICAP","1250","BM72","Good 4","+2m Entire","Overcast","4.99","","5","5","HUSH HUSH","HUSH HUSH","HUSH HUSH","4","Ciaron Maher","Ms Mollie Fitzgerald (a2/50kg)","$8","7.9","racenet"
-"R8","Canterbury","8","METRO PETROLEUM HANDICAP","1250","BM72","Good 4","+2m Entire","Overcast","4.99","","6","6","MIDNIGHT LUNA","MIDNIGHT LUNA","MIDNIGHT LUNA","3","Rob Potter","Damon Budler","$23","5.1","racenet"
-"R8","Canterbury","8","METRO PETROLEUM HANDICAP","1250","BM72","Good 4","+2m Entire","Overcast","4.99","","7","7","PREMIUM","PREMIUM","PREMIUM","8","Gary Portelli","Tyler Schiller","$20","4.2","racenet"
-"R8","Canterbury","8","METRO PETROLEUM HANDICAP","1250","BM72","Good 4","+2m Entire","Overcast","4.99","","10","10","CRIMSON WINGS","CRIMSON WINGS","CRIMSON WINGS","6","Richard & Will Freedman","Ms Anna Roper (a1.5/53kg)","$19","4.4","racenet"
+race_id,track,race_no,race_title,distance,grade,going,rail,weather,penetrometer,track_information,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
+R1,Canterbury,1,SCHWEPPES HANDICAP,1100,Maiden,Good 4,+2m Entire,Overcast,4.99,,1,1,Bella tatiana,Bella tatiana,Bella tatiana,2,Mick Price & Michael Kent (Jnr),Tom Sherry,$4.80,NA,racenet
+R1,Canterbury,1,SCHWEPPES HANDICAP,1100,Maiden,Good 4,+2m Entire,Overcast,4.99,,2,2,From me to you,From me to you,From me to you,5,Gai Waterhouse & Adrian Bott,Tim Clark,$4.20,NA,racenet
+R1,Canterbury,1,SCHWEPPES HANDICAP,1100,Maiden,Good 4,+2m Entire,Overcast,4.99,,3,3,PosH pommery,PosH pommery,PosH pommery,4,Chris Waller,Kerrin McEvoy,$16,7,racenet
+R1,Canterbury,1,SCHWEPPES HANDICAP,1100,Maiden,Good 4,+2m Entire,Overcast,4.99,,4,4,Water city,Water city,Water city,1,Ciaron Maher,James McDonald,$1.65,7.3,racenet
+R1,Canterbury,1,SCHWEPPES HANDICAP,1100,Maiden,Good 4,+2m Entire,Overcast,4.99,,5,5,MisS gambit,MisS gambit,MisS gambit,6,Bryce Heys,Nash Rawiller,$21,3,racenet
+R1,Canterbury,1,SCHWEPPES HANDICAP,1100,Maiden,Good 4,+2m Entire,Overcast,4.99,,7,7,She’sAgogo,She’sAgogo,She’sAgogo,7,Gerald Ryan & Sterling Alexiou,Andrew Adkins,$51,5,racenet
+R2,Canterbury,2,PICCOLO ME HANDICAP,1250,Maiden,Good 4,+2m Entire,Overcast,4.99,,1,1,Darn lucky,Darn lucky,Darn lucky,5,Brad Widdup,Regan Bayliss,$7.50,5,racenet
+R2,Canterbury,2,PICCOLO ME HANDICAP,1250,Maiden,Good 4,+2m Entire,Overcast,4.99,,2,2,November gold,November gold,November gold,9,Matthew Smith,Nash Rawiller,$9.50,NA,racenet
+R2,Canterbury,2,PICCOLO ME HANDICAP,1250,Maiden,Good 4,+2m Entire,Overcast,4.99,,3,3,Three prophets,Three prophets,Three prophets,2,Ciaron Maher,Sam Clipperton,$4.80,NA,racenet
+R2,Canterbury,2,PICCOLO ME HANDICAP,1250,Maiden,Good 4,+2m Entire,Overcast,4.99,,5,5,Gerroa,Gerroa,Gerroa,6,Chris Waller,Tommy Berry,$11,6,racenet
+R2,Canterbury,2,PICCOLO ME HANDICAP,1250,Maiden,Good 4,+2m Entire,Overcast,4.99,,6,6,ThreesOme,ThreesOme,ThreesOme,7,Peter Snowden,Kerrin McEvoy,$6,4.5,racenet
+R2,Canterbury,2,PICCOLO ME HANDICAP,1250,Maiden,Good 4,+2m Entire,Overcast,4.99,,7,7,Divine offering,Divine offering,Divine offering,1,Peter Snowden,Tom Sherry,$5,6.5,racenet
+R2,Canterbury,2,PICCOLO ME HANDICAP,1250,Maiden,Good 4,+2m Entire,Overcast,4.99,,8,8,EsTeemed,EsTeemed,EsTeemed,3,Chris Waller,James McDonald,$3.10,NA,racenet
+R2,Canterbury,2,PICCOLO ME HANDICAP,1250,Maiden,Good 4,+2m Entire,Overcast,4.99,,9,9,Jammed,Jammed,Jammed,4,Graham Brown,Ms Beany Panya,$151,4.5,racenet
+R3,Canterbury,3,OOSHMAN PLATE,1550,Maiden,Good 4,+2m Entire,Overcast,4.99,,1,1,Charlie husTle,Charlie husTle,Charlie husTle,6,Con Karakatsanis,Ms Siena Grima (a2/51kg),$41,6,racenet
+R3,Canterbury,3,OOSHMAN PLATE,1550,Maiden,Good 4,+2m Entire,Overcast,4.99,,2,2,Markos port,Markos port,Markos port,7,Gai Waterhouse & Adrian Bott,Regan Bayliss,$4.40,3.1,racenet
+R3,Canterbury,3,OOSHMAN PLATE,1550,Maiden,Good 4,+2m Entire,Overcast,4.99,,5,5,Aida,Aida,Aida,2,"Michael, John & Wayne Hawkes",Tyler Schiller,$4.60,7.6,racenet
+R3,Canterbury,3,OOSHMAN PLATE,1550,Maiden,Good 4,+2m Entire,Overcast,4.99,,6,6,Almaaz,Almaaz,Almaaz,9,Chris Waller,Tommy Berry,$15,7.3,racenet
+R3,Canterbury,3,OOSHMAN PLATE,1550,Maiden,Good 4,+2m Entire,Overcast,4.99,,7,7,Arantu,Arantu,Arantu,8,Jason Deamer,Tim Clark,$7.50,8,racenet
+R3,Canterbury,3,OOSHMAN PLATE,1550,Maiden,Good 4,+2m Entire,Overcast,4.99,,8,8,Ligularia,Ligularia,Ligularia,3,Joseph Pride,Kerrin McEvoy,$3.80,3.8,racenet
+R3,Canterbury,3,OOSHMAN PLATE,1550,Maiden,Good 4,+2m Entire,Overcast,4.99,,11,11,Snitzel’s girl,Snitzel’s girl,Snitzel’s girl,10,Chris Waller,James McDonald,$3.50,5.3,racenet
+R4,Canterbury,4,CHAR'D CHARCOAL CHICKEN HANDICAP,1900,BM72,Good 4,+2m Entire,Overcast,4.99,,1,1,CosMic lad,CosMic lad,CosMic lad,1,Mitchell Beer & George Carpenter,Tommy Berry,$4.20,7,racenet
+R4,Canterbury,4,CHAR'D CHARCOAL CHICKEN HANDICAP,1900,BM72,Good 4,+2m Entire,Overcast,4.99,,3,3,Koolibah,Koolibah,Koolibah,8,Chris Waller,James McDonald,$1.70,6.8,racenet
+R4,Canterbury,4,CHAR'D CHARCOAL CHICKEN HANDICAP,1900,BM72,Good 4,+2m Entire,Overcast,4.99,,4,4,Malbork casTle,Malbork casTle,Malbork casTle,6,Richard Litt,Nash Rawiller,$7,6,racenet
+R4,Canterbury,4,CHAR'D CHARCOAL CHICKEN HANDICAP,1900,BM72,Good 4,+2m Entire,Overcast,4.99,,5,5,Bearings,Bearings,Bearings,5,John Sargent,Ms Siena Grima (a2/51kg),$7,8.2,racenet
+R4,Canterbury,4,CHAR'D CHARCOAL CHICKEN HANDICAP,1900,BM72,Good 4,+2m Entire,Overcast,4.99,,7,7,My cartouche,My cartouche,My cartouche,3,Craig Carmody,Ms Winona Costin,$21,5.1,racenet
+R5,Canterbury,5,SUPER NASH BROS HANDICAP,1550,BM72,Good 4,+2m Entire,Overcast,4.99,,1,1,LusKaire,LusKaire,LusKaire,9,Annabel & Rob Archibald,Ms Mollie Fitzgerald (a2/50kg),$8.50,4,racenet
+R5,Canterbury,5,SUPER NASH BROS HANDICAP,1550,BM72,Good 4,+2m Entire,Overcast,4.99,,2,2,Valorous power,Valorous power,Valorous power,6,Kris Lees,Tim Clark,$4,6.2,racenet
+R5,Canterbury,5,SUPER NASH BROS HANDICAP,1550,BM72,Good 4,+2m Entire,Overcast,4.99,,3,3,MisS hades,MisS hades,MisS hades,1,Gary Portelli,James McDonald,$4.40,3.9,racenet
+R5,Canterbury,5,SUPER NASH BROS HANDICAP,1550,BM72,Good 4,+2m Entire,Overcast,4.99,,4,4,SatnesS,SatnesS,SatnesS,2,Robert & Luke Price,Tommy Berry,$4.60,2.5,racenet
+R5,Canterbury,5,SUPER NASH BROS HANDICAP,1550,BM72,Good 4,+2m Entire,Overcast,4.99,,5,5,BelleisTic kids,BelleisTic kids,BelleisTic kids,4,"Barbara Joseph, Paul & Matt Jones",Ms Siena Grima (a2/51kg),$9.50,3.9,racenet
+R5,Canterbury,5,SUPER NASH BROS HANDICAP,1550,BM72,Good 4,+2m Entire,Overcast,4.99,,8,8,Me me,Me me,Me me,3,Robert & Luke Price,Tyler Schiller,$4,7.2,racenet
+R6,Canterbury,6,KERBSIDE HANDICAP,1100,BM78,Good 4,+2m Entire,Overcast,4.99,,1,1,Hezdarnhottoo,Hezdarnhottoo,Hezdarnhottoo,3,Bjorn Baker,Tommy Berry,$2.60,3.7,racenet
+R6,Canterbury,6,KERBSIDE HANDICAP,1100,BM78,Good 4,+2m Entire,Overcast,4.99,,2,2,Power of the brave,Power of the brave,Power of the brave,7,Kris Lees,William Stanley (a2/54kg),$8.50,3.9,racenet
+R6,Canterbury,6,KERBSIDE HANDICAP,1100,BM78,Good 4,+2m Entire,Overcast,4.99,,3,3,Royal commodore,Royal commodore,Royal commodore,1,Matthew Dunn,Nash Rawiller,$4,3.7,racenet
+R6,Canterbury,6,KERBSIDE HANDICAP,1100,BM78,Good 4,+2m Entire,Overcast,4.99,,4,4,JusT awesOme,JusT awesOme,JusT awesOme,4,Blake Ryan,Ms Leeshelle Small (a3/51kg),$3.40,1.5,racenet
+R6,Canterbury,6,KERBSIDE HANDICAP,1100,BM78,Good 4,+2m Entire,Overcast,4.99,,5,5,Action king,Action king,Action king,6,Rob Potter,Damon Budler,$10,5.5,racenet
+R6,Canterbury,6,KERBSIDE HANDICAP,1100,BM78,Good 4,+2m Entire,Overcast,4.99,,7,7,Donwon,Donwon,Donwon,10,Robert & Luke Price,Ms Alysha Collett,$35,4.8,racenet
+R6,Canterbury,6,KERBSIDE HANDICAP,1100,BM78,Good 4,+2m Entire,Overcast,4.99,,8,8,Dis is heaven,Dis is heaven,Dis is heaven,2,Colt Prosser,Andrew Adkins,$71,5.7,racenet
+R6,Canterbury,6,KERBSIDE HANDICAP,1100,BM78,Good 4,+2m Entire,Overcast,4.99,,10,10,Boom break,Boom break,Boom break,9,Donna Grisedale,Jon Grisedale,$101,2.2,racenet
+R7,Canterbury,7,KIA EVENING STAR,1250,BM72,Good 4,+2m Entire,Overcast,4.99,,1,1,ShelsTein,ShelsTein,ShelsTein,8,Annabel & Rob Archibald,Nash Rawiller,$7.50,4.7,racenet
+R7,Canterbury,7,KIA EVENING STAR,1250,BM72,Good 4,+2m Entire,Overcast,4.99,,3,3,Earl of bantry,Earl of bantry,Earl of bantry,4,Ciaron Maher,Ms Shannen Llewellyn (a3/54kg),$13,4.1,racenet
+R7,Canterbury,7,KIA EVENING STAR,1250,BM72,Good 4,+2m Entire,Overcast,4.99,,6,6,Monte veebee,Monte veebee,Monte veebee,1,Robert & Luke Price,James McDonald,$1.75,3,racenet
+R7,Canterbury,7,KIA EVENING STAR,1250,BM72,Good 4,+2m Entire,Overcast,4.99,,7,7,AgainsT the law,AgainsT the law,AgainsT the law,10,Mitchell Beer & George Carpenter,Dylan Gibbons,$8.50,5.7,racenet
+R7,Canterbury,7,KIA EVENING STAR,1250,BM72,Good 4,+2m Entire,Overcast,4.99,,8,8,Zoucratic,Zoucratic,Zoucratic,7,Todd Howlett,Ms Alysha Collett,$11,4.1,racenet
+R7,Canterbury,7,KIA EVENING STAR,1250,BM72,Good 4,+2m Entire,Overcast,4.99,,9,9,EasIesT choice,EasIesT choice,EasIesT choice,12,Matthew Dale,Tommy Berry,$7,2.9,racenet
+R7,Canterbury,7,KIA EVENING STAR,1250,BM72,Good 4,+2m Entire,Overcast,4.99,,10,10,November air,November air,November air,6,Jason Deamer,Ms Siena Grima (a2/51kg),$35,2.8,racenet
+R7,Canterbury,7,KIA EVENING STAR,1250,BM72,Good 4,+2m Entire,Overcast,4.99,,11,11,Up to misChief,Up to misChief,Up to misChief,5,Jason Deamer,Andrew Adkins,$29,5.9,racenet
+R8,Canterbury,8,METRO PETROLEUM HANDICAP,1250,BM72,Good 4,+2m Entire,Overcast,4.99,,2,2,Beneath the rock,Beneath the rock,Beneath the rock,1,Kris Lees,William Stanley (a2/54kg),$1.90,2.7,racenet
+R8,Canterbury,8,METRO PETROLEUM HANDICAP,1250,BM72,Good 4,+2m Entire,Overcast,4.99,,3,3,Kujenga,Kujenga,Kujenga,7,Annabel & Rob Archibald,James McDonald,$3.70,6.6,racenet
+R8,Canterbury,8,METRO PETROLEUM HANDICAP,1250,BM72,Good 4,+2m Entire,Overcast,4.99,,4,4,Hellabella,Hellabella,Hellabella,9,Gai Waterhouse & Adrian Bott,Regan Bayliss,$7,1.4,racenet
+R8,Canterbury,8,METRO PETROLEUM HANDICAP,1250,BM72,Good 4,+2m Entire,Overcast,4.99,,5,5,HusH husH,HusH husH,HusH husH,4,Ciaron Maher,Ms Mollie Fitzgerald (a2/50kg),$8,7.9,racenet
+R8,Canterbury,8,METRO PETROLEUM HANDICAP,1250,BM72,Good 4,+2m Entire,Overcast,4.99,,6,6,Midnight luna,Midnight luna,Midnight luna,3,Rob Potter,Damon Budler,$23,5.1,racenet
+R8,Canterbury,8,METRO PETROLEUM HANDICAP,1250,BM72,Good 4,+2m Entire,Overcast,4.99,,7,7,Premium,Premium,Premium,8,Gary Portelli,Tyler Schiller,$20,4.2,racenet
+R8,Canterbury,8,METRO PETROLEUM HANDICAP,1250,BM72,Good 4,+2m Entire,Overcast,4.99,,10,10,CrimsOn wings,CrimsOn wings,CrimsOn wings,6,Richard & Will Freedman,Ms Anna Roper (a1.5/53kg),$19,4.4,racenet

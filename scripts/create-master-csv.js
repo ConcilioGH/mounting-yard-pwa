@@ -308,6 +308,17 @@ function sameHorse(a, b) {
   return Boolean(left && right && left === right);
 }
 
+function restoreHorseNameCase(value) {
+  const raw = String(value || "").trim();
+  if (!raw || raw !== raw.toUpperCase() || !/[A-Z]/.test(raw)) return raw;
+  return raw
+    .toLowerCase()
+    .replace(/(^|[\s-])([a-z])/g, (_, prefix, letter) => `${prefix}${letter.toUpperCase()}`)
+    .replace(/\b([od])(['’])([a-z])/g, (_, prefix, apostrophe, letter) =>
+      `${prefix.toUpperCase()}${apostrophe}${letter.toUpperCase()}`,
+    );
+}
+
 function horseMatchKey(raceNo, horse) {
   const r = String(raceNo || "").trim();
   return `${r}::${normalizeHorseNameForMatch(horse)}`;
@@ -316,7 +327,8 @@ function horseMatchKey(raceNo, horse) {
 function cleanFieldHorseName(horse, source) {
   const raw = String(horse || "").trim();
   if (!raw) return raw;
-  return source === "racenet" ? cleanRacenetHorseName(raw) : raw;
+  const cleaned = source === "racenet" ? cleanRacenetHorseName(raw) : raw;
+  return restoreHorseNameCase(cleaned);
 }
 
 function collectFieldParseWarnings(rows) {
