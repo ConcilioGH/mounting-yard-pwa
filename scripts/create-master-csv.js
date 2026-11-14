@@ -551,7 +551,8 @@ function mergeRows(fieldRows, speedproxyRows, spMetaByRace, meetingMeta, folderT
   return { merged, missingWir, unmatchedSpeedproxy };
 }
 
-function validateSpeedproxyMeeting(fieldRows, speedproxyRows, spMetaByRace) {
+function validateSpeedproxyMeeting(fieldRows, speedproxyRows, spMetaByRace, options = {}) {
+  const allowedMissingRaces = options.allowedMissingRaces || new Set();
   const distancesCompatible = (fieldDistance, proxyDistance) => {
     if (fieldDistance === proxyDistance) return true;
     const fieldMetres = Number.parseInt(fieldDistance, 10);
@@ -569,6 +570,7 @@ function validateSpeedproxyMeeting(fieldRows, speedproxyRows, spMetaByRace) {
   const distanceErrors = [];
   for (const [raceNo, expected] of fieldRaceMeta) {
     const actual = String(spMetaByRace.get(raceNo)?.distance || "").trim().toLowerCase();
+    if (!actual && allowedMissingRaces.has(raceNo)) continue;
     if (!actual || !distancesCompatible(expected, actual)) {
       distanceErrors.push(`R${raceNo}: field ${expected || "unknown"}, speedproxy ${actual || "missing"}`);
     }
@@ -603,7 +605,7 @@ function validateSpeedproxyMeeting(fieldRows, speedproxyRows, spMetaByRace) {
 
   const overallCoverage = fieldRows.length ? matched / fieldRows.length : 0;
   const weakRaces = [...totals.entries()]
-    .filter(([, count]) => count.matched / count.total < 0.5)
+    .filter(([raceNo, count]) => !allowedMissingRaces.has(raceNo) && count.matched / count.total < 0.5)
     .map(([raceNo, count]) => `R${raceNo} ${count.matched}/${count.total}`);
   if (overallCoverage < 0.75 || weakRaces.length) {
     throw new Error(
@@ -778,6 +780,13 @@ function main() {
   const unmatchedPath = path.join(targetFolder, "unmatched_speedproxy.csv");
 
   const useExistingFieldCsv = process.argv.includes("--use-existing-field-csv");
+  const allowedMissingRaces = new Set(
+    process.argv
+      .filter((arg) => arg.startsWith("--allow-missing-speedproxy-races="))
+      .flatMap((arg) => arg.split("=", 2)[1].split(","))
+      .map((raceNo) => raceNo.trim().replace(/^R/i, ""))
+      .filter(Boolean),
+  );
   const pdfSource = resolveFieldPdfSource(targetFolder, { useExistingFieldCsv });
   if (!fs.existsSync(htmlPath)) {
     throw new Error(`Missing input HTML: ${htmlPath}`);
@@ -793,8 +802,32 @@ function main() {
   const speedproxyHtml = fs.readFileSync(htmlPath, "utf8");
   const spMetaByRace = parseSpeedproxyRaceMeta(speedproxyHtml);
   const meetingMeta = meetingMetaFromRacenetRows(fieldRows);
-  const speedproxyRows = parseSpeedproxyHtml(htmlPath);
-  const coverage = validateSpeedproxyMeeting(fieldRows, speedproxyRows, spMetaByRace);
+  let speedproxyRows = parseSpeedproxyHtml(htmlPath);
+  const supplementalArg = process.argv.find((arg) => arg.startsWith("--supplemental-speedproxy="));
+  if (supplementalArg) {
+    const supplementalPath = path.resolve(root, supplementalArg.split("=", 2)[1]);
+    if (!fs.existsSync(supplementalPath)) {
+      throw new Error(`Missing supplemental Speedproxy HTML: ${supplementalPath}`);
+    }
+    const supplementalHtml = fs.readFileSync(supplementalPath, "utf8");
+    const supplementalMeta = parseSpeedproxyRaceMeta(supplementalHtml);
+    const missingRaceNos = new Set(
+      fieldRows
+        .map((row) => String(row.race_no || "").trim())
+        .filter((raceNo) => raceNo && !spMetaByRace.has(raceNo)),
+    );
+    for (const raceNo of missingRaceNos) {
+      const meta = supplementalMeta.get(raceNo);
+      if (meta) spMetaByRace.set(raceNo, meta);
+    }
+    const supplementalRows = parseSpeedproxyHtml(supplementalPath)
+      .filter((row) => missingRaceNos.has(String(row.race_no || "").trim()));
+    speedproxyRows = speedproxyRows.concat(supplementalRows);
+    console.log(
+      `supplemental Speedproxy races loaded: ${[...missingRaceNos].sort().map((r) => `R${r}`).join(", ") || "none"}`,
+    );
+  }
+  const coverage = validateSpeedproxyMeeting(fieldRows, speedproxyRows, spMetaByRace, { allowedMissingRaces });
   console.log(
     `speedproxy identity coverage: ${coverage.matched}/${coverage.total} ` +
     `(${(coverage.overallCoverage * 100).toFixed(1)}%); numeric w_ir: ${coverage.withWir}/${coverage.total}`,
