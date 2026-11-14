@@ -1,0 +1,72 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,weather,penetrometer,track_information,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
+R1,Wyong,1,1:20PM MANGROVE MOUNTAIN MEMORIAL CLUB & GOLF COURSE TOWN PLATE BENCHMARK 64 HANDICAP,2100,BM64,Soft 6,True,Fine,,,1,1,Can’t Recall One,Can’t Recall One,Can’t Recall One,3,Matthew Smith,Adam Farragher,,7.8,racenet
+R1,Wyong,1,1:20PM MANGROVE MOUNTAIN MEMORIAL CLUB & GOLF COURSE TOWN PLATE BENCHMARK 64 HANDICAP,2100,BM64,Soft 6,True,Fine,,,2,2,Dolce Dior,Dolce Dior,Dolce Dior,5,Peter Snowden,Tom Sherry,,3.6,racenet
+R1,Wyong,1,1:20PM MANGROVE MOUNTAIN MEMORIAL CLUB & GOLF COURSE TOWN PLATE BENCHMARK 64 HANDICAP,2100,BM64,Soft 6,True,Fine,,,4,4,Sonic Bender,Sonic Bender,Sonic Bender,6,Chris Waller,Lee Magorrian,,7.6,racenet
+R1,Wyong,1,1:20PM MANGROVE MOUNTAIN MEMORIAL CLUB & GOLF COURSE TOWN PLATE BENCHMARK 64 HANDICAP,2100,BM64,Soft 6,True,Fine,,,5,5,Kosuke,Kosuke,Kosuke,7,Gregory McFarlane,Andrew Adkins,,8.1,racenet
+R1,Wyong,1,1:20PM MANGROVE MOUNTAIN MEMORIAL CLUB & GOLF COURSE TOWN PLATE BENCHMARK 64 HANDICAP,2100,BM64,Soft 6,True,Fine,,,6,6,Powerful Prayer,Powerful Prayer,Powerful Prayer,1,John Thompson,Keagan Latham,,6,racenet
+R1,Wyong,1,1:20PM MANGROVE MOUNTAIN MEMORIAL CLUB & GOLF COURSE TOWN PLATE BENCHMARK 64 HANDICAP,2100,BM64,Soft 6,True,Fine,,,7,7,Astrogazer,Astrogazer,Astrogazer,2,David Pfieffer,Ms Alysha Collett,,3.6,racenet
+R1,Wyong,1,1:20PM MANGROVE MOUNTAIN MEMORIAL CLUB & GOLF COURSE TOWN PLATE BENCHMARK 64 HANDICAP,2100,BM64,Soft 6,True,Fine,,,8,8,Satono’s Shout,Satono’s Shout,Satono’s Shout,4,Chris Waller,Ms Siena Grima (a1.5/51kg),,5.3,racenet
+R2,Wyong,2,1:55PM HYATT ENGINEERING MIDWAY MAIDEN PLATE,1600,Maiden,Soft 6,True,Fine,,,1,1,Aerostern Bro,Aerostern Bro,Aerostern Bro,11,Jarrod Austin,Reece Jones,,3.4,racenet
+R2,Wyong,2,1:55PM HYATT ENGINEERING MIDWAY MAIDEN PLATE,1600,Maiden,Soft 6,True,Fine,,,2,2,Harrythewiz,Harrythewiz,Harrythewiz,8,Marc Chevalier,Lee Magorrian,,7.3,racenet
+R2,Wyong,2,1:55PM HYATT ENGINEERING MIDWAY MAIDEN PLATE,1600,Maiden,Soft 6,True,Fine,,,3,3,Sheer Shame,Sheer Shame,Sheer Shame,13,Rebecca Dunn,Ms Mollie Fitzgerald (a0/50kg),,5.5,racenet
+R2,Wyong,2,1:55PM HYATT ENGINEERING MIDWAY MAIDEN PLATE,1600,Maiden,Soft 6,True,Fine,,,4,4,Ying Moon,Ying Moon,Ying Moon,5,Edward Cummings,Dylan Gibbons,,6.2,racenet
+R2,Wyong,2,1:55PM HYATT ENGINEERING MIDWAY MAIDEN PLATE,1600,Maiden,Soft 6,True,Fine,,,5,5,Choisirising,Choisirising,Choisirising,3,John Thompson,Keagan Latham,,11,racenet
+R2,Wyong,2,1:55PM HYATT ENGINEERING MIDWAY MAIDEN PLATE,1600,Maiden,Soft 6,True,Fine,,,6,6,Leica Fox,Leica Fox,Leica Fox,12,Theresa Bateup,Ms Jess Taylor,,4.3,racenet
+R2,Wyong,2,1:55PM HYATT ENGINEERING MIDWAY MAIDEN PLATE,1600,Maiden,Soft 6,True,Fine,,,7,7,Spring Ruler,Spring Ruler,Spring Ruler,6,Clarry Conners,Andrew Calder,,3.9,racenet
+R2,Wyong,2,1:55PM HYATT ENGINEERING MIDWAY MAIDEN PLATE,1600,Maiden,Soft 6,True,Fine,,,9,9,Circus Girl,Circus Girl,Circus Girl,2,Karen Outtrim,Ms Winona Costin,,8.2,racenet
+R2,Wyong,2,1:55PM HYATT ENGINEERING MIDWAY MAIDEN PLATE,1600,Maiden,Soft 6,True,Fine,,,10,10,I Love Prague,I Love Prague,I Love Prague,10,Jason Deamer,Regan Bayliss,,7,racenet
+R2,Wyong,2,1:55PM HYATT ENGINEERING MIDWAY MAIDEN PLATE,1600,Maiden,Soft 6,True,Fine,,,11,11,Spud Gun,Spud Gun,Spud Gun,7,Jack Pilkington,,,7.7,racenet
+R2,Wyong,2,1:55PM HYATT ENGINEERING MIDWAY MAIDEN PLATE,1600,Maiden,Soft 6,True,Fine,,,12,12,Miss Pinot Noir,Miss Pinot Noir,Miss Pinot Noir,9,Richard & Will Freedman,,,12,racenet
+R2,Wyong,2,1:55PM HYATT ENGINEERING MIDWAY MAIDEN PLATE,1600,Maiden,Soft 6,True,Fine,,,13,13,Parisest Magic,Parisest Magic,Parisest Magic,1,Alexandre Lemarie,Ms Siena Grima (a1.5/51kg),,6.9,racenet
+R2,Wyong,2,1:55PM HYATT ENGINEERING MIDWAY MAIDEN PLATE,1600,Maiden,Soft 6,True,Fine,,,14,14,Velastra,Velastra,Velastra,4,Richard & Will Freedman,Shaun Guymer,,5.3,racenet
+R3,Wyong,3,2:30PM MILANGALL PARK KULNURA CUP BENCHMARK 64 HANDICAP,1600,BM64,Soft 6,True,Fine,,,1,1,Federal Reserve,Federal Reserve,Federal Reserve,1,Nacim Dilmi,William Stanley (a1.5/54kg),,5.3,racenet
+R3,Wyong,3,2:30PM MILANGALL PARK KULNURA CUP BENCHMARK 64 HANDICAP,1600,BM64,Soft 6,True,Fine,,,2,2,Alabama Showdown,Alabama Showdown,Alabama Showdown,7,Joseph Pride,Ms Alysha Collett,,5,racenet
+R3,Wyong,3,2:30PM MILANGALL PARK KULNURA CUP BENCHMARK 64 HANDICAP,1600,BM64,Soft 6,True,Fine,,,3,3,Kaazi,Kaazi,Kaazi,6,Annabel & Rob Archibald,Braith Nock (a0/53kg),,5.9,racenet
+R3,Wyong,3,2:30PM MILANGALL PARK KULNURA CUP BENCHMARK 64 HANDICAP,1600,BM64,Soft 6,True,Fine,,,4,4,No No Yes,No No Yes,No No Yes,3,Mick Price & Michael Kent (Jnr),Tom Sherry,,6.7,racenet
+R3,Wyong,3,2:30PM MILANGALL PARK KULNURA CUP BENCHMARK 64 HANDICAP,1600,BM64,Soft 6,True,Fine,,,5,5,Via Flaminia,Via Flaminia,Via Flaminia,2,Kris Lees,Dylan Gibbons,,6.6,racenet
+R3,Wyong,3,2:30PM MILANGALL PARK KULNURA CUP BENCHMARK 64 HANDICAP,1600,BM64,Soft 6,True,Fine,,,7,7,Wealthy Investor,Wealthy Investor,Wealthy Investor,5,Damien Lane,Reece Jones,,4.1,racenet
+R3,Wyong,3,2:30PM MILANGALL PARK KULNURA CUP BENCHMARK 64 HANDICAP,1600,BM64,Soft 6,True,Fine,,,8,8,Okami Star,Okami Star,Okami Star,4,Clarry Conners,Andrew Adkins,,3.6,racenet
+R4,Wyong,4,3:05PM AGRANA FRUIT AUSTRALIA MAIDEN HANDICAP,1000,Maiden,Soft 6,True,Fine,,,1,1,Crossways,Crossways,Crossways,7,Mick Price & Michael Kent (Jnr),Dylan Gibbons,,3.3,racenet
+R4,Wyong,4,3:05PM AGRANA FRUIT AUSTRALIA MAIDEN HANDICAP,1000,Maiden,Soft 6,True,Fine,,,2,2,Setesdal,Setesdal,Setesdal,2,Matthew Smith,Ms Siena Grima (a1.5/51kg),,NA,racenet
+R4,Wyong,4,3:05PM AGRANA FRUIT AUSTRALIA MAIDEN HANDICAP,1000,Maiden,Soft 6,True,Fine,,,3,3,Radicals,Radicals,Radicals,9,Joseph Pride,Andrew Adkins,,1.3,racenet
+R4,Wyong,4,3:05PM AGRANA FRUIT AUSTRALIA MAIDEN HANDICAP,1000,Maiden,Soft 6,True,Fine,,,5,5,Hay Prize,Hay Prize,Hay Prize,6,John Cooper,Ms Jess Taylor,,8,racenet
+R4,Wyong,4,3:05PM AGRANA FRUIT AUSTRALIA MAIDEN HANDICAP,1000,Maiden,Soft 6,True,Fine,,,6,6,Not Asking,Not Asking,Not Asking,5,Shaun Harvey,Reece Jones,,5,racenet
+R4,Wyong,4,3:05PM AGRANA FRUIT AUSTRALIA MAIDEN HANDICAP,1000,Maiden,Soft 6,True,Fine,,,7,7,Bundy Belle,Bundy Belle,Bundy Belle,3,Bjorn Baker,Tom Sherry,,5,racenet
+R4,Wyong,4,3:05PM AGRANA FRUIT AUSTRALIA MAIDEN HANDICAP,1000,Maiden,Soft 6,True,Fine,,,8,8,Global Light,Global Light,Global Light,1,Lee & Cherie Curtis,Jeff Penza,,NA,racenet
+R4,Wyong,4,3:05PM AGRANA FRUIT AUSTRALIA MAIDEN HANDICAP,1000,Maiden,Soft 6,True,Fine,,,9,9,Hellish Charm,Hellish Charm,Hellish Charm,8,Ciaron Maher,Regan Bayliss,,NA,racenet
+R4,Wyong,4,3:05PM AGRANA FRUIT AUSTRALIA MAIDEN HANDICAP,1000,Maiden,Soft 6,True,Fine,,,10,10,Profit Calling,Profit Calling,Profit Calling,4,Geoff Allendorf,Ms Winona Costin,,7,racenet
+R5,Wyong,5,3:40PM SUBLIME ALUMINIUM & GLASS SOMERSBY SPRINT PROVINCIAL BENCHMARK 68 HANDICAP,1000,BM68,Soft 6,True,Fine,,,1,1,Bremel,Bremel,Bremel,1,Gregory McFarlane,Tom Sherry,,4.4,racenet
+R5,Wyong,5,3:40PM SUBLIME ALUMINIUM & GLASS SOMERSBY SPRINT PROVINCIAL BENCHMARK 68 HANDICAP,1000,BM68,Soft 6,True,Fine,,,3,3,He’s Cool,He’s Cool,He’s Cool,6,Mark Minervini,William Stanley (a1.5/54kg),,6,racenet
+R5,Wyong,5,3:40PM SUBLIME ALUMINIUM & GLASS SOMERSBY SPRINT PROVINCIAL BENCHMARK 68 HANDICAP,1000,BM68,Soft 6,True,Fine,,,4,4,Charlina,Charlina,Charlina,2,Jason Attard,Ms Olivia Chambers (a2/50kg),,1.6,racenet
+R5,Wyong,5,3:40PM SUBLIME ALUMINIUM & GLASS SOMERSBY SPRINT PROVINCIAL BENCHMARK 68 HANDICAP,1000,BM68,Soft 6,True,Fine,,,5,5,Brown Sugar,Brown Sugar,Brown Sugar,7,Adam Duggan,Rory Hutchings,,3.1,racenet
+R5,Wyong,5,3:40PM SUBLIME ALUMINIUM & GLASS SOMERSBY SPRINT PROVINCIAL BENCHMARK 68 HANDICAP,1000,BM68,Soft 6,True,Fine,,,6,6,Yes Yes Boss,Yes Yes Boss,Yes Yes Boss,3,Marc Chevalier,Louis Beuzelin,,3.7,racenet
+R5,Wyong,5,3:40PM SUBLIME ALUMINIUM & GLASS SOMERSBY SPRINT PROVINCIAL BENCHMARK 68 HANDICAP,1000,BM68,Soft 6,True,Fine,,,7,7,Calgary King,Calgary King,Calgary King,4,Blake Ryan,Ms Leeshelle Small (a3/51kg),,5.9,racenet
+R5,Wyong,5,3:40PM SUBLIME ALUMINIUM & GLASS SOMERSBY SPRINT PROVINCIAL BENCHMARK 68 HANDICAP,1000,BM68,Soft 6,True,Fine,,,8,8,No Statement,No Statement,No Statement,5,Mike Van Gestel,Ms Siena Grima (a1.5/51kg),,2.5,racenet
+R6,Wyong,6,4:20PM ECONOMY WASTE GROUP F&M CLASS 1 HANDICAP,1350,Class 1,Soft 6,True,Fine,,,1,1,Sheeza Diva,Sheeza Diva,Sheeza Diva,7,Mitchell & Desiree Kearney,Reece Jones,,7.5,racenet
+R6,Wyong,6,4:20PM ECONOMY WASTE GROUP F&M CLASS 1 HANDICAP,1350,Class 1,Soft 6,True,Fine,,,3,3,Verry Stella,Verry Stella,Verry Stella,1,Chris Waller,Lee Magorrian,,7.9,racenet
+R6,Wyong,6,4:20PM ECONOMY WASTE GROUP F&M CLASS 1 HANDICAP,1350,Class 1,Soft 6,True,Fine,,,4,4,In Her Name,In Her Name,In Her Name,3,Chris Waller,Ms Siena Grima (a1.5/51kg),,3,racenet
+R6,Wyong,6,4:20PM ECONOMY WASTE GROUP F&M CLASS 1 HANDICAP,1350,Class 1,Soft 6,True,Fine,,,5,5,Nicolosi,Nicolosi,Nicolosi,5,Gai Waterhouse & Adrian Bott,Ms Winona Costin,,1,racenet
+R6,Wyong,6,4:20PM ECONOMY WASTE GROUP F&M CLASS 1 HANDICAP,1350,Class 1,Soft 6,True,Fine,,,6,6,Obsidian Dream,Obsidian Dream,Obsidian Dream,6,Joseph Pride,Andrew Adkins,,3.4,racenet
+R6,Wyong,6,4:20PM ECONOMY WASTE GROUP F&M CLASS 1 HANDICAP,1350,Class 1,Soft 6,True,Fine,,,7,7,Stunning Future,Stunning Future,Stunning Future,4,Gerald Ryan & Sterling Alexiou,Tom Sherry,,4.3,racenet
+R6,Wyong,6,4:20PM ECONOMY WASTE GROUP F&M CLASS 1 HANDICAP,1350,Class 1,Soft 6,True,Fine,,,8,8,Angels Cloud,Angels Cloud,Angels Cloud,8,Jack Pilkington,,,4.4,racenet
+R6,Wyong,6,4:20PM ECONOMY WASTE GROUP F&M CLASS 1 HANDICAP,1350,Class 1,Soft 6,True,Fine,,,9,9,Alarthill,Alarthill,Alarthill,2,Jan Bowen,Braith Nock (a0/53kg),,9.2,racenet
+R7,Wyong,7,5:00PM LIMITLESS LODGE CG&E CLASS 1 HANDICAP,1350,Class 1,Soft 6,True,Fine,,,1,1,Jaguar Paw,Jaguar Paw,Jaguar Paw,8,Matthew Smith,Andrew Adkins,,4.7,racenet
+R7,Wyong,7,5:00PM LIMITLESS LODGE CG&E CLASS 1 HANDICAP,1350,Class 1,Soft 6,True,Fine,,,2,2,Marchon,Marchon,Marchon,10,Annabel & Rob Archibald,Tom Sherry,,2.8,racenet
+R7,Wyong,7,5:00PM LIMITLESS LODGE CG&E CLASS 1 HANDICAP,1350,Class 1,Soft 6,True,Fine,,,3,3,Eynesbury,Eynesbury,Eynesbury,7,Chris Waller,Ms Siena Grima (a1.5/51kg),,6.7,racenet
+R7,Wyong,7,5:00PM LIMITLESS LODGE CG&E CLASS 1 HANDICAP,1350,Class 1,Soft 6,True,Fine,,,5,5,Gravel Road,Gravel Road,Gravel Road,9,Kristen Buchanan,Ms Alysha Collett,,4.2,racenet
+R7,Wyong,7,5:00PM LIMITLESS LODGE CG&E CLASS 1 HANDICAP,1350,Class 1,Soft 6,True,Fine,,,6,6,Hidden News,Hidden News,Hidden News,5,Kim Waugh,Andrew Gibbons,,3,racenet
+R7,Wyong,7,5:00PM LIMITLESS LODGE CG&E CLASS 1 HANDICAP,1350,Class 1,Soft 6,True,Fine,,,7,7,Mr Bohemian,Mr Bohemian,Mr Bohemian,6,Annabel & Rob Archibald,Braith Nock (a0/53kg),,2.6,racenet
+R7,Wyong,7,5:00PM LIMITLESS LODGE CG&E CLASS 1 HANDICAP,1350,Class 1,Soft 6,True,Fine,,,8,8,Master Zous,Master Zous,Master Zous,3,Sara Ryan,Regan Bayliss,,2.8,racenet
+R7,Wyong,7,5:00PM LIMITLESS LODGE CG&E CLASS 1 HANDICAP,1350,Class 1,Soft 6,True,Fine,,,9,9,The Pacific,The Pacific,The Pacific,1,Geoff Allendorf,Louis Beuzelin,,4.5,racenet
+R7,Wyong,7,5:00PM LIMITLESS LODGE CG&E CLASS 1 HANDICAP,1350,Class 1,Soft 6,True,Fine,,,10,10,Thunder Lights,Thunder Lights,Thunder Lights,2,Kristen Buchanan,Ms Olivia Chambers (a2/50kg),,5.5,racenet
+R7,Wyong,7,5:00PM LIMITLESS LODGE CG&E CLASS 1 HANDICAP,1350,Class 1,Soft 6,True,Fine,,,11,11,Eltrum,Eltrum,Eltrum,4,Theresa Bateup,Ms Jess Taylor,,3.5,racenet
+R8,Wyong,8,5:36PM ELDERS COAST AND COUNTRY MAIDEN PLATE,1100,Maiden,Soft 6,True,Fine,,,1,1,Charm Destination,Charm Destination,Charm Destination,10,Kristen Buchanan,Ms Olivia Chambers (a2/50kg),,2.5,racenet
+R8,Wyong,8,5:36PM ELDERS COAST AND COUNTRY MAIDEN PLATE,1100,Maiden,Soft 6,True,Fine,,,3,3,Extreme Courage,Extreme Courage,Extreme Courage,2,Robert & Luke Price,Ms Alysha Collett,,4.9,racenet
+R8,Wyong,8,5:36PM ELDERS COAST AND COUNTRY MAIDEN PLATE,1100,Maiden,Soft 6,True,Fine,,,5,5,Gabreski,Gabreski,Gabreski,8,Joseph Pride,Regan Bayliss,,NA,racenet
+R8,Wyong,8,5:36PM ELDERS COAST AND COUNTRY MAIDEN PLATE,1100,Maiden,Soft 6,True,Fine,,,6,6,Geryon,Geryon,Geryon,3,Chris Waller,Ms Siena Grima (a1.5/51kg),,2,racenet
+R8,Wyong,8,5:36PM ELDERS COAST AND COUNTRY MAIDEN PLATE,1100,Maiden,Soft 6,True,Fine,,,7,7,Pyra,Pyra,Pyra,1,Bjorn Baker,Jean Van Overmeire,,2,racenet
+R8,Wyong,8,5:36PM ELDERS COAST AND COUNTRY MAIDEN PLATE,1100,Maiden,Soft 6,True,Fine,,,8,8,Street Jewel,Street Jewel,Street Jewel,9,Brad Widdup,Dylan Gibbons,,3.7,racenet
+R8,Wyong,8,5:36PM ELDERS COAST AND COUNTRY MAIDEN PLATE,1100,Maiden,Soft 6,True,Fine,,,9,9,Elska,Elska,Elska,5,Mark Minervini,Liam Riordan,,4.3,racenet
+R8,Wyong,8,5:36PM ELDERS COAST AND COUNTRY MAIDEN PLATE,1100,Maiden,Soft 6,True,Fine,,,11,11,Latteragh,Latteragh,Latteragh,6,Gerald Ryan & Sterling Alexiou,Andrew Adkins,,NA,racenet
+R8,Wyong,8,5:36PM ELDERS COAST AND COUNTRY MAIDEN PLATE,1100,Maiden,Soft 6,True,Fine,,,13,13,Lady Resolute,Lady Resolute,Lady Resolute,4,Chris Waller,Reece Jones,,NA,racenet
+R8,Wyong,8,5:36PM ELDERS COAST AND COUNTRY MAIDEN PLATE,1100,Maiden,Soft 6,True,Fine,,,14,14,Montana Trail,Montana Trail,Montana Trail,7,Mark Cross,Jack Baker (a3/49kg),,6.7,racenet
