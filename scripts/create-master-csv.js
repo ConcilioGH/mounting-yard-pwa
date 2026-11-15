@@ -742,19 +742,19 @@ function applyOfficialScratchings(targetFolder, fieldRows) {
   }
   const scratchedKeys = new Set(
     official.scratchings.map((item) =>
-      `${String(item.raceNo || "").trim()}|${String(item.runnerNo || "").replace(/^0+/, "") || "0"}`,
+      `${String(item.raceNo || "").trim()}|${String(item.runnerNo || "").replace(/[eE]$/, "").replace(/^0+/, "") || "0"}`,
     ),
   );
   const lateRiders = new Map(
     (Array.isArray(official.lateRiders) ? official.lateRiders : []).map((item) => [
-      `${String(item.raceNo || "").trim()}|${String(item.runnerNo || "").replace(/^0+/, "") || "0"}`,
+      `${String(item.raceNo || "").trim()}|${String(item.runnerNo || "").replace(/[eE]$/, "").replace(/^0+/, "") || "0"}`,
       String(item.rider || "").trim(),
     ]),
   );
   const applied = fieldRows.map((row) => ({
     ...row,
     scratched: scratchedKeys.has(
-      `${String(row.race_no || "").trim()}|${String(row.no || "").replace(/^0+/, "") || "0"}`,
+      `${String(row.race_no || "").trim()}|${String(row.no || "").replace(/[eE]$/, "").replace(/^0+/, "") || "0"}`,
     ) ? "true" : "false",
     going: String(official.trackRating || row.going || "").trim(),
     rail: String(official.rail || row.rail || "").trim(),
@@ -762,7 +762,7 @@ function applyOfficialScratchings(targetFolder, fieldRows) {
     penetrometer: String(official.penetrometer || "").trim(),
     track_information: String(official.trackInformation || "").trim(),
     jockey: lateRiders.get(
-      `${String(row.race_no || "").trim()}|${String(row.no || "").replace(/^0+/, "") || "0"}`,
+      `${String(row.race_no || "").trim()}|${String(row.no || "").replace(/[eE]$/, "").replace(/^0+/, "") || "0"}`,
     ) || row.jockey,
   }));
   const matched = applied.filter((row) => String(row.scratched).toLowerCase() === "true").length;

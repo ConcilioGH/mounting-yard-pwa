@@ -1,0 +1,67 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,weather,penetrometer,track_information,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
+R1,Goulburn,1,1:15PM REC EQUINE SPECIALISTS CLASS 1 & MAIDEN PLATE,2100,Class 1,Soft 6,+6m Entire,Overcast,5.35,,1,1,Zippy Lion,Zippy Lion,Zippy Lion,3,Joseph Ible,Andrew Adkins,,7.1,racenet
+R1,Goulburn,1,1:15PM REC EQUINE SPECIALISTS CLASS 1 & MAIDEN PLATE,2100,Class 1,Soft 6,+6m Entire,Overcast,5.35,,2,2,Iron Rebel,Iron Rebel,Iron Rebel,2,Gary Portelli,Ms Rebecca Bronett Prag (a0/52kg),,4.3,racenet
+R1,Goulburn,1,1:15PM REC EQUINE SPECIALISTS CLASS 1 & MAIDEN PLATE,2100,Class 1,Soft 6,+6m Entire,Overcast,5.35,,4,4,Kamarooka,Kamarooka,Kamarooka,4,Tash Burleigh,Jean Van Overmeire,,5.4,racenet
+R1,Goulburn,1,1:15PM REC EQUINE SPECIALISTS CLASS 1 & MAIDEN PLATE,2100,Class 1,Soft 6,+6m Entire,Overcast,5.35,,5,5,Queen Tavane,Queen Tavane,Queen Tavane,1,Karen Outtrim,Shaun Guymer,,6.1,racenet
+R1,Goulburn,1,1:15PM REC EQUINE SPECIALISTS CLASS 1 & MAIDEN PLATE,2100,Class 1,Soft 6,+6m Entire,Overcast,5.35,,7,7,Don’t Back Down,Don’t Back Down,Don’t Back Down,5,Gratz Vella,Ms Louise Day,,3.4,racenet
+R2,Goulburn,2,1:50PM AUREUM FINANCE BENCHMARK 66 HANDICAP,1600,BM66,Soft 6,+6m Entire,Overcast,5.35,,2,2,Snap Decision,Snap Decision,Snap Decision,3,Matthew Dale,Brodie Loy,,7.2,racenet
+R2,Goulburn,2,1:50PM AUREUM FINANCE BENCHMARK 66 HANDICAP,1600,BM66,Soft 6,+6m Entire,Overcast,5.35,,3,3,Angel In The Wind,Angel In The Wind,Angel In The Wind,6,Nick Olive,Damon Budler,,7.8,racenet
+R2,Goulburn,2,1:50PM AUREUM FINANCE BENCHMARK 66 HANDICAP,1600,BM66,Soft 6,+6m Entire,Overcast,5.35,,4,4,Autumn Sky,Autumn Sky,Autumn Sky,4,Richard Litt,Ms Alysha Collett,,5.8,racenet
+R2,Goulburn,2,1:50PM AUREUM FINANCE BENCHMARK 66 HANDICAP,1600,BM66,Soft 6,+6m Entire,Overcast,5.35,,5,5,Sonnig,Sonnig,Sonnig,2,Anthony Mountney,Adam Farragher,,3.8,racenet
+R2,Goulburn,2,1:50PM AUREUM FINANCE BENCHMARK 66 HANDICAP,1600,BM66,Soft 6,+6m Entire,Overcast,5.35,,6,6,Kurithea,Kurithea,Kurithea,5,Annabel & Rob Archibald,Tom Sherry,,5.3,racenet
+R2,Goulburn,2,1:50PM AUREUM FINANCE BENCHMARK 66 HANDICAP,1600,BM66,Soft 6,+6m Entire,Overcast,5.35,,8,8,Sir Sublime,Sir Sublime,Sir Sublime,1,Theresa Bateup,Jean Van Overmeire,,2.4,racenet
+R3,Goulburn,3,2:25PM GOULBURN HAY SUPPLIES MAIDEN PLATE,1100,Maiden,Soft 6,+6m Entire,Overcast,5.35,,1,1,Mayweather,Mayweather,Mayweather,1,Peter Snowden,Jean Van Overmeire,,5.2,racenet
+R3,Goulburn,3,2:25PM GOULBURN HAY SUPPLIES MAIDEN PLATE,1100,Maiden,Soft 6,+6m Entire,Overcast,5.35,,5,5,Alpha Zeta,Alpha Zeta,Alpha Zeta,7,Jack Pilkington,Ms Louise Day,,2.5,racenet
+R3,Goulburn,3,2:25PM GOULBURN HAY SUPPLIES MAIDEN PLATE,1100,Maiden,Soft 6,+6m Entire,Overcast,5.35,,6,6,Better Comment,Better Comment,Better Comment,6,Amanda Turner,Adam Farragher,,NA,racenet
+R3,Goulburn,3,2:25PM GOULBURN HAY SUPPLIES MAIDEN PLATE,1100,Maiden,Soft 6,+6m Entire,Overcast,5.35,,8,8,Kursaal,Kursaal,Kursaal,5,Peter Snowden,Tom Sherry,,3,racenet
+R3,Goulburn,3,2:25PM GOULBURN HAY SUPPLIES MAIDEN PLATE,1100,Maiden,Soft 6,+6m Entire,Overcast,5.35,,9,9,Ole Spirit,Ole Spirit,Ole Spirit,2,Bjorn Baker,Ms Amber Riddell (a0/53kg),,NA,racenet
+R3,Goulburn,3,2:25PM GOULBURN HAY SUPPLIES MAIDEN PLATE,1100,Maiden,Soft 6,+6m Entire,Overcast,5.35,,10,10,Sakurious,Sakurious,Sakurious,3,Kerry Parker,Ms Alysha Collett,,6,racenet
+R3,Goulburn,3,2:25PM GOULBURN HAY SUPPLIES MAIDEN PLATE,1100,Maiden,Soft 6,+6m Entire,Overcast,5.35,,11,11,Lighthorseman,Lighthorseman,Lighthorseman,4,Michael Freedman,Keagan Latham,,3.7,racenet
+R3,Goulburn,3,2:25PM GOULBURN HAY SUPPLIES MAIDEN PLATE,1100,Maiden,Soft 6,+6m Entire,Overcast,5.35,,12,12,Camilla’s Legacy,Camilla’s Legacy,Camilla’s Legacy,8,Stephen O'Halloran,Ms Winona Costin,,5.5,racenet
+R4,Goulburn,4,3:05PM KIRK'S BRIDGE FARM COUNTRY BOOSTED BENCHMARK 58 HANDICAP,1100,BM58,Soft 6,+6m Entire,Overcast,5.35,,4,4,Xspiritous,Xspiritous,Xspiritous,1,Tash Burleigh,Ms Winona Costin,,3.5,racenet
+R4,Goulburn,4,3:05PM KIRK'S BRIDGE FARM COUNTRY BOOSTED BENCHMARK 58 HANDICAP,1100,BM58,Soft 6,+6m Entire,Overcast,5.35,,5,5,Marine Girl,Marine Girl,Marine Girl,9,Nick Olive,Ms Coriah Keatings (a0/51kg),,3.6,racenet
+R4,Goulburn,4,3:05PM KIRK'S BRIDGE FARM COUNTRY BOOSTED BENCHMARK 58 HANDICAP,1100,BM58,Soft 6,+6m Entire,Overcast,5.35,,6,6,O’hellyeah,O’hellyeah,O’hellyeah,2,Todd Smart,Sairyn Fawke,,4.1,racenet
+R4,Goulburn,4,3:05PM KIRK'S BRIDGE FARM COUNTRY BOOSTED BENCHMARK 58 HANDICAP,1100,BM58,Soft 6,+6m Entire,Overcast,5.35,,8,8,Inna Zou,Inna Zou,Inna Zou,10,Norm Gardner,Ms Emma Ly (a1.5/51kg),,6.8,racenet
+R4,Goulburn,4,3:05PM KIRK'S BRIDGE FARM COUNTRY BOOSTED BENCHMARK 58 HANDICAP,1100,BM58,Soft 6,+6m Entire,Overcast,5.35,,9,9,Showtime Maggie,Showtime Maggie,Showtime Maggie,7,Keith Dryden & Libby Snowden,Ms Alysha Collett,,9.4,racenet
+R4,Goulburn,4,3:05PM KIRK'S BRIDGE FARM COUNTRY BOOSTED BENCHMARK 58 HANDICAP,1100,BM58,Soft 6,+6m Entire,Overcast,5.35,,10,10,Vereeva,Vereeva,Vereeva,6,Brian Adams,Ms Louise Day,,8.1,racenet
+R4,Goulburn,4,3:05PM KIRK'S BRIDGE FARM COUNTRY BOOSTED BENCHMARK 58 HANDICAP,1100,BM58,Soft 6,+6m Entire,Overcast,5.35,,11,11,Wild Sensation,Wild Sensation,Wild Sensation,8,Matthew J Stephens,Glenn Cahill (a1.5/55kg),,3.4,racenet
+R4,Goulburn,4,3:05PM KIRK'S BRIDGE FARM COUNTRY BOOSTED BENCHMARK 58 HANDICAP,1100,BM58,Soft 6,+6m Entire,Overcast,5.35,,12,12,Witch Of November,Witch Of November,Witch Of November,4,Nick Olive,Ms Jordan Quince (a2/53kg),,6.7,racenet
+R4,Goulburn,4,3:05PM KIRK'S BRIDGE FARM COUNTRY BOOSTED BENCHMARK 58 HANDICAP,1100,BM58,Soft 6,+6m Entire,Overcast,5.35,,13,13,Rangatira,Rangatira,Rangatira,5,John Rolfe,Quayde Krogh,,5.1,racenet
+R4,Goulburn,4,3:05PM KIRK'S BRIDGE FARM COUNTRY BOOSTED BENCHMARK 58 HANDICAP,1100,BM58,Soft 6,+6m Entire,Overcast,5.35,,14,14,I Iz Brilliant,I Iz Brilliant,I Iz Brilliant,3,Jack Van Duren,Grant Buckley,,6,racenet
+R5,Goulburn,5,3:40PM HIBERNIAN HOTEL COUNTRY BOOSTED MAIDEN HANDICAP,1300,Maiden,Soft 6,+6m Entire,Overcast,5.35,,1,1,Slater’s Boy,Slater’s Boy,Slater’s Boy,8,Luke Pepper,Brodie Loy,,4.6,racenet
+R5,Goulburn,5,3:40PM HIBERNIAN HOTEL COUNTRY BOOSTED MAIDEN HANDICAP,1300,Maiden,Soft 6,+6m Entire,Overcast,5.35,,2,2,Inspiritu,Inspiritu,Inspiritu,9,Matthew Dale,Keagan Latham,,2.6,racenet
+R5,Goulburn,5,3:40PM HIBERNIAN HOTEL COUNTRY BOOSTED MAIDEN HANDICAP,1300,Maiden,Soft 6,+6m Entire,Overcast,5.35,,3,3,Reinczech,Reinczech,Reinczech,4,Danielle Seib,Pierre Boudvillain,,9.3,racenet
+R5,Goulburn,5,3:40PM HIBERNIAN HOTEL COUNTRY BOOSTED MAIDEN HANDICAP,1300,Maiden,Soft 6,+6m Entire,Overcast,5.35,,4,4,Top Pick,Top Pick,Top Pick,6,Len Hodgson,Ms Molly Bourke,,6.2,racenet
+R5,Goulburn,5,3:40PM HIBERNIAN HOTEL COUNTRY BOOSTED MAIDEN HANDICAP,1300,Maiden,Soft 6,+6m Entire,Overcast,5.35,,5,5,Aquilino,Aquilino,Aquilino,7,Paul Facoory,Adam Farragher,,3.8,racenet
+R5,Goulburn,5,3:40PM HIBERNIAN HOTEL COUNTRY BOOSTED MAIDEN HANDICAP,1300,Maiden,Soft 6,+6m Entire,Overcast,5.35,,6,6,Demanda,Demanda,Demanda,5,John Rolfe,Sairyn Fawke,,4.5,racenet
+R5,Goulburn,5,3:40PM HIBERNIAN HOTEL COUNTRY BOOSTED MAIDEN HANDICAP,1300,Maiden,Soft 6,+6m Entire,Overcast,5.35,,7,7,Did Dubai Me Euros,Did Dubai Me Euros,Did Dubai Me Euros,1,Jack Van Duren,Grant Buckley,,5,racenet
+R5,Goulburn,5,3:40PM HIBERNIAN HOTEL COUNTRY BOOSTED MAIDEN HANDICAP,1300,Maiden,Soft 6,+6m Entire,Overcast,5.35,,8,8,Raining Violets,Raining Violets,Raining Violets,3,Rob Potter,Damon Budler,,7.3,racenet
+R5,Goulburn,5,3:40PM HIBERNIAN HOTEL COUNTRY BOOSTED MAIDEN HANDICAP,1300,Maiden,Soft 6,+6m Entire,Overcast,5.35,,9,9,Rawano,Rawano,Rawano,2,Gary Crossley,Ms Rebecca Bronett Prag (a0/52kg),,7.3,racenet
+R6,Goulburn,6,4:20PM M.J. DALE RACING MAIDEN PLATE,1600,Maiden,Soft 6,+6m Entire,Overcast,5.35,,3,3,Mikkie,Mikkie,Mikkie,1,"Michael, John & Wayne Hawkes",Louis Beuzelin,,6.8,racenet
+R6,Goulburn,6,4:20PM M.J. DALE RACING MAIDEN PLATE,1600,Maiden,Soft 6,+6m Entire,Overcast,5.35,,5,5,Brozino,Brozino,Brozino,10,Pat Murphy,Ms Molly Bourke,,9,racenet
+R6,Goulburn,6,4:20PM M.J. DALE RACING MAIDEN PLATE,1600,Maiden,Soft 6,+6m Entire,Overcast,5.35,,6,6,Prince Of Thunder,Prince Of Thunder,Prince Of Thunder,2,John O'Shea & Tom Charlton,Jean Van Overmeire,,NA,racenet
+R6,Goulburn,6,4:20PM M.J. DALE RACING MAIDEN PLATE,1600,Maiden,Soft 6,+6m Entire,Overcast,5.35,,7,7,Swagger,Swagger,Swagger,5,Amanda Turner,Ms Winona Costin,,6.2,racenet
+R6,Goulburn,6,4:20PM M.J. DALE RACING MAIDEN PLATE,1600,Maiden,Soft 6,+6m Entire,Overcast,5.35,,10,10,Vision In A Dream,Vision In A Dream,Vision In A Dream,6,Peter Snowden,Tom Sherry,,7.1,racenet
+R6,Goulburn,6,4:20PM M.J. DALE RACING MAIDEN PLATE,1600,Maiden,Soft 6,+6m Entire,Overcast,5.35,,11,11,Forsaken,Forsaken,Forsaken,8,John O'Shea & Tom Charlton,Keagan Latham,,6.3,racenet
+R6,Goulburn,6,4:20PM M.J. DALE RACING MAIDEN PLATE,1600,Maiden,Soft 6,+6m Entire,Overcast,5.35,,12,12,She Can Party,She Can Party,She Can Party,7,Michael Freedman,Andrew Adkins,,7,racenet
+R6,Goulburn,6,4:20PM M.J. DALE RACING MAIDEN PLATE,1600,Maiden,Soft 6,+6m Entire,Overcast,5.35,,15,15,Tendi,Tendi,Tendi,4,John Steinmetz,Sairyn Fawke,,7.8,racenet
+R6,Goulburn,6,4:20PM M.J. DALE RACING MAIDEN PLATE,1600,Maiden,Soft 6,+6m Entire,Overcast,5.35,,16,16,Milchel,Milchel,Milchel,9,Robert Quinn,Adam Farragher,,7,racenet
+R6,Goulburn,6,4:20PM M.J. DALE RACING MAIDEN PLATE,1600,Maiden,Soft 6,+6m Entire,Overcast,5.35,,17,17,Miss Pinot Noir,Miss Pinot Noir,Miss Pinot Noir,3,Richard & Will Freedman,Shaun Guymer,,12,racenet
+R6,Goulburn,6,4:20PM M.J. DALE RACING MAIDEN PLATE,1600,Maiden,Soft 6,+6m Entire,Overcast,5.35,,18,18,Captain Smoker,Captain Smoker,Captain Smoker,11,Haylee Day,Richard Bensley,,7.5,racenet
+R7,Goulburn,7,4:55PM WORKLOCKER GOULBURN BENCHMARK 58 HANDICAP,1400,BM58,Soft 6,+6m Entire,Overcast,5.35,,1,1,Hey Jude,Hey Jude,Hey Jude,7,Bjorn Baker,Ms Winona Costin,,4.6,racenet
+R7,Goulburn,7,4:55PM WORKLOCKER GOULBURN BENCHMARK 58 HANDICAP,1400,BM58,Soft 6,+6m Entire,Overcast,5.35,,2,2,Adaptation,Adaptation,Adaptation,1,Gerald Ryan & Sterling Alexiou,Tom Sherry,,5.2,racenet
+R7,Goulburn,7,4:55PM WORKLOCKER GOULBURN BENCHMARK 58 HANDICAP,1400,BM58,Soft 6,+6m Entire,Overcast,5.35,,3,3,Dubai Centre,Dubai Centre,Dubai Centre,3,John Rolfe,Quayde Krogh,,5,racenet
+R7,Goulburn,7,4:55PM WORKLOCKER GOULBURN BENCHMARK 58 HANDICAP,1400,BM58,Soft 6,+6m Entire,Overcast,5.35,,4,4,Zoufield,Zoufield,Zoufield,10,Andrew Bourke,Glenn Cahill (a1.5/55kg),,6.5,racenet
+R7,Goulburn,7,4:55PM WORKLOCKER GOULBURN BENCHMARK 58 HANDICAP,1400,BM58,Soft 6,+6m Entire,Overcast,5.35,,6,6,Colorado Sun,Colorado Sun,Colorado Sun,8,Keith Dryden & Libby Snowden,Nick Heywood,,7,racenet
+R7,Goulburn,7,4:55PM WORKLOCKER GOULBURN BENCHMARK 58 HANDICAP,1400,BM58,Soft 6,+6m Entire,Overcast,5.35,,7,7,Petomai,Petomai,Petomai,5,Keith Dryden & Libby Snowden,Brodie Loy,,9.2,racenet
+R7,Goulburn,7,4:55PM WORKLOCKER GOULBURN BENCHMARK 58 HANDICAP,1400,BM58,Soft 6,+6m Entire,Overcast,5.35,,8,8,Sure Intentions,Sure Intentions,Sure Intentions,2,Richard Butler,Shaun Guymer,,3.6,racenet
+R7,Goulburn,7,4:55PM WORKLOCKER GOULBURN BENCHMARK 58 HANDICAP,1400,BM58,Soft 6,+6m Entire,Overcast,5.35,,9,9,Alabama Hussy,Alabama Hussy,Alabama Hussy,6,Nick Olive,Ms Alysha Collett,,4.1,racenet
+R7,Goulburn,7,4:55PM WORKLOCKER GOULBURN BENCHMARK 58 HANDICAP,1400,BM58,Soft 6,+6m Entire,Overcast,5.35,,11,11,Azzucca,Azzucca,Azzucca,9,Gratz Vella,Pierre Boudvillain,,4,racenet
+R7,Goulburn,7,4:55PM WORKLOCKER GOULBURN BENCHMARK 58 HANDICAP,1400,BM58,Soft 6,+6m Entire,Overcast,5.35,,12,12,Cloud Of Dust,Cloud Of Dust,Cloud Of Dust,4,Tash Burleigh,Jean Van Overmeire,,4.7,racenet
+R8,Goulburn,8,5:35PM GOULBURN PRODUCE BENCHMARK 66 HANDICAP,1200,BM66,Soft 6,+6m Entire,Overcast,5.35,,1,1,Eagle Hawk Star,Eagle Hawk Star,Eagle Hawk Star,4,Garry Kirkup,Pierre Boudvillain,,7.8,racenet
+R8,Goulburn,8,5:35PM GOULBURN PRODUCE BENCHMARK 66 HANDICAP,1200,BM66,Soft 6,+6m Entire,Overcast,5.35,,2,2,Brutal Belle,Brutal Belle,Brutal Belle,1,Luke Pepper,Brodie Loy,,7.6,racenet
+R8,Goulburn,8,5:35PM GOULBURN PRODUCE BENCHMARK 66 HANDICAP,1200,BM66,Soft 6,+6m Entire,Overcast,5.35,,3,3,Missile Defence,Missile Defence,Missile Defence,7,Andrew Bourke,Glenn Cahill (a1.5/55kg),,6,racenet
+R8,Goulburn,8,5:35PM GOULBURN PRODUCE BENCHMARK 66 HANDICAP,1200,BM66,Soft 6,+6m Entire,Overcast,5.35,,6,6,Cosmic Eagle,Cosmic Eagle,Cosmic Eagle,2,Gerald Ryan & Sterling Alexiou,Keagan Latham,,4.5,racenet
+R8,Goulburn,8,5:35PM GOULBURN PRODUCE BENCHMARK 66 HANDICAP,1200,BM66,Soft 6,+6m Entire,Overcast,5.35,,8,8,Skirmish,Skirmish,Skirmish,3,Kerry Parker,Nick Heywood,,4.1,racenet
+R8,Goulburn,8,5:35PM GOULBURN PRODUCE BENCHMARK 66 HANDICAP,1200,BM66,Soft 6,+6m Entire,Overcast,5.35,,9,9,Point Score,Point Score,Point Score,5,Amanda Turner,Ms Molly Bourke,,5.9,racenet
+R8,Goulburn,8,5:35PM GOULBURN PRODUCE BENCHMARK 66 HANDICAP,1200,BM66,Soft 6,+6m Entire,Overcast,5.35,,13,13,Manwari,Manwari,Manwari,6,Danny Williams,Shaun Guymer,,6.8,racenet
