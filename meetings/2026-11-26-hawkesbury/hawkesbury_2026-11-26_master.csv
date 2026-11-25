@@ -1,0 +1,69 @@
+race_id,track,race_no,race_title,distance,grade,going,rail,weather,penetrometer,track_information,runner_no,no,horse,horse_name,name,barrier,trainer,jockey,odds,w_ir,source
+R1,Hawkesbury,1,1:50 pm Hrc Motel Class 1 Handicap,1300m,Class 1,Soft 5,True,,,,1,1,Helen's Way,Helen's Way,Helen's Way,5,Bjorn Baker,Jason Collett,$9,2,racenet
+R1,Hawkesbury,1,1:50 pm Hrc Motel Class 1 Handicap,1300m,Class 1,Soft 5,True,,,,2,2,Found The Gold,Found The Gold,Found The Gold,6,Ron Quinton,Sam Clipperton,$10,5.6,racenet
+R1,Hawkesbury,1,1:50 pm Hrc Motel Class 1 Handicap,1300m,Class 1,Soft 5,True,,,,3,3,The Champion,The Champion,The Champion,3,Gary Portelli,Alysha Collett,$61,4.6,racenet
+R1,Hawkesbury,1,1:50 pm Hrc Motel Class 1 Handicap,1300m,Class 1,Soft 5,True,,,,4,4,Baylie's Folly,Baylie's Folly,Baylie's Folly,2,Matthew Smith,Kerrin McEvoy,$2.6,3.5,racenet
+R1,Hawkesbury,1,1:50 pm Hrc Motel Class 1 Handicap,1300m,Class 1,Soft 5,True,,,,5,5,Stonecrest,Stonecrest,Stonecrest,1,Gai Waterhouse & Adrian Bott,Tim Clark,$2.1,1,racenet
+R1,Hawkesbury,1,1:50 pm Hrc Motel Class 1 Handicap,1300m,Class 1,Soft 5,True,,,,6,6,Sacrosanct,Sacrosanct,Sacrosanct,4,Gerald Ryan & Sterling Alexiou,Tyler Schiller,$8,5.3,racenet
+R2,Hawkesbury,2,2:25 pm Dynamo Services 4yo&up Maiden Handicap,1300m,Maiden,Soft 5,True,,,,1,1,Flying Party,Flying Party,Flying Party,10,Ciaron Maher,Louise Day,$3.1,4.4,racenet
+R2,Hawkesbury,2,2:25 pm Dynamo Services 4yo&up Maiden Handicap,1300m,Maiden,Soft 5,True,,,,2,2,Mister Dee Jay,Mister Dee Jay,Mister Dee Jay,6,Jim & Greg Lee,Louis Beuzelin,$4.6,4,racenet
+R2,Hawkesbury,2,2:25 pm Dynamo Services 4yo&up Maiden Handicap,1300m,Maiden,Soft 5,True,,,,3,3,Hey Furston,Hey Furston,Hey Furston,2,Rodney Bailey,Reece Jones,$26,7,racenet
+R2,Hawkesbury,2,2:25 pm Dynamo Services 4yo&up Maiden Handicap,1300m,Maiden,Soft 5,True,,,,4,4,Hallowedismyname,Hallowedismyname,Hallowedismyname,8,Stephen O'Halloran,Winona Costin,$151,7.7,racenet
+R2,Hawkesbury,2,2:25 pm Dynamo Services 4yo&up Maiden Handicap,1300m,Maiden,Soft 5,True,,,,5,5,Calippo,Calippo,Calippo,1,Marc Chevalier,Tyler Schiller,$3.4,4.3,racenet
+R2,Hawkesbury,2,2:25 pm Dynamo Services 4yo&up Maiden Handicap,1300m,Maiden,Soft 5,True,,,,6,6,Responsibility,Responsibility,Responsibility,9,Gerald Ryan & Sterling Alexiou,Adam Farragher,$34,10,racenet
+R2,Hawkesbury,2,2:25 pm Dynamo Services 4yo&up Maiden Handicap,1300m,Maiden,Soft 5,True,,,,7,7,Swift Delivery,Swift Delivery,Swift Delivery,5,David Pfieffer,Mollie Fitzgerald,$13,5,racenet
+R2,Hawkesbury,2,2:25 pm Dynamo Services 4yo&up Maiden Handicap,1300m,Maiden,Soft 5,True,,,,8,8,Awesome Offa,Awesome Offa,Awesome Offa,3,Tara & Philippe Vigouroux,Jeff Penza,$151,8.2,racenet
+R2,Hawkesbury,2,2:25 pm Dynamo Services 4yo&up Maiden Handicap,1300m,Maiden,Soft 5,True,,,,9,9,Medieval Mayhem,Medieval Mayhem,Medieval Mayhem,7,Graham Brown,Beany Panya,$151,6.3,racenet
+R2,Hawkesbury,2,2:25 pm Dynamo Services 4yo&up Maiden Handicap,1300m,Maiden,Soft 5,True,,,,10,10,Propane,Propane,Propane,4,Peter Green,Grant Buckley,$12,4.9,racenet
+R2,Hawkesbury,2,2:25 pm Dynamo Services 4yo&up Maiden Handicap,1300m,Maiden,Soft 5,True,,,,11,11,Titan Of Fury,Titan Of Fury,Titan Of Fury,11,Paul Perry,Jessica Taylor,$6,7.5,racenet
+R3,Hawkesbury,3,3:00 pm Clarendon Tavern Benchmark 64 Handicap,1800m,BM64,Soft 5,True,,,,1,1,Alabama Showdown,Alabama Showdown,Alabama Showdown,8,Joseph Pride,Andrew Adkins,$5,5.2,racenet
+R3,Hawkesbury,3,3:00 pm Clarendon Tavern Benchmark 64 Handicap,1800m,BM64,Soft 5,True,,,,2,2,Pappa Blue,Pappa Blue,Pappa Blue,3,Annabel & Rob Archibald,Tom Sherry,$4.2,6.5,racenet
+R3,Hawkesbury,3,3:00 pm Clarendon Tavern Benchmark 64 Handicap,1800m,BM64,Soft 5,True,,,,3,3,Kirkuk,Kirkuk,Kirkuk,1,Jim & Greg Lee,Sam Clipperton,$7,7.2,racenet
+R3,Hawkesbury,3,3:00 pm Clarendon Tavern Benchmark 64 Handicap,1800m,BM64,Soft 5,True,,,,4,4,Outta Line,Outta Line,Outta Line,4,Gai Waterhouse & Adrian Bott,Tim Clark,$2.6,2.2,racenet
+R3,Hawkesbury,3,3:00 pm Clarendon Tavern Benchmark 64 Handicap,1800m,BM64,Soft 5,True,,,,5,5,Awesome Artist,Awesome Artist,Awesome Artist,7,David Pfieffer,Alysha Collett,$11,3.5,racenet
+R3,Hawkesbury,3,3:00 pm Clarendon Tavern Benchmark 64 Handicap,1800m,BM64,Soft 5,True,,,,6,6,Wormington,Wormington,Wormington,5,Richard Litt,Louis Beuzelin,$21,3.7,racenet
+R3,Hawkesbury,3,3:00 pm Clarendon Tavern Benchmark 64 Handicap,1800m,BM64,Soft 5,True,,,,7,7,Dance With Destiny,Dance With Destiny,Dance With Destiny,6,John Sargent Jean,Van Overmeire,$8,6.1,racenet
+R3,Hawkesbury,3,3:00 pm Clarendon Tavern Benchmark 64 Handicap,1800m,BM64,Soft 5,True,,,,8,8,Mediaro,Mediaro,Mediaro,2,Matthew Smith,Reece Jones,$41,8.1,racenet
+R4,Hawkesbury,4,3:35 pm Pioneer Services Midway Class 1 Handicap,1600m,Class 1,Soft 5,True,,,,1,1,Sheeza Diva,Sheeza Diva,Sheeza Diva,4,Mitchell & Desiree Kearney,Reece Jones,$4.6,7.3,racenet
+R4,Hawkesbury,4,3:35 pm Pioneer Services Midway Class 1 Handicap,1600m,Class 1,Soft 5,True,,,,2,2,Fitzclarence,Fitzclarence,Fitzclarence,6,Jason Attard,Rory Hutchings,$4.8,7,racenet
+R4,Hawkesbury,4,3:35 pm Pioneer Services Midway Class 1 Handicap,1600m,Class 1,Soft 5,True,,,,4,4,Perini Miss,Perini Miss,Perini Miss,5,Nathan Doyle Jean,Van Overmeire,$4.6,2.8,racenet
+R4,Hawkesbury,4,3:35 pm Pioneer Services Midway Class 1 Handicap,1600m,Class 1,Soft 5,True,,,,5,5,Cool Summer Nights,Cool Summer Nights,Cool Summer Nights,8,Nathan Doyle,Ashley Morgan,$6,3.6,racenet
+R4,Hawkesbury,4,3:35 pm Pioneer Services Midway Class 1 Handicap,1600m,Class 1,Soft 5,True,,,,6,6,Canjustify,Canjustify,Canjustify,3,Richard Litt,Jason Collett,$4.2,6.9,racenet
+R4,Hawkesbury,4,3:35 pm Pioneer Services Midway Class 1 Handicap,1600m,Class 1,Soft 5,True,,,,8,8,Alideel,Alideel,Alideel,1,Peter Green,Grant Buckley,$61,4.2,racenet
+R4,Hawkesbury,4,3:35 pm Pioneer Services Midway Class 1 Handicap,1600m,Class 1,Soft 5,True,,,,9,9,Brundee Tom,Brundee Tom,Brundee Tom,7,Theresa Bateup,Brock Ryan,$17,5.2,racenet
+R4,Hawkesbury,4,3:35 pm Pioneer Services Midway Class 1 Handicap,1600m,Class 1,Soft 5,True,,,,10,10,Lucilago,Lucilago,Lucilago,2,Darryll Kell,Chad Lever,$31,6.7,racenet
+R5,Hawkesbury,5,"4:10 pm North East Plumbing, Roofing And Electrical Super 3yo Maiden Plate",1300m,Maiden,Soft 5,True,,,,1,1,Close Combat,Close Combat,Close Combat,9,Gerald Ryan & Sterling Alexiou,Tim Clark,$81,9,racenet
+R5,Hawkesbury,5,"4:10 pm North East Plumbing, Roofing And Electrical Super 3yo Maiden Plate",1300m,Maiden,Soft 5,True,,,,2,2,Mens Rea,Mens Rea,Mens Rea,7,,Con Karakatsanis,$9.5,6,racenet
+R5,Hawkesbury,5,"4:10 pm North East Plumbing, Roofing And Electrical Super 3yo Maiden Plate",1300m,Maiden,Soft 5,True,,,,3,3,Nations League,Nations League,Nations League,8,Chris Waller,Siena Grima (a-1.5),$4.6,5.8,racenet
+R5,Hawkesbury,5,"4:10 pm North East Plumbing, Roofing And Electrical Super 3yo Maiden Plate",1300m,Maiden,Soft 5,True,,,,4,4,North Counsel,North Counsel,North Counsel,6,Matthew Smith,Kerrin McEvoy,$26,8,racenet
+R5,Hawkesbury,5,"4:10 pm North East Plumbing, Roofing And Electrical Super 3yo Maiden Plate",1300m,Maiden,Soft 5,True,,,,5,5,On The Verge,On The Verge,On The Verge,10,John O'Shea & Tom Charlton Jean,Van Overmeire,$5.5,NA,racenet
+R5,Hawkesbury,5,"4:10 pm North East Plumbing, Roofing And Electrical Super 3yo Maiden Plate",1300m,Maiden,Soft 5,True,,,,6,6,Pinache,Pinache,Pinache,4,Matthew Smith,Tyler Schiller,$21,NA,racenet
+R5,Hawkesbury,5,"4:10 pm North East Plumbing, Roofing And Electrical Super 3yo Maiden Plate",1300m,Maiden,Soft 5,True,,,,7,7,Renowned,Renowned,Renowned,2,Gerald Ryan & Sterling Alexiou,Sam Clipperton,$71,5,racenet
+R5,Hawkesbury,5,"4:10 pm North East Plumbing, Roofing And Electrical Super 3yo Maiden Plate",1300m,Maiden,Soft 5,True,,,,8,8,Wardeel,Wardeel,Wardeel,3,Richard Litt,Louis Beuzelin,$23,NA,racenet
+R5,Hawkesbury,5,"4:10 pm North East Plumbing, Roofing And Electrical Super 3yo Maiden Plate",1300m,Maiden,Soft 5,True,,,,9,9,Pearl Of Dubai,Pearl Of Dubai,Pearl Of Dubai,1,Peter Snowden,Rachel King,$5,5.7,racenet
+R5,Hawkesbury,5,"4:10 pm North East Plumbing, Roofing And Electrical Super 3yo Maiden Plate",1300m,Maiden,Soft 5,True,,,,10,10,Thyme To Go,Thyme To Go,Thyme To Go,5,Annabel & Rob Archibald,Tom Sherry,$2.5,5.3,racenet
+R6,Hawkesbury,6,4:50 pm Essential Asset And Fire Provincial Maiden Plate,1100m,Maiden,Soft 5,True,,,,1,1,Extreme Courage,Extreme Courage,Extreme Courage,1,Robert & Luke Price,Rachel King,$9,5.5,racenet
+R6,Hawkesbury,6,4:50 pm Essential Asset And Fire Provincial Maiden Plate,1100m,Maiden,Soft 5,True,,,,2,2,Southport,Southport,Southport,15,,Brad Widdup,$6.5,3.8,racenet
+R6,Hawkesbury,6,4:50 pm Essential Asset And Fire Provincial Maiden Plate,1100m,Maiden,Soft 5,True,,,,3,3,Captain Black,Captain Black,Captain Black,10,Sara Ryan,Alysha Collett,$34,NA,racenet
+R6,Hawkesbury,6,4:50 pm Essential Asset And Fire Provincial Maiden Plate,1100m,Maiden,Soft 5,True,,,,4,4,Got Here,Got Here,Got Here,3,Damien Lane,Anna Roper,$9,4.7,racenet
+R6,Hawkesbury,6,4:50 pm Essential Asset And Fire Provincial Maiden Plate,1100m,Maiden,Soft 5,True,,,,5,5,Hikari Rising,Hikari Rising,Hikari Rising,12,Kerry Parker,Andrew Adkins,$10,1,racenet
+R6,Hawkesbury,6,4:50 pm Essential Asset And Fire Provincial Maiden Plate,1100m,Maiden,Soft 5,True,,,,6,6,Cold Gin,Cold Gin,Cold Gin,14,Mitchell Beer & George Carpenter,Dylan Gibbons,$26,3.2,racenet
+R6,Hawkesbury,6,4:50 pm Essential Asset And Fire Provincial Maiden Plate,1100m,Maiden,Soft 5,True,,,,7,7,Shalaa And Willyn,Shalaa And Willyn,Shalaa And Willyn,8,Robert & Luke Price,Brock Ryan,$18,NA,racenet
+R6,Hawkesbury,6,4:50 pm Essential Asset And Fire Provincial Maiden Plate,1100m,Maiden,Soft 5,True,,,,8,8,Tickelova,Tickelova,Tickelova,6,Kris Lees,Jason Collett,$4.6,2.8,racenet
+R6,Hawkesbury,6,4:50 pm Essential Asset And Fire Provincial Maiden Plate,1100m,Maiden,Soft 5,True,,,,9,9,Writteninlyrics,Writteninlyrics,Writteninlyrics,7,Peter Green,Olivia Chambers (a-2),$61,NA,racenet
+R6,Hawkesbury,6,4:50 pm Essential Asset And Fire Provincial Maiden Plate,1100m,Maiden,Soft 5,True,,,,10,10,Ariana Reign,Ariana Reign,Ariana Reign,2,Nathan Doyle,Andrew Gibbons,$12,7.7,racenet
+R6,Hawkesbury,6,4:50 pm Essential Asset And Fire Provincial Maiden Plate,1100m,Maiden,Soft 5,True,,,,11,11,Miss Moulaga,Miss Moulaga,Miss Moulaga,9,Edward Cummings,Ashley Morgan,$61,4.7,racenet
+R6,Hawkesbury,6,4:50 pm Essential Asset And Fire Provincial Maiden Plate,1100m,Maiden,Soft 5,True,,,,12,12,Sheeza Whistler,Sheeza Whistler,Sheeza Whistler,11,Mitchell & Desiree Kearney,Reece Jones,$126,NA,racenet
+R6,Hawkesbury,6,4:50 pm Essential Asset And Fire Provincial Maiden Plate,1100m,Maiden,Soft 5,True,,,,13,13,Sky Kirk,Sky Kirk,Sky Kirk,13,Blake Ryan Jean,Van Overmeire,$6,NA,racenet
+R6,Hawkesbury,6,4:50 pm Essential Asset And Fire Provincial Maiden Plate,1100m,Maiden,Soft 5,True,,,,14,14,Wootton Touch It,Wootton Touch It,Wootton Touch It,4,Angela Davies,Braith Nock,$6,7,racenet
+R6,Hawkesbury,6,4:50 pm Essential Asset And Fire Provincial Maiden Plate,1100m,Maiden,Soft 5,True,,,,16,16,Pressed Tough,Pressed Tough,Pressed Tough,5,,Sara Ryan,$126,6,racenet
+R7,Hawkesbury,7,5:25 pm Izzy's Gift Benchmark 64 Handicap,1100m,BM64,Soft 5,True,,,,1,1,Donwon,Donwon,Donwon,10,Robert & Luke Price,Leeshelle Small (a-3),$14,5,racenet
+R7,Hawkesbury,7,5:25 pm Izzy's Gift Benchmark 64 Handicap,1100m,BM64,Soft 5,True,,,,2,2,The New Sinatra,The New Sinatra,The New Sinatra,6,Marc Chevalier,Tyler Schiller,$8.5,5.1,racenet
+R7,Hawkesbury,7,5:25 pm Izzy's Gift Benchmark 64 Handicap,1100m,BM64,Soft 5,True,,,,3,3,Against The Law,Against The Law,Against The Law,7,Mitchell Beer & George Carpenter Jean,Van Overmeire,$9,5.5,racenet
+R7,Hawkesbury,7,5:25 pm Izzy's Gift Benchmark 64 Handicap,1100m,BM64,Soft 5,True,,,,4,4,Boom Break,Boom Break,Boom Break,1,Donna Grisedale,Poppie Gorton (a-3),$34,2.3,racenet
+R7,Hawkesbury,7,5:25 pm Izzy's Gift Benchmark 64 Handicap,1100m,BM64,Soft 5,True,,,,5,5,Sauvitude,Sauvitude,Sauvitude,5,Edward Cummings,Ashley Morgan,$2.3,4.7,racenet
+R7,Hawkesbury,7,5:25 pm Izzy's Gift Benchmark 64 Handicap,1100m,BM64,Soft 5,True,,,,6,6,Won'thearmecoming,Won'thearmecoming,Won'thearmecoming,4,Angela Davies,Jason Collett,$3.8,4.5,racenet
+R7,Hawkesbury,7,5:25 pm Izzy's Gift Benchmark 64 Handicap,1100m,BM64,Soft 5,True,,,,7,7,Savoca,Savoca,Savoca,8,Paul Perry,Shannen Llewellyn (a-2),$71,7.6,racenet
+R7,Hawkesbury,7,5:25 pm Izzy's Gift Benchmark 64 Handicap,1100m,BM64,Soft 5,True,,,,8,8,Midnight Revolt,Midnight Revolt,Midnight Revolt,3,Gai Waterhouse & Adrian Bott,Rachel King,$7,1,racenet
+R7,Hawkesbury,7,5:25 pm Izzy's Gift Benchmark 64 Handicap,1100m,BM64,Soft 5,True,,,,9,9,Shoutaboutit,Shoutaboutit,Shoutaboutit,2,Kristen Buchanan,Olivia Chambers (a-2),$18,3,racenet
+R7,Hawkesbury,7,5:25 pm Izzy's Gift Benchmark 64 Handicap,1100m,BM64,Soft 5,True,,,,10,10,Power Hungry,Power Hungry,Power Hungry,9,John Sharah,Jessica Brookes (a-3),$151,2.4,racenet
