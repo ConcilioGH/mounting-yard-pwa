@@ -303,6 +303,7 @@ function runnerKey(raceNo, runnerNo) {
 function normalizeHorseNameForMatch(horse) {
   return String(horse || "")
     .toUpperCase()
+    .replace(/\s*\((?:NZ|AUS|IRE|GB|USA|FR|GER|JPN|CAN|SAF|ARG|BRZ|CHI|UAE|HK|ITY)\)\s*$/, "")
     .replace(/[^A-Z0-9]+/g, "");
 }
 
