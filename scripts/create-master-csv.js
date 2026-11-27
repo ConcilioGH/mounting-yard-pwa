@@ -76,7 +76,8 @@ function cleanRacenetHorseName(horse) {
     // such as "DO" and "SHOOT", which happen to use only legend letters.
     if (right !== right.toLowerCase()
       || !/^[a-z]+$/.test(right)
-      || ![...right].every((c) => LEGEND_SUFFIX_CHARS.has(c))) {
+      || (!["tcdn", "shn"].includes(right)
+        && ![...right].every((c) => LEGEND_SUFFIX_CHARS.has(c)))) {
       break;
     }
     if (right.length === 2 && right.toLowerCase() === "ho") {
