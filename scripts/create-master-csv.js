@@ -35,8 +35,8 @@ const OUTPUT_COLUMNS = [
 const WARNING_COLUMNS = ["race_no", "runner_no", "horse", "warning_type", "detail"];
 const UNMATCHED_SPEEDPROXY_COLUMNS = ["race_no", "no", "horse", "w_ir"];
 
-/** Racenet legend suffix letters; must match pdf_to_csv.py _LEGEND_SUFFIX_CHARS. */
-const LEGEND_SUFFIX_CHARS = new Set([..."tdhbosc"]);
+/** Racenet legend suffix letters, including the n marker in current print fields. */
+const LEGEND_SUFFIX_CHARS = new Set([..."tdhboscn"]);
 
 const RACE_CAPTION_META_RE = /race\s+No\.?\s*(\d+)\s*:\s*(\d+)\s*m;\s*(.+)$/i;
 
@@ -76,8 +76,7 @@ function cleanRacenetHorseName(horse) {
     // such as "DO" and "SHOOT", which happen to use only legend letters.
     if (right !== right.toLowerCase()
       || !/^[a-z]+$/.test(right)
-      || (!["tcdn", "shn"].includes(right)
-        && ![...right].every((c) => LEGEND_SUFFIX_CHARS.has(c)))) {
+      || ![...right].every((c) => LEGEND_SUFFIX_CHARS.has(c))) {
       break;
     }
     if (right.length === 2 && right.toLowerCase() === "ho") {
